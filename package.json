@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "gatsby-theme-parliament-documentation",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdobeDocs/gatsby-theme-parliament-documentation"
+  },
+  "author": {
+    "name": "Stephan Ringel",
+    "url": "https://github.com/icaraps"
+  },
+  "dependencies": {
+    "@adobe/gatsby-theme-parliament": "1.0.0",
+    "gatsby": "^2.23.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "start": "gatsby build && gatsby serve",
+    "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
