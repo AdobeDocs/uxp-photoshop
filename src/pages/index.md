@@ -1,32 +1,38 @@
 ---
-title: Overview - Adobe Analytics
-description: This is the overview page of Adobe Analytics
+title: Overview - Adobe UXP for Photoshop
+description: This is the overview page of Adobe UXP for Photoshop
 contributors:
-  - https://github.com/simonwex 
+- https://github.com/simonwex
+- https://github.com/chuckweger
 ---
 
 <Hero slots="image, heading, text" background="rgb(64, 34, 138)"/>
 
 ![Hero image](./illustration.png) 
 
-# Adobe Analytics 
+# Adobe UXP for Photoshop 
 
-Adobe Product API offers limitless ways to integrate your most important customer data into key business processes. Adobe Product API offer limitless ways.
+UXP (Unified Extensibility Platform) is the modern technology stack in which to build plugins for Photoshop and other Adobe Creative Cloud applications.<br/>This is the place to find out how developers can use UXP to build amazing Photoshop plugins.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-* [Quickstart Guide](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
-* [Adobe Analytics Github Repo](https://github.com/AdobeDocs/analytics-2.0-apis)
+* [Photoshop UXP Examples in GitHub](./linktbd.md)
 
 ## Overview
 
-This documentation provides instructions for Adobe Analytics 2.0 APIs. For working with Analytics 1.4 APIs, see [Analytics 1.4 API Documentation](https://github.com/AdobeDocs/analytics-1.4-apis).
+This documentation set helps developers build plugins for Adobe Photoshop versions 22.0 and later. If you're building plugins for earlier versions of Photoshop, see the [CEP Getting Started Guides](https://github.com/Adobe-CEP/Getting-Started-guides).
 
-The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+UXP provides modern JavaScript, a curated selection of UI components, and a more streamlined workflow for plugin developers. With UXP, you can develop:
+
+- Direct Actions - headless plugins that interface with Photoshop, the host OS, and the network, free of any UI.
+- Modal Dialogs - plugins that implement one or more modal dialogs. Good for simple user interfaces that don't need to persist.
+- Panels - full-featured panels that look like any other panel in Photoshop. UXP panels can contain as complex a UI as you wish to develop. They can be resized, docked, opened and closed just like native Photoshop panels.
+
+> __IMPORTANT__
+> 
+> While this documentation set talks exclusively about UXP, earlier methods of controlling Photoshop, including CEP (Common Extensibility Platfor) and ExtendScript continue to be supported. You don't need to be in a mad rush to change everything over to UXP, although over time these earlier technologies will be deprecated and then removed from Photoshop.
 
 ## Discover 
 
@@ -34,53 +40,57 @@ You can also create reports to explore, get insights, or answer important questi
 
 ### Get Started
 
-[Quickstart Guide](guides/)
+[Quickstart Guide](./guides/start-here/index.md)
     
-Get started with the Adobe Analytics APIs.
+Get started developing Photoshop UXP plugins.
 
 <DiscoverBlock slots="heading, link, text"/> 
 
-### Guides
+### UXP Documentation
 
-[Calculated Metrics API](guides/calculated_metrics_api/) 
+[Getting Started with UXP](./guides/uxp-basics/index.md) 
      
-Returns information on the user's company that is necessary for making other Adobe Analytics API calls.
+Read this first to get started with UXP, then come back to learn about UXP in Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[Segments API](guides/segments_api/) 
+[UXP Reference](./api/uxp-reference/index.md) 
 
-Provides configuration guidance and best practices for the /segments endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Reporting Guide API](guides/reporting_api/)
-
-Provides configuration guidance and best practices for the /reports endpoint.
+UXP components, methods for calling into the OS and network, and best practices.
 
 <DiscoverBlock slots="link, text"/>
 
-[Migrating from 1.4 to 2.0](guides/migrating/)
+[Migrating from CEP and Extendscript](./guides/start-here/next-steps.md)
 
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.   
+If you've written Photoshop plugins using CEP (Common Extensibility Platform), or just scripted Photoshop using ExtendScript and the ExtendScript Toolkit, here's how you can update your code so it works in UXP.   
+
+<DiscoverBlock slots="link, text"/>
+
+[UXP Developer Tool](./guides/uxp-developer-tool/index.md)
+
+A single tool that creates a plugin shell for you, then lets you load the plugin in Photoshop and debug it.
+
+### Photoshop API Documentation
+<DiscoverBlock slots="link, text"/>
+
+[Getting Started with Photoshop API for UXP](./guides/ps-basics/index.md)
+
+A gentle introduction to UXP use in Photoshop.  
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
-### API References
+### Photoshop API References
 
-[Try the API](api/) 
+[The Photoshop UXP API](./api/ps-reference/index.md) 
 
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
+The complete reference for Photoshop methods and objects as exposed to UXP
+
+[batchPlay](./api/ps-reference/media/advanced/batchplay.md)
+
+Designed to support Photoshop operations which are not yet exposed in the UXP API, batchPlay allows direct access to Photoshop's event queue.
 
 ## Contributing 
 
 We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *60 seconds*.
-
-The default rate limit for an Adobe Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    
+or deletions for this documentation, check out the source from [this github repo](./linktbd.md), and submit a pull 
+request with your contribution. For more information, refer to the [contributing page](./support/contribute/index.md).

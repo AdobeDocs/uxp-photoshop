@@ -38,10 +38,6 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'Quickstart Guide',
-        path: '/guides/start-here/You'
-      },
-      {
         title: 'Photoshop API Reference',
         path: '/ps-api-reference/'
       },
@@ -52,14 +48,55 @@ module.exports = {
       {
         title: 'Support',
         path: '/support/'
-      },      
+      }
+    ],
+    subPages: [
       {
-        title: 'Photoshop UXP API Reference',
-        path: '/api/ps-api-reference/'
+        title: 'Get Started',
+        path: '/guides/start-here/',
+        pages: [
+          {
+            title: 'Overview',
+            path: '/guides-start-here/'
+          },
+          {
+            title: 'Getting Started',
+            path: '/guides-start-here/'
+          },
+          {
+            title: 'UXP Basics',
+            path: '/guides/uxp-basics/'
+          },
+          {
+            title: 'Photoshop Basics',
+            path: '/guides/ps-basics/'
+          },
+          {
+            title: 'UXP Developer Tools',
+            path: '/guides/uxp-developer-tools/'
+          }
+        ]
+      }
+      {
+        title: 'API References',
+        path: '/api/',
+        pages: [
+          {
+            title: 'Photoshop UXP API Reference',
+            path: '/api/ps-api-reference/'
+          },
+          {
+            title: 'UXP Reference',
+            path: '/api/uxp-reference/'
+          }
+      },
+       {
+        title: 'FAQ',
+        path: '/support/FAQ/'
       },
       {
-        title: 'UXP Reference',
-        path: '/api/uxp-reference/'
+        title: 'How to contribute',
+        path: '/support/contribute/'
       }
     ]
   },

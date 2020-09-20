@@ -23,6 +23,10 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "postbuild": "touch public/.nojekyll"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

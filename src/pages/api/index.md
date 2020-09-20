@@ -1,5 +1,5 @@
----
-title: OpenAPI - Adobe Analytics
-description: This is the OpenAPI page of Adobe Analytics
-openAPISpec: https://raw.githubusercontent.com/AdobeDocs/analytics-2.0-apis/master/docs/swagger.json  
---- 
+# API References
+This section contains API references for UXP and the Photoshop API for UXP.
+
+* [UXP Reference](./uxp-reference/index.md)
+* [Photoshop API Reference](./ps-reference/index.md)
