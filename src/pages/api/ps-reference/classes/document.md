@@ -304,7 +304,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `width` | number | Numeric value of new width in pixels |
 `height` | number | Numeric value of new height in pixels |
-`anchor?` | AnchorPosition | Anchor point for resizing, by default will resize an equal amount on all sides. <br> Of format:                <br>[top/middle/bottom]-[left/center/right]  |
+`anchor?` | AnchorPosition | Anchor point for resizing, by default will resize an equal amount on all sides. <br/> Of format:                <br/>[top/middle/bottom]-[left/center/right]  |
 
 ___
 
@@ -327,7 +327,7 @@ Name | Type | Description |
 `width` | number | Numeric value of new width in pixels |
 `height` | number | Numeric value of new height in pixels |
 `resolution?` | number | Image resolution in pixels per inch (ppi) |
-`resampleMethod?` | ResampleMethod | Method used during image interpolation.<br>                        Possible values are:<br>                        <ul>                        <li>nearestNeighbor</li>                        <li>bilinear</li>                        <li>bicubic</li>                        <li>bicubicSmoother</li>                        <li>bicubicSharper</li>                        <li>bicubicAutomatic</li>                        <li>preserveDetailsUpscale</li>                        <li>deepUpscale</li>                        </ul>  |
+`resampleMethod?` | ResampleMethod | Method used during image interpolation.<br/>                        Possible values are:<br/>                        <ul>                        <li>nearestNeighbor</li>                        <li>bilinear</li>                        <li>bicubic</li>                        <li>bicubicSmoother</li>                        <li>bicubicSharper</li>                        <li>bicubicAutomatic</li>                        <li>preserveDetailsUpscale</li>                        <li>deepUpscale</li>                        </ul>  |
 
 ___
 

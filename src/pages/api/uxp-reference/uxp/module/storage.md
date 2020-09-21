@@ -516,7 +516,7 @@ The user can select multiple files only if the `allowMultiple` option is `true`.
 | --- | --- | --- | --- |
 | options | `Object` |  |  |
 | [options.types] | `Array.<string>` | <code>[&#x27;*&#x27;]</code> | Optional. Allowed file extensions, with no "." prefix; use [`storage.fileTypes.all`](#module-storage-filetypes-all) to allow any file to be picked |
-| [options.allowMultiple] | `boolean` | <code>false</code> | Optional. If true, multiple files can be selected and this API returns `Array<File>`.<br><br>If false, only one file can be selected and this API returns a `File` directly. |
+| [options.allowMultiple] | `boolean` | <code>false</code> | Optional. If true, multiple files can be selected and this API returns `Array<File>`.<br/><br/>If false, only one file can be selected and this API returns a `File` directly. |
 
 **Example**
 ```js
