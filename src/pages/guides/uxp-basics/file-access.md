@@ -6,7 +6,7 @@ File and folder access is an important part of many plugins. Files and folders c
 
 * Inside the plugin folder itself.
 * In temporary plugin-specific storage.
-* External to the plugin, anywhere in the filesystem; these are accessed by making a request of the user and obtaining a _token_.
+* External to the plugin, anywhere in the filesystem. Because of sandboxing requirements of recent OS releases, UXP does not allow arbitrary access to any file on the host system. Therefore, these files are accessed by making a request of the user (by showing a file-picker dialog) and obtaining a _token_.
 * In a UXP-specific secure store; this is for for secure files that contain sensitive information. See [Secure Storage](./secure-storage.md).
 * On the network (not covered here; see the [Networking](./network-io.md) section.)
 

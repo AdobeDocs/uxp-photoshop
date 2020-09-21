@@ -15,4 +15,4 @@ In some cases, we follow standards, but only support a _subset_ of features you 
 
 Supported APIs that you would expect as window globals in other enviroments are also available as globals in Photoshop. Examples include `XMLHttpRequest`, `fetch`, `WebSocket`, and more.
 
-APIs that are specific to Photoshop are reachable via [the `require` method](/reference/javascript/javascript-support.html#can-i-use-require). Examples include `Layer`, `Action`, `uxp`, and more.
+APIs that are specific to Photoshop are reachable via [the `require` method](./javascript-support.md#can-i-use-require). Examples include `Layer`, `Action`, `uxp`, and more.

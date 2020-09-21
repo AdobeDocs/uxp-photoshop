@@ -2,7 +2,7 @@
 
 Adobe Photoshop provides several categories of APIs:
 
-* **[APIs for interacting with Photoshop itself](#Photoshop-specific-apis)**.
+* [APIs for interacting with Photoshop itself](#Photoshop-specific-apis)**.
 
 * The **UXP runtime**, which provides all the capabilities that aren't Photoshop-specific:
     * A [_browser-like_ HTML and CSS engine](../uxp/ui-index.md) which drives actual XD _native UI components_ -- it is **not** a complete browser engine, but lets you build your UI using familiar web APIs and frameworks.

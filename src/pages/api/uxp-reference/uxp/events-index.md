@@ -1,6 +1,8 @@
 # Events
 
-Adobe XD supports a subset of HTML events.
+Adobe UXP supports a subset of HTML events.
+
+__TBD:IS ANY OR ALL OF THIS STILL TRUE?__
 
 Event                                  | MDN Link
 ---------------------------------------|----------------------------------------

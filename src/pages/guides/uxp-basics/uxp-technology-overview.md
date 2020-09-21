@@ -20,13 +20,17 @@ The manifest also contains [icon definitions](plugin-icons.md) describing icons 
 
 __TBD: DO WE NEED TO GO INTO MORE DETAIL ABOUT REACT PACKAGING?__
 
-## UXP Features
+## Key UXP Features
 
-* File access
+* File access - UXP can read and write files and folders in the user's filesystem. File accesses outside of the plugin's root folder and a temporary folder require the user's permission. File I/O is discussed [here](./file-access.md). 
 
-* Network access
+* Network access - UXP supports XMLHttpRequest, WebSockets, and Fetch APIs. Network access is discussed [here](./network-io.md).
+
+* Spectrum CSS - UXP plugins can use platform-native HTML components such as buttons, input fields, etc. But a plugin can also use Spectrum CSS components.
+
+* Localization
+If you want your plugins to be used internationally, you should localize them. [Here's how to localize your plugins](./localization-and-platforms.md).
 
 * Flyout menus
 
-* Secure s
-
+* JSON: UXP, being rooted in modern JavaScript, has the JSON features you would expect. These include JSON.

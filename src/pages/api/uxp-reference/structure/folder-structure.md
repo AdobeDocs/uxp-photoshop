@@ -11,16 +11,16 @@ my-plugin-folder
 
 ## Your plugin files
 
-Within my-plugin-folder, you'll need _at minimum_ two files, with these _exact_ names:
+Within my-plugin-folder, you'll need _at minimum_ two files:
 
 
-1.   `manifest.json` is your plugin’s manifest.
+1.   `manifest.json` is your plugin’s manifest. It _must_ be named exactly that.
 
-    This file is where you include _facts_ about your plugin, such as its name, whether it's a panel, headless plugin, or modal dialog, and so on. [Learn about the manifest here](./manifest.md).
+This file is where you include _facts_ about your plugin, such as its name, whether it's a panel, headless plugin, or modal dialog, and so on. [Learn about the manifest here](./manifest.md).
 
-1.   `index.js` is your plugin’s code. 
+2.   `index.js` is your plugin’s code. It doesn't have to be named index.js; that's determined by the `main` property in your manifest file, but `index.js` is common practice.
 
-    This file contains your JavaScript code that implements the logic for your plugin. [Learn more about `index.js` here](./handlers.md).
+This file contains your JavaScript code that implements the logic for your plugin. [Learn more about `index.js` here](./handlers.md).
 
 
 These two files go into your plugin's parent directory.

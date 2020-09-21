@@ -1,10 +1,10 @@
 # The `index.js` file
 
+__TBD: THIS IS WRONG AND NEEDS TO BE UPDATED. MANIFEST PROPERTIES HAVE CHANGED__
+
 Every _UI entry point_ you declare in [`manifest.json`](./manifest.md) must be fulfilled by a definition exported from your `index.js` module.
 
 _Exporting_ happens by setting the value of `module.exports`:
-
-__TBD: THIS NEEDS A REWRITE FOR PHOTOSHOP?__
 
 ```js
 module.exports = {
