@@ -3,7 +3,7 @@ name: pr-approved
 on:
   pull_request_review:
     types: [submitted]
-    branches: ['master']
+    branches: ['main']
 
 jobs:
   set-state:
