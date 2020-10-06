@@ -25,6 +25,13 @@ jobs:
         run: |
           echo "::error::PRs from forks are not supported (Github security issue).%0APRs should be from a branch in the same repo, created by a Contributor."
           exit 1
+      - name: check PATH_PREFIX (string) is set
+        if: env.PATH_PREFIX == null
+        run: |
+          echo "::error::Please set the Gatsby PATH_PREFIX (string) value in Github Secrets"
+          exit 1
+        env:
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
 
   echo-state:
     needs: [set-state]
@@ -76,11 +83,16 @@ jobs:
         run: |
           npm install
           npm run build
-          mkdir $GITHUB_WORKSPACE/dist
-          mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          if [ "$PATH_PREFIX" = "%%none%%" ]; then
+            # rename since the folder doesn't exist
+            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
+          else
+            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          fi
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
-          PATH_PREFIX: ${{ github.event.repository.name }}
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
           GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
           GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -149,11 +161,16 @@ jobs:
         run: |
           npm install
           npm run build
-          mkdir $GITHUB_WORKSPACE/dist
-          mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          if [ "$PATH_PREFIX" = "%%none%%" ]; then
+            # rename since the folder doesn't exist
+            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
+          else
+            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          fi
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
-          PATH_PREFIX: ${{ github.event.repository.name }}
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
           GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
           GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
