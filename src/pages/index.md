@@ -1,32 +1,41 @@
 ---
-title: Overview - Adobe Analytics
-description: This is the overview page of Adobe Analytics
+title: Overview - UXP for Adobe Photoshop
+description: This is the overview page of UXP for Adobe Photoshop
 contributors:
-  - https://github.com/simonwex 
+  - https://github.com/simonwex
+  - https://github.com/chuckweger
 ---
 
 <Hero slots="image, heading, text" background="rgb(64, 34, 138)"/>
 
 ![Hero image](./illustration.png) 
 
-# Adobe Analytics 
+# UXP for Adobe Photoshop 
 
-Adobe Product API offers limitless ways to integrate your most important customer data into key business processes. Adobe Product API offer limitless ways.
+UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack in which to build plugins for Photoshop and other Adobe Creative Cloud applications.<br/>This is the place to find out how developers can use UXP to build amazing Photoshop plugins.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-* [Quickstart Guide](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
-* [Adobe Analytics Github Repo](https://github.com/AdobeDocs/analytics-2.0-apis)
+* [Quickstart Guide](tbd)
+* [Adobe Photoshop UXP Github Repo](tbd)
 
 ## Overview
 
-This documentation provides instructions for Adobe Analytics 2.0 APIs. For working with Analytics 1.4 APIs, see [Analytics 1.4 API Documentation](https://github.com/AdobeDocs/analytics-1.4-apis).
+This documentation helps developers build plugins for Adobe Photoshop versions 22.0 and later. If you're building plugins for earlier versions of Photoshop, see the [CEP Getting Started Guides](https://github.com/Adobe-CEP/Getting-Started-guides).
 
-The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+UXP provides modern JavaScript, a curated selection of UI components, and a more streamlined workflow for plugin developers. With UXP, you can develop:
+
+- Direct Actions - headless plugins that interface with Photoshop, the host OS, and the network, free of any UI.
+- Modal Dialogs - plugins that implement one or more modal dialogs. Good for simple user interfaces that don't need to persist.
+- Panels - full-featured panels that look like any other panel in Photoshop. UXP panels can contain as complex a UI as you wish to develop. They can be resized, docked, opened and closed just like native Photoshop panels. And with appropriate CSS constructs, your UXP panels can be theme-aware and change as the user switches UI themes in Photoshop.
+
+<InlineAlert variant="info" slots="text"/>
+
+**IMPORTANT**:
+While this documentation set talks exclusively about Photoshop plugins created using UXP, earlier methods of controlling Photoshop, including CEP (Common Extensibility Platfor) and ExtendScript continue to be supported. Over time these earlier technologies will be deprecated and then removed from Photoshop, but there is no need to rush to convert your existing plugins to UXP.
+
 
 ## Discover 
 
@@ -36,33 +45,33 @@ You can also create reports to explore, get insights, or answer important questi
 
 [Quickstart Guide](guides/)
     
-Get started with the Adobe Analytics APIs.
+Get started with UXP for Adobe Photoshop.
 
 <DiscoverBlock slots="heading, link, text"/> 
 
 ### Guides
 
-[Calculated Metrics API](guides/calculated_metrics_api/) 
+[Technology Stack](guides/technology_stack/) 
      
-Returns information on the user's company that is necessary for making other Adobe Analytics API calls.
+An overview of how UXP works for your plugins.
 
 <DiscoverBlock slots="link, text"/>
 
-[Segments API](guides/segments_api/) 
+[Photoshop UXP for You](guides/uxp_for_you/) 
 
-Provides configuration guidance and best practices for the /segments endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Reporting Guide API](guides/reporting_api/)
-
-Provides configuration guidance and best practices for the /reports endpoint.
+What experience do you have with previous Photoshop plugin solutions? Here's what you'll need to learn based on what you already know.
 
 <DiscoverBlock slots="link, text"/>
 
-[Migrating from 1.4 to 2.0](guides/migrating/)
+[UXP Basics](guides/uxp_basics/)
 
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.   
+An introduction to how to build your Photoshop plugins using UXP.
+
+<DiscoverBlock slots="link, text"/>
+
+[Photoshop API Basics](guides/ps_basics/)
+
+UXP exposes a new API, which differs from the one exposed for CEP and ExtendScript.   
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
@@ -70,7 +79,7 @@ For help migrating from the 1.4 versions of the Analytics API to the newer and m
 
 [Try the API](api/) 
 
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
+The API Reference for UXP in Photoshop. __TBD: I don't have this in Swagger form; is such a thing available from the Photoshop team?__
 
 ## Contributing 
 

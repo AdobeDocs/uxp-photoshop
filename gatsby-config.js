@@ -10,25 +10,28 @@
  * governing permissions and limitations under the License.
  */
 
-const globalNav = require('@adobe/gatsby-theme-parliament/globalNav.json');
+const fs = require('fs');
+
+const globalNavFilePath = require.resolve('@adobe/gatsby-theme-parliament/globalNav.json');
+const globalNav = JSON.parse(fs.readFileSync(globalNavFilePath, 'utf8'));
 
 globalNav.menus = [globalNav.menus[1]];
 
 module.exports = {
   siteMetadata: {
     globalNav,
-    versions: [
+    /*versions: [
       {
-        title: 'v2.0'
+        title: 'v4.1'
       },
       {
         title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
+        path: 'https://github.com/AdobeDocs/uxp-photoshop'
       }
-    ],
+    ],*/
     pages: [
       {
-        title: 'Adobe Analytics',
+        title: 'UXP for Adobe Photoshop',
         path: '/'
       },
       {
@@ -37,7 +40,19 @@ module.exports = {
       },
       {
         title: 'API Reference',
-        path: '/api/'
+        path: '/ps_reference/'
+      },
+      {
+        title: 'UXP Reference',
+        path: '/uxp/'
+      },
+      {
+        title: 'Sample Code',
+        path: '/code_samples/'
+      },
+      {
+        title: 'Design',
+        path: '/design/'
       },
       {
         title: 'Support',
@@ -46,83 +61,113 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Get Started',
+        title: 'Getting Started',
         path: '/guides/',
+        header: true,
         pages: [
           {
-            title: 'Overview',
+            title: 'Photoshop UXP Overview',
             path: '/guides/'
           },
           {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
+            title: 'UXP for You',
+            path: '/guides/uxp_for_you/'
           },
           {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
+            title: 'UXP Overview',
+            path: '/guides/uxp_guide/'
           },
           {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
+            title: 'UXP for Photoshop Basics',
+            path: '/guides/ps_basics/'
           },
           {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
+            title: 'UXP Developer Tool',
+            path: '/guides/uxp-developer-tool/'
+          },
+          {
+            title: 'How Do I...',
+            path: '/guides/how-to/'
+          },
+          {
+            title: 'Theme Awareness',
+            path: '/guides/theme-awareness/'
+          },
+          {
+            title: 'Debugging your Plugins',
+            path: '/guides/debugging/'
+          },
+          {
+            title: 'Distributing your Plugins',
+            path: '/guides/distribution/'
           }
         ]
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
+        title: 'Code Samples',
+        path: '/code_samples/',
+        header: true,
         pages: [
           {
             title: 'Overview',
-            path: '/guides/reporting_api/'
+            path: '/code_samples/'
           },
           {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
-              {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
-              },
-              {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
-              },
-            ]
+            title: 'JavaScript Samples',
+            path: '/code_samples/javascript_samples/'
           },
           {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
+            title: 'React Samples',
+            path: '/code_samples/react_samples/'
+          },
+          {
+            title: 'batchPlay Samples',
+            path: '/code_samples/batchplay_samples/'
           }
         ]
       },
       {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
+        title: 'Overview',
+        path: '/support/',
+        header: true,
+        pages: [
+          {
+            title: 'Help',
+            path: '/support/'
+          },
+          {
+            title: 'FAQ',
+            path: '/support/FAQ/'
+          },
+          {
+            title: 'How to contribute',
+            path: '/support/contribute/'
+          }
+        ]
       },
       {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
+        title: 'Community',
+        path: '/support/community/',
+        header: true,
+        pages: [
+          {
+            title: 'Information',
+            path: '/support/community/'
+          }
+        ]
       },
       {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
+        title: 'UXP Reference',
+        path: '/uxp/reference-js',
+        header: true,
+        pages: [
+          {
+            title: 'JavaScript Reference',
+            path: '/uxp/reference-js/',
+            pages: require("./reference-js.js")
+          }
+        ]
       },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
-      },
-      {
-        title: 'FAQ',
-        path: '/support/FAQ/'
-      },
-      {
-        title: 'How to contribute',
-        path: '/support/contribute/'
-      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-parliament`],

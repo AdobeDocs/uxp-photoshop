@@ -1,0 +1,14 @@
+[dir="ltr"] .spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav-itemLink,
+.spectrum-SideNav .spectrum-SideNav-itemLink {
+    padding-left: 0 !important;
+}
+[dir="ltr"] .spectrum-SideNav--multiLevel .spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink,
+.spectrum-SideNav .spectrum-SideNav .spectrum-SideNav-itemLink {
+    padding-left: 0 !important;
+}
+
+.spectrum-SideNav--multiLevel .spectrum-SideNav,
+.spectrum-SideNav {
+    padding-left: var(--spectrum-sidenav-multilevel-item-indentation, var(--spectrum-global-dimension-size-150));
+    white-space: nowrap;
+}
