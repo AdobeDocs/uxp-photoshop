@@ -1,28 +1,35 @@
 {
   "private": true,
-  "name": "gatsby-theme-parliament-documentation",
+  "name": "uxp-photoshop-documentation",
   "version": "0.0.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/gatsby-theme-parliament-documentation"
+    "url": "https://github.com/AdobeDocs/uxp-photoshop"
   },
   "author": {
     "name": "Stephan Ringel",
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-parliament": "2.1.3",
-    "gatsby": "^2.23.11",
+    "@adobe/gatsby-theme-parliament": "^2.1.5",
+    "gatsby": "^2.24.65",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "uxp-documentation": "adobedocs/uxp"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
     "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
+    "predev": "yarn copy-uxp",
     "dev": "gatsby develop",
+    "copy-uxp": "rm -rf src/pages/uxp/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/uxp/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
+    "prebuild": "yarn copy-uxp",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0"
   }
 }
