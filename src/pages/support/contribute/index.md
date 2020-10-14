@@ -2,4 +2,4 @@
 
 ## How to contribute ?
 
-Lorem ipsum
+We're still working this out. Check back soon!

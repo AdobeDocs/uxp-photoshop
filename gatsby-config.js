@@ -70,13 +70,14 @@ module.exports = {
             title: 'Getting Started',
             path: '/guides/'
           },
-          {
-            title: 'UXP for You',
-            path: '/guides/uxp_for_you/'
-          },
+        
           {
             title: 'UXP Overview',
             path: '/guides/uxp_guide/'
+          },
+          {
+            title: 'UXP for You',
+            path: '/guides/uxp_for_you/'
           },
           {
             title: 'UXP for Photoshop Basics',
@@ -85,6 +86,10 @@ module.exports = {
           {
             title: 'UXP Developer Tool',
             path: '/guides/uxp-developer-tool/'
+          },
+          {
+            title: 'Developer Tool Walkthrough',
+            path: '/guides/udt-walkthrough/'
           },
           {
             title: 'How Do I...',

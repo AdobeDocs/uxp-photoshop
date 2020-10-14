@@ -9,7 +9,7 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 
 - A good text editor. Any modern developer-friendly text editor should work, but many people are using [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its own plugins to help with code formatting, syntax checking, JSON parsing, and so on.
 
-- Either the [UXP Developer Tool](./walkthroughx/) which provides a GUI that allows you to load, unload, and debug plugins, or the command line-based [UXP CLI](https://github.com/adobe-uxp/devtools-cli). The CLI is useful for scripted development toolchains (e.g. React), but has a steeper learning curve; for many plugins, the GUI-based UXP Developer Tool will be sufficient.
+- Either the [UXP Developer Tool](./uxp-developer-tool/) which provides a GUI that allows you to load, unload, and debug plugins, or the command line-based [UXP CLI](https://github.com/adobe-uxp/devtools-cli). The CLI is useful for scripted development toolchains (e.g. React), but has a steeper learning curve; for many plugins, the GUI-based UXP Developer Tool will be sufficient.
 
 - If you're using the UXP CLI, you'll need a command-line environment. The Terminal app in macOS works fine, as does the Windows Command Prompt. VS Code has a built-in terminal window which is convenient. And there are a dozen other command-line interpreters on both platforms, including Windows PowerShell. If you're building plugins that don't involve using React, you probably don't need to worry about this.
 

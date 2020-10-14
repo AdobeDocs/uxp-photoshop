@@ -12,7 +12,7 @@ contributors:
 
 # UXP for Adobe Photoshop 
 
-UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack in which to build plugins for Photoshop and other Adobe Creative Cloud applications.<br/>This is the place to find out how developers can use UXP to build amazing Photoshop plugins.
+UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack in which to build plugins for Photoshop and other Adobe Creative Cloud applications.<br/>This is the place for developers to learn how to use UXP to build amazing Photoshop plugins.
 
 <Resources slots="heading, links"/>
 
@@ -21,6 +21,7 @@ UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack 
 * [Quickstart Guide](guides/)
 * [Photoshop API](ps_reference/)
 * [UXP API](uxp/reference-js/)
+* [Developer Forums](#)
 
 ## Overview
 
@@ -80,20 +81,26 @@ The UXP Developer Tool is a GUI app that helps you create, debug, and distribute
 
 Want to jump right in building a plugin? Check out these code samples and make immediate progress.
 
+<DiscoverBlock slots="link, text"/>
+
+[Packaging and Distribution](guides/distribution/)
+
+Once you've built your plugin, how do you get it to market? The answer: the Creative Cloud Marketplace. Find out how you can prepare your plugin for distribution in the Marketplace.
+
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ### API References
 
-[Photoshop API](api/) 
+[Photoshop API](ps_reference/)
 
 The API Reference for Photoshop calls exposed to UXP.
 
-[UXP API](#tbd)
+[UXP API](uxp/reference-js/)
 
 The API Reference for UXP itself. Includes file and network I/O.
 
 ## Contributing 
 
 We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
+or deletions for this documentation, check out the source from [this github repo](https://github.com/AdobeDocs/uxp-photoshop), and submit a pull 
 request with your contribution. For more information, refer to the [contributing page](support/contribute/).
