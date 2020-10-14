@@ -95,7 +95,33 @@ module.exports = {
           },
           {
             title: 'Other Topics',
-            path: '/guides/uxp_guide/uxp-misc/'
+            path: '/guides/uxp_guide/uxp-misc/',
+            pages: [
+              {
+                title: 'The UXP Manifest',
+                path: '/guides/uxp_guide/uxp-misc/manifest-v4'
+              },
+              {
+                title: 'Localization and Platforms',
+                path: '/guides/uxp_guide/uxp-misc/localization-and-platforms'
+              },
+              {
+                title: 'Flyout Menus',
+                path: '/guides/uxp_guide/uxp-misc/flyout-menus'
+              },
+              {
+                title: 'File Access',
+                path: '/guides/uxp_guide/uxp-misc/file-access'
+              },
+              {
+                title: 'Network I/O',
+                path: '/guides/uxp_guide/uxp-misc/network-io'
+              },
+              {
+                title: 'Spectrum CSS',
+                path: '/guides/uxp_guide/uxp-misc/spectrum-css'
+              }
+            ]            
           },
            {
             title: 'How Do I...',
