@@ -94,7 +94,7 @@ module.exports = {
             path: '/guides/udt-walkthrough/'
           },
           {
-            title: 'Other Topics',
+            title: 'Other Topics »»',
             path: '/guides/uxp_guide/uxp-misc/',
             pages: [
               {
