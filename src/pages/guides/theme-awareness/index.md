@@ -1,4 +1,4 @@
-# Making Your Plugin Theme-Aware
+# Making Your Plugin Theme-aware
 
 ## Overview
 
@@ -10,6 +10,10 @@ Photoshop allows the user to switch the UI between four themes:
 * Dark
 * Light
 * Lightest
+
+If your plugin is not theme aware, it can look out of place (or possibly have unreadable text) when the user switches themes. It's very straightforward to add theme awareness to your plugin, so there's really no reason not to.
+
+## Built-in Theme Colors
 
 The easiest way to make your plugin theme-aware is to make use of a CSS feature called `CSS variables`. CSS variables are just what they sound like: a way to have dynamic property definitions in CSS.
 
@@ -67,6 +71,6 @@ On the "darkest" theme, they look like this:
 
 ![Darkest Theme](./images/fonts-darkest.png)
 
-And on the "lightest" theme, the look like this:
+And on the "lightest" theme, they look like this:
 
 ![Lightest Theme](./images/fonts-lightest.png)

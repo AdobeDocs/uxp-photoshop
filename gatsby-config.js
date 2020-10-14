@@ -66,7 +66,7 @@ module.exports = {
         header: true,
         pages: [
           {
-            title: 'Photoshop UXP Overview',
+            title: 'Getting Started',
             path: '/guides/'
           },
           {

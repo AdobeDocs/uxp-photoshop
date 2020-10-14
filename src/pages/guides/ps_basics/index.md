@@ -1,20 +1,20 @@
 ---
 title: Guides - Photoshop UXP Plugins
-description: This is the guides overview page of Adobe UXP for Photoshop 
+description: This is the guides overview page of the Adobe Photoshop API for UXP
 ---
 
 # Photoshop UXP Plugins
 
 ## The Basics
-This section covers the basics of UXP in Photoshop. For the basics of UXP itself, see [Getting Started with UXP](../uxp-basics/index.md).
+This section covers the basics of UXP in Photoshop. For the basics of UXP itself, see [Getting Started with UXP](../).
 
 While generic UXP APIs work across applications that support UXP (such as Adobe XD as well as Photoshop), the APIs in this section are specific to Photoshop. As such, they affect Photoshop documents rather than changing your plugin's UI, accessing the file system, and other non-Photoshop operations.
 
 UXP exposes APIs for Photoshop at the same level in your plugin as your UI code. Unlike CEP plugins, UXP plugins do not have to serialize strings and send them back and forth between the UI code and the ExtendScript engine. This removes a substantial barrier to rapid development and debugging.
 
-As of this writing, UXP in Photoshop is a work in progress, with some Photoshop functionality not yet exposed in the API. The workaround if you need some Photoshop function that is not in the API is to use a feature called [batchPlay](./batchplay.md).
+As of this writing, UXP in Photoshop is a work in progress, with some Photoshop functionality not yet exposed in the API. The workaround if you need some Photoshop function that is not in the API is to use a feature called [batchPlay](batchplay_intro/).
 
-To start writing your plugin, first review the [UXP Toolchain](../uxp_guide/toolchain.md). Then download the [UXP Developer Tool](../uxp-developer-tool/index.md). You can use that tool to create a plugin folder containing basic scaffolding for HTML, JavaScript, and other required files. Edit these files, replacing the sample code with your code.
+To start writing your plugin, first review the [UXP Toolchain](../uxp_guide/toolchain/). Then download the [UXP Developer Tool](../uxp-developer-tool/index.md). You can use that tool to create a plugin folder containing basic scaffolding for HTML, JavaScript, and other required files. Edit these files, replacing the sample code with your code.
 
 More detailed information about these APIs can be found in the [Photoshop API reference](#TBD).
 

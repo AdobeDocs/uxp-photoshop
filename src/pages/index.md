@@ -18,8 +18,9 @@ UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack 
 
 #### Resources
 
-* [Quickstart Guide](tbd)
-* [Adobe Photoshop UXP Github Repo](tbd)
+* [Quickstart Guide](guides/)
+* [Photoshop API](ps_reference/)
+* [UXP API](uxp/reference-js/)
 
 ## Overview
 
@@ -43,7 +44,7 @@ While this documentation set talks exclusively about Photoshop plugins created u
 
 ### Get Started
 
-[Quickstart Guide](guides/)
+[Getting Started Guide](guides/)
     
 Get started with UXP for Adobe Photoshop.
 
@@ -51,21 +52,15 @@ Get started with UXP for Adobe Photoshop.
 
 ### Guides
 
-[Technology Stack](guides/technology_stack/) 
-     
-An overview of how UXP works for your plugins.
-
-<DiscoverBlock slots="link, text"/>
-
 [Photoshop UXP for You](guides/uxp_for_you/) 
 
 What experience do you have with previous Photoshop plugin solutions? Here's what you'll need to learn based on what you already know.
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP Overview](guides/uxp_guide/)
+[Designing for Photoshop](/design)
 
-An introduction to how to build your Photoshop plugins using UXP.
+Here are some key design principles for UXP plugins in Photoshop. Learn the high level UI/UX patterns, and understand the different kinds of UI your plugin can present.
 
 <DiscoverBlock slots="link, text"/>
 
@@ -73,13 +68,23 @@ An introduction to how to build your Photoshop plugins using UXP.
 
 For UXP, Photoshop exposes a new API which differs from the one exposed for CEP and ExtendScript.   
 
+<DiscoverBlock slots="link, text"/>
+
+[Sample Code](code_samples/)
+
+Want to jump right in building a plugin? Check out these code samples and make immediate progress.
+
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ### API References
 
-[Try the API](api/) 
+[Photoshop API](api/) 
 
-The API Reference for UXP in Photoshop. 
+The API Reference for Photoshop calls exposed to UXP.
+
+[UXP API](#tbd)
+
+The API Reference for UXP itself. Includes file and network I/O.
 
 ## Contributing 
 

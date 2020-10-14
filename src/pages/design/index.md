@@ -1,5 +1,5 @@
 ---
-title: Design - Desiging for Photoshop
+title: Design - Designing for Photoshop
 description: This is the page for Photoshop pliugin design guidelines
 contributors:
   - https://github.com/dcaiced0
@@ -22,7 +22,7 @@ This section will cover the different interfaces in Photoshop available to plugi
 
 ## Overview
 
-There are two interface’s available to plugins in Photoshop, blocking UI (Dialog UI) and non-blocking UI (Panel UI).  The Plugin Launch Pad in Photoshop will let users view the list of their installed plugins and open a plugin right from their workspace. 
+There are two interfaces available to plugins in Photoshop, blocking UI (Dialog UI) and non-blocking UI (Panel UI).  The Plugin Launch Pad in Photoshop will let users view the list of their installed plugins and open a plugin right from their workspace. 
 
 ![Photoshop Plugin interfaces](./ux-images/pluginsinphotoshop.png)
 
