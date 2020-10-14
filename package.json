@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "uxp-photoshop-documentation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
     "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
     "predev": "yarn copy-uxp",
     "dev": "gatsby develop",
-    "copy-uxp": "rm -rf src/pages/uxp/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/uxp/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
+    "copy-uxp-js": "rm -rf src/pages/uxp/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/uxp/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
+    "copy-uxp-css": "rm -rf src/pages/uxp/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/uxp/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
+    "copy-uxp": "yarn copy-uxp-js && yarn copy-uxp-css",
     "prebuild": "yarn copy-uxp",
     "build": "gatsby build",
     "serve": "gatsby serve",

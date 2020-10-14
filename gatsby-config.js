@@ -60,7 +60,6 @@ module.exports = {
       }
     ],
     subPages: [
-   // DOES NOT WORK. ASK BARKIN.  require('/ps_reference/gatsby_sidebar.js'),
       {
         title: 'Getting Started',
         path: '/guides/',
@@ -171,16 +170,26 @@ module.exports = {
       },
       {
         title: 'UXP Reference',
-        path: '/uxp/reference-js',
+        path: '/uxp/reference-js/',
         header: true,
         pages: [
           {
             title: 'JavaScript Reference',
             path: '/uxp/reference-js/',
             pages: require("./reference-js.js")
+          },
+          {
+            title: 'CSS Reference',
+            path: '/uxp/reference-css/',
+            pages: require("./reference-css.js")
           }
         ]
       },
+      {
+        title: "API Reference",
+        path: '/ps_reference/',
+        pages: require('./reference-ps.js'),
+      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-parliament`],
