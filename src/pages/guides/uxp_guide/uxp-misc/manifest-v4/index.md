@@ -64,10 +64,9 @@ Key path | Type | Description | Required
 `main`   | `string` | Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. | Optional (defaults to `main.js`)
 `icons` | `array<object>` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) <br/> PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. <br/> You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../distribution/how-to-submit-to-plugin-manager.md) to learn more. | Publish
 `host.app` | `string` | Indicates that this is a plugin for an Adobe app (currently, the only valid values here are `XD` or `PS`). | Develop / Publish
-`host.minVersion` | `string` | Minimum required version of the host app (in `x.y` format) that can run this plugin. The lowest valid version for Photoshop plugins is `22.0`. <br/**Note:** The version number must be at least two segments. Typically, you'll leave the minor segment set to `0`, e.g. `22.0`. | Develop / Publish
+`host.minVersion` | `string` | Minimum required version of the host app (in `x.y` format) that can run this plugin. The lowest valid version for Photoshop plugins is `22.0`. <br/>**Note:** The version number must be at least two segments. Typically, you'll leave the minor segment set to `0`, e.g. `22.0`. | Develop / Publish
 `host.maxVersion` | `string` | Maximum version of host app that can run this plugin. Same formatting as `host.minVersion`. | Optional
-`entryPoints` | <code>array&lt;[EntryPointDefinition](#EntryPointDefinition)&gt;</code> | Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
-
+`entryPoints` | `EntryPointDefinition]`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
 
 ## Icons
 
@@ -95,7 +94,7 @@ Key | Type | Description
 ----|------|------------
 `type` | `string` | Entry point type: either `"command"` or `"panel"`.
 `id`   | `string` | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code.
-`label` | <code>?string\|[LocaleMap](#menu-localization)</code> | Label for this menu item that the user will select to run your plugin. May be a single string _or_ a dictionary of localized strings.
+`label` | `string` | Label for this menu item that the user will select to run your plugin. May be a single string _or_ a dictionary of localized strings.
 `shortcut` | `Object` | _Optional._ <br/><br/> Object defining Mac and Windows keyboard shortcuts for this menu item. See "Keyboard shortcuts" below for details. Only valid for `command` entry points.
 `minimumSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred minimum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the minimum width depending upon context.
 `maximumSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred maximum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the maximum width depending upon context.
