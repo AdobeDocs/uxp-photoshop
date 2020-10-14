@@ -58,6 +58,7 @@ This is one of the most puzzling features of modern JavaScript for those new to 
 
     }
 ````
+This is a very cavilier treatment of `async` and `await`, which are actually part of a larger `promises` feature in JavaScript. For the real story, consult your favorite search engine. You might start with the highly regarded MDN page [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
 
 ## UXP-specific Snippets
 
@@ -106,9 +107,14 @@ Files and folders in UXP for Photoshop can exist in four different places:
 
 ### How to Read a File
 
+Coming soon.
+
 
 ### How to Write a File
 
+Coming Soon
+
+## Other Useful Snippets
 
 ### How to Display a Simple Alert
 

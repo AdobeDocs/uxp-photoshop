@@ -36,4 +36,4 @@ If you're writing a panel-based plugin, you have access to the flyout menu (show
 
 ## Setting Up for UXP Development
 
-The first thing you'll want to do to start developing UXP plugins is to understand the development toolchain. [This page](./toolchain.md) explains describes the tools you'll need..
+The first thing you'll want to do to start developing UXP plugins is to understand the development toolchain. [This page](./uxp-toolchain/) explains describes the tools you'll need..

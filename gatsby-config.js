@@ -70,9 +70,8 @@ module.exports = {
             title: 'Getting Started',
             path: '/guides/'
           },
-        
           {
-            title: 'UXP Overview',
+            title: 'UXP Overview', // put the uxp_guide folder contents UNDER this menu. How?
             path: '/guides/uxp_guide/'
           },
           {
@@ -80,11 +79,15 @@ module.exports = {
             path: '/guides/uxp_for_you/'
           },
           {
+            title: 'The UXP Toolchain',
+            path: '/guides/uxp_guide/uxp-toolchain/'
+          },
+          {
             title: 'UXP for Photoshop Basics',
             path: '/guides/ps_basics/'
           },
           {
-            title: 'UXP Developer Tool',
+            title: 'UXP Developer Toolkit',
             path: '/guides/uxp-developer-tool/'
           },
           {

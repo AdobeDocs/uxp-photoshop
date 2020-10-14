@@ -1,4 +1,4 @@
-# Creating Your UXP Plugin with the UXP Developer Tool
+# Creating a Plugin with the UXP Developer Tool
 
 So you have Photoshop, you have the UXP Developer Toolkit, and you have Visual Studio Code or other programmer's text editor. Now what?
 
@@ -80,7 +80,7 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
 
  ![Debug Window](images/udt-debugger.png)
 
- In this debugger (which resembles the Chromium debugger) you can look at the console log, and do the usual debugger things such as setting breakpoints, stepping into and out of functions, etc. If you just want to look at logs without dealing with the debugger, you can choose the `Logs` option in the Actions menu.
+ In this debugger (which resembles the Chrome debugger) you can look at the console log, and do the usual debugger things such as setting breakpoints, stepping into and out of functions, etc. If you just want to look at logs without dealing with the debugger, you can choose the `Logs` option in the Actions menu.
 
  ## Multiple Plugins
 
