@@ -54,4 +54,4 @@ Finally, if you'd like to set a breakpoint when the plugin loads, you can do tha
 ![UTD options](./images/udt-plugin-options.png)
 
 ## More to Come
-As of this writing, the UXP Developer Tool is brand new. Expect more features to arrive over time. Also in the works is a command-line version of the Developer Tool, which is useful if you want to integrate it into your command-line build Tool.
+As of this writing, the UXP Developer Tool is brand new. Expect more features to arrive over time. Also in the works is a command-line version of the Developer Tool, which is useful if you want to integrate it into your command-line build workflows.

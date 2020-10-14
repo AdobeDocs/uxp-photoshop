@@ -70,6 +70,12 @@ For UXP, Photoshop exposes a new API which differs from the one exposed for CEP 
 
 <DiscoverBlock slots="link, text"/>
 
+[UXP Developer Tool](guides/uxp-developer-tool/)
+
+The UXP Developer Tool is a GUI app that helps you create, debug, and distribute plugins. It's an essential part of any UXP plugin workflow.
+
+<DiscoverBlock slots="link, text"/>
+
 [Sample Code](code_samples/)
 
 Want to jump right in building a plugin? Check out these code samples and make immediate progress.

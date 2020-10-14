@@ -14,9 +14,9 @@ UXP exposes APIs for Photoshop at the same level in your plugin as your UI code.
 
 As of this writing, UXP in Photoshop is a work in progress, with some Photoshop functionality not yet exposed in the API. The workaround if you need some Photoshop function that is not in the API is to use a feature called [batchPlay](batchplay_intro/).
 
-To start writing your plugin, first review the [UXP Toolchain](../uxp_guide/toolchain/). Then download the [UXP Developer Tool](../uxp-developer-tool/index.md). You can use that tool to create a plugin folder containing basic scaffolding for HTML, JavaScript, and other required files. Edit these files, replacing the sample code with your code.
+To start writing your plugin, first review the [UXP Toolchain](../uxp_guide/uxp-toolchain/). Then download the [UXP Developer Tool](../uxp-developer-tool/). You can use that tool to create a plugin folder containing basic scaffolding for HTML, JavaScript, and other required files. Edit these files, replacing the sample code with your code.
 
-More detailed information about these APIs can be found in the [Photoshop API reference](#TBD).
+More detailed information about these APIs can be found in the [Photoshop API reference](/ps_reference/).
 
 ## Photoshop Objects
 
