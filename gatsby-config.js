@@ -167,13 +167,18 @@ module.exports = {
       },
       {
         title: 'UXP Reference',
-        path: '/uxp/reference-js',
+        path: '/uxp/reference-js/',
         header: true,
         pages: [
           {
             title: 'JavaScript Reference',
             path: '/uxp/reference-js/',
             pages: require("./reference-js.js")
+          },
+          {
+            title: 'CSS Reference',
+            path: '/uxp/reference-css/',
+            pages: require("./reference-css.js")
           }
         ]
       },
