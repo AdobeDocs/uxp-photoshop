@@ -6,8 +6,6 @@ BatchPlay is for accessing Photoshop functionality that has not yet been exposed
 
 ExtendScript has executeAction; this is analagous to UXP's batchPlay. However, whereas executeAction could only play one descriptor at a time, batchPlay accepts an array of action descriptors. If you have multiple Photoshop operations that need to execute in series, using an array of action descriptors in a single batchPlay call is probably what you want.
 
-__TBD: See https://forums.adobeprerelease.com/photoshop/discussion/1740/batchplay-alert-error-messages#latest about async calls.__
-
 Unlike ExtendScript, where there were classes to construction action descriptors, references, and values, in batchPlay these are all built from JSON objects.
 
-The [batchPlay Reference](../api-reference/media/advanced/batchplay.md) has examples of constructing action descriptors using JSON, as well as using batchPlay in general.
+The [batchPlay Reference](#TBD) has examples of constructing action descriptors using JSON, as well as using batchPlay in general.

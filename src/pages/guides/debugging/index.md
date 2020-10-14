@@ -48,5 +48,3 @@ You can always reload your plugin manually, but it's nice when the system does i
 
 ### Gremlins
 Sometimes, restarting Photoshop and the UXP Developer Tool will make a problem mysteriously vanish. Why does this happen? Yes, yes it does.
-
-__TBD: WHAT ELSE SHOULD GO HERE OR ON A SEPARATE PAGE?__

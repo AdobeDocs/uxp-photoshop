@@ -12,9 +12,6 @@ File and folder access is an important part of many plugins. Files and folders c
 
 > In the near future, UXP will provide a permissions system for persistent tokens so developers won’t need user interaction for the same path every session. For now, if you need constant access to a location to write and read files, please use the UXP sanctioned locations for your plugin, accessed by the methods listed in the FileSystemProvider object of UXP.
 
-**TBD: get Barkin's document re tokens?**
-
-
 ## Secure Storage
 
 Sometimes a plugin needs to store sensitive information such as external site tokens or passwords. For these cases, UXP offers Secure Storage, protected storage which can be used to store sensitive data
@@ -32,5 +29,3 @@ There are some caveats for using SecureStorage:
 2. Data in SecureStorage can be lost for various reasons. For an example, the user could uninstall the host application and delete the secure storage. Or, the cryptographic information used by the secure storage could be damaged by the user accidentally. This will result in loss of data without the secure storage being removed.
 
 3. SecureStorage should be regarded as a cache rather than a persistent storage. Data in SecureStorage should be able to be regenerated from plugins after the time of loss.
-
-**TBD: NEED A SECURE STORAGE EXAMPLE**

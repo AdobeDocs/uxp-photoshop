@@ -36,5 +36,3 @@ If you're writing a plugin with a complex UI (for example, a UI that changes dep
 ## batchPlay
 
 As you browse through the sample code, you'll see occasional use of a method named `batchPlay`. This is a way for your plugin to call Photoshop methods and retrieve data that isn't yet available through the Photoshop API for UXP. There are a number of batchPlay examples to show typical usage of this feature.
-
-**TBD: WHERE CAN WE MENTION JARDA'S ALCHEMIST?**

@@ -3,7 +3,7 @@
 The UXP Developer Tool (UDT) is a standalone GUI application that loads, unloads, and helps debug your UXP plugins. It is the easiest way to create the initial shell for a plugin as well as to submit the plugin for inclusion in the Marketplace.
 
 ## Installation
-You can download installers for the UDT [here](/tbd.md). Once it's downloaded, run the installer just like any other one on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tool." On Windows, the folder is in the `Program Files->Adobe` folder.
+You can download installers for the UDT [here](#TBD). Once it's downloaded, run the installer just like any other one on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tool." On Windows, the folder is in the `Program Files->Adobe` folder.
 
 ## UDT User Interface
 On first launch (and anytime there are no UXP plugins loaded) UDT displays this window:

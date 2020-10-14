@@ -2,9 +2,7 @@
 
 ## Goodbye CEP
 
-__TBD: CAN I JUST REFER TO AND/OR INCORPORATE THE STUFF IN https://github.com/adobe-uxp/cep-migration-guides HERE?__
-
-The Common Extensibility Platform has been the method of choice for plugin developers who needed anything beyond the simplest of user interfaces. While it's still going to be around in Photoshop for some time __[TBD: WHAT'S THE OFFICIAL STATEMENT HERE?]__, it will at some point be deprecated and then, eventually, removed from Photoshop.
+The Common Extensibility Platform has been the method of choice for plugin developers who needed anything beyond the simplest of user interfaces. While it's still going to be around in Photoshop for some time, it will at some point be deprecated and then, eventually, removed from Photoshop.
 
 CEP is being retired for several reasons:
 

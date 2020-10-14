@@ -59,6 +59,8 @@ This is one of the most puzzling features of modern JavaScript for those new to 
     }
 ````
 
+## UXP-specific Snippets
+
 ### How to determine the host and OS a plugin is using
 
 Sometimes it's necesssary (for localization or other reasons) to find out what a plugin's host environment is. Here's how to do that:
@@ -70,6 +72,21 @@ const hostName = host.name
 const hostVersion = host.version;
 const hostOS = require('os').platform(); // note that this is a method, not a property
 console.log(`locale: ${locale}  host ${hostName} version ${hostVersion} running on ${hostOS}`);
+```
+
+### How to get notified that your panel is opening or closing
+
+In your startup code, add something like this:
+
+```js
+document.addEventListener('uxpcommand', (event) => {
+  const { commandId } = event
+  if (commandId === 'uxpshowpanel') {
+    console.log("panel is showing');
+  } else if (commandId === 'uxphidepanel') {
+    console.log('panel is hiding');
+  }
+})
 ```
 
 ## File I/O

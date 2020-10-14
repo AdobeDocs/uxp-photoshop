@@ -34,7 +34,7 @@ UXP provides modern JavaScript, a curated selection of UI components, and a more
 <InlineAlert variant="info" slots="text"/>
 
 **IMPORTANT**:
-While this documentation set talks exclusively about Photoshop plugins created using UXP, earlier methods of controlling Photoshop, including CEP (Common Extensibility Platfor) and ExtendScript continue to be supported. Over time these earlier technologies will be deprecated and then removed from Photoshop, but there is no need to rush to convert your existing plugins to UXP.
+While this documentation set talks exclusively about Photoshop plugins created using UXP, earlier methods of controlling Photoshop, including CEP (Common Extensibility Platform) and ExtendScript continue to be supported. Over time these earlier technologies will be deprecated and then removed from Photoshop, but there is no need to rush to convert your existing plugins to UXP.
 
 
 ## Discover 
@@ -63,7 +63,7 @@ What experience do you have with previous Photoshop plugin solutions? Here's wha
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP Basics](guides/uxp_basics/)
+[UXP Overview](guides/uxp_guide/)
 
 An introduction to how to build your Photoshop plugins using UXP.
 
@@ -71,7 +71,7 @@ An introduction to how to build your Photoshop plugins using UXP.
 
 [Photoshop API Basics](guides/ps_basics/)
 
-UXP exposes a new API, which differs from the one exposed for CEP and ExtendScript.   
+For UXP, Photoshop exposes a new API which differs from the one exposed for CEP and ExtendScript.   
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
@@ -79,17 +79,10 @@ UXP exposes a new API, which differs from the one exposed for CEP and ExtendScri
 
 [Try the API](api/) 
 
-The API Reference for UXP in Photoshop. __TBD: I don't have this in Swagger form; is such a thing available from the Photoshop team?__
+The API Reference for UXP in Photoshop. 
 
 ## Contributing 
 
 We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
 or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
 request with your contribution. For more information, refer to the [contributing page](support/contribute/).
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *60 seconds*.
-
-The default rate limit for an Adobe Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    

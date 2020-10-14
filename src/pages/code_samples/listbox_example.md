@@ -6,8 +6,8 @@ But with some creative HTML, CSS and JavaScript, you can make a `sp-menu` compon
 
 ````html
 <sp-menu id="mylistbox" class="listbox" style="height: 300px; margin-left:20px;color:white; width:220px; border:1px white solid; overflow: auto">
-    <sp-menu-item selected>My first project</sp-menu-item>
-    <sp-menu-item projectid="9998888">Project number 2</sp-menu-item>
+    <sp-menu-item row_id="42" selected>My first project</sp-menu-item>
+    <sp-menu-item row_id="271828">Project number 2</sp-menu-item>
 <sp-menu>
 ````
                        
@@ -19,4 +19,3 @@ function listboxChange(evt) {
     console log(`row_id is ${row_id} and value is ${value});
 }
 ````
-**FULL EXAMPLE TBD**

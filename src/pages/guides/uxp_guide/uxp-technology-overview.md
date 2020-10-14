@@ -8,7 +8,7 @@ A UXP plugin is contained in a single folder, which may contain any number of su
 
 * A [manifest.json](./uxp-manifest.md) file. The manifest  identifies a plugin (with a globally unique ID), describes the plugin, identifies its entry points, and more. If your manifest file is malformed or missing pieces, your plugin will not load. No executable code goes in the manifest, only the JSON description of your plugin.
 
-The manifest describes one or more [entry points](./entry-points.md), which define strings that show up in the Plugins menu.
+The manifest describes one or more entry points, which define strings that show up in the Plugins menu.
 
 The manifest also contains [icon definitions](plugin-icons.md) describing icons that appear in Photoshop's Plugins panel, and in collapsed panels.
 
@@ -17,8 +17,6 @@ The manifest also contains [icon definitions](plugin-icons.md) describing icons 
 * Optionally, if the plugin provides a user interface, one or more HTML files that define that UI.
 
 * Plugins using React require additional components, including `package.json` and `webpack.config.js` files.
-
-__TBD: DO WE NEED TO GO INTO MORE DETAIL ABOUT REACT PACKAGING?__
 
 ## Key UXP Features
 

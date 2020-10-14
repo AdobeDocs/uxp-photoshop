@@ -17,8 +17,6 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 
 ### Advanced Toolchain
 
-__TBD: CHECK WITH KERRI ABOUT THE REST OF THIS STUFF__
-
  If you're using the UXP Developer Tool, and using plain JavaScript instead of React, you probably don't need any of the following tools.
 
 - [Node.js](https://nodejs.org/en/): a JavaScript runtime environment. It's often used as a backend server in web environments. In the case of UXP, it's used as an engine to help manage installing plugins while using a command-line environment.
@@ -27,12 +25,10 @@ __TBD: CHECK WITH KERRI ABOUT THE REST OF THIS STUFF__
 
 - [yarn]https://yarnpkg.com: a better package manager for Node. Many people, including those developing Photoshop UXP tools, are using yarn instead of npm.
 
-__TBD KERRI: WHEN ARE YOU RECOMMENDING YARN VS NPM?__
-
 ### Installing the tooling
-- __UXP Developer Tool for macOS__ - [Download the installer DMG file](../../linktbd.md) and double-click to open it. In the folder that opens, double-click the `Install` icon to install. It installs in your `Applications` folder in a folder named `Adobe UXP Developer Tools`.
+- __UXP Developer Tool for macOS__ - [Download the installer DMG file](#TBD) and double-click to open it. In the folder that opens, double-click the `Install` icon to install. It installs in your `Applications` folder in a folder named `Adobe UXP Developer Tools`.
 
-- __UXP Developer Tool for Windows 10__ - [Download the installer zip file](../../linktbd.md), unzip it, and run `Set-up.exe` in the unzipped folder.
+- __UXP Developer Tool for Windows 10__ - [Download the installer zip file](#TBD), unzip it, and run `Set-up.exe` in the unzipped folder.
 
 - __UXP CLI (both Mac and Windows)__ - [Download the repository](https://github.com/adobe-uxp/devtools-cli) from GitHub; the `README.md` file contains complete installation instructions.
 
@@ -64,7 +60,3 @@ The [HTML PLayground](https://github.com/adobe-uxp/ps-uxp-html-playground) plugi
 ### batchPlay Logger for ExtendScript developers
 
 Plug the [ExtendScript BatchPlay logger](https://github.com/adobe-uxp/ps-es-to-uxp) jsx code into your ExtendScript project, and it will print out all your `executeAction` and `executeActionGet` methods in a format suitable for use with UXP's BatchPlay.
-
-### TBD:
-
-ANYTHING ELSE? It would be good to mention Jarda's Alchemy thing somewhere.

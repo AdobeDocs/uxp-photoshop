@@ -14,7 +14,7 @@ ExtendScript Toolkit ("ESTK") was the development environment of choice for many
 UXP source code (which is just HTML, CSS, and JavaScript) can be developed in the programming editor of your choice, although many in the UXP world prefer VS Code due to its powerful extensibility features.
 
 ### User interface
-In some ExtendScripts, there is generally little to no UI; the end user picks a script from the File->Scripts menu, and the script runs facelessly. If your ExtendScript  *does* need a UI, you typically use simple JavaScript `alert()`, `confirm()`, and `prompt()` calls. Or you could use the full-featured but complex [ScriptUI](https://creativepro.com/files/kahrel/indesign/scriptui.html) to create complex dialogs. Moving beyond ExtendScript into CEP, there are many more possibilities; those are discussed in [section TBD](../tbd.md).
+In some ExtendScripts, there is generally little to no UI; the end user picks a script from the File->Scripts menu, and the script runs facelessly. If your ExtendScript  *does* need a UI, you typically use simple JavaScript `alert()`, `confirm()`, and `prompt()` calls. Or you could use the full-featured but complex [ScriptUI](https://creativepro.com/files/kahrel/indesign/scriptui.html) to create complex dialogs. Moving beyond ExtendScript into CEP, there are more possibilities with panels.
 
 In UXP, on the other hand, you're able to design as simple or as complex a UI as you want, merely by using HTML and CSS to create the visual part, and JavaScript to create the UI's underlying logic (e.g., "what should I do when this button is clicked").
 
@@ -28,8 +28,7 @@ A full introduction to ES6 features and syntax is beyond the scope of this docum
 - [Anonymous functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-
-__TBD: WHAT ELSE TO MENTION?__
+- [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 ### What's Missing in UXP
 UXP provides an HTML interpreter similar to Chromium; it's more limited than a full browser, which means some commonly-used web CSS and HTML idioms don't work. For more information on what does and doesn't work in the UXP HTML environment, see [this document](../uxp-development/unsupported.md).
