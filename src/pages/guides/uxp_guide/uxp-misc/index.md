@@ -4,9 +4,9 @@ Here are topics you need to know.
 
 **TBD: GET THESE INTO A GATSBY SUBMENU SOMEHOW**
 
-* [The UXP Manifest](manifest.md)
-* [Localization and Platforms](localization-and-platforms.md)
-* [Flyout Menus](flyout-menus.md)
-* [File Access](file-access.md)
-* [Network I/O](network-io.md)
-* [Spectrum CSS](spectrum-css.md)
+* [The UXP Manifest](./manifest-v4/)
+* [Localization and Platforms](./localization-and-platforms/)
+* [Flyout Menus](./flyout-menus/)
+* [File Access](./file-access/)
+* [Network I/O](./network-io/)
+* [Spectrum CSS](./spectrum-css/)
