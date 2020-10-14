@@ -1,6 +1,6 @@
 ---
-title: Support - Adobe Analytics
-description: This is the support page of Adobe Analytics 
+title: Support - UXP for Adobe Photoshop 
+description: This is the support page of UXP for Adobe Photoshop 
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
