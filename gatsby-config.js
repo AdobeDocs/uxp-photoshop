@@ -60,6 +60,7 @@ module.exports = {
       }
     ],
     subPages: [
+   // DOES NOT WORK. ASK BARKIN.  require('/ps_reference/gatsby_sidebar.js'),
       {
         title: 'Getting Started',
         path: '/guides/',
