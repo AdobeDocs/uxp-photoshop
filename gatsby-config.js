@@ -185,7 +185,8 @@ module.exports = {
         title: "API Reference",
         path: '/ps_reference/',
         pages: require('./reference-ps.js'),
-      }
+      },
+      ...require("./design.js")
     ]
   },
   plugins: [`@adobe/gatsby-theme-parliament`],

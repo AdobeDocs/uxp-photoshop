@@ -1,95 +1,44 @@
 ---
-title: Design - Designing for Photoshop
-description: This is the page for Photoshop pliugin design guidelines
+title: Design - Desiging a Plugin experience
+description: This is the page for the introduction to plugin design guidelines
 contributors:
   - https://github.com/dcaiced0
 ---
-# Designing for Photoshop
+# Designing a plugin experience
 
-This section will cover the different interfaces in Photoshop available to plugins. This includes specs, guidance around when and how to use the different interfaces and high level UX patterns that exist in Photoshop. 
+These guidelines will help you define the best user experience for your plugin. Based on your users workflow and the plugin action, different UX and UI patterns should be considered as you create a plugin.
 
-<Resources slots="heading, links"/>
-
-* [Overview](link)
-* [Plugins Panel (non-blocking UI)](link)
-* [Plugins Dialog (blocking UI)](link)
-* [Themes and Icons](link)
-* [UX Requirements](link)
+Plugins can interact with the user at different levels, for example, some plugins in some use cases won’t render an interface, and some will include actions that need an interface.
 
 
-----------
- <br />
 
-## Overview
+ 
+ 
+## Desiging a plugin
 
-There are two interfaces available to plugins in Photoshop, blocking UI (Dialog UI) and non-blocking UI (Panel UI).  The Plugin Launch Pad in Photoshop will let users view the list of their installed plugins and open a plugin right from their workspace. 
-
-![Photoshop Plugin interfaces](./ux-images/pluginsinphotoshop.png)
-
-## Plugins Panel (non-blocking UI)
-
-This section has recommendations when using a Plugins Panel - Non-Blocking UI in Photoshop. If the user needs to have access to the canvas, the plugin panel is the best option, since it’s contextual to the user’s selection and allows the user to modify items on their canvas while interacting with the plugin. 
-
-![Photoshop Plugin interfaces](./ux-images/Photoshop_panel.png)
-
-**Panel UI - Specs**
-
-MacOS example
-
-![Photoshop Plugin Panel Specs](./ux-images/photoshoppanelspecs.png)
-
-Example
-
-![Photoshop Plugin Panel Example](./ux-images/pspluginexample.png)
-
-**Plugin Launch Pad**
-
-Plugin launch pad and active submenu examples
-
-![Photoshop Plugin Lauch Pad](./ux-images/pspluginlaunchpad.png)
+**Learn more about the types interfaces available to plugins.**
 
 
-## Plugins Dialog (blocking UI)
+| **Plugins Panel**   | **Plugins Dialog**   |
+|---------------------|--------------------|
+| Non-Blocking UI - This interface is best used when the user should have access to the canvas while using the plugin.   | Blocking UI - This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas   | 
 
-This section has recommendations when using a Plugins Dialog - Blocking UI in Photoshop. This interface is best used when the plugin needs to run an action and the user doesn’t need to modify or change selection of objects on the canvas.
+ 
 
-For more guidance on “Dialog” best practices reference [Spectrum guidelines](spectrum.adobe.com/page/dialog)
+## UX Patterns
 
-![Plugin Dialog Specs](./ux-images/plugindialogspecs.png)
+User Experience patterns will provide guidence on how to interact with your plugin users within Adobe, this will highlight UX requirements and best practices.
 
-**Panel UI - Specs**
+[View UX Patterns](ux-patterns/index.md)
 
-Example
-
-![Plugin Dialog example](./ux-images/plugindialogexample.png)
-
-
-## Themes and Icons
-
-Photoshop has different interface themes end-users can choose from. Consider the different themes when designing the plugin UI.[Spectrum guidelines](Link)support themes.
-
-**Panel UI - Specs**
-
-Lightest and Light Themes
-
-![Photoshop light and lightest themes](./ux-images/lightThemes.png)
-
-Dark and Darkest Themes
-
-![Photoshop Dark and Darkest themes](./ux-images/darkThemes.png)
+[Designing for Photoshop](ux-patterns/ux-patterns/designingforPS.md)
 
 
-**Photoshop Icon Guidelines**
+ 
+ 
+## UXP UI Spectrum Components 
 
-This icon is shown when plugin is docked/undocked in the Photoshop application frame. There are a few things to consider when designing an icon for a panel plugin in Photoshop; the color of your icon and themes, icon size, padding and background.
+UXP UI Spectrum Components will have information on UI components you can use to build your plugin interface. 
 
-[Download the plugin icon template](Link)
-
-![Photoshop Plugin icon example](./ux-images/psiconexample.png)
-
-![Photoshop Plugin icon specs](./ux-images/psiconspecs.png)
-
-Since Photoshop uses themes, make sure there is enough contrast in the different Photoshop themes, or include at least light and dark versions of your icon. Here are some examples of monochromatic icons to support light and dark themes. Button states the icon will have a unselected, hover and selected states
-
-![Photoshop Plugin icon guidelines](./ux-images/psiconguidelines.png)
+[View UXP UI Spectrum Components ](Link)
 
