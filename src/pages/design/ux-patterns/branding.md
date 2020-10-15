@@ -9,14 +9,15 @@ contributors:
 
 To ensure users know they are interacting with your plugin, include branding throughout the plugin experience. Below are some examples.
 
- * [Onboarding and branding](Pagelink) 
- * [Customized plugin UI](Pagelink) 
+ * Onboarding and branding
+ * Customized plugin UI
 
 
  
 
 ## Onboarding and branding
 
+#### Best practices
 When the user is interacting with the plugin for the first time for example in the onboarding or login screen, including the plugin logo will help the user identify the plugin in the future. 
 
 ![Panel branding example](../ux-images/Branding-1.png)
@@ -27,6 +28,7 @@ When the user is interacting with the plugin for the first time for example in t
 
 ## Customized plugin UI
 
+#### Best practices
 Customizing the UI to include brand colors, will help users distinguish your plugin's interface. 
 
 ![Panel customization example](../ux-images/Branding-3.png)

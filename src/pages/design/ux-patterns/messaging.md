@@ -9,12 +9,12 @@ contributors:
 
 These are the guidelines and best practices on when and how to provide users with feedback as they interact with your plugin
 
-* [Alerts](Pagelink)
-* [Success)](Pagelink)
-* [Output)](Pagelink)
-* [Permission dialogs](Pagelink)
-* [Loaders and Progress Indicators](Pagelink)
-* [Examples](Pagelink)
+* Alerts
+* Success
+* Output
+* Permission dialogs
+* Loaders and Progress Indicators
+* Examples
 
 Provide users with feedback as they interact with your plugin, this can be alert and success messaging, permission dialogs or loaders and progress bars to let them know something is running in the background. Below is a guide to help determine where to render plugin messages.
 

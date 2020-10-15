@@ -1,9 +1,10 @@
 ---
-title: Design - Desiging for Photoshop
+title: Design - Designing for Photoshop
 description: This is the page for Photoshop plugin design guidelines
 contributors:
   - https://github.com/dcaiced0
 ---
+
 # Designing for Photoshop
 
 This section will cover the different interfaces in Photoshop available to plugins. This includes specs, guidance around when and how to use the different interfaces and high level UX patterns that exist in Photoshop. 
@@ -57,7 +58,7 @@ Example
 
 ## Themes and Icons
 
-Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI.[Spectrum guidelines](Link)support themes.
+Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI. The [UXP UI Spectrum Components](Link) support themes.
 
 **Panel UI - Specs**
 
