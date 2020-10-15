@@ -87,20 +87,53 @@ Want to jump right in building a plugin? Check out these code samples and make i
 
 Once you've built your plugin, how do you get it to market? The answer: the Creative Cloud Marketplace. Find out how you can prepare your plugin for distribution in the Marketplace.
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
+<DiscoverBlock slots="heading, link, text"/> 
 
 ### API References
+
+<DiscoverBlock slots="link, text"/>
 
 [Photoshop API](ps_reference/)
 
 The API Reference for Photoshop calls exposed to UXP.
 
+<DiscoverBlock slots="link, text"/>
+
 [UXP API](uxp/reference-js/)
 
 The API Reference for UXP itself. Includes file and network I/O.
+
+<DiscoverBlock width="100%" slots="heading, link, text"/>
+
+## Share
+
+You've built the world's greatest plugin. What do you do now? This section explains how to package, distribute, and market your plugin.
+
+<DiscoverBlock slots="link, text"/>
+
+### [Packaging Your Plugin](distribution/packaging-your-plugin/)
+
+Packaging your UXP plugin is a breeze. In many cases, it's just one click away.
+
+<DiscoverBlock slots="link, text"/>
+
+### [Options for Distribution](distribution/distribution-options/)
+
+Did you build a plugin just for yourself, for your friends, for your employer? Or did you want to distribute through the Creative Cloud on millions of desktops? Read this section to help you decide.
+
+<DiscoverBlock slots="link, text"/>
+
+### [Submission and Review](distribution/submission-checklist/)
+Learn about the review process and associated timelines for Creative Cloud integrations, and follow our review submission checklist.
+
+<DiscoverBlock slots="link, text"/>
+
+### [Marketing Your Plugin](distribution/marketing/)
+
+Submitting your plugin is only half the battle. Now you have to tell people about it. Read this for some ideas on how to best market your plugin.
 
 ## Contributing 
 
 We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
 or deletions for this documentation, check out the source from [this github repo](https://github.com/AdobeDocs/uxp-photoshop), and submit a pull 
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
+request with your contribution.

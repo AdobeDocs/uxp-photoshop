@@ -54,10 +54,6 @@ module.exports = {
         title: 'Design',
         path: '/design/'
       },
-      {
-        title: 'Support',
-        path: '/support/'
-      }
     ],
     subPages: [
       {
@@ -68,10 +64,6 @@ module.exports = {
           {
             title: 'Getting Started',
             path: '/guides/'
-          },
-          {
-            title: 'UXP Overview', // put the uxp_guide folder contents UNDER this menu. How?
-            path: '/guides/uxp_guide/'
           },
           {
             title: 'UXP for You',
@@ -164,37 +156,7 @@ module.exports = {
           }
         ]
       },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
-      },
-      {
+       {
         title: 'UXP Reference',
         path: '/uxp/reference-js/',
         header: true,
@@ -212,7 +174,7 @@ module.exports = {
         ]
       },
       {
-        title: "API Reference",
+        title: "Ps API Reference",
         path: '/ps_reference/',
         pages: require('./reference-ps.js'),
       },
