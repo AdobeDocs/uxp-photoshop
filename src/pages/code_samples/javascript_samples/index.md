@@ -36,14 +36,6 @@ This plugin demonstrates the common use case of needing to talk to an external w
 
 A listbox component is not included in Spectrum-CSS, but it's possible to simulate one using `<sp-menu>` and some simple CSS.
 
-## Multi-App Sample
-
-Because UXP will be the standard way of supporting third-party developers across Creative Cloud applications, it's possible for a single plugin to support multiple applications.
-
-This example demonstrates that, supporting both Adobe Photoshop and Adobe XD in a single package. This sample plugin itself does very little, since the DOMs of these two applications are very different.
-
-What is the use case for such a plugin? Typically you'd want to support multiple applications if you're connecting to some external asset service and want to pull assets into multiple applications. Or, you might be using a RESTful service that supplies data that you use in multiple applications.
-
 ## Theme Awareness
 
 The Photoshop UI supports multiple "themes" (light, dark, etc.). You can use CSS selectors to change the way your UI looks depending upon what theme the user picks in Photoshop Preferences->Interface. This sample shows the CSS and HTML necessary to make your plugin aware of user-initiated theme changes, and change your color scheme accordingly.
