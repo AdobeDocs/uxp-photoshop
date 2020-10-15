@@ -90,15 +90,17 @@ Once you've built your plugin, how do you get it to market? The answer: the Crea
 
 ## API References
 
+The APIs come in two parts: the methods and properties unique to Photoshop, and those exposed by UXP to all UXP-aware Creative Cloud applications.
+
 <DiscoverBlock slots="link, text"/>
 
-[Photoshop API](ps_reference/)
+### [Photoshop API](ps_reference/)
 
 The API Reference for Photoshop calls exposed to UXP.
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP API](uxp/reference-js/)
+### [UXP API](uxp/reference-js/)
 
 The API Reference for UXP itself. Includes file and network I/O.
 

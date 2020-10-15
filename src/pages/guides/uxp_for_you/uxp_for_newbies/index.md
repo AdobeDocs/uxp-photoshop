@@ -14,4 +14,4 @@ The same applies to learning HTML and CSS (Cascading Style Sheets), although bot
 
 An apocryphal quote from Picasso is "good artists borrow, great artists steal" -- which means that, when you get to the point where you're ready to try coding, looking at sample code and putting it in your own projects is usually just fine. Then go through the code at your leisure and make sure you understand what it's doing. And to start you off with some sample code, [look here](../code_samples/).
 
-Finally, _ask questions_. There are many helpful people on the [Adobe forums](#TBD), and chances are you'll find answers there.
+Finally, _ask questions_. There are many helpful people on the [Adobe forums](#LINKNEEDED), and chances are you'll find answers there.

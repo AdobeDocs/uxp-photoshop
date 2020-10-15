@@ -26,9 +26,9 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 - [yarn]https://yarnpkg.com: a "better" package manager than npm for Node. Many people, including those developing Photoshop UXP tools, are using yarn instead of npm.
 
 ### Installing the tooling
-- __UXP Developer Tool for macOS__ - [Download the installer DMG file](#TBD) and double-click to open it. In the folder that opens, double-click the `Install` icon to install. It installs in your `Applications` folder in a folder named `Adobe UXP Developer Tools`.
+- __UXP Developer Tool for macOS__ - [Download the installer DMG file](#LINKNEEDED) and double-click to open it. In the folder that opens, double-click the `Install` icon to install. It installs in your `Applications` folder in a folder named `Adobe UXP Developer Tools`.
 
-- __UXP Developer Tool for Windows 10__ - [Download the installer zip file](#TBD), unzip it, and run `Set-up.exe` in the unzipped folder.
+- __UXP Developer Tool for Windows 10__ - [Download the installer zip file](#LINKNEEDED), unzip it, and run `Set-up.exe` in the unzipped folder.
 
 - __UXP CLI (both Mac and Windows)__ - [Download the repository](https://github.com/adobe-uxp/devtools-cli) from GitHub; the `README.md` file contains complete installation instructions.
 
@@ -50,7 +50,7 @@ In order to build React-based plugins, you'll need to know a bit about [NodeJS](
 ## Useful Utilities and Resources
 
 ### Kitchen Sink Example
-This is sample code, not actually a tool. But the [uxp-ui-kitchen-sink-plugin](TBD#) is very useful in showing the kinds of controls you can use in UXP. It covers both Spectrum and native controls.
+This is sample code, not actually a tool. But the [uxp-ui-kitchen-sink-plugin](LINKNEEDED#) is very useful in showing the kinds of controls you can use in UXP. It covers both Spectrum and native controls.
 
 ### HTML Playground
 The [HTML PLayground](https://github.com/adobe-uxp/ps-uxp-html-playground) plugin is designed to make it simple to test out simple HTML layouts in Photoshop using UXP's layout engine. To use this, install the plugin using the UXP Developer Tool.

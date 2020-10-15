@@ -1,8 +1,6 @@
-# UXP Deep Dive
+# UXP: Other Topics
 
-Here are topics you need to know.
-
-**TBD: GET THESE INTO A GATSBY SUBMENU SOMEHOW**
+UXP is a growing technology platform and, as such, has many different facets. Here are topics you may need to know to successfully create a UXP plugin:
 
 * [The UXP Manifest](./manifest-v4/)
 * [Localization and Platforms](./localization-and-platforms/)

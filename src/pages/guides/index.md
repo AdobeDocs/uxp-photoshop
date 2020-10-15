@@ -51,7 +51,7 @@ UXP plugins are built using JavaScript (aka ECMAScript), the scripting language 
 
 Basically, a UXP plugin is running inside a pseudo-browser window, inside the host application (e.g., Photoshop). Even though UXP uses HTML, CSS, and JavaScript, its underlying engine is _not_ a full browser (unlike Chromium, which is used in CEP). This means that some HTML and CSS features that you may be used to in web development and CEP are not supported in UXP. Additionally, some JavasScript libraries and many JavaScript frameworks are not supported. An overview of what's supported and what's not in UXP is [here](../guides/uxp_guide/unsupported/). That page will change as UXP matures and additional functionality is added to its browser, so you might want to bookmark it.
 
-Since UXP is a cross-application cross-platform technology, its documentation starts [here](/uxp/reference-js/), and it applies to all Adobe applications that support UXP. Documentation for Photoshop-specific features that are exposed by UXP starts [here](../guides/ps_basics/).
+Since UXP is a cross-application cross-platform technology, its API documentation starts [here](/uxp/reference-js/), and it applies to all Adobe applications that support UXP. Documentation for Photoshop-specific features that are exposed by UXP starts [here](../guides/ps_basics/).
 
 ## Key UXP Features
 
