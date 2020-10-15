@@ -1,25 +1,21 @@
 # Icons for Your Plugins
 
-The manifest.json file supports an optional `icons` node. Children of this node describe one or more icons used in your plugin's UI. The icons only apply to panel plugins, not modal dialogs nor faceless plugins. They are shown when a plugin's panel is collapsed.
+There are two disparate locations where icons are shown. A plugin's icon (outside the entrypoints) is shown in the "Plugins panel". This icon has some automatically applied treatment, and is 24x24 (48x48 at 2x) in size.
 
-There can be separate icons for dark and light Photoshop UI themes, and separate icons for various resolutions:
+A panel's icon (inside the `entrypoints`), however, is shown in the toolbars when minimized, and has no additional treatment supplied. It is 23x23 (46x46) in size, and can be transparent. It also should follow the Ps theme if you want to fit in with other tools and panel icons.
 
-* 1x = 32x32 pixels
-* 1.25x = 40x40 pixels
-* 1.5x = 48x48 pixels
-* 2x = 64x64 pixels
+Of course, a plugin can have more than one panel -- and in this case, each panel needs to have distinguishable icons so that the user knows which panel they're going to show.
+
 
 ## Quick Start
 To use icons in your plugin, follow these steps:
 
 1. Design your icons with a border; for example for a 32x32 1x icon, design it at 23x23 and leave your icon a little border -- this will ensure best rendering. You can use larger sizes, but the results may be blurrier. Leave similar margins for the other sizes.
 
-2. Export your icons with @1x and @2x scales. If you want, you can also export for 1.5 and 1.25x sizes as well. So, if your icon is named "pluginIcon", the files should be:
+2. Export your icons with @1x and @2x scales.
 
 ```
 pluginIcon@1x.png [note the "@1x" suffix]
-pluginIcon@1.25x.png
-pluginIcon@1.5x.png
 pluginIcon@2x.png
 ````
 

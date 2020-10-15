@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         title: 'UXP Reference',
-        path: '/uxp/'
+        path: '/uxp/reference-js/'
       },
       {
         title: 'Sample Code',
@@ -54,10 +54,6 @@ module.exports = {
         title: 'Design',
         path: '/design/'
       },
-      {
-        title: 'Support',
-        path: '/support/'
-      }
     ],
     subPages: [
       {
@@ -68,10 +64,6 @@ module.exports = {
           {
             title: 'Getting Started',
             path: '/guides/'
-          },
-          {
-            title: 'UXP Overview', // put the uxp_guide folder contents UNDER this menu. How?
-            path: '/guides/uxp_guide/'
           },
           {
             title: 'UXP for You',
@@ -94,6 +86,36 @@ module.exports = {
             path: '/guides/udt-walkthrough/'
           },
           {
+            title: 'Other Topics »»',
+            path: '/guides/uxp_guide/uxp-misc/',
+            pages: [
+              {
+                title: 'The UXP Manifest',
+                path: '/guides/uxp_guide/uxp-misc/manifest-v4'
+              },
+              {
+                title: 'Localization and Platforms',
+                path: '/guides/uxp_guide/uxp-misc/localization-and-platforms'
+              },
+              {
+                title: 'Flyout Menus',
+                path: '/guides/uxp_guide/uxp-misc/flyout-menus'
+              },
+              {
+                title: 'File Access',
+                path: '/guides/uxp_guide/uxp-misc/file-access'
+              },
+              {
+                title: 'Network I/O',
+                path: '/guides/uxp_guide/uxp-misc/network-io'
+              },
+              {
+                title: 'Spectrum CSS',
+                path: '/guides/uxp_guide/uxp-misc/spectrum-css'
+              }
+            ]            
+          },
+           {
             title: 'How Do I...',
             path: '/guides/how-to/'
           },
@@ -134,37 +156,7 @@ module.exports = {
           }
         ]
       },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
-      },
-      {
+       {
         title: 'UXP Reference',
         path: '/uxp/reference-js/',
         header: true,
@@ -182,7 +174,7 @@ module.exports = {
         ]
       },
       {
-        title: "API Reference",
+        title: "Ps API Reference",
         path: '/ps_reference/',
         pages: require('./reference-ps.js'),
       },
