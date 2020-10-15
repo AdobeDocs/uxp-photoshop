@@ -1,9 +1,10 @@
 ---
-title: Design - Desiging a Plugin experience
+title: Design - Designing a Plugin experience
 description: This is the page for the introduction to plugin design guidelines
 contributors:
   - https://github.com/dcaiced0
 ---
+
 # Designing a plugin experience
 
 These guidelines will help you define the best user experience for your plugin. Based on your users workflow and the plugin action, different UX and UI patterns should be considered as you create a plugin.
@@ -31,7 +32,7 @@ User Experience patterns will provide guidence on how to interact with your plug
 
 [View UX Patterns](ux-patterns/index.md)
 
-[Designing for Photoshop](ux-patterns/ux-patterns/designingforPS.md)
+[Designing for Photoshop](ux-patterns/ux-patterns/Designingforphotoshop.md)
 
 
  

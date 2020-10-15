@@ -1,29 +1,30 @@
 module.exports = [
-/*  {
-    title: 'Design',
-    path: '/design/ux-patterns',
-    header: true,
-    pages: [*/
-      {
-        title: 'Introduction',
-        path: '/design/ux-patterns'
-      },
+  {
+    title: 'UX Patterns',
+    path: '/design/ux-patterns/',
+    pages: [
       {
         title: 'Designing for Photoshop',
-        path: '/design/ux-patterns/designingforPS'
-      },
-      {
-        title: 'Onbarding',
-        path: '/design/ux-patterns/onboarding'
-      },
-      {
-        title: 'Messaging',
-        path: '/design/ux-patterns/messaging'
+        path: '/design/ux-patterns/Designingforphotoshop/'
       },
       {
         title: 'Branding',
-        path: '/design/ux-patterns/branding'
+        path: '/design/ux-patterns/branding/'
       },
-    /*]
-  },*/
+      {
+        title: 'Messaging',
+        path: '/design/ux-patterns/messaging/'
+      },
+      {
+        title: 'Onbarding',
+        path: '/design/ux-patterns/onboarding/'
+      },
+    ]
+  },
+  {
+    title: 'User Interface',
+    path: '/design/user-interface',
+    header: true,
+    pages: []
+  }
 ]
