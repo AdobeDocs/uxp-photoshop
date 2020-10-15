@@ -87,9 +87,8 @@ Want to jump right in building a plugin? Check out these code samples and make i
 
 Once you've built your plugin, how do you get it to market? The answer: the Creative Cloud Marketplace. Find out how you can prepare your plugin for distribution in the Marketplace.
 
-<DiscoverBlock slots="heading, link, text"/> 
 
-### API References
+## API References
 
 <DiscoverBlock slots="link, text"/>
 
@@ -103,7 +102,6 @@ The API Reference for Photoshop calls exposed to UXP.
 
 The API Reference for UXP itself. Includes file and network I/O.
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ## Share
 
