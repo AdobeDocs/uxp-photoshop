@@ -21,12 +21,12 @@
   "scripts": {
     "start": "gatsby build && gatsby serve",
     "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
-    "predev": "yarn copy-uxp",
+    "predev": "npm run copy-uxp",
     "dev": "gatsby develop",
     "copy-uxp-js": "rm -rf src/pages/uxp/reference-js && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-js src/pages/uxp/ && cp node_modules/uxp-documentation/reference-js.js reference-js.js",
     "copy-uxp-css": "rm -rf src/pages/uxp/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/uxp/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
-    "copy-uxp": "yarn copy-uxp-js && yarn copy-uxp-css",
-    "prebuild": "yarn copy-uxp",
+    "copy-uxp": "npm run copy-uxp-js && npm run copy-uxp-css",
+    "prebuild": "npm run copy-uxp",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
