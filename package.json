@@ -15,6 +15,7 @@
     "@adobe/gatsby-theme-parliament": "^2.7.0",
     "gatsby": "^2.24.65",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "uxp-documentation": "adobedocs/uxp"
   },
   "scripts": {
