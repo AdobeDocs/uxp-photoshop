@@ -5,23 +5,19 @@ contributors:
   - https://github.com/dcaiced0
 ---
 
-# User Interface Components
+# User Interface 
 
-The user interface section will provide guidance around the different [Spectrum](https://spectrum.adobe.com) components you can use to build a plugin UI. It covers everything from the components available in UXP to building a layout. For guidance around the UX of a plugin and best practices refer to [UX patterns](./ux-patterns/index.md).
+The user interface section will provide guidance around the different Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](./ux-patterns/index.md).
 
-Visit the Adobe Spectrum website to reference 
-• Styling
-• Behaviors
-• Usage guidelines
-• Download UI files
-• and more
+Visit the [Adobe Spectrum website](https://spectrum.adobe.com)] to reference 
+ * Styling
+ * Behaviors
+ * Usage guidelines
+ * Download UI files and more
 
-----------
 ## Documentation
 
-Spectrum UXP allows UI to be the same for plugins across XD and Photoshop. 
-
-Below is al ist to all the components available in UXP and the Spectrum design gudelines. 
+Spectrum UXP allows UI to be the same for plugins across XD and Photoshop and support themes. Below is a list to all the components available in UXP and the Spectrum design gudelines. 
 
 **[Action button](https://spectrum.adobe.com/page/action-button/)** - 
 Action buttons allow users to perform an action or mark a selection. They’re used for similar, task-based options within a workflow, and are ideal for interfaces where buttons aren’t meant to draw a lot of attention.
