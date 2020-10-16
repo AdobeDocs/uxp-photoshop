@@ -11,7 +11,7 @@ This section will cover the different interfaces in Photoshop available to plugi
 
  * Overview
  * Plugins Panel (non-blocking UI)
- * lugins Dialog (blocking UI)
+ * Plugins Dialog (blocking UI)
  * Themes and Icons
  * UX Best Practices
 
@@ -61,7 +61,7 @@ Example
 
 ## Themes and Icons
 
-Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI. The [UXP UI Spectrum Components](Link) support themes.
+Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI. The [UXP User Interface Spectrum Components](../user-interface/index.md) support themes.
 
 **Panel UI - Specs**
 
@@ -77,8 +77,6 @@ Dark and Darkest Themes
 **Photoshop Icon Guidelines**
 
 This icon is shown when plugin is docked/undocked in the Photoshop application frame. There are a few things to consider when designing an icon for a panel plugin in Photoshop; the color of your icon and themes, icon size, padding and background.
-
-[Download the plugin icon template](Link)
 
 ![Photoshop Plugin icon example](../ux-images/psiconexample.png)
 ![Photoshop Plugin icon specs](../ux-images/psiconspecs.png)

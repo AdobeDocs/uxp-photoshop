@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         title: 'UXP Reference',
-        path: '/uxp/reference-js/'
+        path: '/uxp/'
       },
       {
         title: 'Sample Code',
