@@ -15,7 +15,6 @@ UX Patterns will include UX requirements and/or UX best practices these will ens
 * [Onboarding](onboarding.md)
 
 
-
 ## UX Requirements
 
 Requirements highlight key patterns all plugins need to follow to get approved by Adobe. 
