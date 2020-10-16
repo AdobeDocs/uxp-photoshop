@@ -30,8 +30,6 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 
 - __UXP Developer Tool for Windows 10__ - [Download the installer zip file](#LINKNEEDED), unzip it, and run `Set-up.exe` in the unzipped folder.
 
-- __UXP CLI (both Mac and Windows)__ - [Download the repository](https://github.com/adobe-uxp/devtools-cli) from GitHub; the `README.md` file contains complete installation instructions.
-
 -  __Node.js__ - Go to the [Node.js download page](https://nodejs.org/en/download/), download the installer for your platform, and run it. This will also install npm. 
 
 - __yarn__: In order to install yarn you'll need to have npm installed first (see above). After that, use this command:
