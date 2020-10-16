@@ -8,12 +8,12 @@ These examples demonstrate how to perform some common actions using batchPlay.
 
 ### batchPlay sample 1
 
-TBD
+Description coming soon.
 
 ### batchPlay sample 2
 
-TBD
+Description coming soon.
 
 ### batchPlay sample 3
 
-TBD
+Description coming soon.

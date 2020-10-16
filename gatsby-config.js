@@ -126,10 +126,6 @@ module.exports = {
           {
             title: 'Debugging your Plugins',
             path: '/guides/debugging/'
-          },
-          {
-            title: 'Distributing your Plugins',
-            path: '/guides/distribution/'
           }
         ]
       },

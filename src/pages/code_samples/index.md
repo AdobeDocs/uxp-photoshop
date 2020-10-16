@@ -11,7 +11,7 @@ contributors:
 
 Here are some examples of plugins you can create with UXP in Photoshop. On GitHub, they exist as fully formed projects that you can load immediately to get a flavor for how things work; then you can modify the projects so they become more your own code.
 
-The samples are all available on GitHub [here](#) where you can clone or fork them. If you're not familiar with GitHub and just want to download the examples, click on the link above and just click the green `Code` button, then click "Download ZIP."
+The samples are all available on GitHub [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples) where you can clone or fork them. If you're not familiar with GitHub and just want to download the examples, click on the link above and just click the green `Code` button, then click "Download ZIP."
 
 There are three basic kinds of plugins:
 

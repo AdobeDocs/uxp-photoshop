@@ -6,8 +6,8 @@ If you've never used React, one of the best places to start is with the (React T
 
 ## React sample 1
 
-TBD
+Description coming soon.
 
 ## React sample 2
 
-TBD
+Description coming soon.
