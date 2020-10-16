@@ -9,8 +9,11 @@ contributors:
 
 This section will cover the different interfaces in Photoshop available to plugins. This includes specs, guidance around when and how to use the different interfaces and high level UX patterns that exist in Photoshop. 
 
-
- 
+ * Overview
+ * Plugins Panel (non-blocking UI)
+ * lugins Dialog (blocking UI)
+ * Themes and Icons
+ * UX Best Practices
 
 ## Overview
 

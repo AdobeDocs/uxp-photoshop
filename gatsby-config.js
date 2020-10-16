@@ -178,7 +178,11 @@ module.exports = {
         path: '/ps_reference/',
         pages: require('./reference-ps.js'),
       },
-      ...require("./design.js")
+      {
+        title: "Overview",
+        path: "/design/",
+        pages: require("./reference-design.js")
+      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-parliament`],
