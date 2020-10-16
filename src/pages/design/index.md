@@ -7,7 +7,7 @@ contributors:
 
 # Designing a plugin experience
 
-These guidelines will help you define the best user experience for your plugin. Based on your users workflow and the plugin action, different UX and UI patterns should be considered as you create a plugin.
+These guidelines will help you define the best user experience for your plugin. Based on your users workflow and the plugin action, different UX patterns and UI components should be considered as you create a plugin.
 
 Plugins can interact with the user at different levels, for example, some plugins in some use cases won’t render an interface, and some will include actions that need an interface.
 
@@ -15,7 +15,7 @@ Plugins can interact with the user at different levels, for example, some plugin
 
  
  
-## Desiging a plugin
+## Designing a plugin
 
 **Learn more about the types interfaces available to plugins.**
 
@@ -24,7 +24,7 @@ Plugins can interact with the user at different levels, for example, some plugin
 |---------------------|--------------------|
 | Non-Blocking UI - This interface is best used when the user should have access to the canvas while using the plugin.   | Blocking UI - This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas   | 
 
- 
+![Plugins Panel and Dialog examples](/ux-images/Panel_Dialog_examples.png)
 
 ## UX Patterns
 
@@ -34,12 +34,11 @@ User Experience patterns will provide guidence on how to interact with your plug
 
 [Designing for Photoshop](ux-patterns/ux-patterns/Designingforphotoshop.md)
 
-
  
  
-## UXP UI Spectrum Components 
+## User Interface 
 
-UXP UI Spectrum Components will have information on UI components you can use to build your plugin interface. 
+The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View UXP UI Spectrum Components ](Link)
+[View User Interface Components](user-interface/index.md)
 
