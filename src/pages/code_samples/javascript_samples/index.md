@@ -2,7 +2,7 @@
 
 Plain (also called "Vanilla") JavaScript is JavaScript without any libraries or frameworks. Because of that, it's also the easiest environment in which to show examples.
 
-The examples are described briefly below. You can find the source code for these in GitHub [here](#LINKNEEDED).
+The examples are described briefly below. You can find the source code for these in GitHub [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples).
 
 ## Direct Action ("headless")
 

@@ -46,11 +46,11 @@ If you've never used React, one of the best places to start is with the (React T
 
 ### React sample 1
 
-TBD
+Description coming soon.
 
 ### React sample 2
 
-TBD
+Description coming soon.
 
 ### batchPlay Samples
 
@@ -58,12 +58,12 @@ As of this writing, not all of the Photoshop DOM is exposed to UXP. If an interf
 
 ### batchPlay sample 1
 
-TBD
+Description coming soon.
 
 ### batchPlay sample 2
 
-TBD
+Description coming soon.
 
 ### batchPlay sample 3
 
-TBD
+Description coming soon.
