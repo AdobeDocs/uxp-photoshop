@@ -4,6 +4,8 @@ title: "Document"
 sidebar_label: "Document"
 ---
 
+# Document
+
 Represents a single Photoshop document that is currently open
 You can access instances of documents using one of these methods:
 
@@ -23,7 +25,7 @@ const newDocument = await app.open('/project.psd')
 
 ###  activeLayers
 
-• **get activeLayers**(): *[Layer](layer.md)[]*
+• **get activeLayers**(): *[Layer](../layer/)[]*
 
 The selected layers in the document
 ```javascript
@@ -35,7 +37,7 @@ ___
 
 ###  backgroundLayer
 
-• **get backgroundLayer**(): *[Layer](layer.md) | null*
+• **get backgroundLayer**(): *[Layer](../layer/) | null*
 
 Background layer, if it exists
 
@@ -143,7 +145,7 @@ ___
 
 ###  createLayer
 
-▸ **createLayer**(`options?`: LayerCreateOptions): *Promise‹[Layer](layer.md) | null›*
+▸ **createLayer**(`options?`: LayerCreateOptions): *Promise‹[Layer](../layer/) | null›*
 
 Create a layer. See @CreateOptions
 ```javascript
@@ -163,7 +165,7 @@ ___
 
 ###  createLayerGroup
 
-▸ **createLayerGroup**(`options?`: GroupLayerCreateOptions): *Promise‹[GroupLayer](grouplayer.md) | null›*
+▸ **createLayerGroup**(`options?`: GroupLayerCreateOptions): *Promise‹[GroupLayer](../grouplayer/) | null›*
 
 Create a layer group. See @CreateOptions
 ```javascript
@@ -201,7 +203,7 @@ ___
 
 ###  duplicateLayers
 
-▸ **duplicateLayers**(`layers`: [Layer](layer.md)[], `targetDocument?`: [Document](document.md)): *Promise‹[Layer](layer.md)[]›*
+▸ **duplicateLayers**(`layers`: [Layer](../layer/)[], `targetDocument?`: [Document](../document/)): *Promise‹[Layer](../layer/)[]›*
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
@@ -221,8 +223,8 @@ await finalDoc.close(SaveDialogOptions.SAVE_CHANGES)
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`layers` | [Layer](layer.md)[] | - |
-`targetDocument?` | [Document](document.md) | if specified, duplicate to a different document target.  |
+`layers` | [Layer](../layer/)[] | - |
+`targetDocument?` | [Document](../document/) | if specified, duplicate to a different document target.  |
 
 ___
 
@@ -238,7 +240,7 @@ ___
 
 ###  groupLayers
 
-▸ **groupLayers**(`layers`: [Layer](layer.md)[]): *Promise‹[GroupLayer](grouplayer.md) | null›*
+▸ **groupLayers**(`layers`: [Layer](../layer/)[]): *Promise‹[GroupLayer](../grouplayer/) | null›*
 
 Create a layer group from existing layers.
 ```javascript
@@ -252,13 +254,13 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 
 Name | Type |
 ------ | ------ |
-`layers` | [Layer](layer.md)[] |
+`layers` | [Layer](../layer/)[] |
 
 ___
 
 ###  linkLayers
 
-▸ **linkLayers**(`layers`: [Layer](layer.md)[]): *[Layer](layer.md)[]*
+▸ **linkLayers**(`layers`: [Layer](../layer/)[]): *[Layer](../layer/)[]*
 
 Links layers together if possible, and returns a list of linked layers.
 
@@ -266,7 +268,7 @@ Links layers together if possible, and returns a list of linked layers.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`layers` | [Layer](layer.md)[] | array of layers to link together |
+`layers` | [Layer](../layer/)[] | array of layers to link together |
 
 array of successfully linked layers
 
@@ -287,7 +289,7 @@ ___
 ▸ **resizeCanvas**(`width`: number, `height`: number, `anchor?`: AnchorPosition): *Promise‹void›*
 
 Changes the size of the canvas, but does not change image size
-To change the image size, see [resizeImage](document.md#resizeimage)
+To change the image size, see [resizeImage](../document/#resizeimage)
 
 ```javascript
 // grow the canvas by 400px

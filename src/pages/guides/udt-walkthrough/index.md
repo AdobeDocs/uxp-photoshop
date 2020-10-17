@@ -1,16 +1,16 @@
 # Creating a Plugin with the UXP Developer Tool
 
-So you have Photoshop, you have the UXP Developer Toolkit, and you have Visual Studio Code or other programmer's text editor. Now what?
+So you have Photoshop, you have the UXP Developer Tool, and you have Visual Studio Code or other programmer's text editor. Now what?
 
 First make sure you have the UXP Developer Tool (UDT). You can download installers for the UDT [here](https://example.com). Once it's downloaded, run the installer just like any other on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tools." On Windows, the folder is on the boot drive in the `Program Files->Adobe` folder. Then follow these steps:
 
 
 1. Launch Photoshop.
-2. Launch the UXP Developer Toolkit. If you've never launched it before, you should see a window like this:
+2. Launch the UXP Developer Tool. If you've never launched it before, you should see a window like this:
 
 ![UDT Start](images/udt-start.png)
 
-You'll also see this window if you have no plugins loaded in the Toolkit.
+You'll also see this window if you have no plugins loaded in the Tool.
 
 The left pane shows applications that are "connected" to the tool. At this time, the only applications that can connect are Photoshop and XD. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
 
@@ -37,7 +37,7 @@ For this exercise, we'll use the `ps-starter` template, which creates a very bas
 
 ![Create Folder](images/create-folder.png)
 
-6. The Toolkit will save your plugin files, and you should then see this message:
+6. The Developer Tool will save your plugin files, and you should then see this message:
 
 ![Plugin Created](images/success.png)
 
@@ -84,7 +84,7 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
 
  ## Multiple Plugins
 
- You can host as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the blue `Add Plugin` button in the Toolkit, or you can click the `Create Plugin` button to have it created for you, wizard-style. Then you choose the `Load` item in the Actions menu to load your plugin into Photoshop.
+ You can host as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the blue `Add Plugin` button in the Tool, or you can click the `Create Plugin` button to have it created for you, wizard-style. Then you choose the `Load` item in the Actions menu to load your plugin into Photoshop.
 
  ## Packaging
  In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Adobe Developer Console](https://console.adobe.io/home) website before packaging your plugin for distribution.

@@ -4,7 +4,7 @@ title: "BuiltinWarp"
 sidebar_label: "BuiltinWarp"
 ---
 
-* [Warp](warp.md)
+* [Warp](warp/)
 
   ↳ **BuiltinWarp**
 
@@ -12,9 +12,9 @@ sidebar_label: "BuiltinWarp"
 
 ###  bounds
 
-• **bounds**: *[Rectangle](rectangle.md)*
+• **bounds**: *[Rectangle](rectangle/)*
 
-*Inherited from [Warp](warp.md).[bounds](warp.md#bounds)*
+*Inherited from [Warp](warp/).[bounds](warp.md#bounds)*
 
 Rectangular bounds of the warp definition.
 

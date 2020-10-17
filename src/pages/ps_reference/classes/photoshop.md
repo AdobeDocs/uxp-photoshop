@@ -4,6 +4,7 @@ title: "Photoshop"
 sidebar_label: "Photoshop"
 ---
 
+# Photoshop App
 The top level application object, root of our DOM
 
 ```
@@ -16,7 +17,7 @@ From here, you can access open documents, tools, UI elements and run commands or
 
 ###  actionTree
 
-• **get actionTree**(): *[ActionSet](actionset.md)[]*
+• **get actionTree**(): *[ActionSet](../actionset/)[]*
 
 Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions
 
@@ -24,7 +25,7 @@ ___
 
 ###  activeDocument
 
-• **get activeDocument**(): *[Document](document.md)*
+• **get activeDocument**(): *[Document](../document/)*
 
 The current active document
 
@@ -32,7 +33,7 @@ The current active document
 const doc = Photoshop.activeDocument;
 ```
 
-• **set activeDocument**(`doc`: [Document](document.md)): *void*
+• **set activeDocument**(`doc`: [Document](../document/)): *void*
 
 Set the current active document to be given one
 
@@ -44,7 +45,7 @@ const doc = Photoshop.activeDocument;
 
 Name | Type |
 ------ | ------ |
-`doc` | [Document](document.md) |
+`doc` | [Document](../document/) |
 
 ___
 
@@ -67,7 +68,7 @@ ___
 
 ###  documents
 
-• **get documents**(): *[Document](document.md)[]*
+• **get documents**(): *[Document](../document/)[]*
 
 List of currently open documents
 
@@ -96,7 +97,7 @@ app.eventNotifier = (event, descriptor) => {
 > This is temporary while we are in Alpha, we are working on a more structured notification system
 > This setter will not function outside developer mode
 
-To register listeners to specific events in production, follow [Event Listeners](../media/advanced/event-listener) in advanced.
+To register listeners to specific events in production, follow [Event Listeners](../../media/advanced/event-listener/) in the Advanced section.
 
 **Parameters:**
 
@@ -148,7 +149,7 @@ ___
 
 ###  createDocument
 
-▸ **createDocument**(`options?`: DocumentCreateOptions): *Promise‹[Document](document.md) | null›*
+▸ **createDocument**(`options?`: DocumentCreateOptions): *Promise‹[Document](../document/) | null›*
 
 Create a new document. See @DocumentCreateOptions.
 
@@ -170,7 +171,7 @@ ___
 
 ###  open
 
-▸ **open**(`entry?`: File): *Promise‹[Document](document.md)›*
+▸ **open**(`entry?`: File): *Promise‹[Document](../document/)›*
 
 Opens the specified document and returns it's model
 

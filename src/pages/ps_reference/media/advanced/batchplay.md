@@ -3,6 +3,7 @@ id: "batchplay"
 title: "BatchPlay Details"
 sidebar_label: "BatchPlay"
 ---
+# batchPlay
 
 At the heart of our APIs is `batchPlay`, a method that can send multiple actions into Photoshop event queue, and return you their results. `batchPlay` is the evolution of `executeAction` from ExtendScript. Where `executeAction` could only play one descriptor at a time, `batchPlay` accepts an array of action descriptors. 
 
