@@ -7,15 +7,15 @@ contributors:
 
 # User Interface 
 
-The user interface section will provide guidance around the different Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](./ux-patterns/index.md).
+The user interface section will provide guidance around the different UXP Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](./ux-patterns/index.md).
 
-Visit the [Adobe Spectrum website](https://spectrum.adobe.com)] to reference 
+Visit the [Adobe Spectrum website](https://spectrum.adobe.com) to reference 
  * Styling
  * Behaviors
  * Usage guidelines
  * Download UI files and more
 
-## Documentation
+## UXP Spectrum Components
 
 Spectrum UXP allows UI to be the same for plugins across XD and Photoshop and support themes. Below is a list to all the components available in UXP and the Spectrum design gudelines. 
 
