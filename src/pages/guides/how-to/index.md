@@ -44,7 +44,7 @@ The `require` in UXP isn't as robust as some other include systems (e.g., it doe
 This one is easy. It's no longer `console.writeln()`:
 
 ````js
-console.log("foo"); // writes "foo" to the UXP Developer Toolkit console.
+console.log("foo"); // writes "foo" to the UXP Developer Tool console.
 
 console.error("foo"); // does the same thing, but the text is shown in red so errors are more easily seen.
 ````

@@ -4,7 +4,7 @@ UXP plugins are built using modern JavaScript with the UI created using subsets 
 
 ## Tools for Development
 
-### A basic toolchain
+### A Basic Toolchain
 In order to build a UXP-based plugin, you'll need the following pieces of software:
 
 - A good text editor. Any modern developer-friendly text editor should work, but many people are using [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its own plugins to help with code formatting, syntax checking, JSON parsing, and so on.
@@ -25,10 +25,8 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 
 - [yarn]https://yarnpkg.com: a "better" package manager than npm for Node. Many people, including those developing Photoshop UXP tools, are using yarn instead of npm.
 
-### Installing the tooling
-- __UXP Developer Tool for macOS__ - [Download the installer DMG file](#LINKNEEDED) and double-click to open it. In the folder that opens, double-click the `Install` icon to install. It installs in your `Applications` folder in a folder named `Adobe UXP Developer Tools`.
-
-- __UXP Developer Tool for Windows 10__ - [Download the installer zip file](#LINKNEEDED), unzip it, and run `Set-up.exe` in the unzipped folder.
+### Installing the Tooling
+- __UXP Developer Tool for macOS and Windows 10__ - See the instructions [here](./devtool) to install in run the UXP Developer Toolkit.
 
 -  __Node.js__ - Go to the [Node.js download page](https://nodejs.org/en/download/), download the installer for your platform, and run it. This will also install npm. 
 
@@ -38,7 +36,7 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
     npm install yarn --global
     ```
 
-## Intellectual toolchain
+## Intellectual Toolchain
 Before starting to build a plugin, you should have a good working knowledge of modern JavaScript. If you're coming from an ExtendScript background and haven't used recent JavaScript, you'll want to make sure that you understand concepts including asynchronous functions, newer JavaScript syntax (e.g., let/const vs "var"), and things like anonymous functions and arrow function expressions. There are thousands of websites and online videos that explain these concepts.
 
 If you're going to be building a non-trivial UI into your plugin, you should also become familiar with [React](https://reactjs.org).

@@ -42,7 +42,7 @@ You can also check the Debug window; the leftmost `Elements` menu lets you expan
 The Developer Tool CSS view is not as powerful as that in a browser; for example, it doesn't let you change the CSS "on the fly." But it's very useful nonetheless.
 
 ### Not Watching
-The UXP Developer Toolkit has a great "watch" feature that automatically reloads your plugins when (almost) any of the files in your plugin folder change. But unless you enable this watch feature (by selecting `Watch` in the Actions column), nothing will change in Photoshop when you save a change to one of your files while editing.
+The UXP Developer Tool has a great "watch" feature that automatically reloads your plugins when (almost) any of the files in your plugin folder change. But unless you enable this watch feature (by selecting `Watch` in the Actions column), nothing will change in Photoshop when you save a change to one of your files while editing.
 
 You can always reload your plugin manually, but it's nice when the system does it for you.
 

@@ -82,7 +82,7 @@ module.exports = {
             path: '/guides/ps_basics/'
           },
           {
-            title: 'UXP Developer Toolkit',
+            title: 'UXP Developer Tool',
             path: '/guides/uxp-developer-tool/'
           },
           {
