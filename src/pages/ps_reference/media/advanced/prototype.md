@@ -3,8 +3,9 @@ id: "prototype"
 title: "Extending DOM APIs"
 sidebar_label: "API Extensions"
 ---
+# API Extensions
 
-We build the DOM APIs with a lot of intent and carefully to work around many expectations Photoshop has when a command is being [batchPlayed](./batchplay). 
+We build the DOM APIs with a lot of intent and carefully to work around many expectations Photoshop has when a command is being [batchPlayed](./batchplay/). 
 
 There is a lot of functionality in Photoshop, and while we strive to bring all of them into DOM, some may not be ready as you're writing your plug-ins. Or you might have a different way of scripting into Photoshop and want to add more properties and methods to DOM classes.
 
