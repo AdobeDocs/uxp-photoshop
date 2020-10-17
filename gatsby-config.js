@@ -170,6 +170,10 @@ module.exports = {
             title: 'CSS Reference',
             path: '/uxp/reference-css/',
             pages: require("./reference-css.js")
+          },
+          {
+            title: 'Known Issues',
+            path: '/uxp/known-issues/',
           }
         ]
       },
