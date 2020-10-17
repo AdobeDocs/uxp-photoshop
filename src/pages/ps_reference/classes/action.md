@@ -4,6 +4,8 @@ title: "Action"
 sidebar_label: "Action"
 ---
 
+# Action
+
 Represents an action in the Actions palette. Actions are series of commands that can be recorded by user, and can be replayed
 at a later time
 
@@ -38,7 +40,7 @@ ___
 
 ###  parent
 
-• **get parent**(): *[ActionSet](actionset.md)*
+• **get parent**(): *[ActionSet](actionset/)*
 
 The action set this action belongs to
 
@@ -54,7 +56,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(): *[Action](action.md)*
+▸ **duplicate**(): *[Action](action/)*
 
 Creates a copy of this action, placing it in the same action set
 

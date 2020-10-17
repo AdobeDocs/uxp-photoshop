@@ -24,7 +24,7 @@ var PhotoshopAction = require('photoshop').action;
 
 ###  addNotificationListener
 
-▸ **addNotificationListener**(`events`: [NotificationEvent](../interfaces/notificationevent.md)[], `notifier`: NotificationListener): *Promise‹void›*
+▸ **addNotificationListener**(`events`: [NotificationEvent](../interfaces/notificationevent/)[], `notifier`: NotificationListener): *Promise‹void›*
 
 Attach a listener to a Photoshop event. A callback in the form
 of `(eventName: string, descriptor: Descriptor) => void` will be performed.
@@ -36,14 +36,14 @@ await PhotoshopAction.addNotificationListener([{ event: 'open' }], onOpenNewDocu
 
 Name | Type |
 ------ | ------ |
-`events` | [NotificationEvent](../interfaces/notificationevent.md)[] |
+`events` | [NotificationEvent](../interfaces/notificationevent/)[] |
 `notifier` | NotificationListener |
 
 ___
 
 ###  batchPlay
 
-▸ **batchPlay**(`commands`: ActionDescriptor[], `options?`: [BatchPlayCommandOptions](../interfaces/batchplaycommandoptions.md)): *Promise‹ActionDescriptor[]›*
+▸ **batchPlay**(`commands`: ActionDescriptor[], `options?`: [BatchPlayCommandOptions](../interfaces/batchplaycommandoptions/)): *Promise‹ActionDescriptor[]›*
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -58,13 +58,13 @@ await PhotoshopAction.batchPlay(commands)
 Name | Type |
 ------ | ------ |
 `commands` | ActionDescriptor[] |
-`options?` | [BatchPlayCommandOptions](../interfaces/batchplaycommandoptions.md) |
+`options?` | [BatchPlayCommandOptions](../interfaces/batchplaycommandoptions/) |
 
 ___
 
 ###  removeNotificationListener
 
-▸ **removeNotificationListener**(`events`: [NotificationEvent](../interfaces/notificationevent.md)[], `notifier`: NotificationListener): *Promise‹void›*
+▸ **removeNotificationListener**(`events`: [NotificationEvent](../interfaces/notificationevent/)[], `notifier`: NotificationListener): *Promise‹void›*
 
 Detaches a listener from a Photoshop event.
 
@@ -77,5 +77,5 @@ await PhotoshopAction.removeNotificationListener([{ event: 'open' }], onOpenNewD
 
 Name | Type |
 ------ | ------ |
-`events` | [NotificationEvent](../interfaces/notificationevent.md)[] |
+`events` | [NotificationEvent](../interfaces/notificationevent/)[] |
 `notifier` | NotificationListener |

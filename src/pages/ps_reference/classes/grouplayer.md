@@ -4,9 +4,11 @@ title: "GroupLayer"
 sidebar_label: "GroupLayer"
 ---
 
+# groupLayer
+
 Represents a group layer
 
-* [Layer](layer.md)
+* [Layer](../layer/)
 
   ↳ **GroupLayer**
 
@@ -14,7 +16,7 @@ Represents a group layer
 
 ###  constructor
 
-\+ **new GroupLayer**(`id`: number, `docId`: number): *[GroupLayer](grouplayer.md)*
+\+ **new GroupLayer**(`id`: number, `docId`: number): *[GroupLayer](../grouplayer/)*
 
 *Overrides void*
 
@@ -37,7 +39,7 @@ Name | Type |
 
 • **get bounds**(): *PsCommon.Bounds*
 
-*Inherited from [Layer](layer.md).[bounds](layer.md#bounds)*
+*Inherited from [Layer](../layer/).[bounds](../layer/#bounds)*
 
 Bounds of the layer, including the effects
 ```javascript
@@ -50,7 +52,7 @@ ___
 
 • **get boundsNoEffects**(): *PsCommon.Bounds*
 
-*Inherited from [Layer](layer.md).[boundsNoEffects](layer.md#boundsnoeffects)*
+*Inherited from [Layer](../layer/).[boundsNoEffects](../layer/#boundsnoeffects)*
 
 Bounds of the layer excluding effects
 ```javascript
@@ -76,7 +78,7 @@ ___
 
 • **get kind**(): *LayerKind*
 
-*Inherited from [Layer](layer.md).[kind](layer.md#kind)*
+*Inherited from [Layer](../layer/).[kind](../layer/#kind)*
 
 Kind of the layer
 ```javascript
@@ -89,9 +91,9 @@ ___
 
 ###  linkedLayers
 
-• **get linkedLayers**(): *[Layer](layer.md)[]*
+• **get linkedLayers**(): *[Layer](../layer/)[]*
 
-*Inherited from [Layer](layer.md).[linkedLayers](layer.md#linkedlayers)*
+*Inherited from [Layer](../layer/).[linkedLayers](../layer/#linkedlayers)*
 
 Layers linked to this layer
 ```javascript
@@ -105,9 +107,9 @@ ___
 
 ###  parent
 
-• **get parent**(): *[GroupLayer](grouplayer.md) | null*
+• **get parent**(): *[GroupLayer](../grouplayer/) | null*
 
-*Inherited from [Layer](layer.md).[parent](layer.md#parent)*
+*Inherited from [Layer](../layer/).[parent](../layer/#parent)*
 
 The group layer this layer is in,
 null if layer has no parent
@@ -118,7 +120,7 @@ null if layer has no parent
 
 ▸ **delete**(): *void*
 
-*Inherited from [Layer](layer.md).[delete](layer.md#delete)*
+*Inherited from [Layer](../layer/).[delete](../layer/#delete)*
 
 Deletes this layer from the document.
 ```javascript
@@ -132,9 +134,9 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(`targetDocument?`: [Document](document.md), `name?`: string): *Promise‹[Layer](layer.md)›*
+▸ **duplicate**(`targetDocument?`: [Document](../document/), `name?`: string): *Promise‹[Layer](../layer/)›*
 
-*Inherited from [Layer](layer.md).[duplicate](layer.md#duplicate)*
+*Inherited from [Layer](../layer/).[duplicate](../layer/#duplicate)*
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
@@ -153,7 +155,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetDocument?` | [Document](document.md) | if specified, duplicate to a different document target.  |
+`targetDocument?` | [Document](../document/) | if specified, duplicate to a different document target.  |
 `name?` | string | - |
 
 ___
@@ -162,7 +164,7 @@ ___
 
 ▸ **flip**(`axis`: "horizontal" | "vertical" | "both"): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[flip](layer.md#flip)*
+*Inherited from [Layer](../layer/).[flip](../layer/#flip)*
 
 Flips the layer on one or both axis.
 
@@ -183,9 +185,9 @@ ___
 
 ###  link
 
-▸ **link**(`targetLayer`: [Layer](layer.md)): *[Layer](layer.md)[]*
+▸ **link**(`targetLayer`: [Layer](../layer/)): *[Layer](../layer/)[]*
 
-*Inherited from [Layer](layer.md).[link](layer.md#link)*
+*Inherited from [Layer](../layer/).[link](../layer#link)*
 
 Creates a link between this layer and the target layer if not already linked,
 and returns a list of layers linked to this layer.
@@ -201,7 +203,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetLayer` | [Layer](layer.md) | layer to link with |
+`targetLayer` | [Layer](../layer/) | layer to link with |
 
 array of linked layers
 
@@ -211,7 +213,7 @@ ___
 
 ▸ **moveAbove**(`target?`: LayerTypes): *void*
 
-*Inherited from [Layer](layer.md).[moveAbove](layer.md#moveabove)*
+*Inherited from [Layer](../layer/).[moveAbove](../layer/#moveabove)*
 
 Moves the layer to a position above the target layer or group.
 If no target layer is defined, move this layer up one slot.
@@ -233,7 +235,7 @@ ___
 
 ▸ **moveBelow**(`target?`: LayerTypes): *void*
 
-*Inherited from [Layer](layer.md).[moveBelow](layer.md#movebelow)*
+*Inherited from [Layer](../layer/).[moveBelow](../layer/#movebelow)*
 
 Moves the layer to a position below the target layer or group.
 If no target layer is defined, move this layer down one slot.
@@ -255,7 +257,7 @@ ___
 
 ▸ **nudge**(`horizontal`: number | PercentValue | PixelValue, `vertical`: number | PercentValue | PixelValue): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[nudge](layer.md#nudge)*
+*Inherited from [Layer](../layer/).[nudge](../layer/#nudge)*
 
 Moves the layer.
 ```javascript
@@ -282,7 +284,7 @@ ___
 
 ▸ **rotate**(`angle`: number | AngleValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[rotate](layer.md#rotate)*
+*Inherited from [Layer](../layer/).[rotate](../layer/#rotate)*
 
 Rotates the layer.
 ```javascript
@@ -310,7 +312,7 @@ ___
 
 ▸ **scale**(`width`: number | PercentValue, `height`: number | PercentValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[scale](layer.md#scale)*
+*Inherited from [Layer](../layer/).[scale](../layer/#scale)*
 
 Scales the layer.
 ```javascript
@@ -341,7 +343,7 @@ ___
 
 ▸ **skew**(`angleH`: number | AngleValue, `angleV`: number | AngleValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[skew](layer.md#skew)*
+*Inherited from [Layer](../layer/).[skew](../layer/#skew)*
 
 Applies a skew to the layer.
 ```javascript
@@ -373,7 +375,7 @@ ___
 
 ▸ **unlink**(): *Promise‹void›*
 
-*Inherited from [Layer](layer.md).[unlink](layer.md#unlink)*
+*Inherited from [Layer](../layer/).[unlink](../layer/#unlink)*
 
 Unlinks the layer from any existing links.
 ```javascript

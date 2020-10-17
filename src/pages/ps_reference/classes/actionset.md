@@ -4,15 +4,15 @@ title: "ActionSet"
 sidebar_label: "ActionSet"
 ---
 
-Photoshop Actions
+# ActionSet
 
-Handles the content in Actions panel. Actions panel will have a hierarchy of action sets that contain a list of actions
+Handles the content in Actions panel. The Actions panel has a hierarchy of action sets that contain a list of actions.
 
 ## Accessors
 
 ###  actions
 
-• **get actions**(): *[Action](action.md)[]*
+• **get actions**(): *[Action](../action/)[]*
 
 List of actions in this action set
 
@@ -54,7 +54,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(): *[ActionSet](actionset.md)*
+▸ **duplicate**(): *[ActionSet](#)*
 
 Creates a copy of this action set
 

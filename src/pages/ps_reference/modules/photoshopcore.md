@@ -102,7 +102,7 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 Name | Type |
 ------ | ------ |
 `commandID` | number |
-`scheduling?` | [Scheduling](../interfaces/scheduling.md) |
+`scheduling?` | [Scheduling](../interfaces/scheduling/) |
 
 ___
 
@@ -123,7 +123,7 @@ Name | Type |
 ------ | ------ |
 `commandID?` | number |
 `menuID?` | number |
-`scheduling?` | [Scheduling](../interfaces/scheduling.md) |
+`scheduling?` | [Scheduling](../interfaces/scheduling/) |
 
 ___
 
@@ -145,7 +145,7 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 Name | Type |
 ------ | ------ |
 `commandID` | number |
-`scheduling?` | [Scheduling](../interfaces/scheduling.md) |
+`scheduling?` | [Scheduling](../interfaces/scheduling/) |
 
 ___
 

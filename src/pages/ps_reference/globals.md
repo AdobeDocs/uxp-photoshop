@@ -8,10 +8,10 @@ sidebar_label: "Globals"
 
 ###  validateAction
 
-▸ **validateAction**(`action`: [Action](classes/action.md)): *void*
+▸ **validateAction**(`action`: [Action](classes/action/)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`action` | [Action](classes/action.md) |
+`action` | [Action](classes/action/) |

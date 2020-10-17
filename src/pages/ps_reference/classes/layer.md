@@ -4,12 +4,14 @@ title: "Layer"
 sidebar_label: "Layer"
 ---
 
-A Photoshop Layer
-Ultimately, will have subclasses denoting all layer types
+# Layer
+
+A Photoshop Layer.
+Ultimately, this will have subclasses denoting all layer types.
 
 * **Layer**
 
-  ↳ [GroupLayer](grouplayer.md)
+  ↳ [GroupLayer](../grouplayer/)
 
 ## Accessors
 
@@ -50,7 +52,7 @@ ___
 
 ###  linkedLayers
 
-• **get linkedLayers**(): *[Layer](layer.md)[]*
+• **get linkedLayers**(): *[Layer](#)[]*
 
 Layers linked to this layer
 ```javascript
@@ -64,7 +66,7 @@ ___
 
 ###  parent
 
-• **get parent**(): *[GroupLayer](grouplayer.md) | null*
+• **get parent**(): *[GroupLayer](../grouplayer/) | null*
 
 The group layer this layer is in,
 null if layer has no parent
@@ -87,7 +89,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(`targetDocument?`: [Document](document.md), `name?`: string): *Promise‹[Layer](layer.md)›*
+▸ **duplicate**(`targetDocument?`: [Document](../document/), `name?`: string): *Promise‹[Layer](#)›*
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
@@ -106,7 +108,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetDocument?` | [Document](document.md) | if specified, duplicate to a different document target.  |
+`targetDocument?` | [Document](../document) | if specified, duplicate to a different document target.  |
 `name?` | string | - |
 
 ___
@@ -134,7 +136,7 @@ ___
 
 ###  link
 
-▸ **link**(`targetLayer`: [Layer](layer.md)): *[Layer](layer.md)[]*
+▸ **link**(`targetLayer`: [Layer](#)): *[Layer](#)[]*
 
 Creates a link between this layer and the target layer if not already linked,
 and returns a list of layers linked to this layer.
@@ -150,7 +152,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetLayer` | [Layer](layer.md) | layer to link with |
+`targetLayer` | [Layer](#) | layer to link with |
 
 array of linked layers
 
