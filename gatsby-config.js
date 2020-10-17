@@ -54,6 +54,10 @@ module.exports = {
         title: 'Design',
         path: '/design/'
       },
+      {
+        title: 'Developer Tool',
+        path: '/devtool/'
+      },
     ],
     subPages: [
       {
@@ -178,7 +182,8 @@ module.exports = {
         title: "Overview",
         path: "/design/",
         pages: require("./reference-design.js")
-      }
+      },
+      ...require("./reference-devtool.js")
     ]
   },
   plugins: [`@adobe/gatsby-theme-parliament`],
