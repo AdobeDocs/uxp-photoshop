@@ -8,13 +8,13 @@ The examples are described briefly below. You can find the source code for these
 
 The simplest of all plugin patterns in terms of UI. A "headless" plugin is one that has no user interface. When the user selects the plugin from Photoshop's Plugins menu, the plugin runs silently.
 
-Why would you want to do this? If your plugin only does one thing, and has no options or user-entered parameters, you could create it without any UI. The only time you would need a UI would be if the plugin failed in some way, at which point you should display a dialog describing the failure.
+Why would you want to do this? If your plugin only does one thing, and has no options or user-entered parameters, you could create it without any UI. The only time you would need a UI would be if the plugin failed in some way, at which point you should display a message describing the failure.
 
 This example shows how to get the layer names of the current document and write them to a file. No user interaction is involved.
 
-## Hello, World Dialog
+## Hello, World Alert
 
-In the spirit of the gold standard for trivial examples since the publication of *The C Programming Language* book in 1978 (and [earlier](https://www.thesoftwareguild.com/blog/the-history-of-hello-world/)), this plugin example does nothing but display a dialog box. But it gives you the idea of the structure of simple plugins that use only pure JavaScript (no HTML or CSS).
+In the spirit of the gold standard for trivial examples since the publication of *The C Programming Language* book in 1978 (and [earlier](https://www.thesoftwareguild.com/blog/the-history-of-hello-world/)), this plugin example does nothing but display a Photoshop alert. But it gives you the idea of the structure of simple plugins that use only pure JavaScript (no HTML or CSS).
 
 ## Hello, World Panel
 
