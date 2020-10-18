@@ -172,6 +172,16 @@ module.exports = {
             pages: require("./reference-css.js")
           },
           {
+            title: 'HTML Reference',
+            path: '/uxp/reference-html/',
+            pages: require("./reference-html.js")
+          },
+          {
+            title: 'Spectrum UXP Reference',
+            path: '/uxp/reference-spectrum/',
+            pages: require("./reference-spectrum.js")
+          },
+          {
             title: 'Known Issues',
             path: '/uxp/known-issues/',
           }
