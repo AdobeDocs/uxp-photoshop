@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "uxp-photoshop-documentation",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
