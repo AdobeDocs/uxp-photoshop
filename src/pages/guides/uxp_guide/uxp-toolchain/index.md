@@ -49,7 +49,7 @@ In order to build React-based plugins, you'll need to know a bit about [NodeJS](
 This is sample code, not actually a tool. But the [uxp-ui-kitchen-sink-plugin](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/ui-kitchen-sink) is very useful in showing the kinds of controls you can use in UXP. It covers both Spectrum and native controls.
 
 ### HTML Playground
-The [HTML PLayground](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/ui-playground) plugin is designed to make it simple to test out simple HTML layouts in Photoshop using UXP's layout engine. To use this, install the plugin using the UXP Developer Tool.
+The [HTML PLayground](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/ui-playground) plugin is designed to make it easy to test out simple HTML layouts in Photoshop using UXP's layout engine. To use this, install the plugin using the UXP Developer Tool.
 
 ### batchPlay Logger for ExtendScript developers
 
