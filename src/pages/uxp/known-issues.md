@@ -26,6 +26,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * Emojis are rendered in the font color on Windows 10, instead of using the emoji's colors.
 * When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added *after* a panel is shown for the first time.
 * Drag and Drop is not currently supported.
+* The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release.
 
 ## Events
 
@@ -52,6 +53,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * `<input type="color" />` is not supported.
 * Using unitless values in `width` and `height` attributes are not supported in UXP 3.1. Use `px`, or CSS styles.
 * `<label>` uses `inline-flex` layout semantics in UXP 3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
+* `<progress>` is not theme aware.
 
 ## Layout
 
