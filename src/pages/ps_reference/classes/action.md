@@ -40,7 +40,7 @@ ___
 
 ###  parent
 
-• **get parent**(): *[ActionSet](actionset/)*
+• **get parent**(): *[ActionSet](../actionset/)*
 
 The action set this action belongs to
 
@@ -56,7 +56,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(): *[Action](action/)*
+▸ **duplicate**(): *[Action](#)*
 
 Creates a copy of this action, placing it in the same action set
 
