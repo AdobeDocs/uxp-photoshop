@@ -8,7 +8,7 @@ sidebar_label: "GroupLayer"
 
 Represents a group layer
 
-* [Layer](../layer/)
+* [Layer](/ps_reference/classes/layer/)
 
   ↳ **GroupLayer**
 
@@ -16,7 +16,7 @@ Represents a group layer
 
 ###  constructor
 
-\+ **new GroupLayer**(`id`: number, `docId`: number): *[GroupLayer](../grouplayer/)*
+\+ **new GroupLayer**(`id`: number, `docId`: number): *[GroupLayer](/ps_reference/classes/grouplayer/)*
 
 *Overrides void*
 
@@ -39,7 +39,7 @@ Name | Type |
 
 • **get bounds**(): *PsCommon.Bounds*
 
-*Inherited from [Layer](../layer/).[bounds](../layer/#bounds)*
+*Inherited from [Layer]/ps_reference/classes/layer/).[bounds](/ps_reference/classes/layer/#bounds)*
 
 Bounds of the layer, including the effects
 ```javascript
@@ -52,7 +52,7 @@ ___
 
 • **get boundsNoEffects**(): *PsCommon.Bounds*
 
-*Inherited from [Layer](../layer/).[boundsNoEffects](../layer/#boundsnoeffects)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[boundsNoEffects](/ps_reference/classes/layer/#boundsnoeffects)*
 
 Bounds of the layer excluding effects
 ```javascript
@@ -78,7 +78,7 @@ ___
 
 • **get kind**(): *LayerKind*
 
-*Inherited from [Layer](../layer/).[kind](../layer/#kind)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[kind](/ps_reference/classes/layer/#kind)*
 
 Kind of the layer
 ```javascript
@@ -91,9 +91,9 @@ ___
 
 ###  linkedLayers
 
-• **get linkedLayers**(): *[Layer](../layer/)[]*
+• **get linkedLayers**(): *[Layer](/ps_reference/classes/layer/)[]*
 
-*Inherited from [Layer](../layer/).[linkedLayers](../layer/#linkedlayers)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[linkedLayers](/ps_reference/classes/layer/#linkedlayers)*
 
 Layers linked to this layer
 ```javascript
@@ -107,9 +107,9 @@ ___
 
 ###  parent
 
-• **get parent**(): *[GroupLayer](../grouplayer/) | null*
+• **get parent**(): *[GroupLayer](/ps_reference/classes/grouplayer/) | null*
 
-*Inherited from [Layer](../layer/).[parent](../layer/#parent)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[parent](/ps_reference/classes/layer/#parent)*
 
 The group layer this layer is in,
 null if layer has no parent
@@ -120,7 +120,7 @@ null if layer has no parent
 
 ▸ **delete**(): *void*
 
-*Inherited from [Layer](../layer/).[delete](../layer/#delete)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[delete](/ps_reference/classes/layer/#delete)*
 
 Deletes this layer from the document.
 ```javascript
@@ -134,9 +134,9 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(`targetDocument?`: [Document](../document/), `name?`: string): *Promise‹[Layer](../layer/)›*
+▸ **duplicate**(`targetDocument?`: [Document](/ps_reference/classes/document/), `name?`: string): *Promise‹[Layer](/ps_reference/classes/layer/)›*
 
-*Inherited from [Layer](../layer/).[duplicate](../layer/#duplicate)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[duplicate](/ps_reference/classes/layer/#duplicate)*
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
@@ -155,7 +155,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetDocument?` | [Document](../document/) | if specified, duplicate to a different document target.  |
+`targetDocument?` | [Document](/ps_reference/classes/document/) | if specified, duplicate to a different document target.  |
 `name?` | string | - |
 
 ___
@@ -164,7 +164,7 @@ ___
 
 ▸ **flip**(`axis`: "horizontal" | "vertical" | "both"): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[flip](../layer/#flip)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[flip](/ps_reference/classes/layer/#flip)*
 
 Flips the layer on one or both axis.
 
@@ -185,9 +185,9 @@ ___
 
 ###  link
 
-▸ **link**(`targetLayer`: [Layer](../layer/)): *[Layer](../layer/)[]*
+▸ **link**(`targetLayer`: [Layer](/ps_reference/classes/layer/)): *[Layer](/ps_reference/classes/layer/)[]*
 
-*Inherited from [Layer](../layer/).[link](../layer#link)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[link](/ps_reference/classes/layer#link)*
 
 Creates a link between this layer and the target layer if not already linked,
 and returns a list of layers linked to this layer.
@@ -203,7 +203,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetLayer` | [Layer](../layer/) | layer to link with |
+`targetLayer` | [Layer](/ps_reference/classes/layer/) | layer to link with |
 
 array of linked layers
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **moveAbove**(`target?`: LayerTypes): *void*
 
-*Inherited from [Layer](../layer/).[moveAbove](../layer/#moveabove)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[moveAbove](/ps_reference/classes/layer/#moveabove)*
 
 Moves the layer to a position above the target layer or group.
 If no target layer is defined, move this layer up one slot.
@@ -235,7 +235,7 @@ ___
 
 ▸ **moveBelow**(`target?`: LayerTypes): *void*
 
-*Inherited from [Layer](../layer/).[moveBelow](../layer/#movebelow)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[moveBelow](/ps_reference/classes/layer/#movebelow)*
 
 Moves the layer to a position below the target layer or group.
 If no target layer is defined, move this layer down one slot.
@@ -257,7 +257,7 @@ ___
 
 ▸ **nudge**(`horizontal`: number | PercentValue | PixelValue, `vertical`: number | PercentValue | PixelValue): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[nudge](../layer/#nudge)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[nudge](/ps_reference/classes/layer/#nudge)*
 
 Moves the layer.
 ```javascript
@@ -284,7 +284,7 @@ ___
 
 ▸ **rotate**(`angle`: number | AngleValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[rotate](../layer/#rotate)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[rotate](/ps_reference/classes/layer/#rotate)*
 
 Rotates the layer.
 ```javascript
@@ -312,7 +312,7 @@ ___
 
 ▸ **scale**(`width`: number | PercentValue, `height`: number | PercentValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[scale](../layer/#scale)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[scale](/ps_reference/classes/layer/#scale)*
 
 Scales the layer.
 ```javascript
@@ -343,7 +343,7 @@ ___
 
 ▸ **skew**(`angleH`: number | AngleValue, `angleV`: number | AngleValue, `options?`: object): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[skew](../layer/#skew)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[skew](/ps_reference/classes/layer/#skew)*
 
 Applies a skew to the layer.
 ```javascript
@@ -375,7 +375,7 @@ ___
 
 ▸ **unlink**(): *Promise‹void›*
 
-*Inherited from [Layer](../layer/).[unlink](../layer/#unlink)*
+*Inherited from [Layer](/ps_reference/classes/layer/).[unlink](/ps_reference/classes/layer/#unlink)*
 
 Unlinks the layer from any existing links.
 ```javascript

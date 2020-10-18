@@ -12,7 +12,7 @@ Handles the content in Actions panel. The Actions panel has a hierarchy of actio
 
 ###  actions
 
-• **get actions**(): *[Action](../action/)[]*
+• **get actions**(): *[Action](/ps_reference/classes/action/)[]*
 
 List of actions in this action set
 
@@ -54,7 +54,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(): *[ActionSet](#)*
+▸ **duplicate**(): *[ActionSet](/ps_reference/classes/actionset)*
 
 Creates a copy of this action set
 

@@ -7,7 +7,7 @@ sidebar_label: "Selection"
 
 ## Implements
 
-* [Transformable](../../interfaces/transformable/)
+* [Transformable](/ps_reference/interfaces/transformable/)
 
 ## Properties
 
@@ -21,7 +21,7 @@ ___
 
 ###  parent
 
-• **parent**: *Promise‹[Document](../document/)›*
+• **parent**: *Promise‹[Document](/ps_reference/classes/document/)›*
 
 The document this selection belongs to
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **nudge**(`horizontal`: number | PercentValue | PixelValue, `vertical`: number | PercentValue | PixelValue): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Moves the selected pixels.
 ```javascript
@@ -118,7 +118,7 @@ ___
 
 ▸ **perspectiveTransform**(`percentH`: number | PercentValue, `percentV`: number | PercentValue, `interpolation?`: InterpolationMethod): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Applies a distortion (perspective) to the content under the selection.
 ```javascript
@@ -140,7 +140,7 @@ ___
 
 ▸ **rotate**(`angle`: number | AngleValue, `interpolation?`: InterpolationMethod): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Rotates the content under the selection.
 ```javascript
@@ -161,7 +161,7 @@ ___
 
 ▸ **scale**(`width`: number | PercentValue, `height`: number | PercentValue, `interpolation?`: InterpolationMethod): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Scales the content under the selection.
 ```javascript
@@ -182,7 +182,7 @@ ___
 
 ▸ **skew**(`angleH`: number | AngleValue, `angleV`: number | AngleValue, `interpolation?`: InterpolationMethod): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Applies a skew to the content under the selection.
 ```javascript
@@ -217,9 +217,9 @@ ___
 
 ###  warp
 
-▸ **warp**(`warp`: [BuiltinWarp](../../interfaces/builtinwarp/) | [CustomWarp4X4](../../interfaces/customwarp4x4/), `interpolation?`: InterpolationMethod): *Promise‹void›*
+▸ **warp**(`warp`: [BuiltinWarp](/ps_reference/interfaces/builtinwarp/) | [CustomWarp4X4](/ps_reference/interfaces/customwarp4x4/), `interpolation?`: InterpolationMethod): *Promise‹void›*
 
-*Implementation of [Transformable](../../interfaces/transformable/)*
+*Implementation of [Transformable](/ps_reference/interfaces/transformable/)*
 
 Applies a warp to the content under the selection.
 ```javascript
@@ -237,5 +237,5 @@ await selection.warp({ meshPoints: warp })
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`warp` | [BuiltinWarp](../../interfaces/builtinwarp/) &#124; [CustomWarp4X4](../../interfaces/customwarp4x4/) | Warp definition |
+`warp` | [BuiltinWarp](/ps_reference/interfaces/builtinwarp/) &#124; [CustomWarp4X4](/ps_reference/interfaces/customwarp4x4/) | Warp definition |
 `interpolation?` | InterpolationMethod | Interpolation method to use when resampling the image @default InterpolationMethod.bilinear  |
