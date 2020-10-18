@@ -11,7 +11,7 @@ Ultimately, this will have subclasses denoting all layer types.
 
 * **Layer**
 
-  ↳ [GroupLayer](../grouplayer/)
+  ↳ [GroupLayer](/ps_reference/classes/grouplayer/)
 
 ## Accessors
 
@@ -66,7 +66,7 @@ ___
 
 ###  parent
 
-• **get parent**(): *[GroupLayer](../grouplayer/) | null*
+• **get parent**(): *[GroupLayer](/ps_reference/classes/grouplayer/) | null*
 
 The group layer this layer is in,
 null if layer has no parent
@@ -89,7 +89,7 @@ ___
 
 ###  duplicate
 
-▸ **duplicate**(`targetDocument?`: [Document](../document/), `name?`: string): *Promise‹[Layer](#)›*
+▸ **duplicate**(`targetDocument?`: [Document](/ps_reference/classes/document/), `name?`: string): *Promise‹[Layer](#)›*
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
@@ -108,7 +108,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`targetDocument?` | [Document](../document) | if specified, duplicate to a different document target.  |
+`targetDocument?` | [Document](/ps_reference/classes/document) | if specified, duplicate to a different document target.  |
 `name?` | string | - |
 
 ___
