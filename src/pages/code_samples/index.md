@@ -1,6 +1,6 @@
 ---
-title: Code Samples - UXP for Adobe Photoshop
-description: This is the code samples page of UXP for Adobe Photoshop
+title: Code Samples—UXP for Adobe Photoshop
+description: Learn to build UXP plugins for Photoshop by seeing fully-functioning code samples.
 contributors:
   - https://github.com/chuckweger
 ---
@@ -15,11 +15,11 @@ The samples are all available on GitHub [here](https://github.com/AdobeDocs/uxp-
 
 There are three basic kinds of plugins:
 
-* Direct Action ("headless") - a plugin doesn't *have* to present a UI to the user. If you want to create a plugin that does the same thing each time without any user input, or gets its parameters some other way (say, a configuration file or a website), this might be the way to go.
+- Direct Action ("headless") - a plugin doesn't _have_ to present a UI to the user. If you want to create a plugin that does the same thing each time without any user input, or gets its parameters some other way (say, a configuration file or a website), this might be the way to go.
 
-* Modal Dialog - many plugins can use a simple dialog box to get parameters from the user, then execute code based on those parameters. If you're coming from ExtendScript, you'll most likely be building this type of plugin.
+- Modal Dialog - many plugins can use a simple dialog box to get parameters from the user, then execute code based on those parameters. If you're coming from ExtendScript, you'll most likely be building this type of plugin.
 
-* Panel - panels are everywhere in Photoshop, and plugins can present first-class panels that look and feel like the ones built into Photoshop.
+- Panel - panels are everywhere in Photoshop, and plugins can present first-class panels that look and feel like the ones built into Photoshop.
 
 A given plugin can use one or all of the above approaches. For example, a single plugin could use a modal dialog for some operations, a panel for others, and a direct action (invoked by a flyout menu in a panel or a Photoshop's Plugins menu) for other operations. The `manifest.json` specifies what the entry points of your plugin are.
 

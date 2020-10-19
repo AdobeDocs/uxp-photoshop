@@ -1,6 +1,6 @@
 ---
-title: Getting Started - UXP for Adobe Photoshop
-description: This is the getting started page of UXP for Adobe Photoshop
+title: Getting Started—UXP for Adobe Photoshop
+description: Get started building your Photoshop plugin with the UXP Plugin API.
 contributors:
   - https://github.com/chuckweger
 ---

@@ -1,6 +1,6 @@
 ---
 title: Documentation-UXP for Adobe Photoshop
-description: This is the overview page of UXP for Adobe Photoshop
+description: Build UXP plugins for Adobe Photoshop with HTML, CSS, and JavaScript. Automate workflows, build new features, and more.
 contributors:
   - https://github.com/simonwex
   - https://github.com/chuckweger

@@ -1,18 +1,18 @@
 ---
-title: Photoshop JS API - UXP for Adobe Photoshop
-description: This is the API page of UXP for Adobe Photoshop
+title: Photoshop API—UXP for Adobe Photoshop
+description: Learn about the Photoshop API that is exposed through UXP for plugin developers.
 ---
 
 
-# UXP for Photoshop API
+# Photoshop API
 
 ## Introduction
 
-With the introduction of Unified Extensibility Platform (UXP), Photoshop now runs a JavaScript engine powered by V8. UXP provides a truly native extensibility solution in Photoshop by rendering HTML markup into native controls. Extensions run within the same process, and communicate with the Photoshop DOM asynchronously, allowing the UI to run on its own thread. 
+With the introduction of Unified Extensibility Platform (UXP), Photoshop now runs a JavaScript engine powered by V8. UXP provides a truly native extensibility solution in Photoshop by rendering HTML markup into native controls. Plugins run within the same process, and communicate with the Photoshop DOM asynchronously, allowing the UI to run on its own thread. 
 
 ## Usage
 
-The API library is built into every build of Photoshop. To use the APIs in your UXP extension, all you have to do is a simple require. The `app` object exposed in the module gives you entry point into the rest of the DOM.
+The API library is built into every build of Photoshop. To use the APIs in your UXP plugin, all you have to do is a simple require. The `app` object exposed in the module gives you entry point into the rest of the DOM.
 
 ### An example script 
 
