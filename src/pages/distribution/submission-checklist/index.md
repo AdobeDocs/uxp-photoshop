@@ -4,19 +4,19 @@ Congratulations! You've built a great plugin and you're ready to release it to y
 
 To be able to publish on our marketplace, **your plugin must first go through a review process**.
 
-By reviewing every plugin, Adobe aims to help developers get ready for primetime and ensure that users have great experiences with the plugins they consume.
+By reviewing every plugin, Adobe aims to help developers get ready for primetime and ensure that users have great experiences with the plugins they consume. Our goal is to balance providing you the best developer experience during review that we can, while helping ensure that approved plugins offer a great user experience for our mutual customers.
 
-This document will give you an idea of what we’re checking for during the review process. While lengthy, working through the points below will help you make sure you’ve accounted for all of the requirements, and avoid having to fix things and resubmit before being published.
+This document will give you an idea of how to prepare for and submit to the review process, as well as details on what we’re checking for. While lengthy, working through the points below will help you make sure you’ve accounted for all of the requirements, and avoid having to fix things and resubmit before being published. Please note that this list is intended as a helpful overview; it will change over time, and cannot cover absolutely everything we look at.
 
 ## Pre-submission checklist
 
-Our goal is to balance providing you the best developer experience during review that we can, while helping ensure that approved plugins offer a great user experience for our mutual customers.
+As part of submission, you will provide Adobe with 3 types of data via the [Adobe Developer Console](https://console.adobe.io):
 
-This list will give you an overview of the kinds of things we check for during review. The list will change over time, and cannot cover absolutely everything we look at.
+1. A publisher profile about you, the developer
+2. Listing information about the specific plugin you are submitting
+3. Your plugin package
 
-### Metadata
-
-As part of submission, you will enter two kinds of metadata on the [Adobe Developer Console](https://console.adobe.io): a publisher profile and details about the specific plugin you are submitting.
+In this section, we will take a look at each of these types of data.
 
 For specifics regarding character lengths, image dimensions, and required fields, always refer to the Adobe Developer Console submission form for the latest requirements.
 
@@ -24,7 +24,7 @@ For specifics regarding character lengths, image dimensions, and required fields
 
 We recommend that you draft this metadata in a text editor, and not directly in the Adobe Developer Console. This will help you avoid losing your writing if your browser refreshes before submission.
 
-#### Publisher profile
+### Publisher profile
 
 Your publisher profile is about you as a company or developer as whole. Once you've submitted this information and it has been approved by Adobe, it is shown for _all plugins and integrations you publish with Adobe_.
 
@@ -43,13 +43,13 @@ Frequently changing your publisher profile will confuse users and erode trust. P
 
 **You must complete your publisher profile** in order to submit your first plugin or integration. Next time you submit something, your publisher profile will already be set, so you won't need to do this again.
 
-#### Listing information
+### Listing information
 
 Your listing information provides Adobe and users with details about the specific plugin you are currently submitting. Each plugin you submit will have its own listing information that you provide.
 
 Always check the [Adobe Developer Console](https://console.adobe.io) for the latest list of required details. At the time of writing, those details include the following lists.
 
-**Plugin information**
+#### Plugin information
 
 The information you add here will be made public to users via Adobe's marketplace surfaces once your plugin is approved.
 
@@ -61,17 +61,17 @@ The information you add here will be made public to users via Adobe's marketplac
 - Categories
 - Languages supported
 
-**Commerce**
+#### Commerce
 
 Here, you'll be able to indicate whether your plugin is free or paid.
 
 For paid plugin listings, you’ll need to register with Adobe’s third-party payment provider, [FastSpring](https://fastspring.com/sign-up/payee-adobe/), and enter your FastSpring key. **Please note that it may take up to 24 hours for FastSpring to create your key.**
 
-**Connection to other applications and services**
+#### Connection to other applications and services
 
 You'll set flags that inform the user within your listing if your plugin requires connection to another application or service.
 
-**Privacy policy and terms**
+#### Privacy policy and terms
 
 Here, you'll be able to add a link to:
 
@@ -80,11 +80,11 @@ Here, you'll be able to add a link to:
 
 Per the [Adobe Developer Agreement](http://www.adobe.com/go/developer-terms), if your plugin collects a user’s personal information, you must provide a link to the privacy policy listed on your app or plugin page.
 
-**Version details**
+#### Version details
 
 This information is specific to the version of your plugin that you are submitting. Let your users know what's new and what's changed.
 
-**Plugin icon**
+#### Plugin icon
 
 The plugin icon will be seen by users in the Plugin Marketplace and other marketplace surfaces.
 
@@ -92,7 +92,7 @@ At the time of writing, you are required to provide us with three sizes of the s
 
 Again, always refer to the Adobe Developer Console submission form for the latest requirements.
 
-**Screenshots**
+#### Screenshots
 
 Your screenshots will be featured in the detail page of your plugin. You should show your plugin in action and get users excited to try it out.
 
@@ -100,38 +100,27 @@ These should all be in PNG or JPG format, under 5MB in size and 1360x800 px dime
 
 Again, always refer to the Adobe Developer Console submission form for the latest requirements.
 
-#### Plugin file
-
-On the "Plugin file" tab, you'll be able to upload your plugin.
-
-Drag and drop your `.ccx` plugin file onto the appropriate area. If you don't have a `.ccx` yet, you can learn how to create one on our ["Packing your plugin"](../packaging-your-plugin) page.
-
-After you've dropped in your `.ccx` plugin file, the fields in the "Manifest details" section of the page should auto-populate based on values you've set in your manifest.
-
-#### Preview and submit
-
-After you have filled out your publisher public profile and listing information, then uploaded your plugin, you will be able to click "Preview and submit".
-
-On the "Preview and submit" page, you can:
-
-- Preview your listing on Adobe Exchange
-- Provide notes to Adobe reviewers
-- Choose whether to auto-publish or manually publish upon approval
-- Submit your plugin to Adobe for review
-
 <InlineAlert variant="info" slots="text"/>
 
 **Test accounts:** If your plugin requires a user account to access any part of the plugin, **you must provide credentials for a test account in the "Notes to reviewer" field**. If we are unable to access parts of the plugin, the submission will be rejected and you will need to resubmit.
 
+### Plugin package
+
+As part of your submission, you will upload your plugin package, which is a `.ccx` file. You can learn how to create a `.ccx` package on our ["Packing your plugin"](../packaging-your-plugin) page.
+
+The plugin package you upload will be reviewed by Adobe (see the next section to learn more about what we review). When approved, this plugin package will become available on our marketplace surfaces.
+
 ## What we review
 
-Please note the following review test cases, each of which is cause for rejection if not adhered to. This is not meant to be an exhaustive list of what we review for. However, checking through each of these test cases will improve your chances of being approved the first time.
+In this section, we will show many of our review test cases and criteria. Each review test case is cause for rejection if not adhered to.
 
-- Browsers are the only external applications that plugins are allowed to launch. If your plugin launches any other external application, it will be rejected.
-- For plugins with multiple panels, each panel needs a different icon so as to be differentiable by the user.
-- No “debug” items are allowing in the panel or in the flyouts. This includes things like “reload panel” as a user-facing feature.
+This is not meant to be an exhaustive list of what we review for, and our test cases will change and evolve over time. However, checking through each of these test cases will improve your chances of being approved the first time.
 
-### Plugin listing information
+### Publisher profile
+
+All data in your publisher profile will be reviewed, including public profile name, website, and logo.
+
+### Listing information
 
 Plugin listing information is the content that users will see in the Plugin Marketplace when browsing your listing. Unless otherwise noted, this is information that you will input and maintain on the [Adobe Developer Console](https://console.adobe.io).
 
@@ -186,7 +175,7 @@ You will need to set your plugin manifest's minimum version depending on the hos
 - The companion app must be able to successfully communicate with the plugin.
 - The companion app must not cause abnormal resource usage (e.g., CPU, RAM, storage).
 
-### Plugin user experience
+### User experience
 
 Checking the plugin's user experience is the core of our review process. Once users install your plugin, we want to make sure they have a great experience with their newfound addition to the host app's core product. In this section, we’ll go over what we’re reviewing in terms of your plugin’s functionality, UI, and more.
 
@@ -210,6 +199,8 @@ Since all plugins are different, it isn't possible to provide a permanent and ex
 - The plugin must never show a completely blank UI.
 - The plugin may not link to websites that are in development (i.e. “under construction”, “coming soon”, etc).
 - If the plugin supports login functionality, it must also provide logout.
+- Browsers are the only external applications that plugins are allowed to launch. If your plugin launches any other external application, it will be rejected.
+- No “debug” items are allowing in the panel or in the flyouts. This includes things like “reload panel” as a user-facing feature, or directing users to developer console output.
 
 #### User Interface
 
@@ -221,6 +212,7 @@ Since all plugins are different, it isn't possible to provide a permanent and ex
 - The plugin UI must scroll when all content is not visible on the screen.
 - UI elements in the plugin must not overlap or truncate.
 - UI content must wrap or adapt as necessary to accommodate the available width of the UI.
+- For plugins with multiple panels, each panel needs a different icon so as to be differentiable by the user.
 - Plugin content must be in compliance with [Adobe Branding Guidelines](../marketing).
 
 #### Performance
@@ -230,7 +222,7 @@ Since all plugins are different, it isn't possible to provide a permanent and ex
 - The plugin must not cause abnormal resource usage (e.g., CPU, RAM, storage).
 - The plugin must not cause crashes, system errors, or any major failures.
 
-### Content
+### Associated content
 
 Content within, and associated with, your plugin with be reviewed.
 
@@ -256,7 +248,7 @@ You can submit your plugin for review and approval on the [Adobe Developer Conso
 
 The following is a basic overview of the steps for submitted a plugin for review.
 
-### Create your listing
+### Create your profile and listing
 
 1. [Visit the Adobe Developer Console](https://console.adobe.io)
 2. Go to the _Projects_ tab
@@ -265,12 +257,28 @@ The following is a basic overview of the steps for submitted a plugin for review
 5. (First time only) Complete your publisher profile via the "View public profile" button, and save
 6. Click the "Create Photoshop plugin listing" button
 7. Fill out the form on the "Listing information" tab
-8. Upload your plugin package on the "Plugin file" tab
-9. Click "Preview and submit"
 
 Further details on the data you are required to submit can be found in the [Pre-submission checklist](#pre-submission-checklist) section of this page.
 
+### Upload your plugin file
+
+1. Click the "Plugin file" tab
+2. Drag and drop your `.ccx` plugin file onto the appropriate area
+3. After you've dropped in your `.ccx` plugin file, the fields in the "Manifest details" section of the page will auto-populate based on values you've set in your manifest.
+4. Click "Preview and submit"
+
+If you don't have a `.ccx` yet, you can learn how to create one on our ["Packing your plugin"](../packaging-your-plugin) page.
+
 ### Preview and submit
+
+After you have filled out your publisher public profile and listing information, then uploaded your plugin, you will be able to click "Preview and submit".
+
+On the "Preview and submit" page, you can:
+
+- Preview your listing on Adobe Exchange
+- Provide notes to Adobe reviewers
+- Choose whether to auto-publish or manually publish upon approval
+- Submit your plugin to Adobe for review
 
 1. Click "Preview in Exchange" to see how your listing will look before you publish it
 2. Fill in the "Note to Adobe reviewers" field with any further details we should know, _including_ test credentials if any part of your plugin requires a logged in user
@@ -304,5 +312,5 @@ Sometimes things can go wrong while submitting. This section aims to help you wi
 1. **Plugin version number format**: Make sure that the plugin version number specified in your manifest consists of three numeric parts, no more and no less. As an example, `version: 2.0` is currently not accepted by the marketplace, while `version: 2.0.0` will work. If your version number format is not exactly correct, you'll see a hang on "Saving Draft".
 2. **Character limit for filenames**: There's a 45-character limit on uploaded `.ccx` filenames. If you exceed this limit, validation will fail but you may not get a helpful error message. If your upload is failing, check that your filename contains no more than 45-characters, including the `.ccx` file extension.
 3. **Version numbers in filenames**: Do not include version numbers in your `.ccx` filename that you upload to the Adobe Developer Console. This is known to cause problems.
-4. **Plugin icons**: Make sure you include required icons for both the plugin and its panels, if any. If all icons aren't included, your plugin will be rejected during review (but submission will succeed). See [this example manifest for Photoshop](https://github.com/adobe-uxp/ps-vanilla-js/blob/master/manifest.json).
+4. **Plugin icons**: Make sure you include required icons for both the plugin and its panels, if any. If all icons aren't included, your plugin will be rejected during review (but submission will succeed). See [the manifest docs for more info](/guides/uxp_guide/uxp-misc/manifest-v4).
 5. **No zero-byte files**: Ensure your package has no zero-byte files within it. This will cause validation to fail.
