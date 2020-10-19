@@ -23,8 +23,7 @@ UXP (**U**nified E**x**tensibility **P**latform) lets you build plugins for Phot
 - [Getting Started Guide](guides/)
 - [Photoshop API](ps_reference/)
 - [UXP API](uxp/reference-js/)
-- [Developer Forums](#)
-- [Sharing](/distribution/)
+- [Sharing your plugin](/distribution/)
 
 ## Overview
 
