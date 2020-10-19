@@ -1,3 +1,3 @@
 # Marketing Your Plugin
 
-TBD
+We'll have more details coming soon.

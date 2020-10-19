@@ -10,10 +10,12 @@
  * governing permissions and limitations under the License.
  */
 
-const fs = require('fs');
+const fs = require("fs");
 
-const globalNavFilePath = require.resolve('@adobe/gatsby-theme-parliament/globalNav.json');
-const globalNav = JSON.parse(fs.readFileSync(globalNavFilePath, 'utf8'));
+const globalNavFilePath = require.resolve(
+  "@adobe/gatsby-theme-parliament/globalNav.json"
+);
+const globalNav = JSON.parse(fs.readFileSync(globalNavFilePath, "utf8"));
 
 globalNav.menus = [globalNav.menus[2]];
 
@@ -31,134 +33,138 @@ module.exports = {
     ],*/
     pages: [
       {
-        title: 'UXP for Adobe Photoshop',
-        path: '/'
+        title: "UXP for Adobe Photoshop",
+        path: "/",
       },
       {
-        title: 'Guides',
-        path: '/guides/'
+        title: "Guides",
+        path: "/guides/",
       },
       {
-        title: 'API Reference',
-        path: '/ps_reference/'
+        title: "API Reference",
+        path: "/ps_reference/",
       },
       {
-        title: 'UXP Reference',
-        path: '/uxp/'
+        title: "UXP Reference",
+        path: "/uxp/",
       },
       {
-        title: 'Sample Code',
-        path: '/code_samples/'
+        title: "Sample Code",
+        path: "/code_samples/",
       },
       {
-        title: 'Design',
-        path: '/design/'
+        title: "Design",
+        path: "/design/",
       },
       {
-        title: 'Developer Tool',
-        path: '/devtool/'
+        title: "Developer Tool",
+        path: "/devtool/",
       },
       {
-        title: 'Share',
-        path: '/distribution/'
+        title: "Share",
+        path: "/distribution/",
+      },
+      {
+        title: "Community",
+        path: "/community/",
       },
     ],
     subPages: [
       {
-        title: 'Getting Started',
-        path: '/guides/',
+        title: "Getting Started",
+        path: "/guides/",
         header: true,
         pages: [
           {
-            title: 'Getting Started',
-            path: '/guides/'
+            title: "Getting Started",
+            path: "/guides/",
           },
           {
-            title: 'UXP for You',
-            path: '/guides/uxp_for_you/'
+            title: "UXP for You",
+            path: "/guides/uxp_for_you/",
           },
           {
-            title: 'The UXP Toolchain',
-            path: '/guides/uxp_guide/uxp-toolchain/'
+            title: "The UXP Toolchain",
+            path: "/guides/uxp_guide/uxp-toolchain/",
           },
           {
-            title: 'UXP for Photoshop Basics',
-            path: '/guides/ps_basics/'
+            title: "UXP for Photoshop Basics",
+            path: "/guides/ps_basics/",
           },
           {
-            title: 'UXP Developer Tool',
-            path: '/guides/uxp-developer-tool/'
+            title: "UXP Developer Tool",
+            path: "/guides/uxp-developer-tool/",
           },
           {
-            title: 'Developer Tool Walkthrough',
-            path: '/guides/udt-walkthrough/'
+            title: "Developer Tool Walkthrough",
+            path: "/guides/udt-walkthrough/",
           },
           {
-            title: 'Other Topics »»',
-            path: '/guides/uxp_guide/uxp-misc/',
+            title: "Other Topics »»",
+            path: "/guides/uxp_guide/uxp-misc/",
             pages: [
               {
-                title: 'The UXP Manifest',
-                path: '/guides/uxp_guide/uxp-misc/manifest-v4/'
+                title: "The UXP Manifest",
+                path: "/guides/uxp_guide/uxp-misc/manifest-v4/",
               },
               {
-                title: 'Localization and Platforms',
-                path: '/guides/uxp_guide/uxp-misc/localization-and-platforms/'
+                title: "Localization and Platforms",
+                path: "/guides/uxp_guide/uxp-misc/localization-and-platforms/",
               },
               {
-                title: 'Flyout Menus',
-                path: '/guides/uxp_guide/uxp-misc/flyout-menus/'
+                title: "Flyout Menus",
+                path: "/guides/uxp_guide/uxp-misc/flyout-menus/",
               },
               {
-                title: 'File Access',
-                path: '/guides/uxp_guide/uxp-misc/file-access/'
+                title: "File Access",
+                path: "/guides/uxp_guide/uxp-misc/file-access/",
               },
               {
-                title: 'Network I/O',
-                path: '/guides/uxp_guide/uxp-misc/network-io/'
+                title: "Network I/O",
+                path: "/guides/uxp_guide/uxp-misc/network-io/",
               },
               {
-                title: 'Spectrum CSS',
-                path: '/guides/uxp_guide/uxp-misc/spectrum-css/'
-              }
-            ]            
-          },
-           {
-            title: 'How Do I...',
-            path: '/guides/how-to/'
+                title: "Spectrum CSS",
+                path: "/guides/uxp_guide/uxp-misc/spectrum-css/",
+              },
+            ],
           },
           {
-            title: 'Theme Awareness',
-            path: '/guides/theme-awareness/'
+            title: "How Do I...",
+            path: "/guides/how-to/",
           },
           {
-            title: 'Debugging your Plugins',
-            path: '/guides/debugging/'
-          }
-        ]
+            title: "Theme Awareness",
+            path: "/guides/theme-awareness/",
+          },
+          {
+            title: "Debugging your Plugins",
+            path: "/guides/debugging/",
+          },
+        ],
       },
       {
-        title: 'Code Samples',
-        path: '/code_samples/',
+        title: "Code Samples",
+        path: "/code_samples/",
         header: true,
         pages: [
           {
-            title: 'Overview',
-            path: '/code_samples/'
+            title: "Overview",
+            path: "/code_samples/",
           },
           {
-            title: 'JavaScript Samples',
-            path: '/code_samples/javascript_samples/'
+            title: "JavaScript Samples",
+            path: "/code_samples/javascript_samples/",
           },
           {
-            title: 'React Samples',
-            path: '/code_samples/react_samples/'
+            title: "React Samples",
+            path: "/code_samples/react_samples/",
           },
           {
-            title: 'batchPlay Samples',
-            path: '/code_samples/batchplay_samples/'
-          }
-        ]
+            title: "batchPlay Samples",
+            path: "/code_samples/batchplay_samples/",
+          },
+        ],
       },
       {
         title: "Share",
@@ -183,50 +189,50 @@ module.exports = {
           },
         ],
       },
-       {
-        title: 'UXP Reference',
-        path: '/uxp/reference-js/',
+      {
+        title: "UXP Reference",
+        path: "/uxp/reference-js/",
         header: true,
         pages: [
           {
-            title: 'JavaScript Reference',
-            path: '/uxp/reference-js/',
-            pages: require("./reference-js.js")
+            title: "JavaScript Reference",
+            path: "/uxp/reference-js/",
+            pages: require("./reference-js.js"),
           },
           {
-            title: 'CSS Reference',
-            path: '/uxp/reference-css/',
-            pages: require("./reference-css.js")
+            title: "CSS Reference",
+            path: "/uxp/reference-css/",
+            pages: require("./reference-css.js"),
           },
           {
-            title: 'HTML Reference',
-            path: '/uxp/reference-html/',
-            pages: require("./reference-html.js")
+            title: "HTML Reference",
+            path: "/uxp/reference-html/",
+            pages: require("./reference-html.js"),
           },
           {
-            title: 'Spectrum UXP Reference',
-            path: '/uxp/reference-spectrum/',
-            pages: require("./reference-spectrum.js")
+            title: "Spectrum UXP Reference",
+            path: "/uxp/reference-spectrum/",
+            pages: require("./reference-spectrum.js"),
           },
           {
-            title: 'Known Issues',
-            path: '/uxp/known-issues/',
-          }
-        ]
+            title: "Known Issues",
+            path: "/uxp/known-issues/",
+          },
+        ],
       },
       {
         title: "Ps API Reference",
-        path: '/ps_reference/',
-        pages: require('./reference-ps.js'),
+        path: "/ps_reference/",
+        pages: require("./reference-ps.js"),
       },
       {
         title: "Overview",
         path: "/design/",
-        pages: require("./reference-design.js")
+        pages: require("./reference-design.js"),
       },
-      ...require("./reference-devtool.js")
-    ]
+      ...require("./reference-devtool.js"),
+    ],
   },
   plugins: [`@adobe/gatsby-theme-parliament`],
-  pathPrefix: process.env.PATH_PREFIX || '/photoshop/uxp'
+  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp",
 };
