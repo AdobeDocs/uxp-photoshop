@@ -18,10 +18,11 @@ UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack 
 
 #### Resources
 
-* [Quickstart Guide](guides/)
+* [Getting Started Guide](guides/)
 * [Photoshop API](ps_reference/)
 * [UXP API](uxp/reference-js/)
 * [Developer Forums](#)
+* [Sharing](/distribution/)
 
 ## Overview
 

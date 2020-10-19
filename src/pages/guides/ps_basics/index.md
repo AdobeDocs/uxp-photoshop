@@ -6,7 +6,7 @@ description: This is the guides overview page of the Adobe Photoshop API for UXP
 # Photoshop UXP Plugins
 
 ## The Basics
-This section covers the basics of UXP in Photoshop. For the basics of UXP itself, see [Getting Started with UXP](../).
+This section covers the basics of UXP in Photoshop. For the basics of UXP itself, see [Getting Started with UXP](/guides/). For the full API for Photoshop, see the [Photoshop API pages](/ps_reference/).
 
 While generic UXP APIs work across applications that support UXP (such as Adobe XD as well as Photoshop), the APIs in this section are specific to Photoshop. As such, they affect Photoshop documents rather than changing your plugin's UI, accessing the file system, and other non-Photoshop operations.
 
