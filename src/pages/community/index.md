@@ -1,3 +1,8 @@
+---
+title: Community-UXP for Adobe Photoshop
+description: Join the worldwide developer community building Photoshop plugins to empower creativity. Meet other developers, ask questions, offer help.
+---
+
 ## Join the community
 
 Join the worldwide community of Creative Cloud Developers who are building plugins and integrations to empower creativity.

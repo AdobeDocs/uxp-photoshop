@@ -41,11 +41,11 @@ module.exports = {
         path: "/guides/",
       },
       {
-        title: "API Reference",
+        title: "Photoshop API",
         path: "/ps_reference/",
       },
       {
-        title: "UXP Reference",
+        title: "UXP API",
         path: "/uxp/",
       },
       {
@@ -190,7 +190,7 @@ module.exports = {
         ],
       },
       {
-        title: "UXP Reference",
+        title: "UXP API",
         path: "/uxp/reference-js/",
         header: true,
         pages: [
@@ -221,7 +221,7 @@ module.exports = {
         ],
       },
       {
-        title: "Ps API Reference",
+        title: "Photoshop API",
         path: "/ps_reference/",
         pages: require("./reference-ps.js"),
       },

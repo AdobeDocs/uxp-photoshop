@@ -1,6 +1,6 @@
 ---
-title: Design - Designing a Plugin experience
-description: This is the page for the introduction to plugin design guidelines
+title: Design—Create a great Photoshop plugin experience
+description: Get plugin design guidelines that will help you design your plugin UI and user interactions.
 contributors:
   - https://github.com/dcaiced0
 ---
