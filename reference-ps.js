@@ -6,23 +6,23 @@ module.exports = [
     pages: [
       {
         title: 'Photoshop',
-        path: '/ps_reference/classes/photoshop'
+        path: '/ps_reference/classes/photoshop/'
       },
       {
         title: 'Document',
-        path: '/ps_reference/classes/document'
+        path: '/ps_reference/classes/document/'
       },
       {
         title: 'Layer',
-        path: '/ps_reference/classes/layer'
+        path: '/ps_reference/classes/layer/'
       },
       {
         title: 'Action',
-        path: '/ps_reference/classes/action'
+        path: '/ps_reference/classes/action/'
       },
       {
         title: 'ActionSet',
-        path: '/ps_reference/classes/actionset'
+        path: '/ps_reference/classes/actionset/'
       }
     ]
   },
@@ -33,19 +33,19 @@ module.exports = [
     pages: [
       {
         title: 'BatchPlay',
-        path: '/ps_reference/media/advanced/batchplay'
+        path: '/ps_reference/media/advanced/batchplay/'
       },
       {
         title: 'API Extensions',
-        path: '/ps_reference/media/advanced/prototype'
+        path: '/ps_reference/media/advanced/prototype/'
       },
       {
         title: 'CSDK <-> UXP Messaging',
-        path: '/ps_reference/media/advanced/cpp-pluginsdk'
+        path: '/ps_reference/media/advanced/cpp-pluginsdk/'
       },
       {
         title: 'Event Listeners',
-        path: '/ps_reference/media/advanced/event-listener'
+        path: '/ps_reference/media/advanced/event-listener/'
       }
     ]
   }
