@@ -1,5 +1,5 @@
 ---
-title: Overview - UXP for Adobe Photoshop
+title: Documentation-UXP for Adobe Photoshop
 description: This is the overview page of UXP for Adobe Photoshop
 contributors:
   - https://github.com/simonwex
@@ -12,9 +12,9 @@ import Community from "./community/index.md"
 
 ![Hero image](./illustration.png)
 
-# UXP for Adobe Photoshop
+# UXP for Adobe Photoshop documentation
 
-UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack in which to build plugins for Photoshop and other Adobe Creative Cloud applications.<br/>This is the place for developers to learn how to use UXP to build amazing Photoshop plugins.
+UXP (**U**nified E**x**tensibility **P**latform) lets you build plugins for Photoshop and other Creative Cloud apps. Automate workflows, build new features, and connect to other software and services—all with HTML, CSS, and JavaScript.
 
 <Resources slots="heading, links"/>
 
@@ -30,7 +30,9 @@ UXP (**U**nified E**x**tensibility **P**latform) is the modern technology stack 
 
 This documentation helps developers build plugins for Adobe Photoshop versions 22.0 and later. If you're building plugins for earlier versions of Photoshop, see the [CEP Getting Started Guides](https://github.com/Adobe-CEP/Getting-Started-guides).
 
-UXP provides modern JavaScript, a curated selection of UI components, and a more streamlined workflow for plugin developers. With UXP, you can develop:
+UXP provides modern JavaScript, a curated selection of UI components, and a more streamlined workflow for plugin developers.
+
+With UXP, you can develop:
 
 - Direct Actions - headless plugins that interface with Photoshop, the host OS, and the network, free of any UI.
 - Modal Dialogs - plugins that implement one or more modal dialogs. Good for simple user interfaces that don't need to persist.
@@ -61,7 +63,7 @@ What experience do you have with previous Photoshop plugin solutions? Here's wha
 
 <DiscoverBlock slots="link, text"/>
 
-[Designing for Photoshop](/design)
+[Designing plugins for Photoshop](/design/)
 
 Here are some key design principles for UXP plugins in Photoshop. Learn the high level UI/UX patterns, and understand the different kinds of UI your plugin can present.
 
@@ -85,19 +87,19 @@ Want to jump right in building a plugin? Check out these code samples and make i
 
 ## API References
 
-The APIs come in two parts: the methods and properties unique to Photoshop, and those exposed by UXP to all UXP-aware Creative Cloud applications.
+The APIs come in two parts: the methods and properties unique to Photoshop, and those exposed by UXP to all UXP-enabled Creative Cloud applications.
 
 <DiscoverBlock slots="link, text"/>
 
 [Photoshop API](ps_reference/)
 
-The API Reference for Photoshop calls exposed to UXP.
+The API Reference for Photoshop calls exposed through UXP.
 
 <DiscoverBlock slots="link, text"/>
 
 [UXP API](uxp/reference-js/)
 
-The API Reference for UXP itself. Includes file and network I/O.
+The API Reference for UXP itself. Includes UI APIs (including HTML and CSS), file and network I/O, and more.
 
 ## Share
 
@@ -113,13 +115,13 @@ Packaging your UXP plugin is a breeze. In many cases, it's just one click away.
 
 [Options for Distribution](distribution/distribution-options/)
 
-Did you build a plugin just for yourself, for your friends, for your employer? Or did you want to distribute through the Creative Cloud on millions of desktops? Read this section to help you decide.
+Did you build a plugin just for yourself, your friends, or your employer? Or do you want to distribute through the Creative Cloud Plugin Marketplace on millions of desktops? Read this section to help you decide.
 
 <DiscoverBlock slots="link, text"/>
 
 [Submission and Review](distribution/submission-checklist/)
 
-Learn about the review process and associated timelines for Creative Cloud integrations, and follow our review submission checklist.
+Learn about the review process and associated timelines for Creative Cloud plugins and integrations, and follow our review submission checklist.
 
 <DiscoverBlock slots="link, text"/>
 
