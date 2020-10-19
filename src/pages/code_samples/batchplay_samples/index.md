@@ -6,14 +6,4 @@ batchPlay is a method that can send multiple actions into the Photoshop event qu
 
 These examples demonstrate how to perform some common actions using batchPlay.
 
-### batchPlay sample 1
-
-Description coming soon.
-
-### batchPlay sample 2
-
-Description coming soon.
-
-### batchPlay sample 3
-
-Description coming soon.
+_batchPlay examples are coming soon._

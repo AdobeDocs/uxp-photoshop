@@ -4,10 +4,10 @@
 
 If you've never used React, one of the best places to start is with the (React Tutorial)[https://reactjs.org/tutorial/tutorial.html].
 
-## React sample 1
+## React Starter Plugin
 
-Description coming soon.
+This plugin is a good place to get started when building a Photoshop plugin using React. It comes defined with all the dependencies that you'll need to get started. As this is a React project, you'll need to do some initial configuration before this will be usable in Photoshop.
 
-## React sample 2
+## Photoshop UXP Playground Plugin
 
-Description coming soon.
+This plugin is designed to make it simple to test out simple HTML layouts in Photoshop using UXP's layout engine. To use this, install the plugin (you can link to the Photoshop plugin directory) or load the plugin using File > Scripts > Load UXP Extension... or use the developer tools.
