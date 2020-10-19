@@ -58,6 +58,10 @@ module.exports = {
         title: 'Developer Tool',
         path: '/devtool/'
       },
+      {
+        title: 'Share',
+        path: '/distribution/'
+      },
     ],
     subPages: [
       {
@@ -155,6 +159,29 @@ module.exports = {
             path: '/code_samples/batchplay_samples/'
           }
         ]
+      },
+      {
+        title: "Share",
+        path: "/distribution/",
+        header: true,
+        pages: [
+          {
+            title: "Packaging Your Plugin",
+            path: "/distribution/packaging-your-plugin/",
+          },
+          {
+            title: "Options for Distribution",
+            path: "/distribution/distribution-options/",
+          },
+          {
+            title: "Submission and Review",
+            path: "/distribution/submission-checklist/",
+          },
+          {
+            title: "Marketing Your Plugin",
+            path: "/distribution/marketing/",
+          },
+        ],
       },
        {
         title: 'UXP Reference',
