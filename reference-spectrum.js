@@ -17,7 +17,24 @@ module.exports=[
   {
     "title": "Typography",
     "header": true,
-    "pages": [],
+    "pages": [
+      {
+        "title": "sp-body",
+        "path": "/uxp/reference-spectrum/Typography/sp-body/"
+      },
+      {
+        "title": "sp-detail",
+        "path": "/uxp/reference-spectrum/Typography/sp-detail/"
+      },
+      {
+        "title": "sp-heading",
+        "path": "/uxp/reference-spectrum/Typography/sp-heading/"
+      },
+      {
+        "title": "sp-label",
+        "path": "/uxp/reference-spectrum/Typography/sp-label/"
+      }
+    ],
     "path": "/uxp/reference-spectrum/Typography/"
   },
   {

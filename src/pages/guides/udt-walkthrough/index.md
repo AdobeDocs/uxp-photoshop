@@ -2,7 +2,7 @@
 
 So you have Photoshop, you have the UXP Developer Tool, and you have Visual Studio Code or other programmer's text editor. Now what?
 
-First make sure you have the UXP Developer Tool (UDT). You can download installers for the UDT [here](https://example.com). Once it's downloaded, run the installer just like any other on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tools." On Windows, the folder is on the boot drive in the `Program Files->Adobe` folder. Then follow these steps:
+First make sure you have the UXP Developer Tool (UDT). You can download installers for the UDT [here](/devtool/). Once it's downloaded, run the installer just like any other on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tools." On Windows, the folder is on the boot drive in the `Program Files->Adobe` folder. Then follow these steps:
 
 
 1. Launch Photoshop.
