@@ -28,6 +28,34 @@ module.exports=[
       {
         "title": "sp-button",
         "path": "/uxp/reference-spectrum/User%20Interface/sp-button/"
+      },
+      {
+        "title": "sp-checkbox",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-checkbox/"
+      },
+      {
+        "title": "sp-divider",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-divider/"
+      },
+      {
+        "title": "sp-dropdown",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-dropdown/"
+      },
+      {
+        "title": "sp-icon",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-icon/"
+      },
+      {
+        "title": "sp-link",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-link/"
+      },
+      {
+        "title": "sp-menu",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-menu/"
+      },
+      {
+        "title": "sp-menu-item",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-menu-item/"
       }
     ],
     "path": "/uxp/reference-spectrum/User%20Interface/"
