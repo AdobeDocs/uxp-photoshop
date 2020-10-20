@@ -2,7 +2,16 @@ module.exports=[
   {
     "title": "Overview",
     "header": true,
-    "pages": [],
+    "pages": [
+      {
+        "title": "About Spectrum UXP",
+        "path": "/uxp/reference-spectrum/Overview/About%20Spectrum%20UXP/"
+      },
+      {
+        "title": "Using with React",
+        "path": "/uxp/reference-spectrum/Overview/Using%20with%20React/"
+      }
+    ],
     "path": "/uxp/reference-spectrum/Overview/"
   },
   {
@@ -10,12 +19,6 @@ module.exports=[
     "header": true,
     "pages": [],
     "path": "/uxp/reference-spectrum/Typography/"
-  },
-  {
-    "title": "Containers",
-    "header": true,
-    "pages": [],
-    "path": "/uxp/reference-spectrum/Containers/"
   },
   {
     "title": "User Interface",
@@ -56,6 +59,30 @@ module.exports=[
       {
         "title": "sp-menu-item",
         "path": "/uxp/reference-spectrum/User%20Interface/sp-menu-item/"
+      },
+      {
+        "title": "sp-progressbar",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-progressbar/"
+      },
+      {
+        "title": "sp-radio",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-radio/"
+      },
+      {
+        "title": "sp-radio-group",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-radio-group/"
+      },
+      {
+        "title": "sp-slider",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-slider/"
+      },
+      {
+        "title": "sp-textfield",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-textfield/"
+      },
+      {
+        "title": "sp-textarea",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-textarea/"
       }
     ],
     "path": "/uxp/reference-spectrum/User%20Interface/"
