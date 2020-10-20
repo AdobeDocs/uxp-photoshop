@@ -20,7 +20,16 @@ module.exports=[
   {
     "title": "User Interface",
     "header": true,
-    "pages": [],
+    "pages": [
+      {
+        "title": "sp-action-button",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-action-button/"
+      },
+      {
+        "title": "sp-button",
+        "path": "/uxp/reference-spectrum/User%20Interface/sp-button/"
+      }
+    ],
     "path": "/uxp/reference-spectrum/User%20Interface/"
   }
 ]

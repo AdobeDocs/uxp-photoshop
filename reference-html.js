@@ -41,7 +41,40 @@ module.exports=[
   {
     "title": "Hierarchy",
     "header": true,
-    "pages": [],
+    "pages": [
+      {
+        "title": "footer",
+        "path": "/uxp/reference-html/Hierarchy/footer/"
+      },
+      {
+        "title": "h1",
+        "path": "/uxp/reference-html/Hierarchy/h1/"
+      },
+      {
+        "title": "h2",
+        "path": "/uxp/reference-html/Hierarchy/h2/"
+      },
+      {
+        "title": "h3",
+        "path": "/uxp/reference-html/Hierarchy/h3/"
+      },
+      {
+        "title": "h4",
+        "path": "/uxp/reference-html/Hierarchy/h4/"
+      },
+      {
+        "title": "h5",
+        "path": "/uxp/reference-html/Hierarchy/h5/"
+      },
+      {
+        "title": "h6",
+        "path": "/uxp/reference-html/Hierarchy/h6/"
+      },
+      {
+        "title": "hr",
+        "path": "/uxp/reference-html/Hierarchy/hr/"
+      }
+    ],
     "path": "/uxp/reference-html/Hierarchy/"
   },
   {
@@ -53,7 +86,12 @@ module.exports=[
   {
     "title": "User Interface",
     "header": true,
-    "pages": [],
-    "path": "/uxp/reference-html/User%20Interface/"
+    "pages": [
+      {
+        "title": "button",
+        "path": "/uxp/reference-html/User%20Interface/button/"
+      }
+    ],
+    "path": "/uxp/reference-html/User%20Interface/button/"
   }
 ]
