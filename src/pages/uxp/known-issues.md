@@ -28,6 +28,11 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * Drag and Drop is not currently supported.
 * The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release.
 
+## Spectrum UXP Components
+
+* Buttons do not indicate when they are focused from the keyboard.
+* You should make sure `sp-dropdown` elements have a width set, otherwise they will size according to the currently selected item. This may cause items in the dropdown itself to appear truncated, wrapped, or oddly formatted.
+
 ## Events
 
 * `uxpshowpanel` and the corresponding `show` callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future.

@@ -62,6 +62,6 @@ Common workflows while building your plugin.
 
 <DiscoverBlock slots="link, text"/>
 
-[Working with React](plugin-workflows/)
+[Working with React](working-with-react/)
 
 Advanced workflows when working with React-based plugins.
