@@ -16,6 +16,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 
 ## User Interface
 
+* While `z-index` is supported, no element can overlay a widget that has text editing capabilities. Text fields and areas will always render the text editor _above_ everything else in the same panel or dialog. As such, you can use popovers to render content above them, _or_ hide the element if you need to render some content above it. 
 * `window.devicePixelRatio` (and corresponding `element.uxpContainer.devicePixelRatio`) always returns `1`. This is incorrect and will be fixed in the future. Note that `window.devicePixelRatio` may not always match an element's pixel ratio if the element is visible on a screen with a different pixel ratio from the primary screen.
 * Not all SVG files are supported by UXP. UXP's SVG renderer is targeted for simple icons and the like; complex SVGs may fail to render completely, or may render in unexpected ways. The SVG renderer will improve in the future.
 * Images formatted in a grayscale mode will fail to render. They will take up space in the DOM, but will not be visible to the user.
@@ -32,6 +33,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 
 * Buttons do not indicate when they are focused from the keyboard.
 * You should make sure `sp-dropdown` elements have a width set, otherwise they will size according to the currently selected item. This may cause items in the dropdown itself to appear truncated, wrapped, or oddly formatted.
+* Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
 
 ## Events
 
@@ -39,7 +41,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * `uxphidepanel` and the corresponding `hide` callback never occurs, even when the panel is made invisible. This will be fixed in the future.
 * `uxpcommand` will incude `uxpshowpanel` and `uxphidepanel` in the `commandId` field of the event whenever panels are shown and hidden. For plugins _with a single panel_, this is sufficient to detect that your panel's state has changed. If your plugin has multiple panels, there is no way (at this time) to detect which panel was shown or hidden.
 * Interactive elements swallow most events.
-* `keypress` and `keyup` are not currently supported.
+* `keypress` is not currently supported.
 
 ## HTML Elements
 
@@ -59,6 +61,7 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * Using unitless values in `width` and `height` attributes are not supported in UXP 3.1. Use `px`, or CSS styles.
 * `<label>` uses `inline-flex` layout semantics in UXP 3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
 * `<progress>` is not theme aware.
+* Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
 
 ## Layout
 

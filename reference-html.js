@@ -76,22 +76,5 @@ module.exports=[
       }
     ],
     "path": "/uxp/reference-html/Hierarchy/"
-  },
-  {
-    "title": "Content",
-    "header": true,
-    "pages": [],
-    "path": "/uxp/reference-html/Content/"
-  },
-  {
-    "title": "User Interface",
-    "header": true,
-    "pages": [
-      {
-        "title": "button",
-        "path": "/uxp/reference-html/User%20Interface/button/"
-      }
-    ],
-    "path": "/uxp/reference-html/User%20Interface/button/"
   }
 ]
