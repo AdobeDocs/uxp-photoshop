@@ -9,10 +9,10 @@ contributors:
 
 UX Patterns will include UX requirements and/or UX best practices these will ensure your plugin follows Adobe user experience patterns.
 
-* [Designing for Photoshop](Designingforphotoshop.md)
-* [Branding](branding.md)
-* [Messaging](messaging.md)
-* [Onboarding](onboarding.md)
+* [Designing for Photoshop](Designingforphotoshop/)
+* [Branding](branding.m/)
+* [Messaging](messaging/)
+* [Onboarding](onboarding/)
 
 
 ## UX Requirements

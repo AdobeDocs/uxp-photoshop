@@ -1,6 +1,6 @@
 ---
-title: Design—Create a great Photoshop plugin experience
-description: Get plugin design guidelines that will help you design your plugin UI and user interactions.
+title: Design - Designing a Plugin experience
+description: This is the page for the introduction to plugin design guidelines
 contributors:
   - https://github.com/dcaiced0
 ---
@@ -30,9 +30,9 @@ Plugins can interact with the user at different levels, for example, some plugin
 
 User Experience patterns will provide guidence on how to interact with your plugin users within Adobe, this will highlight UX requirements and best practices.
 
-[View UX Patterns](ux-patterns/index.md)
+[View UX Patterns](ux-patterns/index/)
 
-[Designing for Photoshop](ux-patterns/ux-patterns/Designingforphotoshop.md)
+[Designing for Photoshop](ux-patterns/ux-patterns/Designingforphotoshop/)
 
  
  
@@ -40,5 +40,5 @@ User Experience patterns will provide guidence on how to interact with your plug
 
 The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View User Interface Components](user-interface/index.md)
+[View User Interface Components](user-interface/index/)
 

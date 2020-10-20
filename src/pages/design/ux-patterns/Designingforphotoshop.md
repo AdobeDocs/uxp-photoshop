@@ -61,7 +61,7 @@ Example
 
 ## Themes and Icons
 
-Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI. The [UXP User Interface Spectrum Components](../user-interface/index.md) support themes.
+Photoshop has different interface themes users can choose from. Ensure your plugin supports the different themes when designing the plugin UI. The [UXP User Interface Spectrum Components](../user-interface/index/) support themes.
 
 **Panel UI - Specs**
 
