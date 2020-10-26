@@ -34,6 +34,6 @@
     "clean": "gatsby clean"
   },
   "devDependencies": {
-    "eslint": "^7.10.0"
+    "eslint": "^7.12.0"
   }
 }
