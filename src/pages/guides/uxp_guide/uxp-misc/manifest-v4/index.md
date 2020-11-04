@@ -36,6 +36,10 @@ If you are a bit rusty at reading JSON, [here's a good reference](https://develo
             "maximumSize": {"width": 2000, "height": 2000},
             "preferredDockedSize": {"width": 230, "height": 300},
             "preferredFloatingSize": {"width": 230, "height": 300},
+            "icons": [
+                {"width":23,"height":23,"path":"icons/dark.png","scale":[1,2],"theme":["darkest","dark","medium"]},
+                {"width":23,"height":23,"path":"icons/light.png","scale":[1,2],"theme":["lightest","light"]}
+            ]
         }
     ],
     "icons": [
@@ -70,7 +74,7 @@ Key path | Type | Description | Required
 
 ## Icons
 
-Icons are not required during development, but must be provided when distributing through the Plugin Marketplace.
+Icons are not required during development, but *must be provided* when distributing through the Plugin Marketplace.
 The `icons` field is an array of a `IconDefinition`s:
 
 Key | Type | Description
@@ -100,6 +104,7 @@ Key | Type | Description
 `maximumSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred maximum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the maximum width depending upon context.
 `preferredDockedSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred size of the panel when docked. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
 `preferredFloatingSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred size of the panel when floating. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
+`icons` | `array<object>` | Icons for your panel. Each panel in a plugin requires its own set of icon set, which is shown in the toolbars when minimized, and has no additional treatment supplied. A panel icon is 23x23 (46x46) in size, and can be transparent. These are different from the icons in the main plugin. They are optional during development, but *must* be present in the manifest and the project if the plugin is submitted to the Plugin Marketplace via the Developer Console.
 
 ### Keyboard shortcuts
 > Shortcuts are not yet available for plugins.
