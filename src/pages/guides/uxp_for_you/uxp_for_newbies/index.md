@@ -6,7 +6,7 @@ Just a couple of things before you start on your journey:
 
 You'll need to know a bit about your host application. In this case, you need to have a passing knowledge of Photoshop. Photoshop itself is a deep, broad program with a long history, but don't get sucked into trying to learn it all. Knowing something about Photoshop layers, selections, and basic tools (such as the pen and type tools) is a good start.
 
-Next, learn some basic JavaScript. Here, the Internet is not your friend. If you type "learn javascript" into Google, you get "About 2,040,000,000 results." __Two billion__ pages you could sift through. Maybe it's time to give this up and study something simpler, like quantum physics (only 123 million results for that search).
+Next, learn some basic JavaScript. Here, the Internet is not your friend. If you type "learn JavaScript" into Google, you get "About 2,040,000,000 results." __Two billion__ pages you could sift through. Maybe it's time to give this up and study something simpler, like quantum physics (only 123 million results for that search).
 
 Don't be discouraged. One popular starting point is the [Mozilla Developers Network tutorials](https://developer.mozilla.org/en-US/docs/Learn/JavaScript). But there are different learning styles: some like to read documentation, some prefer YouTube videos, and some like to just dive right in and make mistakes. Find the style that works for you.
 
