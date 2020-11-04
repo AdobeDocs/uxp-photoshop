@@ -31,9 +31,9 @@ require('photoshop').app.activeDocument.prependLodash() // All layers in the doc
 ```
 
 Right now, you have these prototypes available:
- * [app.Photoshop](../../classes/photoshop)
- * [app.Document](../../classes/document)
- * [app.Layer](../../classes/layer)
- * [app.ActionSet](../../classes/actionset)
- * [app.Action](../../classes/action)
+ * [app.Photoshop](/ps_reference/classes/photoshop/)
+ * [app.Document](/ps_reference/classes/document/)
+ * [app.Layer](/ps_reference/classes/layer/)
+ * [app.ActionSet](/ps_reference/classes/actionset/)
+ * [app.Action](/ps_reference/classes/action/)
 

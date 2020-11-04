@@ -4,7 +4,7 @@ There are two disparate locations where icons are shown. A plugin's icon (outsid
 
 A panel's icon (inside the `entrypoints`), however, is shown in the toolbars when minimized, and has no additional treatment supplied. It is 23x23 (46x46) in size, and can be transparent. It also should follow the Ps theme if you want to fit in with other tools and panel icons.
 
-Of course, a plugin can have more than one panel -- and in this case, each panel needs to have distinguishable icons so that the user knows which panel they're going to show.
+Of course, a plugin can have more than one panel -- and in this case, each panel needs to have distinguishable icons so that the user knows which panel they're going to show. Panel icons are referenced inside an `entrypoint` object in the manifest. Panel icons are needed *in addition* to the plugin's overall `icons` array, which is at the root of the `manifest.json` file.
 
 
 ## Quick Start

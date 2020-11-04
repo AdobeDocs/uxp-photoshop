@@ -18,10 +18,10 @@ These are guidelines and best practices on how to guide your users as they inter
  
 ## Best practices
 
-**Content**  
+#### **Content**  
 Provide examples or tutorials on how to use your plugin, this can be done by using visual or gifs.
 
-**A. Plugin Interaction**  
+**A. Plugin interaction**  
 Highlight key interactions to make sure users can get the plugin to work.
 
 **B. Login experience**  
@@ -31,4 +31,4 @@ If the user needs to log in or sign up for a service to use your plugin, guide t
 If the plugin needs an API key or other account information, provide clear instructions on how they can get that information or provide a link.
 
 **D. Help**  
-Provide access to the help external link or documentation in the main navigation of your plugin or in error modal dialogs to allow them to troubleshoot.
+Provide access to an external help link or help documentation in the main navigation of your plugin or in error modal dialogs to allow a user to troubleshoot.

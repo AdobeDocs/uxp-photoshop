@@ -6,4 +6,4 @@ It's not sufficient to know those three technologies when writing UXP plugins; a
 
 For Adobe Photoshop, the API documentation can be found [here](../ps-basics/index.md). For Adobe XD, the API documentation is [here](https://adobexdplatform.com).
 
-UXP plugins also have a different directory structure than typical websites. There is a required [manifest file](../uxp-basics/uxp-manifest.md) at the top level of the directory. There is also an optional set of icons which contains png images that are used when a panel is minimized in Photoshop.
+UXP plugins also have a different directory structure than typical websites. There is a required [manifest file](../uxp-basics/uxp-manifest.md) at the top level of the directory. There is also a set of icons which contains png images that are used when a panel is minimized in Photoshop. While these icons are optional for development, they are *mandatory* for distribution; your plugin will be fail submission if it lacks the proper icon structure.
