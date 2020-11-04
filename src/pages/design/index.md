@@ -1,5 +1,5 @@
 ---
-title: Design - Designing a Plugin experience
+title: Design - Designing a plugin experience
 description: This is the page for the introduction to plugin design guidelines
 contributors:
   - https://github.com/dcaiced0
@@ -7,9 +7,9 @@ contributors:
 
 # Designing a plugin experience
 
-These guidelines will help you define the best user experience for your plugin. Based on your users workflow and the plugin action, different UX patterns and UI components should be considered as you create a plugin.
-
-Plugins can interact with the user at different levels, for example, some plugins in some use cases won’t render an interface, and some will include actions that need an interface.
+These guidelines will help you define the best user experience for your plugin. As you create a plugin, consider different UX patterns and UI components based on your user’s workflow and the plugin action.
+ 
+ Plugins can interact with a user’s experience at different levels, for example, some plugins in some use cases won’t render an interface, and some will include actions that need an interface.
 
 
 
@@ -20,25 +20,25 @@ Plugins can interact with the user at different levels, for example, some plugin
 **Learn more about the types interfaces available to plugins.**
 
 
-| **Plugins Panel**   | **Plugins Dialog**   |
+| **Plugins panel**   | **Plugins dialog**   |
 |---------------------|--------------------|
-| Non-Blocking UI - This interface is best used when the user should have access to the canvas while using the plugin.   | Blocking UI - This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas   | 
+| **non-blocking UI:** This interface is best used when the user should have access to the canvas while using the plugin.   | **blocking UI:** This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas.   | 
 
-![Plugins Panel and Dialog examples](/ux-images/Panel_Dialog_examples.png)
+![Examples showing the plugins panel interface and the plugins dialog interface](/ux-images/Panel_Dialog_examples.png)
 
-## UX Patterns
+## UX patterns
 
-User Experience patterns will provide guidence on how to interact with your plugin users within Adobe, this will highlight UX requirements and best practices.
+User experience patterns highlight UX requirements and best practices, as well as provide guidance on how to interact with your plugin users within Adobe.
 
-[View UX Patterns](/design/ux-patterns/index/)
+[View UX patterns](/design/ux-patterns/)
 
-[Designing for Photoshop](/design/ux-patterns/ux-patterns/Designingforphotoshop/)
+[Designing for photoshop](/design/ux-patterns/Designingforphotoshop/)
 
  
  
-## User Interface 
+## User interface 
 
 The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View User Interface Components](/design/user-interface/index/)
+[View user interface components](/design/user-interface/index/)
 

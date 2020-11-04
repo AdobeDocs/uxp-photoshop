@@ -1,13 +1,13 @@
 ---
-title: Design - UX Patterns
+title: Design - UX patterns
 description: This is the page for the introduction to UX patterns
 contributors:
   - https://github.com/dcaiced0
 ---
 
-# UX Patterns
+# UX patterns
 
-UX Patterns will include UX requirements and/or UX best practices these will ensure your plugin follows Adobe user experience patterns.
+The UX patterns section includes requirements and best practices to ensure that your plugin follows Adobe user experience patterns.
 
 * [Designing for Photoshop](Designingforphotoshop/)
 * [Branding](branding/)
@@ -15,15 +15,16 @@ UX Patterns will include UX requirements and/or UX best practices these will ens
 * [Onboarding](onboarding/)
 
 
-## UX Requirements
+## UX requirements
 
-Requirements highlight key patterns all plugins need to follow to get approved by Adobe. 
+UX requirements highlight key patterns that all plugins need to follow in order to get approved by Adobe.
 
-![Example of specs and UX requirements](../ux-images/plugindialogspecs.png)
+![An example showing the UX requirements for a plugin dialog](../ux-images/plugindialogspecs.png)
 
-## Best practices
+## UX best practices
 
 Best practices provide recommendations on plugin usability and behavior, user feedback, privacy, and interface guidelines. 
+These use “do” and “don’t” examples to illustrate the recommendations.
 
-![Example of a UX best practice](../ux-images/psicondosdonts.png)
+![An example showing the UX best practices for icons in Photoshop](../ux-images/psicondosdonts.png)
 
