@@ -306,6 +306,7 @@ Sometimes things can go wrong while submitting. This section aims to help you wi
 1. `"Extension id: not matched"`: The `id` in your manifest must match the plugin ID provided by the Adobe Developer Console. During development you're free to use whatever string you want as your manifest `id`, but for submission to succeed you must match the manifest `id` to the plugin ID provided by the Adobe Developer Console.
 2. `"Invalid"`: The `host` field in your manifest **must not be an array** when submitting to the marketplace. While UXP and the UXP DevTool both support arrays for `host`, this is a convenience for development against multiple hosts, and is not intended for deployment.
 3. `"Invalid"`: Make sure your manifest is a valid JSON file (and is included in the package).
+4. `"Version #.#.# already exists for extension ${pluginID}."`: You have already submitted a plugin package with this version number specified in the manifest. Bump the plugin version number in the manifest, then submit.
 
 ### Silent errors and hangs
 
