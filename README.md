@@ -1,20 +1,18 @@
-# Gatsby Theme Parliament Documentation Template
+# UXP-Photoshop
 
-This is a Gatsby site template built with [Gatsby Theme Parliament](https://github.com/adobe/gatsby-theme-parliament).
+This is a Gatsby site template built with [Adobe I/O Gatsby Theme](https://github.com/adobe/gatsby-theme-aio).  
 
-View the [demo](https://adobedocs.github.io/gatsby-theme-parliament-documentation/) running on Github Pages.  
-
-Follow the [instructions](https://github.com/adobe/gatsby-theme-parliament#getting-started) to get started.
+Follow the [instructions](https://github.com/adobe/gatsby-theme-aio#getting-started) to get started.
 
 ## Author quick start (WIP)
 
 1. Clone repo
-2. Create your `.env` file ([instructions](https://github.com/adobe/gatsby-theme-parliament#env-settings-for-github-contributors))
+2. Create your `.env` file ([instructions](https://github.com/adobe/gatsby-theme-aio#env-settings-for-github-contributors))
 3. `npm install`
 4. `npm run dev`
 5. Make a new branch from main (be sure your local repository is up-to-date before doing this) using the convention `author-name/docs-work-name`
 6. Write great things in `src/pages`
-7. Configure nav in `gatsby-config.js` as needed ([instructions](https://github.com/adobe/gatsby-theme-parliament#global-navigation))
+7. Configure nav in `gatsby-config.js` as needed ([instructions](https://github.com/adobe/gatsby-theme-aio#global-navigation))
 
 ## Committing Changes
 
