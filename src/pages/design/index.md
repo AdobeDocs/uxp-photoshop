@@ -40,5 +40,5 @@ User experience patterns highlight UX requirements and best practices, as well a
 
 The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View user interface components](/design/user-interface/index/)
+[View user interface components](/design/user-interface/)
 
