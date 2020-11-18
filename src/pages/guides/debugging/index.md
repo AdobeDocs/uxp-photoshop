@@ -25,7 +25,7 @@ You've just written a UXP plugin that will change the world and make you famous 
 The JSON format is known for being easier for humans to read than XML. That doesn't mean it's easy, though. The smallest glitch in your JSON manifest file (a misplaced bracket, a missing comma, etc.) can cause your plugin to fail to load. You can use a JSON linter (one is built into VS code, and there are many available online both as apps and built into websites). Bottom line: if you're not seeing anything in Photoshop, check the Developer Tool for error messages, and look carefully at your `manifest.json` file.
 
 ### Installation Problems
-During the beta period for Photoshop UXP, there were a variety of ways to get plugins into the directory where Photoshop could find them. Now, there is just one approved way to bring your development plugin into Photoshop: the [UXP Developer Tool](../uxp-developer-tool/index.md).
+During the beta period for Photoshop UXP, there were a variety of ways to get plugins into the directory where Photoshop could find them. Now, there is just one approved way to bring your development plugin into Photoshop: the [UXP Developer Tool](/guides/uxp-developer-tool/).
 
 ### JavaScript Problems
 If your plugin fails to run due to a JavaScript error, usually that error will show up in the debugger console. Like most error messages since the dawn of the computer age, sometimes the error message is buried in a cryptic stack trace, but it will definitely be in there, usually with the offending JavaScript line number displayed at the top right of the trace.

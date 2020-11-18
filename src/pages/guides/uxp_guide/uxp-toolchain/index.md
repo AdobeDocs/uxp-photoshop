@@ -26,7 +26,7 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 - [yarn](https://yarnpkg.com): a "better" package manager than npm for Node. Many people, including those developing Photoshop UXP tools, are using yarn instead of npm.
 
 ### Installing the Tooling
-- __UXP Developer Tool for macOS and Windows 10__ - See the instructions [here](./devtool) to install in run the UXP Developer Toolkit.
+- __UXP Developer Tool for macOS and Windows 10__ - See the instructions [here](/devtool/) to install and run the UXP Developer Toolkit.
 
 -  __Node.js__ - Go to the [Node.js download page](https://nodejs.org/en/download/), download the installer for your platform, and run it. This will also install npm. 
 

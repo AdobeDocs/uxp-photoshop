@@ -4,9 +4,9 @@ If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or
 
 ### Different DOM access
 
-UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop API page](/photoshop-specific-apis/index.md) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
+UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP Plugins page](/guides/ps_basics/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
 
-As a workaround until all the significant Photoshop features are accessible via UXP, a 
+As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](/guides/ps_basics/batchplay_intro/). 
 
 ### Development environment
 ExtendScript Toolkit ("ESTK") was the development environment of choice for many years, and still is for many Windows developers. On macOS, ESTK died a lingering death due to the deprecation of 32-bit code. Recently, ESTK has been replaced by a plugin for Visual Studio Code, a widely-used editor.
@@ -31,4 +31,4 @@ A full introduction to ES6 features and syntax is beyond the scope of this docum
 - [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 ### What's Missing in UXP
-UXP provides an HTML interpreter similar to Chromium; it's more limited than a full browser, which means some commonly-used web CSS and HTML idioms don't work. For more information on what does and doesn't work in the UXP HTML environment, see [this document](../uxp-development/unsupported.md).
+UXP provides an HTML interpreter similar to Chromium; it's more limited than a full browser, which means some commonly-used web CSS and HTML idioms don't work. For more information on what does and doesn't work in the UXP HTML environment, see [this document](/guides/uxp_guide/unsupported/).

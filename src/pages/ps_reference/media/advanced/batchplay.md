@@ -45,9 +45,7 @@ If you have used `executeAction` in ExtendScript, you are probably familiar with
 
 #### Accepted action descriptors
 
-There are a few ways to learn what Photoshop accepts as acceptable action descriptors.
-- During development, you can use the Photoshop `Record Action json...` menu item under `Plugins > Development` to record the action you wish to capture. The output json can be used to construct and modify your action descriptor.
-- A similar but more raw method of gaining insight would be to add a listener via the `app.eventNotifier` property, and then performing the action.
+- One way of gaining insight about what Photoshop accepts as acceptable action descriptors would be to add a listener via the `app.eventNotifier` property, and then performing the action. Use the listener output to construct your action descriptors.
 
 ### BatchPlay options
 
