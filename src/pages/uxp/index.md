@@ -5,7 +5,7 @@ description: The API Reference for UXP itself. Includes UI APIs (including HTML 
 
 # UXP API Reference
 
-This reference is split into these main sections:
-
-* [JavaScript Reference](./reference-js/) – technical documentation regarding the functions, classes, and modules available globally and via `require`.
+* [JavaScript Reference](./reference-js/) – technical documentation regarding the functions, classes, and modules available globally (on `window`, for example) and via `require`.
 * [CSS Reference](./reference-css/) – technical documentation regarding the kinds of CSS styles and features available in UXP.
+* [HTML Reference](./reference-html/) – technical documentation regarding some of the HTML elements and attributes that are supported.
+* [Spectrum UXP Reference](./reference-spectrum/) – information on the Spectrum UXP Web Component widgets and their capabilities.
