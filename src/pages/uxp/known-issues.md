@@ -7,12 +7,15 @@ contributors:
 
 # Known Issues
 
-The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Please check this page with future updates, as known issues will be fixed over time, and new issues will likely be discovered.
+The following issues are known. Please check this page with future updates, as known issues will be fixed over time, and new issues will likely be discovered.
 
 ## General Issues
 
 * Panel icons must always be 23x23 (46x46) PNG files. SVG icons are not supported on Photoshop toolbars.
 * Plugin icons must always be 24x24 (48x48) files. In the manifest, they must currently be specified with `width: 48` and `height: 48`. Plugin icons do support SVG files, but UXP doesn't support all SVG features, which means you'll want to test your SVG icon before shipping your plugin if you decide to use SVG icons in the Plugin Panel.
+* When using `require("uxp").entrypoints.setup()` in a delayed fashion (that is, not immediately at plugin start), you may encounter an uncatchable error. This appears to be related to how quickly the `setup` function is called in relation to drawing the first few frames on the display. If this delay is short (less than ~20ms), the call will likely succeed. If it is long, an error is likely to occur. A delay in calling this function should not cause any errors to be thrown, and will be fixed in a future release. (PS-57605)
+* When creating a flyout separator, you must specify an `id` of `-`. This will be fixed in the next UXP release. (PS-56279)
+* When attempting to use the UXP clipboard APIs in panel-less plugins, errors will be thrown. This will be fixed in a future release. (UXP-15542)
 
 ## User Interface
 
@@ -27,18 +30,25 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 * Emojis are rendered in the font color on Windows 10, instead of using the emoji's colors.
 * When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added *after* a panel is shown for the first time.
 * Drag and Drop is not currently supported.
-* The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release.
+* The `Save` dialog that appears when using `getFileForSaving` appears _behind_ the plugin panels. The `Open` and `Folder` dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release. (PS-57708)
+* When using `<img>` tags inside a `<dialog>`, you should ensure that the images have an explicit `width` and `height` on either the image or the dialog. Otherwise, the dialog will attempt to resize to the smallest possible size, and images initially have a 0x0 dimension until at least one frame has been rendered to the display. This can cause the dialog to display at the wrong size.
+* `<img>` tags do not currently handle embedded rotation information.
+
 
 ## Spectrum UXP Components
 
 * Buttons do not indicate when they are focused from the keyboard.
 * You should make sure `sp-dropdown` elements have a width set, otherwise they will size according to the currently selected item. This may cause items in the dropdown itself to appear truncated, wrapped, or oddly formatted.
 * Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
+* Displaying a file picker or browser from a Spectrum UXP control (such as a button) may result in an infinite series of `click` events. Until this is fixed in UXP, you'll need to add some logic to prevent the infinite loop or use a native widget instead. (PS-57264)
+* Dropdowns don't currently respond to arrow keys; this will be fixed in a future update.
+* The `location` attribute for `sp-tooltip` seems like it would control the position of the tooltip relative to its attachment. This is not how the attribute actually works -- it instead controls the tooltip's "tip" direction. If `location` is set to `bottom`, the tip will be pointed upwards under the assumption that your code has already placed the tooltip below the control. (PS-56708) _Better tooltip handling is coming in a future release_.
+* The numeric `sp-textfield` can trigger numeric validation errors, even when the entered value would seem to be correct. This will be addressed in a future release. The limitation on valid ranges is an issue with numeric fields in Photoshop in general and is a separate issue. (PS-57698)
 
 ## Events
 
-* `uxpshowpanel` and the corresponding `show` callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future.
-* `uxphidepanel` and the corresponding `hide` callback never occurs, even when the panel is made invisible. This will be fixed in the future.
+* `uxpshowpanel` and the corresponding `show` callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future. (PS-57284)
+* `uxphidepanel` and the corresponding `hide` callback never occurs, even when the panel is made invisible. This will be fixed in the future. (PS-57284)
 * `uxpcommand` will incude `uxpshowpanel` and `uxphidepanel` in the `commandId` field of the event whenever panels are shown and hidden. For plugins _with a single panel_, this is sufficient to detect that your panel's state has changed. If your plugin has multiple panels, there is no way (at this time) to detect which panel was shown or hidden.
 * Interactive elements swallow most events.
 * `keypress` is not currently supported.
@@ -100,6 +110,10 @@ The following issues are known to occur with UXP 4.1 and Photoshop 22.0.0. Pleas
 ## File I/O
 
 * `Blob` is not supported. Use `ArrayBuffer` instead.
+* Copying a file from a folder outside the plugin's data folder into the plugin's data folder (using `getDataFolder`) may fail on Windows with the error `fs.copyFile fallback failed - Error: Route not found". (PS-57707)
+* The list of images in `require("uxp").storage.fileTypes.images` is not intended to be a complete representation of all supported image types by the host. Instead, this array includes some of the more common images. You can pass your own array with the desired file types instead. (PS-57601)
+* It's not currently possible to obtain metadata for file objects in the plugin's bundle. The date or size will be invalid. Metadata from other sources (such as `getDataFolder`) are unaffected. This will be fixed in a future release. (PS-57307)
+
 
 ## Debugging
 
