@@ -24,39 +24,39 @@ module.exports=[
     "pages": [
       {
         "title": "Adjacent Sibling combinator",
-        "path": "/uxp/reference-css/Selectors/Adjacent%20Sibling%20combinator/"
+        "path": "/uxp/reference-css/Selectors/Adjacent Sibling combinator/"
       },
       {
         "title": "Attribute selector",
-        "path": "/uxp/reference-css/Selectors/Attribute%20selector/"
+        "path": "/uxp/reference-css/Selectors/Attribute selector/"
       },
       {
         "title": "Child combinator",
-        "path": "/uxp/reference-css/Selectors/Child%20combinator/"
+        "path": "/uxp/reference-css/Selectors/Child combinator/"
       },
       {
         "title": "Class selector",
-        "path": "/uxp/reference-css/Selectors/Class%20selector/"
+        "path": "/uxp/reference-css/Selectors/Class selector/"
       },
       {
         "title": "Descendant combinator",
-        "path": "/uxp/reference-css/Selectors/Descendant%20combinator/"
+        "path": "/uxp/reference-css/Selectors/Descendant combinator/"
       },
       {
         "title": "General Sibling combinator",
-        "path": "/uxp/reference-css/Selectors/General%20Sibling%20combinator/"
+        "path": "/uxp/reference-css/Selectors/General Sibling combinator/"
       },
       {
         "title": "Identifier selector",
-        "path": "/uxp/reference-css/Selectors/Identifier%20selector/"
+        "path": "/uxp/reference-css/Selectors/Identifier selector/"
       },
       {
         "title": "Type selector",
-        "path": "/uxp/reference-css/Selectors/Type%20selector/"
+        "path": "/uxp/reference-css/Selectors/Type selector/"
       },
       {
         "title": "Universal selector",
-        "path": "/uxp/reference-css/Selectors/Universal%20selector/"
+        "path": "/uxp/reference-css/Selectors/Universal selector/"
       }
     ],
     "path": "/uxp/reference-css/Selectors/"
@@ -67,18 +67,18 @@ module.exports=[
     "pages": [
       {
         "title": "height",
-        "path": "/uxp/reference-css/Media%20Queries/height/"
+        "path": "/uxp/reference-css/Media Queries/height/"
       },
       {
         "title": "prefers-color-scheme",
-        "path": "/uxp/reference-css/Media%20Queries/prefers-color-scheme/"
+        "path": "/uxp/reference-css/Media Queries/prefers-color-scheme/"
       },
       {
         "title": "width",
-        "path": "/uxp/reference-css/Media%20Queries/width/"
+        "path": "/uxp/reference-css/Media Queries/width/"
       }
     ],
-    "path": "/uxp/reference-css/Media%20Queries/"
+    "path": "/uxp/reference-css/Media Queries/"
   },
   {
     "title": "Pseudo-elements",

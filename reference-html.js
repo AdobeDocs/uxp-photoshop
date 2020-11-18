@@ -5,11 +5,11 @@ module.exports=[
     "pages": [
       {
         "title": "Unsupported Elements",
-        "path": "/uxp/reference-html/General/Unsupported%20Elements/"
+        "path": "/uxp/reference-html/General/Unsupported Elements/"
       },
       {
         "title": "Unsupported Attributes",
-        "path": "/uxp/reference-html/General/Unsupported%20Attributes/"
+        "path": "/uxp/reference-html/General/Unsupported Attributes/"
       },
       {
         "title": "body",
