@@ -208,7 +208,7 @@ Moves the layer.
 await layer.nudge(-200, 0)
 
 // move the layer one height down
-let percent = (v) => { _unit: "percentUnit", _value: v }
+let percent = (v) => ({ _unit: "percentUnit", _value: v })
 await layer.nudge(percent(0), percent(100))
 ```
 
