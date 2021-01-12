@@ -23,16 +23,16 @@ The Adobe UXP Developer Tool requires elevated privileges in order to function c
 
 <DiscoverBlock slots="link, text"/>
 
-[macOS Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.0.0.23/Adobe-UXP-Developer-Tool-1-0-0-23.dmg)
+[macOS Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.1.0.11/Adobe.UXP.Developer.Tool.Set-up.dmg)
 
-Version 1.0.0.23 for macOS 10.13.6 or better.
+Version 1.1.0.11 for macOS 10.13.6 or better.
 
 
 <DiscoverBlock slots="link, text"/>
 
-[Windows Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.0.0.23/Adobe-UXP-Developer-Tool-1-0-0-23.zip)
+[Windows Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.1.0.11/Adobe.UXP.Developer.Tool.Set-up.zip)
 
-Version 1.0.0.23 for Windows 10 or better.
+Version 1.1.0.11 for Windows 10 or better.
 
 ## Usage
 
