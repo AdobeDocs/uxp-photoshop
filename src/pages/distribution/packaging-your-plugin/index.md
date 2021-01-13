@@ -9,7 +9,7 @@ UXP plugins for Photoshop are distributed in the form of a `.ccx` file. Under th
 **IMPORTANT**:
 Before you package your plugin for distribution outside your own computer, make sure you've obtained a valid ID from the [Adobe Developer Console](https://console.adobe.io). Without an id (which goes in the `id` field of your plugin's `manifest.json` file), you won't be able to distribute your plugin in the Creative Cloud Marketplace.
 
-Using the [UXP Developer Tool](../guides/uxp-developer-tool), choose `Package` from the Actions menu (the ellipsis on the right side of the Developer Tool window, on the same line as your plugin name):
+Using the [UXP Developer Tool](../../devtool/), choose `Package` from the Actions menu (the ellipsis on the right side of the Developer Tool window, on the same line as your plugin name):
 
 ![Package Menu](../images/udt-package-menu.png)
 
