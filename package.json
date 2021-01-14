@@ -1,14 +1,14 @@
 {
   "private": true,
   "name": "uxp-photoshop-documentation",
-  "version": "0.1.5-stage",
+  "version": "0.1.5-stage-2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/AdobeDocs/uxp-photoshop"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^2.13.5",
+    "@adobe/gatsby-theme-aio": "^2.14.0",
     "gatsby": "^2.24.65",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
