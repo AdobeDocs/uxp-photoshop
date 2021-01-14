@@ -7,7 +7,7 @@ sidebar_label: "Transformable"
 
 ## Implemented by
 
-* [Selection](../classes/selection/)
+* [Selection](../../classes/selection/)
 
 ## Methods
 
@@ -81,11 +81,11 @@ ___
 
 ###  warp
 
-▸ **warp**(`warp`: [BuiltinWarp](builtinwarp/) | [CustomWarp4X4](customwarp4x4/), `interpolation?`: InterpolationMethod): *Promise‹void›*
+▸ **warp**(`warp`: [BuiltinWarp](../builtinwarp/) | [CustomWarp4X4](../customwarp4x4/), `interpolation?`: InterpolationMethod): *Promise‹void›*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`warp` | [BuiltinWarp](builtinwarp/) &#124; [CustomWarp4X4](customwarp4x4/) |
+`warp` | [BuiltinWarp](../builtinwarp/) &#124; [CustomWarp4X4](../customwarp4x4/) |
 `interpolation?` | InterpolationMethod |
