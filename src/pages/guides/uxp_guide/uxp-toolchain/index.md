@@ -1,6 +1,6 @@
 # UXP Toolchain
 
-UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See [Technology Stack](../) for more detail.
+UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See [Technology Stack](../../#the-uxp-technology-stack) for more detail.
 
 ## Tools for Development
 

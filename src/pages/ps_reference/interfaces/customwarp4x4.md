@@ -10,7 +10,7 @@ This is the first 'Warp' tool that appears when a user goes to the Warp menu ite
 
 Splitting the warp grid further, or selecting a different size of grid forces the warp to become a quilt warp.
 
-* [Warp](warp/)
+* [Warp](../warp/)
 
   ↳ **CustomWarp4X4**
 
@@ -18,9 +18,9 @@ Splitting the warp grid further, or selecting a different size of grid forces th
 
 ###  bounds
 
-• **bounds**: *[Rectangle](rectangle/)*
+• **bounds**: *[Rectangle](../rectangle/)*
 
-*Inherited from [Warp](warp/).[bounds](warp.md#bounds)*
+*Inherited from [Warp](../warp/).[bounds](../warp/#bounds)*
 
 Rectangular bounds of the warp definition.
 
@@ -28,7 +28,7 @@ ___
 
 ###  meshPoints
 
-• **meshPoints**: *[PixelPoint](pixelpoint/)[]*
+• **meshPoints**: *[PixelPoint](../pixelpoint/)[]*
 
 4x4 grid of points to represent the warp mesh.
 

@@ -4,6 +4,6 @@ At first glance, developing for UXP in Adobe applications looks very familiar to
 
 It's not sufficient to know those three technologies when writing UXP plugins; as a developer, you also have to be familiar with the host application's API. This is where the Web and UXP seriously diverge. There's nothing like an application API for websites, yet to accomplish anything useful in XD, Photoshop, or any other Creative Cloud application that supports UXP, you have to know the app.
 
-For Adobe Photoshop, the API documentation can be found [here](../ps-basics/index.md). For Adobe XD, the API documentation is [here](https://adobexdplatform.com).
+For Adobe Photoshop, the API documentation can be found [here](../../ps_basics/). For Adobe XD, the API documentation is [here](https://adobexdplatform.com).
 
-UXP plugins also have a different directory structure than typical websites. There is a required [manifest file](../uxp-basics/uxp-manifest.md) at the top level of the directory. There is also a set of icons which contains png images that are used when a panel is minimized in Photoshop. While these icons are optional for development, they are *mandatory* for distribution; your plugin will be fail submission if it lacks the proper icon structure.
+UXP plugins also have a different directory structure than typical websites. There is a required [manifest file](../../uxp_guide/uxp-misc/manifest-v4/) at the top level of the directory. There is also a set of icons which contains png images that are used when a panel is minimized in Photoshop. While these icons are optional for development, they are *mandatory* for distribution; your plugin will be fail submission if it lacks the proper icon structure.
