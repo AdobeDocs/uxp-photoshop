@@ -126,9 +126,7 @@ The default foreground color (used to paint, fill, and stroke selections)
 
 ▸ **batchPlay**(`commands`: any, `options`: any): *Promise‹Descriptor[]›*
 
-At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
-ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially
-without updating the UI. This API is subject to change and may be accessible in other ways in the future.
+At the heart of all our APIs is [batchPlay](/ps_reference/media/advanced/batchplay/). It is the evolution of executeAction. It accepts ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially without updating the UI. This API is subject to change and may be accessible in other ways in the future. Learn more in our [batchPlay reference](/ps_reference/media/advanced/batchplay/).
 
 **Parameters:**
 
