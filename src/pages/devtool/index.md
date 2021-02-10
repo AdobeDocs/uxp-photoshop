@@ -19,6 +19,9 @@ The Adobe UXP Developer Tool allows you to manage plugins that you are developin
 **IMPORTANT**:
 The Adobe UXP Developer Tool requires elevated privileges in order to function correctly. If your administrator does not enable your ability to elevate to Administrator privileges, you'll be unable to use this tool.
 
+## Installation
+The Adobe UXP Developer Tools can be installed from Adobe Creative Cloud application. For more details on installation steps refer [Installation](installation/). 
+
 ## Usage
 
 <DiscoverBlock slots="link, text"/>
