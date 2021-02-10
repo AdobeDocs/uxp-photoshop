@@ -6,38 +6,18 @@ contributors:
 
 # Installation
 
-Once you download the UXP Developer Tool, you can install it by following these steps.
+You can install UXP Developer Tools by following these steps.
 
-## For macOS
 
-<InlineAlert variant="help" slots="text"/>
+You can install UXP Developer tool by following these steps.
 
-Note that the UXP Developer Tool supports macOS 10.13.6 or better. You'll also need rights to approve elevated permissions requests, or the Tool will not function correctly.
+* Download and install Creative Cloud from [here](https://creativecloud.adobe.com/apps/download/creative-cloud)
+* Launch Creative Cloud and Sign in with your Adobe account
+* Click on All apps section and scroll down to find UXP Developer Tools
 
-* Open the `.dmg` file you downloaded.
-* The disk image should open automatically.
-* Double-click `Install.app`
-* The installation process will proceed automatically.
-* When installation is complete, you'll be asked if you wish to **Close** the installer, or **Launch** the Developer Tool. Either option is acceptable.
+![Creative cloud](./creative-cloud.png)
 
-Now that the Developer Tool is installed, you can launch it from the Launchpad, Spotlight, or from the Applications folder. 
-
-## For Windows
-
-<InlineAlert variant="help" slots="text"/>
-
-Note that the UXP Developer Tool requires Windows 10 or better. You'll also need rights to approve elevated permissions requests, or the Tool will not function correctly.
-
-<InlineAlert variant="warning" slots="text"/>
-
-Your installation of Windows 10 must be in Developer mode. If it isn't, the Tool may not work correctly.
-
-* Extract the contents of the `.zip` file you downloaded into a temporary location.
-* Double-click the `Set-up.exe` file.
-* The installation process will proceed automatically.
-* When installation is complete, you'll be asked if you wish to **Close** the installer, or **Launch** the Developer Tool. Either option is acceptable.
-
-Now that the Developer Tool is installed, you can launch it from the Start Menu or Windows Search.
+* Click `Install` for the UXP Developer Tools App
 
 ## Launching for the first time
 
