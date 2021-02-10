@@ -19,20 +19,8 @@ The Adobe UXP Developer Tool allows you to manage plugins that you are developin
 **IMPORTANT**:
 The Adobe UXP Developer Tool requires elevated privileges in order to function correctly. If your administrator does not enable your ability to elevate to Administrator privileges, you'll be unable to use this tool.
 
-## Download
-
-<DiscoverBlock slots="link, text"/>
-
-[macOS Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.1.0.11/Adobe.UXP.Developer.Tool.Set-up.dmg)
-
-Version 1.1.0.11 for macOS 10.13.6 or better.
-
-
-<DiscoverBlock slots="link, text"/>
-
-[Windows Installer](https://github.com/AdobeDocs/uxp-photoshop/releases/download/1.1.0.11/Adobe.UXP.Developer.Tool.Set-up.zip)
-
-Version 1.1.0.11 for Windows 10 or better.
+## Installation
+The Adobe UXP Developer Tools can be installed from Adobe Creative Cloud application. For more details on installation steps refer [Installation](installation/). 
 
 ## Usage
 
