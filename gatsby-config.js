@@ -10,18 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
-const fs = require("fs");
-
-const globalNavFilePath = require.resolve(
-  "@adobe/gatsby-theme-aio/globalNav.json"
-);
-const globalNav = JSON.parse(fs.readFileSync(globalNavFilePath, "utf8"));
-
-globalNav.menus = [globalNav.menus[2]];
-
 module.exports = {
   siteMetadata: {
-    globalNav,
     /*versions: [
       {
         title: 'v4.1'
