@@ -1,0 +1,155 @@
+name: Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'Deploy to dev|prod'
+        required: true
+        default: 'dev'
+jobs:
+  set-state:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
+      deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
+      branch_short_ref: ${GITHUB_REF#refs/heads/}
+    steps:
+      - name: check PATH_PREFIX (string) is set
+        if: env.PATH_PREFIX == null
+        run: |
+          echo "::error::Please set the Gatsby PATH_PREFIX (string) value in Github Secrets"
+          exit 1
+        env:
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
+
+  echo-state:
+    needs: [set-state]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy to dev - ${{ needs.set-state.outputs.deploy_dev }}"
+      - run: echo "Deploy to prod - ${{ needs.set-state.outputs.deploy_prod }}"
+      - run: echo "Branch Short Ref - ${{ needs.set-state.outputs.branch_short_ref }}"
+
+  pre-build-dev:
+    needs: [set-state]
+    runs-on: ubuntu-latest
+    if: needs.set-state.outputs.deploy_dev == 'true'
+    steps:
+      - name: check dev azure connection string
+        if: env.AZURE_DEV_CONNECTION_STRING == null
+        run: |
+          echo "::error::Please set the Azure Blob Storage connection string as AZURE_DEV_CONNECTION_STRING in Github Secrets"
+          exit 1
+        env:
+          AZURE_DEV_CONNECTION_STRING: ${{ secrets.AZURE_DEV_CONNECTION_STRING }}
+
+  build-dev:
+    defaults:
+      run:
+        shell: bash
+    needs: [set-state, pre-build-dev]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+      - name: NPM Install
+        uses: bahmutov/npm-install@v1
+      - name: Gatsby Cache Folder
+        uses: actions/cache@v1
+        with:
+          key: gatsby-cache-folder
+          path: .cache
+      - name: Gatsby Public Folder
+        uses: actions/cache@v1
+        with:
+          key: gatsby-public-folder
+          path: public
+      - name: Build
+        run: |
+          npm run build:incremental
+          if [ "$PATH_PREFIX" = "%%none%%" ]; then
+            # rename since the folder doesn't exist
+            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
+          else
+            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          fi
+        env:
+          PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
+          GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
+          GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.event.repository.owner.login }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPO_BRANCH: ${{ needs.set-state.outputs.branch_short_ref }}
+      - name: Deploy
+        uses: tibor19/static-website-deploy@v1
+        with:
+          enabled-static-website: 'true'
+          folder: 'dist'
+          connection-string: ${{ secrets.AZURE_DEV_CONNECTION_STRING }}
+
+  pre-build-production:
+    needs: [set-state]
+    runs-on: ubuntu-latest
+    if: needs.set-state.outputs.deploy_prod == 'true'
+    steps:
+      - name: check prod azure connection string
+        if: env.AZURE_PROD_CONNECTION_STRING == null
+        run: |
+          echo "::error::Please set the Azure Blob Storage connection string as AZURE_PROD_CONNECTION_STRING in Github Secrets"
+          exit 1
+        env:
+          AZURE_PROD_CONNECTION_STRING: ${{ secrets.AZURE_PROD_CONNECTION_STRING }}
+
+  build-production:
+    defaults:
+      run:
+        shell: bash
+    needs: [set-state, pre-build-production]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      - name: NPM Install
+        uses: bahmutov/npm-install@v1
+      - name: Gatsby Cache Folder
+        uses: actions/cache@v1
+        with:
+          key: gatsby-cache-folder
+          path: .cache
+      - name: Gatsby Public Folder
+        uses: actions/cache@v1
+        with:
+          key: gatsby-public-folder
+          path: public
+      - name: Build
+        run: |
+          npm run build:incremental
+          if [ "$PATH_PREFIX" = "%%none%%" ]; then
+            # rename since the folder doesn't exist
+            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
+          else
+            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
+          fi
+        env:
+          PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
+          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
+          GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
+          GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.event.repository.owner.login }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPO_BRANCH: ${{ needs.set-state.outputs.branch_short_ref }}
+      - name: Deploy
+        uses: tibor19/static-website-deploy@v1
+        with:
+          enabled-static-website: 'true'
+          folder: 'dist'
+          connection-string: ${{ secrets.AZURE_PROD_CONNECTION_STRING }}

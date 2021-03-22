@@ -24,6 +24,7 @@
     "copy-uxp": "npm run copy-uxp-js && npm run copy-uxp-css && npm run copy-uxp-html && npm run copy-uxp-spectrum",
     "prebuild": "npm run copy-uxp",
     "build": "gatsby build",
+    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
