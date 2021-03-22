@@ -8,7 +8,7 @@
     "url": "https://github.com/AdobeDocs/uxp-photoshop"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^3.0.0",
+    "@adobe/gatsby-theme-aio": "^3.0.9",
     "gatsby": "^3.0.0",
     "uxp-documentation": "github:adobedocs/uxp"
   },
