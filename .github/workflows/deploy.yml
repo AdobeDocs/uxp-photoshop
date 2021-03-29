@@ -57,12 +57,12 @@ jobs:
       - name: NPM Install
         uses: bahmutov/npm-install@v1
       - name: Gatsby Cache Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           key: gatsby-cache-folder
           path: .cache
       - name: Gatsby Public Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           key: gatsby-public-folder
           path: public
@@ -119,12 +119,12 @@ jobs:
       - name: NPM Install
         uses: bahmutov/npm-install@v1
       - name: Gatsby Cache Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           key: gatsby-cache-folder
           path: .cache
       - name: Gatsby Public Folder
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           key: gatsby-public-folder
           path: public
