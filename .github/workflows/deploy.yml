@@ -12,15 +12,33 @@ jobs:
     outputs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
       deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
-      branch_short_ref: ${GITHUB_REF#refs/heads/}
+      path_prefix: ${{ steps.extract_path_prefix.outputs.path_prefix }}
+      branch_short_ref: ${{ steps.extract_branch.outputs.branch }}
     steps:
-      - name: check PATH_PREFIX (string) is set
-        if: env.PATH_PREFIX == null
-        run: |
-          echo "::error::Please set the Gatsby PATH_PREFIX (string) value in Github Secrets"
-          exit 1
-        env:
-          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
+      - name: Checkout
+        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+      - name: Extract path prefix
+        uses: actions/github-script@v3
+        id: extract_path_prefix
+        with:
+          script: |
+            const {pathPrefix} = require(`${process.env.GITHUB_WORKSPACE}/gatsby-config.js`)
+            if (!pathPrefix) {
+              core.setFailed('Missing path prefix')
+            }
+            else if (pathPrefix === '/') {
+              core.setFailed('Path prefix "/" is not allowed')
+            }
+            else if (!pathPrefix.startsWith('/') || !pathPrefix.endsWith('/')) {
+              core.setFailed('Path prefix should start and end with "/"')
+            }
+            core.setOutput('path_prefix', pathPrefix)
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
 
   echo-state:
     needs: [set-state]
@@ -28,7 +46,10 @@ jobs:
     steps:
       - run: echo "Deploy to dev - ${{ needs.set-state.outputs.deploy_dev }}"
       - run: echo "Deploy to prod - ${{ needs.set-state.outputs.deploy_prod }}"
-      - run: echo "Branch Short Ref - ${{ needs.set-state.outputs.branch_short_ref }}"
+      - run: echo "Repository org - ${{ github.event.repository.owner.login }}"
+      - run: echo "Repository name - ${{ github.event.repository.name }}"
+      - run: echo "Repository branch - ${{ needs.set-state.outputs.branch_short_ref }}"
+      - run: echo "Path prefix - ${{ needs.set-state.outputs.path_prefix }}"
 
   pre-build-dev:
     needs: [set-state]
@@ -36,12 +57,12 @@ jobs:
     if: needs.set-state.outputs.deploy_dev == 'true'
     steps:
       - name: check dev azure connection string
-        if: env.AZURE_DEV_CONNECTION_STRING == null
+        if: env.AIO_AZURE_DEV_CONNECTION_STRING == null
         run: |
-          echo "::error::Please set the Azure Blob Storage connection string as AZURE_DEV_CONNECTION_STRING in Github Secrets"
+          echo "::error::Please set the Azure Blob Storage connection string as AIO_AZURE_DEV_CONNECTION_STRING in Github Secrets"
           exit 1
         env:
-          AZURE_DEV_CONNECTION_STRING: ${{ secrets.AZURE_DEV_CONNECTION_STRING }}
+          AIO_AZURE_DEV_CONNECTION_STRING: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
 
   build-dev:
     defaults:
@@ -56,41 +77,35 @@ jobs:
           persist-credentials: false
       - name: NPM Install
         uses: bahmutov/npm-install@v1
-      - name: Gatsby Cache Folder
-        uses: actions/cache@v2
-        with:
-          key: gatsby-cache-folder
-          path: .cache
-      - name: Gatsby Public Folder
-        uses: actions/cache@v2
-        with:
-          key: gatsby-public-folder
-          path: public
       - name: Build
         run: |
-          npm run build:incremental
-          if [ "$PATH_PREFIX" = "%%none%%" ]; then
-            # rename since the folder doesn't exist
-            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
-          else
-            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
-            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
-          fi
+          npm run build
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
-          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
-          GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
-          GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
+          ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
+          ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
           REPO_BRANCH: ${{ needs.set-state.outputs.branch_short_ref }}
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
+          GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
       - name: Deploy
-        uses: tibor19/static-website-deploy@v1
+        uses: icaraps/static-website-deploy@master
         with:
           enabled-static-website: 'true'
-          folder: 'dist'
-          connection-string: ${{ secrets.AZURE_DEV_CONNECTION_STRING }}
+          source: 'public'
+          target: ${{ needs.set-state.outputs.path_prefix }}
+          connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
+          remove-existing-files: 'true'
+      - name: Purge Fastly Cache
+        uses: icaraps/gatsby-fastly-purge-action@master
+        with:
+          fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
+          fastly-url: '${{ secrets.AIO_FASTLY_DEV_URL}}${{ needs.set-state.outputs.path_prefix }}'
 
   pre-build-production:
     needs: [set-state]
@@ -98,12 +113,12 @@ jobs:
     if: needs.set-state.outputs.deploy_prod == 'true'
     steps:
       - name: check prod azure connection string
-        if: env.AZURE_PROD_CONNECTION_STRING == null
+        if: env.AIO_AZURE_PROD_CONNECTION_STRING == null
         run: |
-          echo "::error::Please set the Azure Blob Storage connection string as AZURE_PROD_CONNECTION_STRING in Github Secrets"
+          echo "::error::Please set the Azure Blob Storage connection string as AIO_AZURE_PROD_CONNECTION_STRING in Github Secrets"
           exit 1
         env:
-          AZURE_PROD_CONNECTION_STRING: ${{ secrets.AZURE_PROD_CONNECTION_STRING }}
+          AIO_AZURE_PROD_CONNECTION_STRING: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
 
   build-production:
     defaults:
@@ -113,43 +128,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
           persist-credentials: false
       - name: NPM Install
         uses: bahmutov/npm-install@v1
-      - name: Gatsby Cache Folder
-        uses: actions/cache@v2
-        with:
-          key: gatsby-cache-folder
-          path: .cache
-      - name: Gatsby Public Folder
-        uses: actions/cache@v2
-        with:
-          key: gatsby-public-folder
-          path: public
       - name: Build
         run: |
-          npm run build:incremental
-          if [ "$PATH_PREFIX" = "%%none%%" ]; then
-            # rename since the folder doesn't exist
-            mv $GITHUB_WORKSPACE/public $GITHUB_WORKSPACE/dist
-          else
-            mkdir -p $GITHUB_WORKSPACE/dist/$PATH_PREFIX
-            cp -a $GITHUB_WORKSPACE/public/. $GITHUB_WORKSPACE/dist/$PATH_PREFIX
-          fi
+          npm run build
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
-          PATH_PREFIX: ${{ secrets.PATH_PREFIX }}
-          GATSBY_LAUNCH_SRC: ${{ secrets.GATSBY_LAUNCH_SRC }}
-          GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.GATSBY_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
+          ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
+          ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
           REPO_BRANCH: ${{ needs.set-state.outputs.branch_short_ref }}
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
+          GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
       - name: Deploy
-        uses: tibor19/static-website-deploy@v1
+        uses: icaraps/static-website-deploy@master
         with:
           enabled-static-website: 'true'
-          folder: 'dist'
-          connection-string: ${{ secrets.AZURE_PROD_CONNECTION_STRING }}
+          source: 'public'
+          target: ${{ needs.set-state.outputs.path_prefix }}
+          connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
+          remove-existing-files: 'true'
+      - name: Purge Fastly Cache
+        uses: icaraps/gatsby-fastly-purge-action@master
+        with:
+          fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
+          fastly-url: '${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}'
+
