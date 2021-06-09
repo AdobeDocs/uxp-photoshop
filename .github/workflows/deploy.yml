@@ -93,6 +93,8 @@ jobs:
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
+          GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_DEV_SRC }}
+          GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_DEV_CONFIG }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -149,6 +151,8 @@ jobs:
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
+          GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_PROD_SRC }}
+          GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_PROD_CONFIG }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
