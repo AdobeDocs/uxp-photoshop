@@ -4,13 +4,11 @@ title: "Communication with C++ Plugin SDK"
 sidebar_label: "CSDK <-> UXP Messaging"
 ---
 
-# C++ to UXP Communication
-
 For developers with the intent to utilize the C++ based plugin SDK in conjunction with a UXP based plugin, the C++ SDK now includes a method to communicate with its UXP counterpart. On C++ side, we use the component's plugin name property in the plugin resource to identify plugins, and on UXP side, we use the `id` field from the `manifest.json` file.
 
 # PIUXPSuite
 
-The PIUXPSuite communicates with UXP plugins using PIActionDescriptors. Use the ActionDescriptor suite as defined in the SDK's `PIAction.h` whenever using this suite. To start with, grab [PIUXPSuite.h](../../assets/PIUXPSuite.h) and add it to your C++ project.
+The PIUXPSuite communicates with UXP plugins using PIActionDescriptors. Use the ActionDescriptor suite as defined in the SDK's `PIAction.h` whenever using this suite. To start with, grab [PIUXPSuite.h](./PIUXPSuite.h) and add it to your plugin project.
 
 The signatures in `PIUXPSuite.h` are as follows:
 

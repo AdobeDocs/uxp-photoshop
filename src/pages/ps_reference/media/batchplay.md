@@ -3,7 +3,6 @@ id: "batchplay"
 title: "BatchPlay Details"
 sidebar_label: "BatchPlay"
 ---
-# batchPlay
 
 At the heart of our APIs is `batchPlay`, a method that can send multiple actions into Photoshop event queue, and return you their results. `batchPlay` is the evolution of `executeAction` from ExtendScript. Where `executeAction` could only play one descriptor at a time, `batchPlay` accepts an array of action descriptors. 
 
@@ -45,7 +44,7 @@ If you have used `executeAction` in ExtendScript, you are probably familiar with
 
 #### Accepted action descriptors
 
-- One way of gaining insight about what Photoshop accepts as acceptable action descriptors would be to add a listener via the `app.eventNotifier` property, and then performing the action. Use the listener output to construct your action descriptors.
+We are still working out a way to help navigate the possible action descriptors better. For now, adding a listener via `app.eventNotifier` property gives good insight into figuring out what actions Photoshop accepts.
 
 ### BatchPlay options
 

@@ -6,76 +6,31 @@ sidebar_label: "Layer"
 
 # Layer
 
-A Photoshop Layer.
-Ultimately, this will have subclasses denoting all layer types.
+A Photoshop Layer
+Ultimately, will have subclasses denoting all layer types
 
-* **Layer**
+## Hierarchy
 
-  ↳ [GroupLayer](/ps_reference/classes/grouplayer/)
+- **default**
 
-## Accessors
+  ↳ [*GroupLayer*](/ps_reference/classes/GroupLayer/)
 
-###  bounds
+## Properties
 
-• **get bounds**(): *PsCommon.Bounds*
-
-Bounds of the layer, including the effects
-```javascript
-const { left, top, right, bottom } = layer.bounds
-```
-
-___
-
-###  boundsNoEffects
-
-• **get boundsNoEffects**(): *PsCommon.Bounds*
-
-Bounds of the layer excluding effects
-```javascript
-const { left, top, right, bottom } = layer.boundsNoEffects
-```
-
-___
-
-###  kind
-
-• **get kind**(): *LayerKind*
-
-Kind of the layer
-```javascript
-if (layer.kind === LayerKind.TEXT) {
-  ...
-}
-```
-
-___
-
-###  linkedLayers
-
-• **get linkedLayers**(): *[Layer](#)[]*
-
-Layers linked to this layer
-```javascript
-const layers = layerAA.linkedLayers
-layers.forEach((layer) => {
-  ...
-})
-```
-
-___
-
-###  parent
-
-• **get parent**(): *[GroupLayer](/ps_reference/classes/grouplayer/) | null*
-
-The group layer this layer is in,
-null if layer has no parent
+| Name | Type | Access | Description |
+| :------ | :------ | :------ | :------ |
+| bounds | Rectangle | Read-only | Bounds of the layer, including the effects &#x60;&#x60;&#x60;javascript const { left, top, right, bottom } &#x3D; layer.bounds &#x60;&#x60;&#x60; |
+| boundsNoEffects | Rectangle | Read-only | Bounds of the layer excluding effects &#x60;&#x60;&#x60;javascript const { left, top, right, bottom } &#x3D; layer.boundsNoEffects &#x60;&#x60;&#x60; |
+| id | *number* | Read-only | id of the layer &#x60;&#x60;&#x60;javascript const curID &#x3D; layer.id &#x60;&#x60;&#x60; |
+| kind | LayerKind | Read-only | Kind of the layer &#x60;&#x60;&#x60;javascript if (layer.kind &#x3D;&#x3D;&#x3D; LayerKind.TEXT) {   ... } &#x60;&#x60;&#x60; |
+| linkedLayers | [*Layer*](/ps_reference/classes/Layer/)[] | Read-only | Layers linked to this layer &#x60;&#x60;&#x60;javascript const layers &#x3D; layerAA.linkedLayers layers.forEach((layer) &#x3D;&gt; {   ... }) &#x60;&#x60;&#x60; |
+| parent | [*GroupLayer*](/ps_reference/classes/GroupLayer/) | Read-only | The group layer this layer is in, null if layer has no parent |
 
 ## Methods
 
-###  delete
+### delete
 
-▸ **delete**(): *void*
+*void*
 
 Deletes this layer from the document.
 ```javascript
@@ -83,13 +38,11 @@ const layers = document.layers
 layers && layers[0] && layers[0].delete()
 ```
 
-number of layer elements deleted
-
 ___
 
-###  duplicate
+### duplicate
 
-▸ **duplicate**(`targetDocument?`: [Document](/ps_reference/classes/document/), `name?`: string): *Promise‹[Layer](#)›*
+**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)\>
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
@@ -102,41 +55,37 @@ const exportDoc = psApp.documents[1]
 const exportedLayer = await layer.duplicate(exportDoc)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`targetDocument?` | [Document](/ps_reference/classes/document) | if specified, duplicate to a different document target.  |
-`name?` | string | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `targetDocument?` | [*default*](/ps_reference/classes/Document/) | if specified, duplicate to a different document target. |
+| `name?` | *string* | - |
 
 ___
 
-###  flip
+### flip
 
-▸ **flip**(`axis`: "horizontal" | "vertical" | "both"): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Flips the layer on one or both axis.
 
 ```javascript
 // flip horizontally
-await layer.flip("horizontal")
+await layer.flip.horizontal()
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`axis` | "horizontal" &#124; "vertical" &#124; "both" | Which axis (or both) to flip the layer on.             - "horizontal": flip layer on horizontal axis             - "vertical": flip layer on vertical axis             - "both": flip layer on both axes |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `axis` | ``"horizontal"`` \| ``"vertical"`` \| ``"both"`` | Which axis (or both) to flip the layer on.             - "horizontal": flip layer on horizontal axis             - "vertical": flip layer on vertical axis             - "both": flip layer on both axes |
 
 ___
 
-###  link
+### link
 
-▸ **link**(`targetLayer`: [Layer](#)): *[Layer](#)[]*
+[*default*](/ps_reference/classes/Layer/)[]
 
 Creates a link between this layer and the target layer if not already linked,
 and returns a list of layers linked to this layer.
@@ -148,19 +97,17 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 > "fillLayer"
 ```
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Description |
------- | ------ | ------ |
-`targetLayer` | [Layer](#) | layer to link with |
-
-array of linked layers
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `targetLayer` | [*default*](/ps_reference/classes/Layer/) | layer to link with |
 
 ___
 
-###  moveAbove
+### moveAbove
 
-▸ **moveAbove**(`target?`: LayerTypes): *void*
+*void*
 
 Moves the layer to a position above the target layer or group.
 If no target layer is defined, move this layer up one slot.
@@ -170,17 +117,17 @@ foregroundLayer.moveAbove(backingLayer)
 // backingLayer
 ```
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Description |
------- | ------ | ------ |
-`target?` | LayerTypes | layer or group that will proceed this layer.  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `target?` | LayerTypes | layer or group that will proceed this layer. |
 
 ___
 
-###  moveBelow
+### moveBelow
 
-▸ **moveBelow**(`target?`: LayerTypes): *void*
+*void*
 
 Moves the layer to a position below the target layer or group.
 If no target layer is defined, move this layer down one slot.
@@ -190,17 +137,17 @@ backingLayer.moveBelow(foregroundLayer)
 // backingLayer
 ```
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Description |
------- | ------ | ------ |
-`target?` | LayerTypes | layer or group that will preceed this layer.  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `target?` | LayerTypes | layer or group that will preceed this layer. |
 
 ___
 
-###  nudge
+### nudge
 
-▸ **nudge**(`horizontal`: number | PercentValue | PixelValue, `vertical`: number | PercentValue | PixelValue): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Moves the layer.
 ```javascript
@@ -208,24 +155,22 @@ Moves the layer.
 await layer.nudge(-200, 0)
 
 // move the layer one height down
-let percent = (v) => ({ _unit: "percentUnit", _value: v })
+let percent = ps.app.Unit.Percent
 await layer.nudge(percent(0), percent(100))
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`horizontal` | number &#124; PercentValue &#124; PixelValue | Numeric value to offset layer by in pixels or percent |
-`vertical` | number &#124; PercentValue &#124; PixelValue | Numeric value to offset layer by in pixels or percent  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `horizontal` | *number* \| PercentValue \| PixelValue | Numeric value to offset layer by in pixels or percent |
+| `vertical` | *number* \| PercentValue \| PixelValue | Numeric value to offset layer by in pixels or percent |
 
 ___
 
-###  rotate
+### rotate
 
-▸ **rotate**(`angle`: number | AngleValue, `options?`: object): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Rotates the layer.
 ```javascript
@@ -233,54 +178,39 @@ Rotates the layer.
 await layer.rotate(-90)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-▪ **angle**: *number | AngleValue*
-
-Angle to rotate the layer by in degrees
-
-▪`Optional`  **options**: *object*
-
-Name | Type | Description |
------- | ------ | ------ |
-`interpolation?` | InterpolationMethod | Interpolation method to use when resampling the image @default InterpolationMethod.bilinear  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `angle` | *number* \| AngleValue | Angle to rotate the layer by in degrees |
+| `options?` | *object* | - |
+| `options.interpolation?` | InterpolationMethod | Interpolation method to use when resampling the image |
 
 ___
 
-###  scale
+### scale
 
-▸ **scale**(`width`: number | PercentValue, `height`: number | PercentValue, `options?`: object): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Scales the layer.
 ```javascript
 await layer.scale(80, 80)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-▪ **width**: *number | PercentValue*
-
-Numeric percentage to scale layer horizontally
-
-▪ **height**: *number | PercentValue*
-
-Numeric percentage to scale layer vertically
-
-▪`Optional`  **options**: *object*
-
-Name | Type | Description |
------- | ------ | ------ |
-`interpolation?` | InterpolationMethod | Interpolation method to use when resampling the image @default InterpolationMethod.bilinear  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `width` | *number* \| PercentValue | Numeric percentage to scale layer horizontally |
+| `height` | *number* \| PercentValue | Numeric percentage to scale layer vertically |
+| `options?` | *object* | - |
+| `options.interpolation?` | InterpolationMethod | Interpolation method to use when resampling the image |
 
 ___
 
-###  skew
+### skew
 
-▸ **skew**(`angleH`: number | AngleValue, `angleV`: number | AngleValue, `options?`: object): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Applies a skew to the layer.
 ```javascript
@@ -288,34 +218,23 @@ Applies a skew to the layer.
 await layer.skew(-15, 0)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-▪ **angleH**: *number | AngleValue*
-
-Horizontal angle to skew by
-
-▪ **angleV**: *number | AngleValue*
-
-Vertical angle to skew by
-
-▪`Optional`  **options**: *object*
-
-Name | Type |
------- | ------ |
-`interpolation?` | InterpolationMethod |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `angleH` | *number* \| AngleValue | Horizontal angle to skew by |
+| `angleV` | *number* \| AngleValue | Vertical angle to skew by |
+| `options?` | *object* | - |
+| `options.interpolation?` | InterpolationMethod | - |
 
 ___
 
-###  unlink
+### unlink
 
-▸ **unlink**(): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Unlinks the layer from any existing links.
 ```javascript
 // detach layer from any existing links
 await layer.unlink()
 ```
-
-**`async`**
