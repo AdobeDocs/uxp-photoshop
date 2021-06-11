@@ -34,11 +34,11 @@ module.exports = [
 		},
 		{
 			"title": "Documents",
-			"path": "/ps_reference/classes/collections/documents/"
+			"path": "/ps_reference/classes/collections/Documents/"
 		},
 		{
 			"title": "HistoryStates",
-			"path": "/ps_reference/classes/collections/historystates/"
+			"path": "/ps_reference/classes/collections/HistoryStates/"
 		}
 	]
 },
