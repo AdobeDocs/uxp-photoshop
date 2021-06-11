@@ -18,7 +18,7 @@ module.exports = [
 		},
 		{
 			"title": "HistoryState",
-			"path": "/ps_reference/classes/historystate/"
+			"path": "/ps_reference/classes/HistoryState/"
 		},
 		{
 			"title": "GroupLayer",
