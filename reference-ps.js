@@ -6,39 +6,39 @@ module.exports = [
 	"pages": [
 		{
 			"title": "Action",
-			"path": "/ps_reference/classes/Action/"
+			"path": "/ps_reference/classes/action/"
 		},
 		{
 			"title": "ActionSet",
-			"path": "/ps_reference/classes/ActionSet/"
+			"path": "/ps_reference/classes/actionset/"
 		},
 		{
 			"title": "Document",
-			"path": "/ps_reference/classes/Document/"
+			"path": "/ps_reference/classes/document/"
 		},
 		{
 			"title": "HistoryState",
-			"path": "/ps_reference/classes/HistoryState/"
+			"path": "/ps_reference/classes/historystate/"
 		},
 		{
 			"title": "GroupLayer",
-			"path": "/ps_reference/classes/GroupLayer/"
+			"path": "/ps_reference/classes/grouplayer/"
 		},
 		{
 			"title": "Layer",
-			"path": "/ps_reference/classes/Layer/"
+			"path": "/ps_reference/classes/layer/"
 		},
 		{
 			"title": "Photoshop",
-			"path": "/ps_reference/classes/Photoshop/"
+			"path": "/ps_reference/classes/photoshop/"
 		},
 		{
 			"title": "Documents",
-			"path": "/ps_reference/classes/collections/Documents/"
+			"path": "/ps_reference/classes/collections/documents/"
 		},
 		{
 			"title": "HistoryStates",
-			"path": "/ps_reference/classes/collections/HistoryStates/"
+			"path": "/ps_reference/classes/collections/historystates/"
 		}
 	]
 },
