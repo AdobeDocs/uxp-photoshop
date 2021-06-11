@@ -6,15 +6,15 @@ module.exports = [
 	"pages": [
 		{
 			"title": "Action",
-			"path": "/ps_reference/classes/action/"
+			"path": "/ps_reference/classes/Action/"
 		},
 		{
 			"title": "ActionSet",
-			"path": "/ps_reference/classes/actionset/"
+			"path": "/ps_reference/classes/ActionSet/"
 		},
 		{
 			"title": "Document",
-			"path": "/ps_reference/classes/document/"
+			"path": "/ps_reference/classes/Document/"
 		},
 		{
 			"title": "HistoryState",
@@ -22,15 +22,15 @@ module.exports = [
 		},
 		{
 			"title": "GroupLayer",
-			"path": "/ps_reference/classes/grouplayer/"
+			"path": "/ps_reference/classes/GroupLayer/"
 		},
 		{
 			"title": "Layer",
-			"path": "/ps_reference/classes/layer/"
+			"path": "/ps_reference/classes/Layer/"
 		},
 		{
 			"title": "Photoshop",
-			"path": "/ps_reference/classes/photoshop/"
+			"path": "/ps_reference/classes/Photoshop/"
 		},
 		{
 			"title": "Documents",
@@ -91,6 +91,10 @@ module.exports = [
 			"path": "/ps_reference/media/batchplay/"
 		},
 		{
+			"title": "Modal Execution",
+			"path": "/ps_reference/media/executeAsModal/"
+		},
+		{
 			"title": "API Extensions",
 			"path": "/ps_reference/media/prototype/"
 		},
@@ -105,10 +109,6 @@ module.exports = [
 		{
 			"title": "Action Module",
 			"path": "/ps_reference/media/photoshopAction/"
-		},
-		{
-			"title": "Modal Execution",
-			"path": "/ps_reference/media/executeAsModal/"
 		}
 	]
 },

@@ -48,3 +48,6 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
 - Updated [document.createLayer](../classes/Document/#createlayer) and [document.createLayerGroup](../classes/Document/#createlayergroup)
 	- With respective Create options: [LayerCreateOptions](../objects/LayerCreateOptions/) and [GroupLayerCreateOptions](../objects/GroupLayerCreateOptions).
 	- Collection access updates for Layer and Layer-like items are planned for upcoming releases.
+
+#### Photoshop Core updates
+- [Execute as Modal](../media/executeAsModal/) allows you to create plugins that can be guaranteed exclusive control over Photoshop during execution. It further allows for clear user feedback when this is occuring, and allows plugins to `suspendHistory` and `resumeHistory`.
