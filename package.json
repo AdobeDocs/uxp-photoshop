@@ -25,7 +25,7 @@
     "copy-uxp-css": "rm -rf src/pages/uxp/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/uxp/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
     "copy-uxp": "npm run copy-uxp-js && npm run copy-uxp-css && npm run copy-uxp-html && npm run copy-uxp-spectrum",
     "prebuild": "npm run copy-uxp",
-    "build": "gatsby build",
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 gatsby build",
     "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
