@@ -66,9 +66,9 @@ Key path | Type | Description | Required
 `name`   | `string` | The name should be 3 - 45 characters. We recommend your plugin name matches the _project name_ you created when getting your plugin ID from the Adobe Developer Console. | Develop / Publish
 `version`| `string` | Version number of your plugin in `x.y.z` format. <br/>Version must be three segments and each version component must be between `0` and `99`. | Develop / Publish
 `main`   | `string` | Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. | Optional (defaults to `main.js`)
-`icons` | `array<IconDefinition>` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) <br/> PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. <br/> You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../../../distribution/packaging-your-plugin/) to learn more. | Publish
-| `host` | `array<HostDefinition>` | Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports.  | Develop / Publish
-`entryPoints` | `array<EntryPointDefinition>`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
+`icons` | `IconDefinition[]` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) <br/> PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. <br/> You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../../../distribution/packaging-your-plugin/) to learn more. | Publish
+| `host` | `HostDefinition\|HostDefinition[]` | Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports. <br/><br/> **Note:** An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace | Develop / Publish
+`entryPoints` | `EntryPointDefinition[]`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
 
 ## Icons
 
@@ -86,9 +86,9 @@ Key | Type | Description
 `theme` | `string[]` | Array of themes this icon supports. Photoshop supports `lightest`, `light`, `dark`, and `darkest`. If all themes are compatible with the icon, you can use `all`. (Default is `all`).
 `species` | `string[]` | Identifies the type of icon and where it would make sense to display it. The default is `generic`, meaning that Photoshop is free to use this icon anywhere.
 
-## Hosts
+## Host
 
-The `host` field is an _array_ of objects matching the `HostDefinition` format specified below. These entries allow your plugin to be ran on multiple apps such as Adobe XD or Photoshop. Optionally, the field can contain a HostDefinition instead of a full array if only one type of app is being supported.
+The `host` field is an _object_ matching the `HostDefinition` format specified below. This entry allows your plugin to specify which app your plugin can run on such as Adobe XD or Photoshop. During development, the field can contain an _array_ of HostDefinition's. This can be very convient during development of cross-compatible UXP plugins. However, during submission to the marketplace, only one HostDefinition is allowed.
 
 ### HostDefinition
 
