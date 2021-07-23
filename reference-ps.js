@@ -6,39 +6,47 @@ module.exports = [
 	"pages": [
 		{
 			"title": "Action",
-			"path": "/ps_reference/classes/Action/"
+			"path": "/ps_reference/classes/action/"
 		},
 		{
 			"title": "ActionSet",
-			"path": "/ps_reference/classes/ActionSet/"
+			"path": "/ps_reference/classes/actionset/"
 		},
 		{
 			"title": "Document",
-			"path": "/ps_reference/classes/Document/"
+			"path": "/ps_reference/classes/document/"
 		},
 		{
 			"title": "HistoryState",
-			"path": "/ps_reference/classes/HistoryState/"
+			"path": "/ps_reference/classes/historystate/"
 		},
 		{
 			"title": "Layer",
-			"path": "/ps_reference/classes/Layer/"
+			"path": "/ps_reference/classes/layer/"
 		},
 		{
 			"title": "Photoshop",
-			"path": "/ps_reference/classes/Photoshop/"
+			"path": "/ps_reference/classes/photoshop/"
 		},
 		{
 			"title": "Documents",
-			"path": "/ps_reference/classes/collections/Documents/"
+			"path": "/ps_reference/classes/collections/documents/"
 		},
 		{
 			"title": "HistoryStates",
-			"path": "/ps_reference/classes/collections/HistoryStates/"
+			"path": "/ps_reference/classes/collections/historystates/"
 		},
 		{
 			"title": "Layers",
-			"path": "/ps_reference/classes/collections/Layers/"
+			"path": "/ps_reference/classes/collections/layers/"
+		},
+		{
+			"title": "Bounds",
+			"path": "/ps_reference/classes/bounds/"
+		},
+		{
+			"title": "Tool",
+			"path": "/ps_reference/classes/tool/"
 		}
 	]
 },
@@ -48,44 +56,36 @@ module.exports = [
 	"header": true,
 	"pages": [
 		{
-			"title": "Bounds",
-			"path": "/ps_reference/objects/Bounds/"
-		},
-		{
 			"title": "DocumentCreateOptions",
-			"path": "/ps_reference/objects/DocumentCreateOptions/"
+			"path": "/ps_reference/objects/documentcreateoptions/"
 		},
 		{
 			"title": "GroupLayerCreateOptions",
-			"path": "/ps_reference/objects/GroupLayerCreateOptions/"
+			"path": "/ps_reference/objects/grouplayercreateoptions/"
 		},
 		{
 			"title": "LayerCreateOptions",
-			"path": "/ps_reference/objects/LayerCreateOptions/"
+			"path": "/ps_reference/objects/layercreateoptions/"
 		},
 		{
 			"title": "BMPSaveOptions",
-			"path": "/ps_reference/objects/BMPSaveOptions/"
+			"path": "/ps_reference/objects/bmpsaveoptions/"
 		},
 		{
 			"title": "GIFSaveOptions",
-			"path": "/ps_reference/objects/GIFSaveOptions/"
+			"path": "/ps_reference/objects/gifsaveoptions/"
 		},
 		{
 			"title": "JPEGSaveOptions",
-			"path": "/ps_reference/objects/JPEGSaveOptions/"
+			"path": "/ps_reference/objects/jpegsaveoptions/"
 		},
 		{
 			"title": "PNGSaveOptions",
-			"path": "/ps_reference/objects/PNGSaveOptions/"
+			"path": "/ps_reference/objects/pngsaveoptions/"
 		},
 		{
 			"title": "PhotoshopSaveOptions",
-			"path": "/ps_reference/objects/PhotoshopSaveOptions/"
-		},
-		{
-			"title": "Tool",
-			"path": "/ps_reference/objects/Tool/"
+			"path": "/ps_reference/objects/photoshopsaveoptions/"
 		}
 	]
 },
