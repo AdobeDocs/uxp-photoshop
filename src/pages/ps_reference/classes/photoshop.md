@@ -2,9 +2,23 @@
 id: "photoshop"
 title: "Photoshop"
 sidebar_label: "Photoshop"
+repo: "uxp-photoshop"
+index: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
 
-# Photoshop App
+# Photoshop
+
 The top level application object, root of our DOM
 
 ```
@@ -13,195 +27,94 @@ const app = require('photoshop').app
 
 From here, you can access open documents, tools, UI elements and run commands or menu items.
 
-## Accessors
+## Properties
 
-###  actionTree
-
-• **get actionTree**(): *[ActionSet](/ps_reference/classes/actionset/)[]*
-
-Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions
-
-___
-
-###  activeDocument
-
-• **get activeDocument**(): *[Document](/ps_reference/classes/document/)*
-
-The current active document
-
-```javascript
-const doc = Photoshop.activeDocument;
-```
-
-• **set activeDocument**(`doc`: [Document](/ps_reference/classes/document/)): *void*
-
-Set the current active document to be given one
-
-```javascript
-const doc = Photoshop.activeDocument;
-```
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`doc` | [Document](/ps_reference/classes/document/) |
-
-___
-
-###  backgroundColor
-
-• **get backgroundColor**(): *Color*
-
-The default background color and color style for documents.
-
-___
-
-###  currentTool
-
-• **get currentTool**(): *Tool*
-
-Current selected tool. For now, the Tool class is an object with
-only an `id` field. In the future, we aim to provide tools with their own classes
-
-___
-
-###  documents
-
-• **get documents**(): *[Document](/ps_reference/classes/document/)[]*
-
-List of currently open documents
-
-```javascript
-const documents = app.documents;
-```
-
-___
-
-###  eventNotifier
-
-• **set eventNotifier**(`handler`: function): *void*
-
-_Dev environments only._
-
-A callback for event notifications in Photoshop. This will cause your plugin to get a notification
-on every event the user is doing, so it may slow things down. But it will be helpful to figure out
-different descriptors
-
-```javascript
-app.eventNotifier = (event, descriptor) => {
-   console.log(event, JSON.stringify(descriptor, null, ' '));
-}
-```
-
-> This is temporary while we are in Alpha, we are working on a more structured notification system
-> This setter will not function outside developer mode
-
-To register listeners to specific events in production, follow [Event Listeners](/ps_reference/media/advanced/event-listener/) in the Advanced section.
-
-**Parameters:**
-
-▪ **handler**: *function*
-
-▸ (`event`: string, `descriptor`: object): *void*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`event` | string |
-`descriptor` | object |
-
-___
-
-###  foregroundColor
-
-• **get foregroundColor**(): *Color*
-
-The default foreground color (used to paint, fill, and stroke selections)
+| Name | Type | Access | Description |
+| :------ | :------ | :------ | :------ |
+| actionTree | [*ActionSet*](/ps_reference/classes/ActionSet/)[] | Read-only | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions |
+| activeDocument | [*Document*](/ps_reference/classes/Document/) | Read-write | The current active document |
+| backgroundColor | ColorDescType | Read-only | The default background color and color style for documents. |
+| currentTool | [*Tool*](/ps_reference/objects/Tool/) | Read-only | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes |
+| documents | [*Documents*](/ps_reference/classes/collections/Documents/) | Read-only | A list of the documents currently open |
+| eventNotifier | *void* | Write-only | A callback for event notifications in Photoshop. This will cause your plugin to get a notification on every event the user is doing, so it may slow things down. But it will be helpful to figure out different descriptors  &#x60;&#x60;&#x60;javascript app.eventNotifier &#x3D; (event, descriptor) &#x3D;&gt; {    console.log(event, JSON.stringify(descriptor, null, &#x27; &#x27;)); } &#x60;&#x60;&#x60;  &gt; This is temporary while we are in Alpha, we are working on a more structured notification system &gt; This setter will not function outside developer mode |
+| foregroundColor | ColorDescType | Read-only | The default foreground color (used to paint, fill, and stroke selections) |
 
 ## Methods
 
-###  batchPlay
+### batchPlay
 
-▸ **batchPlay**(`commands`: any, `options`: any): *Promise‹Descriptor[]›*
+*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/ActionDescriptor/)[]\>
 
-At the heart of all our APIs is [batchPlay](/ps_reference/media/advanced/batchplay/). It is the evolution of executeAction. It accepts ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially without updating the UI. This API is subject to change and may be accessible in other ways in the future. Learn more in our [batchPlay reference](/ps_reference/media/advanced/batchplay/).
+At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
+ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially
+without updating the UI. This API is subject to change and may be accessible in other ways in the future.
 
-**Parameters:**
+#### Parameters
 
-Name | Type |
------- | ------ |
-`commands` | any |
-`options` | any |
+| Name | Type |
+| :------ | :------ |
+| `commands` | *any* |
+| `options` | *any* |
 
 ___
 
-###  bringToFront
+### bringToFront
 
-▸ **bringToFront**(): *void*
+*void*
 
 Brings application to focus, useful when your script ends, or requires an input
 
 ___
 
-###  createDocument
+### createDocument
 
-▸ **createDocument**(`options?`: DocumentCreateOptions): *Promise‹[Document](/ps_reference/classes/document/) | null›*
+**async** : *Promise*<[*default*](/ps_reference/classes/Document/)\>
 
-Create a new document. See @DocumentCreateOptions.
+Create a new document.
 
-Documents not created from presets must specify width, height, resolution, (color) mode, and fill.
+No options will create a document of 7 x 5 inches at 300 pixels per inch.
+This is the same as the "Default Photoshop Size" preset.
 
-```javascript
-let newDoc1 = app.createDocument(); // creates a 2100px * 1500px document
-let newDoc2 = app.createDocument({width: 800, height: 600, resolution: 300, mode: "RGBColorMode", fill: "transparent"});
-let newDoc3 = app.createDocument({preset: "My Default Size 1"});
-```
+An object with a 'preset' string parameter can be used to specify any of
+the other presets that come installed with Photoshop or created by users.
 
-**Parameters:**
+An object with one or more parameters can also be supplied. Any parameter
+missing will be set to the default of: width 2100 pixels, height 1500 pixels,
+resolution 300 pixels per inch, mode: @RGBColorMode and a fill of white with
+no transparency.
 
-Name | Type |
------- | ------ |
-`options?` | DocumentCreateOptions |
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/DocumentCreateOptions/) | @DocumentCreateOptions |
 
 ___
 
-###  open
+### open
 
-▸ **open**(`entry?`: File): *Promise‹[Document](/ps_reference/classes/document/)›*
+**async** : *Promise*<[*default*](/ps_reference/classes/Document/)\>
 
 Opens the specified document and returns it's model
 
 > (0.4.0) Please note that this API now requires you to provide a UXPFileEntry
 
-**`async`** 
+#### Parameters
 
-```javascript
-// Open a file given entry
-let entry = await require('uxp').storage.localFileSystem.getFileForOpening()
-const document = await app.open(entry);
-
-// Show open file dialog
-const document = await app.open();
-```
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`entry?` | File |
+| Name | Type |
+| :------ | :------ |
+| `entry?` | File |
 
 ___
 
-###  showAlert
+### showAlert
 
-▸ **showAlert**(`message`: string): *Promise‹void›*
+*Promise*<void\>
 
 Shows an alert in Photoshop with the given message
 
-**Parameters:**
+#### Parameters
 
-Name | Type |
------- | ------ |
-`message` | string |
+| Name | Type |
+| :------ | :------ |
+| `message` | *string* |
