@@ -6,47 +6,39 @@ module.exports = [
 	"pages": [
 		{
 			"title": "Action",
-			"path": "/ps_reference/classes/action/"
+			"path": "/ps_reference/classes/Action/"
 		},
 		{
 			"title": "ActionSet",
-			"path": "/ps_reference/classes/actionset/"
+			"path": "/ps_reference/classes/ActionSet/"
 		},
 		{
 			"title": "Document",
-			"path": "/ps_reference/classes/document/"
+			"path": "/ps_reference/classes/Document/"
 		},
 		{
 			"title": "HistoryState",
-			"path": "/ps_reference/classes/historystate/"
+			"path": "/ps_reference/classes/HistoryState/"
 		},
 		{
 			"title": "Layer",
-			"path": "/ps_reference/classes/layer/"
+			"path": "/ps_reference/classes/Layer/"
 		},
 		{
 			"title": "Photoshop",
-			"path": "/ps_reference/classes/photoshop/"
+			"path": "/ps_reference/classes/Photoshop/"
 		},
 		{
 			"title": "Documents",
-			"path": "/ps_reference/classes/collections/documents/"
+			"path": "/ps_reference/classes/collections/Documents/"
 		},
 		{
 			"title": "HistoryStates",
-			"path": "/ps_reference/classes/collections/historystates/"
+			"path": "/ps_reference/classes/collections/HistoryStates/"
 		},
 		{
 			"title": "Layers",
-			"path": "/ps_reference/classes/collections/layers/"
-		},
-		{
-			"title": "Bounds",
-			"path": "/ps_reference/classes/bounds/"
-		},
-		{
-			"title": "Tool",
-			"path": "/ps_reference/classes/tool/"
+			"path": "/ps_reference/classes/collections/Layers/"
 		}
 	]
 },
@@ -55,6 +47,10 @@ module.exports = [
 	"path": "/ps_reference/objects/",
 	"header": true,
 	"pages": [
+		{
+			"title": "Bounds",
+			"path": "/ps_reference/objects/Bounds/"
+		},
 		{
 			"title": "DocumentCreateOptions",
 			"path": "/ps_reference/objects/DocumentCreateOptions/"
@@ -86,6 +82,10 @@ module.exports = [
 		{
 			"title": "PhotoshopSaveOptions",
 			"path": "/ps_reference/objects/PhotoshopSaveOptions/"
+		},
+		{
+			"title": "Tool",
+			"path": "/ps_reference/objects/Tool/"
 		}
 	]
 },
