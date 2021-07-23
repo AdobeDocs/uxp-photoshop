@@ -57,35 +57,35 @@ module.exports = [
 	"pages": [
 		{
 			"title": "DocumentCreateOptions",
-			"path": "/ps_reference/objects/documentcreateoptions/"
+			"path": "/ps_reference/objects/DocumentCreateOptions/"
 		},
 		{
 			"title": "GroupLayerCreateOptions",
-			"path": "/ps_reference/objects/grouplayercreateoptions/"
+			"path": "/ps_reference/objects/GroupLayerCreateOptions/"
 		},
 		{
 			"title": "LayerCreateOptions",
-			"path": "/ps_reference/objects/layercreateoptions/"
+			"path": "/ps_reference/objects/LayerCreateOptions/"
 		},
 		{
 			"title": "BMPSaveOptions",
-			"path": "/ps_reference/objects/bmpsaveoptions/"
+			"path": "/ps_reference/objects/BMPSaveOptions/"
 		},
 		{
 			"title": "GIFSaveOptions",
-			"path": "/ps_reference/objects/gifsaveoptions/"
+			"path": "/ps_reference/objects/GIFSaveOptions/"
 		},
 		{
 			"title": "JPEGSaveOptions",
-			"path": "/ps_reference/objects/jpegsaveoptions/"
+			"path": "/ps_reference/objects/JPEGSaveOptions/"
 		},
 		{
 			"title": "PNGSaveOptions",
-			"path": "/ps_reference/objects/pngsaveoptions/"
+			"path": "/ps_reference/objects/PNGSaveOptions/"
 		},
 		{
 			"title": "PhotoshopSaveOptions",
-			"path": "/ps_reference/objects/photoshopsaveoptions/"
+			"path": "/ps_reference/objects/PhotoshopSaveOptions/"
 		}
 	]
 },
