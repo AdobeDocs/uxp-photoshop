@@ -1,18 +1,18 @@
 {
   "private": true,
   "name": "uxp-photoshop-documentation",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/AdobeDocs/uxp-photoshop"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^2.14.0",
-    "gatsby": "^2.24.65",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "uxp-documentation": "github:adobedocs/uxp"
+    "@adobe/gatsby-theme-aio": "^3.14.3",
+    "gatsby": "^3.6.0",
+    "uxp-documentation": "github:adobedocs/uxp",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
@@ -25,11 +25,12 @@
     "copy-uxp-css": "rm -rf src/pages/uxp/reference-css && cp -r node_modules/uxp-documentation/_transclusions/photoshop/uxp/reference-css src/pages/uxp/ && cp node_modules/uxp-documentation/reference-css.js reference-css.js",
     "copy-uxp": "npm run copy-uxp-js && npm run copy-uxp-css && npm run copy-uxp-html && npm run copy-uxp-spectrum",
     "prebuild": "npm run copy-uxp",
-    "build": "gatsby build",
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 gatsby build",
+    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "devDependencies": {
-    "eslint": "^7.17.0"
+    "eslint": "^7.20.0"
   }
 }
