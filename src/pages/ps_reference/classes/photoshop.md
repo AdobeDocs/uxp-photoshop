@@ -3,7 +3,7 @@ id: "photoshop"
 title: "Photoshop"
 sidebar_label: "Photoshop"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -31,11 +31,11 @@ From here, you can access open documents, tools, UI elements and run commands or
 
 | Name | Type | Access | Description |
 | :------ | :------ | :------ | :------ |
-| actionTree | [*ActionSet*](/ps_reference/classes/ActionSet/)[] | Read-only | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions |
-| activeDocument | [*Document*](/ps_reference/classes/Document/) | Read-write | The current active document |
+| actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | Read-only | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions |
+| activeDocument | [*Document*](/ps_reference/classes/document/) | Read-write | The current active document |
 | backgroundColor | ColorDescType | Read-only | The default background color and color style for documents. |
-| currentTool | [*Tool*](/ps_reference/objects/Tool/) | Read-only | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes |
-| documents | [*Documents*](/ps_reference/classes/collections/Documents/) | Read-only | A list of the documents currently open |
+| currentTool | [*Tool*](/ps_reference/objects/tool/) | Read-only | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes |
+| documents | [*Documents*](/ps_reference/classes/collections/documents/) | Read-only | A list of the documents currently open |
 | eventNotifier | *void* | Write-only | A callback for event notifications in Photoshop. This will cause your plugin to get a notification on every event the user is doing, so it may slow things down. But it will be helpful to figure out different descriptors  &#x60;&#x60;&#x60;javascript app.eventNotifier &#x3D; (event, descriptor) &#x3D;&gt; {    console.log(event, JSON.stringify(descriptor, null, &#x27; &#x27;)); } &#x60;&#x60;&#x60;  &gt; This is temporary while we are in Alpha, we are working on a more structured notification system &gt; This setter will not function outside developer mode |
 | foregroundColor | ColorDescType | Read-only | The default foreground color (used to paint, fill, and stroke selections) |
 
@@ -43,7 +43,7 @@ From here, you can access open documents, tools, UI elements and run commands or
 
 ### batchPlay
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/ActionDescriptor/)[]\>
+*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
 
 At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
 ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially
@@ -68,7 +68,7 @@ ___
 
 ### createDocument
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Document/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/document/)\>
 
 Create a new document.
 
@@ -87,13 +87,13 @@ no transparency.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/DocumentCreateOptions/) | @DocumentCreateOptions |
+| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 
 ### open
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Document/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/document/)\>
 
 Opens the specified document and returns it's model
 

@@ -3,7 +3,7 @@ id: "layers"
 title: "Layers"
 sidebar_label: "Layers"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,7 +21,7 @@ keywords: "
 
 ## Hierarchy
 
-- *Array*<[*default*](/ps_reference/classes/Layer/)\>
+- *Array*<[*default*](/ps_reference/classes/layer/)\>
 
   ↳ **default**
 
@@ -29,14 +29,14 @@ keywords: "
 
 | Name | Type | Access | Description |
 | :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [Layer](/ps_reference/modules/Layer/) elements in this collection |
+| length | *number* | Read-only | Number of [Layer](/ps_reference/modules/layer/) elements in this collection |
 | typename | *string* | Read-only | The name for this object collection: Layers |
 
 ## Methods
 
 ### add
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/layer/)\>
 
 Create a new layer.
 
@@ -44,7 +44,7 @@ ___
 
 ### getByName
 
-[*default*](/ps_reference/classes/Layer/)
+[*default*](/ps_reference/classes/layer/)
 
 Find the first layer with the matching name
 

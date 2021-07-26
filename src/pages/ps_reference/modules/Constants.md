@@ -3,7 +3,7 @@ id: "constants"
 title: "Constants"
 sidebar_label: "Constants"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation

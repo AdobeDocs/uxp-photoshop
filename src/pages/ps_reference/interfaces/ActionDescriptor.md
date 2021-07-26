@@ -3,7 +3,7 @@ id: "actiondescriptor"
 title: "ActionDescriptor"
 sidebar_label: "ActionDescriptor"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation

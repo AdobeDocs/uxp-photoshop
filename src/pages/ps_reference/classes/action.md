@@ -3,7 +3,7 @@ id: "action"
 title: "Action"
 sidebar_label: "Action"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -29,7 +29,7 @@ Actions are series of commands that can be recorded by user, and can be replayed
 | id | *number* | Read-only | The internal ID of this action  Can be used for batchPlay calls, used internally |
 | index | *number* | Read-only | 0-index of this action in it&#x27;s parent action set |
 | name | *string* | Read-write | The name of this action, displayed in the panel Cannot be changed |
-| parent | [*ActionSet*](/ps_reference/classes/ActionSet/) | Read-only | The action set this action belongs to |
+| parent | [*ActionSet*](/ps_reference/classes/actionset/) | Read-only | The action set this action belongs to |
 
 ## Methods
 
@@ -43,7 +43,7 @@ ___
 
 ### duplicate
 
-[*Action*](/ps_reference/classes/Action/)
+[*Action*](/ps_reference/classes/action/)
 
 Creates a copy of this action, placing it in the same action set
 

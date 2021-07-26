@@ -3,7 +3,7 @@ id: "grouplayercreateoptions"
 title: "GroupLayerCreateOptions"
 sidebar_label: "GroupLayerCreateOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,10 +21,10 @@ keywords: "
 
 | Name | Type | Default | Range | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| color | [*LabelColors*](/ps_reference/modules/Constants/#labelcolors) | none
+| color | [*LabelColors*](/ps_reference/modules/constants/#labelcolors) | none
  | - | Label color of the newly created layer group |
-| fromLayers | [*Layer*](/ps_reference/classes/Layer/) \| [*Layer*](/ps_reference/classes/Layer/)[] | - | - | Layer(s) to populate the newly created group |
-| mode | [*BlendMode*](/ps_reference/modules/Constants/#blendmode) | normal
+| fromLayers | [*Layer*](/ps_reference/classes/layer/) \| [*Layer*](/ps_reference/classes/layer/)[] | - | - | Layer(s) to populate the newly created group |
+| mode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | normal
  | - | Blend mode of the newly created layer group |
 | name | *string* | - | - | Name of the newly created layer group |
 | opacity | *number* | 100

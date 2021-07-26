@@ -3,7 +3,7 @@ id: "historystates"
 title: "HistoryStates"
 sidebar_label: "HistoryStates"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,4 +21,4 @@ keywords: "
 
 ## Classes
 
-- [default](/ps_reference/classes/collections/HistoryStates/)
+- [default](/ps_reference/classes/collections/historystates/)

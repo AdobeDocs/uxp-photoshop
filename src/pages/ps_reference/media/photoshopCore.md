@@ -3,7 +3,7 @@ id: "photoshopcore"
 title: "photoshopCore"
 sidebar_label: "photoshopCore"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -97,8 +97,8 @@ See [Modal Execution](../executeAsModal) for details
 
 | Name | Type |
 | :------ | :------ |
-| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/interfaces/ExecutionContext/)) => *Promise*<any\> |
-| `options` | [*ExecuteAsModalOptions*](/ps_reference/interfaces/ExecuteAsModalOptions/) |
+| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/interfaces/executioncontext/)) => *Promise*<any\> |
+| `options` | [*ExecuteAsModalOptions*](/ps_reference/interfaces/executeasmodaloptions/) |
 
 ___
 

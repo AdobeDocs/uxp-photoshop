@@ -3,7 +3,7 @@ id: "bounds"
 title: "Bounds"
 sidebar_label: "Bounds"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,4 +21,4 @@ keywords: "
 
 ## Classes
 
-- [Bounds](/ps_reference/objects/Bounds/)
+- [Bounds](/ps_reference/objects/bounds/)

@@ -3,7 +3,7 @@ id: "photoshopaction"
 title: "photoshopAction"
 sidebar_label: "photoshopAction"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -50,7 +50,7 @@ ___
 
 ### batchPlay
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/ActionDescriptor/)[]\>
+*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -64,8 +64,8 @@ await PhotoshopAction.batchPlay(commands)
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/ActionDescriptor/)[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/BatchPlayCommandOptions/) |
+| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
+| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
 
 ___
 

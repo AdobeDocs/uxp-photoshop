@@ -3,7 +3,7 @@ id: "executioncontext"
 title: "ExecutionContext"
 sidebar_label: "ExecutionContext"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -31,8 +31,8 @@ Use the methods in here to control Photoshop state
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `resumeHistory` | (`suspensionID`: *number*) => *void* | Call to resume history on a target document |
-| `suspendHistory` | (`info`: { `historyStateInfo`: { `name`: *string* ; `target`: [{ `_id`: *number* ; `_ref`: ``"document"``  }]  }  }) => *Promise*<number\> | Call to suspend history on a target document, returns the suspension ID which can be used for resumeHistory |
+| `resumeHistory` | *void* | Call to resume history on a target document |
+| `suspendHistory` | *void* | Call to suspend history on a target document |
 
 ___
 

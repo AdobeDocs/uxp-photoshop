@@ -3,7 +3,7 @@ id: "tool"
 title: "Tool"
 sidebar_label: "Tool"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,4 +21,4 @@ keywords: "
 
 ## Classes
 
-- [Tool](/ps_reference/objects/Tool/)
+- [Tool](/ps_reference/objects/tool/)

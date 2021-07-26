@@ -3,7 +3,7 @@ id: "photoshopsaveoptions"
 title: "PhotoshopSaveOptions"
 sidebar_label: "PhotoshopSaveOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation

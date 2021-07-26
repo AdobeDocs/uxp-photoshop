@@ -3,7 +3,7 @@ id: "document"
 title: "Document"
 sidebar_label: "Document"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -61,26 +61,26 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 | Name | Type |
 | :------ | :------ |
-| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/BMPSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/GIFSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/JPEGSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/PNGSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/PhotoshopSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/PhotoshopSaveOptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/jpegsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/pngsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 
 ## Properties
 
 | Name | Type | Access | Description |
 | :------ | :------ | :------ | :------ |
-| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/HistoryState/) | Read-write | The history state that history brush tool will use as its source |
-| activeHistoryState | [*HistoryState*](/ps_reference/classes/HistoryState/) | Read-write | Currently active history state of the document |
-| activeLayers | [*Layers*](/ps_reference/classes/collections/Layers/) | Read-only | The selected layers in the document |
-| artboards | [*Layers*](/ps_reference/classes/collections/Layers/) | Read-only | The artboards in the document |
-| backgroundLayer | [*Layer*](/ps_reference/classes/Layer/) | Read-only | Background layer, if it exists |
+| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | The history state that history brush tool will use as its source |
+| activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | Currently active history state of the document |
+| activeLayers | [*Layers*](/ps_reference/classes/collections/layers/) | Read-only | The selected layers in the document |
+| artboards | [*Layers*](/ps_reference/classes/collections/layers/) | Read-only | The artboards in the document |
+| backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | Read-only | Background layer, if it exists |
 | height | *number* | Read-only | Document&#x27;s height in pixels |
-| historyStates | [*HistoryStates*](/ps_reference/classes/collections/HistoryStates/) | Read-only | History states of the document  **&#x60;readonly&#x60;** |
+| historyStates | [*HistoryStates*](/ps_reference/classes/collections/historystates/) | Read-only | History states of the document  **&#x60;readonly&#x60;** |
 | id | *number* | Read-only | The internal ID of this document, valid as long as this document is open Can be used for batchPlay calls to refer to this document, used internally |
-| layers | [*Layers*](/ps_reference/classes/collections/Layers/) | Read-only | All the layers in the document at the top level |
+| layers | [*Layers*](/ps_reference/classes/collections/layers/) | Read-only | All the layers in the document at the top level |
 | path | *string* | Read-only | Full file system path to this document, or the identifier if it is a cloud document |
 | pixelAspectRatio | *number* | Read-write | The (custom) pixel aspect ratio to use |
 | resolution | *number* | Read-only | Document&#x27;s resolution (in pixels per inch) |
@@ -100,7 +100,7 @@ unsaved changes if specified
 
 | Name | Type |
 | :------ | :------ |
-| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/Constants/#saveoptions) |
+| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) |
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 ### createLayer
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/layer/)\>
 
 Create a layer. See @CreateOptions
 ```javascript
@@ -124,13 +124,13 @@ const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "col
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*LayerCreateOptions*](/ps_reference/objects/LayerCreateOptions/) |
+| `options?` | [*LayerCreateOptions*](/ps_reference/objects/layercreateoptions/) |
 
 ___
 
 ### createLayerGroup
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/layer/)\>
 
 Create a layer group. See @CreateOptions
 ```javascript
@@ -143,7 +143,7 @@ const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [l
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/GroupLayerCreateOptions/) |
+| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/grouplayercreateoptions/) |
 
 ___
 
@@ -157,14 +157,14 @@ Crops the document to given bounds
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `bounds` | [*Bounds*](/ps_reference/objects/Bounds/) | - |
+| `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - |
 | `angle` | *number* | 0 |
 
 ___
 
 ### duplicateLayers
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)[]\>
+**async** : *Promise*<[*default*](/ps_reference/classes/layer/)[]\>
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
@@ -182,8 +182,8 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*default*](/ps_reference/classes/Layer/)[] |  |
-| `targetDocument?` | [*default*](/ps_reference/classes/Document/) | if specified, duplicate to a different document target. |
+| `layers` | [*default*](/ps_reference/classes/layer/)[] |  |
+| `targetDocument?` | [*default*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 ### groupLayers
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Layer/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/layer/)\>
 
 Create a layer group from existing layers.
 ```javascript
@@ -209,13 +209,13 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 
 | Name | Type |
 | :------ | :------ |
-| `layers` | [*default*](/ps_reference/classes/Layer/)[] |
+| `layers` | [*default*](/ps_reference/classes/layer/)[] |
 
 ___
 
 ### linkLayers
 
-[*default*](/ps_reference/classes/Layer/)[]
+[*default*](/ps_reference/classes/layer/)[]
 
 Links layers together if possible, and returns a list of linked layers.
 
@@ -223,7 +223,7 @@ Links layers together if possible, and returns a list of linked layers.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*default*](/ps_reference/classes/Layer/)[] | array of layers to link together |
+| `layers` | [*default*](/ps_reference/classes/layer/)[] | array of layers to link together |
 
 ___
 
@@ -240,7 +240,7 @@ ___
 **async** : *Promise*<void\>
 
 Changes the size of the canvas, but does not change image size
-To change the image size, see [resizeImage](/ps_reference/classes/Document/#resizeimage)
+To change the image size, see [resizeImage](/ps_reference/classes/document/#resizeimage)
 
 ```javascript
 // grow the canvas by 400px
@@ -255,7 +255,7 @@ await document.resizeCanvas(width + 400, height + 400)
 | :------ | :------ | :------ |
 | `width` | *number* | Numeric value of new width in pixels |
 | `height` | *number* | Numeric value of new height in pixels |
-| `anchor?` | [*AnchorPosition*](/ps_reference/modules/Constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
+| `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
 
 ___
 
@@ -276,7 +276,7 @@ await document.resizeImage(800, 600)
 | `width` | *number* | Numeric value of new width in pixels |
 | `height` | *number* | Numeric value of new height in pixels |
 | `resolution?` | *number* | Image resolution in pixels per inch (ppi) |
-| `resampleMethod?` | [*ResampleMethod*](/ps_reference/modules/Constants/#resamplemethod) | Method used during image interpolation. |
+| `resampleMethod?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Method used during image interpolation. |
 
 ___
 

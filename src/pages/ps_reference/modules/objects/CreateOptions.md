@@ -3,7 +3,7 @@ id: "createoptions"
 title: "CreateOptions"
 sidebar_label: "CreateOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,6 +21,6 @@ keywords: "
 
 ## Classes
 
-- [DocumentCreateOptions](/ps_reference/objects/DocumentCreateOptions/)
-- [GroupLayerCreateOptions](/ps_reference/objects/GroupLayerCreateOptions/)
-- [LayerCreateOptions](/ps_reference/objects/LayerCreateOptions/)
+- [DocumentCreateOptions](/ps_reference/objects/documentcreateoptions/)
+- [GroupLayerCreateOptions](/ps_reference/objects/grouplayercreateoptions/)
+- [LayerCreateOptions](/ps_reference/objects/layercreateoptions/)

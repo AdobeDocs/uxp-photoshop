@@ -3,7 +3,7 @@ id: "actions"
 title: "Actions"
 sidebar_label: "Actions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,8 +21,8 @@ keywords: "
 
 ## Classes
 
-- [Action](/ps_reference/classes/Action/)
-- [ActionSet](/ps_reference/classes/ActionSet/)
+- [Action](/ps_reference/classes/action/)
+- [ActionSet](/ps_reference/classes/actionset/)
 
 ## Functions
 
@@ -34,4 +34,4 @@ keywords: "
 
 | Name | Type |
 | :------ | :------ |
-| `action` | [*Action*](/ps_reference/classes/Action/) |
+| `action` | [*Action*](/ps_reference/classes/action/) |

@@ -3,7 +3,7 @@ id: "documentcreateoptions"
 title: "DocumentCreateOptions"
 sidebar_label: "DocumentCreateOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -25,10 +25,10 @@ Provide `width`, `height`, `resolution`, `fill`, color `mode` parameters, or a s
 | Name | Type | Default | Range | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | depth | *number* | - | - | Depth |
-| fill | [*DocumentFill*](/ps_reference/modules/Constants/#documentfill) | - | - | Fill color of the document |
+| fill | [*DocumentFill*](/ps_reference/modules/constants/#documentfill) | - | - | Fill color of the document |
 | fillColor | ColorDescType | - | - | Custom fill color of the document |
 | height | *number* | - | - | Height of image in px |
-| mode | [*NewDocumentMode*](/ps_reference/modules/Constants/#newdocumentmode) | - | - | ImageMode class |
+| mode | [*NewDocumentMode*](/ps_reference/modules/constants/#newdocumentmode) | - | - | ImageMode class |
 | name | *string* | - | - | The name to give the new document |
 | pixelScaleFactor | *number* | - | - | Pixel Scale Factor |
 | preset | *string* | - | - | Preset |

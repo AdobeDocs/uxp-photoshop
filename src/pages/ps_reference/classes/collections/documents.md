@@ -3,7 +3,7 @@ id: "documents"
 title: "Documents"
 sidebar_label: "Documents"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,7 +21,7 @@ keywords: "
 
 ## Hierarchy
 
-- *Array*<[*default*](/ps_reference/classes/Document/)\>
+- *Array*<[*default*](/ps_reference/classes/document/)\>
 
   ↳ **default**
 
@@ -29,15 +29,15 @@ keywords: "
 
 | Name | Type | Access | Description |
 | :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [Document](/ps_reference/modules/Document/) elements in this collection |
-| parent | [*Photoshop*](/ps_reference/classes/Photoshop/) | Read-only | The owner application of this Documents collection |
+| length | *number* | Read-only | Number of [Document](/ps_reference/modules/document/) elements in this collection |
+| parent | [*Photoshop*](/ps_reference/classes/photoshop/) | Read-only | The owner application of this Documents collection |
 | typename | *string* | Read-only | The name for this object collection: Documents |
 
 ## Methods
 
 ### add
 
-**async** : *Promise*<[*default*](/ps_reference/classes/Document/)\>
+**async** : *Promise*<[*default*](/ps_reference/classes/document/)\>
 
 Create a new document.
 
@@ -56,13 +56,13 @@ no transparency.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/DocumentCreateOptions/) | @DocumentCreateOptions |
+| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 
 ### getByName
 
-[*default*](/ps_reference/classes/Document/)
+[*default*](/ps_reference/classes/document/)
 
 Find the first document with the matching name
 

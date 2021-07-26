@@ -3,7 +3,7 @@ id: "jpegsaveoptions"
 title: "JPEGSaveOptions"
 sidebar_label: "JPEGSaveOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -24,9 +24,9 @@ keywords: "
 | color | ColorDescType | - | - | A custom color to use to fill anti-aliased edges adjacent to transparent areas of the image. Mutually exclusive with &#x27;matteColor&#x27;. |
 | customMatte | RGBColorDesc | - | - | Custom matting color; overrides matteColor |
 | embedColorProfile | *boolean* | - | - | False to skip embedding the color profile in the document |
-| formatOptions | [*JPEGFormatOptions*](/ps_reference/modules/Constants/#jpegformatoptions) | STANDARDBASELINE
+| formatOptions | [*JPEGFormatOptions*](/ps_reference/modules/constants/#jpegformatoptions) | STANDARDBASELINE
  | - | The JPEG format option to use. |
-| matteColor | [*MatteColor*](/ps_reference/modules/Constants/#mattecolor) | - | - | The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Mutually exclusive with &#x27;color&#x27;. |
+| matteColor | [*MatteColor*](/ps_reference/modules/constants/#mattecolor) | - | - | The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Mutually exclusive with &#x27;color&#x27;. |
 | quality | *number* | 8 | 0...12
  | The image quality setting to use; affects file size and compression. |
 | scans | *number* | 3 | 3...5

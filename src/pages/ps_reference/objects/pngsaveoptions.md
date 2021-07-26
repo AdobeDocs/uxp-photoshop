@@ -3,7 +3,7 @@ id: "pngsaveoptions"
 title: "PNGSaveOptions"
 sidebar_label: "PNGSaveOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -25,6 +25,6 @@ keywords: "
  | 0...9 | The compression value to be used when method &#x3D; PNGMethod.QUICK |
 | interlaced | *boolean* | false
  | - | True to interlace rows when method &#x3D; PNGMethod.QUICK |
-| method | [*PNGMethod*](/ps_reference/modules/Constants/#pngmethod) | - | - | PNG File Size optimization method. |
+| method | [*PNGMethod*](/ps_reference/modules/constants/#pngmethod) | - | - | PNG File Size optimization method. |
 | typename | *string* | &quot;PNGSaveOptions&quot;
  | - | The class name of the referenced object |

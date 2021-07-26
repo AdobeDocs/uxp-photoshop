@@ -3,7 +3,7 @@ id: "batchplaycommandoptions"
 title: "BatchPlayCommandOptions"
 sidebar_label: "BatchPlayCommandOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation

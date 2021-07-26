@@ -3,7 +3,7 @@ id: "document"
 title: "Document"
 sidebar_label: "Document"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,4 +21,4 @@ keywords: "
 
 ## Classes
 
-- [default](/ps_reference/classes/Document/)
+- [default](/ps_reference/classes/document/)

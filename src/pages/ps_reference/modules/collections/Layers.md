@@ -3,7 +3,7 @@ id: "layers"
 title: "Layers"
 sidebar_label: "Layers"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -21,4 +21,4 @@ keywords: "
 
 ## Classes
 
-- [default](/ps_reference/classes/collections/Layers/)
+- [default](/ps_reference/classes/collections/layers/)

@@ -3,7 +3,7 @@ id: "index"
 title: "index"
 sidebar_label: "index"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation

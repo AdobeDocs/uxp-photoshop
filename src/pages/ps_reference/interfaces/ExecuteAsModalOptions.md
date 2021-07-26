@@ -3,7 +3,7 @@ id: "executeasmodaloptions"
 title: "ExecuteAsModalOptions"
 sidebar_label: "ExecuteAsModalOptions"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
