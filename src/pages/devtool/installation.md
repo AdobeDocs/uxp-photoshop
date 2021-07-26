@@ -6,7 +6,7 @@ contributors:
 
 # Installation
 
-You can install UXP Developer Tools by following these steps:
+You can install the UXP Developer Tools by clicking [here](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) or by following these steps:
 
 * Launch Adobe Creative Cloud Application. If not installed, Download and install Creative Cloud from [here](https://creativecloud.adobe.com/apps/download/creative-cloud).
 * Sign in with your Adobe account if not already signed in.
