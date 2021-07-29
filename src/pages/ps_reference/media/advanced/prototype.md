@@ -2,6 +2,19 @@
 id: "prototype"
 title: "Extending DOM APIs"
 sidebar_label: "API Extensions"
+repo: "uxp-photoshop"
+index: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
 # API Extensions
 
@@ -36,4 +49,3 @@ Right now, you have these prototypes available:
  * [app.Layer](/ps_reference/classes/layer/)
  * [app.ActionSet](/ps_reference/classes/actionset/)
  * [app.Action](/ps_reference/classes/action/)
-

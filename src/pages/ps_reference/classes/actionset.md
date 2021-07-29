@@ -2,6 +2,19 @@
 id: "actionset"
 title: "ActionSet"
 sidebar_label: "ActionSet"
+repo: "uxp-photoshop"
+index: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
 
 # ActionSet

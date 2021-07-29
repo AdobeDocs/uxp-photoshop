@@ -2,6 +2,19 @@
 id: "batchplay"
 title: "BatchPlay Details"
 sidebar_label: "BatchPlay"
+repo: "uxp-photoshop"
+index: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
 # batchPlay
 
@@ -65,4 +78,3 @@ Request Photoshop to describe the entire batchPlayed series of actions as a sing
 
  * `name`: A string to show the name of the history event in History panel
  * `target`: A document reference for where to create the history state at. Keep in mind that if you point at a different document, or if your batchPlays aren't all acting on the same document, the behavior is undefined.
-

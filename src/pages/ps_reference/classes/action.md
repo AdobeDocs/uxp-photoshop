@@ -2,6 +2,19 @@
 id: "action"
 title: "Action"
 sidebar_label: "Action"
+repo: "uxp-photoshop"
+index: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
 
 # Action
