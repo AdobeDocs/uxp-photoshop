@@ -70,8 +70,8 @@
  */
 
 /*!
- * perfect-scrollbar v1.5.0
- * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
+ * perfect-scrollbar v1.5.2
+ * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -90,7 +90,7 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
-/*! @license DOMPurify | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.2.2/LICENSE */
+/*! @license DOMPurify 2.3.0 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.3.0/LICENSE */
 
 /*! https://mths.be/punycode v1.3.2 by @mathias */
 
