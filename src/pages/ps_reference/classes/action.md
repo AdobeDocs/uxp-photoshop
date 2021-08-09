@@ -3,7 +3,7 @@ id: "action"
 title: "Action"
 sidebar_label: "Action"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords: "
   - Creative Cloud
   - API Documentation
@@ -19,66 +19,38 @@ keywords: "
 
 # Action
 
-Represents an action in the Actions palette. Actions are series of commands that can be recorded by user, and can be replayed
-at a later time
+Represents an action in the Actions palette.
+Actions are series of commands that can be recorded by user, and can be replayed at a later time
 
-## Accessors
+## Properties
 
-###  index
-
-• **get index**(): *number*
-
-0-index of this action in it's parent action set
-
-___
-
-###  name
-
-• **get name**(): *string*
-
-The name of this action, displayed in the panel
-Cannot be changed
-
-• **set name**(`name`: string): *void*
-
-Renames the action set
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`name` | string |
-
-___
-
-###  parent
-
-• **get parent**(): *[ActionSet](/ps_reference/classes/actionset/)*
-
-The action set this action belongs to
+| Name | Type | Access | Description |
+| :------ | :------ | :------ | :------ |
+| id | *number* | Read-only | The internal ID of this action  Can be used for batchPlay calls, used internally |
+| index | *number* | Read-only | 0-index of this action in it&#x27;s parent action set |
+| name | *string* | Read-write | The name of this action, displayed in the panel Cannot be changed |
+| parent | [*ActionSet*](/ps_reference/classes/actionset/) | Read-only | The action set this action belongs to |
 
 ## Methods
 
-###  delete
+### delete
 
-▸ **delete**(): *void*
+*void*
 
 Deletes this action from the actions panel
 
 ___
 
-###  duplicate
+### duplicate
 
-▸ **duplicate**(): *[Action](/ps_reference/classes/action)*
+[*Action*](/ps_reference/classes/action/)
 
 Creates a copy of this action, placing it in the same action set
 
 ___
 
-###  play
+### play
 
-▸ **play**(): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Plays this action
-
-**`async`**

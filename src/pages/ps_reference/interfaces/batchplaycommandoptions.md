@@ -2,28 +2,44 @@
 id: "batchplaycommandoptions"
 title: "BatchPlayCommandOptions"
 sidebar_label: "BatchPlayCommandOptions"
+repo: "uxp-photoshop"
+product: "photoshop"
+keywords: "
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+"
 ---
+
+# BatchPlayCommandOptions
 
 ## Properties
 
-### `Optional` historyStateInfo
+### historyStateInfo
 
-• **historyStateInfo**? : *object*
+• `Optional` **historyStateInfo**: *object*
 
-#### Type declaration:
+#### Type declaration
 
-* **name**: *string*
-
-* **target**: *object*
-
-___
-
-### `Optional` modalBehavior
-
-• **modalBehavior**? : *"wait" | "execute" | "fail"*
+| Name | Type |
+| :------ | :------ |
+| `name` | *string* |
+| `target` | *object* |
 
 ___
 
-### `Optional` propagateErrorToDefaultHandler
+### modalBehavior
 
-• **propagateErrorToDefaultHandler**? : *boolean*
+• `Optional` **modalBehavior**: ``"wait"`` \| ``"execute"`` \| ``"fail"``
+
+___
+
+### propagateErrorToDefaultHandler
+
+• `Optional` **propagateErrorToDefaultHandler**: *boolean*
