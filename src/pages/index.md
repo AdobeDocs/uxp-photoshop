@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Documentation-UXP for Adobe Photoshop
 description: Build UXP plugins for Adobe Photoshop with HTML, CSS, and JavaScript. Automate workflows, build new features, and more.
 contributors:

@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP for Web Developers
 
 At first glance, developing for UXP in Adobe applications looks very familiar to people coming from web development. UXP uses the familiar structure of HTML, CSS, and JavaScript to build what look like web pages but are actually dialogs and panels.

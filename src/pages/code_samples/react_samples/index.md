@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # React Samples
 
 [React](https://reactjs.org) is a very popular modern JavaScript framework. UXP plugins can be built using React to enable complex UIs which would otherwise require complex and difficult-to-maintain JavaScript.

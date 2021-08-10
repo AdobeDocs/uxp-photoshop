@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Network I/O
 
 Many plugin scenarios require use of the network to fetch or push data, to browse remote resources, and to synchronize content, among other reasons. XD implements a robust network stack.

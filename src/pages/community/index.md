@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Community-UXP for Adobe Photoshop
 description: Join the worldwide developer community building Photoshop plugins to empower creativity. Meet other developers, ask questions, offer help.
 ---

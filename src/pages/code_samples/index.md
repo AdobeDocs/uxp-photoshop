@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Code Samples—UXP for Adobe Photoshop
 description: Learn to build UXP plugins for Photoshop by seeing fully-functioning code samples.
 contributors:

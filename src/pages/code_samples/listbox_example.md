@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Making a Listbox
 
 A listbox is a common UI element that is not implemented in native Photoshop controls nor Spectrum-CSS controls.

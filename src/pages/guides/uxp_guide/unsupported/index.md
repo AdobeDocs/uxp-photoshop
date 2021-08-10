@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # What's Unsupported in UXP
 
 Since UXP does not include a full-blown web browser with all the bells and whistles, there are a number of HTML and CSS features that are not currently implemented. Some of these are under development, while others (e.g., iFrames) may never appear.

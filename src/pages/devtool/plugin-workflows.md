@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Plugin workflows
 
 Once you've added a plugin to your developer workspace, there are several things you can do with it. All of the following features are accessed via the **•••**/**Actions** dropdown associated with each plugin.

@@ -1,10 +1,5 @@
 ---
-id: "action"
-title: "Action"
-sidebar_label: "Action"
-repo: "uxp-photoshop"
-index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +9,11 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
+id: "action"
+title: "Action"
+sidebar_label: "Action"
+repo: "uxp-photoshop"
+index: "photoshop"
 ---
 
 # Action

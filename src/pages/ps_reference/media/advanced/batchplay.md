@@ -1,10 +1,5 @@
 ---
-id: "batchplay"
-title: "BatchPlay Details"
-sidebar_label: "BatchPlay"
-repo: "uxp-photoshop"
-index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +9,11 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
+id: "batchplay"
+title: "BatchPlay Details"
+sidebar_label: "BatchPlay"
+repo: "uxp-photoshop"
+index: "photoshop"
 ---
 # batchPlay
 

@@ -1,10 +1,5 @@
 ---
-id: "actionset"
-title: "ActionSet"
-sidebar_label: "ActionSet"
-repo: "uxp-photoshop"
-index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +9,11 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
+id: "actionset"
+title: "ActionSet"
+sidebar_label: "ActionSet"
+repo: "uxp-photoshop"
+index: "photoshop"
 ---
 
 # ActionSet

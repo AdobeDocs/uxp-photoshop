@@ -1,10 +1,5 @@
 ---
-id: "photoshop"
-title: "Photoshop"
-sidebar_label: "Photoshop"
-repo: "uxp-photoshop"
-index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +9,11 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
+id: "photoshop"
+title: "Photoshop"
+sidebar_label: "Photoshop"
+repo: "uxp-photoshop"
+index: "photoshop"
 ---
 
 # Photoshop App

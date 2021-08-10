@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # New to UXP? Where to Go Next
 The answer to that question depends on what you currently know.
 - If you've created UXP plugins for other Adobe applications (e.g., XD) and just need to know what's different for Photoshop, [start here](uxp_for_xd_devs/).

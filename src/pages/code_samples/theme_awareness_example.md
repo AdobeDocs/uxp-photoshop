@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Theme Awareness
 
 Photoshop (and many other Creative Cloud applications) support UI _themes_. Photoshop supports four different themes ranging from light (Democrats) to dark (Republicans). Within these themes, highlight, focus, and other colors also change.

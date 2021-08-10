@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Getting Started—UXP for Adobe Photoshop
 description: Get started building your Photoshop plugin with the UXP Plugin API.
 contributors:

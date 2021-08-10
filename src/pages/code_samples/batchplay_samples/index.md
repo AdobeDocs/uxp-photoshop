@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # batchPlay Samples
 
 As of this writing, not all of the Photoshop DOM is exposed to UXP. If an interface for your favorite Photoshop functionality isn't present in UXP, you may be able to use `batchPlay` to access what you need.
