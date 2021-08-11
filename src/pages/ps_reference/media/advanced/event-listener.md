@@ -4,7 +4,7 @@ title: "Attaching Event Listeners"
 sidebar_label: "Event Listeners"
 repo: "uxp-photoshop"
 index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +14,6 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
 ---
 
 # Event Listeners

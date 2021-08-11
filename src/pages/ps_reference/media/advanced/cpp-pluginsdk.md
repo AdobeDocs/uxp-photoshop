@@ -4,7 +4,7 @@ title: "Communication with C++ Plugin SDK"
 sidebar_label: "CSDK <-> UXP Messaging"
 repo: "uxp-photoshop"
 index: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +14,6 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
 ---
 
 # C++ to UXP Communication
