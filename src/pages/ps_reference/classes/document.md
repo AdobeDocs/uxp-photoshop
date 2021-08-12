@@ -1,4 +1,9 @@
 ---
+id: "document"
+title: "Document"
+sidebar_label: "Document"
+repo: "uxp-photoshop"
+index: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -9,11 +14,6 @@ keywords:
   - SDK
   - C++
   - Scripting
-id: "document"
-title: "Document"
-sidebar_label: "Document"
-repo: "uxp-photoshop"
-index: "photoshop"
 ---
 
 # Document

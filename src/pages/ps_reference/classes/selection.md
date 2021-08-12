@@ -1,4 +1,9 @@
 ---
+id: "selection"
+title: "Selection"
+sidebar_label: "Selection"
+repo: "uxp-photoshop"
+index: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -9,11 +14,6 @@ keywords:
   - SDK
   - C++
   - Scripting
-id: "selection"
-title: "Selection"
-sidebar_label: "Selection"
-repo: "uxp-photoshop"
-index: "photoshop"
 ---
 # Selection
 

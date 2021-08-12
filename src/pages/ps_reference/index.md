@@ -1,4 +1,8 @@
 ---
+title: Photoshop API—UXP for Adobe Photoshop
+description: Learn about the Photoshop API that is exposed through UXP for plugin developers.
+repo: "uxp-photoshop"
+index: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -9,10 +13,6 @@ keywords:
   - SDK
   - C++
   - Scripting
-title: Photoshop API—UXP for Adobe Photoshop
-description: Learn about the Photoshop API that is exposed through UXP for plugin developers.
-repo: "uxp-photoshop"
-index: "photoshop"
 ---
 
 

@@ -1,4 +1,9 @@
 ---
+id: "layer"
+title: "Layer"
+sidebar_label: "Layer"
+repo: "uxp-photoshop"
+index: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -9,11 +14,6 @@ keywords:
   - SDK
   - C++
   - Scripting
-id: "layer"
-title: "Layer"
-sidebar_label: "Layer"
-repo: "uxp-photoshop"
-index: "photoshop"
 ---
 
 # Layer

@@ -102,8 +102,7 @@ jobs:
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
-          ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
-          ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          GATSBY_ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_DEV_SRC }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
@@ -114,10 +113,10 @@ jobs:
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
           GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_DEV_SRC }}
           GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_DEV_CONFIG }}
-          ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
-          ALGOLIA_WRITE_API_KEY: ${{ secrets.AIO_ALGOLIA_WRITE_API_KEY }}
-          ALGOLIA_INDEXATION_MODE: ${{ secrets.AIO_ALGOLIA_INDEXATION_MODE }}
-          ALGOLIA_INDEX_NAME_SUFFIX: ${{ secrets.AIO_ALGOLIA_INDEX_NAME_DEV_SUFFIX }}
+          GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
+          GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
+          GATSBY_ALGOLIA_INDEX_ALL: ${{ secrets.AIO_ALGOLIA_INDEX_ALL }}
+          GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -177,8 +176,7 @@ jobs:
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
-          ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
-          ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
+          GATSBY_ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_PROD_SRC }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
@@ -189,10 +187,13 @@ jobs:
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
           GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_PROD_SRC }}
           GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_PROD_CONFIG }}
-          ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
           ALGOLIA_WRITE_API_KEY: ${{ secrets.AIO_ALGOLIA_WRITE_API_KEY }}
           ALGOLIA_INDEXATION_MODE: ${{ secrets.AIO_ALGOLIA_INDEXATION_MODE }}
-          ALGOLIA_INDEX_NAME_SUFFIX: ${{ secrets.AIO_ALGOLIA_INDEX_NAME_PROD_SUFFIX }}
+          ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME || github.event.repository.name }}
+          GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
+          GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
+          GATSBY_ALGOLIA_INDEX_ALL: ${{ secrets.AIO_ALGOLIA_INDEX_ALL }}
+          GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:

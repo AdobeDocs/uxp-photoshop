@@ -1,4 +1,9 @@
 ---
+id: "prototype"
+title: "Extending DOM APIs"
+sidebar_label: "API Extensions"
+repo: "uxp-photoshop"
+index: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -9,11 +14,6 @@ keywords:
   - SDK
   - C++
   - Scripting
-id: "prototype"
-title: "Extending DOM APIs"
-sidebar_label: "API Extensions"
-repo: "uxp-photoshop"
-index: "photoshop"
 ---
 # API Extensions
 
