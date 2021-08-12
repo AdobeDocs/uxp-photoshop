@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 ## Plain JavaScript Samples
 
 Plain (also called "Vanilla") JavaScript is JavaScript without any libraries or frameworks. Because of that, it's also the easiest environment in which to show examples.

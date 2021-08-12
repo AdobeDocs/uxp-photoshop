@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Creating a Plugin with the UXP Developer Tool
 
 So you have Photoshop, you have the UXP Developer Tool, and you have Visual Studio Code or other programmer's text editor. Now what?

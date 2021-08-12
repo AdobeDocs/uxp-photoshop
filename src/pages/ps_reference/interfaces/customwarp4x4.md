@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 id: "customwarp4x4"
 title: "CustomWarp4X4"
 sidebar_label: "CustomWarp4X4"

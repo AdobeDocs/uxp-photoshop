@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Icons for Your Plugins
 
 There are two disparate locations where icons are shown. A plugin's icon (outside the entrypoints) is shown in the "Plugins panel". This icon has some automatically applied treatment, and is 24x24 (48x48 at 2x) in size.

@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Manifest File Structure
 
 The plugin's manifest is where you include metadata about your plugin. Simply put, the manifest is a list of facts about your plugin in the form of a JSON object. No executable code goes into your manifest.

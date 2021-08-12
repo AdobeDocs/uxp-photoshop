@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Design - User interface
 description: This is the page for the introduction to User interface
 contributors:

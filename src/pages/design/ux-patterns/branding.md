@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Design - UX Patterns - Branding
 description: This is the page for branding UX patterns 
 contributors:

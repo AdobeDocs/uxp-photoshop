@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP Developer Tool
 
 The UXP Developer Tool (UDT) is a standalone GUI application that loads, unloads, and helps debug your UXP plugins. It is the easiest way to create the initial shell for a plugin as well as to submit the plugin for inclusion in the Marketplace.

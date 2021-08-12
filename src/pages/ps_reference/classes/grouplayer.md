@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 id: "grouplayer"
 title: "GroupLayer"
 sidebar_label: "GroupLayer"

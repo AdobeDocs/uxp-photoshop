@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP for Newbies
 
 If you've never written JavaScript, HTML, or CSS, but you want to develop plugins using UXP, you're in for a bit of a learning curve. It's not an impossible curve, not even a very steep one, and plenty of people have climbed it before you. So dive right in, and come back to these pages when you're ready.

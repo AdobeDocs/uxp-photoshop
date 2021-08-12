@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP: Other Topics
 
 UXP is a growing technology platform and, as such, has many different facets. Here are topics you may need to know to successfully create a UXP plugin:

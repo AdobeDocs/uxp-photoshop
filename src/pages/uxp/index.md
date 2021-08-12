@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: UXP API—UXP for Adobe Photoshop
 description: The API Reference for UXP itself. Includes UI APIs (including HTML and CSS), file and network I/O, and more.
 ---

@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP for ExtendScript Developers
 
 If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or its 64-bit successor, the [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug), you'll be pleasantly surprised but you'll also have some new things to learn:

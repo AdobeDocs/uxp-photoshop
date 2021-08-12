@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP in Photoshop vs Other Creative Cloud Applications
 
 As of this writing, the only other Creative Cloud application that supports UXP is [Adobe XD](https://adobexdplatform.com). Here are the main differences between UXP in Photoshop and UXP in XD.

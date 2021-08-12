@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # UXP Toolchain
 
 UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See [Technology Stack](../../#the-uxp-technology-stack) for more detail.

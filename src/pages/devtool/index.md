@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Adobe UXP Developer Tool
 description: The Adobe UXP Developer Tool makes it easy to create, load, debug, and package UXP-based plugins for Photoshop.
 contributors:

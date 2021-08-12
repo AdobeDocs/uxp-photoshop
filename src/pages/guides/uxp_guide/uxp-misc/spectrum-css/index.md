@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # Spectrum CSS
 
 [Spectrum CSS](https://opensource.adobe.com/spectrum-css/) is Adobe's open-source implementation of Adobe's design system, used across multiple applications.

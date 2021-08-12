@@ -1,3 +1,16 @@
+---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+---
+
 # How Do I...
 
 This section provides snippets of HTML, CMS, and JavaScript code needed to accomplish common operations needed in many plugins. There are no complete plugins in this section, only code snippets. Copy and paste these snippets into sections of your plugin as needed.

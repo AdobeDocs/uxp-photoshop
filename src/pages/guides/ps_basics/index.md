@@ -1,4 +1,14 @@
 ---
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
 title: Guides - Photoshop UXP Plugins
 description: This is the guides overview page of the Adobe Photoshop API for UXP
 ---
