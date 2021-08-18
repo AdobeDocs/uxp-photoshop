@@ -12,15 +12,16 @@
 
 module.exports = {
   siteMetadata: {
-    /*versions: [
+    versions: [
       {
-        title: 'v4.1'
+        title: '2022',
+        path: '/photoshop/uxp/2022/'
       },
       {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/uxp-photoshop'
+        title: '2021',
+        selected: true
       }
-    ],*/
+    ],
     pages: [
       {
         title: "UXP for Adobe Photoshop",
@@ -224,5 +225,5 @@ module.exports = {
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/",
+  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/2021",
 };
