@@ -4,7 +4,7 @@ title: "GIFSaveOptions"
 sidebar_label: "GIFSaveOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +14,6 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
 ---
 
 # GIFSaveOptions

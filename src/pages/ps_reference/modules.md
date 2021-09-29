@@ -4,7 +4,7 @@ title: "Photoshop JS API"
 sidebar_label: "Photoshop JS API"
 repo: "uxp-photoshop"
 product: "photoshop"
-keywords: "
+keywords:
   - Creative Cloud
   - API Documentation
   - UXP
@@ -14,7 +14,6 @@ keywords: "
   - SDK
   - C++
   - Scripting
-"
 ---
 
 # Photoshop JS API
