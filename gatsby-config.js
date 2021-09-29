@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         title: '2021',
-        path: 'https://adobe.io/photoshop/uxp/2021'
+        path: 'https://developer-stage.adobe.com/photoshop/uxp/2021'
       }
     ],
     pages: [
