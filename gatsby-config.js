@@ -225,5 +225,5 @@ module.exports = {
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/",
+  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/2022/",
 };
