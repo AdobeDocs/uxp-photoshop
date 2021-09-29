@@ -12,15 +12,16 @@
 
 module.exports = {
   siteMetadata: {
-    /*versions: [
+    versions: [
       {
-        title: 'v4.1'
+        title: '2022',
+        selected: true
       },
       {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/uxp-photoshop'
+        title: '2021',
+        path: 'https://adobe.io/photoshop/uxp/2021'
       }
-    ],*/
+    ],
     pages: [
       {
         title: "UXP for Adobe Photoshop",
