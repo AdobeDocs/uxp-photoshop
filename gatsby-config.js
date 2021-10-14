@@ -40,20 +40,8 @@ module.exports = {
         path: "/uxp/",
       },
       {
-        title: "Sample Code",
-        path: "/code_samples/",
-      },
-      {
         title: "Design",
         path: "/design/",
-      },
-      {
-        title: "Developer Tool",
-        path: "/devtool/",
-      },
-      {
-        title: "Share",
-        path: "/distribution/",
       },
       {
         title: "Community",
@@ -67,36 +55,110 @@ module.exports = {
         header: true,
         pages: [
           {
-            title: "Getting Started",
+            title: "Quickstart Guide",
             path: "/guides/",
           },
           {
-            title: "UXP for You",
+            title: "The UXP manifest",
+            path: "/guides/uxp_guide/uxp-misc/manifest-v4/",
+          },
+          {
+            title: "Photoshop manifest",
+            path: "/guides/uxp_guide/uxp-misc/manifest-v4/photoshop-manifest/",
+          },
+          {
+            title: "Code Samples",
+            path: "/guides/code_samples/"
+          },
+          {
+            title: "Developer Tool »",
+            path: "/guides/devtool/",
+            pages: [
+              {
+                title: 'Overview',
+                path: '/guides/devtool/'
+              },
+              {
+                title: 'Installation',
+                path: '/guides/devtool/installation/'
+              },
+              {
+                title: "Creating your First Plugin",
+                path: "/guides/devtool/udt-walkthrough/",
+              },
+              {
+                title: 'Plugin Management',
+                path: '/guides/devtool/plugin-management/'
+              },
+              {
+                title: 'Plugin Workflows',
+                path: '/guides/devtool/plugin-workflows/'
+              },
+              {
+                title: 'Working with React',
+                path: '/guides/devtool/working-with-react/'
+              },
+            ],
+          },
+          {
+            title: "Legacy Extensibility",
+            path: "/guides/legacy-extensibility/",
+          },
+          {
+            title: "Migrating to UXP »",
             path: "/guides/uxp_for_you/",
+            pages: [
+              {
+                title: "From XD",
+                path: "/guides/uxp_for_you/uxp_for_xd_devs/",
+              },
+              {
+                title: "From ExtendScript",
+                path: "/guides/uxp_for_you/uxp_for_extendscript_devs/",
+              },
+              {
+                title: "From CEP",
+                path: "/guides/uxp_for_you/uxp_for_cep_devs/",
+              },
+              {
+                title: "As a Newbie",
+                path: "/guides/uxp_for_you/uxp_for_newbies/",
+              },
+              {
+                title: "As a Web dev",
+                path: "/guides/uxp_for_you/uxp_for_web_devs/",
+              },
+            ]
           },
           {
-            title: "The UXP Toolchain",
-            path: "/guides/uxp_guide/uxp-toolchain/",
+            title: "Share »",
+            path: "/guides/distribution/",
+            pages: [
+              {
+                title: "Packaging Your Plugin",
+                path: "/guides/distribution/packaging-your-plugin/",
+              },
+              {
+                title: "Options for Distribution",
+                path: "/guides/distribution/distribution-options/",
+              },
+              {
+                title: "Submission and Review",
+                path: "/guides/distribution/submission-checklist/",
+              },
+              {
+                title: "Marketing Your Plugin",
+                path: "/guides/distribution/marketing/",
+              },
+            ],
           },
           {
-            title: "UXP for Photoshop Basics",
-            path: "/guides/ps_basics/",
-          },
-          {
-            title: "UXP Developer Tool",
-            path: "/guides/uxp-developer-tool/",
-          },
-          {
-            title: "Developer Tool Walkthrough",
-            path: "/guides/udt-walkthrough/",
-          },
-          {
-            title: "Other Topics »»",
+            title: "Other Topics »",
             path: "/guides/uxp_guide/uxp-misc/",
             pages: [
               {
-                title: "The UXP Manifest",
-                path: "/guides/uxp_guide/uxp-misc/manifest-v4/",
+                title: "The UXP Toolchain",
+                path: "/guides/uxp_guide/uxp-misc/uxp-toolchain/",
               },
               {
                 title: "Localization and Platforms",
@@ -131,52 +193,6 @@ module.exports = {
           {
             title: "Debugging your Plugins",
             path: "/guides/debugging/",
-          },
-        ],
-      },
-      {
-        title: "Code Samples",
-        path: "/code_samples/",
-        header: true,
-        pages: [
-          {
-            title: "Overview",
-            path: "/code_samples/",
-          },
-          {
-            title: "JavaScript Samples",
-            path: "/code_samples/javascript_samples/",
-          },
-          {
-            title: "React Samples",
-            path: "/code_samples/react_samples/",
-          },
-          {
-            title: "batchPlay Samples",
-            path: "/code_samples/batchplay_samples/",
-          },
-        ],
-      },
-      {
-        title: "Share",
-        path: "/distribution/",
-        header: true,
-        pages: [
-          {
-            title: "Packaging Your Plugin",
-            path: "/distribution/packaging-your-plugin/",
-          },
-          {
-            title: "Options for Distribution",
-            path: "/distribution/distribution-options/",
-          },
-          {
-            title: "Submission and Review",
-            path: "/distribution/submission-checklist/",
-          },
-          {
-            title: "Marketing Your Plugin",
-            path: "/distribution/marketing/",
           },
         ],
       },
@@ -221,7 +237,6 @@ module.exports = {
         path: "/design/",
         pages: require("./reference-design.js"),
       },
-      ...require("./reference-devtool.js"),
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
