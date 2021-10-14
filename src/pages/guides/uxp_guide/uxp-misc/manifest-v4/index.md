@@ -5,10 +5,11 @@ keywords:
   - UXP
   - Plugins
   - JavaScript
-  - ExtendScript
-  - SDK
-  - C++
+  - JSON
+  - Manifest
   - Scripting
+title: Manifest File Structure - UXP Manifest
+description:
 ---
 
 # Manifest File Structure
@@ -29,7 +30,7 @@ If you are a bit rusty at reading JSON, [here's a good reference](https://develo
     "main": "index.html",
     "host": {
         "app": "PS",
-        "minVersion": "22.0.0"
+        "minVersion": "23.0.0"
     },
     "entrypoints": [
         {

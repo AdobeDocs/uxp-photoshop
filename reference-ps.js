@@ -79,68 +79,89 @@ module.exports = [{
 			"path": "/ps_reference/objects/bounds/"
 		},
 		{
-			"title": "BMPSaveOptions",
-			"path": "/ps_reference/objects/bmpsaveoptions/"
-		},
-		{
-			"title": "BitmapConversionOptions",
-			"path": "/ps_reference/objects/bitmapconversionoptions/"
-		},
-		{
-			"title": "GIFSaveOptions",
-			"path": "/ps_reference/objects/gifsaveoptions/"
-		},
-		{
-			"title": "IndexedConversionOptions",
-			"path": "/ps_reference/objects/indexedconversionoptions/"
-		},
-		{
-			"title": "JPEGSaveOptions",
-			"path": "/ps_reference/objects/jpegsaveoptions/"
-		},
-		{
-			"title": "PNGSaveOptions",
-			"path": "/ps_reference/objects/pngsaveoptions/"
-		},
-		{
-			"title": "PhotoshopSaveOptions",
-			"path": "/ps_reference/objects/photoshopsaveoptions/"
-		},
-		{
-			"title": "DocumentCreateOptions",
-			"path": "/ps_reference/objects/documentcreateoptions/"
-		},
-		{
-			"title": "GroupLayerCreateOptions",
-			"path": "/ps_reference/objects/grouplayercreateoptions/"
-		},
-		{
-			"title": "LayerCreateOptions",
-			"path": "/ps_reference/objects/layercreateoptions/"
-		},
-		{
-			"title": "BMPSaveOptions",
-			"path": "/ps_reference/objects/bmpsaveoptions/"
-		},
-		{
-			"title": "GIFSaveOptions",
-			"path": "/ps_reference/objects/gifsaveoptions/"
-		},
-		{
-			"title": "JPEGSaveOptions",
-			"path": "/ps_reference/objects/jpegsaveoptions/"
-		},
-		{
-			"title": "PNGSaveOptions",
-			"path": "/ps_reference/objects/pngsaveoptions/"
-		},
-		{
-			"title": "PhotoshopSaveOptions",
-			"path": "/ps_reference/objects/photoshopsaveoptions/"
-		},
-		{
 			"title": "Tool",
 			"path": "/ps_reference/objects/tool/"
+		},
+		{
+			"title": "Save Options",
+			"path": "/ps_reference/objects/saveoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "BMPSaveOptions",
+					"path": "/ps_reference/objects/saveoptions/bmpsaveoptions/"
+				},
+				{
+					"title": "GIFSaveOptions",
+					"path": "/ps_reference/objects/saveoptions/gifsaveoptions/"
+				},
+				{
+					"title": "JPEGSaveOptions",
+					"path": "/ps_reference/objects/saveoptions/jpegsaveoptions/"
+				},
+				{
+					"title": "PNGSaveOptions",
+					"path": "/ps_reference/objects/saveoptions/pngsaveoptions/"
+				},
+				{
+					"title": "PhotoshopSaveOptions",
+					"path": "/ps_reference/objects/saveoptions/photoshopsaveoptions/"
+				}
+			]
+		},
+		{
+			"title": "Create Options",
+			"path": "/ps_reference/objects/createoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "DocumentCreateOptions",
+					"path": "/ps_reference/objects/createoptions/documentcreateoptions/"
+				},
+				{
+					"title": "GroupLayerCreateOptions",
+					"path": "/ps_reference/objects/createoptions/grouplayercreateoptions/"
+				},
+				{
+					"title": "LayerCreateOptions",
+					"path": "/ps_reference/objects/createoptions/layercreateoptions/"
+				}
+			]
+		},
+		{
+			"title": "Conversion Options",
+			"path": "/ps_reference/objects/conversionoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "BMPSaveOptions",
+					"path": "/ps_reference/objects/conversionoptions/bmpsaveoptions/"
+				},
+				{
+					"title": "BitmapConversionOptions",
+					"path": "/ps_reference/objects/conversionoptions/bitmapconversionoptions/"
+				},
+				{
+					"title": "GIFSaveOptions",
+					"path": "/ps_reference/objects/conversionoptions/gifsaveoptions/"
+				},
+				{
+					"title": "IndexedConversionOptions",
+					"path": "/ps_reference/objects/conversionoptions/indexedconversionoptions/"
+				},
+				{
+					"title": "JPEGSaveOptions",
+					"path": "/ps_reference/objects/conversionoptions/jpegsaveoptions/"
+				},
+				{
+					"title": "PNGSaveOptions",
+					"path": "/ps_reference/objects/conversionoptions/pngsaveoptions/"
+				},
+				{
+					"title": "PhotoshopSaveOptions",
+					"path": "/ps_reference/objects/conversionoptions/photoshopsaveoptions/"
+				}
+			]
 		}
 	]
 },
@@ -176,17 +197,20 @@ module.exports = [{
 	]
 },
     {
-	"title": "Advanced",
-	"header": true,
+	"title": "Advanced »",
 	"path": "/ps_reference/media/",
 	"pages": [
+		{
+			"title": "Overview",
+			"path": "/ps_reference/media/"
+		},
 		{
 			"title": "BatchPlay",
 			"path": "/ps_reference/media/batchplay/"
 		},
 		{
 			"title": "Modal Execution",
-			"path": "/ps_reference/media/executeAsModal/"
+			"path": "/ps_reference/media/executeasmodal/"
 		},
 		{
 			"title": "API Extensions",
@@ -198,11 +222,11 @@ module.exports = [{
 		},
 		{
 			"title": "Core Module",
-			"path": "/ps_reference/media/photoshopCore/"
+			"path": "/ps_reference/media/photoshopcore/"
 		},
 		{
 			"title": "Action Module",
-			"path": "/ps_reference/media/photoshopAction/"
+			"path": "/ps_reference/media/photoshopaction/"
 		}
 	]
 },
@@ -210,10 +234,5 @@ module.exports = [{
 	"title": "Constants",
 	"header": true,
 	"path": "/ps_reference/modules/constants/"
-},
-    {
-	"title": "API Changelog",
-	"header": true,
-	"path": "/ps_reference/changelog/"
 }
 ]

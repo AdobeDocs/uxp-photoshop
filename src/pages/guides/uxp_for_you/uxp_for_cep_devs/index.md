@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP for CEP Developers
+description:
 ---
 
 # UXP for CEP Developers

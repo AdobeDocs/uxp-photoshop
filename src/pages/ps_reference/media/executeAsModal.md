@@ -1,8 +1,10 @@
 ---
-id: "executeAsModal"
+id: "executeasmodal"
 title: "ExecuteAsModal Details"
 sidebar_label: "Modal Execution"
 ---
+
+# ExecuteAsModal
 
 ExecuteAsModal is needed when a plugin wants to make modifications to the Photoshop state. This includes scenarios where the plugin creates or modify documents, or the plugin wishes to update UI or preference state.
 

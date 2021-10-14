@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: What's unsupported in UXP
+description:
 ---
 
 # What's Unsupported in UXP

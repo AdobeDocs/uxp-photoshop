@@ -59,7 +59,7 @@ ___
 
 ### BitmapConversionType
 
-Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps_reference/objects/bitmapconversionoptions/)
+Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
 
 | Name | Description |
 | :------ | :------ |
@@ -73,7 +73,7 @@ ___
 
 ### BitmapHalfToneType
 
-Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps_reference/objects/bitmapconversionoptions/)
+Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
 
 | Name | Description |
 | :------ | :------ |
@@ -501,7 +501,7 @@ ___
 
 ### TrimType
 
-Type of pixels to trim around an image, passed to [[Document.trim()]].
+Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/classes/document/#trim).
 
 | Name | Description |
 | :------ | :------ |

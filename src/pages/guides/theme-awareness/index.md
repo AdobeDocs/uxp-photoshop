@@ -9,9 +9,11 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: Making your Plugin Theme-aware
+description:
 ---
 
-# Making Your Plugin Theme-aware
+# Making your Plugin Theme-aware
 
 ## Overview
 

@@ -20,8 +20,8 @@ keywords:
 
 ## Classes
 
-- [BMPSaveOptions](/ps_reference/objects/bmpsaveoptions/)
-- [GIFSaveOptions](/ps_reference/objects/gifsaveoptions/)
-- [JPEGSaveOptions](/ps_reference/objects/jpegsaveoptions/)
-- [PNGSaveOptions](/ps_reference/objects/pngsaveoptions/)
-- [PhotoshopSaveOptions](/ps_reference/objects/photoshopsaveoptions/)
+- [BMPSaveOptions](/ps_reference/objects/saveoptions/bmpsaveoptions/)
+- [GIFSaveOptions](/ps_reference/objects/saveoptions/gifsaveoptions/)
+- [JPEGSaveOptions](/ps_reference/objects/saveoptions/jpegsaveoptions/)
+- [PNGSaveOptions](/ps_reference/objects/saveoptions/pngsaveoptions/)
+- [PhotoshopSaveOptions](/ps_reference/objects/saveoptions/photoshopsaveoptions/)

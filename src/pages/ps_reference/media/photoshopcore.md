@@ -115,7 +115,7 @@ or the plugin wants to update UI or preference state.
 
 ExecuteAsModal is only available to plugin that is using apiVersion 2 or higher.
 
-See [Modal Execution](../executeAsModal) for details
+See [Modal Execution](../executeasmodal) for details
 
 #### Parameters
 
@@ -133,6 +133,34 @@ ___
 Returns information about the active Photoshop tool.
 ```javascript
 { title } = await PhotoshopCore.getActiveTool()
+```
+
+___
+
+### getCPUInfo
+
+[*CPUInfo*](/ps_reference/interfaces/cpuinfo/)
+
+Returns information about the host CPU.
+```javascript
+{ logicalCores, frequencyMhz, vendor } = PhotoshopCore.getCPUInfo()
+var isAMD = vendor === "AMD"
+var isARM = vendor === "ARM"
+```
+
+___
+
+### getGPUInfo
+
+[*GPUInfo*](/ps_reference/interfaces/gpuinfo/)
+
+Returns OpenGL and OpenCL information about the available graphics processor.
+```javascript
+{ gpuInfoList, clgpuInfoList } = PhotoshopCore.getGPUInfo()
+console.log(JSON.stringify(gpuInfoList))
+// > [{"version":"2.1 ATI-4.5.14","memoryMB":8192,"name":"16915464", ...}]
+console.log(JSON.stringify(clgpuInfoList))
+// > [{"version":"OpenCL 1.2 ","memoryMB":8589,"name":"AMD Radeon Pro 580X Compute Engine", ...}]
 ```
 
 ___

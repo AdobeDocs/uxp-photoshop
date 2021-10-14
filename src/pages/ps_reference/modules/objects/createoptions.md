@@ -20,6 +20,6 @@ keywords:
 
 ## Classes
 
-- [DocumentCreateOptions](/ps_reference/objects/documentcreateoptions/)
-- [GroupLayerCreateOptions](/ps_reference/objects/grouplayercreateoptions/)
-- [LayerCreateOptions](/ps_reference/objects/layercreateoptions/)
+- [DocumentCreateOptions](/ps_reference/objects/createoptions/documentcreateoptions/)
+- [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
+- [LayerCreateOptions](/ps_reference/objects/createoptions/layercreateoptions/)

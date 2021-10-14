@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP For You - Guides for a new UXP Developer
+description:
 ---
 
 # New to UXP? Where to Go Next

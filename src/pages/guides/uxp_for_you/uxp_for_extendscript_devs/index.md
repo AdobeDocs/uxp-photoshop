@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP for ExtendScript Developers
+description:
 ---
 
 # UXP for ExtendScript Developers
@@ -17,9 +19,13 @@ If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or
 
 ### Different DOM access
 
-UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP Plugins page](/guides/ps_basics/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
+UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP API reference](/../../ps_reference/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
 
-As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](/guides/ps_basics/batchplay_intro/). 
+As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](../../ps_reference/media/batchplay/).
+
+### Migration helper for ExtendScript developers
+
+If you use `executeAction` and `executeActionGet` often in your code, the [ExtendScript batchPlay logger](https://github.com/adobe-uxp/ps-es-to-uxp) utility can help you migrate your code. Plug the `ps-es-to-uxp` jsx code into your ExtendScript project, and it will print out all your `executeAction` and `executeActionGet` methods in a format suitable for the UXP equivalent API: [batchPlay](../../ps_reference/media/batchplay).
 
 ### Development environment
 ExtendScript Toolkit ("ESTK") was the development environment of choice for many years, and still is for many Windows developers. On macOS, ESTK died a lingering death due to the deprecation of 32-bit code. Recently, ESTK has been replaced by a plugin for Visual Studio Code, a widely-used editor.

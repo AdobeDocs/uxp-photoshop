@@ -18,19 +18,13 @@ keywords:
 
 # Photoshop
 
-The top level application object, root of our DOM
+The top level application object, root of the Photoshop DOM
 
 ```
 const app = require('photoshop').app
 ```
 
-From here, you can access open documents, tools, UI elements and run commands or menu items.
-
-## Constructors
-
-### constructor
-
-[*Photoshop*](/ps_reference/classes/photoshop/)
+From here you can access open documents, tools, UI elements and run commands or menu items.
 
 ## Properties
 
@@ -94,7 +88,7 @@ no transparency.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/documentcreateoptions/) | @DocumentCreateOptions |
+| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 

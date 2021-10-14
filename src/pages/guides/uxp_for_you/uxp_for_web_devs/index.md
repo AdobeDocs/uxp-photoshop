@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP for Web Developers
+description:
 ---
 
 # UXP for Web Developers

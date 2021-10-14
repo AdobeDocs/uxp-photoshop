@@ -18,7 +18,7 @@ keywords:
 
 # Objects
 
-Root of the API, accessed at require("photoshop")
+Root of the API, accessed at `require("photoshop")`
 
 ## Properties
 

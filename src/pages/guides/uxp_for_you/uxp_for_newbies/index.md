@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP for Newbies
+description:
 ---
 
 # UXP for Newbies

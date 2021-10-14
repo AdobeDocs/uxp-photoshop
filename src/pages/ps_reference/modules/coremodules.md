@@ -27,9 +27,13 @@ keywords:
 
 - [ActionDescriptor](/ps_reference/interfaces/actiondescriptor/)
 - [BatchPlayCommandOptions](/ps_reference/interfaces/batchplaycommandoptions/)
+- [CPUInfo](/ps_reference/interfaces/cpuinfo/)
 - [ExecuteAsModalOptions](/ps_reference/interfaces/executeasmodaloptions/)
 - [ExecutionContext](/ps_reference/interfaces/executioncontext/)
+- [GPUInfo](/ps_reference/interfaces/gpuinfo/)
 - [HistoryStateInfo](/ps_reference/interfaces/historystateinfo/)
+- [OpenCLDeviceInfo](/ps_reference/interfaces/opencldeviceinfo/)
+- [OpenGLDeviceInfo](/ps_reference/interfaces/opengldeviceinfo/)
 
 ## Enumerations
 
@@ -44,3 +48,9 @@ These internal numbers are used by Photoshop as target color spaces during [phot
 | HSB | - |
 | Lab | - |
 | RGB | - |
+
+## Type aliases
+
+### CPUVendorKind
+
+Ƭ **CPUVendorKind**: ``"Intel"`` \| ``"AMD"`` \| ``"ARM"`` \| ``"Unknown"``

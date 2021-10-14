@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: Spectrum CSS
+description:
 ---
 
 # Spectrum CSS

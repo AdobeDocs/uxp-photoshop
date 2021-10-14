@@ -60,12 +60,12 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 | Name | Type |
 | :------ | :------ |
-| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/jpegsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/pngsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/saveoptions/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/saveoptions/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/saveoptions/jpegsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/saveoptions/pngsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 
 ## Properties
 
@@ -87,7 +87,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | guides | [*Guides*](/ps_reference/classes/guides/) | Read-only | - |
 | height | *number* | Read-only | Document&#x27;s height in pixels |
 | histogram | *number*[] | Read-only | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
-| historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document  **&#x60;readonly&#x60;** |
+| historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document |
 | id | *number* | Read-only | The internal ID of this document, valid as long as this document is open Can be used for batchPlay calls to refer to this document, used internally |
 | layers | [*Layers*](/ps_reference/classes/layers/) | Read-only | All the layers in the document at the top level |
 | mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color profile. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
@@ -97,7 +97,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | quickMaskMode | *boolean* | Read-write | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
 | resolution | *number* | Read-only | Document&#x27;s resolution (in pixels per inch) |
 | saved | *boolean* | Read-only | True if the document has been saved since the last change. |
-| title | *string* | Read-only | Document title &#x60;&#x60;&#x60;javascript const currentTitle &#x3D; doc.title &#x60;&#x60;&#x60;  **&#x60;readonly&#x60;** |
+| title | *string* | Read-only | Document title |
 | typename | *string* | Read-only | The class name of the referenced Document object |
 | width | *number* | Read-only | Document&#x27;s width in pixels |
 
@@ -114,7 +114,7 @@ Changes the color profile of the document
 | Name | Type |
 | :------ | :------ |
 | `mode` | [*ChangeMode*](/ps_reference/modules/constants/#changemode) |
-| `options?` | [*BitmapConversionOptions*](/ps_reference/objects/bitmapconversionoptions/) \| [*IndexedConversionOptions*](/ps_reference/objects/indexedconversionoptions/) |
+| `options?` | [*BitmapConversionOptions*](/ps_reference/objects/conversionoptions/bitmapconversionoptions/) \| [*IndexedConversionOptions*](/ps_reference/objects/conversionoptions/indexedconversionoptions/) |
 
 ___
 
@@ -136,6 +136,8 @@ ___
 ### closeWithoutSaving
 
 *void*
+
+Close the document, reverting all unsaved changes.
 
 ___
 
@@ -175,7 +177,7 @@ const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "col
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*LayerCreateOptions*](/ps_reference/objects/layercreateoptions/) |
+| `options?` | [*LayerCreateOptions*](/ps_reference/objects/createoptions/layercreateoptions/) |
 
 ___
 
@@ -183,7 +185,7 @@ ___
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/grouplayercreateoptions/)
+Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
 ```javascript
 const myEmptyGroup = await doc.createLayerGroup()
 const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, mode: "colorDodge" })
@@ -194,7 +196,7 @@ const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [l
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/grouplayercreateoptions/) |
+| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
 
 ___
 

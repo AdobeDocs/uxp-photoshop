@@ -64,7 +64,7 @@ no transparency.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/documentcreateoptions/) | @DocumentCreateOptions |
+| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 
