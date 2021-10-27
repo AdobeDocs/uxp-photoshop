@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP - Other Topics
+description:
 ---
 
 # UXP: Other Topics

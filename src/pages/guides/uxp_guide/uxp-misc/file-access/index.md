@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: File Access in UXP
+description:
 ---
 
 # File I/O

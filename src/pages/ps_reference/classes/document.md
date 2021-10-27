@@ -3,7 +3,7 @@ id: "document"
 title: "Document"
 sidebar_label: "Document"
 repo: "uxp-photoshop"
-index: "photoshop"
+product: "photoshop"
 keywords:
   - Creative Cloud
   - API Documentation
@@ -33,131 +33,139 @@ let fileEntry = require('uxp').storage.localFileSystem.getFileForOpening()
 const newDocument = await app.open('/project.psd')
 ```
 
-## Accessors
+## Properties
 
-###  activeLayers
+### saveAs
 
-• **get activeLayers**(): *[Layer](/ps_reference/classes/layer/)[]*
+• **saveAs**: *object*
 
-The selected layers in the document
-```javascript
-const layers = doc.activeLayers;
-const topLayer = layers[0]
-```
+Save the document to a desired file type.
 
-___
-
-###  backgroundLayer
-
-• **get backgroundLayer**(): *[Layer](/ps_reference/classes/layer/) | null*
-
-Background layer, if it exists
+For operations that require a UXP File token, use the UXP storage APIs to generate one.
+See https://www.adobe.com/go/ps-api-uxp-filesystemprovider.
 
 ```javascript
-const bgLayer = currentDocument.backgroundLayer
+let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");
+document.saveAs.psd(entry);
+
+// Save as a Copy (High JPG quality)
+document.saveAs.jpg(entryJpg, { quality: 12 }, true);
+
+// Save a PSB, with some options:
+document.saveAs.psb(entryPsb, { embedColorProfile: true });
+
 ```
 
-___
+#### Type declaration
 
-###  height
+| Name | Type |
+| :------ | :------ |
+| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/saveoptions/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/saveoptions/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/saveoptions/jpegsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/saveoptions/pngsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 
-• **get height**(): *number*
+## Properties
 
-Document's height in pixels
-
-___
-
-###  layerTree
-
-• **get layerTree**(): *LayerTypes[]*
-
-Top level layers in the document
-
-___
-
-###  layers
-
-• **get layers**(): *LayerTypes[]*
-
-All the layers in the document, in a flat list
-
-```javascript
-const layers = currentDocument.layers
-const topLayer = layers[0]
-```
-
-___
-
-###  path
-
-• **get path**(): *string*
-
-Path to this document, or it's identifier if a cloud document
-
-___
-
-###  resolution
-
-• **get resolution**(): *number*
-
-Document's resolution (in pixels per inch)
-
-For example, in the default PS document (7 in wide by 5 in tall at 300 ppi)
-```javascript
-const resolution = doc.resolution // 300
-const width = doc.width // 2100
-const height = doc.height // 1500
-```
-
-___
-
-###  title
-
-• **get title**(): *string*
-
-Document title
-```javascript
-const currentTitle = doc.title
-```
-
-**`readonly`** 
-
-___
-
-###  width
-
-• **get width**(): *number*
-
-Document's width in pixels
+| Name | Type | Access | Description |
+| :------ | :------ | :------ | :------ |
+| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | Read-write | Currently active channels of the document |
+| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | The history state that history brush tool will use as its source |
+| activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | Currently active history state of the document |
+| activeLayers | [*Layers*](/ps_reference/classes/layers/) | Read-only | The selected layers in the document |
+| artboards | [*Layers*](/ps_reference/classes/layers/) | Read-only | The artboards in the document |
+| backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | Read-only | Background layer, if it exists |
+| bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | Read-write | The bits per color channel. |
+| channels | [*Channels*](/ps_reference/classes/channels/) | Read-only | All channels in the document. |
+| cloudDocument | *boolean* | Read-only | This document is in the Adobe Creative Cloud. |
+| cloudWorkAreaDirectory | *string* | Read-only | Local directory for this cloud document. |
+| colorProfileName | *string* | Read-write | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise |
+| colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | Read-write | Whether the document uses the working color profile, a custom profile, or no profile. |
+| compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | Read-only | Composite channels in the document. |
+| guides | [*Guides*](/ps_reference/classes/guides/) | Read-only | - |
+| height | *number* | Read-only | Document&#x27;s height in pixels |
+| histogram | *number*[] | Read-only | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
+| historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document |
+| id | *number* | Read-only | The internal ID of this document, valid as long as this document is open Can be used for batchPlay calls to refer to this document, used internally |
+| layers | [*Layers*](/ps_reference/classes/layers/) | Read-only | All the layers in the document at the top level |
+| mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color profile. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
+| name | *string* | Read-only | The name of the document |
+| path | *string* | Read-only | Full file system path to this document, or the identifier if it is a cloud document |
+| pixelAspectRatio | *number* | Read-write | The (custom) pixel aspect ratio to use |
+| quickMaskMode | *boolean* | Read-write | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
+| resolution | *number* | Read-only | Document&#x27;s resolution (in pixels per inch) |
+| saved | *boolean* | Read-only | True if the document has been saved since the last change. |
+| title | *string* | Read-only | Document title |
+| typename | *string* | Read-only | The class name of the referenced Document object |
+| width | *number* | Read-only | Document&#x27;s width in pixels |
 
 ## Methods
 
-###  close
+### changeMode
 
-▸ **close**(`saveDialogOptions?`: SaveDialogOptions): *Promise‹void›*
+**async** : *Promise*<void\>
+
+Changes the color profile of the document
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `mode` | [*ChangeMode*](/ps_reference/modules/constants/#changemode) |
+| `options?` | [*BitmapConversionOptions*](/ps_reference/objects/conversionoptions/bitmapconversionoptions/) \| [*IndexedConversionOptions*](/ps_reference/objects/conversionoptions/indexedconversionoptions/) |
+
+___
+
+### close
+
+**async** : *Promise*<void\>
 
 Closes the document, showing a prompt to save
 unsaved changes if specified
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`saveDialogOptions?` | SaveDialogOptions |
+| Name | Type |
+| :------ | :------ |
+| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) |
 
 ___
 
-###  closeWithoutSaving
+### closeWithoutSaving
 
-▸ **closeWithoutSaving**(): *void*
+*void*
+
+Close the document, reverting all unsaved changes.
 
 ___
 
-###  createLayer
+### convertProfile
 
-▸ **createLayer**(`options?`: LayerCreateOptions): *Promise‹[Layer](/ps_reference/classes/layer/) | null›*
+**async** : *Promise*<void\>
+
+Changes the color profile.
+
+`destinationProfile` must be either a string that names the color mode,
+or one of these below, meaning of the working color spaces or Lab color.
+
+`"Working RGB", "Working CMYK", "Working Gray", "Lab Color"`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `destinationProfile` | *string* |
+| `intent` | [*Intent*](/ps_reference/modules/constants/#intent) |
+| `blackPointCompensation?` | *boolean* |
+| `dither?` | *boolean* |
+
+___
+
+### createLayer
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Create a layer. See @CreateOptions
 ```javascript
@@ -165,57 +173,72 @@ const myEmptyLayer = await doc.createLayer()
 const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "colorDodge" })
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`options?` | LayerCreateOptions |
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*LayerCreateOptions*](/ps_reference/objects/createoptions/layercreateoptions/) |
 
 ___
 
-###  createLayerGroup
+### createLayerGroup
 
-▸ **createLayerGroup**(`options?`: GroupLayerCreateOptions): *Promise‹[GroupLayer](/ps_reference/classes/grouplayer/) | null›*
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a layer group. See @CreateOptions
+Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
 ```javascript
 const myEmptyGroup = await doc.createLayerGroup()
 const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, mode: "colorDodge" })
 const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [layer1, layer2] })
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`options?` | GroupLayerCreateOptions |
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
 
 ___
 
-###  crop
+### crop
 
-▸ **crop**(`bounds`: PsCommon.Bounds, `angle`: number): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Crops the document to given bounds
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Default | Description |
------- | ------ | ------ | ------ |
-`bounds` | PsCommon.Bounds | - | - |
-`angle` | number | 0 |   |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - |
+| `angle` | *number* | 0 |
+| `width` | *number* | 0 |
+| `height` | *number* | 0 |
 
 ___
 
-###  duplicateLayers
+### duplicate
 
-▸ **duplicateLayers**(`layers`: [Layer](/ps_reference/classes/layer/)[], `targetDocument?`: [Document](/ps_reference/classes/document/)): *Promise‹[Layer](/ps_reference/classes/layer/)[]›*
+*Promise*<[*Document*](/ps_reference/classes/document/)\>
+
+Creates a duplicate of the document, making the duplicate active.
+
+The optional parameter `name` provides the name for the duplicated document.
+
+The optional parameter `mergeLayersOnly` indicates whether to only duplicate merged layers.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | *string* |
+| `mergeLayersOnly?` | *boolean* |
+
+___
+
+### duplicateLayers
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)[]\>
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
@@ -226,33 +249,29 @@ layerCopies.forEach((layer) => { layer.blendMode = 'multiply' })
 // ...to another document
 const finalDoc = await photoshop.open('~/path/to/collated/image.psd')
 await document.duplicateLayers([logo1, textLayer1], finalDoc)
-await finalDoc.close(SaveDialogOptions.SAVE_CHANGES)
+await finalDoc.close(SaveOptions.SAVECHANGES)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`layers` | [Layer](/ps_reference/classes/layer/)[] | - |
-`targetDocument?` | [Document](#) | if specified, duplicate to a different document target.  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `layers` | [*Layer*](/ps_reference/classes/layer/)[] |  |
+| `targetDocument?` | [*Document*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
 
 ___
 
-###  flatten
+### flatten
 
-▸ **flatten**(): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Flatten all layers in the document
 
-**`async`** 
-
 ___
 
-###  groupLayers
+### groupLayers
 
-▸ **groupLayers**(`layers`: [Layer](/ps_reference/classes/layer/)[]): *Promise‹[GroupLayer](/ps_reference/classes/grouplayer/) | null›*
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Create a layer group from existing layers.
 ```javascript
@@ -260,45 +279,62 @@ const layers = doc.layers
 const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`layers` | [Layer](/ps_reference/classes/layer/)[] |
+| Name | Type |
+| :------ | :------ |
+| `layers` | [*Layer*](/ps_reference/classes/layer/)[] |
 
 ___
 
-###  linkLayers
+### linkLayers
 
-▸ **linkLayers**(`layers`: [Layer](/ps_reference/classes/layer/)[]): *[Layer](/ps_reference/classes/layer/)[]*
+[*Layer*](/ps_reference/classes/layer/)[]
 
 Links layers together if possible, and returns a list of linked layers.
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Description |
------- | ------ | ------ |
-`layers` | [Layer](/ps_reference/classes/layer/)[] | array of layers to link together |
-
-array of successfully linked layers
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `layers` | [*Layer*](/ps_reference/classes/layer/)[] | array of layers to link together |
 
 ___
 
-###  mergeVisibleLayers
+### mergeVisibleLayers
 
-▸ **mergeVisibleLayers**(): *Promise‹void›*
+**async** : *Promise*<void\>
 
-Flattens all visible layers in the document
-
-**`async`** 
+Merges all visible layers in the document into a single layer.
 
 ___
 
-###  resizeCanvas
+### paste
 
-▸ **resizeCanvas**(`width`: number, `height`: number, `anchor?`: AnchorPosition): *Promise‹void›*
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Pastes the contents of the clipboard into the document. If the optional argument is
+set to true and a selection is active, the contents are pasted into the selection.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `intoSelection?` | *boolean* |
+
+___
+
+### rasterizeAllLayers
+
+**async** : *Promise*<void\>
+
+Rasterizes all layers.
+
+___
+
+### resizeCanvas
+
+**async** : *Promise*<void\>
 
 Changes the size of the canvas, but does not change image size
 To change the image size, see [resizeImage](/ps_reference/classes/document/#resizeimage)
@@ -310,21 +346,19 @@ let height = await document.height
 await document.resizeCanvas(width + 400, height + 400)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`width` | number | Numeric value of new width in pixels |
-`height` | number | Numeric value of new height in pixels |
-`anchor?` | AnchorPosition | Anchor point for resizing, by default will resize an equal amount on all sides. <br/> Of format:                <br/>[top/middle/bottom]-[left/center/right]  |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `width` | *number* | Numeric value of new width in pixels |
+| `height` | *number* | Numeric value of new height in pixels |
+| `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
 
 ___
 
-###  resizeImage
+### resizeImage
 
-▸ **resizeImage**(`width`: number, `height`: number, `resolution?`: number, `resampleMethod?`: ResampleMethod): *Promise‹void›*
+**async** : *Promise*<void\>
 
 Changes the size of the image
 
@@ -332,61 +366,128 @@ Changes the size of the image
 await document.resizeImage(800, 600)
 ```
 
-**`async`** 
+#### Parameters
 
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`width` | number | Numeric value of new width in pixels |
-`height` | number | Numeric value of new height in pixels |
-`resolution?` | number | Image resolution in pixels per inch (ppi) |
-`resampleMethod?` | ResampleMethod | Method used during image interpolation.<br/>                        Possible values are:<br/>                        <ul>                        <li>nearestNeighbor</li>                        <li>bilinear</li>                        <li>bicubic</li>                        <li>bicubicSmoother</li>                        <li>bicubicSharper</li>                        <li>bicubicAutomatic</li>                        <li>preserveDetailsUpscale</li>                        <li>deepUpscale</li>                        </ul>  |
-
-___
-
-###  rotate
-
-▸ **rotate**(`angles`: number): *Promise‹void›*
-
-Rotates the image clockwise in given angle, expanding canvas if necessary
-
-**`async`** 
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`angles` | number |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `width?` | *number* | Numeric value of new width in pixels |
+| `height?` | *number* | Numeric value of new height in pixels |
+| `resolution?` | *number* | Image resolution in pixels per inch (ppi) |
+| `resampleMethod?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Method used during image interpolation. |
+| `amount?` | *number* | Numeric value that controls the amount of noise value when using preserve details 0..100 |
 
 ___
 
-###  save
+### revealAll
 
-▸ **save**(`entry?`: File, `saveOptions?`: SaveOptions): *Promise‹void›*
+**async** : *Promise*<void\>
 
-Saves the document or a copy, the format is deduced by the extension
+Expands the document to show clipped sections.
+
+___
+
+### rotate
+
+**async** : *Promise*<void\>
+
+Rotates the image clockwise in given angle, expanding canvas if necessary. (Previously rotateCanvas)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `angles` | *number* |
+
+___
+
+### save
+
+**async** : *Promise*<void\>
+
+Performs a save of the document. The user will be presented with
+a Save dialog if the file has yet to be saved on disk.
 
 ```javascript
-// To save a document in the same location
+// To save a document in the current location
 document.save()
 
 // Shows the save dialog
 unsavedDocument.save()
-
-// To save to a path, use UXP storage APIs to get a file for saving
-let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd")
-document.save(entry)
-
-// To save to a path, but with some options:
-document.save(entry, { embedColorProfile: true })
 ```
 
-**`async`** 
+___
 
-**Parameters:**
+### splitChannels
 
-Name | Type |
------- | ------ |
-`entry?` | File |
-`saveOptions?` | SaveOptions |
+**async** : *Promise*<[*Document*](/ps_reference/classes/document/)[]\>
+
+Splits the document channels into separate, single-channel
+documents.
+
+___
+
+### suspendHistory
+
+*Promise*<any\>
+
+Creates a single history state encapsulating everything that is done
+in the callback, only for this document. All changes to the document should
+be done in this callback.
+
+Note: If you make changes to any other document, those changes will
+not be suspended in the same history state.
+
+The callback is passed in a SuspendHistoryContext object,
+which contains the current document in a variable `document`.
+
+For more info and advanced context, see [`core.executeAsModal`](../media/executeAsModal)
+API, for which this API is a simple wrapper for.
+
+```javascript
+   require("photoshop").app.activeDocument.suspendHistory(async (context) => {
+       // context.document is the `app.activeDocument`
+       context.document.activeLayers[0].name = "Changed name";
+   });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`e`: SuspendHistoryContext) => *void* |
+| `historyStateName` | *string* |
+
+___
+
+### trap
+
+**async** : *Promise*<void\>
+
+Applies trapping to a CMYK document.
+
+Valid only when [Document.mode](/ps_reference/classes/document/#mode) is `Constants.DocumentMode.CMYK`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `width` | *number* |
+
+___
+
+### trim
+
+**async** : *Promise*<void\>
+
+Trims the transparent area around the image on the specified sides of the canvas
+base on trimType
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `trimType` | [*TrimType*](/ps_reference/modules/constants/#trimtype) | - |
+| `top` | *boolean* | true |
+| `left` | *boolean* | true |
+| `bottom` | *boolean* | true |
+| `right` | *boolean* | true |

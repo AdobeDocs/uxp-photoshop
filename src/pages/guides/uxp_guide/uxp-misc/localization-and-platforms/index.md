@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: Localization and Platforms
+description:
 ---
 
 # Localization and Platforms

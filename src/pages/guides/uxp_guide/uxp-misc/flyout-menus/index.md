@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: Flyout Menus in UXP Photoshop
+description:
 ---
 
 # Flyout Menus

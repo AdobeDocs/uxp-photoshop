@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: UXP for XD Developers
+description:
 ---
 
 # UXP in Photoshop vs Other Creative Cloud Applications

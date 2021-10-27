@@ -9,6 +9,8 @@ keywords:
   - SDK
   - C++
   - Scripting
+title: Icons for Your Plugins
+description:
 ---
 
 # Icons for Your Plugins
