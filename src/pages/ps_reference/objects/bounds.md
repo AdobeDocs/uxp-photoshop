@@ -35,3 +35,15 @@ Defines a rectangle. This is a WIP
 | :------ | :------ | :------ | :------ |
 | height | *number* | Read-only | Calculated height |
 | width | *number* | Read-only | Calculated width |
+
+## Methods
+
+### union
+
+[*Bounds*](/ps_reference/objects/bounds/)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `inBounds` | [*Bounds*](/ps_reference/objects/bounds/) |

@@ -68,6 +68,27 @@ await PhotoshopAction.batchPlay(commands)
 
 ___
 
+### batchPlaySync
+
+[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]
+
+Performs a batchPlay call with the provided commands. Equivalent
+to an `executeAction` in ExtendScript.
+```javascript
+var target = { _ref: 'layer', _enum: 'ordinal', _value: 'targetEnum'}
+var commands = [{ _obj: 'hide', _target: target }]
+await PhotoshopAction.batchPlay(commands)
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
+| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
+
+___
+
 ### removeNotificationListener
 
 *Promise*<void\>
@@ -80,3 +101,18 @@ Detaches a listener from a Photoshop event.
 | :------ | :------ |
 | `events` | *string*[] |
 | `notifier` | NotificationListener |
+
+___
+
+### validateReference
+
+*boolean*
+
+Synchronously validates the given action reference, returning true if it still
+exists. For example, calling this with a closed document would return false.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ref` | ActionReference \| ActionReference[] |

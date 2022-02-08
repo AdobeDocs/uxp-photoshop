@@ -133,13 +133,15 @@ async function targetFunction(executionControl) {
   executionControl.reportProgress({"value": 0.3});
 }
 ```
-Setting a value will switch the progress bar to be a determinate progress bar.
+Setting a value will switch the progress bar to be a determinate progress bar & show the progress bar if it is not yet visible.
 
 JavaScript can change the commandName that is shown in the progress UI by using the "commandName" property. This can be used to inform the user about the current stage of the operation. Example:
 ```javascript
     executionControl.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
 ```
 ![progress bar](./assets/progress-bar-2.png)
+
+The progress bar is hidden while modal UI is shown.
 
 #### History state suspension
 The hostControl property on the executionContext can be used to suspend and resume history states. While a history state is suspended, Photoshop will coalesce all document changes into a single history state with a custom name.

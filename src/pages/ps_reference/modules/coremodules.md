@@ -35,20 +35,6 @@ keywords:
 - [OpenCLDeviceInfo](/ps_reference/interfaces/opencldeviceinfo/)
 - [OpenGLDeviceInfo](/ps_reference/interfaces/opengldeviceinfo/)
 
-## Enumerations
-
-### ColorConversionModel
-
-These internal numbers are used by Photoshop as target color spaces during [photoshopCore.convertColor](/ps_reference/media/photoshopcore/#convertcolor) calls.
-
-| Name | Description |
-| :------ | :------ |
-| CMYK | - |
-| Gray | - |
-| HSB | - |
-| Lab | - |
-| RGB | - |
-
 ## Type aliases
 
 ### CPUVendorKind

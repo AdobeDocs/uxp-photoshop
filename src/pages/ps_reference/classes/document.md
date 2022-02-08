@@ -93,6 +93,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color profile. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
 | name | *string* | Read-only | The name of the document |
 | path | *string* | Read-only | Full file system path to this document, or the identifier if it is a cloud document |
+| pathItems | [*PathItems*](/ps_reference/classes/pathitems/) | Read-only | The collection of paths in this document, currently shown in the Paths panel. [*Added in 23.3*](/ps_reference/changelog/) |
 | pixelAspectRatio | *number* | Read-write | The (custom) pixel aspect ratio to use |
 | quickMaskMode | *boolean* | Read-write | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
 | resolution | *number* | Read-only | Document&#x27;s resolution (in pixels per inch) |
@@ -428,7 +429,7 @@ ___
 
 ### suspendHistory
 
-*Promise*<any\>
+*Promise*<void\>
 
 Creates a single history state encapsulating everything that is done
 in the callback, only for this document. All changes to the document should

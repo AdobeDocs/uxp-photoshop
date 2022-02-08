@@ -20,6 +20,18 @@ keywords:
 
 ## Properties
 
+### commandEnablement
+
+• `Optional` **commandEnablement**: ``"normal"`` \| ``"never"`` \| ``"always"``
+
+___
+
+### dialogOptions
+
+• `Optional` **dialogOptions**: ``"silent"`` \| ``"dontDisplay"`` \| ``"display"``
+
+___
+
 ### historyStateInfo
 
 • `Optional` **historyStateInfo**: *object*
@@ -42,3 +54,21 @@ ___
 ### propagateErrorToDefaultHandler
 
 • `Optional` **propagateErrorToDefaultHandler**: *boolean*
+
+___
+
+### suppressPlayLevelIncrease
+
+• `Optional` **suppressPlayLevelIncrease**: *boolean*
+
+___
+
+### synchronousExecution
+
+• `Optional` **synchronousExecution**: *boolean*
+
+___
+
+### useMultiGet
+
+• `Optional` **useMultiGet**: *boolean*

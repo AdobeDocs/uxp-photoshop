@@ -33,6 +33,18 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 
   ↳ **Channels**
 
+## Indexable
+
+▪ [index: *number*]: [*Channel*](/ps_reference/classes/channel/)
+
+Used to access the channels in the collection
+
+```javascript
+// Iterate through all channels in the document
+app.activeDocument.channels.forEach(h => console.log(h.name));
+
+```
+
 ## Properties
 
 | Name | Type | Access | Description |

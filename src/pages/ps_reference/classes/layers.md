@@ -33,6 +33,17 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
   ↳ **Layers**
 
+## Indexable
+
+▪ [index: *number*]: [*Layer*](/ps_reference/classes/layer/)
+
+Used to access the layers in the collection
+
+```javascript
+// Iterate through all the top layers of frontmost document
+app.activeDocument.layers.forEach(h => console.log(h.name));
+```
+
 ## Properties
 
 | Name | Type | Access | Description |

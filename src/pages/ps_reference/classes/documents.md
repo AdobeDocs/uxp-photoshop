@@ -33,6 +33,17 @@ app.documents.forEach(h => console.log(h.title));
 
   ↳ **Documents**
 
+## Indexable
+
+▪ [index: *number*]: [*Document*](/ps_reference/classes/document/)
+
+Used to access the documents in the collection
+
+```javascript
+// Iterate through all the documents
+app.documents.forEach(h => console.log(h.title));
+```
+
 ## Properties
 
 | Name | Type | Access | Description |

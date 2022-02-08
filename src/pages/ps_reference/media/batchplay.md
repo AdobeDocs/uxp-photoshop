@@ -141,9 +141,18 @@ A batchPlay command can also fail if a valid command cannot be procesed by Photo
 
 The previously shown example to [hide the active layer](#hidelayerexample) will fail if no documents are open, because the command can then not find the target layer to hide. For such cases the `batchPlay` promise is resolved successfully, and an error message is returned in a list form.
 ```javascript
-   [{message: "The object “current document” is not currently available."}]
+[
+  {
+  _obj: "error"
+  message: "The object “current document” is not currently available."
+  result: -25922
+  }
+]
 ```
-The elements in the returned list match the action descriptor list passed to batchPlay. The first item in the returned list is the result of the first action descriptor in the batchPlay, and so forth.
+The elements in the returned list match the action descriptor list passed to batchPlay. The first item in the returned list is the result of the first action descriptor in the batchPlay, and so forth. The properties of the returned elements are:
+* `_obj: string`. The value is "Error"
+* `message: string`. A localized error message
+* `result: number`. An internal Photoshop error code. A "0" means "no error". -128 means that the user cancelled the operation. Other values are possible.
 
 ### Action references
 Action references specify which DOM objects a command operates on. An action reference is specified using the `_target` keyword.

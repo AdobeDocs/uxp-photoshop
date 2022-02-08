@@ -167,6 +167,43 @@ The type of a color channel.
 
 ___
 
+### ColorBlendMode
+
+The way color should be blended in a fill or stroke operation.
+Pass to [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
+
+| Name | Description |
+| :------ | :------ |
+| BEHIND | - |
+| CLEAR | - |
+| COLOR | - |
+| COLORBURN | - |
+| COLORDODGE | - |
+| DARKEN | - |
+| DARKERCOLOR | - |
+| DIFFERENCE | - |
+| DISSOLVE | - |
+| EXCLUSION | - |
+| HARDLIGHT | - |
+| HARDMIXBLEND | - |
+| HUE | - |
+| LIGHTEN | - |
+| LIGHTERCOLOR | - |
+| LINEARBURN | - |
+| LINEARDODGE | - |
+| LINEARLIGHT | - |
+| LUMINOSITY | - |
+| MULTIPLY | - |
+| NORMAL | - |
+| OVERLAY | - |
+| PINLIGHT | - |
+| SATURATION | - |
+| SCREEN | - |
+| SOFTLIGHT | - |
+| VIVIDLIGHT | - |
+
+___
+
 ### ColorModel
 
 The color model representing the current color space
@@ -440,6 +477,31 @@ The palette type to use
 
 ___
 
+### PathKind
+
+The type of a [PathItem](/ps_reference/classes/pathitem/)
+
+| Name | Description |
+| :------ | :------ |
+| CLIPPINGPATH | - |
+| NORMALPATH | - |
+| TEXTMASK | - |
+| VECTORMASK | - |
+| WORKPATH | - |
+
+___
+
+### PointKind
+
+The role a [PathPoint](/ps_reference/classes/pathpoint/) plays in a [PathItem](/ps_reference/classes/pathitem/)
+
+| Name | Description |
+| :------ | :------ |
+| CORNERPOINT | - |
+| SMOOTHPOINT | - |
+
+___
+
 ### RasterizeType
 
 The type of layer to get rasterized.
@@ -496,6 +558,60 @@ The policy for closing a document
 | DONOTSAVECHANGES | Will close document without saving, discarding changes |
 | PROMPTTOSAVECHANGES | Will ask the user if they&#x27;d like to save changes, blocking the script |
 | SAVECHANGES | Will save all existing changes before closing, prompting if document is not saved yet |
+
+___
+
+### SelectionType
+
+The selection behavior when a selection already exists.
+Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)()
+
+| Name | Description |
+| :------ | :------ |
+| DIMINISH | Remove the selection from the already selected area |
+| EXTEND | Add the selection to an already selected area |
+| INTERSECT | Make the selection only the area where the new selection intersectes the already selected area |
+| REPLACE | Replace the selected area |
+
+___
+
+### ShapeOperation
+
+How to combine the shapes if the destination path already has a selection.
+
+Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), stored in the resulting [SubPathItem](/ps_reference/classes/subpathitem/)
+
+| Name | Description |
+| :------ | :------ |
+| SHAPEADD | - |
+| SHAPEINTERSECT | - |
+| SHAPESUBTRACT | - |
+| SHAPEXOR | - |
+
+___
+
+### ToolType
+
+The tool to use with [PathItem.strokePath](/ps_reference/classes/pathitem/#strokepath)()
+
+| Name | Description |
+| :------ | :------ |
+| ARTHISTORYBRUSH | - |
+| BACKGROUNDERASER | - |
+| BLUR | - |
+| BRUSH | - |
+| BURN | - |
+| CLONESTAMP | - |
+| COLORREPLACEMENTTOOL | - |
+| DODGE | - |
+| ERASER | - |
+| HEALINGBRUSH | - |
+| HISTORYBRUSH | - |
+| PATTERNSTAMP | - |
+| PENCIL | - |
+| SHARPEN | - |
+| SMUDGE | - |
+| SPONGE | - |
 
 ___
 

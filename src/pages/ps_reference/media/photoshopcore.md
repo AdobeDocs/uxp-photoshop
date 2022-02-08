@@ -83,7 +83,7 @@ based on embedded color profiles.
 | Name | Type |
 | :------ | :------ |
 | `sourceColor` | ColorDescriptor |
-| `targetModel` | [*ColorConversionModel*](/ps_reference/modules/coremodules/#colorconversionmodel) |
+| `targetModel` | ColorConversionModel |
 
 ___
 
@@ -205,6 +205,41 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 
 ___
 
+### getPluginInfo
+
+*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
+
+Return information about the execution of the plugin.
+This method is intended for developing plugins.
+Shipping code should not use this method.
+
+The returned information include the following properties:
+
+`numberOfPendingMainThreadTasks`: Number of pending promises.
+
+`batchPlayCount`: Number of `batchPlay` calls since the plugin was loaded.
+
+`mainThreadTimeOutCount`: Number of JavaScript calls that have timed out.
+This is typically caused by executing commands while Photoshop is modal without using
+`executeAsModal`.
+
+`v8HeapSize`: V8 heap allocated for the plugin. This number is only accurate
+when loading plugins through the UXP Developer Tool.
+
+```javascript
+await PhotoshopCore.getPluginInfo()
+```
+
+___
+
+### isModal
+
+*boolean*
+
+ Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal)
+
+___
+
 ### performMenuCommand
 
 *Promise*<boolean\>
@@ -223,6 +258,35 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 | `options` | *object* |
 | `options.commandID` | *number* |
 | `options.scheduling?` | Scheduling |
+
+___
+
+### setExecutionMode
+
+*Promise*<void\>
+
+The execution mode can be used while debugging a plugin. It is only available
+when the developer mode is enabled.
+
+The following example illustrate how to enable stacktraces for batchPlay commands
+that fail. When stacktraces are enabled, then an error result descriptor from a
+batchPlay request will include a stacktrace property. The property can be used when
+reporting bugs to Adobe.
+```javascript
+await PhotoshopCore.setExecutionMode({ enableErrorStacktraces: true })
+```
+The following illustrates how to enable console warnings when a promise is rejected:
+```javascript
+await PhotoshopCore.setExecutionMode({ logRejections: true })
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | *object* |
+| `options.enableErrorStacktraces?` | *boolean* |
+| `options.logRejections?` | *boolean* |
 
 ___
 

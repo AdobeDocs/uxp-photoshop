@@ -27,6 +27,12 @@ The collection of fonts available on your computer. Fonts are represented by
 
   ↳ **TextFonts**
 
+## Indexable
+
+▪ [index: *number*]: [*TextFont*](/ps_reference/classes/textfont/)
+
+Used to access the text fonts in the collection
+
 ## Properties
 
 | Name | Type | Access | Description |

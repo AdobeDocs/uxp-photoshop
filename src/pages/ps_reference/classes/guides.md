@@ -27,6 +27,19 @@ following adds a new guide to the collection:
 app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 ```
 
+## Indexable
+
+▪ [index: *number*]: [*Guide*](/ps_reference/classes/guide/)
+
+Used to access the guides in the collection
+
+Access this collection through [Document.guides](/ps_reference/classes/document/#guides) property. For example,
+following adds a new guide to the collection:
+
+```javascript
+app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
+```
+
 ## Properties
 
 | Name | Type | Access | Description |

@@ -32,8 +32,20 @@ module.exports = [{
 			"path": "/ps_reference/classes/layer/"
 		},
 		{
+			"title": "PathItem",
+			"path": "/ps_reference/classes/pathitem/"
+		},
+		{
+			"title": "PathPoint",
+			"path": "/ps_reference/classes/pathpoint/"
+		},
+		{
 			"title": "Photoshop",
 			"path": "/ps_reference/classes/photoshop/"
+		},
+		{
+			"title": "SubPathItem",
+			"path": "/ps_reference/classes/subpathitem/"
 		},
 		{
 			"title": "Channels",
@@ -56,12 +68,32 @@ module.exports = [{
 			"path": "/ps_reference/classes/layers/"
 		},
 		{
+			"title": "PathItems",
+			"path": "/ps_reference/classes/pathitems/"
+		},
+		{
+			"title": "PathPoints",
+			"path": "/ps_reference/classes/pathpoints/"
+		},
+		{
+			"title": "SubPathItems",
+			"path": "/ps_reference/classes/subpathitems/"
+		},
+		{
 			"title": "TextFonts",
 			"path": "/ps_reference/classes/textfonts/"
 		},
 		{
+			"title": "PathPointInfo",
+			"path": "/ps_reference/classes/pathpointinfo/"
+		},
+		{
 			"title": "SolidColor",
 			"path": "/ps_reference/classes/solidcolor/"
+		},
+		{
+			"title": "SubPathInfo",
+			"path": "/ps_reference/classes/subpathinfo/"
 		},
 		{
 			"title": "TextFont",
@@ -234,5 +266,10 @@ module.exports = [{
 	"title": "Constants",
 	"header": true,
 	"path": "/ps_reference/modules/constants/"
+},
+    {
+	"title": "API Changelog",
+	"header": true,
+	"path": "/ps_reference/changelog/"
 }
 ]

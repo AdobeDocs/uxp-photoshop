@@ -30,7 +30,8 @@ The following illustrates the use of the `apiVersion` field.
         "app": "PS",
         "minVersion": "23.0.0",
         "data" : {
-          "apiVersion": 2
+          "apiVersion": 2,
+          "loadEvent": "use"
         }
     },
 }
@@ -61,3 +62,15 @@ The apiVersion field is optional. Its default value depends on the version of Ph
 Most plugins will be able to use apiVersion 2.
 
 Specialized plugins that rely on the Photoshop menu state, or on other non-modal user interactions while the plugin is running may need to stay with apiVersion 1 until such use cases are fully supported by Photoshop.
+
+## loadEvent
+
+> `Available in Photoshop 23.1 and later`
+
+Plugins use memory and CPU resources when loaded. In order to minimize the impact on general Photoshop performance, plugins are by default loaded only when needed. The default mechanism will load a plugin when its panel UI becomes visible, or when the user chooses to execute a plugin command from the `Plugins` menu.
+
+Certain use cases require that a plugin is loaded when Photoshop is launched. Such use cases include plugins that listen and respond to user actions, and plugins that needs to communicate with a remote server or process when Photoshop is running.
+
+The loadEvent field allows a plugin to specify when it is loaded. The possible values are:
+* `use`: The plugin is loaded when needed (when its UI become visible, or when a plugin command is executed). This is the default value.
+* `startup`: The plugin is loaded automatically shortly after Photoshop is launched.

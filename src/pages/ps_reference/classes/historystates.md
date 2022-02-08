@@ -29,6 +29,20 @@ app.activeDocument.historyStates.forEach(h => console.log(h.name));
 var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 ```
 
+## Indexable
+
+▪ [index: *number*]: [*HistoryState*](/ps_reference/classes/historystate/)
+
+Used to access the history states in the collection
+
+```javascript
+// Iterate through all history states
+app.activeDocument.historyStates.forEach(h => console.log(h.name));
+
+// Find all snapshot history states
+var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
+```
+
 ## Properties
 
 | Name | Type | Access | Description |

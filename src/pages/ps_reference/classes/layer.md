@@ -70,8 +70,8 @@ ___
 
 **async** : *Promise*<void\>
 
-Clears the layer and does not copy to the clipboard.
-If no selection is found then select all the pixels and then cut.
+Clears the layer pixels and does not copy to the clipboard.
+If no pixel selection is found, select all pixels and clear.
 
 ___
 
