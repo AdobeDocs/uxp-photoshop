@@ -57,6 +57,20 @@ module.exports = {
           {
             title: "Quickstart Guide",
             path: "/guides/",
+            pages: [
+              {
+                title: "Creating your first plugin",
+                path: "/guides/getting-started/creating-your-first-plugin/"
+              },
+              {
+                title: "Editing the document",
+                path: "/guides/getting-started/editing-the-document/"
+              },
+              {
+                title: "Writing a file with UXP",
+                path: "/guides/getting-started/writing-a-file/"
+              }
+            ]
           },
           {
             title: "The UXP manifest",
