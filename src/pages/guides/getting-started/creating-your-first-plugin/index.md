@@ -44,7 +44,7 @@ As well as some other "meta" files like `LICENSE`, `README.md`, etc.
 
 Open Adobe Photoshop and create some sample file you can use with your plugin.
 
-To run your plugin within Photoshop, click the button on the right of your plugin's row within the UDT and select _"
+To run your plugin within Photoshop, click the _"•••"_ button on the right of your plugin's row within the UDT and select _"
 Load"_. This loads your plugin in Photoshop and automatically opens the plugin's panel.
 
 The _ps-starter_ template initially contains a panel with a _"Populate Layers"_ button that allows you to populate a box
@@ -113,7 +113,7 @@ As you can see, the `index.html` file then loads the `index.js`.
 
 Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](/src/pages/uxp/reference-html/General/Unsupported%20Elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](/src/pages/uxp/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
 
-The `index.js` file then sets up a click listener on the _"Populate
+The `index.js` file then sets up a `click` listener on the _"Populate
 Layers"_ button and uses the [Photoshop API](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/) to populate the `<sp-body id="layers" />` element with the layer names:
 
 ```js
@@ -138,7 +138,7 @@ example.
 
 ## Step 3: Adjust the plugin
 
-_If we were lazy, we could already call it a day. But let's face it: This doesn't feel like you've built your own
+_We could call this good enough, but let's face it: This doesn't feel like you've built your own
 plugin. So let us at least add some customization to it by adding additional information about our layer to the output._
 
 Have a look at the [`Layer` class API Reference](/src/pages/ps_reference/classes/layer.md). This page lists all the
@@ -160,7 +160,7 @@ function showLayerNames() {
 ```
 
 With your `main.js` file saved, you need to reload the plugin to run the plugin including your changes. You can do this
-by selecting the _"Reload"_ option in the UXP Developer Tool.
+by selecting the _"••• > Reload"_ option in the UXP Developer Tool.
 
 <InlineAlert variant="warning" slots="text"></InlineAlert>
 

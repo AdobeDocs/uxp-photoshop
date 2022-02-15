@@ -105,8 +105,12 @@ To fix this, change your layer loop to the following:
 ```js
 // [...]
 app.activeDocument.layers.forEach((layer) => {
-  const baseName = layer.name.match(/^(.*?)( \(\d+ %\))?$/)[1];
-  layer.name = `${baseName} (${layer.opacity} %)`;
+    // Regular Expression that searches for the layer's name
+    // without a previously appended layer opacity.
+    // Cf. https://regex101.com/r/iWF1Yw/1
+    const regExp = /^(.*?)( \(\d+ %\))?$/;
+    const baseName = layer.name.match(regExp)[1];
+    layer.name = `${baseName} (${layer.opacity} %)`;
 });
 // [...]
 ```
