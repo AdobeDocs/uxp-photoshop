@@ -1,6 +1,6 @@
 ---
 title: Creating your first plugin
-description: Create your first own Photoshop plugin using UXP.
+description: Create your first own (panel) Photoshop plugin using UXP.
 contributors:
   - https://github.com/pklaschka
 ---

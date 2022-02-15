@@ -1,11 +1,11 @@
 ---
 title: Editing the document
-description: Make edits to your Photoshop documents with your UXP-based plugin
+description: Edit your Photoshop documents (e.g., changing the layer names) with your UXP-based plugin
 contributors:
   - https://github.com/pklaschka
 ---
 
-# Editing the document
+# Editing the Photoshop document
 
 In this tutorial, you'll learn how to edit your document (more specifically, edit the layer names within your document).
 
