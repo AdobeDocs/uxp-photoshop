@@ -10,6 +10,10 @@ on:
         description: 'Clean cache (yes|no)'
         required: true
         default: 'no'
+      excludeSubfolder:
+        description: 'Exclude a subfolder from deletion'
+        required: false
+        default: ''
 jobs:
   set-state:
     runs-on: ubuntu-latest
@@ -19,6 +23,7 @@ jobs:
       clean_cache: ${{ contains(github.event.inputs.clean, 'yes') }}
       path_prefix: ${{ steps.extract_path_prefix.outputs.path_prefix }}
       branch_short_ref: ${{ steps.extract_branch.outputs.branch }}
+      exclude_subfolder: ${{ github.event.inputs.excludeSubfolder }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
@@ -56,6 +61,7 @@ jobs:
       - run: echo "Repository name - ${{ github.event.repository.name }}"
       - run: echo "Repository branch - ${{ needs.set-state.outputs.branch_short_ref }}"
       - run: echo "Path prefix - ${{ needs.set-state.outputs.path_prefix }}"
+      - run: echo "Exclude subfolder - ${{ needs.set-state.outputs.exclude_subfolder }}"
 
   pre-build-dev:
     needs: [set-state]
@@ -103,6 +109,8 @@ jobs:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
           GATSBY_ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_DEV_SRC }}
+          GATSBY_ADDITIONAL_ADOBE_ANALYTICS_ACCOUNTS: ${{ secrets.AIO_REPORT_SUITE_DEV}}
+          GATSBY_ADOBE_ANALYTICS_ENV: 'dev'
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
@@ -117,6 +125,7 @@ jobs:
           GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
+          GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -125,6 +134,7 @@ jobs:
           target: ${{ needs.set-state.outputs.path_prefix }}
           connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: 'true'
+          exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
       - name: Purge Fastly Cache
         uses: icaraps/gatsby-fastly-purge-action@master
         with:
@@ -177,6 +187,8 @@ jobs:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
           GATSBY_ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_PROD_SRC }}
+          GATSBY_ADDITIONAL_ADOBE_ANALYTICS_ACCOUNTS: ${{ secrets.AIO_REPORT_SUITE_PROD }}
+          GATSBY_ADOBE_ANALYTICS_ENV: 'production'
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
@@ -194,6 +206,7 @@ jobs:
           GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
+          GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -202,9 +215,9 @@ jobs:
           target: ${{ needs.set-state.outputs.path_prefix }}
           connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
           remove-existing-files: 'true'
+          exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
       - name: Purge Fastly Cache
         uses: icaraps/gatsby-fastly-purge-action@master
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: '${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}'
-
