@@ -83,7 +83,27 @@ Sample output from the colorSampler command:
 
 The composition of action descriptors can be complicated. Photoshop provides a number of ways that help a developer understand which descriptors Photoshop accepts.
 
-One option is to create a listener function in JavaScript. This is done by providing the global event hook to a low level API. This call only works when developer mode is enabled.
+The first way is to use the `Actions` panel. Create a new action and record the commands that you want to run from JavaScript. Then select the action in the `Actions` panel, or one or more individual steps in the action. Now select `Copy As JavaScript` from the panel flyout menu. This will copy UXP compatible JavaScript for the selected items to the clipboard. `Copy As JavaScript` is available from the flyout menu when developer mode is enabled.
+The following is an example of copying a single "make layer" command as JavaScript:
+```javascript
+async function actionCommands() {
+    let command;
+    let result;
+    let psAction = require("photoshop").action;
+
+    // Make layer
+    command = {"_obj":"make","_target":[{"_ref":"layer"}],"layerID":2};
+    result = await psAction.batchPlay([command], {});
+}
+
+async function runModalFunction() {
+    await require("photoshop").core.executeAsModal(actionCommands, {"commandName": "Action Commands"});
+}
+
+await runModalFunction();
+```
+
+Another option is to create a listener function in JavaScript. This is done by providing the global event hook to a low level API. This call only works when developer mode is enabled.
 ```javascript
 require('photoshop').action.addNotificationListener(['all'], (event, descriptor) => {console.log("Event:" + event + " Descriptor: " + JSON.stringify(descriptor))});
 ```

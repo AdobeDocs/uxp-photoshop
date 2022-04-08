@@ -154,9 +154,21 @@ ___
 
 Strokes the path with the specified tool
 
+`tool` is optional, and by default will use `ToolType.PENCIL`
+
+`simulatePressure` is false by default.
+
+If the tool is `ToolType.CLONESTAMP` or `ToolType.HEALINGBRUSH`, `sourceOrigin` must be provided as a
+an object with x and y properties (in pixels) to indicate the location of the stroke source. `sourceLayer`
+is optional, and by default will use the active layer in the document.
+
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `tool` | [*ToolType*](/ps_reference/modules/constants/#tooltype) | - |
 | `simulatePressure` | *boolean* | false |
+| `sourceOrigin?` | *object* | - |
+| `sourceOrigin.x` | *number* | - |
+| `sourceOrigin.y` | *number* | - |
+| `sourceLayer?` | [*Layer*](/ps_reference/classes/layer/) | - |

@@ -51,8 +51,9 @@ try {
 executeAsModal takes the following arguments:
 1. targetFunction: The JavaScript function to execute after Photoshop enters a modal state.
 1. options: Options describing the request. The following properties are recognized:
-   1. commandName (required): A string describing the command. This string is shown in the progress bar UI.
-   1. descriptor (optional): An object with command arguments. See documentation for targetFunction below.
+    1. commandName (required): A string describing the command. This string is shown in the progress bar UI.
+    1. descriptor (optional): An object with command arguments. See documentation for targetFunction below.
+    1. interactive (optional): A boolean to toggle [interactive mode](#interactive-mode). 
 
 The JavaScript target function has the following signature:
 ```javascript
@@ -142,6 +143,23 @@ JavaScript can change the commandName that is shown in the progress UI by using 
 ![progress bar](./assets/progress-bar-2.png)
 
 The progress bar is hidden while modal UI is shown.
+
+#### Interactive Mode
+*Added in Photoshop 23.3*
+
+If a plugin requires the accepting of user input or interaction while in a executeAsModal scope, "Interactive Mode" may be required.
+
+This mode refrains from displaying a blocking progress dialog to the user, and reduces the number of restrictions that hinder accepting of user input. Use-cases for interactive mode may include:
+- allowing users to input data into an invoked modal filter dialog
+- awaiting user input on a Photoshop workspace, such as Select and Mask
+
+```javascript
+await require("photoshop").core.executeAsModal(targetFunction, {"commandName": "Apply two filters", "interactive": true});
+```
+
+In lieu of the progress bar dialog, users can find the `Cancel Plugin Command` menu item under the Photoshop `Plugins` menu. This will interrupt the plugin's executeAsModal scope as described in [User Cancellation](#user-cancellation).
+
+![cancel via plugin menu](./assets/eam-pluginmenu-cancel.png)
 
 #### History state suspension
 The hostControl property on the executionContext can be used to suspend and resume history states. While a history state is suspended, Photoshop will coalesce all document changes into a single history state with a custom name.

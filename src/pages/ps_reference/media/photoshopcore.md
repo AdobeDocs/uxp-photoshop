@@ -39,6 +39,33 @@ If 2, you will have access to latest DOM, modal execution and everything else ne
 
 ## Functions
 
+### addNotificationListener
+
+*Promise*<void\>
+
+Attach a listener to a Photoshop core event. A callback in the form
+of `(eventName: string, descriptor: Descriptor) => void` will be performed.
+The event(s) below are supported:
+
+group: '`UI`', event: '`userIdle`'
+
+- Invoked after the Photoshop user idles for a specified number of seconds. See [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime).
+- Invoked a second time with the descriptor `{idleEnd: true}` if the user is no longer idle. This signal can
+be used to finish up tasks being performed during the idle time.
+```javascript
+await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `group` | *string* |
+| `events` | *string*[] |
+| `notifier` | NotificationListener |
+
+___
+
 ### calculateDialogSize
 
 *Promise*<{ `height`: *number* ; `width`: *number*  }\>
@@ -287,6 +314,26 @@ await PhotoshopCore.setExecutionMode({ logRejections: true })
 | `options` | *object* |
 | `options.enableErrorStacktraces?` | *boolean* |
 | `options.logRejections?` | *boolean* |
+
+___
+
+### setUserIdleTime
+
+*Promise*<void\>
+
+Specifies the number of seconds a user must be idle on Photoshop before invoking the
+userIdle event handler defined with [addNotificationListener](/ps_reference/media/photoshopcore/#addnotificationlistener). An idleTime of 0
+turns off idle notifications.
+
+```javascript
+await PhotoshopCore.setUserIdleTIme(3)
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `idleTime` | *number* |
 
 ___
 
