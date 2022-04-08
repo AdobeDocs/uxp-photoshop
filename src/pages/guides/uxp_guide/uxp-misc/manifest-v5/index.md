@@ -123,7 +123,6 @@ Starting with v5, any permissions not explicitly declared in the manifest are by
 ### Network
 You have to specify unlock the `network` module in `requiredPermissions` by defining domains from which network requests are allowed. `domains` accepts an array of strings or a singular string `"all"`.
 ```json
-/* manifest.json */
 {
     "requiredPermissions": {
         "network": {
