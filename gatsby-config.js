@@ -81,6 +81,10 @@ module.exports = {
             path: "/guides/uxp_guide/uxp-misc/manifest-v4/photoshop-manifest/",
           },
           {
+            title: "Manifest v5",
+            path: "/guides/uxp_guide/uxp-misc/manifest-v5/",
+          },
+          {
             title: "Code Samples",
             path: "/guides/code_samples/"
           },

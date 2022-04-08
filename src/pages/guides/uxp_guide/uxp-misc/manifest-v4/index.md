@@ -12,7 +12,7 @@ title: Manifest File Structure - UXP Manifest
 description:
 ---
 
-# Manifest File Structure
+# UXP Manifest v4
 
 The plugin's manifest is where you include metadata about your plugin. Simply put, the manifest is a list of facts about your plugin in the form of a JSON object. No executable code goes into your manifest.
 
@@ -20,7 +20,9 @@ The manifest is located in your plugin's root folder and must be named `manifest
 
 If you are a bit rusty at reading JSON, [here's a good reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON).
 
-## Example manifest
+UXP 6.0 has introduced [manifest v5](../manifest-v5/). 
+
+## Example manifest (v4)
 ```json
 {
     "manifestVersion": 4,
