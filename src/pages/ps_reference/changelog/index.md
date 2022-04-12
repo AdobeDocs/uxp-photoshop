@@ -12,14 +12,25 @@ As of now, this documentation site describes API functionality that is available
 
 If you would like to join the conversation, please consider joining the [Adobe Prerelease community](https://www.adobeprerelease.com/)!
 
-## Latest (Available in Beta builds)
-
+## Photoshop 23.3 (April 2022)
 ### Paths support
  - [Document.pathItems](../classes/document/) property is now added, giving access to same APIs from ExtendScript to work with paths.
  - `Document.pathItems` provides the collection class [PathItems](../classes/pathitems/), which is a collection of [PathItem](../classes/pathitem/) objects.
  - `PathItem.subPathItems` provides the collection class [SubPathItems](../classes/subpathitems/), which is a collection of [SubPathItem](../classes/subpathitem/) objects.
  - `SubPathItem.pathPoints` provides the collection class [PathPoints](../classes/pathpoints/), which is a collection of [PathPoint](../classes/pathpoint/) objects.
  - Create new paths in the document using [`PathItems.add`](../classes/pathitems/#add) method by providing `PathPointInfo` and `SubPathInfo` objects. Constructors for them can be found in [app](../classes/photoshop/) object.
+
+### Load on Launch support
+You can now set your plugin manifest to load your plugin on app launch. See [Photoshop Manifest](../../guides/uxp_guide/uxp-misc/manifest-v4/photoshop-manifest/) for details.
+
+### batchPlay development helper: Copy as Javascript
+It is now possible to use the Photoshop Actions panel to help build your plugin. Record valid actions, and let Photoshop generate readable and valid batchPlay to use in your UXP plugin. See the [batchPlay documentation](../media/batchplay.md#accepted-action-descriptors) under "Accepted action descriptors".
+
+### Core event: "userIdle"
+This event is generated when Photoshop detects that a user becomes idle, while Photoshop is the foreground application. A plugin must specify a number of idle seconds, and then may choose to batch process-intensive tasks. See [photoshopCore](../media/photoshopcore/).
+
+### Interactive Mode for executeAsModal
+As an alterative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../media/executeasmodal#interactive-mode/).
 
 ## Photoshop 23.2 (February 2022)
 
