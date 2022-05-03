@@ -45,7 +45,7 @@ We deploy changes at the end of every sprint, first to STAGE and then to PRODUCT
 
 * DC: Edit package.json and remove `-stage` as a version label.
 * DC: Create branch & PR (named as `<version>`) from change, assigning `deploy` tag, and assign an appropriate reviewer. This should be the Deployment First Officer.
-* DFO: approve change (triggering deploy to propduction); WAIT for build to succeed, and then close the PR and delete the corresponding branch.
+* DFO: approve change (triggering deploy to production); WAIT for build to succeed, and then close the PR and delete the corresponding branch.
 
 ### Version Bumps
 
