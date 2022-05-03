@@ -14,7 +14,7 @@ description:
 
 # UXP Manifest v5
 
-Manifest v5 gives developers access to a new plugin permissions model and WebViews in modal dialogs.
+Manifest v5 gives developers access to a new plugin permissions model and WebViews in modal dialogs. Using the full manifest v5 feature set requires PS 23.3.0 or higher.  (UXP 6.0 or higher)
 
 Upgrade your plugin to use the latest manifest feature set by changing the `manifestVersion` element. 
 ```json
@@ -30,7 +30,7 @@ Upgrade your plugin to use the latest manifest feature set by changing the `mani
     "main": "index.html",
     "host": {
         "app": "PS",
-        "minVersion": "23.0.0"
+        "minVersion": "23.3.0"
     },
     "entrypoints": [
         {
@@ -60,9 +60,6 @@ Upgrade your plugin to use the latest manifest feature set by changing the `mani
         { "width": 23, "height": 23, "path": "icons/icon_D.png", "scale": [ 1, 2 ], "theme": [ "dark", "darkest" ], "species": [ "generic" ] },
         { "width": 23, "height": 23, "path": "icons/icon_N.png", "scale": [ 1, 2 ], "theme": [ "lightest", "light" ], "species": [ "generic" ] }
     ],
-    "featureFlags": {
-        "enableExperimentalWebviewSupport" : true
-    },
     "requiredPermissions": {
         "network": {
             "domains": [
@@ -72,15 +69,13 @@ Upgrade your plugin to use the latest manifest feature set by changing the `mani
         "clipboard": "readAndWrite",
         "webview": {
             "allow": "yes",
-            // domains --> string[] | "all"
-            "domains": [ "https://*.adobe.com", "https://*.google.com"],
-            "allowLocalRendering": "yes"
+            "domains": [ "https://*.adobe.com", "https://*.google.com"]
         },
-        "launchProcess": {           
-            "schemes": 
-                [ "https", "slack"],            
-            "extensions": 
-                [ ".xd", ".ps" ],        
+        "launchProcess": { 
+            "schemes":
+                [ "https", "slack"],        
+            "extensions":
+                [ ".xd", ".psd" ]    
         }, 
     },
 }
@@ -102,26 +97,16 @@ The changes to `entryPoints` add flexibility in specifying the initial view/loca
 Key | Type | Description | Change
 ----|------|------------ |------
 `id` | string | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code. | Passed as the id for the uxpcommand, uxpshowview (New V5) and  uxphideview (New V5) events.
-`hostUIContext` | object | Use [this property](#hostuicontext) to customize how entrypoints appear. | New in v5.
-`featureFlags` | object | Indicates feature flags in use. | `enableWebview` boolean flag. 
-
-### HostUIContext 
-By default, panels from the same plugin are grouped together by the host app. If more control is needed, developers can use this property.
-
-Key | Type | Default | Description
-----|------|------------|---
-`hideFromMenu` | boolean | `false` | If `true`, the entrypoint is hidden from the plugins menu.
-`hideFromPluginsPanel` | boolean | `false` | If `true`, the entrypoint is removed from the plugins panel (launchpad).
-`initialLocation` | string | plugin ID | Plugins are grouped together upon ID by default. You can specify a new ID to group subsets of panels together. 
-`triggerEvents` | string[] | -- | Specifies if the entrypoint should be triggered by host-determined events. 
+ 
 
 ## Plugin Permissions
-Plugins using Manifest v5 will enjoy the enhancements in security with the introduction of new permissions model. Users will be asked for their consent when your plugin attempts to use openExternal, openPath, and sp-link/anchor tags. For everything else, consent is assumed given at install time.
+Plugins using Manifest v5 will enjoy the enhancements in security with the introduction of new permissions model. Users will be asked for their consent when your plugin attempts to use `openExternal`, `openPath`, and `sp-link`/anchor tags. For everything else, consent is given at install time.
 
-Starting with v5, any permissions not explicitly declared in the manifest are by default not granted. 
+Starting with v5, any permissions not explicitly declared in the manifest are not granted by default.
 
 ### Network
-You have to specify unlock the `network` module in `requiredPermissions` by defining domains from which network requests are allowed. `domains` accepts an array of strings or a singular string `"all"`.
+In order for our plugin to use the network, you must define domains that your plugin will access. You can do this by adding the network object to the requiredPermissions section of the manifest.
+
 ```json
 {
     "requiredPermissions": {
@@ -163,8 +148,8 @@ clipboard.writeText(dataTransferProviders).then(
 
 ### Local Filesystem
 `localFileSystem` accepts:
-* `request`: Allows the plugin to access the local file system using token provided by UXP.
-* `plugin`: Allows the plugin to access the plugin's sandbox, but doesn't enable file picker APIs.
+* `request`: Allows the plugin to access files on the local file system. For files outside of the plugin's data, temporary, and code folders, the user will be prompted for consent.
+* `plugin`: Allows the plugin to access the plugin's sandbox, but does not enable file picker APIs.
   
 ```json
 {
@@ -184,15 +169,7 @@ If `plugin` is not specified for plugin storage, the manifest will default to th
 ### Launch Process
 The `launchProcess` permission in the manifest controls the ability to launch applications and open files in other applications. 
 
-Before manifest v5, `shell.openPath()` was enabled using the feature flag `kEnableShellOpenPath`. Additionally, `openExternal()` was only accessible with the following code block in manifest: 
-```json
-"permissions": {        
-    "launchProcess": 
-        "request" | "any"    
-}
-```
-
-With manifest v5, the feature flag has been removed by v5 and the `launchProcess` permission must be declared to use `openExternal()` or `openPath()`. 
+With manifest v5, the `launchProcess` permission must be declared to use `openExternal` or `openPath`. 
 ```json
 "permissions": {        
     "launchProcess": {    
@@ -201,11 +178,11 @@ With manifest v5, the feature flag has been removed by v5 and the `launchProcess
             [ "https", "slack", "adbxd" ],   
         // allows opening files with the specified file extensions          
         "extensions": 
-            [ ".pdf", ".xd", ".ps" ],        
+            [ ".pdf", ".xd", ".psd" ],        
     },   
 }
 ```
-Both openPath() and openExternal() rely on this permission set, and upon either function call, the user will get a runtime consent dialog. Only after they agree will the API call execute. 
+Both `openPath` and `openExternal` rely on this permission set, and upon either function call, the user will get a runtime consent dialog. Only after they agree will the API call execute. 
 
 ### Plugin communication 
 If enabled, the plugin can communicate with other installed plugins. Defaults to `false`.
@@ -239,34 +216,21 @@ If enabled, the plugin can communicate with installed filters, automation plugin
 }
 ```
 
-### Fonts 
-This permission allows the plugin to access the fonts installed on the system. 
-```json
-"permissions": {        
-    "fonts": "readInstalled" 
-}
-```
-
 ## WebViews
 WebViews are available with UXP 6.0, and need to be configured in your plugin's manifest (v5 required).
 
 ### Limitations 
-* Only available within modal dialogs for now.
-* Only remote content is allowed unless `webview.allowLocalRendering` is set to yes.
+WebViews are available within modal dialogs only for now.
 
 In your `manifest.json`: 
 ```json
 {
     "manifestVersion": 5,
-    "featureFlags": {
-        "enableExperimentalWebviewSupport" : true
-    },
     "requiredPermissions": {
         "webview": {
             "allow": "yes",
             // domains --> string[] | "all"
             "domains": [ "https://*.adobe.com", "https://*.google.com"],
-            "allowLocalRendering": "yes"
         }
     }
 }
@@ -274,8 +238,12 @@ In your `manifest.json`:
 Then in your plugin's code: 
 ```html
 <dialog>
-    <webview id="webview" width="100%" height="360px" src="https://www.google.com"></webview>
+    <webview id="webview" width="100%" height="360px" src="https://www.adobe.com"></webview>
 </dialog>
+```
+
+```js
+document.querySelector("dialog").showModal();
 ```
 
 ![Webview](webview_example.png)
