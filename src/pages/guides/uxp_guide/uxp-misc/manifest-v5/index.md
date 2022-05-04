@@ -87,7 +87,6 @@ Starting from changes to top-level metadata, here are some keys that changed wit
 Key path | Type | Description | Change 
 ---------|------|-------------|-------
 `version` | string| Version number of your plugin in `x.y.z` format. | Plugins can specify semver format with no warnings. <br/>Specify at least one number and the minor and/or patch will be autofilled with zeroes.
-`title` | string | Title for the plugin. <br/>Defaults to plugin's name if none is specified | New in v5.
 `requiredPermissions` | object | Declare [plugin permissions](#plugin-permissions). | New in v5.
 `entrypoints` | `EntryPointDefinition[]` | Describes the entries your plugin adds to the _Plugins_ menu and plugin panel. | v5 changes in next section.
 
@@ -96,7 +95,8 @@ The changes to `entryPoints` add flexibility in specifying the initial view/loca
 
 Key | Type | Description | Change
 ----|------|------------ |------
-`id` | string | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code. | Passed as the id for the uxpcommand, uxpshowview (New V5) and  uxphideview (New V5) events.
+`id` | string | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code. | Passed as the id for the uxpcommand, uxpshowpanel, and uxphidepanel
+`title` | string | Title for the plugin. <br/>Defaults to plugin's name if none is specified | New in v5.
  
 
 ## Plugin Permissions
@@ -209,9 +209,6 @@ alchemistPlugin.invokeCommand("resetStateFn");
 ## WebViews
 WebViews are available with UXP 6.0, and need to be configured in your plugin's manifest (v5 required).
 
-### Limitations 
-WebViews are available within modal dialogs only for now.
-
 In your `manifest.json`: 
 ```json
 {
@@ -238,3 +235,5 @@ document.querySelector("dialog").showModal();
 
 ![Webview](webview_example.png)
 
+### Limitations 
+WebViews are available within modal dialogs only for now.
