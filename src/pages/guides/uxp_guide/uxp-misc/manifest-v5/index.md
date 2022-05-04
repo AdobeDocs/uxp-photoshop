@@ -206,16 +206,6 @@ alchemistPlugin.showPanel("inspector");
 alchemistPlugin.invokeCommand("resetStateFn");
 ```
 
-### Host Communication 
-If enabled, the plugin can communicate with installed filters, automation plugins, etc. Defaults to `false`.
-```json
-"permissions": {        
-    "ipc": {
-        "enableHostCommunication": true   
-    }
-}
-```
-
 ## WebViews
 WebViews are available with UXP 6.0, and need to be configured in your plugin's manifest (v5 required).
 
