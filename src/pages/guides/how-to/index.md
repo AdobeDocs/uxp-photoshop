@@ -98,7 +98,7 @@ In your startup code, add something like this:
 document.addEventListener('uxpcommand', (event) => {
   const { commandId } = event
   if (commandId === 'uxpshowpanel') {
-    console.log("panel is showing');
+    console.log("panel is showing");
   } else if (commandId === 'uxphidepanel') {
     console.log('panel is hiding');
   }
