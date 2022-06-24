@@ -624,3 +624,18 @@ Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/
 | BOTTOMRIGHT | Bottom right pixel color. |
 | TOPLEFT | Top left pixel color. |
 | TRANSPARENT | Transparent pixels. |
+
+___
+
+### Units
+
+Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps_reference/classes/photoshop/#convertunits)
+
+| Name | Description |
+| :------ | :------ |
+| CM | - |
+| INCHES | - |
+| MM | - |
+| PICAS | - |
+| PIXELS | - |
+| POINTS | - |

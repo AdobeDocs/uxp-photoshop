@@ -67,6 +67,36 @@ Brings application to focus, useful when your script ends, or requires an input
 
 ___
 
+### convertUnits
+
+*number*
+
+Convert the given value from one unit to another. Available units are:
+Constants.Units.{CM, MM, INCHES, PIXELS, POINTS, PICAS}.
+Use [Document.resolution](/ps_reference/classes/document/#resolution) when converting from or to PIXELS.
+For example, use this routine for converting a document's width from pixels to inches.
+
+```javascript
+// convert the current document's width to inches
+const exportDoc = psApp.activeDocument;
+let widthInInches = psApp.convertUnits(exportDoc.width, 
+                                       Constants.Units.PIXELS, 
+                                       Constant.Units.INCHES, 
+                                       exportDoc.resolution);
+
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `fromValue` | *number* | The value that is to be converted. |
+| `fromUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the fromValue is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
+| `toUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the return value is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
+| `resolution?` | *number* | The pixels per inch value to use when converting to and from pixel values. |
+
+___
+
 ### createDocument
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
@@ -96,7 +126,7 @@ ___
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
-Opens the specified document and returns it's model
+Opens the specified document and returns the model
 
 > (0.4.0) Please note that this API now requires you to provide a UXPFileEntry
 
