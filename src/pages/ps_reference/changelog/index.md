@@ -10,7 +10,7 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 As of now, this documentation site describes API functionality that is available for use to a select number of participants in [Adobe Prerelease community](https://www.adobeprerelease.com/). We will start to evolve the site to support users and plugin developers outside the Prerelease group, once more functionality is available, and when we can be more confident our changes are stable for the wider audience.
 
-If you would like to join the conversation, please consider joining the [Adobe Prerelease community](https://www.adobeprerelease.com/)!
+If you would like to join the conversation, please consider joining the [Adobe Prerelease community](https://www.adobeprerelease.com/)! Note: To join the Photoshop prerelease, please reach out to [Pete Green](mailto:petgreen@adobe.com).
 ## Photoshop 23.4 (June 2022)
 
 ### convertUnits method on the Photoshop Application object
