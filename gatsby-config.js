@@ -15,11 +15,12 @@ module.exports = {
     versions: [
       {
         title: '2022',
+        path: '/photoshop/uxp/',
         selected: true
       },
       {
         title: '2021',
-        path: 'https://developer-stage.adobe.com/photoshop/uxp/2021'
+        path: '/photoshop/uxp/2021/'
       }
     ],
     pages: [
@@ -258,5 +259,5 @@ module.exports = {
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/2022/",
+  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/",
 };
