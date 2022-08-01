@@ -13,7 +13,7 @@ on:
       excludeSubfolder:
         description: 'Exclude a subfolder from deletion'
         required: false
-        default: ''
+        default: '2021, 2023'
 jobs:
   set-state:
     runs-on: ubuntu-latest
