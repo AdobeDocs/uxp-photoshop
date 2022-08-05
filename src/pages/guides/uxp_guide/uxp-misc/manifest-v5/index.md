@@ -90,15 +90,6 @@ Key path | Type | Description | Change
 `requiredPermissions` | object | Declare [plugin permissions](#plugin-permissions). | New in v5.
 `entrypoints` | `EntryPointDefinition[]` | Describes the entries your plugin adds to the _Plugins_ menu and plugin panel. | v5 changes in next section.
 
-## Changes to entry points
-The changes to `entryPoints` add flexibility in specifying the initial view/location of plugin panels.
-
-Key | Type | Description | Change
-----|------|------------ |------
-`id` | string | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code. | Passed as the id for the uxpcommand, uxpshowpanel, and uxphidepanel
-`title` | string | Title for the plugin. <br/>Defaults to plugin's name if none is specified | New in v5.
- 
-
 ## Plugin Permissions
 Plugins using Manifest v5 will enjoy the enhancements in security with the introduction of new permissions model. Users will be asked for their consent when your plugin attempts to use `openExternal`, `openPath`, and `sp-link`/anchor tags. For everything else, consent is given at install time.
 
@@ -147,9 +138,12 @@ clipboard.writeText(dataTransferProviders).then(
 ```
 
 ### Local Filesystem
+The `localFileSystem` permission controls access to the user's local file system. If not specified, the plugin has no access to the user's file system other than the default access to `plugin://`, `plugin-temp://`, and `plugin-data://`.
+
 `localFileSystem` accepts:
-* `request`: Allows the plugin to access files on the local file system. For files outside of the plugin's data, temporary, and code folders, the user will be prompted for consent.
-* `plugin`: Allows the plugin to access the plugin's sandbox, but does not enable file picker APIs.
+* `request`: Allows the plugin to access the local file system using pickers for opening and saving files. 
+* `plugin`: Allows the plugin to access the plugin's storage only.
+* `fullAccess`: Allows the plugin to inspect, modify, and delete files to which you have access on all volumes attached to this device. The user will be required to consent before installation or update. 
   
 ```json
 {
@@ -237,3 +231,4 @@ document.querySelector("dialog").showModal();
 
 ### Limitations 
 WebViews are available within modal dialogs only for now.
+
