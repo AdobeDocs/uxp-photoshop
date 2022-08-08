@@ -84,6 +84,13 @@ Do you have experience with Photoshop plugin solutions? Learn more here.
 
 Learn key design principles for UXP plugins in Photoshop.
 
+<DiscoverBlock slots="link, text"/>
+
+[Scripting](/scripting/)
+
+Write scripts powered by UXP to accomplish tasks within Photoshop.
+
+
 ## Share
 
 <DiscoverBlock slots="link, text"/>
