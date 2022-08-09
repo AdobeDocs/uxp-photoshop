@@ -90,6 +90,81 @@ Key path | Type | Description | Change
 `requiredPermissions` | object | Declare [plugin permissions](#plugin-permissions). | New in v5.
 `entrypoints` | `EntryPointDefinition[]` | Describes the entries your plugin adds to the _Plugins_ menu and plugin panel. | v5 changes in next section.
 
+## Updates to Entrypoints methods
+With manifest v4: 
+* Promise-based methods were not supported for entrypoint methods. 
+* No timeouts for entrypoints methods.
+* All panel entrypoints have only one argument `event` which contains `node`, `panel`, `eventName` and `PanelID`.
+
+Manifest v5 brings additional lifecycle events to better manage your plugin and more flexibility in specifying the initial view and location of plugins' panels: 
+* UXP honors promises returned by (most) entrypoint methods. 
+  * **Plugin entrypoints**: Promise support is enabled for plugin `destroy`. 
+  * **Panel entrypoints**: Promise support is enabled for panel `create`, `show`, `destroy`, `hide`. 
+  * Currently, panel `show` is tied to plugin `create`, and panel `hide` is tied to plugin `destroy`.
+* Entrypoint methods have a timeout of 300 milliseconds
+* Panel entrypoints have `rootNode` as first argument and `data` as second argument for `show` and `hide`.
+  
+### entrypoints.setup() using promises
+```js
+import { entrypoints } from "uxp";
+entrypoints.setup({
+    plugin: {
+        create() {
+            console.log("Plugin has been loaded, plugin.create has been triggered.");
+        },
+        destroy() {
+            return new Promise(function (resolve, reject) {
+                console.log("Plugin has been loaded, plugin.create has been triggered.");
+                resolve();
+            });
+        }
+    },
+    panels: {
+        panelA: {
+            create(rootNode) {
+                return new Promise(function (resolve, reject) {
+                    console.log("PanelA is created, panelA.create has been triggered.");
+                    resolve();
+                });
+            },
+            show(rootNode, data) {
+                return new Promise(function (resolve, reject) {
+                    console.log("PanelA is about to be displayed,  panelA.show has been triggered with data ", data);
+                    resolve();
+                });
+            },
+            hide(rootNode, data) {
+                return new Promise(function (resolve, reject) {
+                    console.log("PanelA is about to be hidden,  panelA.hide has been triggered with data ", data);
+                    resolve();
+                });
+            },
+            destroy(rootNode) {
+                return new Promise(function (resolve, reject) {
+                    console.log("PanelA is about to be destroyed,  panelA.destroy has been triggered.");
+                    resolve();
+                });
+            },
+            invokeMenu(menuId) {
+                return new Promise(function (resolve, reject) {
+                    console.log("A menu item on PanelA has been invoked,  panelA.invokeMenu has been triggered with menu id ", menuId);
+                    resolve();
+                });
+            },
+            menuItems: [...]
+        },
+        "panelB": {..}
+    },
+    commands: {
+        "command1": {
+            run() {..},
+            cancel() {..}
+        },
+        "command2": function(){..}
+    }
+});
+```
+
 ## Plugin Permissions
 Plugins using Manifest v5 will enjoy the enhancements in security with the introduction of new permissions model. Users will be asked for their consent when your plugin attempts to use `openExternal`, `openPath`, and `sp-link`/anchor tags. For everything else, consent is given at install time.
 
