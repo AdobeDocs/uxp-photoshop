@@ -261,15 +261,16 @@ module.exports = {
         pages: require("./reference-design.js"),
       },
       {
-        title: "Getting Started",
+        title: "Overview",
         path: "/scripting/",
-        pages: [
-          {
-          
-              title: "Creating your first script",
-              path: "/script/getting-started/creating-your-first-script/"
-            },
-        ],
+      },
+      {
+        title: "Quickstart Guide",
+        path: "/scripting/getting-started/"
+      },
+      {
+        title: "How It Works",
+        path: "/scripting/how-it-works/"
       },
       {  
         title: "Samples",
@@ -279,6 +280,7 @@ module.exports = {
         title: "Reference",
         path: "/scripting/reference/"
       },
+
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
