@@ -11,14 +11,52 @@ description: Contains a running log of changes to the UXP API environment in Ado
 As of now, this documentation site describes API functionality that is available for use to a select number of participants in [Adobe Prerelease community](https://www.adobeprerelease.com/). We will start to evolve the site to support users and plugin developers outside the Prerelease group, once more functionality is available, and when we can be more confident our changes are stable for the wider audience.
 
 If you would like to join the conversation, please consider joining the [Adobe Prerelease community](https://www.adobeprerelease.com/)!
-## Photoshop 23.4 (June 2022)
+## Latest (Available in Beta builds)
 
+## Photoshop 23.5 (August 2022)
+
+### layer apply filters
+- [Layer.applyAddNoise(amount:number, distribution:Constants.NoiseDistribution, monochromatic:boolean)](../classes/layer/#applyAddNoise) Applies the Add Noise filter.
+- [Layer.applyAverage()](../classes/layer/#applyAverage) Applies the Average filter.
+- [Layer.applyBlur()](../classes/layer/#applyBlur) Applies the Blur filter.
+- [Layer.applyBlurMore()](../classes/layer/#applyBlurMore) Applies the Blur More filter.
+- [Layer.applyClouds()](../classes/layer/#applyClouds) Applies the Clouds filter.
+- [Layer.applyCustomFilter(characteristics:number[], scale:number, offset:number)](../classes/layer/#applyCustomFilter) Applies the Custom filter.
+- [Layer.applyDeInterlace(eliminateFields:Constants.EliminateFields, createFields:Constants.CreateFields)](../classes/layer/#applyDeInterlace) Applies the De-Interlace filter.
+- [Layer.applyDespeckle()](../classes/layer/#applyDespeckle) Applies the Despeckle filter.
+- [Layer.applyDifferenceClouds()](../classes/layer/#applyDifferenceClouds) Applies the Difference Clouds filter.
+- [Layer.applyDiffuseGlow(graininess:number, glowAmount:number, clearAmount:number)](../classes/layer/#applyDiffuseGlow) Applies the Diffuse Glow filter.
+- [Layer.applyDisplace(horizontalScale:number, verticalScale:number, displacementType:Constants.DisplacementMapType, undefinedAreas:Constants.UndefinedAreas, displacementMapFile:string)](../classes/layer/#applyDisplace) Applies the Displace filter.
+- [Layer.applyDustAndScratches(radius:number, threshold:number)](../classes/layer/#applyDustAndScratches) Applies the Dust and Scratches filter.
+- [Layer.applyGaussianBlur(radius:number)](../classes/layer/#applyGaussianBlur) Applies the Gaussian Blur filter.
+- [Layer.applyGlassEffect(distortion:number, smoothness:number, scaling:number, invert:boolean, texture:Constants.TextureType, textureFile?:string)](../classes/layer/#applyGlassEffect) Applies the Glass filter.
+- [Layer.applyHighPass(radius:number)](../classes/layer/#applyHighPass) Applies the High Pass filter.
+- [Layer.applyLensBlur(source:Constants.DepthMapSource, focalDistance:number, invertDepthMask:boolean, shape:Constants.Geometry, radius:number, bladeCurvature:number, rotation:number, brightness:number, threshold:number, amount:number, distribution:Constants.NoiseDistribution, monochromatic:boolean)](../classes/layer/#applyLensBlur) Applies the Lens Blur filter.
+- [Layer.applyLensFlare(brightness:number, flareCenter:number\[\], lensType:Constants.LensType)](../classes/layer/#applyLensFlare) Applies the Lens Flare filter.
+- [Layer.applyMaximum(radius:number, preserveShape:Constants.PreserveShape)](../classes/layer/#applyMaximum) Applies the Maximum filter.
+- [Layer.applyMinimum(radius:number, preserveShape:Constants.PreserveShape)](../classes/layer/#applyMinimum) Applies the Minimum filter.
+- [Layer.applyMedianNoise(radius:number)](../classes/layer/#applyMedianNoise) Applies the Median Noise filter.
+- [Layer.applyMotionBlur(angle:number, distance:number)](../classes/layer/#applyMotionBlur) Applies the Motion Blur filter.
+- [Layer.applyNTSC()](../classes/layer/#applyNTSC) Applies the NTSC filter.
+- [Layer.applyOceanRipple(size:number, magnitude:number)](../classes/layer/#applyOceanRipple) Applies the Ocean Ripple filter.
+- [Layer.applyOffset(horizontal:number, vertical:number, undefinedAreas:Constants.OffsetUndefinedAreas)](../classes/layer/#applyOffset) Applies the Offset filter.
+- [Layer.applyTwirl(angle:number)](../classes/layer/#applyTwirl) Applies the Twirl filter.
+
+- [Layer.applyPinch(amount: number)](../classes/layer/#applyPinch) Applies the Pinch filter.
+- [Layer.applyPolarCoordinates(conversion: Constants.PolarConversionType)](../classes/layer/#applyPolarCoordinates) Applies the Polar Coordinates filter.
+- [Layer.applyRipple(amount: number, size: Constants.RippleSize)](../classes/layer/#applyRipple) Applies the Ripple filter.
+- [Layer.applySharpen()](../classes/layer/#applySharpen) Applies the Sharpen filter.
+- [Layer.applySharpenEdges()](../classes/layer/#applySharpenEdges) Applies the Sharpen Edges filter.
+- [Layer.applySharpenMore()](../classes/layer/#applySharpenMore) Applies the Sharpen More filter.
+- [Layer.applyShear(curve: {x:number, y:number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyShear) Applies the Shear filter.
+
+## Photoshop 23.4.2 (July 2022)
 ### convertUnits method on the Photoshop Application object
- - [Application.convertUnits](../classes/photoshop) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
+ - [Application.convertUnits](../classes/photoshop/#convertUnits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
 
 ## Photoshop 23.3 (April 2022)
 ### Paths support
- - [Document.pathItems](../classes/document/) property is now added, giving access to same APIs from ExtendScript to work with paths.
+ - [Document.pathItems](../classes/document/#pathItems) property is now added, giving access to same APIs from ExtendScript to work with paths.
  - `Document.pathItems` provides the collection class [PathItems](../classes/pathitems/), which is a collection of [PathItem](../classes/pathitem/) objects.
  - `PathItem.subPathItems` provides the collection class [SubPathItems](../classes/subpathitems/), which is a collection of [SubPathItem](../classes/subpathitem/) objects.
  - `SubPathItem.pathPoints` provides the collection class [PathPoints](../classes/pathpoints/), which is a collection of [PathPoint](../classes/pathpoint/) objects.

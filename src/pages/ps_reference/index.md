@@ -1,7 +1,7 @@
 ---
 id: "photoshop-api"
 title: Photoshop API—UXP for Adobe Photoshop
-description: Learn about the Photoshop API that is exposed through UXP for plugin developers.
+description: Learn about the Photoshop API that is exposed through UXP for developers of plugins and scripts.
 ---
 
 
@@ -45,7 +45,7 @@ See more properties and methods in `app` under [Photoshop](./classes/photoshop/)
 A key concept to understand before diving straight into Photoshop UXP plugin development is what we have termed "execute as modal". Any and all commands that may **modify the document**, or the **application state**, must utilize executeAsModal.
 
 ```javascript
-async function makeDefaultDocument(executionControl) {
+async function makeDefaultDocument(executionContext) {
   const app = require('photoshop').app;
   let myDoc = await app.createDocument({preset: "My Web Preset 1"});
 }
@@ -53,7 +53,7 @@ async function makeDefaultDocument(executionControl) {
 await require('photoshop').core.executeAsModal(makeDefaultDocument);
 ```
 
-As you may notice, this restriction could encompass much of your plugins' functionality! There are many benefits for this model, however. A more detailed explanation is provided in the [Execute as Modal documentation](./media/executeasmodal/).
+As you may notice, this restriction could encompass much of your plugin's functionality! There are many benefits for this model, however. A more detailed explanation is provided in the [Execute as Modal documentation](./media/executeasmodal/).
 
 ### Document
 Represents a single, open Photoshop document. From this object, you can access the document's layers, dimensions, resolution, etc. You can crop it, add/delete/duplicate layers, resize, rotate, and save it.
@@ -74,7 +74,7 @@ Flatten all currently open documents:
 ```javascript
 const app = require('photoshop').app;
 const toFlatten = app.documents;
-async function flattenThem(executionControl) {
+async function flattenThem(executionContext) {
   toFlatten.forEach((photoshopDoc) => {
     photoshopDoc.flatten();
   });
@@ -86,7 +86,7 @@ await require('photoshop').core.executeAsModal(flattenThem);
 Create a layer:
 ```javascript
 const app = require('photoshop').app;
-async function newColorDodgeLayer(executionControl) {
+async function newColorDodgeLayer(executionContext) {
   await app.activeDocument.createLayer({ name: "myLayer", opacity: 80, mode: "colorDodge" });
 };
 
@@ -102,7 +102,7 @@ Decrease a layer's opacity and bring it to the front:
 ```javascript
 const app = require('photoshop').app;
 const doc = app.activeDocument;
-function bringActiveLayerToFront(executionControl) {
+function bringActiveLayerToFront(executionContext) {
   const layer = doc.activeLayers[0];
   layer.opacity = layer.opacity - 10;
   layer.bringToFront();
@@ -116,7 +116,7 @@ Scale down each layer whose name includes 'smaller'
 const app = require('photoshop').app;
 const doc = app.activeDocument;
 const layers = doc.layers;
-async function scaleLayers(executionControl) {
+async function scaleLayers(executionContext) {
   for (layer of layers) {
     if (layer.name.includes('smaller')) {
       await layer.scale(80, 80);
@@ -150,7 +150,7 @@ let actions = new Map(); // a JS Map allows easy "find by name" operations
 firstActionSet.actions.forEach((action) => { actions.set(action.name, action)});
 const myAction = actions.get("Wood Frame - 50 pixel");
 if (myAction) { // user may have deleted this action
-  async function playMyAction(executionControl) {
+  async function playMyAction(executionContext) {
     await myAction.play();
   }
   await require('photoshop').core.executeAsModal(playMyAction);
@@ -161,7 +161,7 @@ See more properties and methods for `Action` under [Action](./classes/action/) a
 
 ### batchPlay
 
-Photoshop is complex software, with many internal classes and methods. Not all of these are yet exposed via UXP. New interfaces are in development and will be shipped along with each release of Photoshop. In the meantime, if there is something your plugin needs to do that is not exposed in the current DOM, you may be able to use `batchPlay`.
+Photoshop is complex software, with many internal classes and methods. Not all of these are yet exposed via UXP. New interfaces are in development and will be shipped along with each release of Photoshop. In the meantime, if there is something your plugin or script needs to do that is not exposed in the current DOM, you may be able to use `batchPlay`.
 
 BatchPlay is for accessing Photoshop functionality that has not yet been exposed via APIs. BatchPlay is a way to send multiple actions into the Photoshop event queue and return their results.
 
@@ -170,3 +170,7 @@ ExtendScript has `executeAction`; this is analagous to UXP's `batchPlay`. Howeve
 Unlike ExtendScript where classes were provided to construct action descriptors, references and values, `batchPlay` accepts plain JSON objects.
 
 The [batchPlay documentation](/ps_reference/media/batchplay/) contains details on how to construct JSON for `batchPlay` usage.
+
+## UXP Scripting
+
+UXP is not just for plugins anymore.  Individual JavaScript files may be developed and executed as detailed in the [UXP Scripting section](./media/uxpscripting).

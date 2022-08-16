@@ -34,7 +34,7 @@ From here you can access open documents, tools, UI elements and run commands or 
 | activeDocument | [*Document*](/ps_reference/classes/document/) | Read-write | The current active document |
 | backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | Read-only | The default background color and color style for documents. |
 | currentTool | [*Tool*](/ps_reference/objects/tool/) | Read-only | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes |
-| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | Read-write | The dialog mode for the application, which controls what types of dialogs should be displayed when your plugin is interacting with Photoshop. |
+| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | Read-write | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
 | documents | [*Documents*](/ps_reference/classes/documents/) | Read-only | A list of the documents currently open |
 | fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | Read-only | The fonts installed on this system. |
 | foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | Read-write | The default foreground color (used to paint, fill, and stroke selections) |

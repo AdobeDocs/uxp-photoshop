@@ -24,7 +24,7 @@ Below we will dive into both how action commands are defined in JavaScript, and 
 
 The first argument to `batchPlay` is an array of descriptors (also called action descriptors).
 
-UXP plugins for Photoshop use a textual representation of these action descriptors. This format is sometimes referred to as `actionJSON`.
+UXP for Photoshop uses a textual representation of these action descriptors. This format is sometimes referred to as `actionJSON`.
 
 An action descriptor contains the following components:
 * The command. This describes the desired Photoshop command. The command is specified via the `_obj` keyword.
@@ -218,7 +218,7 @@ A possible result from running this command may include the following:
 [{"mode":{"_enum":"colorSpace","_value":"RGBColor"},"bigNudgeH":655360,"bigNudgeV":655360,"rulerOriginH":0,"rulerOriginV":0,"width":{"_unit":"distanceUnit","_value":504},"height":{"_unit":"distanceUnit","_value":360},"resolution":{"_unit":"densityUnit","_value":300},"title":"Untitled-1","fileInfo":{"_obj":"fileInfo"},"numberOfPaths":0,"numberOfChannels":3,"numberOfLayers":0,"targetPathIndex":-1,"workPathIndex":-1,"clippingPathInfo":{"_obj":"clippingInfo","clippingPathIndex":-1,"clippingPathFlatness":0}, . . . ]
 ```
 
-Using "get" without a property is intended for use during the development of a plugin. This for allows a developer to understand which properties a given element supports.
+Using "get" without a property is intended for use only during the development of a plugin. This for allows a developer to understand which properties a given element supports.
 
 _A shipping plugin should not obtain all properties for a given target because this may be slow, and may become slower in the future when additional properties are added._
 

@@ -19,6 +19,8 @@ If the modal state lasts a significant amount of time (currently more than two s
 
 When a plugin is inside a modal scope, then it controls Photoshop. This means that you no longer need to use options such as `modalBehavior` with `batchPlay`.
 
+<br />
+
 ## API
 
 ExecuteAsModal is exposed on the Photoshop core module.
@@ -47,7 +49,9 @@ try {
     }
 ```
 
-### Details
+<br />
+
+### Arguments
 executeAsModal takes the following arguments:
 1. targetFunction: The JavaScript function to execute after Photoshop enters a modal state.
 1. options: Options describing the request. The following properties are recognized:
@@ -73,7 +77,9 @@ The executionContext contains the following properties:
    * registerAutoCloseDocument. Register a document to be closed when the modal scope exits. See below for details.
 * unregisterAutoCloseDocument. Unregister a document from being closed when the modal scope exits. See below for details.
 
-#### User cancellation
+<br />
+
+### User cancellation
 executeAsModal puts Photoshop into a modal state, and it is important to allow the user to exit this state if the command was invoked by mistake, or if the command is taking too much time.
 
 The user can cancel the operation by pressing the Escape key or using cancellation UI in the progress bar.
@@ -82,7 +88,7 @@ JavaScript can use `isCancelled` and `onCancel` on the executionContext to get i
 
 The following is an example of a target JavaScript function:
 ```javascript
-async function targetFunction(executionControl, descriptor) {
+async function targetFunction(executionContext, descriptor) {
   let target = {_ref:[{_ref:"property", "_property": "hostName"}, {"_ref":"application","_enum":"ordinal","_value":"targetEnum"}]};
   let command = {"_obj": "get", "_target": target};
   while (true) {
@@ -95,7 +101,7 @@ This sample will run until the user cancels the interaction. After the user canc
 
 Due to the design of the underlying JavaScript runtime, JavaScript can only be cancelled when it is *interruptible*. JavaScript can be interrupted when it is waiting on the resolution of a promise. Without the "await" keyword in the above example, the JavaScript function would not terminate when the user cancels. Having a tight loop such as the following also does not allow for automatic cancellation of the JavaScript function.
 ```
-async function targetFunction(executionControl) {
+async function targetFunction(executionContext) {
   while (true) {
     calculateSomeDigitsOfPi();
   }
@@ -103,7 +109,7 @@ async function targetFunction(executionControl) {
 ```
 JavaScript that runs for a significant amount of time without an interruption point should regularly query isCancelled on the executionContext. The JavasScript example above can be made cancellable by modifying it to the following:
 ```javascript
-async function targetFunction(executionControl) {
+async function targetFunction(executionContext) {
   while (true) {
     calculateSomeDigitsOfPi();
     if (executionContext.isCancelled) {
@@ -114,7 +120,7 @@ async function targetFunction(executionControl) {
 ```
 When the JavaScript function uses "await" with a Photoshop JavaScript command, then it is automatically terminated if the user cancels the operation. The automatic cancellation relies on JavaScript exceptions, and it is therefore important to not discard exceptions. The following function discards exceptions around batchPlay and will therefore *not* be automatically terminated when the user cancels the interaction.
 ```javascript
-async function targetFunction(executionControl) {
+async function targetFunction(executionContext) {
   let target = {_ref:[{_ref:"property", "_property": "hostName"}, {"_ref":"application","_enum":"ordinal","_value":"targetEnum"}]};
   let command = {"_obj": "get", "_target": target};
   while (true) {
@@ -126,25 +132,29 @@ async function targetFunction(executionControl) {
 await require("photoshop").core.executeAsModal(targetFunction, {"commandName": "User Cancel Test"});
 ```
 
-#### Progress bar
+<br />
+
+### Progress bar
 By default, Photoshop shows an indeterminate progress bar while a modal scope is active. The progress bar is shown a few seconds after the modal scope is initiated.
 JavaScript can use `reportProgress` to customize this behavior. To obtain a determinate progress bar, JavaScript can specify a value between 0 and 1 when calling reportProgress. Example:
 ```javascript
-async function targetFunction(executionControl) {
-  executionControl.reportProgress({"value": 0.3});
+async function targetFunction(executionContext) {
+  executionContext.reportProgress({"value": 0.3});
 }
 ```
 Setting a value will switch the progress bar to be a determinate progress bar & show the progress bar if it is not yet visible.
 
 JavaScript can change the commandName that is shown in the progress UI by using the "commandName" property. This can be used to inform the user about the current stage of the operation. Example:
 ```javascript
-    executionControl.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
+    executionContext.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
 ```
 ![progress bar](./assets/progress-bar-2.png)
 
 The progress bar is hidden while modal UI is shown.
 
-#### Interactive Mode
+<br />
+
+### Interactive Mode
 *Added in Photoshop 23.3*
 
 If a plugin requires the accepting of user input or interaction while in a executeAsModal scope, "Interactive Mode" may be required.
@@ -161,7 +171,9 @@ In lieu of the progress bar dialog, users can find the `Cancel Plugin Command` m
 
 ![cancel via plugin menu](./assets/eam-pluginmenu-cancel.png)
 
-#### History state suspension
+<br />
+
+### History state suspension
 The hostControl property on the executionContext can be used to suspend and resume history states. While a history state is suspended, Photoshop will coalesce all document changes into a single history state with a custom name.
 
 Example:
@@ -205,7 +217,9 @@ executionContext.hostControl.resumeHistory(suspensionID, commit)
 
 When the modal scope ends, Photoshop will auto-resume history on any document that is still in a suspended state. If the target function for the modal scope returns normally, then all unsuspended states are committed. If the target function exits via an exception, then all unsuspended history states are cancelled.
 
-#### Notifications
+<br />
+
+### Notifications
 When executeAsModal is active, then Photoshop notifications are silenced similar to when an action is run from the actions panel.
 
 This means that other plugins cannot listen for batchPlay commands that are executed while the modal scope is active.
@@ -214,7 +228,9 @@ Plugins can register for notifications related to starting and ending a modal Ja
 * "modalJavaScriptScopeEnter"
 * "modalJavaScriptScopeExit"
 
-#### Automatic document closing
+<br />
+
+### Automatic document closing
 When the user cancels a modal scope, then JavaScript cannot make any further document changes until it returns from the modal scope. In order to ensure proper clean up of temporary documents, JavaScript can register one or more documents to be automatically closed without saving when the modal scope ends. The following is an example of JavaScript that registers a document to be closed when the modal scope ends:
 ```javascript
 async function modalFunction(executionContext) {
@@ -242,6 +258,8 @@ async function modalFunction(executionContext) {
 }
 ```
 
-#### Notes
+<br />
+
+### Notes
 You can have nested modal scopes. A target function can use executeAsModal to execute another target function.
 All modal scopes share the same global modal state. This mean that any nested scope can modify the state on the (single) progress bar. Similarly, you can suspend the history state of a document in one scope, and resume the state in another.
