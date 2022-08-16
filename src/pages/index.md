@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Documentation-UXP for Adobe Photoshop
-description: Build UXP plugins for Adobe Photoshop with HTML, CSS, and JavaScript. Automate workflows, build new features, and more.
+description: Build UXP plugins and scripts for Adobe Photoshop with HTML, CSS, and JavaScript. Automate workflows, build new features, and more.
 ---
 
 import Community from "./community/index.md"
@@ -21,20 +21,21 @@ import Community from "./community/index.md"
 
 # UXP for Adobe Photoshop 2022
 
-UXP is the modern way to create plugins for Adobe Creative Cloud - Automate workflows, add functionality, and connect to other software and services.
+UXP is the modern way to create plugins and scripts for Adobe Creative Cloud - Automate workflows, add functionality, and connect to other software and services.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-- [Photoshop Quickstart guide](guides/)
+- [Plugin Quickstart guide](guides/)
 - [Photoshop API reference](ps_reference/)
 - [UXP API reference](uxp/reference-js/)
+- [Scripting Quickstart guide](scripting/getting-started/)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 ## Overview
 
-Welcome to the world of Adobe Photoshop and UXP (**U**nified E**x**tensibility **P**latform). UXP is powered by a modern JavaScript engine, offers a curated selection of UI components and a more streamlined workflow for plugin developers.
+Welcome to the world of Adobe Photoshop and UXP (**U**nified E**x**tensibility **P**latform). UXP is powered by a modern JavaScript engine, offers a curated selection of UI components and a more streamlined workflow for developers.
 
 Never has there been a better time to see the future of extending and enhancing Photoshop. Integrate with other connected services, automate and customize workflows, and add brand new features - then easily share them with other Photoshop users.
 
@@ -42,21 +43,27 @@ Never has there been a better time to see the future of extending and enhancing 
 
 ## Get Started with Basics
 
-[Photoshop Quickstart guide](guides/)
+[Plugin Quickstart Guide](guides/)
 
-Start building on UXP for Adobe Photoshop.
+Start building plugins for Adobe Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
 [Photoshop API Reference](ps_reference/)
 
-Interact with Photoshop through UXP.
+Interact with Photoshop using the Photoshop DOM API.
 
 <DiscoverBlock slots="link, text"/>
 
 [UXP API Reference](uxp/reference-js/)
 
-UI APIs, file and network I/O and more.
+Access file APIs, UI APIs, network I/O and more.
+
+<DiscoverBlock slots="link, text"/>
+
+[Scripting Quickstart Guide](scripting/getting-started/)
+
+Start writing scripts for Adobe Photoshop.
 
 ## Discover
 
@@ -84,7 +91,13 @@ Do you have experience with Photoshop plugin solutions? Learn more here.
 
 Learn key design principles for UXP plugins in Photoshop.
 
-## Share
+<DiscoverBlock slots="link, text"/>
+
+[Script samples](scripting/samples/)
+
+Explore script samples to start accomplishing tasks within Photoshop.
+
+## Share your plugin
 
 <DiscoverBlock slots="link, text"/>
 

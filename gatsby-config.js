@@ -29,7 +29,7 @@ module.exports = {
         path: "/",
       },
       {
-        title: "Guides",
+        title: "Plugins",
         path: "/guides/",
       },
       {
@@ -39,6 +39,10 @@ module.exports = {
       {
         title: "UXP API",
         path: "/uxp/",
+      },
+      {
+        title: "Scripting",
+        path: "/scripting/",
       },
       {
         title: "Design",
@@ -70,7 +74,7 @@ module.exports = {
               {
                 title: "Writing a file with UXP",
                 path: "/guides/getting-started/writing-a-file/"
-              }
+              },
             ]
           },
           {
@@ -256,6 +260,27 @@ module.exports = {
         path: "/design/",
         pages: require("./reference-design.js"),
       },
+      {
+        title: "Overview",
+        path: "/scripting/",
+      },
+      {
+        title: "Quickstart Guide",
+        path: "/scripting/getting-started/"
+      },
+      {
+        title: "How It Works",
+        path: "/scripting/how-it-works/"
+      },
+      {  
+        title: "Samples",
+        path: "/scripting/samples/"
+      },
+      {
+        title: "Reference",
+        path: "/scripting/reference/"
+      },
+
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
