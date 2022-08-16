@@ -259,6 +259,10 @@ module.exports = [{
 		{
 			"title": "Action Module",
 			"path": "/ps_reference/media/photoshopaction/"
+		},
+		{
+			"title": "UXP Scripting",
+			"path": "/ps_reference/media/uxpscripting/"
 		}
 	]
 },
