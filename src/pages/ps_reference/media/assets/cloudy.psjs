@@ -1,0 +1,9 @@
+
+const app = require('photoshop').app;
+app.documents.add();
+app.activeDocument.createLayer({ name: "not descriptive name"});
+require('photoshop').action.batchPlay([{"_obj":"fill", "using":{"_enum":"fillContents","_value":"foregroundColor"}
+}], {});
+app.activeDocument.layers[0].applyClouds();
+app.activeDocument.layers[0].name = 'cloudy';
+app.activeDocument.createLayerGroup({fromLayers: app.activeDocument.layers[0]});

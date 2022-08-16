@@ -232,6 +232,31 @@ Type of color profile used to manage a document, used in [Document.colorProfileT
 
 ___
 
+### CreateFields
+
+The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+
+| Name | Description |
+| :------ | :------ |
+| DUPLICATION | - |
+| INTERPOLATION | - |
+
+___
+
+### DepthMapSource
+
+The source to use for the depth map. Pass to
+[Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
+
+| Name | Description |
+| :------ | :------ |
+| IMAGEHIGHLIGHT | - |
+| LAYERMASK | - |
+| NONE | - |
+| TRANSPARENCYCHANNEL | - |
+
+___
+
 ### DialogModes
 
 | Name | Description |
@@ -252,6 +277,15 @@ Orientation of a guide in [Guide.direction](/ps_reference/classes/guide/#directi
 | :------ | :------ |
 | HORIZONTAL | - |
 | VERTICAL | - |
+
+___
+
+### DisplacementMapType
+
+| Name | Description |
+| :------ | :------ |
+| STRETCHTOFIT | - |
+| TILE | - |
 
 ___
 
@@ -313,6 +347,17 @@ Placement modes for Layer.move method
 
 ___
 
+### EliminateFields
+
+The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+
+| Name | Description |
+| :------ | :------ |
+| EVENFIELDS | - |
+| ODDFIELDS | - |
+
+___
+
 ### ForcedColors
 
 The type of colors to be included the color
@@ -324,6 +369,22 @@ table regardless of their usage
 | NONE | None |
 | PRIMARIES | Red, green, blue, cyan, magenta, yellow, black, and white. |
 | WEB | The 216 web-safe colors |
+
+___
+
+### Geometry
+
+Geometric options for shapes, such as the iris shape in the
+Lens Blur filter. Pass to [Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
+
+| Name | Description |
+| :------ | :------ |
+| HEPTAGON | - |
+| HEXAGON | - |
+| OCTAGON | - |
+| PENTAGON | - |
+| SQUARE | - |
+| TRIANGLE | - |
 
 ___
 
@@ -403,6 +464,19 @@ Kinds of different layers in a document
 
 ___
 
+### LensType
+
+The type of Lens to use. Pass to [Layer.applyLensFlare](/ps_reference/classes/layer/#applylensflare)().
+
+| Name | Description |
+| :------ | :------ |
+| MOVIEPRIME | - |
+| PRIME105 | - |
+| PRIME35 | - |
+| ZOOMLENS | - |
+
+___
+
 ### MatteColor
 
 The color to use to fill anti-aliased edges
@@ -435,7 +509,33 @@ Color Modes available for new document
 
 ___
 
+### NoiseDistribution
+
+Distribution model to use when applying an Add Noise filter. Pass to [Layer.applyAddNoise](/ps_reference/classes/layer/#applyaddnoise).
+
+| Name | Description |
+| :------ | :------ |
+| GAUSSIAN | - |
+| UNIFORM | - |
+
+___
+
+### OffsetUndefinedAreas
+
+Method to use to fill the empty space left by offsetting an image or selection.
+Pass to [Layer.applyOffset](/ps_reference/classes/layer/#applyoffset)()
+
+| Name | Description |
+| :------ | :------ |
+| REPEATEDGEPIXELS | - |
+| SETTOBACKGROUND | - |
+| WRAPAROUND | - |
+
+___
+
 ### OperatingSystem
+
+The target operating system in [BMPSaveOptions](/ps_reference/objects/conversionoptions/bmpsaveoptions/).
 
 | Name | Description |
 | :------ | :------ |
@@ -479,11 +579,13 @@ ___
 
 ### PathKind
 
-The type of a [PathItem](/ps_reference/classes/pathitem/)
+ * The type of a [PathItem](/ps_reference/classes/pathitem/)
 
 | Name | Description |
 | :------ | :------ |
 | CLIPPINGPATH | - |
+| DUPLICATE | - |
+| INTERPOLATE | - |
 | NORMALPATH | - |
 | TEXTMASK | - |
 | VECTORMASK | - |
@@ -499,6 +601,57 @@ The role a [PathPoint](/ps_reference/classes/pathpoint/) plays in a [PathItem](/
 | :------ | :------ |
 | CORNERPOINT | - |
 | SMOOTHPOINT | - |
+
+___
+
+### PolarConversionType
+
+The kind of polar conversion.
+Pass to [Layer.applyPolarCoordinates](/ps_reference/classes/layer/#applypolarcoordinates)().
+
+| Name | Description |
+| :------ | :------ |
+| POLARTORECTANGULAR | The distortion applied will take the input pixel grid as polar coordinates and convert them to rectangular coordinates. |
+| RECTANGULARTOPOLAR | The distortion applied will take the input pixel grid as rectangular coordinates and convert them to polar coordinates. |
+
+___
+
+### PreserveShape
+
+Favor the promotion of either corners or curves.
+Pass to [Layer.applyMaximum](/ps_reference/classes/layer/#applymaximum)() and [Layer.applyMinimum](/ps_reference/classes/layer/#applyminimum)().
+
+| Name | Description |
+| :------ | :------ |
+| ROUNDNESS | - |
+| SQUARENESS | - |
+
+___
+
+### RadialBlurMethod
+
+Radial blur comes in two flavors: spin and zoom.
+Spin provides the effect of pinning the image at the designated center and rotating it.
+Zoom provides the effect of motion towards the designated center point.
+Pass to [[Layer.applyRadialBlur]]().
+
+| Name | Description |
+| :------ | :------ |
+| SPIN | - |
+| ZOOM | - |
+
+___
+
+### RadialBlurQuality
+
+The radial blur quality.
+Pass to [[Layer.applyRadialBlur]]().
+
+| Name | Description |
+| :------ | :------ |
+| BEST | - |
+| DRAFT | - |
+| GOOD | - |
 
 ___
 
@@ -536,6 +689,19 @@ The method to use for image interpolation
 | NEARESTNEIGHBOR | Determine value based on nearest neighbor |
 | NONE | Duplicates pixels |
 | PRESERVEDETAILS | Attempt to preserve details by using machine learning |
+
+___
+
+### RippleSize
+
+The size of undulations.
+Pass to [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
+
+| Name | Description |
+| :------ | :------ |
+| LARGE | - |
+| MEDIUM | - |
+| SMALL | - |
 
 ___
 
@@ -590,6 +756,20 @@ Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), s
 
 ___
 
+### TextureType
+
+The type of texture or glass surface image to load for a texturizer
+or glass filter. Pass to [Layer.applyGlassEffect](/ps_reference/classes/layer/#applyglasseffect)().
+
+| Name | Description |
+| :------ | :------ |
+| BLOCKS | - |
+| CANVAS | - |
+| FROSTED | - |
+| TINYLENS | - |
+
+___
+
 ### ToolType
 
 The tool to use with [PathItem.strokePath](/ps_reference/classes/pathitem/#strokepath)()
@@ -624,6 +804,19 @@ Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/
 | BOTTOMRIGHT | Bottom right pixel color. |
 | TOPLEFT | Top left pixel color. |
 | TRANSPARENT | Transparent pixels. |
+
+___
+
+### UndefinedAreas
+
+How to treat undistorted areas or areas left blank in an image
+to which a filter in the Distort category has been applied. Pass
+to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [[Layer.applyWave]]()
+
+| Name | Description |
+| :------ | :------ |
+| REPEATEDGEPIXELS | - |
+| WRAPAROUND | - |
 
 ___
 

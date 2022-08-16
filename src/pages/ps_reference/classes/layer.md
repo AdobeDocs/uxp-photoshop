@@ -58,6 +58,450 @@ If the object is representing a group layer, you can access it's children layers
 
 ## Methods
 
+### applyAddNoise
+
+**async** : *Promise*<void\>
+
+Applies the Add Noise filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | Percentage of noise applied [0.1,400]. |
+| `distribution` | [*NoiseDistribution*](/ps_reference/modules/constants/#noisedistribution) | Distribution method to use. |
+| `monochromatic` | *boolean* | Adds black and white noise if true. |
+
+___
+
+### applyAverage
+
+**async** : *Promise*<void\>
+
+Applies the Average filter.
+
+___
+
+### applyBlur
+
+**async** : *Promise*<void\>
+
+Applies the Blur filter.
+
+___
+
+### applyBlurMore
+
+**async** : *Promise*<void\>
+
+Applies the Blur More filter.
+
+___
+
+### applyClouds
+
+**async** : *Promise*<void\>
+
+Applies the Clouds filter.
+
+___
+
+### applyCustomFilter
+
+**async** : *Promise*<void\>
+
+Applies the Custom filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `characteristics` | *number*[] | Square matrix (5 x 5) used to perform filter operation. |
+| `scale` | *number* | The value by which to divide the sum of the pixel values included in the calculation |
+| `offset` | *number* | The value to be added to the result of the scale calculation. |
+
+___
+
+### applyDeInterlace
+
+**async** : *Promise*<void\>
+
+Applies the De-Interlace filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `eliminateFields` | [*EliminateFields*](/ps_reference/modules/constants/#eliminatefields) | Eliminate EVENFIELDS or ODDFIELDS field order. |
+| `createFields` | [*CreateFields*](/ps_reference/modules/constants/#createfields) | Create fields by either DUPLICATION or INTERPOLATION. |
+
+___
+
+### applyDespeckle
+
+**async** : *Promise*<void\>
+
+Applies the Despeckle filter.
+
+___
+
+### applyDifferenceClouds
+
+**async** : *Promise*<void\>
+
+Applies the Difference Clouds filter.
+
+___
+
+### applyDiffuseGlow
+
+**async** : *Promise*<void\>
+
+Applies the Diffuse Glow filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `graininess` | *number* | The amount of grain [0,10]. |
+| `glowAmount` | *number* | The glow amount [0,20]. |
+| `clearAmount` | *number* | The clear amount [0,20]. |
+
+___
+
+### applyDisplace
+
+**async** : *Promise*<void\>
+
+Applies the Displace filter using the specified horizontal
+and vertical scale, mapping type, treatment of undistorted
+areas, and path to the distortion image map.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `horizontalScale` | *number* | How much to scale in the direction of width [-999,999]. |
+| `verticalScale` | *number* | How much to scale in the direction of height [-999,999]. |
+| `displacementType` | [*DisplacementMapType*](/ps_reference/modules/constants/#displacementmaptype) | Describes how the displacement map fits the image if the image is not the same size as the map. |
+| `undefinedAreas` | [*UndefinedAreas*](/ps_reference/modules/constants/#undefinedareas) | The method used to treat undistorted areas or areas left blank in an image to which the filter in the Distor category has been applied. |
+| `displacementMapFile` | *string* | Path to the distortion image map. |
+
+___
+
+### applyDustAndScratches
+
+**async** : *Promise*<void\>
+
+Applies the Dust & Scratches filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The radius of the filter in pixels [1,100]. |
+| `threshold` | *number* | The lower the amount, the stronger the effect [0,255]. |
+
+___
+
+### applyGaussianBlur
+
+**async** : *Promise*<void\>
+
+Applies the Gaussian Blur filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The radius of the filter in pixels [0.1,250]. |
+
+___
+
+### applyGlassEffect
+
+**async** : *Promise*<void\>
+
+Applies the Glass filter.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `distortion` | *number* | - | Change the amount the glass distorts the image [0,20]. |
+| `smoothness` | *number* | - | Change the smoothness of the glass [1,15]. |
+| `scaling` | *number* | - | The percentage value to scale by [50,200]. |
+| `invert` | *boolean* | false | Invert the glass (default: false). |
+| `texture` | [*TextureType*](/ps_reference/modules/constants/#texturetype) | - | They type of glass texture (default: TextureType.CANVAS). |
+| `textureFile?` | *string* | - | Mapping for glass distortion (optional). |
+
+___
+
+### applyHighPass
+
+**async** : *Promise*<void\>
+
+Applies the High Pass filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The width of high pass filter (pixels) [0.1,1000]. |
+
+___
+
+### applyLensBlur
+
+**async** : *Promise*<void\>
+
+Applies the Lens Blur filter.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `source` | [*DepthMapSource*](/ps_reference/modules/constants/#depthmapsource) | - | The source for the depth map (default: `DepthMapSource.NONE`) |
+| `focalDistance` | *number* | 0 | The blur focal distance for the depth map [0,255] (default: `0`). |
+| `invertDepthMask` | *boolean* | false | True if the depth map is inverted (default: `false`) |
+| `shape` | [*Geometry*](/ps_reference/modules/constants/#geometry) | - | The shape of the iris (default: `Geometry.HEXAGON`) |
+| `radius` | *number* | 15 | The radius of the iris [0,100] (default: 15) |
+| `bladeCurvature` | *number* | 0 | The blade curvature of the iris [0,100] (default: `0`) |
+| `rotation` | *number* | 0 | The rotation of the iris [0,360] (default: `0`) |
+| `brightness` | *number* | 0 | The brightness for the specular highlights [0,100] (default: `0`) |
+| `threshold` | *number* | 0 | The threshold for the specular highlights [0,255] (default: `0`) |
+| `amount` | *number* | 0 | The amount of noise [0,100] (default: `0`) |
+| `distribution` | [*NoiseDistribution*](/ps_reference/modules/constants/#noisedistribution) | - | The distribution value for the noise (default: `NoiseDistribution.UNIFORM`) |
+| `monochromatic` | *boolean* | false | True if the noise is monochromatic (default: `false`) |
+
+___
+
+### applyLensFlare
+
+**async** : *Promise*<void\>
+
+Applies the Lens Flare filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `brightness` | *number* | Percentage of brightness applied [10,300]. |
+| `flareCenter` | *object* | The flare center `{x: number, y: number}`. |
+| `flareCenter.x` | *number* | The horizontal coordinate in pixels. |
+| `flareCenter.y` | *number* | The vertical coordinate in pixels. |
+| `lensType` | [*LensType*](/ps_reference/modules/constants/#lenstype) | The lens type used to produce the effect (default: `LensType.ZOOMLENS`). |
+
+___
+
+### applyMaximum
+
+*Promise*<void\>
+
+Applies the Maximum filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The radius of the filter in pixels.<br/>               Integer in the range [1,500] when using `SQUARENESS`.<br/>               Float in the range [0.2,500] when using `ROUNDNESS`.<br/> |
+| `preserveShape` | [*PreserveShape*](/ps_reference/modules/constants/#preserveshape) | Favor hard corners or smooth curves around the edges<br/>                      (default: `PreserveShape.SQUARENESS`) |
+
+___
+
+### applyMedianNoise
+
+*Promise*<void\>
+
+Applies the Median filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The radius of the filter in pixels [1,500] |
+
+___
+
+### applyMinimum
+
+*Promise*<void\>
+
+Applies the Minimum filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The radius of the filter in pixels.<br/>               Integer in the range [1,500] when using `SQUARENESS`.<br/>               Float in the range [0.2,500] when using `ROUNDNESS`.<br/> |
+| `preserveShape` | [*PreserveShape*](/ps_reference/modules/constants/#preserveshape) | Favor hard corners or smooth curves around the edges<br/>                      (default: `PreserveShape.SQUARENESS`) |
+
+___
+
+### applyMotionBlur
+
+*Promise*<void\>
+
+Applies the Motion Blur filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `angle` | *number* | The angle the blur effect will be applied at (degrees) [-360,360] |
+| `distance` | *number* | The amount of blur [1,2000] |
+
+___
+
+### applyNTSC
+
+*Promise*<void\>
+
+Applies the NTSC Colors filter
+
+___
+
+### applyOceanRipple
+
+*Promise*<void\>
+
+Applies the Ocean Ripple filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `size` | *number* | The Ripple size [1,15] |
+| `magnitude` | *number* | The Ripple magnitude [1,20] |
+
+___
+
+### applyOffset
+
+*Promise*<void\>
+
+Applies the Offset filter
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `horizontal` | *number* | The horizontal offset [-2 \* doc.width, 2 \* doc.width] |
+| `vertical` | *number* | The vertical offset [-2 \* doc.height, 2 \* doc.height] |
+| `undefinedAreas` | [*OffsetUndefinedAreas*](/ps_reference/modules/constants/#offsetundefinedareas) | Method to use to fill the empty space left by the offset<br/>                       (default: `OffsetUndefinedAreas.WRAPAROUND`). |
+
+___
+
+### applyPinch
+
+**async** : *Promise*<void\>
+
+Applies the pinch filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | The pinch amount. Negative value creates effect of expansion and positive creates effect of contraction. [-100,100] |
+
+___
+
+### applyPolarCoordinates
+
+**async** : *Promise*<void\>
+
+Applies the polar coordinates filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `conversion` | [*PolarConversionType*](/ps_reference/modules/constants/#polarconversiontype) | The conversion type. |
+
+___
+
+### applyRipple
+
+**async** : *Promise*<void\>
+
+Applies the ripple filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | The ripple amount. [-999,999] |
+| `size` | [*RippleSize*](/ps_reference/modules/constants/#ripplesize) | The ripple size. |
+
+___
+
+### applySharpen
+
+**async** : *Promise*<void\>
+
+Applies the sharpen filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+___
+
+### applySharpenEdges
+
+**async** : *Promise*<void\>
+
+Applies the sharpen edges filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+___
+
+### applySharpenMore
+
+**async** : *Promise*<void\>
+
+Applies the sharpen more filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+___
+
+### applyShear
+
+**async** : *Promise*<void\>
+
+Applies the the shear filter.
+
+Unsupported color modes: Bitmap, Indexed Color
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `curve` | { `x`: *number* ; `y`: *number*  }[] | Specification of the shear curve in points as coordinates object with x, y properties e.g.in the format [{x:-20, y:1}, {x:30, y:128}]. Any number higher than 2 of coordinate objects can be specified. For "x" coordinate it is recommended to use range [-63,64] and for "y" coordinate use range [1,128]. For bests results please make sure that first point has 0 at "y" axis and last point has 128 at "y" axis. Also sort points by "y" value in ascending order. Follow these rules to ensure that curve will be shown correctly in dialog UI. |
+| `undefinedArea` | [*UndefinedAreas*](/ps_reference/modules/constants/#undefinedareas) | The treatment of areas left blank by the distortion. |
+
+___
+
+### applyTwirl
+
+**async** : *Promise*<void\>
+
+Applies the Twirl filter.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `angle` | *number* | The amount of twirl to apply (degrees) [-999,999] |
+
+___
+
 ### bringToFront
 
 *void*
