@@ -17,7 +17,7 @@ The biggest advantage that scripting offers is its simplicity. You can accomplis
 ## How is it different from UXP plugin development? 
 1. **[Lifetime](../scripting/how-it-works/index.md#execution-context):** A script’s lifetime ends when it finishes executing.
 2. **[Limited UI](../scripting/how-it-works/index.md#user-interface):** Unlike plugins, scripts cannot have a panel UI. They can only create dialog UIs.
-3. **No persistent data:** Scripts also don’t have access to persistent storage like the plugin data folder or local storage. 
+3. **No persistent data:** Scripts also don’t have access to persistent storage like the plugin data folder or `window.localStorage`. 
 4. **[Limited access to UXP modules](../scripting/how-it-works/index.md#permitted-uxp-modules):** Permissions to access UXP modules are managed by the host application and for now, only a limited number of modules are enabled. *We plan on enabling more modules with future versions.*
 5. **No identity:** UXP scripts are not supported in our distribution channels yet. Once shared, any user can use them. Plugins on the other hand are tied to a plugin ID, and procured via the CCD plugin marketplace. 
 

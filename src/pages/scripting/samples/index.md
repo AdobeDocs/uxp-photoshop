@@ -22,14 +22,13 @@ You can create a script that accesses your local filesystem, with the help of th
 const uxpfs = require("uxp").storage;
 const ufs = uxpfs.localFileSystem;
 
-await ufs.getTemporaryFolder().
-    then((result) => {
-        return result.getMetadata();
-    }).then((result) => {
-        console.log(JSON.stringify(result));
-    }).catch((error) => {
-        console.log("Local File system Error: " + error);
-});
+try {
+    const folder = await ufs.getTemporaryFolder()
+    const metadata = await folder.getMetadata();
+    console.log(JSON.stringify(metadata));
+} catch (e) {
+    console.log(`Local File system error: ${e}`);
+}
 ```
 
 ## Using a file picker
@@ -50,45 +49,18 @@ You can access the clipboard module (`navigator.clipboard`) to:
 * write to a clipboard (`setContent()`)
 * read a clipboard's contents (`readText()`)
 ```js
-const script = await require("uxp").script;
- 
-scriptResult = "";
- 
-await testClipboardModuleAccess();
- 
-script.setResult(scriptResult);
- 
-async function testClipboardModuleAccess() {
-    return new Promise((resolve, reject) => {
-        try {
-            const clipboard = navigator.clipboard;
-            clipboard.setContent({ 'text/plain': "Test string to validate clipboard setContent" }).then(
-                () => {
-                    console.log("Clipboard write Access Success \n");
-                },
-                (error) => {
-                    console.log("Clipboard write Failed : " + error);
-                    scriptResult += " Clipboard Module Access Failed \n";
-                }
-            );
-            clipboard.readText().then(
-                (result) => {
-                    scriptResult += " Clipboard Module read Access Success \n";
-                    console.log("Clipboard read Success : " + result["text/plain"] + "\n");
-                },
-                (error) => {
-                    console.log("Clipboard read Failed : " + error);
-                    scriptResult += " Clipboard Module read Access Failed \n";
-                }
-            ).finally(() => {
-                resolve();
-            });
-        }  catch (e) {
-            scriptResult += " Clipboard Module Access Failed \n";
-            console.log(e);
-            resolve(e);
-        }
-    })
+try {
+    const clipboard = navigator.clipboard;
+    await clipboard.setContent({ 'text/plain': "Test string" });
+} catch (e) {
+    throw new Error(e);
+}
+try {
+    const clipboard = navigator.clipboard;
+    const text = await clipboard.readText();
+    console.log(text);
+}  catch (e) {
+    throw new Error(e);
 }
 ```
 

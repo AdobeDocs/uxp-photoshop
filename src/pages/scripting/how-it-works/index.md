@@ -11,7 +11,7 @@ Each Photoshop script file is a plain text file with a `.psjs` file extension. W
 ## Execution Context
 Photoshop sets an execution context while invoking a script.
 
-Within each execution context, only one script can be executed at a time. You cannot invoke another script from the running script. Using the UXP script module, you can access `ExecutionContext`.
+Within an execution context, only one script can be executed at a time. You cannot invoke another script from the running script. Using the UXP script module, you can access `ExecutionContext`.
 
 ```js
 const script = await require("uxp").script;
@@ -34,7 +34,9 @@ executionContext.onCancel.addListener((reason) => {
 ``` 
 
 ## User Interface
-Scripts can only show a dialog UI. Any UI created by a script is modal in nature and must use **global await** or it will be destroyed when the script is done running. Photoshop automatically shows a **progress bar** if the script takes more than 2-3 seconds to finish.
+Scripts can only show a dialog UI. Any UI created by a script is modal in naturel By *not* using `await` for `showModal()` (not letting it return a Promise), execution can continue to completion at which point any UI is destroyed. If you don't see your modal UI appear, check that there is an `await` in front of it.
+
+Photoshop automatically shows a **progress bar** if the script takes more than 2-3 seconds to finish.
 
 
 ### Global Await
@@ -95,6 +97,6 @@ If you need to use the UXP modules that are not yet enabled for scripts, you sho
 * Can scripts be executed from plugins? 
   * No; however, any UXP script code should be able to run from within a UXP plugin.
 * Can I enable permissions for a module?
-  * Developers cannot enable or seek the permission for a module. All permitted modules are enabled by default. 
+  * Developers cannot enable or seek the permission for a module. By default, all permitted modules are enabled by Photoshop.
 * Why only a limited number of modules are permitted in PS? Do we expect other modules to be enabled in the future?
   * This is the first release of the UXP script module, and we’re working on enabling permissions to access more modules in upcoming releases.
