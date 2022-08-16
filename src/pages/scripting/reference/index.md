@@ -22,28 +22,7 @@ const script = await require("uxp").script;
 
 | Name | Type | Access | Description |
 | --- | --- | --- | --- |
-| args | Array[] | readOnly | Arguments passed while invoking the script |
 | executionContext | ExecutionContext | readOnly | ExecutionContext passed by the host when invoking Script |
-
-```jsx
-const args = script.args;
-console.log("Arguments passed : ", JSON.stringify(args));
-```
-
-### Methods
-
----
-
-**`setResult`**
-
-- Returns *void*
-- Send the execution result back to host (if required)
-
-**Parameters**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| result | Host defined | Result to be sent back to the host after the execution |
 
 ## ExecutionContext
 Passed by the host when invoking scripts. Contains the following: 
@@ -162,7 +141,7 @@ await hostControl.unregisterAutoCloseDocument(docID);
 
 **`onCancel`**
 
-Script execution can occur either when the user clicks “Cancel” in the progress bar, or when the host app encounters some exception in running the script file. Developers can add **event handlers** to get notified when the command has been cancelled. The associated callback will receive a parameter `reason`. 
+* Script cancellation can occur either when the user clicks “Cancel” in the progress bar, or when the host app encounters some exception in running the script file. Developers can add **event handlers** to get notified when the command has been cancelled. The associated callback will receive a parameter `reason`. 
 
 ```jsx
 executionContext.onCancel.addListener((reason) => {

@@ -51,7 +51,7 @@ Start building plugins for Adobe Photoshop.
 
 [Photoshop API Reference](ps_reference/)
 
-Interact with the Photoshop DOM using the Photoshop API.
+Interact with Photoshop using the Photoshop DOM API.
 
 <DiscoverBlock slots="link, text"/>
 
