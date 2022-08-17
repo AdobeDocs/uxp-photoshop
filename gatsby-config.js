@@ -14,13 +14,13 @@ module.exports = {
   siteMetadata: {
     versions: [
       {
-        title: '2022',
-        path: '/photoshop/uxp/2022/',
+        title: 'v2',
+        path: '/photoshop/uxp/v2/',
         selected: true
       },
       {
-        title: '2021',
-        path: '/photoshop/uxp/2021/'
+        title: 'v1',
+        path: '/photoshop/uxp/v1/'
       }
     ],
     pages: [
@@ -259,5 +259,5 @@ module.exports = {
     ],
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/2022/",
+  pathPrefix: process.env.PATH_PREFIX || "/photoshop/uxp/v2/",
 };
