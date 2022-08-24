@@ -29,7 +29,7 @@ see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_
 
 ▪ [index: *number*]: [*PathItem*](/ps_reference/classes/pathitem/)
 
-Used to access the guides in the collection
+Used to access the paths in the collection
 
 Access through the [Document.pathItems](/ps_reference/classes/document/#pathitems) collection property. To create new paths,
 see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_reference/classes/subpathinfo/) classes and pass them to [PathItems.add](/ps_reference/classes/pathitems/#add)() method.
@@ -80,4 +80,4 @@ ___
 
 *void*
 
-Clears all guides from this collection
+Removes all paths from this collection

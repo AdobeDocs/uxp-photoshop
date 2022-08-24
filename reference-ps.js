@@ -275,5 +275,10 @@ module.exports = [{
 	"title": "API Changelog",
 	"header": true,
 	"path": "/ps_reference/changelog/"
+},
+    {
+	"title": "Known Issues",
+	"header": true,
+	"path": "/ps_reference/known-issues/"
 }
 ]

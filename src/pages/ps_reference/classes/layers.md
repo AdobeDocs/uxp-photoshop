@@ -59,6 +59,10 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 Create a new layer.
 
+```javascript
+let newDoc1 = await app.activeDocument.layers.add();
+```
+
 ___
 
 ### getByName
