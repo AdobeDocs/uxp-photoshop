@@ -18,7 +18,7 @@ keywords:
 
 # Colors
 
-Below are color classes that are used internally for [[SolidColor]]. 
+Below are color classes that are used internally for [SolidColor](../classes/solidcolor). 
 
  - [CMYKColor](./cmykcolor.md)
  - [GrayColor](./graycolor.md)

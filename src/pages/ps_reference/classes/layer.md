@@ -64,6 +64,10 @@ If the object is representing a group layer, you can access it's children layers
 
 Applies the Add Noise filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -80,6 +84,10 @@ ___
 
 Applies the Average filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyBlur
@@ -87,6 +95,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the Blur filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 ___
 
@@ -96,6 +108,10 @@ ___
 
 Applies the Blur More filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyClouds
@@ -104,6 +120,10 @@ ___
 
 Applies the Clouds filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyCustomFilter
@@ -111,6 +131,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the Custom filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -128,6 +152,10 @@ ___
 
 Applies the De-Interlace filter.
 
+Unsupported color modes: Indexed Color, Bitmap, CMYK 8 bits, CMYK 16 bits, Duotone 8 bits
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -143,6 +171,10 @@ ___
 
 Applies the Despeckle filter.
 
+Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyDifferenceClouds
@@ -151,6 +183,10 @@ ___
 
 Applies the Difference Clouds filter.
 
+Unsupported color modes: Indexed Color, Bitmap, Lab 8 bits, Lab 16 bits
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyDiffuseGlow
@@ -158,6 +194,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the Diffuse Glow filter.
+
+Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -177,6 +217,10 @@ Applies the Displace filter using the specified horizontal
 and vertical scale, mapping type, treatment of undistorted
 areas, and path to the distortion image map.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -185,7 +229,7 @@ areas, and path to the distortion image map.
 | `verticalScale` | *number* | How much to scale in the direction of height [-999,999]. |
 | `displacementType` | [*DisplacementMapType*](/ps_reference/modules/constants/#displacementmaptype) | Describes how the displacement map fits the image if the image is not the same size as the map. |
 | `undefinedAreas` | [*UndefinedAreas*](/ps_reference/modules/constants/#undefinedareas) | The method used to treat undistorted areas or areas left blank in an image to which the filter in the Distor category has been applied. |
-| `displacementMapFile` | *string* | Path to the distortion image map. |
+| `displacementMapFile` | File | Path to the distortion image map. |
 
 ___
 
@@ -194,6 +238,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the Dust & Scratches filter.
+
+Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -210,6 +258,10 @@ ___
 
 Applies the Gaussian Blur filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -224,6 +276,10 @@ ___
 
 Applies the Glass filter.
 
+Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Default value | Description |
@@ -232,8 +288,8 @@ Applies the Glass filter.
 | `smoothness` | *number* | - | Change the smoothness of the glass [1,15]. |
 | `scaling` | *number* | - | The percentage value to scale by [50,200]. |
 | `invert` | *boolean* | false | Invert the glass (default: false). |
-| `texture` | [*TextureType*](/ps_reference/modules/constants/#texturetype) | - | They type of glass texture (default: TextureType.CANVAS). |
-| `textureFile?` | *string* | - | Mapping for glass distortion (optional). |
+| `texture` | [*TextureType*](/ps_reference/modules/constants/#texturetype) | - | The type of glass texture. This argument is ignored if "textureFile" is provided. (default: TextureType.CANVAS) |
+| `textureFile?` | File | - | Mapping for glass distortion (optional). |
 
 ___
 
@@ -242,6 +298,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the High Pass filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -256,6 +316,10 @@ ___
 **async** : *Promise*<void\>
 
 Applies the Lens Blur filter.
+
+Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -282,6 +346,10 @@ ___
 
 Applies the Lens Flare filter.
 
+Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -300,6 +368,10 @@ ___
 
 Applies the Maximum filter
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -315,6 +387,10 @@ ___
 
 Applies the Median filter
 
+Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -328,6 +404,10 @@ ___
 *Promise*<void\>
 
 Applies the Minimum filter
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -344,6 +424,10 @@ ___
 
 Applies the Motion Blur filter
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -359,6 +443,10 @@ ___
 
 Applies the NTSC Colors filter
 
+Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
+
+*Added in Photoshop 23.5*
+
 ___
 
 ### applyOceanRipple
@@ -366,6 +454,10 @@ ___
 *Promise*<void\>
 
 Applies the Ocean Ripple filter
+
+Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -382,6 +474,10 @@ ___
 
 Applies the Offset filter
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
@@ -396,9 +492,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the pinch filter.
+Applies the Pinch filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -412,9 +510,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the polar coordinates filter.
+Applies the Polar Coordinates filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -428,9 +528,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the ripple filter.
+Applies the Ripple filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -445,9 +547,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the sharpen filter.
+Applies the Sharpen filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 ___
 
@@ -455,9 +559,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the sharpen edges filter.
+Applies the Sharpen Edges filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
+
+*Added in Photoshop 23.5*
 
 ___
 
@@ -465,9 +571,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the sharpen more filter.
+Applies the Sharpen More filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 ___
 
@@ -475,9 +583,11 @@ ___
 
 **async** : *Promise*<void\>
 
-Applies the the shear filter.
+Applies the the Shear filter.
 
-Unsupported color modes: Bitmap, Indexed Color
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -488,17 +598,129 @@ Unsupported color modes: Bitmap, Indexed Color
 
 ___
 
+### applySmartBlur
+
+**async** : *Promise*<void\>
+
+Applies the Smart Blur filter.
+
+Supported color modes: RGB 8 bits, CMYK 8 bits, Duotone 8 bits,
+
+*Added in Photoshop 24.0*
+Grayscale 8 bits, Lab 8 bits, Multichannel 8 bits
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `radius` | *number* | The blur radius [0.1,100]. |
+| `threshold` | *number* | The blur threshold [0.1,100]. |
+| `blurQuality` | [*SmartBlurQuality*](/ps_reference/modules/constants/#smartblurquality) | The smoothness or graininess of the blurred image. |
+| `mode` | [*SmartBlurMode*](/ps_reference/modules/constants/#smartblurmode) | The smart blur mode. |
+
+___
+
+### applySpherize
+
+**async** : *Promise*<void\>
+
+Applies the Spherize filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 24.0*
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | The amount of distortion [-100,100]. |
+| `mode` | [*SpherizeMode*](/ps_reference/modules/constants/#spherizemode) | The distortion mode. |
+
+___
+
 ### applyTwirl
 
 **async** : *Promise*<void\>
 
 Applies the Twirl filter.
 
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 23.5*
+
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `angle` | *number* | The amount of twirl to apply (degrees) [-999,999] |
+
+___
+
+### applyUnSharpMask
+
+**async** : *Promise*<void\>
+
+Applies the Unsharp Mask filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 24.0*
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | The amount of sharpening (as a whole number percentage) [1,500]. |
+| `radius` | *number* | The radius in pixels [0.1,1000]. |
+| `threshold` | *number* | The contrast threshold [0,255]. |
+
+___
+
+### applyWave
+
+**async** : *Promise*<void\>
+
+Applies the Wave filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 24.0*
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `generatorNumber` | *number* | The whole number of generators [1,999]. |
+| `minimumWavelength` | *number* | The minimum wave length [1,(maximum wave length - 1)] (whole number). |
+| `maximumWavelength` | *number* | The maximum wave length [(minimum wave length + 1),999] (whole number). |
+| `minimumAmplitude` | *number* | The minimum amplitude [1,(maximum amplitude - 1)] (whole number). |
+| `maximumAmplitude` | *number* | The maximum amplitude [(minimum amplitude + 1),999] (whole number). |
+| `horizontalScale` | *number* | The amount of horizontal scale (as a percentage) [1,100] (whole number). |
+| `verticalScale` | *number* | The amount of vertical scale (as a percentage) [1,100] (whole number). |
+| `waveType` | [*WaveType*](/ps_reference/modules/constants/#wavetype) | The wave type (optional). |
+| `undefinedAreas` | [*UndefinedAreas*](/ps_reference/modules/constants/#undefinedareas) | The treatment of areas left blank by the distortion (optional). |
+| `randomSeed` | *number* | The random seed (optional). |
+
+___
+
+### applyZigZag
+
+**async** : *Promise*<void\>
+
+Applies the ZigZag filter.
+
+Unsupported color modes: Indexed Color, Bitmap
+
+*Added in Photoshop 24.0*
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | *number* | The amount of zigzag [-100,100]. |
+| `ridges` | *number* | The number of ridges [0,20]. |
+| `style` | [*ZigZagType*](/ps_reference/modules/constants/#zigzagtype) | The zigzag style. |
 
 ___
 

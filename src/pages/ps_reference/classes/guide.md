@@ -18,7 +18,7 @@ keywords:
 
 # Guide
 
-Represents a single history state in the History panel
+Represents a single guide in the document.
 
 ## Properties
 

@@ -326,7 +326,7 @@ userIdle event handler defined with [addNotificationListener](/ps_reference/medi
 turns off idle notifications.
 
 ```javascript
-await PhotoshopCore.setUserIdleTIme(3)
+await PhotoshopCore.setUserIdleTime(3)
 ```
 
 #### Parameters

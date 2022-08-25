@@ -29,7 +29,7 @@ keywords:
 | group | *boolean* | false
  | - | Whether to use previous layer to create clipping mask |
 | mode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | normal
- | - | Blend mode of the newly created layer. Deprecated, please use [[LayerCreateOptions.blendMode]] as it will override this value. |
+ | - | Blend mode of the newly created layer. Deprecated, please use &#x60;blendMode&#x60; above as it will override this value. |
 | name | *string* | - | - | Name of the newly created layer |
 | opacity | *number* | 100
  | - | Opacity of the newly created layer |

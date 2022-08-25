@@ -628,33 +628,6 @@ Pass to [Layer.applyMaximum](/ps_reference/classes/layer/#applymaximum)() and [L
 
 ___
 
-### RadialBlurMethod
-
-Radial blur comes in two flavors: spin and zoom.
-Spin provides the effect of pinning the image at the designated center and rotating it.
-Zoom provides the effect of motion towards the designated center point.
-Pass to [[Layer.applyRadialBlur]]().
-
-| Name | Description |
-| :------ | :------ |
-| SPIN | - |
-| ZOOM | - |
-
-___
-
-### RadialBlurQuality
-
-The radial blur quality.
-Pass to [[Layer.applyRadialBlur]]().
-
-| Name | Description |
-| :------ | :------ |
-| BEST | - |
-| DRAFT | - |
-| GOOD | - |
-
-___
-
 ### RasterizeType
 
 The type of layer to get rasterized.
@@ -756,6 +729,45 @@ Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), s
 
 ___
 
+### SmartBlurMode
+
+The method to use for smart blurring.
+Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+
+| Name | Description |
+| :------ | :------ |
+| EDGEONLY | - |
+| NORMAL | - |
+| OVERLAYEDGE | - |
+
+___
+
+### SmartBlurQuality
+
+The smart blur quality.
+Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+
+| Name | Description |
+| :------ | :------ |
+| HIGH | - |
+| LOW | - |
+| MEDIUM | - |
+
+___
+
+### SpherizeMode
+
+The curve (or stretch shape) to use for the distortion.
+Pass to [Layer.applySpherize](/ps_reference/classes/layer/#applyspherize)().
+
+| Name | Description |
+| :------ | :------ |
+| HORIZONTAL | - |
+| NORMAL | - |
+| VERTICAL | - |
+
+___
+
 ### TextureType
 
 The type of texture or glass surface image to load for a texturizer
@@ -811,7 +823,7 @@ ___
 
 How to treat undistorted areas or areas left blank in an image
 to which a filter in the Distort category has been applied. Pass
-to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [[Layer.applyWave]]()
+to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [Layer.applyWave](/ps_reference/classes/layer/#applywave)()
 
 | Name | Description |
 | :------ | :------ |
@@ -832,3 +844,29 @@ Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps_refere
 | PICAS | - |
 | PIXELS | - |
 | POINTS | - |
+
+___
+
+### WaveType
+
+The type of wave.
+Pass to [Layer.applyWave](/ps_reference/classes/layer/#applywave)().
+
+| Name | Description |
+| :------ | :------ |
+| SINE | - |
+| SQUARE | - |
+| TRIANGULAR | - |
+
+___
+
+### ZigZagType
+
+The method of zigzagging.
+Pass to [Layer.applyZigZag](/ps_reference/classes/layer/#applyzigzag)().
+
+| Name | Description |
+| :------ | :------ |
+| AROUNDCENTER | - |
+| OUTFROMCENTER | - |
+| PONDRIPPLES | - |

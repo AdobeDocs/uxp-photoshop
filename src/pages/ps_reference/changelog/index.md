@@ -6,57 +6,75 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Introduction
+## Photoshop 24.0 (October 2022)
 
-As of now, this documentation site describes API functionality that is available for use to a select number of participants in [Adobe Prerelease community](https://www.adobeprerelease.com/). We will start to evolve the site to support users and plugin developers outside the Prerelease group, once more functionality is available, and when we can be more confident our changes are stable for the wider audience.
+## Photoshop Beta
 
-If you would like to join the conversation, please consider joining the [Adobe Prerelease community](https://www.adobeprerelease.com/)!
-## Latest (Available in Beta builds)
+### Known Issues and Workarounds
+- A new page of [Known Issues and Workarounds](../known-issues) was introduced, and aims to outline some common issues encountered by our developer community. New entries will be summarized in this changelog.
+- A note about increased error throws from `batchPlay`, specifically with the `move` command, was added.
+
+### Layer Filter Methods
+- [Layer.applySmartBlur(radius: number, threshold: number, blurQuality: Constants.SmartBlurQuality, mode: Constants.SmartBlurMode)](../classes/layer/#applysmartblur) Applies the smart blur filter.
+- [Layer.applySpherize(amount: number, mode: Constants.SpherizeMode)](../classes/layer/#applyspherize) Applies the spherize filter.
+- [Layer.applyUnSharpMask(amount: number, radius: number, threshold: number)](../classes/layer/#applyunsharpmask) Applies the unsharp mask filter.
+- [Layer.applyWave(generatorNumber: number, minimumWavelength: number, maximumWavelength: number, minimumAmplitude: number, maximumAmplitude: number, horizontalScale: number, verticalScale: number, waveType: Constants.WaveType, undefinedAreas: Constants.UndefinedAreas, randomSeed: number)](../classes/layer/#applywave) Applies the wave filter.
+- [Layer.applyZigZag(amount: number, ridges: number, style: Constants.ZigZagType)](../classes/layer/#applyzigzag) Applies the zigzag filter.
+
+### Other
+- Color mode validation for all filters
+- Fixed Lens Flare coordinates
+- Fixed file arguments for filters 
 
 ## Photoshop 23.5 (August 2022)
 
-### layer apply filters
-- [Layer.applyAddNoise(amount:number, distribution:Constants.NoiseDistribution, monochromatic:boolean)](../classes/layer/#applyAddNoise) Applies the Add Noise filter.
-- [Layer.applyAverage()](../classes/layer/#applyAverage) Applies the Average filter.
-- [Layer.applyBlur()](../classes/layer/#applyBlur) Applies the Blur filter.
-- [Layer.applyBlurMore()](../classes/layer/#applyBlurMore) Applies the Blur More filter.
-- [Layer.applyClouds()](../classes/layer/#applyClouds) Applies the Clouds filter.
-- [Layer.applyCustomFilter(characteristics:number[], scale:number, offset:number)](../classes/layer/#applyCustomFilter) Applies the Custom filter.
-- [Layer.applyDeInterlace(eliminateFields:Constants.EliminateFields, createFields:Constants.CreateFields)](../classes/layer/#applyDeInterlace) Applies the De-Interlace filter.
-- [Layer.applyDespeckle()](../classes/layer/#applyDespeckle) Applies the Despeckle filter.
-- [Layer.applyDifferenceClouds()](../classes/layer/#applyDifferenceClouds) Applies the Difference Clouds filter.
-- [Layer.applyDiffuseGlow(graininess:number, glowAmount:number, clearAmount:number)](../classes/layer/#applyDiffuseGlow) Applies the Diffuse Glow filter.
-- [Layer.applyDisplace(horizontalScale:number, verticalScale:number, displacementType:Constants.DisplacementMapType, undefinedAreas:Constants.UndefinedAreas, displacementMapFile:string)](../classes/layer/#applyDisplace) Applies the Displace filter.
-- [Layer.applyDustAndScratches(radius:number, threshold:number)](../classes/layer/#applyDustAndScratches) Applies the Dust and Scratches filter.
-- [Layer.applyGaussianBlur(radius:number)](../classes/layer/#applyGaussianBlur) Applies the Gaussian Blur filter.
-- [Layer.applyGlassEffect(distortion:number, smoothness:number, scaling:number, invert:boolean, texture:Constants.TextureType, textureFile?:string)](../classes/layer/#applyGlassEffect) Applies the Glass filter.
-- [Layer.applyHighPass(radius:number)](../classes/layer/#applyHighPass) Applies the High Pass filter.
-- [Layer.applyLensBlur(source:Constants.DepthMapSource, focalDistance:number, invertDepthMask:boolean, shape:Constants.Geometry, radius:number, bladeCurvature:number, rotation:number, brightness:number, threshold:number, amount:number, distribution:Constants.NoiseDistribution, monochromatic:boolean)](../classes/layer/#applyLensBlur) Applies the Lens Blur filter.
-- [Layer.applyLensFlare(brightness:number, flareCenter:number\[\], lensType:Constants.LensType)](../classes/layer/#applyLensFlare) Applies the Lens Flare filter.
-- [Layer.applyMaximum(radius:number, preserveShape:Constants.PreserveShape)](../classes/layer/#applyMaximum) Applies the Maximum filter.
-- [Layer.applyMinimum(radius:number, preserveShape:Constants.PreserveShape)](../classes/layer/#applyMinimum) Applies the Minimum filter.
-- [Layer.applyMedianNoise(radius:number)](../classes/layer/#applyMedianNoise) Applies the Median Noise filter.
-- [Layer.applyMotionBlur(angle:number, distance:number)](../classes/layer/#applyMotionBlur) Applies the Motion Blur filter.
-- [Layer.applyNTSC()](../classes/layer/#applyNTSC) Applies the NTSC filter.
-- [Layer.applyOceanRipple(size:number, magnitude:number)](../classes/layer/#applyOceanRipple) Applies the Ocean Ripple filter.
-- [Layer.applyOffset(horizontal:number, vertical:number, undefinedAreas:Constants.OffsetUndefinedAreas)](../classes/layer/#applyOffset) Applies the Offset filter.
-- [Layer.applyTwirl(angle:number)](../classes/layer/#applyTwirl) Applies the Twirl filter.
+### UXP Scripting
+Script files with extension .psjs are executed using UXP. 
+- [Overview](../../scripting/)
+- [Quickstart Guide](../../scripting/getting-started/)
+- [Ps UXP Scripting](../media/uxpscripting/)
 
-- [Layer.applyPinch(amount: number)](../classes/layer/#applyPinch) Applies the Pinch filter.
-- [Layer.applyPolarCoordinates(conversion: Constants.PolarConversionType)](../classes/layer/#applyPolarCoordinates) Applies the Polar Coordinates filter.
-- [Layer.applyRipple(amount: number, size: Constants.RippleSize)](../classes/layer/#applyRipple) Applies the Ripple filter.
-- [Layer.applySharpen()](../classes/layer/#applySharpen) Applies the Sharpen filter.
-- [Layer.applySharpenEdges()](../classes/layer/#applySharpenEdges) Applies the Sharpen Edges filter.
-- [Layer.applySharpenMore()](../classes/layer/#applySharpenMore) Applies the Sharpen More filter.
-- [Layer.applyShear(curve: {x:number, y:number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyShear) Applies the Shear filter.
+### Layer Filter methods
+- [Layer.applyAddNoise(amount: number, distribution: Constants.NoiseDistribution, monochromatic: boolean)](../classes/layer/#applyaddnoise) Applies the Add Noise filter.
+- [Layer.applyAverage()](../classes/layer/#applyaverage) Applies the Average filter.
+- [Layer.applyBlur()](../classes/layer/#applyblur) Applies the Blur filter.
+- [Layer.applyBlurMore()](../classes/layer/#applyblurmore) Applies the Blur More filter.
+- [Layer.applyClouds()](../classes/layer/#applyclouds) Applies the Clouds filter.
+- [Layer.applyCustomFilter(characteristics: number[], scale: number, offset: number)](../classes/layer/#applycustomfilter) Applies the Custom filter.
+- [Layer.applyDeInterlace(eliminateFields: Constants.EliminateFields, createFields: Constants.CreateFields)](../classes/layer/#applydeinterlace) Applies the De-Interlace filter.
+- [Layer.applyDespeckle()](../classes/layer/#applydespeckle) Applies the Despeckle filter.
+- [Layer.applyDifferenceClouds()](../classes/layer/#applydifferenceclouds) Applies the Difference Clouds filter.
+- [Layer.applyDiffuseGlow(graininess: number, glowAmount: number, clearAmount: number)](../classes/layer/#applydiffuseglow) Applies the Diffuse Glow filter.
+- [Layer.applyDisplace(horizontalScale: number, verticalScale: number, displacementType: Constants.DisplacementMapType, undefinedAreas: Constants.UndefinedAreas, displacementMapFile: File)](../classes/layer/#applydisplace) Applies the Displace filter.
+- [Layer.applyDustAndScratches(radius: number, threshold: number)](../classes/layer/#applydustandscratches) Applies the Dust and Scratches filter.
+- [Layer.applyGaussianBlur(radius: number)](../classes/layer/#applygaussianblur) Applies the Gaussian Blur filter.
+- [Layer.applyGlassEffect(distortion: number, smoothness: number, scaling: number, invert: boolean, texture: Constants.TextureType, textureFile?: File)](../classes/layer/#applyglasseffect) Applies the Glass filter.
+- [Layer.applyHighPass(radius: number)](../classes/layer/#applyhighpass) Applies the High Pass filter.
+- [Layer.applyLensBlur(source: Constants.DepthMapSource, focalDistance: number, invertDepthMask: boolean, shape: Constants.Geometry, radius: number, bladeCurvature: number, rotation: number, brightness: number, threshold: number, amount: number, distribution: Constants.NoiseDistribution, monochromatic: boolean)](../classes/layer/#applylensblur) Applies the Lens Blur filter.
+- [Layer.applyLensFlare(brightness: number, flareCenter: {x: number, y: number}, lensType: Constants.LensType)](../classes/layer/#applylensflare) Applies the Lens Flare filter.
+- [Layer.applyMaximum(radius: number, preserveShape: Constants.PreserveShape)](../classes/layer/#applymaximum) Applies the Maximum filter.
+- [Layer.applyMinimum(radius: number, preserveShape: Constants.PreserveShape)](../classes/layer/#applyminimum) Applies the Minimum filter.
+- [Layer.applyMedianNoise(radius: number)](../classes/layer/#applymediannoise) Applies the Median Noise filter.
+- [Layer.applyMotionBlur(angle: number, distance: number)](../classes/layer/#applymotionblur) Applies the Motion Blur filter.
+- [Layer.applyNTSC()](../classes/layer/#applyntsc) Applies the NTSC filter.
+- [Layer.applyOceanRipple(size: number, magnitude: number)](../classes/layer/#applyoceanripple) Applies the Ocean Ripple filter.
+- [Layer.applyOffset(horizontal: number, vertical: number, undefinedAreas: Constants.OffsetUndefinedAreas)](../classes/layer/#applyoffset) Applies the Offset filter.
+- [Layer.applyTwirl(angle: number)](../classes/layer/#applytwirl) Applies the Twirl filter.
+- [Layer.applyPinch(amount: number)](../classes/layer/#applypinch) Applies the Pinch filter.
+- [Layer.applyPolarCoordinates(conversion: Constants.PolarConversionType)](../classes/layer/#applypolarcoordinates) Applies the Polar Coordinates filter.
+- [Layer.applyRipple(amount: number, size: Constants.RippleSize)](../classes/layer/#applyripple) Applies the Ripple filter.
+- [Layer.applySharpen()](../classes/layer/#applysharpen) Applies the Sharpen filter.
+- [Layer.applySharpenEdges()](../classes/layer/#applysharpenedges) Applies the Sharpen Edges filter.
+- [Layer.applySharpenMore()](../classes/layer/#applysharpenmore) Applies the Sharpen More filter.
+- [Layer.applyShear(curve: {x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyshear) Applies the Shear filter.
 
 ## Photoshop 23.4.2 (July 2022)
 ### convertUnits method on the Photoshop Application object
- - [Application.convertUnits](../classes/photoshop/#convertUnits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
+ - [Application.convertUnits](../classes/photoshop/#convertunits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
 
 ## Photoshop 23.3 (April 2022)
 ### Paths support
- - [Document.pathItems](../classes/document/#pathItems) property is now added, giving access to same APIs from ExtendScript to work with paths.
+ - Document.pathItems property is now added, giving access to same APIs from ExtendScript to work with paths.
  - `Document.pathItems` provides the collection class [PathItems](../classes/pathitems/), which is a collection of [PathItem](../classes/pathitem/) objects.
  - `PathItem.subPathItems` provides the collection class [SubPathItems](../classes/subpathitems/), which is a collection of [SubPathItem](../classes/subpathitem/) objects.
  - `SubPathItem.pathPoints` provides the collection class [PathPoints](../classes/pathpoints/), which is a collection of [PathPoint](../classes/pathpoint/) objects.

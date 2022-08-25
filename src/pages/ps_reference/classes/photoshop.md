@@ -114,6 +114,19 @@ missing will be set to the default of: width 2100 pixels, height 1500 pixels,
 resolution 300 pixels per inch, mode: @RGBColorMode and a fill of white with
 no transparency.
 
+```javascript
+// "Default Photoshop Size" 7x5 inches at 300ppi
+let newDoc1 = await app.documents.add();
+let newDoc2 = await app.documents.add({
+   width: 800, 
+   height: 600, 
+   resolution: 300, 
+   mode: "RGBColorMode", 
+   fill: "transparent"
+});
+let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -128,7 +141,16 @@ ___
 
 Opens the specified document and returns the model
 
-> (0.4.0) Please note that this API now requires you to provide a UXPFileEntry
+> *Note that this API requires a [UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) object as its argument.
+
+```javascript
+// Open a file given entry
+let entry = await require('uxp').storage.localFileSystem.getFileForOpening()
+const document = await app.open(entry);
+
+// Show open file dialog
+const document = await app.open();
+```
 
 #### Parameters
 

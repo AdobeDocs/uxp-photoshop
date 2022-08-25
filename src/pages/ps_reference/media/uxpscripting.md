@@ -6,7 +6,7 @@ sidebar_label: "UXP Scripting"
 
 # UXP Scripting in Photoshop
 
-Running a standalone JavaScript file in UXP is now available in Photoshop.  As discussed in the [general documention of UXP Scripting](http://developer.adobe.com/photoshop/uxp/2022/scripting/), Photoshop recognizes the new file extension .psjs for JavaScript files that will be executed by UXP.
+Running a standalone JavaScript file in UXP is now available in Photoshop.  As discussed in the [general documention of UXP Scripting](../../scripting), Photoshop recognizes the new file extension .psjs for JavaScript files that will be executed by UXP.
 
 
 ## Running a file
@@ -19,7 +19,7 @@ To run a script file, you have multiple options.
 <br />
 
 ## Developing Script files
-As described in the [general documentation for UXP Scripting](http://developer.adobe.com/photoshop/uxp/2022/scripting/), script files are executed in a context that is mostly the same as those used in UXP plugins.  The primary task of controlling Photoshop is the same.
+As described in the [general documentation for UXP Scripting](../../scripting), script files are executed in a context that is mostly the same as those used in UXP plugins.  The primary task of controlling Photoshop is the same.
 
 Using the [UXP Photoshop DOM API](../../), we can do the following in a script file: [cloudy.psjs](./assets/cloudy.psjs).
   1. Create a new file.
@@ -49,7 +49,7 @@ You may have noticed the use of `batchPlay` to achieve one of the above steps.  
 ## Debugging Script files
 Starting with Photoshop 23.5 and [UXP Developer Tool](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) (UDT) version 1.6.0, you can step through and debug a script.  
 
-Again, the [general documentation for UXP Scripting](http://developer.adobe.com/photoshop/uxp/2022/scripting/), walked through using the UDT.  Here, we'll just show what the above script looks like loaded into UDT with a breakpoint activated.  From here you set breakpoints or Step Into the script files.  (That empty first line mentioned previously accomodates the wrapping that is applied to script file contents.)
+Again, the [general documentation for UXP Scripting](../../scripting), walked through using the UDT.  Here, we'll just show what the above script looks like loaded into UDT with a breakpoint activated.  From here you set breakpoints or Step Into the script files.  (That empty first line mentioned previously accommodates the wrapping that is applied to script file contents.)
 
 ![cloudy.psjs loaded into UDT](./assets/cloudy_udt.png)
 

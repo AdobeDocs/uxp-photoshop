@@ -90,7 +90,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document |
 | id | *number* | Read-only | The internal ID of this document, valid as long as this document is open Can be used for batchPlay calls to refer to this document, used internally |
 | layers | [*Layers*](/ps_reference/classes/layers/) | Read-only | All the layers in the document at the top level |
-| mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color profile. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
+| mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color mode. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
 | name | *string* | Read-only | The name of the document |
 | path | *string* | Read-only | Full file system path to this document, or the identifier if it is a cloud document |
 | pathItems | [*PathItems*](/ps_reference/classes/pathitems/) | Read-only | The collection of paths in this document, currently shown in the Paths panel. [*Added in 23.3*](/ps_reference/changelog/) |
@@ -108,7 +108,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 **async** : *Promise*<void\>
 
-Changes the color profile of the document
+Changes the color mode of the document
 
 #### Parameters
 
