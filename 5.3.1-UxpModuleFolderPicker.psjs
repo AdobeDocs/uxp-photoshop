@@ -1,0 +1,36 @@
+/* this script describes how to involve filepicker using UXP
+* also we write some content in the file selected via filepicker
+*/
+ 
+await getFolderusingPicker();
+
+async function getFolderusingPicker() {
+    return new Promise((resolve, reject) => {
+        try {
+            console.log("checking file picker");
+            const uxpfs = require("uxp").storage;
+            const ufs = uxpfs.localFileSystem;
+ 
+            //readWrite mode needed for write access
+            ufs.getFolder()
+            .then((folder) => {
+                return folder.getEntries();
+            })
+            .then((entries) => {
+                let i = 1;
+                entries.forEach((entry) => {
+                    console.log(i++ + entry.name);
+                })
+            })
+            .catch((err) => {
+                console.log("File Picker Failed", err);
+            })
+            .finally(() => {
+                resolve();
+            });
+        } catch (error) {
+            console.log("File Picker Access Failed", e);
+            reject(e);
+        }         
+    });
+}
