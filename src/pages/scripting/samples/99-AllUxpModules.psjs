@@ -1,0 +1,389 @@
+let globalResolve = null;
+const globalWidth = 600;
+const globalHeight = 650;
+const globalPadding = 2;
+
+
+await testAsync();
+
+async function testAsync() {
+     
+    return new Promise((resolve, reject) => {
+        try{
+            let dialog = getDialog();
+            document.body.appendChild(dialog).showModal();
+            globalResolve = resolve;
+        } catch (e) {
+            logger(e);
+            reject(e);
+        }
+    })
+}
+
+
+// Dialog creation and setting CSS styles for elements using anonymous method
+function getDialog() {
+    var dialog = document.createElement("dialog");
+    dialog.style.color = "#ffffff";
+    dialog.style.padding = "15px";
+
+    const container = vbox();
+    setStyle(container, {
+        padding: globalPadding,
+        width: globalWidth,
+        height : globalHeight,
+        overflow: "auto"
+    });
+
+    dialog.appendChild(container);
+    container.appendChild(setStyle(text("UXP Modules", "uxpModules"), {
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 10
+    }));
+
+    const modules = hbox();
+    container.appendChild(modules);
+
+    container.appendChild(
+        button("Close Dialog", "cta", "close", () => {
+            logger("clicked on the close btton");
+            dialog.close();
+        }
+    ));
+
+    dialog.addEventListener("cancel", () => {
+        logger("dialog cancel called");
+        dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+        logger("dialog Close called");
+        globalResolve("dialog Close called");
+    });
+
+    const actionPanel = setStyle(vbox(), {
+        width: "100%"
+    });
+    modules.appendChild(actionPanel);
+
+    const logPanel = setStyle(vbox(), {
+        width: "100%",
+        alignItems: "top",
+        width: "100%",
+        height: globalHeight - 55,
+        margin: " 0px 0px 0px 10px",
+        backgroundColor: "#ffffff",
+        color: "black",
+        overflow: "auto"
+    });
+    logPanel.id = "logPanel";
+    modules.appendChild(logPanel);
+
+    actionPanel.appendChild(subHeading("Network Module"));
+
+    const networkUrl = textbox("e.g. https://reqres.in/api/users/2", "networkUrl", "https://reqres.in/api/users/2");
+    actionPanel.appendChild(formControl("URL :", networkUrl));
+
+    actionPanel.appendChild(
+        button("Get URL", "secondary", "getUrl", () => {
+            try{
+                const xhr = new XMLHttpRequest();
+                
+                const url = networkUrl.value;
+                // GET request to a dummy URL
+                xhr.open("GET", url, true);
+                xhr.onload = function(response){
+                    logger("XHR Response :" + xhr.response);
+                };
+                xhr.onerror = function(error) {
+                    logger("XHR Error : " + JSON.stringify(error));
+                };
+                xhr.send();
+       
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    // actionPanel.appendChild(subHeading("Shell Module"));
+
+    // const shellUrl = textbox("e.g. https://www.adobe.com/", "shellUrl", "https://www.adobe.com/");
+    // actionPanel.appendChild(formControl("URL :", shellUrl));
+
+    // actionPanel.appendChild(
+    //     button("openExternal", "secondary", "openExternal", async () => {
+    //         try{
+    //             const shell = require("uxp").shell;
+    //             await shell.openExternal(shellUrl.value, "The developer wants to test the shell permissions.");
+    //             logger(`${shellUrl.value} is opened in browser.`);
+    //         } catch (e) {
+    //             logger("Error from catch: " + e);
+    //         }
+    //     }
+    // ));
+
+    // const shellPath = textbox("e.g. /Users/vkumarg/Downloads/Personal/IMG_20220114_214325_350.jpg", "shellPath", "/Users/vkumarg/Downloads/Personal/IMG_20220114_214325_350.jpg");
+    // actionPanel.appendChild(formControl("Path :", shellPath));
+
+    // actionPanel.appendChild(
+    //     button("openPath", "secondary", "openPath", async () => {
+    //         try{
+    //             const shell = require("uxp").shell;
+    //             await shell.openPath(shellPath.value, "The developer wants to test the shell permissions.");
+    //             logger(`${shellPath.value} is opened in respective viewer.`);
+    //         } catch (e) {
+    //             logger("Error from catch: " + e);
+    //         }
+    //     }
+    // ));
+
+    actionPanel.appendChild(subHeading("Clipboard Module"));
+
+    const clipboardwrite = textbox("e.g. Enter text to write to clipboard", "clipboardwrite");
+    actionPanel.appendChild(formControl("Copy Content :", clipboardwrite));
+
+    actionPanel.appendChild(
+        button("write", "secondary", "clipboardwrite", async () => {
+            try{
+                const clipboard = navigator.clipboard;
+                // Setting content for clipboard
+                await clipboard.setContent({ 'text/plain': clipboardwrite.value });
+                logger(`${clipboardwrite.value} has been copied to clipboard.`);
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    actionPanel.appendChild(
+        button("Read", "secondary", "clipboardRead", async () => {
+            try{
+                const clipboard = navigator.clipboard;
+                // Setting content for clipboard
+                let result = await clipboard.readText();
+                logger(result["text/plain"] + ", was set to the clipbord");
+                
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    actionPanel.appendChild(subHeading("File Storage Module"));
+
+    actionPanel.appendChild(
+        button("Temp Folder", "secondary", "getTemporaryFolder", async () => {
+            try{
+                const uxpfs = require("uxp").storage;
+                const ufs = uxpfs.localFileSystem;
+        
+                await ufs.getTemporaryFolder()
+                .then((folder) => {
+                    logger("Full Path of the Temp Folder:" +  folder.nativePath);
+                    return folder.getMetadata();
+                })
+                .then((metadata) => {
+                    logger("Metadata for temporary folder:\n" + JSON.stringify(metadata, null, 4));
+                });
+                
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    actionPanel.appendChild(subHeading("Crypto Module"));
+
+    const lenghtTypedArray = textbox("e.g. Lenght of Typed Array", "lenghtTypedAray");
+    actionPanel.appendChild(formControl("Length :", lenghtTypedArray));
+
+    const arrayType = select(["Int8Array", "Uint8Array", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array"], "arrayType");
+    actionPanel.appendChild(formControl("Length :", arrayType));
+
+    actionPanel.appendChild(
+        button("getRandomValues", "secondary", "getRandomValues", async () => {
+            try{
+                let s = arrayType.value;
+                let arrLength = lenghtTypedArray.value;
+                let array;
+                switch (s) {
+                    case "Int8Array":
+                        array = new Int8Array(arrLength);
+                        break;
+    
+                    case "Uint8ClampedArray":
+                        array = new Uint8ClampedArray(arrLength);
+                        break;
+    
+                    case "Uint8Array":
+                        array = new Uint8Array(arrLength);
+                        break;
+    
+                    case "Int16Array":
+                        array = new Int16Array(arrLength);
+                        break;
+    
+                    case "Uint16Array":
+                        array = new Uint16Array(arrLength);
+                        break;
+    
+                    case "Uint32Array":
+                        array = new Uint32Array(arrLength);
+                        break;
+    
+                    case "Int32Array":
+                        array = new Int32Array(arrLength);
+                        break;
+    
+                    case "BigUint64Array":
+                        array = new BigUint64Array(arrLength);
+                        break;
+    
+                    case "BigInt64Array":
+                        array = new BigInt64Array(arrLength);
+                        break;
+    
+                    default:
+                    // code block
+                }
+                crypto.getRandomValues(array);
+                logger(`Array Populted with random values \n ${array}`);
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    actionPanel.appendChild(
+        button("randomUUID", "secondary", "randomUUID", async () => {
+            try{
+                logger(`Generated Random UUID : \n ${crypto.randomUUID()}`);
+            } catch (e) {
+                logger("Error from catch: " + e);
+            }
+        }
+    ));
+
+    return dialog;
+}
+
+function logger(message) {
+    console.log(message);
+    const logsPanel = document.getElementById("logPanel");
+    let log = document.createElement("p");
+    setStyle(log, {
+        width: "90%",
+        marginTop: "5px",
+        fontSize: "12px",
+        borderBottom: "1px solid #ccc",
+        borderColor: "#ccc",
+    });
+    log.textContent = message;
+    logsPanel.appendChild(log);
+}
+
+
+function text(label, id) {
+    const span = document.createElement("span");
+    span.textContent = label;
+    span.id = id;
+    return span;
+}
+
+function textbox(placeholder = "", id, initialiValue = "") {
+    const input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("placeholder", placeholder);
+    if (initialiValue != "") {
+        input.value = initialiValue;
+    }
+    input.style.borderRadius = 4;
+    input.id = id;
+    return input;
+}
+
+function checkbox(id) {
+    const input = document.createElement("input");
+    input.setAttribute("type", "checkbox");
+    input.style.width = 30;
+    input.id = id;
+    return input;
+}
+
+function select(optionItems, id) {
+    const select = document.createElement("select");
+    optionItems.forEach((item, index) => {
+        const option = document.createElement("option");
+        option.textContent = item;
+        select.appendChild(option);
+    });
+    select.selectedIndex = 0;
+    select.id = id;
+    return select;
+}
+
+function button(label, variant, id, onclick, width = "30%") {
+    const button = document.createElement("button");
+    button.setAttribute("variant", variant);
+    button.textContent = label;
+    button.onclick = onclick;
+    button.id = id;
+    button.style.margin = "4px";
+    button.style.width = width;
+    return button;
+}
+
+function image(src, id) {
+    const image = document.createElement("img");
+    image.id = id;
+    image.src = src;
+    image.height = "200px";
+    return image;
+}
+
+function hbox() {
+    const container = document.createElement("div");
+    container.style.display = "flex";
+    container.style.flexDirection = "row";
+    return container;
+}
+
+function vbox() {
+    const container = document.createElement("div");
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
+    return container;
+}
+
+function formControl(label, controlWidget) {
+    const container = hbox();
+    container.style.alignItems = "center";
+    const labelSpan = text(label);
+    labelSpan.style.width = 50;
+    controlWidget.style.flexGrow =  1;
+    // controlWidget.style.height = 30;
+    container.appendChild(labelSpan);
+    container.appendChild(controlWidget);
+    container.style.margin = "2px";
+    return container;
+}
+
+function setStyle(item, style) {
+    Object.assign(item.style, style);
+    return item;
+}
+
+function subHeading(label, width){
+    let subheading = setStyle(text(label), {
+        fontSize: 13,
+        fontWeight: "bold",
+        borderBottom: "1px solid #ccc",
+        borderColor: "#ccc",
+        marginTop: 10,
+        marginBottom: 5,
+        width : width
+    });
+    return subheading;
+}
