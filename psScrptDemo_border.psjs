@@ -1,0 +1,22 @@
+const app = require('photoshop').app
+
+
+// let docs = await app.documents;
+
+// console.log(docs.size);
+// // let doc = docs[0];
+// docs.forEach(async (doc) => {
+//     let height = doc.height + 50;
+//     let width = doc.width + 40;
+//     await doc.resizeCanvas(width, height);
+//     console.log("Border Done");
+// })
+
+let doc = app.activeDocument;
+
+let height = doc.height + 50;
+let width = doc.width + 40;
+await doc.resizeCanvas(width, height);
+console.log("Border Done");
+
+console.log("Script Execution Done");
