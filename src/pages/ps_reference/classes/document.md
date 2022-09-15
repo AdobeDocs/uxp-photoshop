@@ -83,8 +83,9 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | cloudWorkAreaDirectory | *string* | Read-only | Local directory for this cloud document. |
 | colorProfileName | *string* | Read-write | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise |
 | colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | Read-write | Whether the document uses the working color profile, a custom profile, or no profile. |
+| colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | Read-only | The collection of Color Samplers present in the document. |
 | compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | Read-only | Composite channels in the document. |
-| guides | [*Guides*](/ps_reference/classes/guides/) | Read-only | - |
+| guides | [*Guides*](/ps_reference/classes/guides/) | Read-only | The collection of Guides present in the document. |
 | height | *number* | Read-only | Document&#x27;s height in pixels |
 | histogram | *number*[] | Read-only | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
 | historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document |
@@ -398,6 +399,33 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 | Name | Type |
 | :------ | :------ |
 | `angles` | *number* |
+
+___
+
+### sampleColor
+
+**async** : *Promise*<[*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/)\>
+
+Returns a SolidColor object sampled from the document at the given position.
+
+```javascript
+let col = await app.activeDocument.sampleColor({x: 100, y: 100});
+console.log(col.rgb);
+// {
+//    red: 233,
+//    green: 179,
+//    blue: 135,
+//    hexValue: "E9B387"
+// }
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `position` | *object* | The point to sample `{x: number, y: number}`. |
+| `position.x` | *number* | The horizontal coordinate in pixels. |
+| `position.y` | *number* | The vertical coordinate in pixels. |
 
 ___
 

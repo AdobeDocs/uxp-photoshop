@@ -16,6 +16,10 @@ module.exports = [{
 			"path": "/ps_reference/classes/channel/"
 		},
 		{
+			"title": "ColorSampler",
+			"path": "/ps_reference/classes/colorsampler/"
+		},
+		{
 			"title": "Document",
 			"path": "/ps_reference/classes/document/"
 		},
@@ -50,6 +54,10 @@ module.exports = [{
 		{
 			"title": "Channels",
 			"path": "/ps_reference/classes/channels/"
+		},
+		{
+			"title": "ColorSamplers",
+			"path": "/ps_reference/classes/colorsamplers/"
 		},
 		{
 			"title": "Documents",

@@ -45,22 +45,27 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 | Name | Type | Access | Description |
 | :------ | :------ | :------ | :------ |
 | length | *number* | Read-only | Number of [Guide](/ps_reference/modules/guide/) elements in this collection |
-| parent | Document | Read-only | The owner document of this Guide collection |
+| parent | [*Document*](/ps_reference/classes/document/) | Read-only | The owner document of this Guide collection |
 
 ## Methods
 
 ### add
 
-*void*
+[*Guide*](/ps_reference/classes/guide/)
 
 Adds a guide for the collection at the given coordinate and direction
 
+***Fixes in Photoshop 24.0:***
+
+- *Corect coordinate when resolution is not 72 PPI*
+- *Returns valid instance of guide*
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `direction` | [*Direction*](/ps_reference/modules/constants/#direction) |
-| `coordinate` | *number* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `direction` | [*Direction*](/ps_reference/modules/constants/#direction) | Indicates whether the guide is vertical or horizontal |
+| `coordinate` | *number* | Position of the guide measured from the ruler origin in pixels. The value can be a decimal number.  Note: the user can move the ruler origin which will affect the position value of the guides. |
 
 ___
 
