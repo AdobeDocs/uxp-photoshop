@@ -6,9 +6,31 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop 24.0 (October 2022)
+## Photoshop Beta (24.0 October 2022)
 
-## Photoshop Beta
+### ColorSamplers support
+
+The ColorSampler DOM API is now available in Photoshop.
+
+- The [ColorSamplers collection](../classes/colorsamplers/) behaves like other collections at the Document level in the API. ColorSamplers further supports the following methods:
+    - `colorSamplers.add()` 
+    - `colorSamplers.removeAll()`
+- The [ColorSamplers class](../classes/colorsampler) implements the following properties and methods: 
+    - `typename`: String
+    - `parent`: [Document](../classes/document)
+    - `position`: `{x: number, y: number}`
+    - `color`: [SolidColor](../classes/solidcolor.md)
+	- `move({x: number, y: number})`
+	- `remove()`
+	<!-- - `sampleSize()`: static member, accepts values from [Constants.SampleSize](../modules/constants/#samplesize). -->
+- The [Document](../classes/document#samplecolor) class implements a new `sampleColor()` method that samples an `{x, y}` position on the fly, returning a [SolidColor](../classes/solidcolor.md) object without the need to create a [ColorSampler](../classes/colorsampler.md) object.
+
+### Guide fixes
+
+- [Guide.coordinate](../classes/guide/#coordinate) Fixes coordinate getter when document resolution is not 72 PPI
+- [Guide.coordinate](../classes/guide/#coordinate) Fixes coordinate setter when document resolution is not 72 PPI
+- [Guides.add](../classes/guides/#add) Fixes coordinate when creating a new guide if document resolution is not 72 PPI
+- [Guides.add](../classes/guides/#add) Creating a new guide had returned an invalid, nonexistent instance. It now points to an existing guide.
 
 ### Known Issues and Workarounds
 - A new page of [Known Issues and Workarounds](../known-issues) was introduced, and aims to outline some common issues encountered by our developer community. New entries will be summarized in this changelog.
@@ -25,6 +47,7 @@ description: Contains a running log of changes to the UXP API environment in Ado
 - Color mode validation for all filters
 - Fixed Lens Flare coordinates
 - Fixed file arguments for filters 
+
 
 ## Photoshop 23.5 (August 2022)
 

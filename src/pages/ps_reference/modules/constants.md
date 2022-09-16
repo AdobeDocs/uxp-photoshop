@@ -678,6 +678,22 @@ Pass to [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
 
 ___
 
+### SampleSize
+
+Sample size for the EyeDropper tool and ColorSampler instances.
+
+| Name | Description |
+| :------ | :------ |
+| POINTSAMPLE | - |
+| SAMPLE101X101 | - |
+| SAMPLE11X11 | - |
+| SAMPLE31X31 | - |
+| SAMPLE3X3 | - |
+| SAMPLE51X51 | - |
+| SAMPLE5X5 | - |
+
+___
+
 ### SaveMethod
 
 | Name | Description |

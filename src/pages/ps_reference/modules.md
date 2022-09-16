@@ -22,6 +22,7 @@ keywords:
 
 - [Actions](/ps_reference/modules/actions/)
 - [Channel](/ps_reference/modules/channel/)
+- [ColorSampler](/ps_reference/modules/colorsampler/)
 - [Constants](/ps_reference/modules/constants/)
 - [CoreModules](/ps_reference/modules/coremodules/)
 - [Document](/ps_reference/modules/document/)
@@ -34,6 +35,7 @@ keywords:
 - [Photoshop](/ps_reference/modules/photoshop/)
 - [SubPathItem](/ps_reference/modules/subpathitem/)
 - [collections/Channels](/ps_reference/modules/collections/channels/)
+- [collections/ColorSamplers](/ps_reference/modules/collections/colorsamplers/)
 - [collections/Documents](/ps_reference/modules/collections/documents/)
 - [collections/Guides](/ps_reference/modules/collections/guides/)
 - [collections/HistoryStates](/ps_reference/modules/collections/historystates/)
