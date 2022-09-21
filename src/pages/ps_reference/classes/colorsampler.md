@@ -52,17 +52,18 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| color | [*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/) | Read-only | The color reading of this ColorSampler in its current position |
-| docId | *number* | Read-only | The ID of the Document of this ColorSampler. |
-| parent | [*Document*](/ps_reference/classes/document/) | Read-only | Owner document of this ColorSampler |
-| position | *object* | Read-only | The position of this ColorSampler |
-| typename | *string* | Read-only | The class name of the referenced ColorSampler object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| color | [*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/) | R | 24.0 | The color reading of this ColorSampler in its current position. |
+| docId | *number* | R | 24.0 | The ID of the Document of this ColorSampler. |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | Owner document of this ColorSampler. |
+| position | *object* | R | 24.0 | The position of this ColorSampler. |
+| typename | *string* | R | 24.0 | The class name of the referenced object: *&quot;ColorSampler&quot;*. |
 
 ## Methods
 
 ### move
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 *void*
 
@@ -79,7 +80,8 @@ Moves the ColorSampler object to the given position
 ___
 
 ### remove
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 *void*
 
-Deletes the given ColorSampler object
+Deletes the given ColorSampler object.

@@ -34,19 +34,20 @@ const redChannel = app.activeDocument.channels[0]
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| color | [*SolidColor*](/ps_reference/classes/solidcolor/) | Read-write | The color of the channel. |
-| histogram | *number*[] | Read-only | A histogram containing the number of pixels at each color intensity level for this channel. The array contains 256 members. The target channel must be visible. |
-| kind | [*ChannelType*](/ps_reference/modules/constants/#channeltype) | Read-write | The type or kind of the channel. |
-| name | *string* | Read-write | The color of the channel. |
-| opacity | *number* | Read-write | The opacity or solidity of the channel. |
-| parent | [*Document*](/ps_reference/classes/document/) | Read-only | The containing document. |
-| visible | *boolean* | Read-write | The visibility of the channel |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| color | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The color of the channel. |
+| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for this channel. The array contains 256 members. The target channel must be visible. |
+| kind | [*ChannelType*](/ps_reference/modules/constants/#channeltype) | R W | 23.0 | The type or kind of the channel. |
+| name | *string* | R W | 23.0 | The color of the channel. |
+| opacity | *number* | R W | 23.0 | The opacity or solidity of the channel. |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The containing document. |
+| visible | *boolean* | R W | 23.0 | The visibility of the channel. |
 
 ## Methods
 
 ### duplicate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -71,6 +72,7 @@ await channel.duplicate(newDoc)
 ___
 
 ### merge
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -79,6 +81,7 @@ Merges a Spot Color channel into the component channels.
 ___
 
 ### remove
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 

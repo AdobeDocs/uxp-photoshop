@@ -241,7 +241,7 @@ The following example illustrates how to get the value of multiple properties on
 ```javascript
 layerProperties =
   { _obj: "multiGet",
-     _target: {	_ref: [{_ref: "layer", _enum: "ordinal"}, {_ref: "document", _enum: "ordinal"}]},
+     _target: {_ref: [{_ref: "layer", _enum: "ordinal"}, {_ref: "document", _enum: "ordinal"}]},
      extendedReference: [["name", "layerID", "opacity"]],
      options: {failOnMissingProperty:false, failOnMissingElement: false}
   };
@@ -258,7 +258,7 @@ The following example illustrates how to get the value of multiple properties on
 ```javascript
 layerProperties =
   { _obj: "multiGet",
-     _target: {	_ref: [{_ref: "document", _enum: "ordinal"}]},
+     _target: {_ref: [{_ref: "document", _enum: "ordinal"}]},
      extendedReference: [["name", "layerID", "opacity"], {_obj: "layer", index:1, count:2}],
      options: {failOnMissingProperty:false, failOnMissingElement: false}
   };
@@ -274,7 +274,7 @@ The element range specifier can use count equal to -1 to specify all elements. T
 ```javascript
 layerProperties =
   { _obj: "multiGet",
-     _target: {	_ref: [{_ref: "document", _enum: "ordinal"}]},
+     _target: {_ref: [{_ref: "document", _enum: "ordinal"}]},
      extendedReference: [["name"], {_obj: "layer", index:1, count:-1}],
      options: {failOnMissingProperty:false, failOnMissingElement: false}
   };

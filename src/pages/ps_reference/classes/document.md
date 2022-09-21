@@ -41,8 +41,8 @@ const newDocument = await app.open('/project.psd')
 
 Save the document to a desired file type.
 
-For operations that require a UXP File token, use the UXP storage APIs to generate one.
-See https://www.adobe.com/go/ps-api-uxp-filesystemprovider.
+For operations that require a UXP File token, use the
+[UXP storage APIs](https://www.adobe.com/go/ps-api-uxp-filesystemprovider) to generate one.
 
 ```javascript
 let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");
@@ -53,7 +53,6 @@ document.saveAs.jpg(entryJpg, { quality: 12 }, true);
 
 // Save a PSB, with some options:
 document.saveAs.psb(entryPsb, { embedColorProfile: true });
-
 ```
 
 #### Type declaration
@@ -69,47 +68,49 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | Read-write | Currently active channels of the document |
-| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | The history state that history brush tool will use as its source |
-| activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | Read-write | Currently active history state of the document |
-| activeLayers | [*Layers*](/ps_reference/classes/layers/) | Read-only | The selected layers in the document |
-| artboards | [*Layers*](/ps_reference/classes/layers/) | Read-only | The artboards in the document |
-| backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | Read-only | Background layer, if it exists |
-| bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | Read-write | The bits per color channel. |
-| channels | [*Channels*](/ps_reference/classes/channels/) | Read-only | All channels in the document. |
-| cloudDocument | *boolean* | Read-only | This document is in the Adobe Creative Cloud. |
-| cloudWorkAreaDirectory | *string* | Read-only | Local directory for this cloud document. |
-| colorProfileName | *string* | Read-write | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise |
-| colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | Read-write | Whether the document uses the working color profile, a custom profile, or no profile. |
-| colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | Read-only | The collection of Color Samplers present in the document. |
-| compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | Read-only | Composite channels in the document. |
-| guides | [*Guides*](/ps_reference/classes/guides/) | Read-only | The collection of Guides present in the document. |
-| height | *number* | Read-only | Document&#x27;s height in pixels |
-| histogram | *number*[] | Read-only | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
-| historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | Read-only | History states of the document |
-| id | *number* | Read-only | The internal ID of this document, valid as long as this document is open Can be used for batchPlay calls to refer to this document, used internally |
-| layers | [*Layers*](/ps_reference/classes/layers/) | Read-only | All the layers in the document at the top level |
-| mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | Read-only | The color mode. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode) |
-| name | *string* | Read-only | The name of the document |
-| path | *string* | Read-only | Full file system path to this document, or the identifier if it is a cloud document |
-| pathItems | [*PathItems*](/ps_reference/classes/pathitems/) | Read-only | The collection of paths in this document, currently shown in the Paths panel. [*Added in 23.3*](/ps_reference/changelog/) |
-| pixelAspectRatio | *number* | Read-write | The (custom) pixel aspect ratio to use |
-| quickMaskMode | *boolean* | Read-write | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
-| resolution | *number* | Read-only | Document&#x27;s resolution (in pixels per inch) |
-| saved | *boolean* | Read-only | True if the document has been saved since the last change. |
-| title | *string* | Read-only | Document title |
-| typename | *string* | Read-only | The class name of the referenced Document object |
-| width | *number* | Read-only | Document&#x27;s width in pixels |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. |
+| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | The history state that history brush tool will use as its source. |
+| activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | Currently active history state of the document. |
+| activeLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The selected layers in the document. |
+| artboards | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The artboards in the document |
+| backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | Background layer, if it exists. |
+| bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | R W | 23.0 | The bits per color channel. |
+| channels | [*Channels*](/ps_reference/classes/channels/) | R | 23.0 | All channels in the document. |
+| cloudDocument | *boolean* | R | 23.0 | Check whether this a [Photoshop cloud document](https://helpx.adobe.com/photoshop/using/cloud-documents-faq.html). |
+| cloudWorkAreaDirectory | *string* | R | 23.0 | Local directory for this cloud document. |
+| colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
+| colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
+| colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of Color Samplers present in the document. |
+| compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Composite channels in the document. |
+| guides | [*Guides*](/ps_reference/classes/guides/) | R | 23.0 | The collection of Guides present in the document. |
+| height | *number* | R | 22.5 | Document&#x27;s height in pixels. |
+| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
+| historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | R | 22.5 | History states of the document. |
+| id | *number* | R | 22.5 | The internal ID of this document will remain valid as long as this document is open. It can be used for batchPlay calls to refer to this document. |
+| layerComps | [*LayerComps*](/ps_reference/classes/layercomps/) | R | 24.0 | The layer comps present in the document. |
+| layers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The layers in the document at the top level of the layer/group hierarchy. |
+| mode | [*DocumentMode*](/ps_reference/modules/constants/#documentmode) | R | 23.0 | The color mode. To change it, please use [Document.changeMode](/ps_reference/classes/document/#changemode). |
+| name | *string* | R | 23.0 | The name of the document |
+| path | *string* | R | 22.5 | Full file system path to this document, or the identifier if it is a cloud document. |
+| pathItems | [*PathItems*](/ps_reference/classes/pathitems/) | R | 23.3 | The collection of paths in this document, as shown in the Paths panel. |
+| pixelAspectRatio | *number* | R W | 22.5 | The (custom) pixel aspect ratio to use. |
+| quickMaskMode | *boolean* | R W | 23.0 | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
+| resolution | *number* | R | 22.5 | Document&#x27;s resolution (in pixels per inch). |
+| saved | *boolean* | R | 23.0 | True if the document has been saved since the last change. |
+| title | *string* | R | 22.5 | Document title |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Document&quot;*. |
+| width | *number* | R | 22.5 | Document&#x27;s width in pixels. |
 
 ## Methods
 
 ### changeMode
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
-Changes the color mode of the document
+Changes the color mode of the document.
 
 #### Parameters
 
@@ -121,29 +122,32 @@ Changes the color mode of the document
 ___
 
 ### close
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<void\>
 
 Closes the document, showing a prompt to save
-unsaved changes if specified
+unsaved changes if specified.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog                    if there are unsaved changes. |
 
 ___
 
 ### closeWithoutSaving
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *void*
 
-Close the document, reverting all unsaved changes.
+Close the document, discarding all unsaved changes.
 
 ___
 
 ### convertProfile
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -166,10 +170,12 @@ or one of these below, meaning of the working color spaces or Lab color.
 ___
 
 ### createLayer
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a layer. See @CreateOptions
+Create a layer. See [LayerCreateOptions](/ps_reference/objects/createoptions/layercreateoptions/)
+
 ```javascript
 const myEmptyLayer = await doc.createLayer()
 const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "colorDodge" })
@@ -184,10 +190,12 @@ const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "col
 ___
 
 ### createLayerGroup
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
+
 ```javascript
 const myEmptyGroup = await doc.createLayerGroup()
 const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, mode: "colorDodge" })
@@ -203,6 +211,7 @@ const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [l
 ___
 
 ### crop
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -220,6 +229,7 @@ Crops the document to given bounds
 ___
 
 ### duplicate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -239,11 +249,13 @@ The optional parameter `mergeLayersOnly` indicates whether to only duplicate mer
 ___
 
 ### duplicateLayers
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)[]\>
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
+
 ```javascript
 // duplicate some layers
 const layerCopies = await document.duplicateLayers([layer1, layer3])
@@ -264,18 +276,21 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 ___
 
 ### flatten
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<void\>
 
-Flatten all layers in the document
+Flatten all layers in the document.
 
 ___
 
 ### groupLayers
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Create a layer group from existing layers.
+
 ```javascript
 const layers = doc.layers
 const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
@@ -290,6 +305,7 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 ___
 
 ### linkLayers
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 [*Layer*](/ps_reference/classes/layer/)[]
 
@@ -304,6 +320,7 @@ Links layers together if possible, and returns a list of linked layers.
 ___
 
 ### mergeVisibleLayers
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -312,6 +329,7 @@ Merges all visible layers in the document into a single layer.
 ___
 
 ### paste
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -327,6 +345,7 @@ set to true and a selection is active, the contents are pasted into the selectio
 ___
 
 ### rasterizeAllLayers
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -335,6 +354,7 @@ Rasterizes all layers.
 ___
 
 ### resizeCanvas
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -359,6 +379,7 @@ await document.resizeCanvas(width + 400, height + 400)
 ___
 
 ### resizeImage
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -381,6 +402,7 @@ await document.resizeImage(800, 600)
 ___
 
 ### revealAll
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -389,6 +411,7 @@ Expands the document to show clipped sections.
 ___
 
 ### rotate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -403,6 +426,7 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 ___
 
 ### sampleColor
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<[*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/)\>
 
@@ -430,6 +454,7 @@ console.log(col.rgb);
 ___
 
 ### save
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -447,6 +472,7 @@ unsavedDocument.save()
 ___
 
 ### splitChannels
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)[]\>
 
@@ -456,6 +482,7 @@ documents.
 ___
 
 ### suspendHistory
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -489,6 +516,7 @@ API, for which this API is a simple wrapper for.
 ___
 
 ### trap
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -505,6 +533,7 @@ Valid only when [Document.mode](/ps_reference/classes/document/#mode) is `Consta
 ___
 
 ### trim
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 

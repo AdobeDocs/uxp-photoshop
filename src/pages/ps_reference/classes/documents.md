@@ -18,26 +18,20 @@ keywords:
 
 # Documents
 
-A collections class allowing for array access into the applications
+A collections class allowing for array access into the application's
 list of documents that are currently open,
-while also providing familiar methods from ExtendScript, like `getByName`
+while also providing familiar methods from ExtendScript, like `getByName`.
 
 ```javascript
 // Iterate through all the documents
 app.documents.forEach(h => console.log(h.title));
 ```
 
-## Hierarchy
-
-- *Array*<[*Document*](/ps_reference/classes/document/)\>
-
-  ↳ **Documents**
-
 ## Indexable
 
 ▪ [index: *number*]: [*Document*](/ps_reference/classes/document/)
 
-Used to access the documents in the collection
+Used to access the documents in the collection.
 
 ```javascript
 // Iterate through all the documents
@@ -46,15 +40,16 @@ app.documents.forEach(h => console.log(h.title));
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [Document](/ps_reference/modules/document/) elements in this collection |
-| parent | [*Photoshop*](/ps_reference/classes/photoshop/) | Read-only | The owner application of this Documents collection |
-| typename | *string* | Read-only | The name for this object collection: Documents |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 22.5 | Number of [Document](/ps_reference/classes/document/) elements in this collection. |
+| parent | [*Photoshop*](/ps_reference/classes/photoshop/) | R | 22.5 | The owner application of this Documents collection. |
+| typename | *string* | R | 22.5 | The name for this object collection: Documents. |
 
 ## Methods
 
 ### add
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -93,10 +88,11 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 ___
 
 ### getByName
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 [*Document*](/ps_reference/classes/document/)
 
-Find the first document with the matching name
+Find the first document with the matching name.
 
 #### Parameters
 

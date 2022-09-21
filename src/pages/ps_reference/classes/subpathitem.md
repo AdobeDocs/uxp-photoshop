@@ -31,10 +31,10 @@ path represented by all of the subpaths. Access these objects in the [PathItem.s
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| closed | *boolean* | Read-only | True if the path is closed. |
-| operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | Read-only | How this &#x60;SubPathItem&#x60; behaves when it intersects another. Specifies how to combine the shapes if the destination path already has a selection. |
-| parent | [*PathItem*](/ps_reference/classes/pathitem/) | Read-only | The path this subpath belongs to |
-| pathPoints | [*PathPoints*](/ps_reference/classes/pathpoints/) | Read-only | The collection of the [PathPoint](/ps_reference/modules/pathpoint/)s on this &#x60;SubPathItem&#x60;. |
-| typename | *string* | Read-only | The class name of the referenced PathItem object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| closed | *boolean* | R | 23.3 | True if the path is closed. |
+| operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | R | 23.3 | How this &#x60;SubPathItem&#x60; behaves when it intersects another. Specifies how to combine the shapes if the destination path already has a selection. |
+| parent | [*PathItem*](/ps_reference/classes/pathitem/) | R | 23.3 | The path that contains this subpath. |
+| pathPoints | [*PathPoints*](/ps_reference/classes/pathpoints/) | R | 23.3 | The collection of the [PathPoint](/ps_reference/classes/pathpoint/)s on this &#x60;SubPathItem&#x60;. |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;SubPathItem&quot;*. |

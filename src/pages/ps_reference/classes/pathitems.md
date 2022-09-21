@@ -23,29 +23,26 @@ The collection of [PathItem](/ps_reference/classes/pathitem/) objects in a docum
 Access through the [Document.pathItems](/ps_reference/classes/document/#pathitems) collection property. To create new paths,
 see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_reference/classes/subpathinfo/) classes and pass them to [PathItems.add](/ps_reference/classes/pathitems/#add)() method.
 
-*Added in Photoshop 23.3*
-
 ## Indexable
 
 ▪ [index: *number*]: [*PathItem*](/ps_reference/classes/pathitem/)
 
-Used to access the paths in the collection
+Used to access the paths in the collection.
 
 Access through the [Document.pathItems](/ps_reference/classes/document/#pathitems) collection property. To create new paths,
 see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_reference/classes/subpathinfo/) classes and pass them to [PathItems.add](/ps_reference/classes/pathitems/#add)() method.
 
-*Added in Photoshop 23.3*
-
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [PathItem](/ps_reference/modules/pathitem/) objects in this collection |
-| parent | Document | Read-only | The owner document of this PathItem collection |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 23.3 | Number of [PathItem](/ps_reference/classes/pathitem/) objects in this collection. |
+| parent | Document | R | 23.3 | The owner document of this PathItem collection. |
 
 ## Methods
 
 ### add
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 [*PathItem*](/ps_reference/classes/pathitem/)
 
@@ -65,19 +62,23 @@ and those [SubPathItem](/ps_reference/classes/subpathitem/) objects are added to
 ___
 
 ### getByName
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 [*PathItem*](/ps_reference/classes/pathitem/)
 
+Retrieve the first PathItem matching the given name.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | *string* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | *string* | Name to find |
 
 ___
 
 ### removeAll
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *void*
 
-Removes all paths from this collection
+Removes all paths from this collection.

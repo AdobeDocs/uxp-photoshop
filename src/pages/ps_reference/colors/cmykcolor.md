@@ -22,10 +22,10 @@ Defines a CMYK color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| black | *number* | Read-write | The black color value, as percentage.  **&#x60;default&#x60;**  **&#x60;range&#x60;** 0.0..100.0 |
-| cyan | *number* | Read-write | The cyan color value, as percentage.  **&#x60;default&#x60;**  **&#x60;range&#x60;** 0.0..100.0 |
-| magenta | *number* | Read-write | The magenta color value, as percentage.  **&#x60;default&#x60;**  **&#x60;range&#x60;** 0.0..100.0 |
-| typename | *string* | Read-only | - |
-| yellow | *number* | Read-write | The yellow color value, as percentage.  **&#x60;default&#x60;**  **&#x60;range&#x60;** 0.0..100.0 |
+| Name | Type | Access | Default | Range | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ | :------ | :------ |
+| black | *number* | R W | 0 | 0.0..100.0 | 23.0 | The black color value, as percentage. |
+| cyan | *number* | R W | 0 | 0.0..100.0 | 23.0 | The cyan color value, as percentage. |
+| magenta | *number* | R W | 0 | 0.0..100.0 | 23.0 | The magenta color value, as percentage. |
+| typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;CMYKColor&quot;*. |
+| yellow | *number* | R W | 0 | 0.0..100.0 | 23.0 | The yellow color value, as percentage. |

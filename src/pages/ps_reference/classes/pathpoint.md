@@ -35,11 +35,11 @@ make it convex; or use the right direction point to bend the curve "inward" or m
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| anchor | *number*[] | Read-only | The coordinates of the anchor point of the curve, in &#x60;[horizontal, vertical]&#x60; format. |
-| kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | Read-only | The role (corner or smooth) this point plays in the containing path segment. |
-| leftDirection | *number*[] | Read-only | The location of the left-direction endpoint (&#x27;in&#x27; position), in &#x60;[horizontal, vertical]&#x60; format. |
-| parent | [*SubPathItem*](/ps_reference/classes/subpathitem/) | Read-only | The containing SubPath object |
-| rightDirection | *number*[] | Read-only | The location of the right-direction endpoint (&#x27;out&#x27; position), in &#x60;[horizontal, vertical]&#x60; format. |
-| typename | *string* | Read-only | The class name of the referenced object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| anchor | *number*[] | R | 23.3 | The coordinates of the anchor point of the curve, in &#x60;[horizontal, vertical]&#x60; format. |
+| kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | R | 23.3 | The role (corner or smooth) this point plays in the containing path segment. |
+| leftDirection | *number*[] | R | 23.3 | The location of the left-direction endpoint (&#x27;in&#x27; position), in &#x60;[horizontal, vertical]&#x60; format. |
+| parent | [*SubPathItem*](/ps_reference/classes/subpathitem/) | R | 23.3 | The containing SubPath object. |
+| rightDirection | *number*[] | R | 23.3 | The location of the right-direction endpoint (&#x27;out&#x27; position), in &#x60;[horizontal, vertical]&#x60; format. |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathPoint&quot;*. |

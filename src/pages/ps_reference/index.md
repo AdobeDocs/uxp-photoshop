@@ -9,6 +9,9 @@ description: Learn about the Photoshop API that is exposed through UXP for devel
 
 ## Overview
 
+You will now find minimum version information on properties and methods.  This version tag corresponds to the version of Photoshop where the member was introduced or last updated significantly.
+For properties, you will find a column "MIN VERSION".  For methods, the version tag appears to the right of the name.
+
 The following line allows you access to the Photoshop DOM via UXP.
 ```javascript
 const app = require('photoshop').app;

@@ -18,39 +18,42 @@ keywords:
 
 # Action
 
-Represents an action in the Actions palette.
+Represents an Action in the Actions palette.
 Actions are series of commands that can be recorded by user, and can be replayed at a later time
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| id | *number* | Read-only | The internal ID of this action  Can be used for batchPlay calls, used internally |
-| index | *number* | Read-only | 0-index of this action in it&#x27;s parent action set |
-| name | *string* | Read-write | The name of this action, displayed in the panel Cannot be changed |
-| parent | [*ActionSet*](/ps_reference/classes/actionset/) | Read-only | The action set this action belongs to |
-| typename | *string* | Read-only | The class name of the referenced Action object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| id | *number* | R | 22.1 | The internal ID of this Action Can be used for batchPlay calls, used internally |
+| index | *number* | R | 22.1 | Zero-based index of this Action in it&#x27;s parent Action Set |
+| name | *string* | R W | 22.1 | The name of this Action, displayed in the panel Cannot be changed |
+| parent | [*ActionSet*](/ps_reference/classes/actionset/) | R | 22.1 | The Action Set this Action belongs to |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Action&quot;*. |
 
 ## Methods
 
 ### delete
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
 
 *void*
 
-Deletes this action from the actions panel
+Deletes this Action from the Actions panel
 
 ___
 
 ### duplicate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
 
 [*Action*](/ps_reference/classes/action/)
 
-Creates a copy of this action, placing it in the same action set
+Creates a copy of this Action, placing it in the same Action Set
 
 ___
 
 ### play
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
 
 **async** : *Promise*<void\>
 
-Plays this action
+Plays this Action

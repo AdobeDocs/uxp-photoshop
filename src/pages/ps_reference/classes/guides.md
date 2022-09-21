@@ -31,7 +31,7 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 
 ▪ [index: *number*]: [*Guide*](/ps_reference/classes/guide/)
 
-Used to access the guides in the collection
+Used to access the guides in the collection.
 
 Access this collection through [Document.guides](/ps_reference/classes/document/#guides) property. For example,
 following adds a new guide to the collection:
@@ -42,22 +42,22 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [Guide](/ps_reference/modules/guide/) elements in this collection |
-| parent | [*Document*](/ps_reference/classes/document/) | Read-only | The owner document of this Guide collection |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 23.0 | Number of [Guide](/ps_reference/classes/guide/) elements in this collection. |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The owner document of this Guide collection. |
 
 ## Methods
 
 ### add
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 [*Guide*](/ps_reference/classes/guide/)
 
 Adds a guide for the collection at the given coordinate and direction
 
 ***Fixes in Photoshop 24.0:***
-
-- *Corect coordinate when resolution is not 72 PPI*
+- *Correct coordinate when resolution is not 72 PPI*
 - *Returns valid instance of guide*
 
 #### Parameters
@@ -70,7 +70,8 @@ Adds a guide for the collection at the given coordinate and direction
 ___
 
 ### removeAll
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
-Clears all guides from this collection
+Clears all guides from this collection.

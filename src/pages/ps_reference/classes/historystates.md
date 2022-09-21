@@ -33,7 +33,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 ▪ [index: *number*]: [*HistoryState*](/ps_reference/classes/historystate/)
 
-Used to access the history states in the collection
+Used to access the history states in the collection.
 
 ```javascript
 // Iterate through all history states
@@ -45,18 +45,19 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [HistoryState](/ps_reference/modules/historystate/) elements in this collection |
-| parent | Document | Read-only | The owner document of this HistoryState collection |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 22.5 | Number of [HistoryState](/ps_reference/classes/historystate/) elements in this collection. |
+| parent | Document | R | 22.5 | The owner document of this HistoryState collection. |
 
 ## Methods
 
 ### getByName
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 [*HistoryState*](/ps_reference/classes/historystate/)
 
-Find the first history state with the matching name
+Find the first history state with the matching name.
 
 #### Parameters
 

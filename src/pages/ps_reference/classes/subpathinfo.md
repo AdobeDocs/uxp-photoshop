@@ -16,7 +16,7 @@ keywords:
   - Scripting
 ---
 
-# SubPathInfo
+# Sub Path Info
 
 An array of [PathPointInfo](/ps_reference/classes/pathpointinfo/) objects that describes a straight or curved segment of a path, used to create
 a [SubPathItem](/ps_reference/classes/subpathitem/).
@@ -31,31 +31,9 @@ all of the subpaths.
 
 ## Properties
 
-### closed
-
-• **closed**: *boolean*
-
-True if the path describes an enclosed area.
-
-___
-
-### entireSubPath
-
-• **entireSubPath**: [*PathPointInfo*](/ps_reference/classes/pathpointinfo/)[]
-
-___
-
-### operation
-
-• **operation**: [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation)
-
-The subpath's operation on other subpaths. Specifies how to combine the shapes if
- the destination path already has a selection.
-
-___
-
-### typename
-
-• `Readonly` **typename**: *string*
-
-The class name of the referenced object
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| closed | *boolean* | R W | 23.3 | True if the path describes an enclosed area. |
+| entireSubPath | [*PathPointInfo*](/ps_reference/classes/pathpointinfo/)[] | R W | 23.3 | An array composed of the sub-path&#x27;s [PathPoint](/ps_reference/classes/pathpoint/) objects. |
+| operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | R W | 23.3 | The subpath&#x27;s operation on other subpaths. Specifies how to combine the shapes if the destination path already has a selection. |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;SubPathInfo&quot;*. |

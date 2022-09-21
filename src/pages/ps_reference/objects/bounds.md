@@ -18,32 +18,16 @@ keywords:
 
 # Bounds
 
-Defines a rectangle. This is a WIP
-
-| Name | Type | Default | Range | Description |
-| :------ | :------ | :------ | :------ | :------ |
-| bottom | *number* | - | - | Coordinates of the bottom edge |
-| left | *number* | - | - | Coordinates of the left edge |
-| right | *number* | - | - | Coordinates of the right edge |
-| top | *number* | - | - | Coordinates of the top edge |
-| typename | *string* | &quot;Bounds&quot;
- | - | The class name of the referenced object |
+Defines a rectangle. This is a WIP.
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| height | *number* | Read-only | Calculated height |
-| width | *number* | Read-only | Calculated width |
-
-## Methods
-
-### union
-
-[*Bounds*](/ps_reference/objects/bounds/)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `inBounds` | [*Bounds*](/ps_reference/objects/bounds/) |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| bottom | *number* | R W | 22.5 | Coordinate of the bottom edge. |
+| height | *number* | R | 22.5 | Calculated height. |
+| left | *number* | R W | 22.5 | Coordinate of the left edge. |
+| right | *number* | R W | 22.5 | Coordinate of the right edge. |
+| top | *number* | R W | 22.5 | Coordinate of the top edge. |
+| typename | *string* | R | 22.5 | The class name of the referenced object: *&quot;Bounds&quot;*. |
+| width | *number* | R | 22.5 | Calculated width. |

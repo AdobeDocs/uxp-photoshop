@@ -28,21 +28,23 @@ From here you can access open documents, tools, UI elements and run commands or 
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | Read-only | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing actions |
-| activeDocument | [*Document*](/ps_reference/classes/document/) | Read-write | The current active document |
-| backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | Read-only | The default background color and color style for documents. |
-| currentTool | [*Tool*](/ps_reference/objects/tool/) | Read-only | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes |
-| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | Read-write | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
-| documents | [*Documents*](/ps_reference/classes/documents/) | Read-only | A list of the documents currently open |
-| fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | Read-only | The fonts installed on this system. |
-| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | Read-write | The default foreground color (used to paint, fill, and stroke selections) |
-| typename | *string* | Read-only | The class name of the referenced Photoshop object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | R | 23.0 | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing Actions. |
+| activeDocument | [*Document*](/ps_reference/classes/document/) | R W | 23.0 | The current document that has the application&#x27;s focus. |
+| backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R | 23.0 | The background color and color style for documents. |
+| currentTool | [*Tool*](/ps_reference/objects/tool/) | R | 23.0 | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes. |
+| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | R W | 23.0 | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
+| documents | [*Documents*](/ps_reference/classes/documents/) | R | 23.0 | A list of the documents currently open. |
+| fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | R | 23.0 | The fonts installed on this system. |
+| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). |
+| preferences | [*Preferences*](/ps_reference/classes/preferences/) | R | 24.0 | Contains Photoshop preferences grouped into several categories similar to the Preferences dialog. |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Photoshop&quot;*. |
 
 ## Methods
 
 ### batchPlay
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
 
@@ -60,14 +62,16 @@ without updating the UI. This API is subject to change and may be accessible in 
 ___
 
 ### bringToFront
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
-Brings application to focus, useful when your script ends, or requires an input
+Brings application to focus, useful when your script ends, or requires an input.
 
 ___
 
 ### convertUnits
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.4</span>
 
 *number*
 
@@ -98,6 +102,7 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 ___
 
 ### createDocument
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -136,12 +141,15 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 ___
 
 ### open
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
 Opens the specified document and returns the model
 
-> *Note that this API requires a [UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/) object as its argument.
+> *Note that this API requires a
+[UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
+object as its argument.
 
 ```javascript
 // Open a file given entry
@@ -161,10 +169,11 @@ const document = await app.open();
 ___
 
 ### showAlert
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
-Shows an alert in Photoshop with the given message
+Shows an alert in Photoshop with the given message.
 
 #### Parameters
 
