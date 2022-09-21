@@ -181,8 +181,38 @@ module.exports = [{
 			"path": "/ps_reference/objects/bounds/"
 		},
 		{
-			"title": "Tool",
-			"path": "/ps_reference/objects/tool/"
+			"title": "Conversion Options »",
+			"path": "/ps_reference/objects/conversionoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "Bitmap Conversion Options",
+					"path": "/ps_reference/objects/conversionoptions/bitmapconversionoptions/"
+				},
+				{
+					"title": "Indexed Conversion Options",
+					"path": "/ps_reference/objects/conversionoptions/indexedconversionoptions/"
+				}
+			]
+		},
+		{
+			"title": "Create Options »",
+			"path": "/ps_reference/objects/createoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "Document Create Options",
+					"path": "/ps_reference/objects/createoptions/documentcreateoptions/"
+				},
+				{
+					"title": "Group Layer Create Options",
+					"path": "/ps_reference/objects/createoptions/grouplayercreateoptions/"
+				},
+				{
+					"title": "Layer Create Options",
+					"path": "/ps_reference/objects/createoptions/layercreateoptions/"
+				}
+			]
 		},
 		{
 			"title": "Save Options »",
@@ -212,38 +242,8 @@ module.exports = [{
 			]
 		},
 		{
-			"title": "Create Options »",
-			"path": "/ps_reference/objects/createoptions",
-			"header": true,
-			"pages": [
-				{
-					"title": "Document Create Options",
-					"path": "/ps_reference/objects/createoptions/documentcreateoptions/"
-				},
-				{
-					"title": "Group Layer Create Options",
-					"path": "/ps_reference/objects/createoptions/grouplayercreateoptions/"
-				},
-				{
-					"title": "Layer Create Options",
-					"path": "/ps_reference/objects/createoptions/layercreateoptions/"
-				}
-			]
-		},
-		{
-			"title": "Conversion Options »",
-			"path": "/ps_reference/objects/conversionoptions",
-			"header": true,
-			"pages": [
-				{
-					"title": "Bitmap Conversion Options",
-					"path": "/ps_reference/objects/conversionoptions/bitmapconversionoptions/"
-				},
-				{
-					"title": "Indexed Conversion Options",
-					"path": "/ps_reference/objects/conversionoptions/indexedconversionoptions/"
-				}
-			]
+			"title": "Tool",
+			"path": "/ps_reference/objects/tool/"
 		}
 	]
 },{
