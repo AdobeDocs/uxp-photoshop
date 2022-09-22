@@ -1,4 +1,5 @@
-name: Deploy
+---
+name: Deployment
 on:
   workflow_dispatch:
     inputs:
@@ -13,7 +14,7 @@ on:
       excludeSubfolder:
         description: 'Exclude a subfolder from deletion'
         required: false
-        default: '2021, 2023'
+        default: ''
 jobs:
   set-state:
     runs-on: ubuntu-latest
@@ -21,34 +22,25 @@ jobs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
       deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
       clean_cache: ${{ contains(github.event.inputs.clean, 'yes') }}
-      path_prefix: ${{ steps.extract_path_prefix.outputs.path_prefix }}
-      branch_short_ref: ${{ steps.extract_branch.outputs.branch }}
+      path_prefix: ${{ steps.get_path_prefix.outputs.path_prefix }}
+      branch_short_ref: ${{ steps.get_branch.outputs.branch }}
       exclude_subfolder: ${{ github.event.inputs.excludeSubfolder }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
-      - name: Extract path prefix
-        uses: actions/github-script@v3
-        id: extract_path_prefix
+        uses: actions/checkout@v3
+
+      - name: Get pathPrefix
+        uses: actions/github-script@v6
+        id: get_path_prefix
         with:
           script: |
-            const {pathPrefix} = require(`${process.env.GITHUB_WORKSPACE}/gatsby-config.js`)
-            if (!pathPrefix) {
-              core.setFailed('Missing path prefix')
-            }
-            else if (pathPrefix === '/') {
-              core.setFailed('Path prefix "/" is not allowed')
-            }
-            else if (!pathPrefix.startsWith('/') || !pathPrefix.endsWith('/')) {
-              core.setFailed('Path prefix should start and end with "/"')
-            }
-            core.setOutput('path_prefix', pathPrefix)
-      - name: Extract branch name
+            const script = require('./.github/scripts/get-path-prefix.js');
+            script({ core });
+          result-encoding: string
+      - name: Get branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
+        run: echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
+        id: get_branch
 
   echo-state:
     needs: [set-state]
@@ -84,11 +76,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3
+
+      - name: Setup Node v16 for Yarn v3
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
-      - name: NPM Install
-        uses: bahmutov/npm-install@v1
+          node-version: '16.15.0' # Current LTS version
+
+      - name: Enable Corepack for Yarn v3
+        run: corepack enable
+
+      - name: Install Yarn v3
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: set version stable
+
+      - name: Install Dependencies
+        uses: borales/actions-yarn@v3
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        with:
+          cmd: install
+
       - name: Gatsby Cache
         uses: actions/cache@v2
         with:
@@ -98,13 +107,17 @@ jobs:
           key: ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-${{ github.run_id }}
           restore-keys: |
             ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-
+
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
-        run: |
-          npm run clean
-      - name: Build
-        run: |
-          npm run build
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: clean
+
+      - name: Build site
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: build
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
@@ -121,11 +134,14 @@ jobs:
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
           GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_DEV_SRC }}
           GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_DEV_CONFIG }}
+          GATSBY_ALGOLIA_APPLICATION_ID: ${{ secrets.AIO_ALGOLIA_APPLICATION_ID }}
+          GATSBY_ALGOLIA_SEARCH_API_KEY: ${{ secrets.AIO_ALGOLIA_SEARCH_API_KEY }}
           GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
           GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
+
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -165,11 +181,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3
+
+      - name: Setup Node v16 for Yarn v3
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
-      - name: NPM Install
-        uses: bahmutov/npm-install@v1
+          node-version: '16.15.0' # Current LTS version
+
+      - name: Enable Corepack for Yarn v3
+        run: corepack enable
+
+      - name: Install Yarn v3
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: set version stable
+
+      - name: Install Dependencies
+        uses: borales/actions-yarn@v3
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        with:
+          cmd: install
+
       - name: Gatsby Cache
         uses: actions/cache@v2
         with:
@@ -179,13 +212,17 @@ jobs:
           key: ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-${{ github.run_id }}
           restore-keys: |
             ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-
+
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
-        run: |
-          npm run clean
-      - name: Build
-        run: |
-          npm run build
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: clean
+
+      - name: Build site
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: build
         env:
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ needs.set-state.outputs.path_prefix }}
@@ -202,11 +239,13 @@ jobs:
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
           GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_PROD_SRC }}
           GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_PROD_CONFIG }}
+          GATSBY_ALGOLIA_APPLICATION_ID: ${{ secrets.AIO_ALGOLIA_APPLICATION_ID }}
+          GATSBY_ALGOLIA_SEARCH_API_KEY: ${{ secrets.AIO_ALGOLIA_SEARCH_API_KEY }}
+          GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
+          GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           ALGOLIA_WRITE_API_KEY: ${{ secrets.AIO_ALGOLIA_WRITE_API_KEY }}
           ALGOLIA_INDEXATION_MODE: ${{ secrets.AIO_ALGOLIA_INDEXATION_MODE }}
           ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME || github.event.repository.name }}
-          GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
-          GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
