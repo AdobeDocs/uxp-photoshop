@@ -18,7 +18,7 @@ keywords:
 
 # ExecutionContext
 
-This object is passed to the callback of `core.executeAsModal` for modality related APIs
+This object is passed to the callback of `core.executeAsModal` for modality related APIs.
 
 ## Properties
 
@@ -26,14 +26,14 @@ This object is passed to the callback of `core.executeAsModal` for modality rela
 
 • **hostControl**: *object*
 
-Use the methods in here to control Photoshop state
+Use the methods in here to control Photoshop state.
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `resumeHistory` | (`suspensionID`: *number*) => *void* | Call to resume history on a target document |
-| `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | Call to suspend history on a target document, returns the suspension ID which can be used for resumeHistory |
+| `resumeHistory` | (`suspensionID`: *number*) => *void* | Call to resume history on a target document. |
+| `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | Call to suspend history on a target document, returns the suspension ID which can be used for resumeHistory. |
 
 ___
 

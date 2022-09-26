@@ -6,7 +6,11 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
+
 ## Photoshop Beta (24.0 October 2022)
+
+### Preferences
+Adds API to change some of the Photoshop [preferences](../classes/preferences). Only first set of 38 preferences was added. More will follow.
 
 ### ColorSamplers support
 
@@ -20,10 +24,20 @@ The ColorSampler DOM API is now available in Photoshop.
     - `parent`: [Document](../classes/document)
     - `position`: `{x: number, y: number}`
     - `color`: [SolidColor](../classes/solidcolor.md)
-	- `move({x: number, y: number})`
-	- `remove()`
-	<!-- - `sampleSize()`: static member, accepts values from [Constants.SampleSize](../modules/constants/#samplesize). -->
+    - `move({x: number, y: number})`
+    - `remove()`
+    <!-- - `sampleSize()`: static member, accepts values from [Constants.SampleSize](../modules/constants/#samplesize). -->
 - The [Document](../classes/document#samplecolor) class implements a new `sampleColor()` method that samples an `{x, y}` position on the fly, returning a [SolidColor](../classes/solidcolor.md) object without the need to create a [ColorSampler](../classes/colorsampler.md) object.
+
+### Layer Comps support
+
+- [Document.layerComps](../classes/document/#layercomps) property is now added, giving access to similar APIs from ExtendScript to work with layer comps.
+- [LayerComps collection](../classes/layercomps)
+  - Adds the following Layer Comp methods: `add()`, `removeAll()`, `getByName()`
+  - Create new layer comps in the document using [`LayerComps.add()`](../classes/layercomps/#add) method. Constructors for them can be found in [app](../classes/photoshop/) object.
+- [LayerComp class](../classes/layercomp)
+  - Adds the following Layer Comp properties: `name`, `comment`, `selected`, `appearance`, `position`, `visibility`, `childComp`.
+  - Adds the following Layer Comp methods: `apply()`, `recapture()`, `remove()`, `resetLayerComp()`, `duplicate()`
 
 ### Guide fixes
 
@@ -91,7 +105,7 @@ Script files with extension .psjs are executed using UXP.
 - [Layer.applySharpenMore()](../classes/layer/#applysharpenmore) Applies the Sharpen More filter.
 - [Layer.applyShear(curve: {x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyshear) Applies the Shear filter.
 
-## Photoshop 23.4.2 (July 2022)
+## Photoshop 23.4 (July 2022)
 ### convertUnits method on the Photoshop Application object
  - [Application.convertUnits](../classes/photoshop/#convertunits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
 
@@ -116,14 +130,25 @@ This event is generated when Photoshop detects that a user becomes idle, while P
 As an alterative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../media/executeasmodal#interactive-mode/).
 
 ## Photoshop 23.2 (February 2022)
+- Core Module: `setExecutionMode()`
+- Core Module: `getPluginInfo()`
+
+## Photoshop 23.1 (December 2022)
+- Core Module: `batchPlaySync()`
+- Core Module: `validateReference()`
+- Core Module: `isModal()`
+- Core Module: `getCPUInfo()`
+- Core Module: `getGPUInfo()`
+
+## Photoshop 23.0 (October 2021)
 
 ### Channel support
 - [Channels collections](../classes/channels/) behave like other collections in the API. Channels further supports `channels.add()` and `channels.removeAll()`. 
 - [Channel class](../classes/channel)
-	- Supports four types of channels, as listed in [Constants.ChannelType](../modules/constants/#channeltype): `COMPONENT`, `MASKEDAREA`, `SELECTEDAREA`, `SPOTCOLOR`.
-	- Adds the following Channel properties: `name`, `type`, `visible`, `histogram`, `color`, `opacity`.
-	- Adds the following Channel methods: `remove()`, `merge()` (for ChannelType.SPOTCOLOR).
-	- Adds to the Document class: `get compositeChannels`, `get activeChannels`, `set activeChannels`.
+    - Supports four types of channels, as listed in [Constants.ChannelType](../modules/constants/#channeltype): `COMPONENT`, `MASKEDAREA`, `SELECTEDAREA`, `SPOTCOLOR`.
+    - Adds the following Channel properties: `name`, `type`, `visible`, `histogram`, `color`, `opacity`.
+    - Adds the following Channel methods: `remove()`, `merge()` (for ChannelType.SPOTCOLOR).
+    - Adds to the Document class: `get compositeChannels`, `get activeChannels`, `set activeChannels`.
 
 ### Document Transformations
 - `Document.crop(bounds: Bounds, angle, width, height)`: Crops the document. The `bounds` paramter is an array of four coordinates for the region remaining after cropping, [left, top, right, bottom].
@@ -162,7 +187,7 @@ As an alterative to a UI-blocking progress bar when a plugin is within a Modal E
  - `require('photoshop').core.convertColor` low level API added, used internally by SolidColor. It uses app color 
  settings to convert between color spaces.
 
-## Adobe Photoshop Beta Build 65: Sep 3, 2021
+## Adobe Photoshop Beta Build 65: Sep 3, 2021 (23.0)
 
 ### Layer Transformations
 - `layer.rotate(angle: number, anchor?: Constants.AnchorPosition)`: Rotate by `angle` about `anchor`.
@@ -190,7 +215,7 @@ As an alterative to a UI-blocking progress bar when a plugin is within a Modal E
  - Document.colorProfileType and Document.colorProfileName properties (read-write)
  - Document.changeMode(), Document.convertProfile(), and Document.trap() methods
 
-## Adobe Photoshop Beta Build 64: Aug 6, 2021
+## Adobe Photoshop Beta Build 64: Aug 6, 2021 (23.0)
 
 ### [Document.suspendHistory](../classes/document/#suspendhistory)
 
@@ -201,7 +226,7 @@ This API wraps around [`core.executeAsModal`](https://adobe.ly/psmodal) within a
 - Arrange layers with `layer.move(targetLayer, Constants.ElementPlacement)`. Added `Constants.ElementPlacement` for moving layers: `"placeAfter"` (place below a layer, below group if group layer), `"placeBefore"` (place above a layer, above group if group layer), and `"placeInside"` (inside group layers only).
 - Send a layer to the back or bring a layer to the front with `layer.sendToBack()` and `layer.bringToFront()`. If `layer` is within a group, the commands will operate within that group.
 
-## Adobe Photoshop Prerelease Build 61: Jun 24, 2021
+## Adobe Photoshop Prerelease Build 61: Jun 24, 2021 (22.5)
 
 ### Updated DOM API
 
@@ -209,20 +234,20 @@ This API wraps around [`core.executeAsModal`](https://adobe.ly/psmodal) within a
 - `GroupLayer` has been removed. Use `activeLayer.kind === LayerKind.GROUP` instead.
 - `Constants.LayerKind`, similar to ExtendScript version, but with "group" layer addition.
 - Layer APIs
-	- *new* locked, read-only way to tell if any of the properties are locked
-	- allLocked, pixelsLocked, positionLocked, transparentPixelsLocked properties
-	- Some existing properties exposed in documentation
+    - *new* locked, read-only way to tell if any of the properties are locked
+    - allLocked, pixelsLocked, positionLocked, transparentPixelsLocked properties
+    - Some existing properties exposed in documentation
 
-## Adobe Photoshop Prerelease Build 60: Jun 10, 2021
+## Adobe Photoshop Prerelease Build 60: Jun 10, 2021 (22.5)
 
 This update contains changes that were made since the MAX 2020 (Adobe Photoshop 22.0) release.
 
 ### Breaking changes
 To use the new set of APIs, your project's `manifest.json` must be updated to include the following under the `host` object:
 ```javascript
-	"data" : {
-		"apiVersion": 2
-	}
+    "data" : {
+        "apiVersion": 2
+    }
 ```
 Further, your `manifest.json` must use version 4:
 ```javascript
@@ -232,23 +257,23 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
 
 ### Updated DOM API
 - Collections
-	- We're introducing collection classes built using [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), to make it easier to interact with the DOM.
-	- Try iterating through all the documents as such: `app.documents.forEach(h => console.log(h.title));`
+    - We're introducing collection classes built using [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), to make it easier to interact with the DOM.
+    - Try iterating through all the documents as such: `app.documents.forEach(h => console.log(h.title));`
 - [HistoryStates collections](../classes/historystates/) and [HistoryState API](../classes/historystate/)
-	- We've built HistoryStates to mirror ExtendScript functionality. `length`, `parent`, and `getByName(name)` are provided. You can also use indices as such: `activeDocument.historyStates[2]`.
-	- HistoryState provides `name`, `parent`, `snapshot`.
+    - We've built HistoryStates to mirror ExtendScript functionality. `length`, `parent`, and `getByName(name)` are provided. You can also use indices as such: `activeDocument.historyStates[2]`.
+    - HistoryState provides `name`, `parent`, `snapshot`.
 - [Documents collections](../classes/documents/)
-	- Documents also follows ExtendScript functionality. `length`, `add`, `getByName(name)`, `parent` are provided.
+    - Documents also follows ExtendScript functionality. `length`, `add`, `getByName(name)`, `parent` are provided.
 - [Constants module](../modules/constants/), collecting all enumerations and constants used in DOM API. Accessible via `require("photoshop").constants`.
 - Updated [app.createDocument / app.add](../classes/photoshop/#createdocument)
-	- Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../objects/documentcreateoptions/)).
+    - Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../objects/documentcreateoptions/)).
 - Updated [document.save](../classes/document/#save) and [document.saveAs](../classes/document/#saveas)
-	- `save` no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.
-	- `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/)).
+    - `save` no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.
+    - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/)).
 - [layer.id getter](../classes/layer)
 - Updated [document.createLayer](../classes/document/#createlayer) and [document.createLayerGroup](../classes/document/#createlayergroup)
-	- With respective Create options: [LayerCreateOptions](../objects/layercreateoptions/) and [GroupLayerCreateOptions](../objects/grouplayercreateoptions).
-	- Collection access updates for Layer and Layer-like items are planned for upcoming releases.
+    - With respective Create options: [LayerCreateOptions](../objects/layercreateoptions/) and [GroupLayerCreateOptions](../objects/grouplayercreateoptions).
+    - Collection access updates for Layer and Layer-like items are planned for upcoming releases.
 
 #### Photoshop Core updates
 - [Execute as Modal](../media/executeasmodal/) allows you to create plugins that can be guaranteed exclusive control over Photoshop during execution. It further allows for clear user feedback when this is occuring, and allows plugins to `suspendHistory` and `resumeHistory`.

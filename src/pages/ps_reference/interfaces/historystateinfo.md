@@ -34,4 +34,4 @@ ___
 
 • **target**: [{ `_id`: *number* ; `_ref`: ``"document"``  }]
 
-A single document reference in an array with `_id` of the document whose history will be suspended
+A single document reference in an array with `_id` of the document whose history will be suspended.

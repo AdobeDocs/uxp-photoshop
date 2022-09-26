@@ -20,8 +20,9 @@ keywords:
 
 WIP. For now, only contains an id field. In the future, this may become a class.
 
-| Name | Type | Default | Range | Description |
+## Properties
+
+| Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| id | *string* | - | - | Name of the newly created layer |
-| typename | *string* | &quot;Tool&quot;
- | - | The class name of the referenced object |
+| id | *string* | R W | 23.0 | Name of the tool. |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Tool&quot;*. |

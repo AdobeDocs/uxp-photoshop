@@ -18,4 +18,4 @@ keywords:
 
 # Conversion Options
 
-Objects for specifying save options and conversion options for various file formats using [Document.saveAs](/ps_reference/classes/document/#saveas) and [Document.changeMode](/ps_reference/classes/document/#changemode), respectively
+Objects for specifying conversion options for [Document.changeMode](/ps_reference/classes/document/#changemode).

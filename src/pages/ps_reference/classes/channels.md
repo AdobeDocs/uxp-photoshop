@@ -24,14 +24,7 @@ while also providing familiar methods from ExtendScript, like `getByName`
 ```javascript
 // Iterate through all channels in the document
 app.activeDocument.channels.forEach(h => console.log(h.name));
-
 ```
-
-## Hierarchy
-
-- *Array*<[*Channel*](/ps_reference/classes/channel/)\>
-
-  ↳ **Channels**
 
 ## Indexable
 
@@ -42,32 +35,33 @@ Used to access the channels in the collection
 ```javascript
 // Iterate through all channels in the document
 app.activeDocument.channels.forEach(h => console.log(h.name));
-
 ```
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of Channel elements in this collection |
-| parent | Document | Read-only | The owner document of this Channel collection |
-| typename | *string* | Read-only | The name for this object collection: Channels |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 23.0 | Number of Channel elements in this collection. |
+| parent | Document | R | 23.0 | The owner document of this Channel collection. |
+| typename | *string* | R | 23.0 | The name for this object collection: Channels. |
 
 ## Methods
 
 ### add
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 [*Channel*](/ps_reference/classes/channel/)
 
-Create a new alpha channel in this document
+Create a new alpha channel in this document.
 
 ___
 
 ### getByName
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 [*Channel*](/ps_reference/classes/channel/)
 
-Find the first channel with the matching name
+Find the first channel with the matching name.
 
 #### Parameters
 
@@ -78,7 +72,8 @@ Find the first channel with the matching name
 ___
 
 ### removeAll
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
-Remove all Alpha channels in the parent document
+Remove all Alpha channels in the parent document.

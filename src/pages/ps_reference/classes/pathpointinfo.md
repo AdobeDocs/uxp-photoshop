@@ -16,7 +16,7 @@ keywords:
   - Scripting
 ---
 
-# PathPointInfo
+# Path Point Info
 
 Used to create a [PathPoint](/ps_reference/classes/pathpoint/), which represents the anchor and control-handle endpoints for a path segment.
 Each point (the anchor point, left-direction point, and right-direction point) is an array containing X and Y
@@ -64,40 +64,10 @@ make it convex; or use the right direction point to bend the curve "inward" or m
 
 ## Properties
 
-### anchor
-
-• **anchor**: *number*[]
-
-The X and Y coordinates of the anchor point of the curve.
-
-___
-
-### kind
-
-• **kind**: [*PointKind*](/ps_reference/modules/constants/#pointkind)
-
-The role (corner or smooth) this point plays in the containing path segment.
-
-___
-
-### leftDirection
-
-• **leftDirection**: *number*[]
-
-The location of the left-direction endpoint('in' position).
-
-___
-
-### rightDirection
-
-• **rightDirection**: *number*[]
-
-The location of the right-direction endpoint('out' position).
-
-___
-
-### typename
-
-• `Readonly` **typename**: *string*
-
-The class name of the referenced object
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| anchor | *number*[] | R W | 23.3 | The X and Y coordinates of the anchor point of the curve. |
+| kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | R W | 23.3 | The role (corner or smooth) this point plays in the containing path segment. |
+| leftDirection | *number*[] | R W | 23.3 | The location of the left-direction endpoint(&#x27;in&#x27; position). |
+| rightDirection | *number*[] | R W | 23.3 | The location of the right-direction endpoint(&#x27;out&#x27; position). |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathPointInfo&quot;*. |

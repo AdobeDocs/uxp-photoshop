@@ -26,20 +26,18 @@ modified or queried here.
 var PhotoshopCore = require('photoshop').core;
 ```
 
-## Variables
+## Properties
 
-### apiVersion
+ 
 
-• `Let` **apiVersion**: *number*
-
-API Version declared by the plugin's manifest.json under `host.data.apiVersion` field.
-
-If value 1, you will have access to Photoshop 22.0 DOM and be able to make mutable calls outside a modal state.
-If 2, you will have access to latest DOM, modal execution and everything else new we're adding.
+| Name | Type | Min Version | Description |
+| :------ | :------ | :------ | :------ |
+| apiVersion | *number* | 22.5 | API Version declared by the plugin&#x27;s manifest.json under &#x60;host.data.apiVersion&#x60; field. |
 
 ## Functions
 
 ### addNotificationListener
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -67,6 +65,7 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 ___
 
 ### calculateDialogSize
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<{ `height`: *number* ; `width`: *number*  }\>
 
@@ -91,6 +90,7 @@ var idealSize = { width: 200, height: 500 }
 ___
 
 ### convertColor
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 ColorDescriptor
 
@@ -115,6 +115,7 @@ based on embedded color profiles.
 ___
 
 ### endModalToolState
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<void\>
 
@@ -133,6 +134,7 @@ await PhotoshopCore.endModalToolState(false)
 ___
 
 ### executeAsModal
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<void\>
 
@@ -154,6 +156,7 @@ See [Modal Execution](../executeasmodal) for details
 ___
 
 ### getActiveTool
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
 
@@ -165,6 +168,7 @@ Returns information about the active Photoshop tool.
 ___
 
 ### getCPUInfo
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
 [*CPUInfo*](/ps_reference/interfaces/cpuinfo/)
 
@@ -178,6 +182,7 @@ var isARM = vendor === "ARM"
 ___
 
 ### getGPUInfo
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
 [*GPUInfo*](/ps_reference/interfaces/gpuinfo/)
 
@@ -193,6 +198,7 @@ console.log(JSON.stringify(clgpuInfoList))
 ___
 
 ### getMenuCommandState
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<boolean\>
 
@@ -213,6 +219,7 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 ___
 
 ### getMenuCommandTitle
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<string\>
 
@@ -233,6 +240,7 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 ___
 
 ### getPluginInfo
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
 
 *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
 
@@ -260,14 +268,16 @@ await PhotoshopCore.getPluginInfo()
 ___
 
 ### isModal
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
 *boolean*
 
- Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal)
+Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal)
 
 ___
 
 ### performMenuCommand
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<boolean\>
 
@@ -289,6 +299,7 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 ___
 
 ### setExecutionMode
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
 
 *Promise*<void\>
 
@@ -318,6 +329,7 @@ await PhotoshopCore.setExecutionMode({ logRejections: true })
 ___
 
 ### setUserIdleTime
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -338,6 +350,7 @@ await PhotoshopCore.setUserIdleTime(3)
 ___
 
 ### showAlert
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *Promise*<void\>
 
@@ -357,6 +370,7 @@ await PhotoshopCore.showAlert({ message: 'Operation successful'})
 ___
 
 ### translateUIString
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
 *string*
 

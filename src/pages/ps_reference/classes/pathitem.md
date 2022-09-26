@@ -32,23 +32,22 @@ Create these objects by passing a set of SubPathInfo objects to the [PathItems.a
 a [SubPathItem](/ps_reference/classes/subpathitem/) object for each [SubPathInfo](/ps_reference/classes/subpathinfo/) object, and creates and returns a new [PathItem](/ps_reference/classes/pathitem/) object for the
 path represented by all of the subpaths.
 
-*Added in Photoshop 23.3*
-
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| docId | *number* | Read-only | The ID of the document of this pathItem. |
-| id | *number* | Read-only | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
-| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | Read-write | The type of this path |
-| name | *string* | Read-write | Name of this path |
-| parent | [*Document*](/ps_reference/classes/document/) | Read-only | Owner document |
-| subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | Read-only | The contained [SubPathItem](/ps_reference/modules/subpathitem/)s in this path |
-| typename | *string* | Read-only | The class name of the referenced PathItem object |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| docId | *number* | R | 23.3 | The ID of the document of this pathItem. |
+| id | *number* | R | 23.3 | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
+| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | 23.3 | The specific kind of path. |
+| name | *string* | R W | 23.3 | Name of this path |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 23.3 | The document in which the path resides. |
+| subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | R | 23.3 | The contained [SubPathItem](/ps_reference/classes/subpathitem/)s in this path. |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathItem&quot;*. |
 
 ## Methods
 
 ### deselect
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -57,6 +56,7 @@ Deselects this `pathItem` object.
 ___
 
 ### duplicate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
 
@@ -71,6 +71,7 @@ Duplicates the `pathItem` object with the new name, returning the duplicate.
 ___
 
 ### fillPath
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -97,6 +98,7 @@ If `wholePath` is true, all subpaths are used when doing the fill.
 ___
 
 ### makeClippingPath
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -113,6 +115,7 @@ Makes this the clipping path for this document.
 ___
 
 ### makeSelection
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -133,22 +136,25 @@ Makes a selection object whose border is this path.
 ___
 
 ### remove
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
-Deletes this object
+Deletes this object.
 
 ___
 
 ### select
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
-Makes this the active or selected `PathItem` object
+Makes this the active or selected `PathItem` object.
 
 ___
 
 ### strokePath
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 

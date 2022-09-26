@@ -22,9 +22,9 @@ Defines an HSB color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| brightness | *number* | Read-write | The brightness value.  **&#x60;default&#x60;** 100  **&#x60;range&#x60;** 0..100 |
-| hue | *number* | Read-write | The hue value.  **&#x60;default&#x60;** 360  **&#x60;range&#x60;** 0..360 |
-| saturation | *number* | Read-write | The saturation value.  **&#x60;default&#x60;** 0  **&#x60;range&#x60;** 0..100 |
-| typename | *string* | Read-only | - |
+| Name | Type | Access | Default | Range | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ | :------ | :------ |
+| brightness | *number* | R W | 100 | 0..100 | 23.0 | The brightness value. |
+| hue | *number* | R W | 360 | 0..360 | 23.0 | The hue value. |
+| saturation | *number* | R W | 0 | 0..100 | 23.0 | The saturation value. |
+| typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;HSBColor&quot;*. |

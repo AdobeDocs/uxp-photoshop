@@ -29,6 +29,7 @@ var PhotoshopAction = require('photoshop').action;
 ## Functions
 
 ### addNotificationListener
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -48,6 +49,7 @@ await PhotoshopAction.addNotificationListener(['open'], onOpenNewDocument)
 ___
 
 ### batchPlay
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
 
@@ -69,6 +71,7 @@ await PhotoshopAction.batchPlay(commands)
 ___
 
 ### batchPlaySync
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
 [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]
 
@@ -90,6 +93,7 @@ await PhotoshopAction.batchPlay(commands)
 ___
 
 ### removeNotificationListener
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -109,6 +113,7 @@ await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 ___
 
 ### validateReference
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
 *boolean*
 

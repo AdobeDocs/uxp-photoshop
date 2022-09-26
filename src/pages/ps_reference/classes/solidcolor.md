@@ -16,7 +16,7 @@ keywords:
   - Scripting
 ---
 
-# SolidColor
+# Solid Color
 
 Represents a color, and allows for mapping into all available Photoshop color models.
 
@@ -50,18 +50,19 @@ c.rgb.green = 128; // Model will change back to ColorModel.RGB
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | Read-write | The color&#x27;s representation in CMYK color space. |
-| gray | [*GrayColor*](/ps_reference/colors/graycolor/) | Read-write | The color&#x27;s representation in grayscale. |
-| hsb | [*HSBColor*](/ps_reference/colors/hsbcolor/) | Read-write | The color&#x27;s representation in HSB color space. |
-| lab | [*LabColor*](/ps_reference/colors/labcolor/) | Read-write | The color&#x27;s representation in LAB color space. |
-| nearestWebColor | [*RGBColor*](/ps_reference/colors/rgbcolor/) | Read-only | - |
-| rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | Read-write | The color&#x27;s representation in RGB color space. |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | R W | 23.0 | The color&#x27;s representation in CMYK color space. |
+| gray | [*GrayColor*](/ps_reference/colors/graycolor/) | R W | 23.0 | The color&#x27;s representation in grayscale. |
+| hsb | [*HSBColor*](/ps_reference/colors/hsbcolor/) | R W | 23.0 | The color&#x27;s representation in HSB color space. |
+| lab | [*LabColor*](/ps_reference/colors/labcolor/) | R W | 23.0 | The color&#x27;s representation in LAB color space. |
+| nearestWebColor | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R | 23.0 | The color&#x27;s nearest match within the 216 web-safe colors. |
+| rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R W | 23.0 | The color&#x27;s representation in RGB color space. |
 
 ## Methods
 
 ### isEqual
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *boolean*
 

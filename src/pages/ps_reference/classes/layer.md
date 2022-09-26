@@ -23,50 +23,54 @@ An object within a document that contains visual elements of the image, equivale
 You can access layers in a document using [Document.layers](/ps_reference/classes/document/#layers) collection.
 
 If the object is representing a group layer, you can access it's children layers using [Layer.layers](/ps_reference/classes/layer/#layers) property.
+```javascript
+group.layers.forEach((layer) => {
+  layer.visible = true;
+})
+```
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| allLocked | *boolean* | Read-write | When set to true, prevents edits to pixels and properties of this layer |
-| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | Read-write | The blend mode of the layer |
-| bounds | [*Bounds*](/ps_reference/objects/bounds/) | Read-only | Bounds of the layer, including the effects |
-| boundsNoEffects | [*Bounds*](/ps_reference/objects/bounds/) | Read-only | Bounds of the layer excluding effects |
-| document | [*Document*](/ps_reference/classes/document/) | Read-only | The document this layer is in |
-| fillOpacity | *number* | Read-write | The fill opacity of the layer, in percentage. |
-| filterMaskDensity | *number* | Read-write | The density of the filter mask, in percentage. |
-| filterMaskFeather | *number* | Read-write | The feather of the filter mask between 0.0 and 1000.0. |
-| id | *number* | Read-only | ID of the layer, can be used for making batchPlay calls |
-| isBackgroundLayer | *boolean* | Read-only | - |
-| isClippingMask | *boolean* | Read-write | Is the mask used as a clipping mask. |
-| kind | [*LayerKind*](/ps_reference/modules/constants/#layerkind) | Read-only | Kind of the layer |
-| layerMaskDensity | *number* | Read-write | The density of the layer mask, in percentage. |
-| layerMaskFeather | *number* | Read-write | The feather of the layer mask between 0.0 and 1000.0. |
-| layers | [*Layers*](/ps_reference/classes/layers/) | Read-only | The layers of this group layer &#x60;&#x60;&#x60;javascript group.layers.forEach((layer) &#x3D;&gt; {   ... }) &#x60;&#x60;&#x60; |
-| linkedLayers | [*Layers*](/ps_reference/classes/layers/) | Read-only | Layers linked to this layer. See [Layer.link](/ps_reference/classes/layer/#link) |
-| locked | *boolean* | Read-only | True if any property of this layer is locked |
-| name | *string* | Read-only | Name of the layer |
-| opacity | *number* | Read-write | The master opacity of the layer, in percentage. |
-| parent | [*Layer*](/ps_reference/classes/layer/) | Read-only | The group layer this layer is in, null if the layer is a top layer in the document |
-| pixelsLocked | *boolean* | Read-write | When set to true, prevents the pixels of this layer from being edited |
-| positionLocked | *boolean* | Read-write | When set to true, prevents the layer from being moved |
-| transparentPixelsLocked | *boolean* | Read-write | When set to true, prevents the transparent pixels from being edited |
-| typename | *string* | Read-only | The class name of the referenced Layer object |
-| vectorMaskDensity | *number* | Read-write | The density of the vector mask, in percentage. |
-| vectorMaskFeather | *number* | Read-write | The feather of the vector mask between 0.0 and 1000.0 |
-| visible | *boolean* | Read-write | True when the layer is visible. |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| allLocked | *boolean* | R W | 22.5 | When set to true, prevents edits to pixels and properties of this layer. |
+| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | R W | 22.5 | The blend mode of the layer. |
+| bounds | [*Bounds*](/ps_reference/objects/bounds/) | R | 22.5 | Bounds of the layer, including the effects. |
+| boundsNoEffects | [*Bounds*](/ps_reference/objects/bounds/) | R | 22.5 | Bounds of the layer excluding effects. |
+| document | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The document that contains this layer. |
+| fillOpacity | *number* | R W | 23.0 | The fill opacity of the layer, in percentage. |
+| filterMaskDensity | *number* | R W | 23.0 | The density of the filter mask, in percentage. |
+| filterMaskFeather | *number* | R W | 23.0 | The feather of the filter mask between 0.0 and 1000.0. |
+| id | *number* | R | 22.5 | ID of the layer, can be used for making batchPlay calls. |
+| isBackgroundLayer | *boolean* | R | 22.5 | True when the layer is the special Background layer. |
+| isClippingMask | *boolean* | R W | 23.0 | Whether the layer is being used as a clipping mask. |
+| kind | [*LayerKind*](/ps_reference/modules/constants/#layerkind) | R | 22.5 | The kind of the layer. |
+| layerMaskDensity | *number* | R W | 23.0 | The density of the layer mask, in percentage. |
+| layerMaskFeather | *number* | R W | 23.0 | The feather of the layer mask between 0.0 and 1000.0. |
+| layers | [*Layers*](/ps_reference/classes/layers/) | R | 23.0 | The layers inside this group layer. |
+| linkedLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | Layers linked to this layer. See [Layer.link](/ps_reference/classes/layer/#link) |
+| locked | *boolean* | R | 22.5 | True if any property of this layer is locked. |
+| name | *string* | R | 22.5 | Name of the layer. |
+| opacity | *number* | R W | 22.5 | The master opacity of the layer, in percent. |
+| parent | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | The group layer that contains this layer. It will return null if the layer is a top layer in the document. |
+| pixelsLocked | *boolean* | R W | 22.5 | When set to true, prevents the pixels of this layer from being edited. |
+| positionLocked | *boolean* | R W | 22.5 | When set to true, prevents the layer from being moved. |
+| transparentPixelsLocked | *boolean* | R W | 22.5 | When set to true, prevents the transparent pixels from being edited |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Layer&quot;*. |
+| vectorMaskDensity | *number* | R W | 23.0 | The density of the vector mask, in percentage. |
+| vectorMaskFeather | *number* | R W | 23.0 | The feather of the vector mask between 0.0 and 1000.0. |
+| visible | *boolean* | R W | 22.5 | True when the layer is visible. |
 
 ## Methods
 
 ### applyAddNoise
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Add Noise filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -79,6 +83,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyAverage
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -86,11 +91,10 @@ Applies the Average filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyBlur
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -98,11 +102,10 @@ Applies the Blur filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyBlurMore
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -110,11 +113,10 @@ Applies the Blur More filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyClouds
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -122,19 +124,16 @@ Applies the Clouds filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyCustomFilter
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Custom filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -147,14 +146,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyDeInterlace
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the De-Interlace filter.
 
 Unsupported color modes: Indexed Color, Bitmap, CMYK 8 bits, CMYK 16 bits, Duotone 8 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -166,6 +164,7 @@ Unsupported color modes: Indexed Color, Bitmap, CMYK 8 bits, CMYK 16 bits, Duoto
 ___
 
 ### applyDespeckle
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -173,11 +172,10 @@ Applies the Despeckle filter.
 
 Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyDifferenceClouds
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -185,19 +183,16 @@ Applies the Difference Clouds filter.
 
 Unsupported color modes: Indexed Color, Bitmap, Lab 8 bits, Lab 16 bits
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyDiffuseGlow
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Diffuse Glow filter.
 
 Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -210,6 +205,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyDisplace
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -218,8 +214,6 @@ and vertical scale, mapping type, treatment of undistorted
 areas, and path to the distortion image map.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -234,14 +228,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyDustAndScratches
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Dust & Scratches filter.
 
 Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -253,14 +246,13 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyGaussianBlur
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Gaussian Blur filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -271,14 +263,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyGlassEffect
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Glass filter.
 
 Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -294,14 +285,13 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyHighPass
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the High Pass filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -312,14 +302,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyLensBlur
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Lens Blur filter.
 
 Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -341,14 +330,13 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyLensFlare
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Lens Flare filter.
 
 Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -363,14 +351,13 @@ Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
 ___
 
 ### applyMaximum
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Maximum filter
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -382,14 +369,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyMedianNoise
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Median filter
 
 Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -400,14 +386,13 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyMinimum
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Minimum filter
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -419,14 +404,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyMotionBlur
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Motion Blur filter
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -438,6 +422,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyNTSC
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -445,19 +430,16 @@ Applies the NTSC Colors filter
 
 Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyOceanRipple
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Ocean Ripple filter
 
 Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichannel 8 bits
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -469,14 +451,13 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyOffset
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
 Applies the Offset filter
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -489,14 +470,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyPinch
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Pinch filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -507,14 +487,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyPolarCoordinates
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Polar Coordinates filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -525,14 +504,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyRipple
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Ripple filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -544,6 +522,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applySharpen
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -551,11 +530,10 @@ Applies the Sharpen filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applySharpenEdges
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -563,11 +541,10 @@ Applies the Sharpen Edges filter.
 
 Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applySharpenMore
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -575,19 +552,16 @@ Applies the Sharpen More filter.
 
 Unsupported color modes: Indexed Color, Bitmap
 
-*Added in Photoshop 23.5*
-
 ___
 
 ### applyShear
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the the Shear filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -599,6 +573,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applySmartBlur
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -606,7 +581,6 @@ Applies the Smart Blur filter.
 
 Supported color modes: RGB 8 bits, CMYK 8 bits, Duotone 8 bits,
 
-*Added in Photoshop 24.0*
 Grayscale 8 bits, Lab 8 bits, Multichannel 8 bits
 
 #### Parameters
@@ -621,14 +595,13 @@ Grayscale 8 bits, Lab 8 bits, Multichannel 8 bits
 ___
 
 ### applySpherize
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
 Applies the Spherize filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 24.0*
 
 #### Parameters
 
@@ -640,14 +613,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyTwirl
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
 Applies the Twirl filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 23.5*
 
 #### Parameters
 
@@ -658,14 +630,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyUnSharpMask
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
 Applies the Unsharp Mask filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 24.0*
 
 #### Parameters
 
@@ -678,14 +649,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyWave
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
 Applies the Wave filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 24.0*
 
 #### Parameters
 
@@ -705,14 +675,13 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyZigZag
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
 Applies the ZigZag filter.
 
 Unsupported color modes: Indexed Color, Bitmap
-
-*Added in Photoshop 24.0*
 
 #### Parameters
 
@@ -725,6 +694,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### bringToFront
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -733,6 +703,7 @@ Moves the layer to a position above the topmost layer or group.
 ___
 
 ### clear
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -742,11 +713,13 @@ If no pixel selection is found, select all pixels and clear.
 ___
 
 ### copy
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Copies the layer to the clipboard. When the optional argument is set to true, a
 merged copy is performed (that is, all visible layers are copied to the clipboard).
+
 ```javascript
 await layer.copy(true)
 await layer.copy()
@@ -761,14 +734,16 @@ await layer.copy()
 ___
 
 ### cut
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
-Cuts the layer to the clipboard. If no selection is found then select all the pixels and then cut.
+Cuts the layer contents to the clipboard. If no selection is found then select all the pixels and then cut.
 
 ___
 
 ### delete
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -781,11 +756,13 @@ layers && layers[0] && layers[0].delete()
 ___
 
 ### duplicate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Duplicates the layer, creating a copy above it in layer stack,
 and returns the newly created layer.
+
 ```javascript
 // duplicate a layer
 const copyLayer = await layer.duplicate()
@@ -806,6 +783,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 ___
 
 ### flip
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -825,11 +803,13 @@ await layer.flip.horizontal()
 ___
 
 ### link
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 [*Layer*](/ps_reference/classes/layer/)[]
 
 Creates a link between this layer and the target layer if not already linked,
 and returns a list of layers linked to this layer.
+
 ```javascript
 // link two layers together
 const linkedLayers = strokes.link(fillLayer)
@@ -847,6 +827,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 ___
 
 ### merge
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -858,6 +839,7 @@ be a pixel layer. The merged layer will now be the active layer.
 ___
 
 ### move
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -877,6 +859,7 @@ Moves the layer relative to the layer specified in parameters.
 ___
 
 ### rasterize
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -891,10 +874,12 @@ Converts the targeted contents in the layer into a flat, raster image.
 ___
 
 ### rotate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Rotates the layer.
+
 ```javascript
 // rotate 90 deg counter clockwise
 await layer.rotate(-90)
@@ -911,16 +896,19 @@ await layer.rotate(90, anchorPos.TOPLEFT)
 | `angle` | *number* \| AngleValue | Angle to rotate the layer by in degrees |
 | `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor position to rotate around |
 | `options?` | *object* | - |
-| `options.interpolation?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Interpolation method to use when resampling the image |
+| `options.interpolation?` | [*InterpolationMethod*](/ps_reference/modules/constants/#interpolationmethod) | Interpolation method to use when resampling the image |
 
 ___
 
 ### scale
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Scales the layer.
+
 Renamed from `resize` in ExtendScript.
+
 ```javascript
 await layer.scale(80, 80)
 
@@ -937,11 +925,12 @@ await layer.scale(50, 50, anchorPos.BOTTOMLEFT)
 | `height` | *number* \| PercentValue | Numeric percentage to scale layer vertically |
 | `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor position to rotate around |
 | `options?` | *object* | - |
-| `options.interpolation?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Interpolation method to use when resampling the image |
+| `options.interpolation?` | [*InterpolationMethod*](/ps_reference/modules/constants/#interpolationmethod) | Interpolation method to use when resampling the image |
 
 ___
 
 ### sendToBack
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -952,10 +941,12 @@ If it is in a group, it will move to the bottom of the group.
 ___
 
 ### skew
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Applies a skew to the layer.
+
 ```javascript
 // parellelogram shape
 await layer.skew(-15, 0)
@@ -968,15 +959,17 @@ await layer.skew(-15, 0)
 | `angleH` | *number* \| AngleValue | Horizontal angle to skew by |
 | `angleV` | *number* \| AngleValue | Vertical angle to skew by |
 | `options?` | *object* | - |
-| `options.interpolation?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | - |
+| `options.interpolation?` | [*InterpolationMethod*](/ps_reference/modules/constants/#interpolationmethod) | - |
 
 ___
 
 ### translate
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Moves the layer (translation).
+
 ```javascript
 // Translate the layer to the left by 200px
 await layer.translate(-200, 0)
@@ -997,10 +990,12 @@ await layer.translate(xOffsetPct, yOffsetPct);
 ___
 
 ### unlink
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
 Unlinks the layer from any existing links.
+
 ```javascript
 // detach layer from any existing links
 await layer.unlink()

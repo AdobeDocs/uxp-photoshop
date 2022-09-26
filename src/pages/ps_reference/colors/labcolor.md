@@ -22,9 +22,9 @@ Defines a L<sup>\*</sup>a<sup>\*</sup>b<sup>\*</sup> color, used in [SolidColor]
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| a | *number* | Read-write | The a-value.  **&#x60;default&#x60;** 0  **&#x60;range&#x60;** -128..127 |
-| b | *number* | Read-write | The b-value.  **&#x60;default&#x60;** 0  **&#x60;range&#x60;** -128..127 |
-| l | *number* | Read-write | The L-value.  **&#x60;default&#x60;** 100  **&#x60;range&#x60;** 0..100 |
-| typename | *string* | Read-only | - |
+| Name | Type | Access | Default | Range | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ | :------ | :------ |
+| a | *number* | R W | 0 | -128..127 | 23.0 | The a-value. |
+| b | *number* | R W | 0 | -128..127 | 23.0 | The b-value. |
+| l | *number* | R W | 100 | 0..100 | 23.0 | The L-value. |
+| typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;LabColor&quot;*. |

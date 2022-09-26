@@ -24,4 +24,4 @@ keywords:
 
 • **commandName**: *string*
 
-Name of the command, it will be used in the progress bar if the operation takes a noticeable amount of time
+Name of the command. It will be shown in the progress bar if the operation takes a noticeable amount of time.

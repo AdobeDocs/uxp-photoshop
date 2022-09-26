@@ -18,4 +18,7 @@ keywords:
 
 # Create Options
 
-Objects for specifying creation options for [Document.createLayer](/ps_reference/classes/document/#createlayer), [Document.createLayerGroup](/ps_reference/classes/document/#createlayergroup) , and [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument) 
+Objects for specifying creation options for 
+- [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument) 
+- [Document.createLayer](/ps_reference/classes/document/#createlayer)
+- [Document.createLayerGroup](/ps_reference/classes/document/#createlayergroup)

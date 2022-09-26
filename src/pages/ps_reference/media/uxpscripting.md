@@ -6,7 +6,7 @@ sidebar_label: "UXP Scripting"
 
 # UXP Scripting in Photoshop
 
-Running a standalone JavaScript file in UXP is now available in Photoshop.  As discussed in the [general documention of UXP Scripting](../../scripting), Photoshop recognizes the new file extension .psjs for JavaScript files that will be executed by UXP.
+Running a standalone JavaScript file in UXP is now available in Photoshop 23.5.  As discussed in the [general documention of UXP Scripting](../../scripting), Photoshop recognizes the new file extension .psjs for JavaScript files that will be executed by UXP.
 
 
 ## Running a file

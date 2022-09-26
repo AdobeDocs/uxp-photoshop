@@ -16,7 +16,7 @@ keywords:
   - Scripting
 ---
 
-# TextFont
+# Text Font
 
 Describes a font that is available to the application. Access this object in the [Photoshop.fonts](/ps_reference/classes/photoshop/#fonts) collection.
 
@@ -26,48 +26,11 @@ const arialMTFont = require('photoshop').app.fonts.getByName("ArialMT");
 
 ## Properties
 
-### family
-
-• `Readonly` **family**: *string*
-
-The font family.
-
-___
-
-### name
-
-• `Readonly` **name**: *string*
-
-The name of the font.
-
-___
-
-### parent
-
-• `Readonly` **parent**: [*Photoshop*](/ps_reference/classes/photoshop/)
-
-The containing application.
-
-___
-
-### postScriptName
-
-• `Readonly` **postScriptName**: *string*
-
-The PostScript name of the font.
-
-___
-
-### style
-
-• `Readonly` **style**: *string*
-
-The font style.
-
-___
-
-### typename
-
-• `Readonly` **typename**: *string*
-
-The class name of the referenced object
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| family | *string* | R | 23.0 | The font family. |
+| name | *string* | R | 23.0 | The name of the font. |
+| parent | [*Photoshop*](/ps_reference/classes/photoshop/) | R | 23.0 | The containing application. |
+| postScriptName | *string* | R | 23.0 | The PostScript name of the font. |
+| style | *string* | R | 23.0 | The font style. |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;TextFont&quot;*. |

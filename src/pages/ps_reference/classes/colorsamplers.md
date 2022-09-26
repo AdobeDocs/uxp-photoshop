@@ -52,18 +52,19 @@ app.activeDocument.colorSamplers.length; // returns 0
 
 ## Properties
 
-| Name | Type | Access | Description |
-| :------ | :------ | :------ | :------ |
-| length | *number* | Read-only | Number of [ColorSampler](/ps_reference/modules/colorsampler/) elements in this collection &#x60;&#x60;&#x60;javascript // A new document starts with no colorSamplers app.activeDocument.colorSamplers.length; // returns 0 &#x60;&#x60;&#x60; |
-| parent | Document | Read-only | The owner [Document](/ps_reference/modules/document/) of this ColorSamplers collection |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| length | *number* | R | 24.0 | Number of [ColorSampler](/ps_reference/classes/colorsampler/) elements in this collection. &#x60;&#x60;&#x60;javascript // A new document starts with no colorSamplers app.activeDocument.colorSamplers.length; // returns 0 &#x60;&#x60;&#x60; |
+| parent | Document | R | 24.0 | The owner [Document](/ps_reference/classes/document/) of this ColorSamplers collection. |
 
 ## Methods
 
 ### add
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 [*ColorSampler*](/ps_reference/classes/colorsampler/)
 
-Adds a [ColorSampler](/ps_reference/classes/colorsampler/) to the collection at the given `{x, y}` coordinates in pixels
+Adds a [ColorSampler](/ps_reference/classes/colorsampler/) to the collection at the given `{x, y}` coordinates in pixels.
 
 ```javascript
 app.activeDocument.colorSamplers.add({x: 20, y: 20});
@@ -81,10 +82,11 @@ app.activeDocument.colorSamplers.length; // returns 1
 ___
 
 ### removeAll
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
 *void*
 
-Removes all ColorSampler instances from this collection
+Removes all ColorSampler instances from this collection.
 
 ```javascript
 app.activeDocument.colorSamplers.removeAll();
