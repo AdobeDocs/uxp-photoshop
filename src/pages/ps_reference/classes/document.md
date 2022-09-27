@@ -496,7 +496,7 @@ not be suspended in the same history state.
 The callback is passed in a SuspendHistoryContext object,
 which contains the current document in a variable `document`.
 
-For more info and advanced context, see [`core.executeAsModal`](../media/executeAsModal)
+For more info and advanced context, see [`core.executeAsModal`](/ps_reference/media/executeasmodal/)
 API, for which this API is a simple wrapper for.
 
 ```javascript
