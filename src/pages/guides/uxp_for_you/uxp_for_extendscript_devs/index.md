@@ -19,7 +19,7 @@ If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or
 
 ### Different DOM access
 
-UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP API reference](/../../ps_reference/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
+UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP API reference](../../ps_reference/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
 
 As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](../../ps_reference/media/batchplay/).
 

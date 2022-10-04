@@ -17,7 +17,7 @@ description: Learn how to navigate and use the UXP Developer Tool to create and 
 
 So you have Photoshop, you have the UXP Developer Tool, and you have Visual Studio Code or other programmer's text editor. Now what?
 
-First make sure you have the UXP Developer Tool (UDT). You can download installers for the UDT [here](/../devtool/). Once it's downloaded, run the installer just like any other on Mac or Windows. On macOS, it creates a folder in your `Applications` folder named "Adobe UXP Developer Tools." On Windows, the folder is on the boot drive in the `Program Files->Adobe` folder. Then follow these steps:
+First make sure you have the UXP Developer Tool (UDT). Learn about installing UDT from [here](../devtool/installation). Then follow these steps:
 
 
 1. Launch Photoshop.
@@ -104,4 +104,4 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
  ## Packaging
  In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Adobe Developer Console](https://console.adobe.io/home) website before packaging your plugin for distribution.
 
- To distribute your plugin, see [Sharing Your Plugin](/distribution/).
+ To distribute your plugin, see [Sharing Your Plugin](../../distribution/).
