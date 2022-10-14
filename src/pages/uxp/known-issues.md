@@ -24,7 +24,6 @@ The following issues are known. Please check this page with future updates, as k
 * Panel icons must always be 23x23 (46x46) PNG files. SVG icons are not supported on Photoshop toolbars.
 * Plugin icons must always be 24x24 (48x48) files. In the manifest, they must currently be specified with `width: 48` and `height: 48`. Plugin icons do support SVG files, but UXP doesn't support all SVG features, which means you'll want to test your SVG icon before shipping your plugin if you decide to use SVG icons in the Plugin Panel.
 * When using `require("uxp").entrypoints.setup()` in a delayed fashion (that is, not immediately at plugin start), you may encounter an uncatchable error. This appears to be related to how quickly the `setup` function is called in relation to drawing the first few frames on the display. If this delay is short (less than ~20ms), the call will likely succeed. If it is long, an error is likely to occur. A delay in calling this function should not cause any errors to be thrown, and will be fixed in a future release. (PS-57605)
-* When creating a flyout separator, you must specify an `id` of `-`. This will be fixed in the next UXP release. (PS-56279)
 * When attempting to use the UXP clipboard APIs in panel-less plugins, errors will be thrown. This will be fixed in a future release. (UXP-15542)
 
 ## User Interface
