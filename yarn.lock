@@ -14002,7 +14002,7 @@ uuid@^9.0.0:
 
 "uxp-documentation@github:adobedocs/uxp":
   version "0.0.17"
-  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/8c02a3bafd66077edcef4a6d1551ce2bdbbd83d1"
+  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/298e0ff38071de30282a4671828407bd06a24ae8"
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
