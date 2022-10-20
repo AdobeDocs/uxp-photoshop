@@ -9,8 +9,8 @@ yarn-error.log
 **/.DS_Store
 
 # uxp api reference
-reference-css.js
-reference-js.js
-reference-html.js
-reference-spectrum.js
-src/pages/uxp/*
+# reference-css.js
+# reference-js.js
+# reference-html.js
+# reference-spectrum.js
+# src/pages/uxp/*
