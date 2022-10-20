@@ -27,6 +27,6 @@ Don't be discouraged. One popular starting point is the [Mozilla Developers Netw
 
 The same applies to learning HTML and CSS (Cascading Style Sheets), although both of those are arguably easier than JavaScript. Don't go too far learning any of these, as the HTML, CSS, and JavaScript you need to know to use UXP is much simpler than what's required for a typical website.
 
-An apocryphal quote from Picasso is "good artists borrow, great artists steal" -- which means that, when you get to the point where you're ready to try coding, looking at sample code and putting it in your own projects is usually just fine. Then go through the code at your leisure and make sure you understand what it's doing. And to start you off with some sample code, [look here](../../../code_samples/).
+An apocryphal quote from Picasso is "good artists borrow, great artists steal" -- which means that, when you get to the point where you're ready to try coding, looking at sample code and putting it in your own projects is usually just fine. Then go through the code at your leisure and make sure you understand what it's doing. And to start you off with some sample code, [look here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples).
 
 Finally, _ask questions_. There are many helpful people on the [Adobe forums](https://forums.creativeclouddeveloper.com), and chances are you'll find answers there.
