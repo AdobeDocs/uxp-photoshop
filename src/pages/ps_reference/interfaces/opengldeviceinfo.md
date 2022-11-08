@@ -22,40 +22,40 @@ keywords:
 
 ### driverVersion
 
-• **driverVersion**: *string*
+• **driverVersion**: `string`
 
 ___
 
 ### glDriver
 
-• **glDriver**: *string*
+• **glDriver**: `string`
 
 ___
 
 ### isIntegrated
 
-• **isIntegrated**: *string*
+• **isIntegrated**: `string`
 
 ___
 
 ### memoryMB
 
-• **memoryMB**: *number*
+• **memoryMB**: `number`
 
 ___
 
 ### name
 
-• **name**: *string*
+• **name**: `string`
 
 ___
 
 ### vendor
 
-• **vendor**: *string*
+• **vendor**: `string`
 
 ___
 
 ### version
 
-• **version**: *string*
+• **version**: `string`

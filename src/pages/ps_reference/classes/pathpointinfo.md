@@ -66,8 +66,8 @@ make it convex; or use the right direction point to bend the curve "inward" or m
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| anchor | *number*[] | R W | 23.3 | The X and Y coordinates of the anchor point of the curve. |
-| kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | R W | 23.3 | The role (corner or smooth) this point plays in the containing path segment. |
-| leftDirection | *number*[] | R W | 23.3 | The location of the left-direction endpoint(&#x27;in&#x27; position). |
-| rightDirection | *number*[] | R W | 23.3 | The location of the right-direction endpoint(&#x27;out&#x27; position). |
+| anchor | *number*[] | R W | acc??? | - |
+| kind | [*PointKind*](/ps_reference/modules/constants/#pointkind) | R W | acc??? | - |
+| leftDirection | *number*[] | R W | acc??? | - |
+| rightDirection | *number*[] | R W | acc??? | - |
 | typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathPointInfo&quot;*. |

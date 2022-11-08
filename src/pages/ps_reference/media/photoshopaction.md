@@ -31,7 +31,7 @@ var PhotoshopAction = require('photoshop').action;
 ### addNotificationListener
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Attach a listener to a Photoshop event. A callback in the form
 of `(eventName: string, descriptor: Descriptor) => void` will be performed.
@@ -43,15 +43,15 @@ await PhotoshopAction.addNotificationListener(['open'], onOpenNewDocument)
 
 | Name | Type |
 | :------ | :------ |
-| `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `events` | `string`[] |
+| `notifier` | `NotificationListener` |
 
 ___
 
 ### batchPlay
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
+`Promise`<[`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)[]\>
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -65,15 +65,15 @@ await PhotoshopAction.batchPlay(commands)
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
+| `commands` | [`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)[] |
+| `options?` | [`BatchPlayCommandOptions`](/ps_reference/interfaces/batchplaycommandoptions/) |
 
 ___
 
 ### batchPlaySync
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
-[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]
+[`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)[]
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -87,15 +87,15 @@ await PhotoshopAction.batchPlay(commands)
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
+| `commands` | [`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)[] |
+| `options?` | [`BatchPlayCommandOptions`](/ps_reference/interfaces/batchplaycommandoptions/) |
 
 ___
 
 ### removeNotificationListener
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Detaches a listener from a Photoshop event.
 See [addNotificationListener](#addNotificationListener)
@@ -107,15 +107,15 @@ await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 
 | Name | Type |
 | :------ | :------ |
-| `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `events` | `string`[] |
+| `notifier` | `NotificationListener` |
 
 ___
 
 ### validateReference
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
-*boolean*
+`boolean`
 
 Synchronously validates the given action reference, returning true if it still
 exists. For example, calling this with a closed document would return false.
@@ -124,4 +124,4 @@ exists. For example, calling this with a closed document would return false.
 
 | Name | Type |
 | :------ | :------ |
-| `ref` | ActionReference \| ActionReference[] |
+| `ref` | `ActionReference` \| `ActionReference`[] |

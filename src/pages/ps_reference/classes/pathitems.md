@@ -25,12 +25,9 @@ see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_
 
 ## Indexable
 
-▪ [index: *number*]: [*PathItem*](/ps_reference/classes/pathitem/)
+▪ [index: `number`]: [`PathItem`](/ps_reference/classes/pathitem/)
 
 Used to access the paths in the collection.
-
-Access through the [Document.pathItems](/ps_reference/classes/document/#pathitems) collection property. To create new paths,
-see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_reference/classes/subpathinfo/) classes and pass them to [PathItems.add](/ps_reference/classes/pathitems/#add)() method.
 
 ## Properties
 
@@ -44,7 +41,7 @@ see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-[*PathItem*](/ps_reference/classes/pathitem/)
+[`PathItem`](/ps_reference/classes/pathitem/)
 
 Creates a new path item object and adds it to this collection.
 
@@ -56,15 +53,15 @@ and those [SubPathItem](/ps_reference/classes/subpathitem/) objects are added to
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
-| `entirePath` | [*SubPathInfo*](/ps_reference/classes/subpathinfo/)[] |
+| `name` | `string` |
+| `entirePath` | [`SubPathInfo`](/ps_reference/classes/subpathinfo/)[] |
 
 ___
 
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-[*PathItem*](/ps_reference/classes/pathitem/)
+[`PathItem`](/ps_reference/classes/pathitem/)
 
 Retrieve the first PathItem matching the given name.
 
@@ -72,13 +69,13 @@ Retrieve the first PathItem matching the given name.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `name` | *string* | Name to find |
+| `name` | `string` | Name to find |
 
 ___
 
 ### removeAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*void*
+`void`
 
 Removes all paths from this collection.

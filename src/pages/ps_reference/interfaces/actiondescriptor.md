@@ -20,10 +20,10 @@ keywords:
 
 ## Indexable
 
-▪ [prop: *string*]: *any*
+▪ [prop: `string`]: `any`
 
 ## Properties
 
 ### \_obj
 
-• **\_obj**: *string*
+• **\_obj**: `string`

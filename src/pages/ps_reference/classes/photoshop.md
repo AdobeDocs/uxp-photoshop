@@ -34,10 +34,10 @@ From here you can access open documents, tools, UI elements and run commands or 
 | activeDocument | [*Document*](/ps_reference/classes/document/) | R W | 23.0 | The current document that has the application&#x27;s focus. |
 | backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R | 23.0 | The background color and color style for documents. |
 | currentTool | [*Tool*](/ps_reference/objects/tool/) | R | 23.0 | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes. |
-| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | R W | 23.0 | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
+| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | R W | acc??? | - |
 | documents | [*Documents*](/ps_reference/classes/documents/) | R | 23.0 | A list of the documents currently open. |
 | fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | R | 23.0 | The fonts installed on this system. |
-| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). |
+| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | acc??? | - |
 | preferences | [*Preferences*](/ps_reference/classes/preferences/) | R | 24.0 | Contains Photoshop preferences grouped into several categories similar to the Preferences dialog. |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Photoshop&quot;*. |
 
@@ -46,7 +46,7 @@ From here you can access open documents, tools, UI elements and run commands or 
 ### batchPlay
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
+`Promise`<[`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)[]\>
 
 At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
 ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially
@@ -56,15 +56,15 @@ without updating the UI. This API is subject to change and may be accessible in 
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | *any* |
-| `options` | *any* |
+| `commands` | `any` |
+| `options` | `any` |
 
 ___
 
 ### bringToFront
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*void*
+`void`
 
 Brings application to focus, useful when your script ends, or requires an input.
 
@@ -73,7 +73,7 @@ ___
 ### convertUnits
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.4</span>
 
-*number*
+`number`
 
 Convert the given value from one unit to another. Available units are:
 Constants.Units.{CM, MM, INCHES, PIXELS, POINTS, PICAS}.
@@ -94,17 +94,17 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `fromValue` | *number* | The value that is to be converted. |
-| `fromUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the fromValue is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
-| `toUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the return value is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
-| `resolution?` | *number* | The pixels per inch value to use when converting to and from pixel values. |
+| `fromValue` | `number` | The value that is to be converted. |
+| `fromUnits` | [`Units`](/ps_reference/modules/constants/#units) | The unit that the fromValue is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
+| `toUnits` | [`Units`](/ps_reference/modules/constants/#units) | The unit that the return value is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
+| `resolution?` | `number` | The pixels per inch value to use when converting to and from pixel values. |
 
 ___
 
 ### createDocument
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : `Promise`<[`Document`](/ps_reference/classes/document/)\>
 
 Create a new document.
 
@@ -136,14 +136,14 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
+| `options?` | [`DocumentCreateOptions`](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 
 ### open
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : `Promise`<[`Document`](/ps_reference/classes/document/)\>
 
 Opens the specified document and returns the model
 
@@ -164,14 +164,14 @@ const document = await app.open();
 
 | Name | Type |
 | :------ | :------ |
-| `entry?` | File |
+| `entry?` | `File` |
 
 ___
 
 ### showAlert
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Shows an alert in Photoshop with the given message.
 
@@ -179,4 +179,4 @@ Shows an alert in Photoshop with the given message.
 
 | Name | Type |
 | :------ | :------ |
-| `message` | *string* |
+| `message` | `string` |

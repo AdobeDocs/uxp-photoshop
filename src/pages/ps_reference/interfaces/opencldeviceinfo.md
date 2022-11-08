@@ -22,58 +22,58 @@ keywords:
 
 ### clDeviceVersion
 
-• **clDeviceVersion**: *string*
+• **clDeviceVersion**: `string`
 
 ___
 
 ### clPlatformVersion
 
-• **clPlatformVersion**: *string*
+• **clPlatformVersion**: `string`
 
 ___
 
 ### driverVersion
 
-• **driverVersion**: *string*
+• **driverVersion**: `string`
 
 ___
 
 ### isIntegrated
 
-• **isIntegrated**: *string*
+• **isIntegrated**: `string`
 
 ___
 
 ### memoryMB
 
-• **memoryMB**: *number*
+• **memoryMB**: `number`
 
 ___
 
 ### name
 
-• **name**: *string*
+• **name**: `string`
 
 ___
 
 ### oclBandwidth
 
-• **oclBandwidth**: *number*
+• **oclBandwidth**: `number`
 
 ___
 
 ### oclCompute
 
-• **oclCompute**: *number*
+• **oclCompute**: `number`
 
 ___
 
 ### vendor
 
-• **vendor**: *string*
+• **vendor**: `string`
 
 ___
 
 ### version
 
-• **version**: *string*
+• **version**: `string`

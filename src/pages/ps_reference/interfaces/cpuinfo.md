@@ -28,22 +28,22 @@ ___
 
 ### frequencyMhz
 
-• **frequencyMhz**: *number*
+• **frequencyMhz**: `number`
 
 ___
 
 ### logicalCores
 
-• **logicalCores**: *number*
+• **logicalCores**: `number`
 
 ___
 
 ### physicalCores
 
-• **physicalCores**: *number*
+• **physicalCores**: `number`
 
 ___
 
 ### vendor
 
-• **vendor**: [*CPUVendorKind*](/ps_reference/modules/coremodules/#cpuvendorkind)
+• **vendor**: [`CPUVendorKind`](/ps_reference/modules/coremodules/#cpuvendorkind)

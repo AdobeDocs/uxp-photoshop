@@ -8,9 +8,13 @@ sidebar_label: "CSDK <-> UXP Messaging"
 
 For developers with the intent to utilize the C++ based plugin SDK in conjunction with a UXP based plugin, the C++ SDK now includes a method to communicate with its UXP counterpart. On C++ side, we use the component's plugin name property in the plugin resource to identify plugins, and on UXP side, we use the `id` field from the `manifest.json` file.
 
+## Obtain the Photoshop C++ SDK
+
+Start by obtaining a copy of the Photoshop SDK from [Adobe Developer](https://developer.adobe.com/photoshop/). You can find detailed instructions under the `C++ SDK` heading.
+
 ## PIUXPSuite
 
-The PIUXPSuite communicates with UXP plugins using PIActionDescriptors. Use the ActionDescriptor suite as defined in the SDK's `PIAction.h` whenever using this suite. To start with, grab [PIUXPSuite.h](./PIUXPSuite.h) and add it to your plugin project.
+The PIUXPSuite communicates with UXP plugins using PIActionDescriptors. Use the ActionDescriptor suite as defined in the SDK's `PIAction.h` whenever using this suite. To start, add `PIUXPSuite.h` from the Photoshop C++ SDK to your plugin project.
 
 The signatures in `PIUXPSuite.h` are as follows:
 

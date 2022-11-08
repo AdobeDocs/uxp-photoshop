@@ -22,10 +22,10 @@ Defines a CMYK color, used in [SolidColor](/ps_reference/classes/solidcolor/) ob
 
 ## Properties
 
-| Name | Type | Access | Default | Range | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ | :------ | :------ |
-| black | *number* | R W | 0 | 0.0..100.0 | 23.0 | The black color value, as percentage. |
-| cyan | *number* | R W | 0 | 0.0..100.0 | 23.0 | The cyan color value, as percentage. |
-| magenta | *number* | R W | 0 | 0.0..100.0 | 23.0 | The magenta color value, as percentage. |
-| typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;CMYKColor&quot;*. |
-| yellow | *number* | R W | 0 | 0.0..100.0 | 23.0 | The yellow color value, as percentage. |
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| black | *number* | R W | acc??? | - |
+| cyan | *number* | R W | acc??? | - |
+| magenta | *number* | R W | acc??? | - |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;CMYKColor&quot;*. |
+| yellow | *number* | R W | acc??? | - |

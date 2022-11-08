@@ -22,6 +22,6 @@ keywords:
 
 ### commandName
 
-• **commandName**: *string*
+• **commandName**: `string`
 
 Name of the command. It will be shown in the progress bar if the operation takes a noticeable amount of time.

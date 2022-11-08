@@ -38,8 +38,8 @@ path represented by all of the subpaths.
 | :------ | :------ | :------ | :------ | :------ |
 | docId | *number* | R | 23.3 | The ID of the document of this pathItem. |
 | id | *number* | R | 23.3 | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
-| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | 23.3 | The specific kind of path. |
-| name | *string* | R W | 23.3 | Name of this path |
+| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | acc??? | - |
+| name | *string* | R W | acc??? | - |
 | parent | [*Document*](/ps_reference/classes/document/) | R | 23.3 | The document in which the path resides. |
 | subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | R | 23.3 | The contained [SubPathItem](/ps_reference/classes/subpathitem/)s in this path. |
 | typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathItem&quot;*. |
@@ -49,7 +49,7 @@ path represented by all of the subpaths.
 ### deselect
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Deselects this `pathItem` object.
 
@@ -58,7 +58,7 @@ ___
 ### duplicate
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
+`Promise`<[`PathItem`](/ps_reference/classes/pathitem/)\>
 
 Duplicates the `pathItem` object with the new name, returning the duplicate.
 
@@ -66,14 +66,14 @@ Duplicates the `pathItem` object with the new name, returning the duplicate.
 
 | Name | Type |
 | :------ | :------ |
-| `name?` | *string* |
+| `name?` | `string` |
 
 ___
 
 ### fillPath
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Fills the area enclosed by this path.
 
@@ -87,20 +87,20 @@ If `wholePath` is true, all subpaths are used when doing the fill.
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `fillColor?` | [*SolidColor*](/ps_reference/classes/solidcolor/) | - |
-| `mode?` | [*ColorBlendMode*](/ps_reference/modules/constants/#colorblendmode) | - |
-| `opacity` | *number* | 100.0 |
-| `preserveTransparency` | *boolean* | false |
-| `feather` | *number* | 0.0 |
-| `wholePath` | *boolean* | true |
-| `antiAlias` | *boolean* | true |
+| `fillColor?` | [`SolidColor`](/ps_reference/classes/solidcolor/) | `undefined` |
+| `mode?` | [`ColorBlendMode`](/ps_reference/modules/constants/#colorblendmode) | `undefined` |
+| `opacity` | `number` | `100.0` |
+| `preserveTransparency` | `boolean` | `false` |
+| `feather` | `number` | `0.0` |
+| `wholePath` | `boolean` | `true` |
+| `antiAlias` | `boolean` | `true` |
 
 ___
 
 ### makeClippingPath
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Makes this the clipping path for this document.
 
@@ -110,14 +110,14 @@ Makes this the clipping path for this document.
 
 | Name | Type |
 | :------ | :------ |
-| `flatness?` | *number* |
+| `flatness?` | `number` |
 
 ___
 
 ### makeSelection
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Makes a selection object whose border is this path.
 
@@ -129,16 +129,16 @@ Makes a selection object whose border is this path.
 
 | Name | Type |
 | :------ | :------ |
-| `feather?` | *number* |
-| `antiAlias?` | *boolean* |
-| `operation?` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) |
+| `feather?` | `number` |
+| `antiAlias?` | `boolean` |
+| `operation?` | [`SelectionType`](/ps_reference/modules/constants/#selectiontype) |
 
 ___
 
 ### remove
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Deletes this object.
 
@@ -147,7 +147,7 @@ ___
 ### select
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Makes this the active or selected `PathItem` object.
 
@@ -156,7 +156,7 @@ ___
 ### strokePath
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Strokes the path with the specified tool
 
@@ -172,9 +172,9 @@ is optional, and by default will use the active layer in the document.
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `tool` | [*ToolType*](/ps_reference/modules/constants/#tooltype) | - |
-| `simulatePressure` | *boolean* | false |
-| `sourceOrigin?` | *object* | - |
-| `sourceOrigin.x` | *number* | - |
-| `sourceOrigin.y` | *number* | - |
-| `sourceLayer?` | [*Layer*](/ps_reference/classes/layer/) | - |
+| `tool` | [`ToolType`](/ps_reference/modules/constants/#tooltype) | `undefined` |
+| `simulatePressure` | `boolean` | `false` |
+| `sourceOrigin?` | `Object` | `undefined` |
+| `sourceOrigin.x` | `number` | `undefined` |
+| `sourceOrigin.y` | `number` | `undefined` |
+| `sourceLayer?` | [`Layer`](/ps_reference/classes/layer/) | `undefined` |

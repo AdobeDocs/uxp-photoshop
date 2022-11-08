@@ -28,14 +28,9 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 
 ## Indexable
 
-▪ [index: *number*]: [*Channel*](/ps_reference/classes/channel/)
+▪ [index: `number`]: [`Channel`](/ps_reference/classes/channel/)
 
 Used to access the channels in the collection
-
-```javascript
-// Iterate through all channels in the document
-app.activeDocument.channels.forEach(h => console.log(h.name));
-```
 
 ## Properties
 
@@ -50,7 +45,7 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-[*Channel*](/ps_reference/classes/channel/)
+[`Channel`](/ps_reference/classes/channel/)
 
 Create a new alpha channel in this document.
 
@@ -59,7 +54,7 @@ ___
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-[*Channel*](/ps_reference/classes/channel/)
+[`Channel`](/ps_reference/classes/channel/)
 
 Find the first channel with the matching name.
 
@@ -67,13 +62,13 @@ Find the first channel with the matching name.
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |
 
 ___
 
 ### removeAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*void*
+`void`
 
 Remove all Alpha channels in the parent document.

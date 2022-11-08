@@ -62,7 +62,7 @@ app.activeDocument.colorSamplers.length; // returns 0
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-[*ColorSampler*](/ps_reference/classes/colorsampler/)
+[`ColorSampler`](/ps_reference/classes/colorsampler/)
 
 Adds a [ColorSampler](/ps_reference/classes/colorsampler/) to the collection at the given `{x, y}` coordinates in pixels.
 
@@ -75,16 +75,16 @@ app.activeDocument.colorSamplers.length; // returns 1
 
 | Name | Type |
 | :------ | :------ |
-| `position` | *object* |
-| `position.x` | *number* |
-| `position.y` | *number* |
+| `position` | `Object` |
+| `position.x` | `number` |
+| `position.y` | `number` |
 
 ___
 
 ### removeAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-*void*
+`void`
 
 Removes all ColorSampler instances from this collection.
 

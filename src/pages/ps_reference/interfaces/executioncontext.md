@@ -24,22 +24,22 @@ This object is passed to the callback of `core.executeAsModal` for modality rela
 
 ### hostControl
 
-• **hostControl**: *object*
+• **hostControl**: `Object`
 
 Use the methods in here to control Photoshop state.
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `resumeHistory` | (`suspensionID`: *number*) => *void* | Call to resume history on a target document. |
-| `suspendHistory` | (`info`: { `historyStateInfo`: [*HistoryStateInfo*](/ps_reference/interfaces/historystateinfo/)  }) => *Promise*<number\> | Call to suspend history on a target document, returns the suspension ID which can be used for resumeHistory. |
+| Name | Type |
+| :------ | :------ |
+| `resumeHistory` | (`suspensionID`: `number`) => `void` |
+| `suspendHistory` | (`info`: { `historyStateInfo`: [`HistoryStateInfo`](/ps_reference/interfaces/historystateinfo/)  }) => `Promise`<`number`\> |
 
 ___
 
 ### isCancelled
 
-• **isCancelled**: *boolean*
+• **isCancelled**: `boolean`
 
 True if user has cancelled the modal interaction.
 
@@ -49,7 +49,7 @@ ___
 
 ### onCancel
 
-• **onCancel**: *void*
+• **onCancel**: `void`
 
 If assigned a method, it will be called when user cancels the modal interaction.
 
@@ -57,6 +57,6 @@ ___
 
 ### reportProgress
 
-• **reportProgress**: *void*
+• **reportProgress**: `void`
 
 Call this to customize the progress bar.

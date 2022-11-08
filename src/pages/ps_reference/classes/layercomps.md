@@ -29,16 +29,9 @@ const comp = await app.activeDocument.layerComps.add();
 
 ## Indexable
 
-▪ [index: *number*]: [*LayerComp*](/ps_reference/classes/layercomp/)
+▪ [index: `number`]: [`LayerComp`](/ps_reference/classes/layercomp/)
 
 Used to access the layer comp in the collection
-
-Access this collection through [Document.layerComps](/ps_reference/classes/document/#layercomps) property. For example,
-following adds a new layer comp to the collection:
-
-```javascript
-const comp = await app.activeDocument.layerComps.add();
-```
 
 ## Properties
 
@@ -53,7 +46,7 @@ const comp = await app.activeDocument.layerComps.add();
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-*Promise*<[*LayerComp*](/ps_reference/classes/layercomp/)\>
+`Promise`<[`LayerComp`](/ps_reference/classes/layercomp/)\>
 
 Adds a layer comp for the collection
 
@@ -61,16 +54,16 @@ Note: This command will fail if document has only background layer and no other 
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `options` | LayerCompAddArgument | {} |
+| Name | Type |
+| :------ | :------ |
+| `options` | `LayerCompAddArgument` |
 
 ___
 
 ### getAllByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-[*LayerComp*](/ps_reference/classes/layercomp/)[]
+[`LayerComp`](/ps_reference/classes/layercomp/)[]
 
 Get all layer comps by name
 
@@ -78,13 +71,13 @@ Get all layer comps by name
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |
 
 ___
 
 ### removeAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Clears all layer comps from this collection

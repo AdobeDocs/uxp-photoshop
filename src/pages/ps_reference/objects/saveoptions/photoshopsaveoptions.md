@@ -22,10 +22,10 @@ keywords:
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| alphaChannels | *boolean* | R W | 22.5 | True to save the alpha channels. |
-| annotations | *boolean* | R W | 22.5 | True to save the annotations. |
-| embedColorProfile | *boolean* | R W | 22.5 | True to embed the color profiles in the document. |
-| layers | *boolean* | R W | 22.5 | True to preserve the layers. |
-| maximizeCompatibility | *boolean* | R W | 22.5 | Maximize Compatibility with older versions |
-| spotColor | *boolean* | R W | 22.5 | True to save the spot colors. |
+| alphaChannels | *boolean* | R W | acc??? | - |
+| annotations | *boolean* | R W | acc??? | - |
+| embedColorProfile | *boolean* | R W | acc??? | - |
+| layers | *boolean* | R W | acc??? | - |
+| maximizeCompatibility | *boolean* | R W | acc??? | - |
+| spotColor | *boolean* | R W | acc??? | - |
 | typename | *string* | R | 22.5 | The class name of the referenced object: *&quot;PhotoshopSaveOptions&quot;*. |

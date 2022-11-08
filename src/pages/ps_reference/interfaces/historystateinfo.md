@@ -24,7 +24,7 @@ Options for the history state that [Document.suspendHistory](/ps_reference/class
 
 ### name
 
-• **name**: *string*
+• **name**: `string`
 
 Name of the history state to be shown in History panel
 
@@ -32,6 +32,6 @@ ___
 
 ### target
 
-• **target**: [{ `_id`: *number* ; `_ref`: ``"document"``  }]
+• **target**: [{ `_id`: `number` ; `_ref`: ``"document"``  }]
 
 A single document reference in an array with `_id` of the document whose history will be suspended.

@@ -23,7 +23,7 @@ The collection of fonts available on your computer. Fonts are represented by
 
 ## Indexable
 
-▪ [index: *number*]: [*TextFont*](/ps_reference/classes/textfont/)
+▪ [index: `number`]: [`TextFont`](/ps_reference/classes/textfont/)
 
 Used to access the text fonts in the collection.
 
@@ -40,7 +40,7 @@ Used to access the text fonts in the collection.
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-[*TextFont*](/ps_reference/classes/textfont/)
+[`TextFont`](/ps_reference/classes/textfont/)
 
 Find the first font with the given PostScript name.
 
@@ -48,4 +48,4 @@ Find the first font with the given PostScript name.
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |

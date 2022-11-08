@@ -24,10 +24,10 @@ Defines a rectangle. This is a WIP.
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| bottom | *number* | R W | 22.5 | Coordinate of the bottom edge. |
+| bottom | *number* | R W | acc??? | - |
 | height | *number* | R | 22.5 | Calculated height. |
-| left | *number* | R W | 22.5 | Coordinate of the left edge. |
-| right | *number* | R W | 22.5 | Coordinate of the right edge. |
-| top | *number* | R W | 22.5 | Coordinate of the top edge. |
+| left | *number* | R W | acc??? | - |
+| right | *number* | R W | acc??? | - |
+| top | *number* | R W | acc??? | - |
 | typename | *string* | R | 22.5 | The class name of the referenced object: *&quot;Bounds&quot;*. |
 | width | *number* | R | 22.5 | Calculated width. |

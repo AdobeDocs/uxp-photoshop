@@ -34,14 +34,14 @@ ___
 
 ### historyStateInfo
 
-• `Optional` **historyStateInfo**: *object*
+• `Optional` **historyStateInfo**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
-| `target` | *object* |
+| `name` | `string` |
+| `target` | `object` |
 
 ___
 
@@ -53,22 +53,22 @@ ___
 
 ### propagateErrorToDefaultHandler
 
-• `Optional` **propagateErrorToDefaultHandler**: *boolean*
+• `Optional` **propagateErrorToDefaultHandler**: `boolean`
 
 ___
 
 ### suppressPlayLevelIncrease
 
-• `Optional` **suppressPlayLevelIncrease**: *boolean*
+• `Optional` **suppressPlayLevelIncrease**: `boolean`
 
 ___
 
 ### synchronousExecution
 
-• `Optional` **synchronousExecution**: *boolean*
+• `Optional` **synchronousExecution**: `boolean`
 
 ___
 
 ### useMultiGet
 
-• `Optional` **useMultiGet**: *boolean*
+• `Optional` **useMultiGet**: `boolean`

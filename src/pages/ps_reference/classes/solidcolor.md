@@ -52,19 +52,19 @@ c.rgb.green = 128; // Model will change back to ColorModel.RGB
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | R W | 23.0 | The color&#x27;s representation in CMYK color space. |
-| gray | [*GrayColor*](/ps_reference/colors/graycolor/) | R W | 23.0 | The color&#x27;s representation in grayscale. |
-| hsb | [*HSBColor*](/ps_reference/colors/hsbcolor/) | R W | 23.0 | The color&#x27;s representation in HSB color space. |
-| lab | [*LabColor*](/ps_reference/colors/labcolor/) | R W | 23.0 | The color&#x27;s representation in LAB color space. |
+| cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | R W | acc??? | - |
+| gray | [*GrayColor*](/ps_reference/colors/graycolor/) | R W | acc??? | - |
+| hsb | [*HSBColor*](/ps_reference/colors/hsbcolor/) | R W | acc??? | - |
+| lab | [*LabColor*](/ps_reference/colors/labcolor/) | R W | acc??? | - |
 | nearestWebColor | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R | 23.0 | The color&#x27;s nearest match within the 216 web-safe colors. |
-| rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R W | 23.0 | The color&#x27;s representation in RGB color space. |
+| rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R W | acc??? | - |
 
 ## Methods
 
 ### isEqual
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*boolean*
+`boolean`
 
 True if the SolidColor object is visually equivalent to the specified color.
 
@@ -80,4 +80,4 @@ a color that is converted from RGB to CMYK and back may not be visually equal.
 
 | Name | Type |
 | :------ | :------ |
-| `color` | [*SolidColor*](/ps_reference/classes/solidcolor/) |
+| `color` | [`SolidColor`](/ps_reference/classes/solidcolor/) |

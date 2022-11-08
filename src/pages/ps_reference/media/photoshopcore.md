@@ -39,7 +39,7 @@ var PhotoshopCore = require('photoshop').core;
 ### addNotificationListener
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Attach a listener to a Photoshop core event. A callback in the form
 of `(eventName: string, descriptor: Descriptor) => void` will be performed.
@@ -58,16 +58,16 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 
 | Name | Type |
 | :------ | :------ |
-| `group` | *string* |
-| `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `group` | `string` |
+| `events` | `string`[] |
+| `notifier` | `NotificationListener` |
 
 ___
 
 ### calculateDialogSize
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<{ `height`: *number* ; `width`: *number*  }\>
+`Promise`<`Object`\>
 
 Returns the effective size of a dialog.
 ```javascript
@@ -79,20 +79,20 @@ var idealSize = { width: 200, height: 500 }
 
 | Name | Type |
 | :------ | :------ |
-| `preferredSize` | *object* |
-| `preferredSize.height` | *number* |
-| `preferredSize.width` | *number* |
-| `identifier?` | *string* |
-| `minimumSize?` | *object* |
-| `minimumSize.height` | *number* |
-| `minimumSize.width` | *number* |
+| `preferredSize` | `Object` |
+| `preferredSize.height` | `number` |
+| `preferredSize.width` | `number` |
+| `identifier?` | `string` |
+| `minimumSize?` | `Object` |
+| `minimumSize.height` | `number` |
+| `minimumSize.width` | `number` |
 
 ___
 
 ### convertColor
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-ColorDescriptor
+`ColorDescriptor`
 
 Converts the given color (in descriptor form) to the
 given color space, returning the color descriptor.
@@ -109,15 +109,15 @@ based on embedded color profiles.
 
 | Name | Type |
 | :------ | :------ |
-| `sourceColor` | ColorDescriptor |
-| `targetModel` | ColorConversionModel |
+| `sourceColor` | `ColorDescriptor` |
+| `targetModel` | `ColorConversionModel` |
 
 ___
 
 ### endModalToolState
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 End the current modal tool editing state.
 ```javascript
@@ -129,14 +129,14 @@ await PhotoshopCore.endModalToolState(false)
 
 | Name | Type |
 | :------ | :------ |
-| `commit` | *boolean* |
+| `commit` | `boolean` |
 
 ___
 
 ### executeAsModal
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 ExecuteAsModal is needed when a plugin wants to make modifications to the Photoshop state.
 This includes scenarios where the plugin wants to create or modify documents,
@@ -150,15 +150,15 @@ See [Modal Execution](../executeasmodal) for details
 
 | Name | Type |
 | :------ | :------ |
-| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/interfaces/executioncontext/)) => *Promise*<any\> |
-| `options` | [*ExecuteAsModalOptions*](/ps_reference/interfaces/executeasmodaloptions/) |
+| `targetFunction` | (`executionContext`: [`ExecutionContext`](/ps_reference/interfaces/executioncontext/)) => `Promise`<`any`\> |
+| `options` | [`ExecuteAsModalOptions`](/ps_reference/interfaces/executeasmodaloptions/) |
 
 ___
 
 ### getActiveTool
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
+`Promise`<`Object`\>
 
 Returns information about the active Photoshop tool.
 ```javascript
@@ -170,7 +170,7 @@ ___
 ### getCPUInfo
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
-[*CPUInfo*](/ps_reference/interfaces/cpuinfo/)
+[`CPUInfo`](/ps_reference/interfaces/cpuinfo/)
 
 Returns information about the host CPU.
 ```javascript
@@ -184,7 +184,7 @@ ___
 ### getGPUInfo
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
-[*GPUInfo*](/ps_reference/interfaces/gpuinfo/)
+[`GPUInfo`](/ps_reference/interfaces/gpuinfo/)
 
 Returns OpenGL and OpenCL information about the available graphics processor.
 ```javascript
@@ -200,7 +200,7 @@ ___
 ### getMenuCommandState
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<boolean\>
+`Promise`<`boolean`\>
 
 Returns whether a command menu item is available for invoking.
 ```javascript
@@ -212,16 +212,16 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 
 | Name | Type |
 | :------ | :------ |
-| `options` | *object* |
-| `options.commandID` | *number* |
-| `options.scheduling?` | Scheduling |
+| `options` | `Object` |
+| `options.commandID` | `number` |
+| `options.scheduling?` | `Scheduling` |
 
 ___
 
 ### getMenuCommandTitle
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<string\>
+`Promise`<`string`\>
 
 Returns the localized menu title of the menu command item.
 ```javascript
@@ -232,17 +232,17 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 
 | Name | Type |
 | :------ | :------ |
-| `options` | *object* |
-| `options.commandID?` | *number* |
-| `options.menuID?` | *number* |
-| `options.scheduling?` | Scheduling |
+| `options` | `Object` |
+| `options.commandID?` | `number` |
+| `options.menuID?` | `number` |
+| `options.scheduling?` | `Scheduling` |
 
 ___
 
 ### getPluginInfo
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
+`Promise`<[`ActionDescriptor`](/ps_reference/interfaces/actiondescriptor/)\>
 
 Return information about the execution of the plugin.
 This method is intended for developing plugins.
@@ -270,7 +270,7 @@ ___
 ### isModal
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
 
-*boolean*
+`boolean`
 
 Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal)
 
@@ -279,7 +279,7 @@ ___
 ### performMenuCommand
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<boolean\>
+`Promise`<`boolean`\>
 
 Invokes the menu command via its `commandID`. Returns false
 on failure, or if the command is not available.
@@ -292,16 +292,47 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 
 | Name | Type |
 | :------ | :------ |
-| `options` | *object* |
-| `options.commandID` | *number* |
-| `options.scheduling?` | Scheduling |
+| `options` | `Object` |
+| `options.commandID` | `number` |
+| `options.scheduling?` | `Scheduling` |
+
+___
+
+### redrawDocument
+<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">sig???</span>
+
+`Promise`<`number`\>
+
+Request that Photoshop redraws (updates) a document immediately.
+This method can be used to ensure that the document is updated
+immediately while a user is interacting with a UI element (such as a slider).
+This can provide a more responsive interaction.
+Updating a document can be time consuming, and will often happen at a lower frequency
+than UI events are received.
+Plugins may therefore want to implement a throttle between UI events and calls to
+redrawDocument.
+A throttle could be implemented by using a timer, or by avoiding to call redrawDocument
+for a small amount of time after a previous request completes.
+redrawDocument returns the time that it took Photoshop to update the target document
+in seconds. This number can be used to refine the throttle.
+redrawDocument is only available to a plugin that is using apiVersion 2 or higher.
+```javascript
+await PhotoshopCore.redrawDocument({ documentID: 123})
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | `Object` |
+| `options.documentID` | `number` |
 
 ___
 
 ### setExecutionMode
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 The execution mode can be used while debugging a plugin. It is only available
 when the developer mode is enabled.
@@ -322,16 +353,16 @@ await PhotoshopCore.setExecutionMode({ logRejections: true })
 
 | Name | Type |
 | :------ | :------ |
-| `options` | *object* |
-| `options.enableErrorStacktraces?` | *boolean* |
-| `options.logRejections?` | *boolean* |
+| `options` | `Object` |
+| `options.enableErrorStacktraces?` | `boolean` |
+| `options.logRejections?` | `boolean` |
 
 ___
 
 ### setUserIdleTime
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Specifies the number of seconds a user must be idle on Photoshop before invoking the
 userIdle event handler defined with [addNotificationListener](/ps_reference/media/photoshopcore/#addnotificationlistener). An idleTime of 0
@@ -345,14 +376,14 @@ await PhotoshopCore.setUserIdleTime(3)
 
 | Name | Type |
 | :------ | :------ |
-| `idleTime` | *number* |
+| `idleTime` | `number` |
 
 ___
 
 ### showAlert
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Show a generic alert box to the user. 'OK' to dismiss.
 ```javascript
@@ -364,15 +395,15 @@ await PhotoshopCore.showAlert({ message: 'Operation successful'})
 
 | Name | Type |
 | :------ | :------ |
-| `options` | *object* |
-| `options.message` | *string* |
+| `options` | `Object` |
+| `options.message` | `string` |
 
 ___
 
 ### translateUIString
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*string*
+`string`
 
 Given a Photoshop ZString (of format `"$$$/slash/separated/key=english default value"`),
 will return the translated string for the current UI language
@@ -381,4 +412,4 @@ will return the translated string for the current UI language
 
 | Name | Type |
 | :------ | :------ |
-| `zstring` | *string* |
+| `zstring` | `string` |

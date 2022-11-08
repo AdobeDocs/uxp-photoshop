@@ -24,6 +24,6 @@ Options for size and style of tool cursors.
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| otherCursors | [*OtherCursors*](/ps_reference/modules/constants/#othercursors) | R W | 24.0 | The type of pointer to use |
-| paintingCursors | [*PaintingCursors*](/ps_reference/modules/constants/#paintingcursors) | R W | 24.0 | The style of cursor in use for painting tools. |
+| otherCursors | [*OtherCursors*](/ps_reference/modules/constants/#othercursors) | R W | acc??? | - |
+| paintingCursors | [*PaintingCursors*](/ps_reference/modules/constants/#paintingcursors) | R W | acc??? | - |
 | typename | *string* | R | 24.0 | The class name of the referenced object: *&quot;PreferencesCursors&quot;*. |

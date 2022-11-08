@@ -65,7 +65,7 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 ### move
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-*void*
+`void`
 
 Moves the ColorSampler object to the given position
 
@@ -73,15 +73,15 @@ Moves the ColorSampler object to the given position
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `position` | *object* | Object literal with target coordinates in pixels `{x: number, y: number}`. |
-| `position.x` | *number* | - |
-| `position.y` | *number* | - |
+| `position` | `Object` | Object literal with target coordinates in pixels `{x: number, y: number}`. |
+| `position.x` | `number` | - |
+| `position.y` | `number` | - |
 
 ___
 
 ### remove
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-*void*
+`void`
 
 Deletes the given ColorSampler object.

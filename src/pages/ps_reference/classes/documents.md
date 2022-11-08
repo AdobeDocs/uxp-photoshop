@@ -29,14 +29,9 @@ app.documents.forEach(h => console.log(h.title));
 
 ## Indexable
 
-▪ [index: *number*]: [*Document*](/ps_reference/classes/document/)
+▪ [index: `number`]: [`Document`](/ps_reference/classes/document/)
 
 Used to access the documents in the collection.
-
-```javascript
-// Iterate through all the documents
-app.documents.forEach(h => console.log(h.title));
-```
 
 ## Properties
 
@@ -51,7 +46,7 @@ app.documents.forEach(h => console.log(h.title));
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : `Promise`<[`Document`](/ps_reference/classes/document/)\>
 
 Create a new document.
 
@@ -83,14 +78,14 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
+| `options?` | [`DocumentCreateOptions`](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
 
 ___
 
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-[*Document*](/ps_reference/classes/document/)
+[`Document`](/ps_reference/classes/document/)
 
 Find the first document with the matching name.
 
@@ -98,4 +93,4 @@ Find the first document with the matching name.
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |

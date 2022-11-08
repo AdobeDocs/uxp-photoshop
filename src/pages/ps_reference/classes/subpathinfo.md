@@ -33,7 +33,7 @@ all of the subpaths.
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| closed | *boolean* | R W | 23.3 | True if the path describes an enclosed area. |
-| entireSubPath | [*PathPointInfo*](/ps_reference/classes/pathpointinfo/)[] | R W | 23.3 | An array composed of the sub-path&#x27;s [PathPoint](/ps_reference/classes/pathpoint/) objects. |
-| operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | R W | 23.3 | The subpath&#x27;s operation on other subpaths. Specifies how to combine the shapes if the destination path already has a selection. |
+| closed | *boolean* | R W | acc??? | - |
+| entireSubPath | [*PathPointInfo*](/ps_reference/classes/pathpointinfo/)[] | R W | acc??? | - |
+| operation | [*ShapeOperation*](/ps_reference/modules/constants/#shapeoperation) | R W | acc??? | - |
 | typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;SubPathInfo&quot;*. |

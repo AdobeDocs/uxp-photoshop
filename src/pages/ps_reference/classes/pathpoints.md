@@ -22,7 +22,7 @@ A collection of [PathPoint](/ps_reference/classes/pathpoint/) objects that defin
 
 ## Indexable
 
-▪ [index: *number*]: [*PathPoint*](/ps_reference/classes/pathpoint/)
+▪ [index: `number`]: [`PathPoint`](/ps_reference/classes/pathpoint/)
 
 Used to access the guides in the collection.
 

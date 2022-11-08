@@ -37,7 +37,7 @@ const newDocument = await app.open('/project.psd')
 
 ### saveAs
 
-• **saveAs**: *object*
+• **saveAs**: `Object`
 
 Save the document to a desired file type.
 
@@ -59,29 +59,29 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 | Name | Type |
 | :------ | :------ |
-| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps_reference/objects/saveoptions/bmpsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps_reference/objects/saveoptions/gifsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps_reference/objects/saveoptions/jpegsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps_reference/objects/saveoptions/pngsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
+| `bmp` | (`entry`: `File`, `saveOptions?`: [`BMPSaveOptions`](/ps_reference/objects/saveoptions/bmpsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
+| `gif` | (`entry`: `File`, `saveOptions?`: [`GIFSaveOptions`](/ps_reference/objects/saveoptions/gifsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
+| `jpg` | (`entry`: `File`, `saveOptions?`: [`JPEGSaveOptions`](/ps_reference/objects/saveoptions/jpegsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
+| `png` | (`entry`: `File`, `saveOptions?`: [`PNGSaveOptions`](/ps_reference/objects/saveoptions/pngsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
+| `psb` | (`entry`: `File`, `saveOptions?`: [`PhotoshopSaveOptions`](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
+| `psd` | (`entry`: `File`, `saveOptions?`: [`PhotoshopSaveOptions`](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: `boolean`) => `Promise`<`void`\> |
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. |
-| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | The history state that history brush tool will use as its source. |
+| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | acc??? | - |
+| activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | acc??? | - |
 | activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | Currently active history state of the document. |
 | activeLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The selected layers in the document. |
 | artboards | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The artboards in the document |
 | backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | Background layer, if it exists. |
-| bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | R W | 23.0 | The bits per color channel. |
+| bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | R W | acc??? | - |
 | channels | [*Channels*](/ps_reference/classes/channels/) | R | 23.0 | All channels in the document. |
 | cloudDocument | *boolean* | R | 23.0 | Check whether this a [Photoshop cloud document](https://helpx.adobe.com/photoshop/using/cloud-documents-faq.html). |
 | cloudWorkAreaDirectory | *string* | R | 23.0 | Local directory for this cloud document. |
-| colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
-| colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
+| colorProfileName | *string* | R W | acc??? | - |
+| colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | acc??? | - |
 | colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of Color Samplers present in the document. |
 | compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Composite channels in the document. |
 | guides | [*Guides*](/ps_reference/classes/guides/) | R | 23.0 | The collection of Guides present in the document. |
@@ -95,8 +95,8 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | name | *string* | R | 23.0 | The name of the document |
 | path | *string* | R | 22.5 | Full file system path to this document, or the identifier if it is a cloud document. |
 | pathItems | [*PathItems*](/ps_reference/classes/pathitems/) | R | 23.3 | The collection of paths in this document, as shown in the Paths panel. |
-| pixelAspectRatio | *number* | R W | 22.5 | The (custom) pixel aspect ratio to use. |
-| quickMaskMode | *boolean* | R W | 23.0 | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
+| pixelAspectRatio | *number* | R W | acc??? | - |
+| quickMaskMode | *boolean* | R W | acc??? | - |
 | resolution | *number* | R | 22.5 | Document&#x27;s resolution (in pixels per inch). |
 | saved | *boolean* | R | 23.0 | True if the document has been saved since the last change. |
 | title | *string* | R | 22.5 | Document title |
@@ -108,7 +108,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 ### changeMode
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Changes the color mode of the document.
 
@@ -116,15 +116,15 @@ Changes the color mode of the document.
 
 | Name | Type |
 | :------ | :------ |
-| `mode` | [*ChangeMode*](/ps_reference/modules/constants/#changemode) |
-| `options?` | [*BitmapConversionOptions*](/ps_reference/objects/conversionoptions/bitmapconversionoptions/) \| [*IndexedConversionOptions*](/ps_reference/objects/conversionoptions/indexedconversionoptions/) |
+| `mode` | [`ChangeMode`](/ps_reference/modules/constants/#changemode) |
+| `options?` | [`BitmapConversionOptions`](/ps_reference/objects/conversionoptions/bitmapconversionoptions/) \| [`IndexedConversionOptions`](/ps_reference/objects/conversionoptions/indexedconversionoptions/) |
 
 ___
 
 ### close
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Closes the document, showing a prompt to save
 unsaved changes if specified.
@@ -133,14 +133,14 @@ unsaved changes if specified.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog                    if there are unsaved changes. |
+| `saveDialogOptions` | [`SaveOptions`](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog                    if there are unsaved changes. |
 
 ___
 
 ### closeWithoutSaving
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-*void*
+`void`
 
 Close the document, discarding all unsaved changes.
 
@@ -149,7 +149,7 @@ ___
 ### convertProfile
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Changes the color profile.
 
@@ -162,17 +162,17 @@ or one of these below, meaning of the working color spaces or Lab color.
 
 | Name | Type |
 | :------ | :------ |
-| `destinationProfile` | *string* |
-| `intent` | [*Intent*](/ps_reference/modules/constants/#intent) |
-| `blackPointCompensation?` | *boolean* |
-| `dither?` | *boolean* |
+| `destinationProfile` | `string` |
+| `intent` | [`Intent`](/ps_reference/modules/constants/#intent) |
+| `blackPointCompensation?` | `boolean` |
+| `dither?` | `boolean` |
 
 ___
 
 ### createLayer
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)\>
 
 Create a layer. See [LayerCreateOptions](/ps_reference/objects/createoptions/layercreateoptions/)
 
@@ -185,14 +185,14 @@ const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "col
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*LayerCreateOptions*](/ps_reference/objects/createoptions/layercreateoptions/) |
+| `options?` | [`LayerCreateOptions`](/ps_reference/objects/createoptions/layercreateoptions/) |
 
 ___
 
 ### createLayerGroup
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)\>
 
 Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
 
@@ -206,14 +206,14 @@ const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [l
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
+| `options?` | [`GroupLayerCreateOptions`](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
 
 ___
 
 ### crop
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Crops the document to given bounds
 
@@ -221,17 +221,17 @@ Crops the document to given bounds
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - |
-| `angle` | *number* | 0 |
-| `width` | *number* | 0 |
-| `height` | *number* | 0 |
+| `bounds` | [`Bounds`](/ps_reference/objects/bounds/) | `undefined` |
+| `angle` | `number` | `0` |
+| `width` | `number` | `0` |
+| `height` | `number` | `0` |
 
 ___
 
 ### duplicate
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<[*Document*](/ps_reference/classes/document/)\>
+`Promise`<[`Document`](/ps_reference/classes/document/)\>
 
 Creates a duplicate of the document, making the duplicate active.
 
@@ -243,15 +243,15 @@ The optional parameter `mergeLayersOnly` indicates whether to only duplicate mer
 
 | Name | Type |
 | :------ | :------ |
-| `name?` | *string* |
-| `mergeLayersOnly?` | *boolean* |
+| `name?` | `string` |
+| `mergeLayersOnly?` | `boolean` |
 
 ___
 
 ### duplicateLayers
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)[]\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)[]\>
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
@@ -270,15 +270,15 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*Layer*](/ps_reference/classes/layer/)[] |  |
-| `targetDocument?` | [*Document*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
+| `layers` | [`Layer`](/ps_reference/classes/layer/)[] |  |
+| `targetDocument?` | [`Document`](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
 
 ___
 
 ### flatten
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Flatten all layers in the document.
 
@@ -287,7 +287,7 @@ ___
 ### groupLayers
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)\>
 
 Create a layer group from existing layers.
 
@@ -300,14 +300,14 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 
 | Name | Type |
 | :------ | :------ |
-| `layers` | [*Layer*](/ps_reference/classes/layer/)[] |
+| `layers` | [`Layer`](/ps_reference/classes/layer/)[] |
 
 ___
 
 ### linkLayers
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-[*Layer*](/ps_reference/classes/layer/)[]
+[`Layer`](/ps_reference/classes/layer/)[]
 
 Links layers together if possible, and returns a list of linked layers.
 
@@ -315,14 +315,14 @@ Links layers together if possible, and returns a list of linked layers.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*Layer*](/ps_reference/classes/layer/)[] | array of layers to link together |
+| `layers` | [`Layer`](/ps_reference/classes/layer/)[] | array of layers to link together |
 
 ___
 
 ### mergeVisibleLayers
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Merges all visible layers in the document into a single layer.
 
@@ -331,7 +331,7 @@ ___
 ### paste
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)\>
 
 Pastes the contents of the clipboard into the document. If the optional argument is
 set to true and a selection is active, the contents are pasted into the selection.
@@ -340,14 +340,14 @@ set to true and a selection is active, the contents are pasted into the selectio
 
 | Name | Type |
 | :------ | :------ |
-| `intoSelection?` | *boolean* |
+| `intoSelection?` | `boolean` |
 
 ___
 
 ### rasterizeAllLayers
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Rasterizes all layers.
 
@@ -356,7 +356,7 @@ ___
 ### resizeCanvas
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Changes the size of the canvas, but does not change image size
 To change the image size, see [resizeImage](/ps_reference/classes/document/#resizeimage)
@@ -372,16 +372,16 @@ await document.resizeCanvas(width + 400, height + 400)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `width` | *number* | Numeric value of new width in pixels |
-| `height` | *number* | Numeric value of new height in pixels |
-| `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
+| `width` | `number` | Numeric value of new width in pixels |
+| `height` | `number` | Numeric value of new height in pixels |
+| `anchor?` | [`AnchorPosition`](/ps_reference/modules/constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
 
 ___
 
 ### resizeImage
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Changes the size of the image
 
@@ -393,18 +393,18 @@ await document.resizeImage(800, 600)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `width?` | *number* | Numeric value of new width in pixels |
-| `height?` | *number* | Numeric value of new height in pixels |
-| `resolution?` | *number* | Image resolution in pixels per inch (ppi) |
-| `resampleMethod?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Method used during image interpolation. |
-| `amount?` | *number* | Numeric value that controls the amount of noise value when using preserve details 0..100 |
+| `width?` | `number` | Numeric value of new width in pixels |
+| `height?` | `number` | Numeric value of new height in pixels |
+| `resolution?` | `number` | Image resolution in pixels per inch (ppi) |
+| `resampleMethod?` | [`ResampleMethod`](/ps_reference/modules/constants/#resamplemethod) | Method used during image interpolation. |
+| `amount?` | `number` | Numeric value that controls the amount of noise value when using preserve details 0..100 |
 
 ___
 
 ### revealAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Expands the document to show clipped sections.
 
@@ -413,7 +413,7 @@ ___
 ### rotate
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Rotates the image clockwise in given angle, expanding canvas if necessary. (Previously rotateCanvas)
 
@@ -421,14 +421,14 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 
 | Name | Type |
 | :------ | :------ |
-| `angles` | *number* |
+| `angles` | `number` |
 
 ___
 
 ### sampleColor
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
 
-**async** : *Promise*<[*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/)\>
+**async** : `Promise`<[`SolidColor`](/ps_reference/classes/solidcolor/) \| [`NoColor`](/ps_reference/colors/nocolor/)\>
 
 Returns a SolidColor object sampled from the document at the given position.
 
@@ -447,16 +447,16 @@ console.log(col.rgb);
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `position` | *object* | The point to sample `{x: number, y: number}`. |
-| `position.x` | *number* | The horizontal coordinate in pixels. |
-| `position.y` | *number* | The vertical coordinate in pixels. |
+| `position` | `Object` | The point to sample `{x: number, y: number}`. |
+| `position.x` | `number` | The horizontal coordinate in pixels. |
+| `position.y` | `number` | The vertical coordinate in pixels. |
 
 ___
 
 ### save
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Performs a save of the document. The user will be presented with
 a Save dialog if the file has yet to be saved on disk.
@@ -474,7 +474,7 @@ ___
 ### splitChannels
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)[]\>
+**async** : `Promise`<[`Document`](/ps_reference/classes/document/)[]\>
 
 Splits the document channels into separate, single-channel
 documents.
@@ -484,7 +484,7 @@ ___
 ### suspendHistory
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*Promise*<void\>
+`Promise`<`void`\>
 
 Creates a single history state encapsulating everything that is done
 in the callback, only for this document. All changes to the document should
@@ -496,7 +496,7 @@ not be suspended in the same history state.
 The callback is passed in a SuspendHistoryContext object,
 which contains the current document in a variable `document`.
 
-For more info and advanced context, see [`core.executeAsModal`](/ps_reference/media/executeasmodal/)
+For more info and advanced context, see [`core.executeAsModal`](../media/executeAsModal)
 API, for which this API is a simple wrapper for.
 
 ```javascript
@@ -510,15 +510,15 @@ API, for which this API is a simple wrapper for.
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | (`e`: SuspendHistoryContext) => *void* |
-| `historyStateName` | *string* |
+| `callback` | (`e`: `SuspendHistoryContext`) => `void` |
+| `historyStateName` | `string` |
 
 ___
 
 ### trap
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Applies trapping to a CMYK document.
 
@@ -528,14 +528,14 @@ Valid only when [Document.mode](/ps_reference/classes/document/#mode) is `Consta
 
 | Name | Type |
 | :------ | :------ |
-| `width` | *number* |
+| `width` | `number` |
 
 ___
 
 ### trim
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-**async** : *Promise*<void\>
+**async** : `Promise`<`void`\>
 
 Trims the transparent area around the image on the specified sides of the canvas
 base on trimType
@@ -544,8 +544,8 @@ base on trimType
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `trimType` | [*TrimType*](/ps_reference/modules/constants/#trimtype) | - |
-| `top` | *boolean* | true |
-| `left` | *boolean* | true |
-| `bottom` | *boolean* | true |
-| `right` | *boolean* | true |
+| `trimType` | [`TrimType`](/ps_reference/modules/constants/#trimtype) | `undefined` |
+| `top` | `boolean` | `true` |
+| `left` | `boolean` | `true` |
+| `bottom` | `boolean` | `true` |
+| `right` | `boolean` | `true` |

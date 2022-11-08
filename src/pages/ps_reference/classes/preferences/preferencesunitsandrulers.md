@@ -24,7 +24,7 @@ Preferences related to ruler units, type units and resolution
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| pointSize | [*PointType*](/ps_reference/modules/constants/#pointtype) | R W | 24.0 | The point/pica size |
-| rulerUnits | [*RulerUnits*](/ps_reference/modules/constants/#rulerunits) | R W | 24.0 | The unit that will be used for the displayed Rulers and consequently considered primary in Photoshop. |
-| typeUnits | [*TypeUnits*](/ps_reference/modules/constants/#typeunits) | R W | 24.0 | The unit type-size that the numeric inputs are assumed to represent. |
+| pointSize | [*PointType*](/ps_reference/modules/constants/#pointtype) | R W | acc??? | - |
+| rulerUnits | [*RulerUnits*](/ps_reference/modules/constants/#rulerunits) | R W | acc??? | - |
+| typeUnits | [*TypeUnits*](/ps_reference/modules/constants/#typeunits) | R W | acc??? | - |
 | typename | *string* | R | 24.0 | The class name of the referenced object: *&quot;PreferencesUnitsAndRulers&quot;*. |

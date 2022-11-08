@@ -29,16 +29,9 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 
 ## Indexable
 
-▪ [index: *number*]: [*Guide*](/ps_reference/classes/guide/)
+▪ [index: `number`]: [`Guide`](/ps_reference/classes/guide/)
 
 Used to access the guides in the collection.
-
-Access this collection through [Document.guides](/ps_reference/classes/document/#guides) property. For example,
-following adds a new guide to the collection:
-
-```javascript
-app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
-```
 
 ## Properties
 
@@ -52,7 +45,7 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-[*Guide*](/ps_reference/classes/guide/)
+[`Guide`](/ps_reference/classes/guide/)
 
 Adds a guide for the collection at the given coordinate and direction
 
@@ -64,14 +57,14 @@ Adds a guide for the collection at the given coordinate and direction
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `direction` | [*Direction*](/ps_reference/modules/constants/#direction) | Indicates whether the guide is vertical or horizontal |
-| `coordinate` | *number* | Position of the guide measured from the ruler origin in pixels. The value can be a decimal number.  Note: the user can move the ruler origin which will affect the position value of the guides. |
+| `direction` | [`Direction`](/ps_reference/modules/constants/#direction) | Indicates whether the guide is vertical or horizontal |
+| `coordinate` | `number` | Position of the guide measured from the ruler origin in pixels. The value can be a decimal number.  Note: the user can move the ruler origin which will affect the position value of the guides. |
 
 ___
 
 ### removeAll
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
 
-*void*
+`void`
 
 Clears all guides from this collection.

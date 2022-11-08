@@ -22,10 +22,10 @@ keywords:
 
 ### clgpuInfoList
 
-• `Optional` **clgpuInfoList**: [*OpenCLDeviceInfo*](/ps_reference/interfaces/opencldeviceinfo/)[]
+• `Optional` **clgpuInfoList**: [`OpenCLDeviceInfo`](/ps_reference/interfaces/opencldeviceinfo/)[]
 
 ___
 
 ### gpuInfoList
 
-• `Optional` **gpuInfoList**: [*OpenGLDeviceInfo*](/ps_reference/interfaces/opengldeviceinfo/)[]
+• `Optional` **gpuInfoList**: [`OpenGLDeviceInfo`](/ps_reference/interfaces/opengldeviceinfo/)[]

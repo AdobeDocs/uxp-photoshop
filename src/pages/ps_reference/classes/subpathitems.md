@@ -26,12 +26,9 @@ A collection of [SubPathItem](/ps_reference/classes/subpathitem/) objects that m
 
 ## Indexable
 
-▪ [index: *number*]: [*SubPathItem*](/ps_reference/classes/subpathitem/)
+▪ [index: `number`]: [`SubPathItem`](/ps_reference/classes/subpathitem/)
 
 Used to access the guides in the collection.
-
- - Use [SubPathInfo](/ps_reference/classes/subpathinfo/) to create subpaths; the properties are writeable.
- - Use the [SubPathItem](/ps_reference/classes/subpathitem/) object to retrieve information about existing subpaths. The properties are read-only.
 
 ## Properties
 

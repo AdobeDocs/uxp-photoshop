@@ -31,17 +31,9 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 ## Indexable
 
-▪ [index: *number*]: [*HistoryState*](/ps_reference/classes/historystate/)
+▪ [index: `number`]: [`HistoryState`](/ps_reference/classes/historystate/)
 
 Used to access the history states in the collection.
-
-```javascript
-// Iterate through all history states
-app.activeDocument.historyStates.forEach(h => console.log(h.name));
-
-// Find all snapshot history states
-var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
-```
 
 ## Properties
 
@@ -55,7 +47,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-[*HistoryState*](/ps_reference/classes/historystate/)
+[`HistoryState`](/ps_reference/classes/historystate/)
 
 Find the first history state with the matching name.
 
@@ -63,4 +55,4 @@ Find the first history state with the matching name.
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |

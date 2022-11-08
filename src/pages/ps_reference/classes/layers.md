@@ -29,14 +29,9 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 ## Indexable
 
-▪ [index: *number*]: [*Layer*](/ps_reference/classes/layer/)
+▪ [index: `number`]: [`Layer`](/ps_reference/classes/layer/)
 
 Used to access the layers in the collection.
-
-```javascript
-// Iterate through all the top layers of frontmost document
-app.activeDocument.layers.forEach(h => console.log(h.name));
-```
 
 ## Properties
 
@@ -50,7 +45,7 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 ### add
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : `Promise`<[`Layer`](/ps_reference/classes/layer/)\>
 
 Create a new layer.
 
@@ -63,7 +58,7 @@ ___
 ### getByName
 <span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
 
-[*Layer*](/ps_reference/classes/layer/)
+[`Layer`](/ps_reference/classes/layer/)
 
 Find the first layer with the matching name.
 
@@ -71,4 +66,4 @@ Find the first layer with the matching name.
 
 | Name | Type |
 | :------ | :------ |
-| `name` | *string* |
+| `name` | `string` |
