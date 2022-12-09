@@ -37,9 +37,9 @@ var PhotoshopCore = require('photoshop').core;
 ## Functions
 
 ### addNotificationListener
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
 Attach a listener to a Photoshop core event. A callback in the form
 of `(eventName: string, descriptor: Descriptor) => void` will be performed.
@@ -65,9 +65,9 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 ___
 
 ### calculateDialogSize
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<{ `height`: *number* ; `width`: *number*  }\>
+**async** : *Promise*<{ `height`: *number* ; `width`: *number*  }\>
 
 Returns the effective size of a dialog.
 ```javascript
@@ -90,7 +90,7 @@ var idealSize = { width: 200, height: 500 }
 ___
 
 ### convertColor
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 ColorDescriptor
 
@@ -115,9 +115,9 @@ based on embedded color profiles.
 ___
 
 ### endModalToolState
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
 End the current modal tool editing state.
 ```javascript
@@ -134,9 +134,9 @@ await PhotoshopCore.endModalToolState(false)
 ___
 
 ### executeAsModal
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
 ExecuteAsModal is needed when a plugin wants to make modifications to the Photoshop state.
 This includes scenarios where the plugin wants to create or modify documents,
@@ -156,9 +156,9 @@ See [Modal Execution](../executeasmodal) for details
 ___
 
 ### getActiveTool
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
+**async** : *Promise*<{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
 
 Returns information about the active Photoshop tool.
 ```javascript
@@ -168,7 +168,7 @@ Returns information about the active Photoshop tool.
 ___
 
 ### getCPUInfo
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
 [*CPUInfo*](/ps_reference/interfaces/cpuinfo/)
 
@@ -182,7 +182,7 @@ var isARM = vendor === "ARM"
 ___
 
 ### getGPUInfo
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
 [*GPUInfo*](/ps_reference/interfaces/gpuinfo/)
 
@@ -198,9 +198,9 @@ console.log(JSON.stringify(clgpuInfoList))
 ___
 
 ### getMenuCommandState
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<boolean\>
+**async** : *Promise*<boolean\>
 
 Returns whether a command menu item is available for invoking.
 ```javascript
@@ -219,9 +219,9 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 ___
 
 ### getMenuCommandTitle
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<string\>
+**async** : *Promise*<string\>
 
 Returns the localized menu title of the menu command item.
 ```javascript
@@ -240,9 +240,9 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 ___
 
 ### getPluginInfo
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.2</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
+**async** : *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
 
 Return information about the execution of the plugin.
 This method is intended for developing plugins.
@@ -268,7 +268,7 @@ await PhotoshopCore.getPluginInfo()
 ___
 
 ### isModal
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
 *boolean*
 
@@ -277,9 +277,9 @@ Returns true if the plugin is currently in a modal state using [executeAsModal](
 ___
 
 ### performMenuCommand
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<boolean\>
+**async** : *Promise*<boolean\>
 
 Invokes the menu command via its `commandID`. Returns false
 on failure, or if the command is not available.
@@ -298,10 +298,41 @@ await PhotoshopCore.performMenuCommand({ commandID: 1017 })
 
 ___
 
-### setExecutionMode
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.2</span>
+### redrawDocument
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
-*Promise*<void\>
+**async** : *Promise*<number\>
+
+Request that Photoshop redraws (updates) a document immediately.
+This method can be used to ensure that the document is updated
+immediately while a user is interacting with a UI element (such as a slider).
+This can provide a more responsive interaction.
+Updating a document can be time consuming, and will often happen at a lower frequency
+than UI events are received.
+Plugins may therefore want to implement a throttle between UI events and calls to
+redrawDocument.
+A throttle could be implemented by using a timer, or by avoiding to call redrawDocument
+for a small amount of time after a previous request completes.
+redrawDocument returns the time that it took Photoshop to update the target document
+in seconds. This number can be used to refine the throttle.
+redrawDocument is only available to a plugin that is using apiVersion 2 or higher.
+```javascript
+await PhotoshopCore.redrawDocument({ documentID: 123})
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | *object* |
+| `options.documentID` | *number* |
+
+___
+
+### setExecutionMode
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.2</span>
+
+**async** : *Promise*<void\>
 
 The execution mode can be used while debugging a plugin. It is only available
 when the developer mode is enabled.
@@ -329,7 +360,7 @@ await PhotoshopCore.setExecutionMode({ logRejections: true })
 ___
 
 ### setUserIdleTime
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -350,9 +381,9 @@ await PhotoshopCore.setUserIdleTime(3)
 ___
 
 ### showAlert
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
 Show a generic alert box to the user. 'OK' to dismiss.
 ```javascript
@@ -370,7 +401,7 @@ await PhotoshopCore.showAlert({ message: 'Operation successful'})
 ___
 
 ### translateUIString
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 *string*
 

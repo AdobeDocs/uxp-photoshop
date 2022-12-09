@@ -34,7 +34,7 @@ group.layers.forEach((layer) => {
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | allLocked | *boolean* | R W | 22.5 | When set to true, prevents edits to pixels and properties of this layer. |
-| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | R W | 22.5 | The blend mode of the layer. |
+| blendMode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | R W | 22.5 | The blend mode of the layer.  ***Fixes in Photoshop 24.2:*** - *Now it will throw error when passing non-existent blend mode* - *Also will throw error if combination of document color mode, bit depth and blend mode is not possible instead of failing silently* - *Prior this version it was possible to set blend mode for background layer which turned it into regular layer as a side effect and also changed its ID. Not it will throw error instead since these side effects are not expected to happen* |
 | bounds | [*Bounds*](/ps_reference/objects/bounds/) | R | 22.5 | Bounds of the layer, including the effects. |
 | boundsNoEffects | [*Bounds*](/ps_reference/objects/bounds/) | R | 22.5 | Bounds of the layer excluding effects. |
 | document | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The document that contains this layer. |
@@ -55,6 +55,7 @@ group.layers.forEach((layer) => {
 | parent | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | The group layer that contains this layer. It will return null if the layer is a top layer in the document. |
 | pixelsLocked | *boolean* | R W | 22.5 | When set to true, prevents the pixels of this layer from being edited. |
 | positionLocked | *boolean* | R W | 22.5 | When set to true, prevents the layer from being moved. |
+| textItem | [*TextItem*](/ps_reference/classes/textitem/) | R | 24.2 | The object that contains properties and methods related to Text for Layers whose &#x60;kind&#x60; is equal to &#x60;LayerKind.TEXT&#x60; |
 | transparentPixelsLocked | *boolean* | R W | 22.5 | When set to true, prevents the transparent pixels from being edited |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Layer&quot;*. |
 | vectorMaskDensity | *number* | R W | 23.0 | The density of the vector mask, in percentage. |
@@ -64,7 +65,7 @@ group.layers.forEach((layer) => {
 ## Methods
 
 ### applyAddNoise
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -83,7 +84,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyAverage
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -94,7 +95,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyBlur
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -105,7 +106,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyBlurMore
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -116,7 +117,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyClouds
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -127,7 +128,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyCustomFilter
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -146,7 +147,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyDeInterlace
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -164,7 +165,7 @@ Unsupported color modes: Indexed Color, Bitmap, CMYK 8 bits, CMYK 16 bits, Duoto
 ___
 
 ### applyDespeckle
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -175,7 +176,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyDifferenceClouds
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -186,7 +187,7 @@ Unsupported color modes: Indexed Color, Bitmap, Lab 8 bits, Lab 16 bits
 ___
 
 ### applyDiffuseGlow
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -205,7 +206,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyDisplace
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -228,7 +229,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyDustAndScratches
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -246,7 +247,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyGaussianBlur
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -263,7 +264,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyGlassEffect
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -285,7 +286,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyHighPass
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -302,7 +303,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyLensBlur
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -330,7 +331,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyLensFlare
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -351,7 +352,7 @@ Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
 ___
 
 ### applyMaximum
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -369,7 +370,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyMedianNoise
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -386,7 +387,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applyMinimum
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -404,7 +405,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyMotionBlur
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -422,7 +423,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyNTSC
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -433,7 +434,7 @@ Supported color modes: RGB 8 bits, RGB 16 bits, RGB 32 bits
 ___
 
 ### applyOceanRipple
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -451,7 +452,7 @@ Supported color modes: RGB 8 bits, Duotone 8 bits, Grayscale 8 bits, Multichanne
 ___
 
 ### applyOffset
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 *Promise*<void\>
 
@@ -470,7 +471,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyPinch
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -487,7 +488,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyPolarCoordinates
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -504,7 +505,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyRipple
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -522,7 +523,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applySharpen
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -533,7 +534,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applySharpenEdges
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -544,7 +545,7 @@ Unsupported color modes: Indexed Color, Bitmap, RGB 32 bits, Grayscale 32 bits
 ___
 
 ### applySharpenMore
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -555,7 +556,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyShear
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -573,7 +574,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applySmartBlur
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -595,7 +596,7 @@ Grayscale 8 bits, Lab 8 bits, Multichannel 8 bits
 ___
 
 ### applySpherize
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -613,7 +614,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyTwirl
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 
 **async** : *Promise*<void\>
 
@@ -630,7 +631,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyUnSharpMask
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -649,7 +650,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyWave
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -675,7 +676,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### applyZigZag
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<void\>
 
@@ -694,7 +695,7 @@ Unsupported color modes: Indexed Color, Bitmap
 ___
 
 ### bringToFront
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -703,7 +704,7 @@ Moves the layer to a position above the topmost layer or group.
 ___
 
 ### clear
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -713,7 +714,7 @@ If no pixel selection is found, select all pixels and clear.
 ___
 
 ### copy
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -734,7 +735,7 @@ await layer.copy()
 ___
 
 ### cut
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -743,7 +744,7 @@ Cuts the layer contents to the clipboard. If no selection is found then select a
 ___
 
 ### delete
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -756,7 +757,7 @@ layers && layers[0] && layers[0].delete()
 ___
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -783,7 +784,7 @@ const exportedLayer = await layer.duplicate(exportDoc)
 ___
 
 ### flip
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -803,7 +804,7 @@ await layer.flip.horizontal()
 ___
 
 ### link
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*Layer*](/ps_reference/classes/layer/)[]
 
@@ -827,7 +828,7 @@ linkedLayers.forEach((layer) => console.log(layer.name))
 ___
 
 ### merge
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -839,7 +840,7 @@ be a pixel layer. The merged layer will now be the active layer.
 ___
 
 ### move
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -859,7 +860,7 @@ Moves the layer relative to the layer specified in parameters.
 ___
 
 ### rasterize
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -874,7 +875,7 @@ Converts the targeted contents in the layer into a flat, raster image.
 ___
 
 ### rotate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -901,7 +902,7 @@ await layer.rotate(90, anchorPos.TOPLEFT)
 ___
 
 ### scale
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -930,7 +931,7 @@ await layer.scale(50, 50, anchorPos.BOTTOMLEFT)
 ___
 
 ### sendToBack
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -941,7 +942,7 @@ If it is in a group, it will move to the bottom of the group.
 ___
 
 ### skew
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -964,7 +965,7 @@ await layer.skew(-15, 0)
 ___
 
 ### translate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -990,7 +991,7 @@ await layer.translate(xOffsetPct, yOffsetPct);
 ___
 
 ### unlink
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 

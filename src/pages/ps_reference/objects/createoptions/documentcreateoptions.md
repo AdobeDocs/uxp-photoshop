@@ -16,25 +16,28 @@ keywords:
   - Scripting
 ---
 
-# Document Create Options
+# DocumentCreateOptions
 
-Options to pass into the createDocument API.
-Provide `width`, `height`, `resolution`, `fill`, color `mode` parameters, or a saved `preset` name.
+An object literal can be constructed with any of the following properties
+and passed to [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument).
+As a type, `DocumentCreateOptions` can be used in Typescript development.
 
-## Properties
+```javascript
+const options = { name: "Web mockup", preset: "Web Large" };
+require('photoshop').app.createDocument(options);
+```
 
-| Name | Type | Access | Default | Range | Min Version | Description |
-| :------ | :------ | :------ | :------ | :------ | :------ | :------ |
-| depth | *number* | R W | 8 | [8,16,32] | 22.5 | Bit depth |
-| fill | [*DocumentFill*](/ps_reference/modules/constants/#documentfill) | R W | - | - | 22.5 | Fill color of the document. |
-| fillColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | - | - | 23.0 | Custom fill color of the document. |
-| height | *number* | R W | - | - | 22.5 | Height of image in pixels. |
-| mode | [*NewDocumentMode*](/ps_reference/modules/constants/#newdocumentmode) | R W | - | - | 22.5 | ImageMode class. |
-| name | *string* | R W | - | - | 22.5 | The name to give the new document. |
-| pixelScaleFactor | *number* | R W | - | - | 22.5 | Pixel Scale Factor. |
-| preset | *string* | R W | - | - | 22.5 | Preset. |
-| presetJSON | *string* | R W | - | - | 22.5 | JSON Preset, requires JSONified string. |
-| profile | *string* | R W | - | - | 22.5 | Color Profile using profile name. |
-| resolution | *number* | R W | - | - | 22.5 | Resolution of image . |
-| typename | *string* | R | - | - | 22.5 | The class name of the referenced object: *&quot;DocumentCreateOptions&quot;*. |
-| width | *number* | R W | - | - | 22.5 | Width of image in pixels. |
+| Name | Type | Default | Range | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ | :------ |
+| depth | *number* | 8 | [8,16,32] | 22.5 | Bit depth |
+| fill | [*DocumentFill*](/ps_reference/modules/constants/#documentfill) | - | - | 22.5 | Fill color of the document. |
+| fillColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | - | - | 23.0 | Custom fill color of the document. |
+| height | *number* | - | - | 22.5 | Height of image in pixels. |
+| mode | [*NewDocumentMode*](/ps_reference/modules/constants/#newdocumentmode) | - | - | 22.5 | ImageMode class. |
+| name | *string* | - | - | 22.5 | The name to give the new document. |
+| pixelScaleFactor | *number* | - | - | 22.5 | Pixel Scale Factor. |
+| preset | *string* | - | - | 22.5 | Preset. |
+| presetJSON | *string* | - | - | 22.5 | JSON Preset, requires JSONified string. |
+| profile | *string* | - | - | 22.5 | Color Profile using profile name. |
+| resolution | *number* | - | - | 22.5 | Resolution of image. |
+| width | *number* | - | - | 22.5 | Width of image in pixels. |

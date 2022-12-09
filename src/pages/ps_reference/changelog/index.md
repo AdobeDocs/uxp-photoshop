@@ -6,8 +6,110 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
+## Photoshop Beta (24.2 February 2022)
 
-## Photoshop Beta (24.0 October 2022)
+### Imaging API Beta
+We are excited to provide an entirely new capability with the [Imaging API](../media/imaging).  Anyone that has been eagerly awaiting the ability to directly get and set pixels in a document should head to the [dedicated page](../media/imaging).  Note: we are serious about the Beta label.  While this is exciting new territory, keep in mind that the API is in an early form.  We want your feedback to help guide it toward maturity.
+
+### Text support
+The UXP DOM features a variety of new text-related APIs, that provide a more robust and consistent experience for developers. Instead of aiming for ExtendScript parity, the UXP DOM has been designed to provide a more modern and intuitive API surface. While still providing the old functionality, it's been extended to cover many features that weren't previously available.
+
+- A [Document.createTextLayer](../classes/document.md#createtextlayer) method was added, which allows developers to create a new text layer in a document. It accepts a [TextLayerCreateOptions](../objects/createoptions/textlayercreateoptions/) object, which can be used to set the initial text content, style, and other properties.
+- The `textItem` property of a Text Layer is the entrypoint for everything text-related. It provides direct access to a few properties and methods:
+  - contents
+  - isParagraphText
+  - isPointText
+  - orientation
+  - textClickPoint
+  - convertToParagraphText()
+  - convertToPointText()
+  - convertToShape()
+  - createWorkPath()
+- Properties and methods related to features made available by Photoshop in the Character palette are now grouped in the `textItem.characterStyle` object:
+  - alternateLigatures
+  - antiAliasMethod
+  - autoKerning
+  - baseline
+  - baselineShift
+  - capitalization
+  - characterAlignment
+  - color
+  - fauxBold
+  - fauxItalic
+  - font
+  - fractionalWidths
+  - fractions
+  - horizontalScale
+  - kashidas
+  - horizontalDiacriticPosition
+  - verticalDiacriticPosition
+  - language
+  - leading
+  - ligatures
+  - middleEasternDigitsType
+  - middleEasternTextDirection
+  - noBreak
+  - ordinals
+  - size
+  - strikeThrough
+  - stylisticAlternates
+  - swash
+  - titlingAlternates
+  - tracking
+  - useAutoLeading
+  - verticalScale
+  - reset()
+- Properties and methods related to features made available by Photoshop in the Paragraph palette are now grouped in the `textItem.paragraphStyle` object:
+  - firstLineIndent
+  - hyphenation
+  - hyphenationFeatures
+  - justification
+  - justificationFeatures
+  - layoutMode
+  - kashidaWidth
+  - kinsoku
+  - mojikumi
+  - leftIndent
+  - rightIndent
+  - spaceAfter
+  - spaceBefore
+  - reset()
+- Properties and methods related to features made available by Photoshop in the Warp text dialog are now grouped in the `textItem.warpStyle` object:
+  - style
+  - direction
+  - bend
+  - horizontalDistortion
+  - verticalDistortion
+  - reset()
+
+----
+## Photoshop 24.1 (December 2022)
+
+### app.getColorProfiles
+Color profiles are needed for the Imaging API, so a new method on the `app` is introduced to return profile names.  At this time, only profiles for RGB and Gray are available.
+
+### CountItems support
+
+The CountItems DOM API is now available in Photoshop.
+
+- The [CountItems collection](../classes/countitems/) behaves like other collections at the Document level in the API. CountItems further support the following properties and methods:
+  - `typename`, `length`, `parent`.
+  - `add()`, `removeAll()`, `getAll()`, `createGroup()`, `renameActiveGroup()`, `removeGroupByIndex()`, `toggleActiveGroupVisibility()`, `activateGroupByIndex()`, `setActiveMarkerSize()`, `setActiveLabelSize()`, `setActiveColor()`.
+
+### Other fixes
+
+#### We now throw errors in more situations with layer blend modes
+
+- Passing a value that is not in [[Constants.blendMode]].
+- Passing a blend mode that is not compatible with the document's color mode or bit depth. Previously, this call would fail silently.
+- Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  This method of Background promotion is not available via the UI.
+
+- The [CountItem class](../classes/countitem) implements the following properties and methods: 
+  - `typename`, `parent`, `itemIndex`, `groupIndex`, `position`
+  - `move()`, `remove()`
+  - 
+
+## Photoshop 24.0 (October 2022)
 
 ### Preferences
 Adds API to change some of the Photoshop [preferences](../classes/preferences). Only first set of 38 preferences was added. More will follow.
@@ -61,7 +163,6 @@ The ColorSampler DOM API is now available in Photoshop.
 - Color mode validation for all filters
 - Fixed Lens Flare coordinates
 - Fixed file arguments for filters 
-
 
 ## Photoshop 23.5 (August 2022)
 
@@ -266,13 +367,13 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
     - Documents also follows ExtendScript functionality. `length`, `add`, `getByName(name)`, `parent` are provided.
 - [Constants module](../modules/constants/), collecting all enumerations and constants used in DOM API. Accessible via `require("photoshop").constants`.
 - Updated [app.createDocument / app.add](../classes/photoshop/#createdocument)
-    - Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../objects/documentcreateoptions/)).
+    - Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../objects/createoptions/documentcreateoptions/)).
 - Updated [document.save](../classes/document/#save) and [document.saveAs](../classes/document/#saveas)
     - `save` no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.
     - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/)).
 - [layer.id getter](../classes/layer)
 - Updated [document.createLayer](../classes/document/#createlayer) and [document.createLayerGroup](../classes/document/#createlayergroup)
-    - With respective Create options: [LayerCreateOptions](../objects/layercreateoptions/) and [GroupLayerCreateOptions](../objects/grouplayercreateoptions).
+    - With respective Create options: [LayerCreateOptions](../objects/createoptions/layercreateoptions/) and [GroupLayerCreateOptions](../objects/createoptions/grouplayercreateoptions).
     - Collection access updates for Layer and Layer-like items are planned for upcoming releases.
 
 #### Photoshop Core updates

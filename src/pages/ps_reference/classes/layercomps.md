@@ -18,10 +18,10 @@ keywords:
 
 # LayerComps
 
-A collections class allowing for array access into a document's layer comps
+A collections class allowing for array access into a document's Layer Comps
 
 Access this collection through [Document.layerComps](/ps_reference/classes/document/#layercomps) property. For example,
-following adds a new layer comp to the collection:
+following adds a new Layer Comp to the collection:
 
 ```javascript
 const comp = await app.activeDocument.layerComps.add();
@@ -31,10 +31,10 @@ const comp = await app.activeDocument.layerComps.add();
 
 ▪ [index: *number*]: [*LayerComp*](/ps_reference/classes/layercomp/)
 
-Used to access the layer comp in the collection
+Used to access the Layer Comp in the collection
 
 Access this collection through [Document.layerComps](/ps_reference/classes/document/#layercomps) property. For example,
-following adds a new layer comp to the collection:
+following adds a new Layer Comp to the collection:
 
 ```javascript
 const comp = await app.activeDocument.layerComps.add();
@@ -51,28 +51,28 @@ const comp = await app.activeDocument.layerComps.add();
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 *Promise*<[*LayerComp*](/ps_reference/classes/layercomp/)\>
 
-Adds a layer comp for the collection
+Adds a Layer Comp to the document's collection. If no options are given, only visibility will be recorded.
 
-Note: This command will fail if document has only background layer and no other layers.
+Note: This command will fail if the document is flat, that is, only a Background and no other layers.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `options` | LayerCompAddArgument | {} |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `options` | [*LayerCompCreateOptions*](/ps_reference/objects/createoptions/layercompcreateoptions/) | {} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/) ``` const options = {    name: "mockup",   comment: "First attempt",   visibility: true,   position: true  }; await require('photoshop').app.activeDocument.layerComps.add(options); ``` |
 
 ___
 
 ### getAllByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 [*LayerComp*](/ps_reference/classes/layercomp/)[]
 
-Get all layer comps by name
+Get all Layer Comps by name
 
 #### Parameters
 
@@ -83,8 +83,8 @@ Get all layer comps by name
 ___
 
 ### removeAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 *Promise*<void\>
 
-Clears all layer comps from this collection
+Clears all Layer Comps from this collection

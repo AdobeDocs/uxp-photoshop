@@ -9,14 +9,16 @@ description: Learn about the Photoshop API that is exposed through UXP for devel
 
 ## Overview
 
-You will now find minimum version information on properties and methods.  This version tag corresponds to the version of Photoshop where the member was introduced or last updated significantly.
-For properties, you will find a column "MIN VERSION".  For methods, the version tag appears to the right of the name.
-
 The following line allows you access to the Photoshop DOM via UXP.
 ```javascript
 const app = require('photoshop').app;
 ```
 From here, you can open documents, modify them, run menu items, and more.
+
+### Minimum Version
+You will now find minimum version information on properties and methods.  This version tag corresponds to the version of Photoshop where the member was introduced or last updated significantly.
+For properties, you will find a column "MIN VERSION".  For methods, the version number appears as a tag to the right of the name.
+
 
 ## Synchronous vs Asynchronous
 
@@ -90,7 +92,7 @@ Create a layer:
 ```javascript
 const app = require('photoshop').app;
 async function newColorDodgeLayer(executionContext) {
-  await app.activeDocument.createLayer({ name: "myLayer", opacity: 80, mode: "colorDodge" });
+  await app.activeDocument.createLayer({ name: "myLayer", opacity: 80, blendMode: "colorDodge" });
 };
 
 await require('photoshop').core.executeAsModal(newColorDodgeLayer);

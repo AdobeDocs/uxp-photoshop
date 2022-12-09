@@ -38,7 +38,7 @@ Used to access the text fonts in the collection.
 ## Methods
 
 ### getByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*TextFont*](/ps_reference/classes/textfont/)
 

@@ -20,12 +20,24 @@ module.exports = [{
 			"path": "/ps_reference/classes/channels/"
 		},
 		{
+			"title": "CharacterStyle",
+			"path": "/ps_reference/classes/characterstyle/"
+		},
+		{
 			"title": "ColorSampler",
 			"path": "/ps_reference/classes/colorsampler/"
 		},
 		{
 			"title": "ColorSamplers",
 			"path": "/ps_reference/classes/colorsamplers/"
+		},
+		{
+			"title": "CountItem",
+			"path": "/ps_reference/classes/countitem/"
+		},
+		{
+			"title": "CountItems",
+			"path": "/ps_reference/classes/countitems/"
 		},
 		{
 			"title": "Document",
@@ -66,6 +78,10 @@ module.exports = [{
 		{
 			"title": "Layers",
 			"path": "/ps_reference/classes/layers/"
+		},
+		{
+			"title": "ParagraphStyle",
+			"path": "/ps_reference/classes/paragraphstyle/"
 		},
 		{
 			"title": "PathItem",
@@ -169,6 +185,14 @@ module.exports = [{
 		{
 			"title": "TextFonts",
 			"path": "/ps_reference/classes/textfonts/"
+		},
+		{
+			"title": "TextItem",
+			"path": "/ps_reference/classes/textitem/"
+		},
+		{
+			"title": "WarpStyle",
+			"path": "/ps_reference/classes/warpstyle/"
 		}
 	]
 },{
@@ -205,12 +229,20 @@ module.exports = [{
 					"path": "/ps_reference/objects/createoptions/documentcreateoptions/"
 				},
 				{
+					"title": "Layer Comp Create Options",
+					"path": "/ps_reference/objects/createoptions/layercompcreateoptions/"
+				},
+				{
 					"title": "Group Layer Create Options",
 					"path": "/ps_reference/objects/createoptions/grouplayercreateoptions/"
 				},
 				{
-					"title": "Layer Create Options",
-					"path": "/ps_reference/objects/createoptions/layercreateoptions/"
+					"title": "Pixel Layer Create Options",
+					"path": "/ps_reference/objects/createoptions/pixellayercreateoptions/"
+				},
+				{
+					"title": "Text Layer Create Options",
+					"path": "/ps_reference/objects/createoptions/textlayercreateoptions/"
 				}
 			]
 		},
@@ -285,20 +317,8 @@ module.exports = [{
 			"path": "/ps_reference/media/"
 		},
 		{
-			"title": "BatchPlay",
-			"path": "/ps_reference/media/batchplay/"
-		},
-		{
 			"title": "Modal Execution",
 			"path": "/ps_reference/media/executeasmodal/"
-		},
-		{
-			"title": "API Extensions",
-			"path": "/ps_reference/media/prototype/"
-		},
-		{
-			"title": "CSDK <-> UXP Messaging",
-			"path": "/ps_reference/media/cpp-pluginsdk/"
 		},
 		{
 			"title": "Core Module",
@@ -309,14 +329,30 @@ module.exports = [{
 			"path": "/ps_reference/media/photoshopaction/"
 		},
 		{
-			"title": "UXP Scripting",
-			"path": "/ps_reference/media/uxpscripting/"
+			"title": "Imaging API Beta",
+			"path": "/ps_reference/media/imaging/"
+		},
+		{
+			"title": "BatchPlay",
+			"path": "/ps_reference/media/batchplay/"
+		},
+		{
+			"title": "API Extensions",
+			"path": "/ps_reference/media/prototype/"
+		},
+		{
+			"title": "CSDK <-> UXP Messaging",
+			"path": "/ps_reference/media/cpp-pluginsdk/"
 		}
 	]
 },{
 	"title": "Constants",
 	"header": true,
 	"path": "/ps_reference/modules/constants/"
+},{
+	"title": "UXP Scripting",
+	"header": true,
+	"path": "/ps_reference/media/uxpscripting/"
 },{
 	"title": "API Changelog",
 	"header": true,

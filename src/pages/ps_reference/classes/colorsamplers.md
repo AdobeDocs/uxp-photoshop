@@ -60,7 +60,7 @@ app.activeDocument.colorSamplers.length; // returns 0
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 [*ColorSampler*](/ps_reference/classes/colorsampler/)
 
@@ -82,7 +82,7 @@ app.activeDocument.colorSamplers.length; // returns 1
 ___
 
 ### removeAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 *void*
 

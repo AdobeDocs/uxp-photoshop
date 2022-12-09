@@ -34,7 +34,7 @@ Actions are series of commands that can be recorded by user, and can be replayed
 ## Methods
 
 ### delete
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 *void*
 
@@ -43,7 +43,7 @@ Deletes this Action from the Actions panel
 ___
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 [*Action*](/ps_reference/classes/action/)
 
@@ -52,7 +52,7 @@ Creates a copy of this Action, placing it in the same Action Set
 ___
 
 ### play
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 **async** : *Promise*<void\>
 

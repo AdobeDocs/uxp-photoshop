@@ -18,5 +18,6 @@ keywords:
 
 # Objects
 
-Classes that have no methods are defined to be used as parameters for DOM APIs.
+The objects defined here are to be created as object literals for use with DOM methods. 
+As types, they may be used in TypeScript development.
 

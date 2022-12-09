@@ -82,8 +82,9 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | cloudWorkAreaDirectory | *string* | R | 23.0 | Local directory for this cloud document. |
 | colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
 | colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
-| colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of Color Samplers present in the document. |
+| colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of ColorSamplers present in the document. |
 | compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Composite channels in the document. |
+| countItems | [*CountItems*](/ps_reference/classes/countitems/) | R | 24.1 | The collection of CountItems present in the document. |
 | guides | [*Guides*](/ps_reference/classes/guides/) | R | 23.0 | The collection of Guides present in the document. |
 | height | *number* | R | 22.5 | Document&#x27;s height in pixels. |
 | histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
@@ -106,7 +107,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 ## Methods
 
 ### changeMode
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -122,7 +123,7 @@ Changes the color mode of the document.
 ___
 
 ### close
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<void\>
 
@@ -138,7 +139,7 @@ unsaved changes if specified.
 ___
 
 ### closeWithoutSaving
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 *void*
 
@@ -147,7 +148,7 @@ Close the document, discarding all unsaved changes.
 ___
 
 ### convertProfile
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -170,36 +171,62 @@ or one of these below, meaning of the working color spaces or Lab color.
 ___
 
 ### createLayer
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a layer. See [LayerCreateOptions](/ps_reference/objects/createoptions/layercreateoptions/)
+Create a new layer.
 
 ```javascript
-const myEmptyLayer = await doc.createLayer()
-const myLayer = await doc.createLayer({ name: "myLayer", opacity: 80, mode: "colorDodge" })
+await doc.createLayer() // defaults to pixel layer
+```
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Create a new pixel layer.
+
+```javascript
+await doc.createLayer(
+  Constants.LayerKind.NORMAL,
+  { name: "myLayer", opacity: 80, blendMode: Constants.BlendMode.COLORDODGE })
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [*LayerCreateOptions*](/ps_reference/objects/createoptions/layercreateoptions/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `kind` | [*NORMAL*](/ps_reference/modules/constants/#normal) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
+| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Create a new layer group.
+
+```javascript
+await doc.createLayer( Constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `kind` | [*GROUP*](/ps_reference/modules/constants/#group) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
+| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
 
 ___
 
 ### createLayerGroup
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a layer group. See [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
+Create a layer group using options described by [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/).
 
 ```javascript
 const myEmptyGroup = await doc.createLayerGroup()
-const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, mode: "colorDodge" })
+const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, blendMode: "colorDodge" })
 const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [layer1, layer2] })
+const selectedGroup = await doc.createLayerGroup({ name: "group", fromLayers: doc.activeLayers })
 ```
 
 #### Parameters
@@ -210,8 +237,48 @@ const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [l
 
 ___
 
+### createPixelLayer
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Create a pixel layer using options described by [PixelLayerCreateOptions](/ps_reference/objects/createoptions/pixellayercreateoptions/).
+
+```javascript
+await doc.createPixelLayer()
+await doc.createPixelLayer({ name: "myLayer", opacity: 80, fillNeutral: true })
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) |
+
+___
+
+### createTextLayer
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.2</span>
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Create a text layer using options described by [TextLayerCreateOptions](/ps_reference/objects/createoptions/textlayercreateoptions/).
+
+```javascript
+await doc.createTextLayer()
+await doc.createTextLayer({ name: "myTextLayer", contents: "Hello, World!", fontSize: 32 })
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/) |
+
+___
+
 ### crop
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -229,7 +296,7 @@ Crops the document to given bounds
 ___
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -249,7 +316,7 @@ The optional parameter `mergeLayersOnly` indicates whether to only duplicate mer
 ___
 
 ### duplicateLayers
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)[]\>
 
@@ -276,7 +343,7 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 ___
 
 ### flatten
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<void\>
 
@@ -285,7 +352,7 @@ Flatten all layers in the document.
 ___
 
 ### groupLayers
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -305,7 +372,7 @@ const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
 ___
 
 ### linkLayers
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*Layer*](/ps_reference/classes/layer/)[]
 
@@ -320,7 +387,7 @@ Links layers together if possible, and returns a list of linked layers.
 ___
 
 ### mergeVisibleLayers
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -329,7 +396,7 @@ Merges all visible layers in the document into a single layer.
 ___
 
 ### paste
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -345,7 +412,7 @@ set to true and a selection is active, the contents are pasted into the selectio
 ___
 
 ### rasterizeAllLayers
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -354,7 +421,7 @@ Rasterizes all layers.
 ___
 
 ### resizeCanvas
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -379,7 +446,7 @@ await document.resizeCanvas(width + 400, height + 400)
 ___
 
 ### resizeImage
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -402,7 +469,7 @@ await document.resizeImage(800, 600)
 ___
 
 ### revealAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -411,7 +478,7 @@ Expands the document to show clipped sections.
 ___
 
 ### rotate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -426,7 +493,7 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 ___
 
 ### sampleColor
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 **async** : *Promise*<[*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/)\>
 
@@ -454,7 +521,7 @@ console.log(col.rgb);
 ___
 
 ### save
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -472,7 +539,7 @@ unsavedDocument.save()
 ___
 
 ### splitChannels
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)[]\>
 
@@ -482,7 +549,7 @@ documents.
 ___
 
 ### suspendHistory
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -496,7 +563,7 @@ not be suspended in the same history state.
 The callback is passed in a SuspendHistoryContext object,
 which contains the current document in a variable `document`.
 
-For more info and advanced context, see [`core.executeAsModal`](/ps_reference/media/executeasmodal/)
+For more info and advanced context, see [`core.executeAsModal`](../media/executeAsModal)
 API, for which this API is a simple wrapper for.
 
 ```javascript
@@ -516,7 +583,7 @@ API, for which this API is a simple wrapper for.
 ___
 
 ### trap
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -533,7 +600,7 @@ Valid only when [Document.mode](/ps_reference/classes/document/#mode) is `Consta
 ___
 
 ### trim
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
