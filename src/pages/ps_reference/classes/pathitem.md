@@ -23,7 +23,7 @@ which contains sub paths defining its geometry.
 
 Access through the collection in the [Document.pathItems](/ps_reference/classes/document/#pathitems) property. For example, this selects a named path item:
 
-```
+```javascript
 const currentPathItem = app.activeDocument.pathItems.getByName("myPath");
 currentPathItem.select()
 ```

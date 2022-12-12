@@ -20,7 +20,7 @@ keywords:
 
 The top level application object, root of the Photoshop DOM
 
-```
+```javascript
 const app = require('photoshop').app
 ```
 
