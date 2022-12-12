@@ -23,7 +23,6 @@ async function jsFilter(augmentMode, width, height) {
                 if (augmentMode === 'invert') {
                     // get 
                     const imgData = await imaging.getPixels({
-                        documentID: -1,
                         sourceBounds: {
                             left: center.x - (width/2),
                             top: center.y - (height/2),
@@ -73,7 +72,6 @@ async function jsFilter(augmentMode, width, height) {
                     }
                 );
                 await imaging.putPixels({
-                    documentID: -1,
                     layerID: doc.activeLayers[0].id,
                     imageData: imageData,
                     targetBounds: {top: center.x - (height/2), left: center.x - (width/2)},

@@ -102,7 +102,7 @@ The CountItems DOM API is now available in Photoshop.
 
 - Passing a value that is not in [[Constants.blendMode]].
 - Passing a blend mode that is not compatible with the document's color mode or bit depth. Previously, this call would fail silently.
-- Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  This method of Background promotion is not available via the UI.
+- Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  Automatic Background promotion is undesirable as a side effect in this case.  This action is not available via the UI.
 
 - The [CountItem class](../classes/countitem) implements the following properties and methods: 
   - `typename`, `parent`, `itemIndex`, `groupIndex`, `position`

@@ -8,7 +8,7 @@ sidebar_label: "Imaging API Beta"
 
 The Imaging API *Beta* allows JavaScript to work directly with image data in Photoshop documents.
 
-These APIs are currently *beta* which means that they are not complete and may change in the future.  We present them here as a testing ground for this new capability.
+These APIs are currently *beta* which means that they are not complete and may change in the future.  We present them here as a testing ground for this new capability.  Please send comments, questions or bugs via the Beta Feedback panel (under the Windows menu) or directly at the [Beta forum](https://community.adobe.com/t5/photoshop-beta/ct-p/ct-photoshop-beta).
 
 The functionality has the following known issues:
 * The API is only available in Photoshop (Beta) builds
@@ -25,7 +25,7 @@ const imaging = require("photoshop").imaging_beta;
 Image data is expressed as a collection of `pixels`. A pixel represents all color information for a single point in the image. A pixel consists of one or more components of color values and alpha information.
 
 An RGB pixel with alpha information has four components: "red", "green", "blue", and "alpha". An opaque RGB pixel has only three components. Including an alpha channel as a fourth yields RGBA.
-An opaque gray scale pixel has one component. A gray scale pixel with alpha, has two components.
+An opaque gray scale pixel has one component. A gray scale pixel with alpha has two components.
 
 In order to properly interpret pixel data, Photoshop needs to know which color profile the data is expressed in. An example of a color profile is `"Adobe RGB (1998)"`. All image data here will include the associated profile, and Photoshop will perform color conversions when needed. You can get the list of available color profiles by invoking [[Photoshop.getColorProfiles]] on the app object:
 ```javascript
@@ -50,7 +50,7 @@ Image data is represented by a `PhotoshopImageData` instance. This instance has 
 | height        | Number      | The height of the image data in pixels. |
 | colorSpace    | String      | The color space (or mode) for the image data. This can be `"RGB"`, `"Grayscale"`, `"Lab"`. |
 | colorProfile  | String      | The color profile for the image data. For example, `"sRGB IEC61966-2.1"`. |
-| hasAlpha      | Boolean     | True if the image data includes an alpha channel. |
+| hasAlpha      | Boolean     | True if the image data includes an alpha channel. Only available with RGB. |
 | components    | Number      | Number of components per pixel. This is 3 for RGB, 4 for RGBA and so forth. |
 | componentSize | Number      | Number of bits per component. This can be 8, 16, or 32.|
 | pixelFormat   | String      | Memory layout (order) of components in a pixel. Could be `"RGB"`, `"RGBA"`, `"Gray"`, or `"LAB"`. |
@@ -69,7 +69,11 @@ The value range for pixel components depend on the componentSize.
 | 16             | 0..32768    |          | 
 | 32             | 0..1+       | High dynamic range images may have component values that are below 0 or above 1.0 |
 
-Instances of `PhotoshopImageData` cannot be created explicitly by JavaScript, but are returned from various Imaging API methods.
+Instances of `PhotoshopImageData` cannot be created explicitly by JavaScript, but are returned from Imaging API methods.
+* [getPixels](#getpixels)
+* [getLayerMask](#getlayermask)
+* [getSelection](#getselection)
+* [createImageDataFromBuffer](#createimagedatafrombuffer)
 
 
 ---
@@ -114,11 +118,15 @@ The method is asynchronous, and thus returns a promise with the described data t
 
 Example:
 ```javascript
-const pixelData = await image.getData()
+const pixelData = await imageObj.imageData.getData()
 ```
 
 #### `dispose`
 Calling this synchronous method will release the contained image data. Doing so will reduce memory usage faster then waiting for the JavaScript garbage collector to run.
+
+```javascript
+pixelData.dispose();
+```
 
 
 ---
@@ -133,14 +141,15 @@ const imageObj = await imaging.getPixels(options);
 Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If missing, or negative, then the source is the active document.
    * `layerID` | Number - Optional.  The id of the source layer. If the value is not provided then the API returns pixels from the composite document image.
-   * `sourceBounds` | Object - Optional.  The region whose pixels should be returned. If the value is not provided, then pixels from the entire layer or document are is returned. The provided bounds will be trimmed to only that region that contains pixel data. In this event, the returned `sourceBounds` will reflect this smaller region. The provided object must describe a rectangle using the following number-value properties:
-      * `left`, `top`, `right`, and `bottom`
+   * `sourceBounds` | Object - Optional.  The region whose pixels should be returned. If the value is not provided, then pixels from the entire layer or document are is returned. The provided bounds will be trimmed to only that region that contains pixel data. In this event, the returned `sourceBounds` will reflect this smaller region. The provided object must describe a rectangle using one the following number-value property sets:
+        * `left`, `top`, `right`, and `bottom`
+        * `left`, `top`, `width`, and `height`
    * `targetSize` | Object - Optional.  The dimensions of the returned image. If this value is not provided then the returned size will match the requested size. That is, no scaling will be performed on the returned pixels. The provided object must have one or more of the following attributes:
       * `width` and `height`. If only one dimension is included, then the returned image data is scaled proportionally to match the requested dimension.
-   * `colorSpace` | String - Optional. Requested color space of the returned pixels. If omitted, then the color space of the source document is used.
+   * `colorSpace` | String - Optional. Requested color space of the returned pixels. If omitted, then the color space of the source document is used to convert colors.
    * `colorProfile` | String - Optional. The name of a color profile to apply to the returned pixels. If omitted, then the resulting color profile depends on the requested color space:
       * If the requested color space matches the source document, then the returned data will use the color profile of the source document.
-      * If the requested color space is different from the source document, then the working color profile for that color space is used.
+      * If the requested color space is different from the source document, then the working color profile for that color space is used to convert colors.
    * `componentSize` | Number - Optional. The requested `componentSize` of the returned image data. If this property is omitted then the `componentSize` of the source pixel data is used. The value can be: -1 (for using the source document's depth), 8 , 16, or 32.
    * `applyAlpha` | Boolean - Optional. If true, then RGBA pixels will be converted to RGB by matting on white.
    * a possible alpha channel is applied to the pixels before returning. The returned imageData property will not contain an alpha channel.
@@ -156,13 +165,12 @@ Note: the `components` property of the image data depends on whether or not the 
 
 If the targetSize is smaller than the requested region, then the resulting image data will be scaled down. When scaling, Photoshop may use a smaller (cached) version of the image canvas. This is known as a pyramid level. The number of pyramid levels that are available in a document is determined by the preference: *"Performance Cache Levels"*. Using a cache level may result in dramatic performance improvements. The returned level indicates which level that was used. Level 0 indicates the full resolution canvas. Level 1 indicates a cache that is half of the size of the full resolution, and so forth. The returned `sourceBounds` are relative to the bounds of the source cache level (not relative to the full resolution bounds).
 
-The valid bounds for the `sourceBounds` depend on the pixel source. The origin of the composite image is `(0, 0)` and the size is given by the properties `width` and `height` on the DOM object for the source document. The origin of a pixel layer can be different from `(0, 0)`. You can get the valid pixel bounds for a layer by calling `boundsNoEffects` on the DOM object corresponding to the source layer.
+The valid bounds for the `sourceBounds` depend on the pixel source. The origin of the composite image is `(0, 0)`,and the size is given by the properties `width` and `height` on the DOM object for the source document. The origin of a pixel layer can be different from `(0, 0)`. You can get the valid pixel bounds for a layer by calling `boundsNoEffects` on the DOM object corresponding to the source layer.
 
 
 Example - create a thumbnail of an region of the target document that is 100 pixels tall.
 ```javascript
 const thumbnail = await imaging.getPixels({
-    documentID: -1,
     sourceBounds: { left: 0, top: 0, right: 300, bottom: 300 },
     targetSize: { height: 100 }
 });
@@ -189,7 +197,6 @@ Options describing the operation.
 Example:
 ```javascript
 await imaging.putPixels({
-    documentID: -1,
     layerID: 123
     imageData: imageData
 });
@@ -206,7 +213,7 @@ const imageObj = await imaging.getLayerMask(options);
 Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If the number is missing or negative, then the source will be the active document.
    * `layerID` | Number - ***Required***.  The id of the source layer.
-   * `kind` | String - Optional. The kind of mask to return. There are two options: `"user"` or `"vector"`. The default value is `"user"` which is the standard raster kind applied by "Add Layer Mask" button.
+   * `kind` | String - Optional. The kind of mask to return. There are two options: `"user"` or `"vector"`. The default value is `"user"` which is the kind (pixel) applied by "Add Layer Mask" button.
    * `sourceBounds` | Object - Optional.  The region whose pixels should be returned. If the value is not provided, then pixels from the entire mask are returned. The provided object must describe a rectangle using the following number properties:
       * `left`, `top`, `right`, and `bottom`
    * `targetSize` | Object - Optional.  The dimensions of the returned image. If this value is not provided then the returned size will match the requested size (i.e. no scaling is performed on the returned pixels). The provided object must have one or more of the following attributes:
@@ -232,7 +239,7 @@ const imageObj = await imaging.getLayerMask({
 
 ---
 ### putLayerMask
-This API allows JavaScript to edit the pixels of a layer's mask.  At this time only standard raster masks are editable.   
+This API allows JavaScript to edit the pixels of a layer's mask.  At this time, only pixel masks are editable. In the UI, they are what is referred to as a "Layer Mask".  
 
 ```javascript
 await imaging.putLayerMask(options);
@@ -251,7 +258,6 @@ Options describing the operation.
 Example:
 ```javascript
 await imaging.putLayerMask({
-    documentID: -1,
     layerID: 123
     imageData: grayImageData
 });
@@ -305,7 +311,7 @@ Options describing the operation.
 
 Example:
 ```javascript
-await imaging.putSelection({ documentID: -1, imageData: grayImageData });
+await imaging.putSelection({ imageData: grayImageData });
 ```
 
 
