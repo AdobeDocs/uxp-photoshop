@@ -47,7 +47,7 @@ const redChannel = app.activeDocument.channels[0]
 ## Methods
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<void\>
 
@@ -72,7 +72,7 @@ await channel.duplicate(newDoc)
 ___
 
 ### merge
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
@@ -81,7 +81,7 @@ Merges a Spot Color channel into the component channels.
 ___
 
 ### remove
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 

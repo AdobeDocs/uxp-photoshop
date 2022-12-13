@@ -20,7 +20,7 @@ keywords:
 
 The top level application object, root of the Photoshop DOM
 
-```
+```javascript
 const app = require('photoshop').app
 ```
 
@@ -44,7 +44,7 @@ From here you can access open documents, tools, UI elements and run commands or 
 ## Methods
 
 ### batchPlay
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
 
@@ -62,7 +62,7 @@ without updating the UI. This API is subject to change and may be accessible in 
 ___
 
 ### bringToFront
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 
@@ -71,7 +71,7 @@ Brings application to focus, useful when your script ends, or requires an input.
 ___
 
 ### convertUnits
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.4</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.4</span>
 
 *number*
 
@@ -102,7 +102,7 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 ___
 
 ### createDocument
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -140,8 +140,23 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 ___
 
+### getColorProfiles
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+
+*string*[]
+
+List of installed color profiles, for RGB and Gray modes.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `colorMode` | *string* | 'RGB' | Specify which color mode's profiles to list. (default: "RGB", options: "Gray") |
+
+___
+
 ### open
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
 
@@ -169,7 +184,7 @@ const document = await app.open();
 ___
 
 ### showAlert
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 

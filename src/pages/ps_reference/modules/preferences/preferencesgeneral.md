@@ -21,3 +21,7 @@ keywords:
 ## Classes
 
 - [PreferencesGeneral](/ps_reference/classes/preferences/preferencesgeneral/)
+
+## Interfaces
+
+- [ColorPickerArg](/ps_reference/interfaces/colorpickerarg/)

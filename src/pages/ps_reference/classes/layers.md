@@ -48,7 +48,7 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
@@ -61,7 +61,7 @@ let newDoc1 = await app.activeDocument.layers.add();
 ___
 
 ### getByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 [*Layer*](/ps_reference/classes/layer/)
 

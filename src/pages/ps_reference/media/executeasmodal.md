@@ -100,7 +100,7 @@ await require("photoshop").core.executeAsModal(targetFunction, {"commandName": "
 This sample will run until the user cancels the interaction. After the user cancels, the modal scope becomes cancelled, and the next call to batchPlay will raise an exception and exit the target function.
 
 Due to the design of the underlying JavaScript runtime, JavaScript can only be cancelled when it is *interruptible*. JavaScript can be interrupted when it is waiting on the resolution of a promise. Without the "await" keyword in the above example, the JavaScript function would not terminate when the user cancels. Having a tight loop such as the following also does not allow for automatic cancellation of the JavaScript function.
-```
+```javascript
 async function targetFunction(executionContext) {
   while (true) {
     calculateSomeDigitsOfPi();
@@ -146,7 +146,7 @@ Setting a value will switch the progress bar to be a determinate progress bar & 
 
 JavaScript can change the commandName that is shown in the progress UI by using the "commandName" property. This can be used to inform the user about the current stage of the operation. Example:
 ```javascript
-    executionContext.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
+executionContext.reportProgress({"value": 0.9, "commandName": "Finishing Up"});
 ```
 ![progress bar](./assets/progress-bar-2.png)
 

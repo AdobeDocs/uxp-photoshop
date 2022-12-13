@@ -50,7 +50,7 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*Guide*](/ps_reference/classes/guide/)
 
@@ -70,7 +70,7 @@ Adds a guide for the collection at the given coordinate and direction
 ___
 
 ### removeAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 

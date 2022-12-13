@@ -36,7 +36,7 @@ Actions panel will have a hierarchy of Action Sets that contain a list of Action
 ## Methods
 
 ### delete
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 *void*
 
@@ -45,7 +45,7 @@ Deletes this Action Set from the Actions panel
 ___
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 [*ActionSet*](/ps_reference/classes/actionset/)
 
@@ -54,7 +54,7 @@ Creates a copy of this Action Set
 ___
 
 ### play
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.1</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
 
 **async** : *Promise*<void\>
 

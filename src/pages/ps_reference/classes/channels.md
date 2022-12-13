@@ -48,7 +48,7 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*Channel*](/ps_reference/classes/channel/)
 
@@ -57,7 +57,7 @@ Create a new alpha channel in this document.
 ___
 
 ### getByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 [*Channel*](/ps_reference/classes/channel/)
 
@@ -72,7 +72,7 @@ Find the first channel with the matching name.
 ___
 
 ### removeAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *void*
 

@@ -63,7 +63,7 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 ## Methods
 
 ### move
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 *void*
 
@@ -80,7 +80,7 @@ Moves the ColorSampler object to the given position
 ___
 
 ### remove
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">24.0</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
 *void*
 

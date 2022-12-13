@@ -42,7 +42,7 @@ see [PathPointInfo](/ps_reference/classes/pathpointinfo/) and [SubPathInfo](/ps_
 ## Methods
 
 ### add
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 [*PathItem*](/ps_reference/classes/pathitem/)
 
@@ -62,7 +62,7 @@ and those [SubPathItem](/ps_reference/classes/subpathitem/) objects are added to
 ___
 
 ### getByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 [*PathItem*](/ps_reference/classes/pathitem/)
 
@@ -77,7 +77,7 @@ Retrieve the first PathItem matching the given name.
 ___
 
 ### removeAll
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *void*
 
