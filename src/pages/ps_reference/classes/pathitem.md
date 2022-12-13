@@ -23,7 +23,7 @@ which contains sub paths defining its geometry.
 
 Access through the collection in the [Document.pathItems](/ps_reference/classes/document/#pathitems) property. For example, this selects a named path item:
 
-```
+```javascript
 const currentPathItem = app.activeDocument.pathItems.getByName("myPath");
 currentPathItem.select()
 ```
@@ -47,7 +47,7 @@ path represented by all of the subpaths.
 ## Methods
 
 ### deselect
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -56,7 +56,7 @@ Deselects this `pathItem` object.
 ___
 
 ### duplicate
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
 
@@ -71,7 +71,7 @@ Duplicates the `pathItem` object with the new name, returning the duplicate.
 ___
 
 ### fillPath
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -98,7 +98,7 @@ If `wholePath` is true, all subpaths are used when doing the fill.
 ___
 
 ### makeClippingPath
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -115,7 +115,7 @@ Makes this the clipping path for this document.
 ___
 
 ### makeSelection
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -136,7 +136,7 @@ Makes a selection object whose border is this path.
 ___
 
 ### remove
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -145,7 +145,7 @@ Deletes this object.
 ___
 
 ### select
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 
@@ -154,7 +154,7 @@ Makes this the active or selected `PathItem` object.
 ___
 
 ### strokePath
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">23.3</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 *Promise*<void\>
 

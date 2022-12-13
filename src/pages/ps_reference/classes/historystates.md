@@ -53,7 +53,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 ## Methods
 
 ### getByName
-<span class="minversion" style="float:left; margin-left:36em; opacity:0.5;">22.5</span>
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
 [*HistoryState*](/ps_reference/classes/historystate/)
 

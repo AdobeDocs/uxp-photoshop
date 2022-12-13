@@ -94,7 +94,7 @@ module.exports = {
             path: "/guides/code_samples/"
           },
           {
-            title: "Developer Tool »",
+            title: "Developer Tool",
             path: "/guides/devtool/",
             pages: [
               {
@@ -128,7 +128,7 @@ module.exports = {
             path: "/guides/legacy-extensibility/",
           },
           {
-            title: "Migrating to UXP »",
+            title: "Migrating to UXP",
             path: "/guides/uxp_for_you/",
             pages: [
               {
@@ -154,7 +154,7 @@ module.exports = {
             ]
           },
           {
-            title: "Share »",
+            title: "Share",
             path: "/guides/distribution/",
             pages: [
               {
@@ -176,7 +176,7 @@ module.exports = {
             ],
           },
           {
-            title: "Other Topics »",
+            title: "Other Topics",
             path: "/guides/uxp_guide/uxp-misc/",
             pages: [
               {
