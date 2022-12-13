@@ -59,21 +59,11 @@ Adds a Layer Comp to the document's collection. If no options are given, only vi
 
 Note: This command will fail if the document is flat, that is, only a Background and no other layers.
 
-```javascript
-const options = { 
-  name: "mockup",
-  comment: "First attempt",
-  visibility: true,
-  position: true
- };
-await require('photoshop').app.activeDocument.layerComps.add(options);
-```
-
 #### Parameters
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `options` | [*LayerCompCreateOptions*](/ps_reference/objects/createoptions/layercompcreateoptions/) | {} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/) |
+| `options` | [*LayerCompCreateOptions*](/ps_reference/objects/createoptions/layercompcreateoptions/) | {} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/) ```javascript const options = {    name: "mockup",   comment: "First attempt",   visibility: true,   position: true  }; await require('photoshop').app.activeDocument.layerComps.add(options); ``` |
 
 ___
 
