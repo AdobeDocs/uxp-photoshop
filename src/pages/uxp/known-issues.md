@@ -40,9 +40,6 @@ The following issues are known. Please check this page with future updates, as k
 * The `location` attribute for `sp-tooltip` seems like it would control the position of the tooltip relative to its attachment. This is not how the attribute actually works -- it instead controls the tooltip's "tip" direction. If `location` is set to `bottom`, the tip will be pointed upwards under the assumption that your code has already placed the tooltip below the control. (PS-56708) _Better tooltip handling is coming in a future release_.
 * The numeric `sp-textfield` can trigger numeric validation errors, even when the entered value would seem to be correct. This will be addressed in a future release. The limitation on valid ranges is an issue with numeric fields in Photoshop in general and is a separate issue. (PS-57698)
 
-## WebView
-* Mouse/Keyboard events within Webview doesn't work in XD v55 and Win 10 due to a [Microsoft issue](https://github.com/microsoft/microsoft-ui-xaml/issues/6427). Fix for this is in progress.
-
 ## Events
 
 * `uxpshowpanel` and the corresponding `show` callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future. (PS-57284)
@@ -65,8 +62,8 @@ The following issues are known. Please check this page with future updates, as k
 * `<label for="id"/>` is not supported. Wrap `<label>` around the control instead.
 * `<input type="file" />` is not supported.
 * `<input type="color" />` is not supported.
-* Using unitless values in `width` and `height` attributes are not supported in UXP 3.1. Use `px`, or CSS styles.
-* `<label>` uses `inline-flex` layout semantics in UXP 3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
+* Using unitless values in `width` and `height` attributes are not supported in UXP v3.1. Use `px`, or CSS styles.
+* `<label>` uses `inline-flex` layout semantics in UXP v3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
 * `<progress>` is not theme aware.
 * Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
 
