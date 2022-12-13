@@ -1,5 +1,5 @@
 module.exports = [{
-	"title": "Classes »",
+	"title": "Classes",
 	"path": "/ps_reference/classes/",
 	"header": true,
 	"pages": [
@@ -108,7 +108,7 @@ module.exports = [{
 			"path": "/ps_reference/classes/photoshop/"
 		},
 		{
-			"title": "Preferences »",
+			"title": "Preferences",
 			"path": "/ps_reference/classes/preferences",
 			"header": true,
 			"pages": [
@@ -196,7 +196,7 @@ module.exports = [{
 		}
 	]
 },{
-	"title": "Objects »",
+	"title": "Objects",
 	"path": "/ps_reference/objects/",
 	"header": true,
 	"pages": [
@@ -205,7 +205,7 @@ module.exports = [{
 			"path": "/ps_reference/objects/bounds/"
 		},
 		{
-			"title": "Conversion Options »",
+			"title": "Conversion Options",
 			"path": "/ps_reference/objects/conversionoptions",
 			"header": true,
 			"pages": [
@@ -220,7 +220,7 @@ module.exports = [{
 			]
 		},
 		{
-			"title": "Create Options »",
+			"title": "Create Options",
 			"path": "/ps_reference/objects/createoptions",
 			"header": true,
 			"pages": [
@@ -247,7 +247,7 @@ module.exports = [{
 			]
 		},
 		{
-			"title": "Save Options »",
+			"title": "Save Options",
 			"path": "/ps_reference/objects/saveoptions",
 			"header": true,
 			"pages": [
@@ -279,7 +279,7 @@ module.exports = [{
 		}
 	]
 },{
-	"title": "Colors »",
+	"title": "Colors",
 	"path": "/ps_reference/colors/",
 	"header": true,
 	"pages": [
@@ -309,7 +309,7 @@ module.exports = [{
 		}
 	]
 },{
-	"title": "Advanced »",
+	"title": "Advanced",
 	"path": "/ps_reference/media/",
 	"pages": [
 		{
