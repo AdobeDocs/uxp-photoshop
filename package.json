@@ -33,7 +33,7 @@
     "clean": "gatsby clean"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^8.30.0"
   },
   "packageManager": "yarn@3.2.1"
 }
