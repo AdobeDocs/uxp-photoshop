@@ -4,6 +4,28 @@ index_desc: Change Log in UXP version
 
 # UXP Changelog
 
+## UXP v6.4
+
+### New
+- [UXP-20237]: Webviews for Panels
+- [UXP-20191]: Support Path Module APIs
+- [UXP-20247]: Script can run fsapi with full access in localFileSystem
+
+### Bugs Fixes
+- [UXP-19364]: PluginManifest parsing / Load Plugin errors not logged in UDT
+- [UXP-19978]: Error shown in UDT APP logs on Plugin UnLoad
+- [UXP-20059]: UXP script : file session tokens are not getting created
+- [UXP-20199]: Error message and stack are empty in case of reject("error string") executed in script
+- [UXP-20121]: [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
+- [UXP-20039]: After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
+- [UXP-19995]: Provide an API to programmatically close dialog in pop-out/theatre mode.
+- [UXP-20095]: Plugin Data folder shouldn't be created for scripts
+- [UXP-20168]: Crash on exit
+- [UXP-20215]: script.setResult("kSuccess") not working
+- [UXP-19851]: Resource Leaks in Window Dialog on UWP
+- [UXP-19920]: Privilege plugin fail to add in XD in certain cases
+- Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
+
 ## UXP v6.3
 
 ### New

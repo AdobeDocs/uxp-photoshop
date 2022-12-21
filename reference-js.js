@@ -245,6 +245,10 @@ module.exports=[
           }
         ],
         "path": "/uxp/reference-js/Global Members/HTML Elements/"
+      },
+      {
+        "title": "Path",
+        "path": "/uxp/reference-js/Global Members/Path/"
       }
     ],
     "path": "/uxp/reference-js/Global Members/"
