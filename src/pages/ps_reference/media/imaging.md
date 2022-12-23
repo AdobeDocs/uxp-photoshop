@@ -33,6 +33,7 @@ const rgbProfiles = await require("photoshop").app.getColorProfiles("RGB");
 
 const grayProfiles = await require("photoshop").app.getColorProfiles("Gray");
 ```
+When working with 32 bit images, Photoshop will return color profile names that include the description 'Linear Profile'. An example is `"(Linear RGB Profile)"`. This text should not be included when specifying a profile. If a document profile is listed as `Adobe RGB (1998) (Linear RGB Profile)`, then you would use the string `Adobe RGB (1998)` when specifying a profile with a method such as createImageDataFromBuffer.
 
 Photoshop supports two ways to store pixel information in memory:
 * `chunky`: Components of a single pixels are stored consecutively in memory. If you have two opaque RGB pixels (pixel 1 and pixel 2), then they will be stored as: `[R1, G1, B1, R2, G2, B2]`.
@@ -107,7 +108,7 @@ Return pixel information from an `PhotoshopImageData` instance as a typed array.
 | -------------- | ----------- |
 | 8              | Uint8Array  |
 | 16             | Uint16Array |
-| 32             | FloatArray  |
+| 32             | Float32Array  |
 
 The method takes an options argument. This argument can be used to specify attributes of the returned data. Possible options include:
 * `chunky` | Boolean - Optional. If true then the data is returned as chunky data. If false, then data is returned in the planar format. The default value is true.
@@ -330,7 +331,7 @@ Options describing the operation.
    * `height` | Number - ***Required***. The height of the image.
    * `components` | Number - ***Required***. Number of components per pixel.
    * `chunky` | Boolean - Optional. Describes pixel layout. See discussion above. The default value is true.
-   * `colorProfile` | String - ***Required***. Describes the color profile associated with the image data.
+   * `colorProfile` | String - ***Required***. Describes the color profile associated with the image data. See note regarding color profiles and 32 bit pixel data at the beginning of this document.
    * `colorSpace` | String - ***Required***. Describes the color space associated with the image data. Can be `"RGB"` or `"Grayscale"`
 
 Return value: `Promise<PhotoshopImageData>`
