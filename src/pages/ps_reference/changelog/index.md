@@ -6,7 +6,7 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop Beta (24.2 February 2022)
+## Photoshop Beta (24.2 February 2023)
 
 ### Imaging API Beta
 We are excited to provide an entirely new capability with the [Imaging API](../media/imaging).  Anyone that has been eagerly awaiting the ability to directly get and set pixels in a document should head to the [dedicated page](../media/imaging).  Note: we are serious about the Beta label.  While this is exciting new territory, keep in mind that the API is in an early form.  We want your feedback to help guide it toward maturity.
