@@ -8,28 +8,6 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 ## Photoshop Beta (24.2 February 2022)
 
-### UXP 6.4 Integration
-From the [UXP team](../../uxp/) we have integrated the following update.
-### New
-- Webviews for Panels
-- Support Path Module APIs
-- Script can run fsapi with full access in localFileSystem
-
-### Bugs Fixes
-- PluginManifest parsing / Load Plugin errors not logged in UDT
-- Error shown in UDT APP logs on Plugin UnLoad
-- UXP script : file session tokens are not getting created
-- Error message and stack are empty in case of reject("error string") executed in script
-- [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
-- After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
-- Provide an API to programmatically close dialog in pop-out/theatre mode.
-- Plugin Data folder shouldn't be created for scripts
-- Crash on exit
-- script.setResult("kSuccess") not working
-- Resource Leaks in Window Dialog on UWP
-- Privilege plugin fail to add in XD in certain cases
-- Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
-
 ### Imaging API Beta
 We are excited to provide an entirely new capability with the [Imaging API](../media/imaging).  Anyone that has been eagerly awaiting the ability to directly get and set pixels in a document should head to the [dedicated page](../media/imaging).  Note: we are serious about the Beta label.  While this is exciting new territory, keep in mind that the API is in an early form.  We want your feedback to help guide it toward maturity.
 
@@ -130,6 +108,42 @@ The CountItems DOM API is now available in Photoshop.
   - `typename`, `parent`, `itemIndex`, `groupIndex`, `position`
   - `move()`, `remove()`
   - 
+
+  
+### UXP 
+From the [UXP team](../../uxp/) we have integrated the following update.
+
+
+#### **v6.4 Integration**
+
+#### New
+- Webviews for Panels
+- Support Path Module APIs
+- Script can run fsapi with full access in localFileSystem
+
+#### Bugs Fixes
+- PluginManifest parsing / Load Plugin errors not logged in UDT
+- Error shown in UDT APP logs on Plugin UnLoad
+- UXP script : file session tokens are not getting created
+- Error message and stack are empty in case of reject("error string") executed in script
+- [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
+- After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
+- Provide an API to programmatically close dialog in pop-out/theatre mode.
+- Plugin Data folder shouldn't be created for scripts
+- Crash on exit
+- script.setResult("kSuccess") not working
+- Resource Leaks in Window Dialog on UWP
+- Privilege plugin fail to add in XD in certain cases
+- Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
+
+
+#### **v6.5 Integration** 
+
+#### New
+- Allow unrestricted relative paths in require from scripts
+- [getEntryWithUrl](../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
+
+
 
 ## Photoshop 24.0 (October 2022)
 
