@@ -18,5 +18,5 @@ index_desc: General information on UXP and its dependencies for 3rd party plugin
 ### UXP Features Supported in Applications
 | Application | Plugin Support | UXP Scripting Support |
 | ------------- | ------------- | ------------- | 
-|Photoshop| ✅	 | ✅ from 24.1|
+|Photoshop| ✅	 | ✅ from 23.5|
 |InDesign| -	 | ✅ from 18.0|
