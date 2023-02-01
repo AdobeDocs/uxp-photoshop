@@ -82,6 +82,16 @@ The UXP DOM features a variety of new text-related APIs, that provide a more rob
   - verticalDistortion
   - reset()
 
+### UXP 
+From the [UXP team](../../uxp/) we have integrated the following update.
+
+#### v6.5 Integration
+
+##### New
+- Allow unrestricted relative paths in require from scripts
+- [getEntryWithUrl](../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
+
+
 ----
 ## Photoshop 24.1 (December 2022)
 
@@ -113,15 +123,14 @@ The CountItems DOM API is now available in Photoshop.
 ### UXP 
 From the [UXP team](../../uxp/) we have integrated the following update.
 
+#### v6.4 Integration
 
-#### **v6.4 Integration**
-
-#### New
+##### New
 - Webviews for Panels
 - Support Path Module APIs
 - Script can run fsapi with full access in localFileSystem
 
-#### Bugs Fixes
+##### Bugs Fixes
 - PluginManifest parsing / Load Plugin errors not logged in UDT
 - Error shown in UDT APP logs on Plugin UnLoad
 - UXP script : file session tokens are not getting created
@@ -135,14 +144,6 @@ From the [UXP team](../../uxp/) we have integrated the following update.
 - Resource Leaks in Window Dialog on UWP
 - Privilege plugin fail to add in XD in certain cases
 - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
-
-
-#### **v6.5 Integration** 
-
-#### New
-- Allow unrestricted relative paths in require from scripts
-- [getEntryWithUrl](../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
-
 
 
 ## Photoshop 24.0 (October 2022)
