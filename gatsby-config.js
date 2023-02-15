@@ -164,15 +164,7 @@ module.exports = {
               {
                 title: "Options for Distribution",
                 path: "/guides/distribution/distribution-options/",
-              },
-              {
-                title: "Submission and Review",
-                path: "/guides/distribution/submission-checklist/",
-              },
-              {
-                title: "Marketing Your Plugin",
-                path: "/guides/distribution/marketing/",
-              },
+              }
             ],
           },
           {
@@ -272,7 +264,7 @@ module.exports = {
         title: "How It Works",
         path: "/scripting/how-it-works/"
       },
-      {  
+      {
         title: "Samples",
         path: "/scripting/samples/"
       },

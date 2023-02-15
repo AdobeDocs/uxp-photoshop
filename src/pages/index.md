@@ -105,16 +105,4 @@ Explore script samples to start accomplishing tasks within Photoshop.
 
 Packaging your UXP plugin is a breeze. In many cases, it's just one click away.
 
-<DiscoverBlock slots="link, text"/>
-
-[Submission and Review](guides/distribution/submission-checklist/)
-
-Learn about the review process and associated timelines for Creative Cloud plugins and integrations, and follow our review submission checklist.
-
-<DiscoverBlock slots="link, text"/>
-
-[Marketing Your Plugin](guides/distribution/marketing/)
-
-Submitting your plugin is only half the battle. Now you have to tell people about it. Read this for some ideas on how to best market your plugin.
-
 <Community />

@@ -78,7 +78,7 @@ Here are the definitions of the keywords in the "Required" column:
 Key path | Type | Description | Required
 ---------|------|-------------|---------
 `manifestVersion` | `number` | The version of the manifest. For Photoshop, this should be `4` or higher. | Develop / Publish
-`id`     | `string` | Unique identifier for your plugin. You can get your unique ID on the [Adobe Developer Console](https://console.adobe.io/projects).%7C Develop / Publish
+`id`     | `string` | Unique identifier for your plugin. You can get your unique ID on the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/overview/guides/plugin_id/).%7C Develop / Publish
 `name`   | `string` | The name should be 3 - 45 characters. We recommend your plugin name matches the _project name_ you created when getting your plugin ID from the Adobe Developer Console. | Develop / Publish
 `version`| `string` | Version number of your plugin in `x.y.z` format. <br/>Version must be three segments and each version component must be between `0` and `99`. | Develop / Publish
 `main`   | `string` | Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. | Optional (defaults to `main.js`)
