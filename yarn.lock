@@ -24,10 +24,10 @@
     globby "^11.0.1"
     graphql-fetch "^1.0.1"
 
-"@adobe/gatsby-theme-aio@4.7.5":
-  version "4.7.5"
-  resolved "https://registry.yarnpkg.com/@adobe/gatsby-theme-aio/-/gatsby-theme-aio-4.7.5.tgz#99f7c3d46ec3ba730a7caf5066b023c2657c9eb5"
-  integrity sha512-E65L89wpkyhTE8ZMHkc/7EINYdJBjduoj50hlSzwUSTB54x07UrDM/EP/O4ooZ5LL/imsXRfzgCVYLY+OwLI5Q==
+"@adobe/gatsby-theme-aio@4.8.1":
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/@adobe/gatsby-theme-aio/-/gatsby-theme-aio-4.8.1.tgz#31f539da4e59be3eb85fbdf1edaf1487f1002b51"
+  integrity sha512-A0SGJMvrrsaCVo78xL3xyhwg6qHpHNWaUtxU70R0RZ7NSRDYNf9rYV5tI/dCVPpjB1eynLfUYmlwM6JIXnKFkg==
   dependencies:
     "@adobe/focus-ring-polyfill" "^0.1.5"
     "@adobe/gatsby-source-github-file-contributors" "^0.3.1"
@@ -78,7 +78,7 @@
     gatsby-plugin-mdx-embed "^1.0.0"
     gatsby-plugin-preact "^6.23.0"
     gatsby-plugin-react-helmet "^5.23.0"
-    gatsby-plugin-sharp "4.23.0"
+    gatsby-plugin-sharp "^4.23.0"
     gatsby-remark-autolink-headers "^5.23.0"
     gatsby-remark-copy-linked-files "^5.23.0"
     gatsby-remark-images-remote "^2.1.1"
@@ -6913,7 +6913,7 @@ gatsby-cli@^4.22.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0, gatsby-core-utils@^3.22.0, gatsby-core-utils@^3.23.0, gatsby-core-utils@^3.25.0:
+gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0, gatsby-core-utils@^3.22.0, gatsby-core-utils@^3.25.0:
   version "3.25.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.25.0.tgz#6ebfd2b8c95f3bbc3b52a9619a1ff26c68109c25"
   integrity sha512-lmMDwbnKpqAi+8WWd7MvCTCx3E0u7j8sbVgydERNCYVxKVpzD/aLCH4WPb4EE9m1H1rSm76w0Z+MaentyB/c/Q==
@@ -7103,26 +7103,23 @@ gatsby-plugin-react-helmet@^5.23.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@4.23.0:
-  version "4.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.23.0.tgz#c5e5e6fb548380cdad6cd5120bd47d2a5716756a"
-  integrity sha512-w3uIP0W9hgsaoby529mg2UAqeN0fyw4JyT4a5b2x4u4odjfaOuesl4mcbjqfTESwRgwRWxs406Afq9IGIW2wtw==
+gatsby-plugin-sharp@^4.23.0:
+  version "4.25.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.25.0.tgz#9af5e1be2b82c67aa64711675850f0ba4e7e3b0e"
+  integrity sha512-8XiSKibQyp6pOFHEkEdRCpoDA3Ywcq5PKftNMExZ51MormT0+WqRC7ynuU+0fzktDTbbSyREvblKa+21Id+rRA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    "@gatsbyjs/potrace" "^2.3.0"
     async "^3.2.4"
     bluebird "^3.7.2"
     debug "^4.3.4"
     filenamify "^4.3.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.23.0"
-    gatsby-plugin-utils "^3.17.0"
+    gatsby-core-utils "^3.25.0"
+    gatsby-plugin-utils "^3.19.0"
     lodash "^4.17.21"
-    mini-svg-data-uri "^1.4.4"
     probe-image-size "^7.2.3"
     semver "^7.3.7"
     sharp "^0.30.7"
-    svgo "^2.8.0"
 
 gatsby-plugin-typescript@^4.22.0:
   version "4.25.0"
@@ -9920,11 +9917,6 @@ mini-css-extract-plugin@1.6.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
     webpack-sources "^1.1.0"
-
-mini-svg-data-uri@^1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
-  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -13204,7 +13196,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo@^2.7.0, svgo@^2.8.0:
+svgo@^2.7.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-2.8.0.tgz#4ff80cce6710dc2795f0c7c74101e6764cfccd24"
   integrity sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==
