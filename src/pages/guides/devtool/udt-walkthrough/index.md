@@ -44,7 +44,7 @@ You shouldn't need to change the Service Port, which is what UDT uses to communi
 <InlineAlert variant="info" slots="text"/>
 
 **IMPORTANT**:
-When you distribute your plugin, you'll need to obtain a plugin ID from the [Adobe Developer Console](https://console.adobe.io/home). For testing, though, just invent an id like 'com.yourname.pluginname'.
+When you distribute your plugin, you'll need to obtain a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/). For testing, though, just invent an id like 'com.yourname.pluginname'.
 
 For this exercise, we'll use the `ps-starter` template, which creates a very basic plugin using basic JavaScript with no libraries. Other choices in the `Template` popup include `ps-react-starter`, which creates a simple React-based plugin.
 
@@ -102,6 +102,6 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
  You can host as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the blue `Add Plugin` button in the Tool, or you can click the `Create Plugin` button to have it created for you, wizard-style. Then you choose the `Load` item in the Actions menu to load your plugin into Photoshop.
 
  ## Packaging
- In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Adobe Developer Console](https://console.adobe.io/home) website before packaging your plugin for distribution.
+ In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/) website before packaging your plugin for distribution.
 
  To distribute your plugin, see [Sharing Your Plugin](../../distribution/).

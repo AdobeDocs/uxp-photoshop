@@ -19,5 +19,3 @@ Unless you've written a plugin solely for yourself, you're probably going to wan
 
 * [Packaging Your Plugin](/guides/distribution/packaging-your-plugin/)
 * [Options for Distribution](/guides/distribution/distribution-options/)
-* [Submission and Review](/guides/distribution/submission-checklist/)
-* [Marketing Your Plugin](/guides/distribution/marketing/)
