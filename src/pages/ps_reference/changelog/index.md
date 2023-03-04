@@ -126,8 +126,8 @@ From the [UXP team](../../uxp/) we have integrated the following update.
 #### v6.4 Integration
 
 ##### New
-- Webviews for Panels
-- Support Path Module APIs
+- [WebView](../../uxp/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
+- Support [Path Module APIs](../../uxp/reference-js/Global%20Members/Path)
 - Script can run fsapi with full access in localFileSystem
 
 ##### Bugs Fixes
