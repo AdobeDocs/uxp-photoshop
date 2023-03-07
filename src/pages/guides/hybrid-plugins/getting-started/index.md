@@ -14,7 +14,7 @@ contributors:
 
 ## Download the SDK
 
-Begin by downloading the UXP Hybrid plugin SDK from [Developer Console](https://developer.adobe.com/console/servicesandapis/ps) (here is [what to do if you get “Access Denied”](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/faq/#what-do-i-do-when-i-get-access-denied-upon-login)). Unpack the contents and make sure you check out the README.md. There are special instructions for building and packaging these plugins since they are different from a traditional UXP plugin.
+Begin by downloading the UXP Hybrid plugin SDK from [Developer Console](https://developer.adobe.com/console/servicesandapis/ps) (here is [what to do if you get “Access Denied”](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/faq/#what-do-i-do-when-i-get-access-denied-upon-login)). Unpack the contents and make sure you check out the README.md. There are special instructions for building and packaging these plugins since they are different from a standard UXP plugin.
 
 The concept of a hybrid plugin is very similar to Node.js C++ Addons. The dynamically linked shared objects written in C++ are available to JavaScript. `template-dev` walks you through a very basic example that illustrates how the two worlds communicate.
 
@@ -34,7 +34,7 @@ UXP Hybrid plugin has both - JavaScript and C++. Use the UDT Debug tool for sett
 
 For debugging C++ code, you must attach to the `Photoshop.exe` process via the IDE. In most IDEs you can find that option under Debug -> Attach to Process.
 
-In the case of macOS, you have to perform a prior step. Follow the instructions [here](https://helpx.adobe.com/ca/photoshop/kb/debug-plugins-in-photoshop-bigsur.html)
+However, in macOS you have to perform a prior step. Follow the guide to [debug in macOS](https://helpx.adobe.com/ca/photoshop/kb/debug-plugins-in-photoshop-bigsur.html).
 
 ## Known Issues
 
@@ -49,7 +49,7 @@ let entry = '/path/to/target.psd';
 document.saveAs.psd(entry);
 ```
 
-This is opposed to a traditional UXP plugin’s method of accessing the file system:
+This is opposed to a standard UXP plugin’s method of accessing the file system:
 
 ```jsx
 let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");

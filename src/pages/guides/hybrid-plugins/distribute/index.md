@@ -10,7 +10,7 @@ contributors:
 
 # Distribute
 
-Prepare your hybrid plugin to be listed in the Adobe marketplace via [Developer Distribution](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/getting_started/). To learn more about general packaging guidelines, visit [here](../../distribution/packaging-your-plugin/).
+Prepare your hybrid plugin to be listed in the Creative Cloud Marketplace via [Developer Distribution](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/getting_started/). To learn more about general packaging guidelines, visit [here](../../distribution/packaging-your-plugin/).
 
 Additionally, remember to:
 
