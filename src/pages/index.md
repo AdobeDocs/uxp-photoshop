@@ -29,7 +29,7 @@ UXP is the modern way to create plugins and scripts for Adobe Creative Cloud - A
 
 - [Plugin Quickstart guide](guides/)
 - [Photoshop API reference](ps_reference/)
-- [UXP API reference](uxp-ref/reference-js/)
+- [UXP API reference](uxp-api/reference-js/)
 - [Scripting Quickstart guide](scripting/getting-started/)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
@@ -55,7 +55,7 @@ Interact with Photoshop using the Photoshop DOM API.
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP API Reference](uxp-ref/reference-js/)
+[UXP API Reference](uxp-api/reference-js/)
 
 Access file APIs, UI APIs, network I/O and more.
 

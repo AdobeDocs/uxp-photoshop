@@ -32,11 +32,11 @@ To get started, we suggest following these tutorials to get your hands dirty and
 - [The UXP manifest](./uxp_guide/uxp-misc/manifest-v4/): Essential to tailoring your UXP plugin.
 - [UXP Developer Tool Walkthrough](./devtool/udt-walkthrough/): Learn how to create a plugin from a sample, load and debug it on Photoshop.
 - [The intro to the Photoshop API](../ps_reference/): Explore what is offered in the form of the DOM API, the successor to ExtendScript.
-- [Spectrum UI reference](../uxp-ref/reference-spectrum/User%20Interface/): UXP provides a smaller set of elements that you should be aware of, before creating UI.
+- [Spectrum UI reference](../uxp-api/reference-spectrum/User%20Interface/): UXP provides a smaller set of elements that you should be aware of, before creating UI.
 
 ### Must Reads
 
-- [UXP API reference](../uxp-ref/): The UXP platform offers many, but not all capabilities of a web browser. Learn about what could be familiar, and what is different.
+- [UXP API reference](../uxp-api/): The UXP platform offers many, but not all capabilities of a web browser. Learn about what could be familiar, and what is different.
 - [Modal Execution in Photoshop](../ps_reference/media/executeasmodal/): A new paradigm for building performant and resilient plugins. If you are building plugins that modifies the users' document, this is an essential read.
 - [Photoshop manifest](./uxp_guide/uxp-misc/manifest-v4/photoshop-manifest/): An addendum to `manifest.json`. For Adobe Photoshop 2022, you will need to be aware of potential breaking changes related to Modal Execution.
 

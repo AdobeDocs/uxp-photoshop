@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         title: "UXP API",
-        path: "/uxp-ref/",
+        path: "/uxp-api/",
       },
       {
         title: "Scripting",
@@ -213,32 +213,32 @@ module.exports = {
       },
       {
         title: "UXP API",
-        path: "/uxp-ref/reference-js/",
+        path: "/uxp-api/reference-js/",
         header: true,
         pages: [
           {
             title: "JavaScript Reference",
-            path: "/uxp-ref/reference-js/",
+            path: "/uxp-api/reference-js/",
             pages: require("./reference-js.js"),
           },
           {
             title: "CSS Reference",
-            path: "/uxp-ref/reference-css/",
+            path: "/uxp-api/reference-css/",
             pages: require("./reference-css.js"),
           },
           {
             title: "HTML Reference",
-            path: "/uxp-ref/reference-html/",
+            path: "/uxp-api/reference-html/",
             pages: require("./reference-html.js"),
           },
           {
             title: "Spectrum UXP Reference",
-            path: "/uxp-ref/reference-spectrum/",
+            path: "/uxp-api/reference-spectrum/",
             pages: require("./reference-spectrum.js"),
           },
           {
             title: "Known Issues",
-            path: "/uxp-ref/known-issues/",
+            path: "/uxp-api/known-issues/",
           },
         ],
       },

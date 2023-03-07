@@ -7,7 +7,7 @@ contributors:
 
 # Overview
 
-UXP scripting allows developers to execute a single file to accomplish tasks in Photoshop. Unlike ExtendScript, these scripts can utilize the [UXP](../uxp-ref/) and [Photoshop](../ps_reference/) APIs to communicate with Photoshop.
+UXP scripting allows developers to execute a single file to accomplish tasks in Photoshop. Unlike ExtendScript, these scripts can utilize the [UXP](../uxp-api/) and [Photoshop](../ps_reference/) APIs to communicate with Photoshop.
 
 ## When are scripts useful?
 Scripts are mainly used to perform one-off tasks that end-users would otherwise perform manually. It is especially useful when the task is repetitive in nature, such as adding a watermark to your documents. When a script is invoked by a user, it executes a task and is unloaded by Photoshop once it’s done. If required, a dialog can be used to prompt the user for inputs. Scripts can be executed in a headless manner or with minimal UI, without the need for any manifest setup.
