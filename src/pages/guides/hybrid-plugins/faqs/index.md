@@ -1,3 +1,13 @@
+---
+keywords:
+  - UXP Hybrid
+  - FAQs
+title: UXP Hybrid plugin - FAQs
+description: FAQs for UXP Hybrid plugin
+contributors:
+  - https://github.com/padmkris123
+---
+
 # FAQs
 
 <br></br>
