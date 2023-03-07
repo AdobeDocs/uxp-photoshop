@@ -34,7 +34,7 @@ UXP Hybrid plugin has both - JavaScript and C++. Use the UDT Debug tool for sett
 
 For debugging C++ code, you must attach to the `Photoshop.exe` process via the IDE. In most IDEs you can find that option under Debug -> Attach to Process.
 
-In the case of macOS, you have to perform a prior step. Follow the instructions [here](https://helpx.adobe.com/ca/photoshop/kb/debug-plugins-in-photoshop-bigsur.html)
+However, in macOS you have to perform a prior step. Follow the guide to [debug in macOS](https://helpx.adobe.com/ca/photoshop/kb/debug-plugins-in-photoshop-bigsur.html).
 
 ## Known Issues
 
