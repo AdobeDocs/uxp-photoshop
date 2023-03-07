@@ -88,6 +88,7 @@ From the [UXP team](../../uxp/) we have integrated the following update.
 #### v6.5 Integration
 
 ##### New
+- [UXP Hybrid plugins](../../guides/hybrid-plugins/)
 - Allow unrestricted relative paths in require from scripts
 - [getEntryWithUrl](../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
 

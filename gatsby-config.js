@@ -124,6 +124,24 @@ module.exports = {
             ],
           },
           {
+            title: "Hybrid Plugin (UXP & C++)",
+            path: "/guides/hybrid-plugins/",
+            pages: [
+              {
+                title: 'Getting started',
+                path: 'guides/hybrid-plugins/getting-started/'
+              },
+              {
+                title: 'Distribute',
+                path: 'guides/hybrid-plugins/distribute/'
+              },
+              {
+                title: "FAQs",
+                path: "guides/hybrid-plugins/faqs/",
+              }
+            ],
+          },
+          {
             title: "Legacy Extensibility",
             path: "/guides/legacy-extensibility/",
           },
