@@ -14,13 +14,13 @@ contributors:
 
 ## Download the SDK
 
-Begin by downloading the UXP Hybrid plugin SDK from [Developer Console](https://developer.adobe.com/console/servicesandapis/ps) (here is [what to do if you get “Access Denied”](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/faq/#what-do-i-do-when-i-get-access-denied-upon-login)). Unpack the contents and make sure you check out the README.md. There are special instructions for building and packaging these plugins since they are different from a standard UXP plugin.
+Begin by downloading the UXP Hybrid plugin SDK from [Developer Console](https://developer.adobe.com/console/servicesandapis/ps) (here is [what to do if you get “Access Denied”](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/faq/#what-do-i-do-when-i-get-access-denied-upon-login)). Unpack the contents and make sure you check out the README.md. There are special instructions for building and packaging a hybrid plugins since they are different from a standard UXP plugin.
 
 The concept of a hybrid plugin is very similar to Node.js C++ Addons. The dynamically linked shared objects written in C++ are available to JavaScript. `template-dev` walks you through a very basic example that illustrates how the two worlds communicate.
 
 ## Samples
 
-Try the ready-to-use `template-plugin` provided within the SDK to say a quick ‘Hello world!’. Load the template via UDT and find it under the Plugins menu. 
+Try the ready-to-use `template-plugin` provided within the SDK to say a quick ‘Hello world!’. Load the template via UDT, and find it under the Plugins menu. 
 
 ![Pluign menu](./plugin-menu.png)
 
