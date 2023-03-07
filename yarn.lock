@@ -14112,9 +14112,10 @@ uuid@^9.0.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
   integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
-"uxp-documentation@github:adobedocs/uxp#v6.5.1":
-  version "6.5.1"
-  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/b9bdc26c5d8de1a89c1712968e4f3c109c486be1"
+"uxp-documentation@github:adobedocs/uxp#v6.5.2":
+  version "6.5.2"
+  uid "7d343ce716389308d4ca315b8f068df2abc56500"
+  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/7d343ce716389308d4ca315b8f068df2abc56500"
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
