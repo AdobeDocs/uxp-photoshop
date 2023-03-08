@@ -163,7 +163,7 @@ ___
 Opens the specified document and returns the model
 
 > *Note that this API requires a
-[UXPFileEntry](../../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
+[UXPFileEntry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
 object as its argument.
 
 ```javascript

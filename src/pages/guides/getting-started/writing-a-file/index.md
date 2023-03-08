@@ -99,6 +99,6 @@ When you open the exported file in Excel, you can see the list of layers with th
 
 ## Next steps
 
-You now know how to use the APIs provided by UXP to interact with the file system. But UXP allows you to do a lot more: Performing network requests, saving preferences using `localStorage`, get operating system information, open external urls, and much more. We encourage you to take a look at [UXP's API Reference](/src/pages/uxp/reference-js/index.md) to get an overview of everything you can do.
+You now know how to use the APIs provided by UXP to interact with the file system. But UXP allows you to do a lot more: Performing network requests, saving preferences using `localStorage`, get operating system information, open external urls, and much more. We encourage you to take a look at [UXP's API Reference](/src/pages/uxp-api/reference-js/index.md) to get an overview of everything you can do.
 
 To learn how to distribute your plugin, take a look at [Sharing Your Plugin](/src/pages/guides/distribution/index.md).

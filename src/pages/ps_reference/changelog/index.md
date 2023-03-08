@@ -83,14 +83,14 @@ The UXP DOM features a variety of new text-related APIs, that provide a more rob
   - reset()
 
 ### UXP 
-From the [UXP team](../../uxp/) we have integrated the following update.
+From the [UXP team](../../uxp-api/) we have integrated the following update.
 
 #### v6.5 Integration
 
 ##### New
 - [UXP Hybrid plugins](../../guides/hybrid-plugins/)
 - Allow unrestricted relative paths in require from scripts
-- [getEntryWithUrl](../../uxp/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
+- [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
 
 
 ----
@@ -122,7 +122,7 @@ The CountItems DOM API is now available in Photoshop.
 
   
 ### UXP 
-From the [UXP team](../../uxp/) we have integrated the following update.
+From the [UXP team](../../uxp-api/) we have integrated the following update.
 
 #### v6.4 Integration
 
