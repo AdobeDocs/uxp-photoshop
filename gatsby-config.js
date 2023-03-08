@@ -129,15 +129,15 @@ module.exports = {
             pages: [
               {
                 title: 'Getting started',
-                path: 'guides/hybrid-plugins/getting-started/'
+                path: '/guides/hybrid-plugins/getting-started/'
               },
               {
                 title: 'Distribute',
-                path: 'guides/hybrid-plugins/distribute/'
+                path: '/guides/hybrid-plugins/distribute/'
               },
               {
                 title: "FAQs",
-                path: "guides/hybrid-plugins/faqs/",
+                path: "/guides/hybrid-plugins/faqs/",
               }
             ],
           },
