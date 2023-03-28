@@ -51,7 +51,7 @@ ___
 ### batchPlay
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
+*Promise*<ActionDescriptor[]\>
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -65,15 +65,15 @@ await PhotoshopAction.batchPlay(commands)
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
+| `commands` | ActionDescriptor[] |
+| `options?` | [*BatchPlayCommandOptions*](/ps_reference/objects/options/batchplaycommandoptions/) |
 
 ___
 
 ### batchPlaySync
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
-[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]
+ActionDescriptor[]
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -87,8 +87,8 @@ await PhotoshopAction.batchPlay(commands)
 
 | Name | Type |
 | :------ | :------ |
-| `commands` | [*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/interfaces/batchplaycommandoptions/) |
+| `commands` | ActionDescriptor[] |
+| `options?` | [*BatchPlayCommandOptions*](/ps_reference/objects/options/batchplaycommandoptions/) |
 
 ___
 

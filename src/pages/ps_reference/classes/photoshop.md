@@ -32,12 +32,12 @@ From here you can access open documents, tools, UI elements and run commands or 
 | :------ | :------ | :------ | :------ | :------ |
 | actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | R | 23.0 | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing Actions. |
 | activeDocument | [*Document*](/ps_reference/classes/document/) | R W | 23.0 | The current document that has the application&#x27;s focus. |
-| backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R | 23.0 | The background color and color style for documents. |
+| backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The background color and color style for documents. [(24.2)](/ps_reference/changelog#other-fixes) |
 | currentTool | [*Tool*](/ps_reference/objects/tool/) | R | 23.0 | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes. |
 | displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | R W | 23.0 | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
 | documents | [*Documents*](/ps_reference/classes/documents/) | R | 23.0 | A list of the documents currently open. |
 | fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | R | 23.0 | The fonts installed on this system. |
-| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). |
+| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). [(24.2)](/ps_reference/changelog#other-fixes) |
 | preferences | [*Preferences*](/ps_reference/classes/preferences/) | R | 24.0 | Contains Photoshop preferences grouped into several categories similar to the Preferences dialog. |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Photoshop&quot;*. |
 
@@ -46,7 +46,7 @@ From here you can access open documents, tools, UI elements and run commands or 
 ### batchPlay
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)[]\>
+*Promise*<ActionDescriptor[]\>
 
 At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
 ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially

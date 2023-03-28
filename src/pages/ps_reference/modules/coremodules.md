@@ -25,15 +25,16 @@ keywords:
 
 ## Interfaces
 
-- [ActionDescriptor](/ps_reference/interfaces/actiondescriptor/)
-- [BatchPlayCommandOptions](/ps_reference/interfaces/batchplaycommandoptions/)
-- [CPUInfo](/ps_reference/interfaces/cpuinfo/)
-- [ExecuteAsModalOptions](/ps_reference/interfaces/executeasmodaloptions/)
-- [ExecutionContext](/ps_reference/interfaces/executioncontext/)
-- [GPUInfo](/ps_reference/interfaces/gpuinfo/)
-- [HistoryStateInfo](/ps_reference/interfaces/historystateinfo/)
-- [OpenCLDeviceInfo](/ps_reference/interfaces/opencldeviceinfo/)
-- [OpenGLDeviceInfo](/ps_reference/interfaces/opengldeviceinfo/)
+- [BatchPlayCommandOptions](/ps_reference/objects/options/batchplaycommandoptions/)
+- [CPUInfo](/ps_reference/objects/returnobjects/cpuinfo/)
+- [ExecuteAsModalOptions](/ps_reference/objects/returnobjects/executeasmodaloptions/)
+- [ExecutionContext](/ps_reference/objects/options/executioncontext/)
+- [GPUInfo](/ps_reference/objects/returnobjects/gpuinfo/)
+- [HistoryStateInfo](/ps_reference/objects/options/historystateinfo/)
+- [HistorySuspension](/ps_reference/objects/returnobjects/historysuspension/)
+- [OpenCLDeviceInfo](/ps_reference/objects/returnobjects/opencldeviceinfo/)
+- [OpenGLDeviceInfo](/ps_reference/objects/returnobjects/opengldeviceinfo/)
+- [ResumeHistorySuspensionOptions](/ps_reference/objects/options/resumehistorysuspensionoptions/)
 
 ## Type aliases
 

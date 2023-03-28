@@ -20,5 +20,5 @@ keywords:
 
 ## Interfaces
 
-- [HyphenationProperties](/ps_reference/interfaces/hyphenationproperties/)
-- [JustificationProperties](/ps_reference/interfaces/justificationproperties/)
+- [HyphenationProperties](/ps_reference/objects/options/hyphenationproperties/)
+- [JustificationProperties](/ps_reference/objects/options/justificationproperties/)

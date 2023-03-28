@@ -107,7 +107,7 @@ async function targetFunction(executionContext) {
   }
 }
 ```
-JavaScript that runs for a significant amount of time without an interruption point should regularly query isCancelled on the executionContext. The JavasScript example above can be made cancellable by modifying it to the following:
+JavaScript that runs for a significant amount of time without an interruption point should regularly query isCancelled on the executionContext. The JavaScript example above can be made cancellable by modifying it to the following:
 ```javascript
 async function targetFunction(executionContext) {
   while (true) {
@@ -203,17 +203,18 @@ The signature for suspendHistory is:
 ```javascript
 executionContext.hostControl.suspendHistory(options)
 ```
-The options argument is an object with the following properties:
-* documentID: The ID of the document whose history state should be suspended.
-* name: The name that is used for the history state. This is visible in the History panel.
+The `options` argument is an object with the following properties:
+* `documentID: number`: The ID of the document whose history state should be suspended.
+* `name: string`: The name that is used for the history state. This is visible in the History panel.
 suspendHistory returns a suspension identifier. This identifier should be used with resumeHistory.
 
 The signature for resumeHistory is:
 ```javascript
 executionContext.hostControl.resumeHistory(suspensionID, commit)
 ```
-* suspensionID: the suspension identifier that was returned from suspendHistory.
-* commit: if true then the current document state is committed and a history state is created. If the second argument is false, then the document state is rolled back to the time when the state was suspended. This argument is optional and the default value is true. Photoshop only creates a history state if the document was modified between the calls to suspendHistory and resumeHistory.
+* `suspensionID: object`: the suspension identifier object that was returned from `suspendHistory`.
+  * To rename the committed history state, assign an optional `finalName: string` to this parameter in order to provide an updated history state naming to be displayed to the user, overriding the original `name` passed in with `suspendHistory`.
+* `commit: boolean`: if `true` then the current document state is committed and a history state is created. If `false`, the document state is rolled back to the time when the state was suspended. This argument is optional and the default value is `true`. Photoshop only creates a history state if the document was modified between the calls to `suspendHistory` and `resumeHistory`.
 
 When the modal scope ends, Photoshop will auto-resume history on any document that is still in a suspended state. If the target function for the modal scope returns normally, then all unsuspended states are committed. If the target function exits via an exception, then all unsuspended history states are cancelled.
 

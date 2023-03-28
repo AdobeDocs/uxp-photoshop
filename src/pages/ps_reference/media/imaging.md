@@ -1,24 +1,16 @@
 ---
 id: "imaging"
-title: "Imaging API Beta"
-sidebar_label: "Imaging API Beta"
+title: "Imaging API"
+sidebar_label: "Imaging API"
 ---
 
-# Imaging API *Beta*
+# Imaging API
 
-The Imaging API *Beta* allows JavaScript to work directly with image data in Photoshop documents.
+The Imaging API allows JavaScript to work directly with image data in Photoshop documents.
 
-These APIs are currently *beta* which means that they are not complete and may change in the future.  We present them here as a testing ground for this new capability.  Please send comments, questions or bugs via the Beta Feedback panel (under the Windows menu) or directly at the [Beta forum](https://community.adobe.com/t5/photoshop-beta/ct-p/ct-photoshop-beta).
-
-The functionality has the following known issues:
-* The API is only available in Photoshop (Beta) builds
-* Support is limited to RGB, gray scale, and Lab data
-* When using `applyAlpha` to matte the retrieved region's pixels on white, those pixels will still have had the empty pixels at the edges trimmed before the matte is applied.  Be sure to check the returned `sourceBounds`.
-
-
-The Imaging API are exposed on the `imaging_beta` sub-module under "photoshop". You can access these APIs by using the follow code:
+The Imaging API are exposed on the `imaging` sub-module under "photoshop". You can access these APIs by using the follow code:
 ```javascript
-const imaging = require("photoshop").imaging_beta;
+const imaging = require("photoshop").imaging;
 ```
 
 ## Terminology and data types
@@ -27,12 +19,14 @@ Image data is expressed as a collection of `pixels`. A pixel represents all colo
 An RGB pixel with alpha information has four components: "red", "green", "blue", and "alpha". An opaque RGB pixel has only three components. Including an alpha channel as a fourth yields RGBA.
 An opaque gray scale pixel has one component. A gray scale pixel with alpha has two components.
 
-In order to properly interpret pixel data, Photoshop needs to know which color profile the data is expressed in. An example of a color profile is `"Adobe RGB (1998)"`. All image data here will include the associated profile, and Photoshop will perform color conversions when needed. You can get the list of available color profiles by invoking [[Photoshop.getColorProfiles]] on the app object:
+In order to properly interpret pixel data, Photoshop needs to know which color profile the data is expressed in. An example of a color profile is `"Adobe RGB (1998)"`. Photoshop will perform color conversions when needed. You can get the list of available color profiles by invoking [[Photoshop.getColorProfiles]] on the app object:
 ```javascript
 const rgbProfiles = await require("photoshop").app.getColorProfiles("RGB");
 
 const grayProfiles = await require("photoshop").app.getColorProfiles("Gray");
 ```
+Lab data uses the "Lab D50" color profile.
+
 When working with 32 bit images, Photoshop will return color profile names that include the description 'Linear Profile'. An example is `"(Linear RGB Profile)"`. This text should not be included when specifying a profile. If a document profile is listed as `Adobe RGB (1998) (Linear RGB Profile)`, then you would use the string `Adobe RGB (1998)` when specifying a profile with a method such as createImageDataFromBuffer.
 
 Photoshop supports two ways to store pixel information in memory:
@@ -50,11 +44,11 @@ Image data is represented by a `PhotoshopImageData` instance. This instance has 
 | width         | Number      | The width of the image data in pixels. |
 | height        | Number      | The height of the image data in pixels. |
 | colorSpace    | String      | The color space (or mode) for the image data. This can be `"RGB"`, `"Grayscale"`, `"Lab"`. |
-| colorProfile  | String      | The color profile for the image data. For example, `"sRGB IEC61966-2.1"`. |
-| hasAlpha      | Boolean     | True if the image data includes an alpha channel. Only available with RGB. |
+| colorProfile  | String      | The color profile for the image data. For example, `"sRGB IEC61966-2.1"`. If the color profile is empty, then the profile of a target document will be used. |
+| hasAlpha      | Boolean     | True if the image data includes an alpha channel. |
 | components    | Number      | Number of components per pixel. This is 3 for RGB, 4 for RGBA and so forth. |
 | componentSize | Number      | Number of bits per component. This can be 8, 16, or 32.|
-| pixelFormat   | String      | Memory layout (order) of components in a pixel. Could be `"RGB"`, `"RGBA"`, `"Gray"`, or `"LAB"`. |
+| pixelFormat   | String      | Memory layout (order) of components in a pixel. Could be `"RGB"`, `"RGBA"`, `"Grayscale"`, `"GrayscaleAlpha"`, `"LAB"`, or `"LABAlpha"`. |
 | chunky        | Boolean     | True if the image data internally is using the chunky format. |
 | type          | String      | Type of contained data. At the moment only "image/uncompressed" is supported. |
 | getData       | Method      | [See documentation below.](#getdata) |
@@ -112,6 +106,7 @@ Return pixel information from an `PhotoshopImageData` instance as a typed array.
 
 The method takes an options argument. This argument can be used to specify attributes of the returned data. Possible options include:
 * `chunky` | Boolean - Optional. If true then the data is returned as chunky data. If false, then data is returned in the planar format. The default value is true.
+* `fullRange` | Boolean - Optional. This value is only used for 16 bit data. If true then the returned 16 bit pixel data use the full 16 bit range [0..65535]. If false, then the returned pixel data use the reduced Photoshop range: [0..32768]. The default value is false.
 
 Return value: `Promise<Uint8Array | Uint16Array | FloatArray>`
 
@@ -152,8 +147,7 @@ Options describing the operation.
       * If the requested color space matches the source document, then the returned data will use the color profile of the source document.
       * If the requested color space is different from the source document, then the working color profile for that color space is used to convert colors.
    * `componentSize` | Number - Optional. The requested `componentSize` of the returned image data. If this property is omitted then the `componentSize` of the source pixel data is used. The value can be: -1 (for using the source document's depth), 8 , 16, or 32.
-   * `applyAlpha` | Boolean - Optional. If true, then RGBA pixels will be converted to RGB by matting on white.
-   * a possible alpha channel is applied to the pixels before returning. The returned imageData property will not contain an alpha channel.
+   * `applyAlpha` | Boolean - Optional. If true, then RGBA pixels will be converted to RGB by matting on white. The returned imageData property will not contain an alpha channel. Note that any areas devoid of pixel data will still be trimmed, see `sourceBounds` above.
 
 Return value: `Promise<Object>`
 
@@ -331,8 +325,9 @@ Options describing the operation.
    * `height` | Number - ***Required***. The height of the image.
    * `components` | Number - ***Required***. Number of components per pixel.
    * `chunky` | Boolean - Optional. Describes pixel layout. See discussion above. The default value is true.
-   * `colorProfile` | String - ***Required***. Describes the color profile associated with the image data. See note regarding color profiles and 32 bit pixel data at the beginning of this document.
-   * `colorSpace` | String - ***Required***. Describes the color space associated with the image data. Can be `"RGB"` or `"Grayscale"`
+   * `colorProfile` | String - Optional. Describes the color profile associated with the image data. See note regarding color profiles and 32 bit pixel data at the beginning of this document.
+   * `colorSpace` | String - ***Required***. Describes the color space associated with the image data.
+   * `fullRange` | Boolean - Optional. This value is only used for 16 bit data. Set to true if you are providing pixel data that use the full 16 bit range [0..65535]. Set to false if data is using the reduced range: [0..32768]. The default value is false.
 
 Return value: `Promise<PhotoshopImageData>`
 
@@ -365,7 +360,7 @@ const options = {
 const imageData = await imaging.createImageDataFromBuffer(arrayBuffer, options)
 ```
 
-Image data that is used for layer masks or document selections uses a single grayscale component. When creating such data, use `components: 1`, `colorSpace: "Grayscale"` and `colorProfile: "Generic Gray Profile"` as shown in the following example:
+Image data that is used for layer masks or document selections uses a single grayscale component. When creating such data, use `components: 1`, `colorSpace: "Grayscale"` and `colorProfile: "Gray Gamma 2.2"` as shown in the following example:
 
 ```javascript
 const width = 30;
@@ -382,7 +377,7 @@ const options = {
    height: height,
    components: 1,  // masks are grayscale
    chunky: false,
-   colorProfile: "Generic Gray Profile",
+   colorProfile: "Gray Gamma 2.2",
    colorSpace: "Grayscale"
 };
 const maskData = await imaging.createImageDataFromBuffer(arrayBuffer, options)

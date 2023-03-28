@@ -27,6 +27,7 @@ converts the color across these color spaces using the Color Settings set by the
 For example, to set the foreground color to red:
 
 ```javascript
+const SolidColor = require("photoshop").app.SolidColor;
 const red = new SolidColor();
 red.rgb.red = 255;
 red.rgb.green = 0;
@@ -39,14 +40,39 @@ To understand how color models change as you interact with a SolidColor object,
 please see example below:
 
 ```javascript
+const SolidColor = require("photoshop").app.SolidColor;
 const c = new SolidColor();
-console.log(c.model); // By default, this will be ColorModel.RGB
+console.log(c.base.typename); // By default, this will be "RGBColor"
 
 c.cmyk.cyan = 50; // Photoshop will convert the color to CMYK using Edit > Color Settings data
-console.log(c.model); // Now, the model will be ColorModel.CMYK
+console.log(c.base.typename); // Now, the typename will be "CMYKColor"
 
-c.rgb.green = 128; // Model will change back to ColorModel.RGB
+c.rgb.green = 128; // Typename will change back to "RGBColor"
+
 ```
+
+***Fixes in Photoshop 24.2:***
+- *Adds range validation for all color modes and its components so it should not be possible to enter invalid value.*
+
+## Constructors
+
+### constructor
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+[*SolidColor*](/ps_reference/classes/solidcolor/)
+
+All colors default to pure white.
+
+```
+const SolidColor = require("photoshop").app.SolidColor;
+const color = new SolidColor();
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `model?` | [*ColorModel*](/ps_reference/modules/constants/#colormodel) | Color model to start. |
 
 ## Properties
 
@@ -58,6 +84,7 @@ c.rgb.green = 128; // Model will change back to ColorModel.RGB
 | lab | [*LabColor*](/ps_reference/colors/labcolor/) | R W | 23.0 | The color&#x27;s representation in LAB color space. |
 | nearestWebColor | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R | 23.0 | The color&#x27;s nearest match within the 216 web-safe colors. |
 | rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R W | 23.0 | The color&#x27;s representation in RGB color space. |
+| typename | *string* | R | 24.2 | The class name of the referenced object: *&quot;SolidColor&quot;*. |
 
 ## Methods
 

@@ -1,7 +1,7 @@
 
 async function jsFilter(augmentMode, width, height) {
     try {
-        const imaging = require('photoshop').imaging_beta;
+        const imaging = require('photoshop').imaging;
         const app = require('photoshop').app;
 
         if(app.activeDocument === null) throw new Error("You must have a document open for this script.");
