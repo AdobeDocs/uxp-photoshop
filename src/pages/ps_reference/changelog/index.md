@@ -6,7 +6,7 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop Beta (24.2 February 2022)
+## Photoshop 24.2 (February 2023)
 
 ### UXP 6.4 Integration
 From the [UXP team](../../uxp-api/) we have integrated the following update.

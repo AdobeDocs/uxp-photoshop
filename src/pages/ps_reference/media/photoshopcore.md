@@ -114,7 +114,7 @@ based on embedded color profiles.
 
 LabColorDescriptor
 
-Convert to LaB
+Convert to Lab
 
 #### Parameters
 
