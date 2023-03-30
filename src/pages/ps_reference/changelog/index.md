@@ -6,7 +6,38 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop Beta (24.2 February 2023)
+## Photoshop Beta 24.4 (April 2023)
+### Imaging API update
+The [Imaging API](../media/imaging) is moving out of Prerelease.  It will now be available in the Beta build with the module name "imaging".
+Previously, access was via `require("photoshop").imaging_beta`. It is now `require("photoshop").imaging`.
+#### Improvements and Fixes
+- Speed on Windows, especially medium to small images.
+- Invalid `targetBounds` caused crash.
+
+
+## Photoshop 24.2 (February 2023)
+
+### UXP 6.4 Integration
+From the [UXP team](../../uxp-api/) we have integrated the following update.
+> ### New
+> - Webviews for Panels
+> - Support [Path Module](../../uxp-api/reference-js/Global%20Members/Path/) APIs
+> - Script can run fsapi with full access in [localFileSystem](../../uxp-api/reference-js/Modules/FileSystem/)
+
+> ### Bug Fixes
+> - PluginManifest parsing / Load Plugin errors not logged in UDT
+> - Error shown in UDT APP logs on Plugin UnLoad
+> - UXP script : file session tokens are not getting created
+> - Error message and stack are empty in case of reject("error string") executed in script
+> - [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
+> - After closing the theatre mode, videos are overlapping while scrolling up and down in Discover 
+> - Provide an API to programmatically close dialog in pop-out/theatre mode.
+> - Plugin Data folder shouldn't be created for scripts
+> - Crash on exit
+> - script.setResult("kSuccess") not working
+> - Resource Leaks in Window Dialog on UWP
+> - Privilege plugin fail to add in XD in certain cases
+> - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
 
 ### Imaging API Beta
 We are excited to provide an entirely new capability with the [Imaging API](../media/imaging).  Anyone that has been eagerly awaiting the ability to directly get and set pixels in a document should head to the [dedicated page](../media/imaging).  Note: we are serious about the Beta label.  While this is exciting new territory, keep in mind that the API is in an early form.  We want your feedback to help guide it toward maturity.
@@ -81,17 +112,15 @@ The UXP DOM features a variety of new text-related APIs, that provide a more rob
   - horizontalDistortion
   - verticalDistortion
   - reset()
+  
+### Other fixes
 
-### UXP 
-From the [UXP team](../../uxp-api/) we have integrated the following update.
-
-#### v6.5 Integration
-
-##### New
-- [UXP Hybrid plugins](../../guides/hybrid-plugins/)
-- Allow unrestricted relative paths in require from scripts
-- [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
-
+- `solidColor.cmyk` no longer shows `undefined` for `yellow` color. Also setter is now fixed.
+- `SolidColor` - Adds range validation for all color modes and its components so it should not be possible to enter invalid value. This should also fix invalid hex code value.
+- Adds setter to the `app.backgroundColor` so it can be changed.
+- `app.backgroundColor` and `app.foregroundColor` were broken when color was was not picked as RGB color*
+- RGB32 is currently not supported. If RGB 32 bit per channel is obtained, it will be converted automatically into
+nearest RGB 16 bit per channel.
 
 ----
 ## Photoshop 24.1 (December 2022)
@@ -119,33 +148,6 @@ The CountItems DOM API is now available in Photoshop.
   - `typename`, `parent`, `itemIndex`, `groupIndex`, `position`
   - `move()`, `remove()`
   - 
-
-  
-### UXP 
-From the [UXP team](../../uxp-api/) we have integrated the following update.
-
-#### v6.4 Integration
-
-##### New
-- [WebView](../../uxp/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
-- Support [Path Module APIs](../../uxp/reference-js/Global%20Members/Path)
-- Script can run fsapi with full access in localFileSystem
-
-##### Bugs Fixes
-- PluginManifest parsing / Load Plugin errors not logged in UDT
-- Error shown in UDT APP logs on Plugin UnLoad
-- UXP script : file session tokens are not getting created
-- Error message and stack are empty in case of reject("error string") executed in script
-- [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
-- After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
-- Provide an API to programmatically close dialog in pop-out/theatre mode.
-- Plugin Data folder shouldn't be created for scripts
-- Crash on exit
-- script.setResult("kSuccess") not working
-- Resource Leaks in Window Dialog on UWP
-- Privilege plugin fail to add in XD in certain cases
-- Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
-
 
 ## Photoshop 24.0 (October 2022)
 

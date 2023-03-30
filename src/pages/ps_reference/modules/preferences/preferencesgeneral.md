@@ -24,4 +24,4 @@ keywords:
 
 ## Interfaces
 
-- [ColorPickerArg](/ps_reference/interfaces/colorpickerarg/)
+- [ColorPickerOption](/ps_reference/objects/options/colorpickeroption/)

@@ -20,6 +20,10 @@ keywords:
 
 Defines a CMYK color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
 
+ ***Fixes in Photoshop 24.2:***
+- *Getter now will return number instead of `undefined`*
+- *Value used in setter is now respected when passed to Photoshop*
+
 ## Properties
 
 | Name | Type | Access | Default | Range | Min Version | Description |

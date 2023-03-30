@@ -20,10 +20,6 @@ module.exports = [{
 			"path": "/ps_reference/classes/channels/"
 		},
 		{
-			"title": "CharacterStyle",
-			"path": "/ps_reference/classes/characterstyle/"
-		},
-		{
 			"title": "ColorSampler",
 			"path": "/ps_reference/classes/colorsampler/"
 		},
@@ -80,28 +76,43 @@ module.exports = [{
 			"path": "/ps_reference/classes/layers/"
 		},
 		{
-			"title": "ParagraphStyle",
-			"path": "/ps_reference/classes/paragraphstyle/"
-		},
-		{
-			"title": "PathItem",
-			"path": "/ps_reference/classes/pathitem/"
-		},
-		{
-			"title": "PathItems",
-			"path": "/ps_reference/classes/pathitems/"
-		},
-		{
-			"title": "PathPoint",
-			"path": "/ps_reference/classes/pathpoint/"
-		},
-		{
-			"title": "PathPointInfo",
-			"path": "/ps_reference/classes/pathpointinfo/"
-		},
-		{
-			"title": "PathPoints",
-			"path": "/ps_reference/classes/pathpoints/"
+			"title": "Paths",
+			"path": "/ps_reference/classes/pathitem",
+			"header": true,
+			"pages": [
+				{
+					"title": "PathItem",
+					"path": "/ps_reference/classes/pathitem/"
+				},
+				{
+					"title": "PathPoint",
+					"path": "/ps_reference/classes/pathpoint/"
+				},
+				{
+					"title": "SubPathItem",
+					"path": "/ps_reference/classes/subpathitem/"
+				},
+				{
+					"title": "PathItems",
+					"path": "/ps_reference/classes/pathitems/"
+				},
+				{
+					"title": "PathPoints",
+					"path": "/ps_reference/classes/pathpoints/"
+				},
+				{
+					"title": "SubPathItems",
+					"path": "/ps_reference/classes/subpathitems/"
+				},
+				{
+					"title": "PathPointInfo",
+					"path": "/ps_reference/classes/pathpointinfo/"
+				},
+				{
+					"title": "SubPathInfo",
+					"path": "/ps_reference/classes/subpathinfo/"
+				}
+			]
 		},
 		{
 			"title": "Photoshop",
@@ -167,32 +178,35 @@ module.exports = [{
 			"path": "/ps_reference/classes/solidcolor/"
 		},
 		{
-			"title": "SubPathInfo",
-			"path": "/ps_reference/classes/subpathinfo/"
-		},
-		{
-			"title": "SubPathItem",
-			"path": "/ps_reference/classes/subpathitem/"
-		},
-		{
-			"title": "SubPathItems",
-			"path": "/ps_reference/classes/subpathitems/"
-		},
-		{
-			"title": "TextFont",
-			"path": "/ps_reference/classes/textfont/"
-		},
-		{
-			"title": "TextFonts",
-			"path": "/ps_reference/classes/textfonts/"
-		},
-		{
-			"title": "TextItem",
-			"path": "/ps_reference/classes/textitem/"
-		},
-		{
-			"title": "WarpStyle",
-			"path": "/ps_reference/classes/warpstyle/"
+			"title": "Text",
+			"path": "/ps_reference/classes/textitem",
+			"header": true,
+			"pages": [
+				{
+					"title": "TextItem",
+					"path": "/ps_reference/classes/textitem/"
+				},
+				{
+					"title": "TextFonts",
+					"path": "/ps_reference/classes/textfonts/"
+				},
+				{
+					"title": "TextFont",
+					"path": "/ps_reference/classes/textfont/"
+				},
+				{
+					"title": "CharacterStyle",
+					"path": "/ps_reference/classes/characterstyle/"
+				},
+				{
+					"title": "ParagraphStyle",
+					"path": "/ps_reference/classes/paragraphstyle/"
+				},
+				{
+					"title": "WarpStyle",
+					"path": "/ps_reference/classes/warpstyle/"
+				}
+			]
 		}
 	]
 },{
@@ -220,6 +234,53 @@ module.exports = [{
 			]
 		},
 		{
+			"title": "Core Modules Options",
+			"path": "/ps_reference/objects/coremodulesobjects",
+			"header": true,
+			"pages": [
+				{
+					"title": "Batch Play Command Options",
+					"path": "/ps_reference/objects/options/batchplaycommandoptions/"
+				},
+				{
+					"title": "CPU Info",
+					"path": "/ps_reference/objects/returnobjects/cpuinfo/"
+				},
+				{
+					"title": "Execute As Modal Options",
+					"path": "/ps_reference/objects/returnobjects/executeasmodaloptions/"
+				},
+				{
+					"title": "Execution Context",
+					"path": "/ps_reference/objects/options/executioncontext/"
+				},
+				{
+					"title": "GPU Info",
+					"path": "/ps_reference/objects/returnobjects/gpuinfo/"
+				},
+				{
+					"title": "History State Info",
+					"path": "/ps_reference/objects/options/historystateinfo/"
+				},
+				{
+					"title": "History Suspension",
+					"path": "/ps_reference/objects/returnobjects/historysuspension/"
+				},
+				{
+					"title": "Open CL Device Info",
+					"path": "/ps_reference/objects/returnobjects/opencldeviceinfo/"
+				},
+				{
+					"title": "Open GL Device Info",
+					"path": "/ps_reference/objects/returnobjects/opengldeviceinfo/"
+				},
+				{
+					"title": "Resume History Suspension Options",
+					"path": "/ps_reference/objects/options/resumehistorysuspensionoptions/"
+				}
+			]
+		},
+		{
 			"title": "Create Options",
 			"path": "/ps_reference/objects/createoptions",
 			"header": true,
@@ -243,6 +304,29 @@ module.exports = [{
 				{
 					"title": "Text Layer Create Options",
 					"path": "/ps_reference/objects/createoptions/textlayercreateoptions/"
+				}
+			]
+		},
+		{
+			"title": "Other Options",
+			"path": "/ps_reference/objects/otherobjects",
+			"header": true,
+			"pages": [
+				{
+					"title": "Color Picker Option",
+					"path": "/ps_reference/objects/options/colorpickeroption/"
+				},
+				{
+					"title": "Layer Comp Recapture Options",
+					"path": "/ps_reference/objects/options/layercomprecaptureoptions/"
+				},
+				{
+					"title": "Hyphenation Properties",
+					"path": "/ps_reference/objects/options/hyphenationproperties/"
+				},
+				{
+					"title": "Justification Properties",
+					"path": "/ps_reference/objects/options/justificationproperties/"
 				}
 			]
 		},
@@ -329,7 +413,7 @@ module.exports = [{
 			"path": "/ps_reference/media/photoshopaction/"
 		},
 		{
-			"title": "Imaging API Beta",
+			"title": "Imaging API",
 			"path": "/ps_reference/media/imaging/"
 		},
 		{

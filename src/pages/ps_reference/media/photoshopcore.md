@@ -92,10 +92,10 @@ ___
 ### convertColor
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-ColorDescriptor
+RGBColorDescriptor \| RGB32ColorDescriptor
 
-Converts the given color (in descriptor form) to the
-given color space, returning the color descriptor.
+Converts the given color (in descriptor form) to RGB,
+returning the color descriptor.
 
 This is an internal API that is used for [SolidColor](/ps_reference/classes/solidcolor/)
 and all the other color classes.
@@ -110,7 +110,51 @@ based on embedded color profiles.
 | Name | Type |
 | :------ | :------ |
 | `sourceColor` | ColorDescriptor |
-| `targetModel` | ColorConversionModel |
+| `targetModel` | ColorConversionModel.RGB |
+
+LabColorDescriptor
+
+Convert to Lab
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sourceColor` | ColorDescriptor |
+| `targetModel` | ColorConversionModel.Lab |
+
+HSBColorDescriptor
+
+Convert to HSB
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sourceColor` | ColorDescriptor |
+| `targetModel` | ColorConversionModel.HSB |
+
+GrayscaleColorDescriptor
+
+Convert to Grayscale
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sourceColor` | ColorDescriptor |
+| `targetModel` | ColorConversionModel.Gray |
+
+CMYKColorDescriptor
+
+Convert to CMYK
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sourceColor` | ColorDescriptor |
+| `targetModel` | ColorConversionModel.CMYK |
 
 ___
 
@@ -150,8 +194,8 @@ See [Modal Execution](../executeasmodal) for details
 
 | Name | Type |
 | :------ | :------ |
-| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/interfaces/executioncontext/)) => *Promise*<any\> |
-| `options` | [*ExecuteAsModalOptions*](/ps_reference/interfaces/executeasmodaloptions/) |
+| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/objects/options/executioncontext/), `descriptor?`: *object*) => *Promise*<any\> |
+| `options` | [*ExecuteAsModalOptions*](/ps_reference/objects/returnobjects/executeasmodaloptions/) |
 
 ___
 
@@ -170,7 +214,7 @@ ___
 ### getCPUInfo
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
-[*CPUInfo*](/ps_reference/interfaces/cpuinfo/)
+[*CPUInfo*](/ps_reference/objects/returnobjects/cpuinfo/)
 
 Returns information about the host CPU.
 ```javascript
@@ -184,7 +228,7 @@ ___
 ### getGPUInfo
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
-[*GPUInfo*](/ps_reference/interfaces/gpuinfo/)
+[*GPUInfo*](/ps_reference/objects/returnobjects/gpuinfo/)
 
 Returns OpenGL and OpenCL information about the available graphics processor.
 ```javascript
@@ -242,7 +286,7 @@ ___
 ### getPluginInfo
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.2</span>
 
-**async** : *Promise*<[*ActionDescriptor*](/ps_reference/interfaces/actiondescriptor/)\>
+**async** : *Promise*<ActionDescriptor\>
 
 Return information about the execution of the plugin.
 This method is intended for developing plugins.
