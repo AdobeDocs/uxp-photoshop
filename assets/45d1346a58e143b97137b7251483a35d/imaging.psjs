@@ -1,0 +1,92 @@
+
+async function jsFilter(augmentMode, width, height) {
+    try {
+        const imaging = require('photoshop').imaging;
+        const app = require('photoshop').app;
+
+        if(app.activeDocument === null) throw new Error("You must have a document open for this script.");
+        if(app.activeDocument.activeLayers.length === 0) throw new Error("You must have a layer selected for this script.");
+
+        await require("photoshop").core.executeAsModal(
+            async () => {
+                function noise() {return Math.floor(Math.random()*256)}
+                function invert(val) {return 255 - val}
+
+                let channels = 3; // RGB
+                const doc = app.activeDocument;
+                const docWidth = doc.width;
+                const docHeight = doc.height;
+                const center = {x: Math.round(docWidth/2), y: Math.round(docHeight/2)}
+
+                let arr;
+                let hasAlpha = false;
+                if (augmentMode === 'invert') {
+                    // get 
+                    const imgData = await imaging.getPixels({
+                        sourceBounds: {
+                            left: center.x - (width/2),
+                            top: center.y - (height/2),
+                            right: center.x + (width/2),
+                            bottom: center.y + (height/2)
+                        },
+                        targetSize: {height: height, width: width}
+                    });
+                    arr = await imgData.imageData.getData(); 
+                    channels = imgData.imageData.components;
+                    hasAlpha = imgData.imageData.hasAlpha;
+                } else {
+                    arr = new Uint8Array(channels * width * height);
+                }
+
+                // Process by component chunks
+                for (let i=0; i<channels * width * height; i = i + channels) {
+                    switch (augmentMode) {
+                        case 'red':
+                            // full on the red channel
+                            arr[i] = 255; 
+                            // leave G & B channels at 0
+                        break;
+                        
+                        case 'invert':
+                            const affectChannels = hasAlpha ? channels - 1 : channels
+                            for (let k=0; k<affectChannels; k++) { //RGBA, skip A
+                                arr[i+k] = invert(arr[i+k]);
+                            }
+                        break;
+                            
+                        case 'noise':
+                            for (let k=0; k<channels; k++) {
+                                arr[i+k] = noise();
+                            }
+                        break;
+                    }
+                }
+                const imageData = await imaging.createImageDataFromBuffer(
+                    arr,
+                    {
+                        width: width,
+                        height: height,
+                        components: channels,
+                        colorProfile: "sRGB IEC61966-2.1",
+                        colorSpace: "RGB"
+                    }
+                );
+                await imaging.putPixels({
+                    layerID: doc.activeLayers[0].id,
+                    imageData: imageData,
+                    targetBounds: {top: center.x - (height/2), left: center.x - (width/2)},
+                    replace: false
+                });
+
+                // Release image data immediately
+                imageData.dispose();
+            }
+        )
+    }catch (e) {
+        require('photoshop').core.showAlert(e.message);
+    }
+}
+
+await jsFilter('noise', 400, 300);
+// await jsFilter('invert', 250, 150);
+// await jsFilter('red', 100, 100);
