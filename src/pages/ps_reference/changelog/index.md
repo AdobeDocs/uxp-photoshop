@@ -6,6 +6,15 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
+## Photoshop Beta 24.4 (April 2023)
+### Imaging API update
+The [Imaging API](../media/imaging) is moving out of Prerelease.  It will now be available in the Beta build with the module name "imaging".
+Previously, access was via `require("photoshop").imaging_beta`. It is now `require("photoshop").imaging`.
+#### Improvements and Fixes
+- Speed on Windows, especially medium to small images.
+- Invalid `targetBounds` caused crash.
+
+
 ## Photoshop 24.2 (February 2023)
 
 ### UXP 6.4 Integration
