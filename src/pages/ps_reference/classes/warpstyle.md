@@ -25,9 +25,9 @@ The Class that stores properties related to the Warp Text dialog.
 | Name | Type | Access | Default | Range | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | bend | *number* | R W | - | -100..100 | 24.1 | The warp bend as a percentage. |
-| direction | [*Direction*](/ps_reference/modules/constants/#direction) | R W | Direction.HORIZONTAL | - | 24.1 | The warp direction |
+| direction | [*Direction*](/ps_reference/modules/constants/#direction) | R W | HORIZONTAL | - | 24.1 | The warp direction |
 | horizontalDistortion | *number* | R W | - | -100..100 | 24.1 | The horizontal distortion of the warp as a percentage. |
-| style | [*WarpStyle*](/ps_reference/modules/constants/#warpstyle) | R W | WarpStyle.NONE | - | 24.1 | he style of warp to apply to the text. |
+| style | [*WarpStyle*](/ps_reference/modules/constants/#warpstyle) | R W | NONE | - | 24.1 | he style of warp to apply to the text. |
 | verticalDistortion | *number* | R W | - | -100..100 | 24.1 | The vertical distortion of the warp as a percentage. |
 
 ## Methods
