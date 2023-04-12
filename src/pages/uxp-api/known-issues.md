@@ -96,6 +96,10 @@ The following issues are known. Please check this page with future updates, as k
 ## File I/O
 
 * The list of images in `require("uxp").storage.fileTypes.images` is not intended to be a complete representation of all supported image types by the host. Instead, this array includes some of the more common images. You can pass your own array with the desired file types instead. (PS-57601)
+* [Universal Windows Platform (UWP)](https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)
+has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions),
+and UXP FSAPI may have access issues with anonymous filepaths. So, XD does not support this feature for compatibility across platforms.
+* The native layer of UXP FSAPI is based on [libUV](https://libuv.org/) except UWP powered features, such as FilePicker and Drag&Drop on Win10 XD.
 
 ## Debugging
 
