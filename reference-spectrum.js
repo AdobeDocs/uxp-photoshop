@@ -1,7 +1,7 @@
 module.exports = [
   {
     "title": "Spectrum Web Components",
-    "path": "/uxp-api/reference-spectrum/SWC/"
+    "path": "/uxp-api/reference-spectrum/swc/"
   },
   {
     "title": "Spectrum UXP Widgets",
@@ -106,6 +106,6 @@ module.exports = [
   },
   {
     "title": "FAQs",
-    "path": "/uxp-api/reference-spectrum/FAQs/"
+    "path": "/uxp-api/reference-spectrum/faqs/"
   }
 ]
