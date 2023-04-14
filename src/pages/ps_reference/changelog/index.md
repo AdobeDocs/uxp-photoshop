@@ -31,7 +31,7 @@ From the [UXP team](../../uxp-api/) we have integrated the following update.
         - [Element.shadowRoot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
         - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
         - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
-- [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/SWC/index.md) Support for Adobe SWC.
+- [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/swc/index.md) Support for Adobe SWC.
 - Several augmentations to the JS API set
     - Properties
         - [HTMLElement.lang](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)

@@ -121,23 +121,16 @@ module.exports=[
             "path": "/uxp-api/reference-js/Global Members/HTML DOM/AbortSignal/"
           },
           {
-            "title": "Alerts",
-            "header": true,
-            "pages": [
-              {
-                "title": "Alert",
-                "path": "/uxp-api/reference-js/Global Members/HTML DOM/Alerts/alert/"
-              },
-              {
-                "title": "Confirm",
-                "path": "/uxp-api/reference-js/Global Members/HTML DOM/Alerts/confirm/"
-              },
-              {
-                "title": "Prompt",
-                "path": "/uxp-api/reference-js/Global Members/HTML DOM/Alerts/prompt/"
-              }
-            ],
-            "path": "/uxp-api/reference-js/Global Members/HTML DOM/Alerts/"
+            "title": "Alerts - Alert",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/alert/"
+          },
+          {
+            "title": "Alerts - Confirm",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/confirm/"
+          },
+          {
+            "title": "Alerts - Prompt",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/prompt/"
           },
           {
             "title": "Attr",

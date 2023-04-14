@@ -1,5 +1,5 @@
 <!--
-index_desc: Change Log in UXP version
+index_desc: Changelog in UXP version
 -->
 
 # UXP Changelog
@@ -18,7 +18,7 @@ index_desc: Change Log in UXP version
         - [Element.shadowRoot](./reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
         - [CustomElementRegistry.upgrade](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
         - [CustomElementRegistry.whenDefined](./reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
-- [Spectrum Web Components (Beta)](./reference-spectrum/SWC/index.md) Support for Adobe SWC.
+- [Spectrum Web Components (Beta)](./reference-spectrum/swc/index.md) Support for Adobe SWC.
 - Several augmentations to the JS API set
     - Properties
         - [HTMLElement.lang](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
@@ -41,8 +41,8 @@ index_desc: Change Log in UXP version
     - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
     - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
     - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
-- Support for [pipeThrough](./reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform) and [tee](./reference-js/Global%20Members/Streams/ReadableStream.md#tee) in [ReadableStream](./reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](./reference-js/Global%20Members/Streams/index.md) for more details
-- [ImageBlob](./reference-js/Global%20Members/ImageBlob/ImageBlob.md) to render an uncompressed image buffer in UXP
+- Support for [pipeThrough](./reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform,-options) and [tee](./reference-js/Global%20Members/Streams/ReadableStream.md#tee) in ReadableStream](./reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](./reference-js/Global%20Members/Streams/index.md) for more details
+- [ImageBlob](./reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
 
 ### Changed
 - [HTMLVideoElement](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
@@ -60,7 +60,7 @@ index_desc: Change Log in UXP version
 
 ### New
 - [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) for anels
-- [Path Module APIs](./reference-js/Global%20Members/Path/Path.md)
+- [Path Module APIs](./reference-js/Global%20Members/Path/)
 - UXP Scripts can run fsapi with full access in localFileSystem
 
 ### Bugs Fixes
