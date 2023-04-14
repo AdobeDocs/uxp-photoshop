@@ -14806,9 +14806,9 @@ uvu@^0.5.0:
     kleur "^4.0.3"
     sade "^1.7.3"
 
-"uxp-documentation@github:adobedocs/uxp#v6.5.2":
-  version "6.5.2"
-  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/7d343ce716389308d4ca315b8f068df2abc56500"
+"uxp-documentation@github:adobedocs/uxp#v7.0.0":
+  version "7.0.0"
+  resolved "https://codeload.github.com/adobedocs/uxp/tar.gz/92717ef7a6de8c6887b205acf0d46f4cf407f1b7"
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"

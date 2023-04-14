@@ -62,8 +62,8 @@ The following issues are known. Please check this page with future updates, as k
 * `<label for="id"/>` is not supported. Wrap `<label>` around the control instead.
 * `<input type="file" />` is not supported.
 * `<input type="color" />` is not supported.
-* Using unitless values in `width` and `height` attributes are not supported in UXP v3.1. Use `px`, or CSS styles.
-* `<label>` uses `inline-flex` layout semantics in UXP v3.1 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
+* Using unitless values in `width` and `height` attributes are not supported in UXP v3.1.0. Use `px`, or CSS styles.
+* `<label>` uses `inline-flex` layout semantics in UXP v3.1.0 mode, with `flex-wrap: wrap` enabled. If you need to prevent wrapping, use `flex-wrap: nowrap` on these elements. Note that the default layout behavior is now _horizontal_ not _vertical_.
 * `<progress>` is not theme aware.
 * Password field values cannot be read on macOS. A workaround for this is to set the `type` to `text` on `focus` and switch it back to `password` on `blur`.
 
@@ -85,6 +85,7 @@ The following issues are known. Please check this page with future updates, as k
 
 * When a dialog is closed, it is not removed from the DOM. This is per spec. If you want the dialog to be removed from the DOM, you must call `HTMLDialogElement#remove` explicitly.
 * When applying HTML using `innerHTML`, event handlers and scripts are currently parsed in Photoshop, but not in XD. **DO NOT RELY ON THIS BEHAVIOR**, as it will likely go away in the future and match XD's behavior (which is by design).
+* The following <b>Canvas</b> APIs are not working on `Windows` - createLinearGradient(), createRadialGradient() and clearRect().
 
 ## Network I/O
 
@@ -96,6 +97,10 @@ The following issues are known. Please check this page with future updates, as k
 ## File I/O
 
 * The list of images in `require("uxp").storage.fileTypes.images` is not intended to be a complete representation of all supported image types by the host. Instead, this array includes some of the more common images. You can pass your own array with the desired file types instead. (PS-57601)
+* [Universal Windows Platform (UWP)](https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)
+has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions),
+and UXP FSAPI may have access issues with anonymous filepaths. So, XD does not support this feature for compatibility across platforms.
+* The native layer of UXP FSAPI is based on [libUV](https://libuv.org/) except UWP powered features, such as FilePicker and Drag&Drop on Win10 XD.
 
 ## Debugging
 

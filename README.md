@@ -68,3 +68,9 @@ As a workaround, if all of your changes are already merged to main, you can do t
 1. Create a new branch from main
 2. Bump the version number in `package.json`
 3. Follow the deploy steps laid out in the previous sections
+
+## Redirections
+Over the course of time, we have moved certain files around. In order to make sure that the bookmarked URLs are not disrupted, we have setup the following redirections
+- https://developer.adobe.com/photoshop/uxp/2022/uxp/* -> https://developer.adobe.com/photoshop/uxp/2022/uxp-api/*
+- https://developer-stage.adobe.com/photoshop/uxp/* -> https://developer.adobe.com/photoshop/uxp/*
+- https://developer.adobe.com/photoshop/uxp/ -> https://developer.adobe.com/photoshop/uxp/2022/
