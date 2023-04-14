@@ -1,3 +1,4 @@
+---
 name: Github Pages
 on:
   push:
@@ -7,31 +8,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
-      - name: NPM Install
+        uses: actions/checkout@v3
+      - name: Yarn Install
         uses: bahmutov/npm-install@v1
       - name: Build
         run: |
-          npm run build
+          yarn build
         env:
-          PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
+          PREFIX_PATHS: true # works like --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ github.event.repository.name }}
           ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
           ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT: ${{ secrets.ADOBE_LAUNCH_SRC_INCLUDE_IN_DEVELOPMENT }}
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPO_BRANCH: ${{ steps.vars.outputs.BRANCH_SHORT_REF }}
+          REPO_BRANCH: ${{ github.ref_name }}
           GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
       - name: Deploy to GH Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: public # The folder the action should deploy.
+          clean: true # Automatically remove deleted files from deploy branch
+      - name: GH Pages URL
+        id: gh-pages-url
+        run: |
+          echo "View GH-Pages: $(https://adobedocs.github.io/${{ github.event.repository.name }})"
