@@ -19,7 +19,7 @@ Image data is expressed as a collection of `pixels`. A pixel represents all colo
 An RGB pixel with alpha information has four components: "red", "green", "blue", and "alpha". An opaque RGB pixel has only three components. Including an alpha channel as a fourth yields RGBA.
 An opaque gray scale pixel has one component. A gray scale pixel with alpha has two components.
 
-In order to properly interpret pixel data, Photoshop needs to know which color profile the data is expressed in. An example of a color profile is `"Adobe RGB (1998)"`. Photoshop will perform color conversions when needed. You can get the list of available color profiles by invoking [[Photoshop.getColorProfiles]] on the app object:
+In order to properly interpret pixel data, Photoshop needs to know which color profile the data is expressed in. An example of a color profile is `"Adobe RGB (1998)"`. Photoshop will perform color conversions when needed. You can get the list of available color profiles by invoking [getColorProfiles](../classes/photoshop/#getcolorprofiles) on the app object:
 ```javascript
 const rgbProfiles = await require("photoshop").app.getColorProfiles("RGB");
 

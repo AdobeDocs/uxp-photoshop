@@ -81,6 +81,8 @@ keywords:
 - [text/CharacterStyleDefaults](/ps_reference/modules/text/characterstyledefaults/)
 - [text/ParagraphStyle](/ps_reference/modules/text/paragraphstyle/)
 - [text/WarpStyle](/ps_reference/modules/text/warpstyle/)
+- [types/ApplyImageTypes](/ps_reference/modules/types/applyimagetypes/)
+- [types/CalculationsTypes](/ps_reference/modules/types/calculationstypes/)
 - [types/DocumentTypes](/ps_reference/modules/types/documenttypes/)
 - [types/LayerCompTypes](/ps_reference/modules/types/layercomptypes/)
 - [types/LayerTypes](/ps_reference/modules/types/layertypes/)

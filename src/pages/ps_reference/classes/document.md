@@ -83,11 +83,12 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
 | colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
 | colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of ColorSamplers present in the document. |
-| compositeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Composite channels in the document. |
+| componentChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 24.5 | Component channels in the document. |
+| ~~compositeChannels~~ | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Deprecated since these channels are component not composite. Use &#x60;compositeChannels&#x60; above. |
 | countItems | [*CountItems*](/ps_reference/classes/countitems/) | R | 24.1 | The collection of CountItems present in the document. |
 | guides | [*Guides*](/ps_reference/classes/guides/) | R | 23.0 | The collection of Guides present in the document. |
 | height | *number* | R | 22.5 | Document&#x27;s height in pixels. |
-| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
+| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the component channel. The array contains 256 members.  Valid only when [mode](/ps_reference/classes/document/#mode) &#x3D; &#x60;DocumentMode.{RGB,CMYK,INDEXEDCOLOR}&#x60; |
 | historyStates | [*HistoryStates*](/ps_reference/classes/historystates/) | R | 22.5 | History states of the document. |
 | id | *number* | R | 22.5 | The internal ID of this document will remain valid as long as this document is open. It can be used for batchPlay calls to refer to this document. |
 | layerComps | [*LayerComps*](/ps_reference/classes/layercomps/) | R | 24.0 | The layer comps present in the document. |
@@ -105,6 +106,50 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | width | *number* | R | 22.5 | Document&#x27;s width in pixels. |
 
 ## Methods
+
+### calculations
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+**async** : *Promise*<void \| [*Channel*](/ps_reference/classes/channel/) \| [*Document*](/ps_reference/classes/document/)\>
+
+The Calculations command lets you blend two individual channels from one or more source images. You can then
+apply the results to a new image or to a new channel or selection in the active image.
+
+Performs Image > Calculations on the document. See the [CalculationsOptions](/ps_reference/objects/options/calculationsoptions/)
+object for more info and examples.
+
+```javascript
+const doc = app.activeDocument;
+const options = {
+    source1: {
+        document: doc,
+        layer: doc.layers[0],
+        channel: CalculationsChannel.GRAY
+        invert: true
+    },
+    source2: {
+        document: doc,
+        layer: CalculationsLayer.MERGED,
+        channel: doc.channels[2]
+    },
+    blending: CalculationsBlendMode.DARKEN,
+    opacity: 50,
+    result: CalculationsResult.NEWCHANNEL
+};
+doc.calculations(options);
+
+```
+
+Known issue: currently calculations requires having exactly one unlocked pixel layer being selected otherwise
+it won't work. In future there should not be any layer requirements since this cannot output into layer.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `calculationsOptions` | [*CalculationsOptions*](/ps_reference/objects/options/calculationsoptions/) | Option object for the calculations. |
+
+___
 
 ### changeMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>

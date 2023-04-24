@@ -35,7 +35,7 @@ await require('photoshop').app.activeDocument.createLayer(options);
 | fontName | *string* | &quot;MyriadPro-Regular&quot; | 24.2 | Font PostScript name of the newly created text layer. |
 | fontSize | *number* | 12px | 24.2 | Font size of the newly created text layer in pixels. |
 | group | *boolean* | false | 22.5 | Whether to use previous layer to create clipping mask. |
-| mode | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | NORMAL | 22.5 | Deprecated, please use &#x60;blendMode&#x60; above as it will override this value. |
+| ~~mode~~ | [*BlendMode*](/ps_reference/modules/constants/#blendmode) | NORMAL | 22.5 | Deprecated, please use &#x60;blendMode&#x60; above as it will override this value. |
 | name | *string* | - | 22.5 | Name of the newly created layer. If no value is provided, then a name will be generated following the template, &quot;Layer #&quot;. |
 | opacity | *number* | 100 | 22.5 | Opacity of the newly created layer or group. |
 | position | *object* | document center. | 24.2 | Insertion coordinates of the newly created text layer, in pixels |

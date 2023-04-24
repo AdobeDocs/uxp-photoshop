@@ -6,7 +6,20 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop Beta 24.4 (April 2023)
+## Photoshop Beta 24.5 (April 2023) 
+### Calculations and Apply Image
+The blending operations [Layer](../classes/layer) Apply Image and [Document](../classes/document) Calculations are now available.
+
+- [`applyImage()`](classes/layer/#applyimage)
+- [`calculations()`](classes/document/#calculations)
+
+Both methods accept an options object that matches the parameters required in the respective UI dialog.
+
+### Other updates
+ - Replaced `compositeChannels` property on Document with more appropriately named `componentChannels`.
+ - Channels returned will be of type `ComponentChannel` instead of `CompositeChannel` with corresponding `typename`.
+
+## Photoshop 24.4 (April 2023)
 ### Imaging API update
 The [Imaging API](../media/imaging) is moving out of Prerelease.  It will now be available in the Beta build with the module name "imaging".
 Previously, access was via `require("photoshop").imaging_beta`. It is now `require("photoshop").imaging`.
@@ -140,7 +153,7 @@ The CountItems DOM API is now available in Photoshop.
 
 #### We now throw errors in more situations with layer blend modes
 
-- Passing a value that is not in [[Constants.blendMode]].
+- Passing a value that is not in [Constants.blendMode](../modules/constants/#blendmode).
 - Passing a blend mode that is not compatible with the document's color mode or bit depth. Previously, this call would fail silently.
 - Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  Automatic Background promotion is undesirable as a side effect in this case.  This action is not available via the UI.
 
@@ -413,7 +426,7 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
     - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/)).
 - [layer.id getter](../classes/layer)
 - Updated [document.createLayer](../classes/document/#createlayer) and [document.createLayerGroup](../classes/document/#createlayergroup)
-    - With respective Create options: [LayerCreateOptions](../objects/createoptions/layercreateoptions/) and [GroupLayerCreateOptions](../objects/createoptions/grouplayercreateoptions).
+    - With respective Create options: LayerCreateOptions and GroupLayerCreateOptions.
     - Collection access updates for Layer and Layer-like items are planned for upcoming releases.
 
 #### Photoshop Core updates

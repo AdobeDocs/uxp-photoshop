@@ -57,6 +57,65 @@ and the background. Used in a [CharacterStyle.antiAliasMethod](/ps_reference/cla
 
 ___
 
+### ApplyImageBlendMode
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+The kind of blending used in a [Layer.applyImage](/ps_reference/classes/layer/#applyimage) operation.
+
+| Name | Description |
+| :------ | :------ |
+| ADD | - |
+| COLORBURN | - |
+| COLORDODGE | - |
+| DARKEN | - |
+| DARKERCOLOR | - |
+| DIFFERENCE | - |
+| DIVIDE | - |
+| EXCLUSION | - |
+| HARDLIGHT | - |
+| HARDMIX | - |
+| LIGHTEN | - |
+| LIGHTERCOLOR | - |
+| LINEARBURN | - |
+| LINEARDODGE | - |
+| LINEARLIGHT | - |
+| MULTIPLY | - |
+| NORMAL | - |
+| OVERLAY | - |
+| PINLIGHT | - |
+| SCREEN | - |
+| SOFTLIGHT | - |
+| SUBTRACT | - |
+| VIVIDLIGHT | - |
+
+___
+
+### ApplyImageChannel
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+Special channels used in [Layer.applyImage](/ps_reference/classes/layer/#applyimage).
+
+| Name | Description |
+| :------ | :------ |
+| CMYK | - |
+| LAB | - |
+| RGB | - |
+| SELECTION | - |
+| TRANSPARENCY | - |
+
+___
+
+### ApplyImageLayer
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+Use merged layers as a source in [Layer.applyImage](/ps_reference/classes/layer/#applyimage).
+
+| Name | Description |
+| :------ | :------ |
+| MERGED | - |
+
+___
+
 ### AutoKernType
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
 
@@ -184,6 +243,77 @@ Blending mode
 
 ___
 
+### CalculationsBlendMode
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+The kind of blending used in a [Document.calculations](/ps_reference/classes/document/#calculations) operation.
+
+| Name | Description |
+| :------ | :------ |
+| ADD | - |
+| COLORBURN | - |
+| COLORDODGE | - |
+| DARKEN | - |
+| DARKERCOLOR | - |
+| DIFFERENCE | - |
+| DIVIDE | - |
+| EXCLUSION | - |
+| HARDLIGHT | - |
+| HARDMIX | - |
+| LIGHTEN | - |
+| LIGHTERCOLOR | - |
+| LINEARBURN | - |
+| LINEARDODGE | - |
+| LINEARLIGHT | - |
+| MULTIPLY | - |
+| NORMAL | - |
+| OVERLAY | - |
+| PINLIGHT | - |
+| SCREEN | - |
+| SOFTLIGHT | - |
+| SUBTRACT | - |
+| VIVIDLIGHT | - |
+
+___
+
+### CalculationsChannel
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+Special channels used in [Document.calculations](/ps_reference/classes/document/#calculations).
+
+| Name | Description |
+| :------ | :------ |
+| GRAY | - |
+| SELECTION | - |
+| TRANSPARENCY | - |
+
+___
+
+### CalculationsLayer
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+Use merged layers as a source in [Document.calculations]].
+
+| Name | Description |
+| :------ | :------ |
+| MERGED | - |
+
+___
+
+### CalculationsResult
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+The result of [Document.calculations](/ps_reference/classes/document/#calculations) can go into a new document,
+ a new channel in the active document, or a new selection in the active document.
+
+| Name | Description |
+| :------ | :------ |
+| NEWCHANNEL | - |
+| NEWDOCUMENT | - |
+| SELECTION | - |
+
+___
+
 ### ChangeMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
@@ -237,7 +367,7 @@ ___
 ### ColorBlendMode
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-The way color should be blended in a fill or stroke operation.
+The kind of blending used in a fill or stroke operation.
 Pass to [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
 
 | Name | Description |
