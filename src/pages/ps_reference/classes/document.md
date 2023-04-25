@@ -22,15 +22,18 @@ Represents a single Photoshop document that is currently open
 You can access instances of documents using one of these methods:
 
 ```javascript
+const app = require('photoshop').app;
+const constants = require('photoshop').constants;
+
 // The currently active document from the Photoshop object
-const currentDocument = app.activeDocument
+const currentDocument = app.activeDocument;
 
 // Choose one of the open documents from the Photoshop object
-const secondDocument = app.documents[1]
+const secondDocument = app.documents[1];
 
 // You can also create an instance of a document via a UXP File entry
-let fileEntry = require('uxp').storage.localFileSystem.getFileForOpening()
-const newDocument = await app.open('/project.psd')
+let fileEntry = require('uxp').storage.localFileSystem.getFileForOpening();
+const newDocument = await app.open('/project.psd');
 ```
 
 ## Properties
@@ -233,7 +236,7 @@ Create a new pixel layer.
 ```javascript
 await doc.createLayer(
   Constants.LayerKind.NORMAL,
-  { name: "myLayer", opacity: 80, blendMode: Constants.BlendMode.COLORDODGE })
+  { name: "myLayer", opacity: 80, blendMode: constants.BlendMode.COLORDODGE })
 ```
 
 #### Parameters
@@ -248,7 +251,7 @@ await doc.createLayer(
 Create a new layer group.
 
 ```javascript
-await doc.createLayer( Constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
+await doc.createLayer( constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
 ```
 
 #### Parameters
