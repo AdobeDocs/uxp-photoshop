@@ -6,7 +6,7 @@ description: Contains a running log of changes to the UXP API environment in Ado
 
 # Photoshop API Changelog
 
-## Photoshop Beta 24.5 (April 2023) 
+## Photoshop Beta 24.5 (April/May 2023) 
 ### Calculations and Apply Image
 The blending operations [Layer](../classes/layer) Apply Image and [Document](../classes/document) Calculations are now available.
 
