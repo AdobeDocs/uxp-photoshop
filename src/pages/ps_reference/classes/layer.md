@@ -302,6 +302,24 @@ Unsupported color modes: Indexed Color, Bitmap
 
 ___
 
+### applyImage
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+
+**async** : *Promise*<void\>
+
+The applyImage method lets you blend one image’s layer and channel (the source) with a this layer (the target).
+This will change pixels contained in this layer.
+Performs Image > Apply Image on the document. See the ApplyImageOptions
+object for more info and examples.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `applyImageOptions` | [*ApplyImageOptions*](/ps_reference/objects/options/applyimageoptions/) | Option object for applyImage. |
+
+___
+
 ### applyLensBlur
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
 

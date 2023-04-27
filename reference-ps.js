@@ -85,32 +85,32 @@ module.exports = [{
 					"path": "/ps_reference/classes/pathitem/"
 				},
 				{
-					"title": "PathPoint",
-					"path": "/ps_reference/classes/pathpoint/"
-				},
-				{
-					"title": "SubPathItem",
-					"path": "/ps_reference/classes/subpathitem/"
-				},
-				{
 					"title": "PathItems",
 					"path": "/ps_reference/classes/pathitems/"
 				},
 				{
-					"title": "PathPoints",
-					"path": "/ps_reference/classes/pathpoints/"
-				},
-				{
-					"title": "SubPathItems",
-					"path": "/ps_reference/classes/subpathitems/"
+					"title": "PathPoint",
+					"path": "/ps_reference/classes/pathpoint/"
 				},
 				{
 					"title": "PathPointInfo",
 					"path": "/ps_reference/classes/pathpointinfo/"
 				},
 				{
+					"title": "PathPoints",
+					"path": "/ps_reference/classes/pathpoints/"
+				},
+				{
 					"title": "SubPathInfo",
 					"path": "/ps_reference/classes/subpathinfo/"
+				},
+				{
+					"title": "SubPathItem",
+					"path": "/ps_reference/classes/subpathitem/"
+				},
+				{
+					"title": "SubPathItems",
+					"path": "/ps_reference/classes/subpathitems/"
 				}
 			]
 		},
@@ -183,24 +183,24 @@ module.exports = [{
 			"header": true,
 			"pages": [
 				{
-					"title": "TextItem",
-					"path": "/ps_reference/classes/textitem/"
-				},
-				{
-					"title": "TextFonts",
-					"path": "/ps_reference/classes/textfonts/"
-				},
-				{
-					"title": "TextFont",
-					"path": "/ps_reference/classes/textfont/"
-				},
-				{
 					"title": "CharacterStyle",
 					"path": "/ps_reference/classes/characterstyle/"
 				},
 				{
 					"title": "ParagraphStyle",
 					"path": "/ps_reference/classes/paragraphstyle/"
+				},
+				{
+					"title": "TextFont",
+					"path": "/ps_reference/classes/textfont/"
+				},
+				{
+					"title": "TextFonts",
+					"path": "/ps_reference/classes/textfonts/"
+				},
+				{
+					"title": "TextItem",
+					"path": "/ps_reference/classes/textitem/"
 				},
 				{
 					"title": "WarpStyle",
@@ -290,12 +290,12 @@ module.exports = [{
 					"path": "/ps_reference/objects/createoptions/documentcreateoptions/"
 				},
 				{
-					"title": "Layer Comp Create Options",
-					"path": "/ps_reference/objects/createoptions/layercompcreateoptions/"
-				},
-				{
 					"title": "Group Layer Create Options",
 					"path": "/ps_reference/objects/createoptions/grouplayercreateoptions/"
+				},
+				{
+					"title": "Layer Comp Create Options",
+					"path": "/ps_reference/objects/createoptions/layercompcreateoptions/"
 				},
 				{
 					"title": "Pixel Layer Create Options",
@@ -313,12 +313,24 @@ module.exports = [{
 			"header": true,
 			"pages": [
 				{
-					"title": "Color Picker Option",
-					"path": "/ps_reference/objects/options/colorpickeroption/"
+					"title": "Apply Image Options",
+					"path": "/ps_reference/objects/options/applyimageoptions/"
 				},
 				{
-					"title": "Layer Comp Recapture Options",
-					"path": "/ps_reference/objects/options/layercomprecaptureoptions/"
+					"title": "Apply Image Source",
+					"path": "/ps_reference/objects/options/applyimagesource/"
+				},
+				{
+					"title": "Calculations Options",
+					"path": "/ps_reference/objects/options/calculationsoptions/"
+				},
+				{
+					"title": "Calculations Source",
+					"path": "/ps_reference/objects/options/calculationssource/"
+				},
+				{
+					"title": "Color Picker Option",
+					"path": "/ps_reference/objects/options/colorpickeroption/"
 				},
 				{
 					"title": "Hyphenation Properties",
@@ -327,6 +339,10 @@ module.exports = [{
 				{
 					"title": "Justification Properties",
 					"path": "/ps_reference/objects/options/justificationproperties/"
+				},
+				{
+					"title": "Layer Comp Recapture Options",
+					"path": "/ps_reference/objects/options/layercomprecaptureoptions/"
 				}
 			]
 		},
@@ -393,6 +409,10 @@ module.exports = [{
 		}
 	]
 },{
+	"title": "Constants",
+	"header": true,
+	"path": "/ps_reference/modules/constants/"
+},{
 	"title": "Advanced",
 	"path": "/ps_reference/media/",
 	"pages": [
@@ -429,10 +449,6 @@ module.exports = [{
 			"path": "/ps_reference/media/cpp-pluginsdk/"
 		}
 	]
-},{
-	"title": "Constants",
-	"header": true,
-	"path": "/ps_reference/modules/constants/"
 },{
 	"title": "UXP Scripting",
 	"header": true,

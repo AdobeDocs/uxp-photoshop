@@ -105,7 +105,7 @@ The object that stores properties related to the Warp Text dialog.
 | contents | *string* | R W | - | 24.1 | The actual text of the Layer. |
 | isParagraphText | *boolean* | R | - | 24.1 | True if the Text Layer is a &quot;Paragraph Text&quot;: text that uses boundaries to control the flow of characters, either horizontally or vertically. |
 | isPointText | *boolean* | R | - | 24.1 | True if the Text Layer is a &quot;Point Text&quot;: a horizontal or vertical line of text that begins where the user clicks in the image. |
-| orientation | [*Orientation*](/ps_reference/modules/constants/#orientation) | R W | Direction.HORIZONTAL | 24.1 | The text orientation. |
+| orientation | [*Orientation*](/ps_reference/modules/constants/#orientation) | R W | HORIZONTAL | 24.1 | The text orientation. |
 | parent | [*Layer*](/ps_reference/classes/layer/) | R | - | 24.1 | The parent Layer |
 | textClickPoint | *object* | R W | - | 24.1 | The text insertion point in the document, as an &#x60;{x, y}&#x60; object where the coordinates are expressed in pixels. |
 | typename | *string* | R | - | 24.1 | The typename |

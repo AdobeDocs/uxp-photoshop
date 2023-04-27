@@ -22,8 +22,8 @@ Represents a channel in a Photoshop document.
 You can access instances of channels using one of these methods:
 
 ```javascript
-// An array of composite channels in the document
-const compositeChannels = app.activeDocument.compositeChannels
+// An array of component channels in the document
+const componentChannels = app.activeDocument.componentChannels
 
 // An array of active (selected) channels in the document
 const activeChannels = app.activeDocument.activeChannels
