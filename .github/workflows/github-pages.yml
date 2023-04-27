@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Yarn Install
-        uses: bahmutov/npm-install@v1
+        uses: borales/actions-yarn@v4
       - name: Build
         run: |
           yarn build
