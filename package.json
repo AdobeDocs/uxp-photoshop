@@ -41,7 +41,7 @@
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.39.0",
     "remark-cli": "^11.0.0",
     "remark-validate-links": "^12.1.0"
   }
