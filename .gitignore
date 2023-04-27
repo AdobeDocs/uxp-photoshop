@@ -1,12 +1,36 @@
+.editorconfig
+.idea
+.DS_Store
+.vscode/*
+
+# npm yarn
+node_modules
+package.lock
+yarn-error.log
+.pnp.*
+.yarn/*
+
+# keep in repo
+!.gitignore
+!.yarn.lock
+!.yarnrc.yml
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # gatsby files
+.env
 .cache
 public
-node_modules
 
-yarn-error.log
-.editorconfig
-.env
-**/.DS_Store
+# cypress
+cypress/videos
+cypress/screenshots
+
+# lerna
+lerna-debug.log
 
 # uxp api reference
 # reference-css.js
