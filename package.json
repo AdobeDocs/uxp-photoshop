@@ -1,18 +1,18 @@
 {
   "private": true,
   "name": "uxp-photoshop-documentation",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/AdobeDocs/uxp-photoshop"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.8.3",
+    "@adobe/gatsby-theme-aio": "4.9.7",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "uxp-documentation": "github:adobedocs/uxp#v6.5.2"
+    "uxp-documentation": "github:adobedocs/uxp#v7.0.0"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
@@ -30,10 +30,19 @@
     "build": "NODE_OPTIONS=--max-old-space-size=4096 gatsby build",
     "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test:links": "remark src/pages --quiet --frail",
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
   },
+  "remarkConfig": {
+    "plugins": [
+      "remark-validate-links"
+    ]
+  },
+  "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "eslint": "^7.32.0"
-  },
-  "packageManager": "yarn@3.2.1"
+    "eslint": "^7.32.0",
+    "remark-cli": "^11.0.0",
+    "remark-validate-links": "^12.1.0"
+  }
 }
