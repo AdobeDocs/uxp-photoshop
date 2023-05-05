@@ -177,7 +177,7 @@ the output:
 
 Also, you may find the icon missing when docking the plugin panel in a toolbar. It can be resolved by changing `"path"` field to the updated icon filename in `manifest.json`. For example, `"path": "icons/dark.png",` corresponds to following icon files
 
-![A list of icon files](icon-file.png)
+![screenshot of a file structure. The folder icons contains two files: "dark@1x.png" and "dark@2x.png"](icon-file.png)
 
 ## Next steps
 
