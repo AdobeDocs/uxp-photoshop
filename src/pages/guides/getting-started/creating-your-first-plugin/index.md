@@ -19,14 +19,14 @@ install both applications with the Creative Cloud Desktop app. You also need **b
 Open the UXP Developer Tool and click the _"Create plugin..."_ button. In the dialog that opens, enter the following
 details:
 
-| Field                    | Value           |
-| ------------------------ | --------------- |
-| Plugin Name              | My first plugin |
-| Plugin Id                | my.first.plugin |
-| Plugin Version           | 1.0.0           |
-| Host Application         | Adobe Photoshop |
-| Host Application Version | 23.0.0          |
-| Template                 | ps-starter      |
+| Field                    | Value                |
+| ------------------------ | -------------------- |
+| Plugin Name              | My first plugin      |
+| Plugin Id                | my.first.plugin      |
+| Plugin Version           | 1.0.0                |
+| Host Application         | Adobe Photoshop      |
+| Host Application Version | 23.0.0               |
+| Template                 | quick-layers-starter |
 
 Click _"Select Folder"_ and select a new, empty folder where you want to develop your plugin. The Developer Tool creates
 the necessary files in your selected folder and adds the plugin to the list of plugins.
@@ -47,7 +47,7 @@ Open Adobe Photoshop and create some sample file you can use with your plugin.
 To run your plugin within Photoshop, click the _"•••"_ button on the right of your plugin's row within the UDT and select _"
 Load"_. This loads your plugin in Photoshop and automatically opens the plugin's panel.
 
-The _ps-starter_ template initially contains a panel with a _"Populate Layers"_ button that allows you to populate a box
+The _quick-layers-starter_ template initially contains a panel with a _"Populate Layers"_ button that allows you to populate a box
 within the panel with the layer names:
 
 ![A Photoshop panel with a list of layer names and a button called "Populate Layers"](panel-base.png)
@@ -174,6 +174,10 @@ Back in Photoshop, when you click _"Populate Layers"_ again, you should see that
 the output:
 
 ![A Photoshop panel showing a list of layers including their opacity and a button called "Populate Layers"](panel-with-opacity.png)
+
+Also, you may find the icon missing when docking the plugin panel in a toolbar. It can be resolved by changing `"path"` field to the updated icon filename in `manifest.json`. For example, `"path": "icons/dark.png",` corresponds to following icon files
+
+![screenshot of a file structure. The folder icons contains two files: "dark@1x.png" and "dark@2x.png"](icon-file.png)
 
 ## Next steps
 
