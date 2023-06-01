@@ -19,6 +19,35 @@ Both methods accept an options object that matches the parameters required in th
  - Replaced `compositeChannels` property on Document with more appropriately named `componentChannels`.
  - Channels returned will be of type `ComponentChannel` instead of `CompositeChannel` with corresponding `typename`.
 
+### UXP
+From the [UXP team](../../uxp-api/) we have integrated the following update. 
+
+#### v7.1 Integration
+
+##### New
+HTMLElement now supports
+- [setPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
+- [releasePointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
+- [hasPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
+- [dir](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
+
+##### Updated
+- Documentation for `shell` module moved to [new location](../../uxp-api/reference-js/Modules/uxp/shell/)
+
+##### Fixed
+- `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
+```
+// CSS variable
+html {
+  --iconColor: yellow;
+}
+
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="var(--iconColor, red)" />
+</svg>
+// shows a yellow circle
+```    
+
 ## Photoshop 24.4 (April 2023)
 ### Imaging API update
 The [Imaging API](../media/imaging) is moving out of Prerelease.  It will now be available in the Beta build with the module name "imaging".
