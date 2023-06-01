@@ -377,10 +377,6 @@ module.exports=[
         "path": "/uxp-api/reference-js/Modules/os/OS"
       },
       {
-        "title": "shell",
-        "path": "/uxp-api/reference-js/Modules/shell/Shell"
-      },
-      {
         "title": "uxp",
         "header": true,
         "pages": [
@@ -525,6 +521,10 @@ module.exports=[
               }
             ],
             "path": "/uxp-api/reference-js/Modules/uxp/Host Information/Host/"
+          },
+          {
+            "title": "shell",
+            "path": "/uxp-api/reference-js/Modules/uxp/shell/Shell"
           }
         ],
         "path": "/uxp-api/reference-js/Modules/uxp/"

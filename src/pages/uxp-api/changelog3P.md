@@ -3,6 +3,31 @@ index_desc: Changelog in UXP version
 -->
 
 # UXP Changelog
+## UXP v7.1.0
+
+### New
+HTMLElement now supports
+- [setPointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
+- [releasePointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
+- [hasPointerCapture](./reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
+- [dir](./reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
+
+### Updated
+- Documentation for `shell` moved to [new location](./reference-js/Modules/uxp/shell/)
+
+### Fixed
+- `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
+```
+// CSS variable
+html {
+  --iconColor: yellow;
+}
+
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="var(--iconColor, red)" />
+</svg>
+// shows a yellow circle
+```  
 
 ## UXP v7.0.0
 
@@ -36,13 +61,13 @@ index_desc: Changelog in UXP version
 - New focus events to support React 16
     - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
     - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
-- HTML [2D Canvas Support](./reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for basic shapes and styling.
+- HTML [2D Canvas Support](./reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for Basic Shapes and Styling.
 - Alerts
     - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
     - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
     - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 - Support for [pipeThrough](./reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform,-options) and [tee](./reference-js/Global%20Members/Streams/ReadableStream.md#tee) in ReadableStream](./reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](./reference-js/Global%20Members/Streams/index.md) for more details
-- [ImageBlob](./reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
+- [ImageBlob](./reference-js/Global%20Members/ImageBlob/ImageBlob.md) to render an uncompressed image buffer in UXP
 
 ### Changed
 - [HTMLVideoElement](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
@@ -60,7 +85,7 @@ index_desc: Changelog in UXP version
 
 ### New
 - [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) for anels
-- [Path Module APIs](./reference-js/Global%20Members/Path/)
+- [Path Module APIs](./reference-js/Global%20Members/Path/Path.md)
 - UXP Scripts can run fsapi with full access in localFileSystem
 
 ### Bugs Fixes
