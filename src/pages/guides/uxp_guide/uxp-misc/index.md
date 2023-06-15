@@ -20,6 +20,7 @@ UXP is a growing technology platform and, as such, has many different facets. He
 * [The UXP Toolchain](./uxp-toolchain/)
 * [Localization and Platforms](./localization-and-platforms/)
 * [Flyout Menus](./flyout-menus/)
+* [Plugin Icons](./plugin-icons/)
 * [File Access](./file-access/)
 * [Network I/O](./network-io/)
 * [Spectrum CSS](./spectrum-css/)
