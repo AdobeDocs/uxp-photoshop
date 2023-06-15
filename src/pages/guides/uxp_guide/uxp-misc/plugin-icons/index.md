@@ -6,8 +6,6 @@ keywords:
   - Plugins
   - JavaScript
   - ExtendScript
-  - SDK
-  - C++
   - Scripting
 title: Icons for Your Plugins
 description:
@@ -29,26 +27,26 @@ To use icons in your plugin, follow these steps:
 
 2. Export your icons with @1x and @2x scales.
 
-```
-pluginIcon@1x.png [note the "@1x" suffix]
-pluginIcon@2x.png
-````
+    ```
+    pluginIcon@1x.png [note the "@1x" suffix]
+    pluginIcon@2x.png
+    ```
 
 3. In your manifest, use the following form (note that we're assuming you exported the icons above into your plugin's "icons" folder -- not absolutely necessary, but a good organizing practice):
 
- ````
- "icons": [
-    {
-      "width": 23,
-      "height": 23,
-      "path": "icons/pluginIcon.png",
-      "scale": [1, 1.25, 1.5, 2],
-      "theme": ["darkest", "dark", "light", "lightest", "all"]
-    }
-  ]
-````
+    ```json
+        "icons": [
+            {
+            "width": 23,
+            "height": 23,
+            "path": "icons/pluginIcon.png",
+            "scale": [1, 1.25, 1.5, 2],
+            "theme": ["darkest", "dark", "light", "lightest", "all"]
+            }
+        ]
+    ```
 
-Note that the width and height determines the size of the icon in Ps right now, and not the size of your icon's actual resolution. Using anything other than 23x23 is probably going to render poorly.
+    Note that the width and height determines the size of the icon in Ps right now, and not the size of your icon's actual resolution. Using anything other than 23x23 is probably going to render poorly.
 
 With this, your plugin's icon should be visible inside Photoshop (but not in the Plugin Panel; this latter limitation is by design).
 
@@ -60,7 +58,7 @@ Using themes is just like supporting a single icon, but now you have two entries
 
 For example:
 
- ````
+ ```json
     "icons": [
         {
             "width": 23, "height": 23, "path": "icons/dark.png", "scale": [ 1, 2 ],
@@ -70,7 +68,7 @@ For example:
             "theme": [ "lightest", "light" ]
         }
     ]
-````
+```
 
 Here the "dark.png" icons will be used when Photoshop is using the dark themes, and "light.png" will be used when Photoshop uses the light themes.
 
@@ -80,7 +78,7 @@ You should seriously supporting themes with your icons, as not doing so may resu
 
 Plugins can have more than one panel, and each panel can have its own icon. To support this, you can override the top-level icons entry by adding another entry into your plugin's entrypoint. For example:
 
- ````
+ ```json
   "entrypoints": [
         {
             "type": "panel",
@@ -105,7 +103,7 @@ Plugins can have more than one panel, and each panel can have its own icon. To s
             "theme": [ "lightest", "light" ]
         }
     ]
-````
+```
 
 In the above example, the runPanel panel will show a separate icon.
 

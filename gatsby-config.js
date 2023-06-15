@@ -202,6 +202,10 @@ module.exports = {
                 path: "/guides/uxp_guide/uxp-misc/flyout-menus/",
               },
               {
+                title: "Plugin Icons",
+                path: "/guides/uxp_guide/uxp-misc/plugin-icons/",
+              },
+              {
                 title: "File Access",
                 path: "/guides/uxp_guide/uxp-misc/file-access/",
               },
