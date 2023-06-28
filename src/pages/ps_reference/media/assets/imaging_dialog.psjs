@@ -1,5 +1,5 @@
 
-async function jsFilter(augmentMode, width, height) {
+async function augment(mode) {
     try {
         const imaging = require('photoshop').imaging;
         const app = require('photoshop').app;
@@ -22,11 +22,13 @@ async function jsFilter(augmentMode, width, height) {
                 const docWidth = doc.width;
                 const docHeight = doc.height;
                 const center = {x: Math.round(docWidth/2), y: Math.round(docHeight/2)};
-
+                const width = 20;
+                const height = 30;
+                
                 let arr;
                 let hasAlpha = false;
-                if (augmentMode === 'invert') {
-                    // get 
+                if (mode === 'invert') {
+                // get 
                     const imgData = await imaging.getPixels({
                         sourceBounds: {
                             left: center.x - (width/2),
@@ -45,20 +47,20 @@ async function jsFilter(augmentMode, width, height) {
 
                 // Process by component chunks
                 for (let i=0; i<components * width * height; i = i + components) {
-                    switch (augmentMode) {
+                    switch (mode) {
                         case 'red':
                             // full on the red channel
                             arr[i] = 255; 
                             // leave G & B channels at 0
                             break;
-                        
+
                         case 'invert':
                             const affectChannels = hasAlpha ? components - 1 : components;
                             for (let k=0; k<affectChannels; k++) { // RGBA, skip A
                                 arr[i+k] = invert(arr[i+k]);
                             }
                             break;
-                            
+
                         case 'noise':
                             for (let k=0; k<components; k++) {
                                 arr[i+k] = noise();
@@ -94,6 +96,29 @@ async function jsFilter(augmentMode, width, height) {
     }
 }
 
-await jsFilter('noise', 400, 300);
-// await jsFilter('invert', 250, 150);
-// await jsFilter('red', 100, 100);
+async function createDialog() {
+    const dialog = document.createElement("dialog");
+    dialog.innerHTML = `
+        <sp-body>
+            <sp-label>Choose pixel treament:</sp-label>
+            <sp-action-button id="invert">Invert</sp-action-button>
+            <sp-action-button id="noise">Noise</sp-action-button>
+            <sp-action-button id="red">Red</sp-action-button>
+        </sp-body>
+    `;
+    const choice = 
+    document.body.appendChild(dialog);
+
+    const modes = ['invert', 'noise', 'red'];
+    for (let mode of modes) {
+        document.getElementById(mode)
+            .addEventListener("click", async () => {
+                await augment(mode);
+                dialog.close(mode);
+            });
+    }
+    const response = await dialog.showModal();
+    return response;
+}
+await createDialog();
+// core.showAlert('done');
