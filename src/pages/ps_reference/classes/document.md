@@ -73,7 +73,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. |
+| activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. [(24.6)](/ps_reference/changelog#246-bug-fixes) |
 | activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | The history state that history brush tool will use as its source. |
 | activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | Currently active history state of the document. |
 | activeLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The selected layers in the document. |
@@ -86,7 +86,7 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps_reference/classes/document/#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
 | colorProfileType | [*ColorProfileType*](/ps_reference/modules/constants/#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
 | colorSamplers | [*ColorSamplers*](/ps_reference/classes/colorsamplers/) | R | 24.0 | The collection of ColorSamplers present in the document. |
-| componentChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 24.5 | Component channels in the document. |
+| componentChannels | [*Channel*](/ps_reference/classes/channel/)[] | R | 24.5 | Component channels in the document. [(24.6)](/ps_reference/changelog#246-bug-fixes) |
 | ~~compositeChannels~~ | [*Channel*](/ps_reference/classes/channel/)[] | R | 23.0 | Deprecated since these channels are component not composite. Use &#x60;compositeChannels&#x60; above. |
 | countItems | [*CountItems*](/ps_reference/classes/countitems/) | R | 24.1 | The collection of CountItems present in the document. |
 | guides | [*Guides*](/ps_reference/classes/guides/) | R | 23.0 | The collection of Guides present in the document. |
@@ -236,7 +236,7 @@ Create a new pixel layer.
 ```javascript
 await doc.createLayer(
   Constants.LayerKind.NORMAL,
-  { name: "myLayer", opacity: 80, blendMode: constants.BlendMode.COLORDODGE })
+  { name: "myLayer", opacity: 80, blendMode: Constants.BlendMode.COLORDODGE })
 ```
 
 #### Parameters
@@ -251,7 +251,7 @@ await doc.createLayer(
 Create a new layer group.
 
 ```javascript
-await doc.createLayer( constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
+await doc.createLayer( Constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
 ```
 
 #### Parameters

@@ -135,6 +135,14 @@ If set to true, batchPlay will block the entire scripting thread until it resolv
 
 JavaScript code that use batchPlay directly should avoid using this keyword if possible, and instead use the default form that returns a promise.
 
+#### continueOnError (default: false)
+
+When false, the batchPlay command will stop when the first (sub)command fails. When true, then all (sub)commands are executed.
+
+#### immediateRedraw (default: false)
+
+When true, then Photoshop will update its UI after all the descriptors have been executed.
+
 #### historyStateInfo (default: none)
 
 This option is deprecated as of Photoshop 2022. New JavaScript code should use the history suspension mechanism provided by [executeAsModal](./executeasmodal#history-state-suspension)

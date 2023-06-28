@@ -26,6 +26,10 @@ while also providing familiar methods from ExtendScript, like `getByName`
 app.activeDocument.channels.forEach(h => console.log(h.name));
 ```
 
+***Fixes in Photoshop 24.6***
+- *Component channels should work now correctly in non-English localizations*
+- *Channel should be now returned correctly in Bitmap and Indexed Color modes*
+
 ## Indexable
 
 ▪ [index: *number*]: [*Channel*](/ps_reference/classes/channel/)
@@ -37,12 +41,16 @@ Used to access the channels in the collection
 app.activeDocument.channels.forEach(h => console.log(h.name));
 ```
 
+***Fixes in Photoshop 24.6***
+- *Component channels should work now correctly in non-English localizations*
+- *Channel should be now returned correctly in Bitmap and Indexed Color modes*
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.0 | Number of Channel elements in this collection. |
-| parent | Document | R | 23.0 | The owner document of this Channel collection. |
+| parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The owner document of this Channel collection. |
 | typename | *string* | R | 23.0 | The name for this object collection: Channels. |
 
 ## Methods
@@ -62,6 +70,9 @@ ___
 [*Channel*](/ps_reference/classes/channel/)
 
 Find the first channel with the matching name.
+
+***Fixes in Photoshop 24.6***
+- *Non-English locales return correctly for component channels.
 
 #### Parameters
 
