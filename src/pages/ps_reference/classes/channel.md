@@ -39,7 +39,7 @@ const redChannel = app.activeDocument.channels[0]
 | color | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The color of the channel. |
 | histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for this channel. The array contains 256 members. The target channel must be visible. |
 | kind | [*ChannelType*](/ps_reference/modules/constants/#channeltype) | R W | 23.0 | The type or kind of the channel. |
-| name | *string* | R W | 23.0 | The color of the channel. |
+| name | *string* | R W | 23.0 | The name of the channel. For component channels this name can be localized.  ***Fixes in Photoshop 24.6*** - *For component channel it is no longer converted into lowercase and is same as in UI* - *For component channel it will throw an error if channel no longer exist in document* |
 | opacity | *number* | R W | 23.0 | The opacity or solidity of the channel. |
 | parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The containing document. |
 | visible | *boolean* | R W | 23.0 | The visibility of the channel. |

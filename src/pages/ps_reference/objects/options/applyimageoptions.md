@@ -32,7 +32,6 @@ const options = {
     blending: require('photoshop').constants.ApplyImageBlendMode.SCREEN,
 };
 await require('photoshop').app.activeDocument.layers[0].applyImage(options);
-
 ```
 
 | Name | Type | Default | Range | Min Version | Description |
