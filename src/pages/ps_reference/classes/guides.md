@@ -65,7 +65,7 @@ Adds a guide for the collection at the given coordinate and direction
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `direction` | [*Direction*](/ps_reference/modules/constants/#direction) | Indicates whether the guide is vertical or horizontal |
-| `coordinate` | *number* | Position of the guide measured from the ruler origin in pixels. The value can be a decimal number.  Note: the user can move the ruler origin which will affect the position value of the guides. |
+| `coordinate` | *number* | Position of the guide measured from the ruler origin in pixels. The value can be a decimal.  Note: the user can move the ruler origin which will affect the position value of the guides. |
 
 ___
 

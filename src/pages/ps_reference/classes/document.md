@@ -69,6 +69,14 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 | `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 | `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps_reference/objects/saveoptions/photoshopsaveoptions/), `asCopy`: *boolean*) => *Promise*<void\> |
 
+___
+
+### selection
+
+• `Readonly` **selection**: [*Selection*](/ps_reference/classes/selection/)
+
+The object containing the document's currently active selection
+
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
