@@ -38,7 +38,7 @@ await doc.selection.selectEllipse(
     {top: 50, left: 70, bottom: 140, right: 100},
     constants.SelectionType.EXTEND
 );
-doc.selection.bounds; // {{top: 50, left: 50, bottom: 140, right: 100}
+doc.selection.bounds; // {top: 50, left: 50, bottom: 140, right: 100}
 doc.selection.solid;  // false
 
 ```
@@ -53,7 +53,7 @@ Quick Mask Mode, the Quick Mask Channel will become the active selection.
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| bounds | [*Bounds*](/ps_reference/objects/bounds/) | R | 25.0 | The bounding rectangle of the entire selection. It can be exeed the bounds of the canvas. |
+| bounds | [*Bounds*](/ps_reference/objects/bounds/) | R | 25.0 | The bounding rectangle of the entire selection. It can exceed the bounds of the canvas. |
 | docId | *number* | R | 25.0 | The ID of the document of this Selection. |
 | parent | [*Document*](/ps_reference/classes/document/) | R | 25.0 | Owner document of this Selection. |
 | solid | *boolean* | R | 25.0 | True if the selection itself is a rectangle with all fully selected pixels. Viewed as a channel, for example via Quick Mask Mode, the selection will appear as a completely white rectangle.  In that way, it is solid within its bounds. |
@@ -71,6 +71,10 @@ Contract (shrink) the selection by the specified amount.
 If the contraction amount is greater than the selected area radius, the
 selected area will disappear entirely.  If there are no other active selected areas,
 then there will be no active selection altogether.
+
+```javascript
+await doc.selection.contract(8);
+```
 
 UI Location: Select > Modify > Contract
 
@@ -90,6 +94,10 @@ ___
 
 Cancel the current selection. The `bounds` value will then be `null`.
 
+```javascript
+await doc.selection.deselect();
+```
+
 UI Location: Select > Deselect
 
 ___
@@ -100,6 +108,10 @@ ___
 **async** : *Promise*<void\>
 
 Expand the selection by the specified amount.
+
+```javascript
+await doc.selection.expand(42);
+```
 
 UI Location: Select > Modify > Expand
 
@@ -121,6 +133,10 @@ Feather the edges of the selection by the specified amount.  This softening
 of the selection strength is best viewed as a channel via Quick Mask Mode.
 Large values might make the selection disappear entirely (`.bounds` would return `null`).
 
+```javascript
+await doc.selection.feather(16);
+```
+
 UI Location: Select > Modify > Feather
 
 #### Parameters
@@ -139,6 +155,10 @@ ___
 
 Grow the selection to include all adjacent pixels falling
 within the specified tolerance range.
+
+```javascript
+await doc.selection.grow(32);
+```
 
 Unsupported modes: Bitmap, RGB 32 bits, Grayscale 32 bits
 
@@ -163,6 +183,10 @@ The new active selection will be cropped to the canvas bounds.
 If the canvas area is fully selected, `inverse` will result in no active selection.
 Note also that Artboard bounds are not respected.
 
+```javascript
+await doc.selection.inverse();
+```
+
 UI Location: Select > Inverse
 
 ___
@@ -174,6 +198,10 @@ ___
 
 Load the selection from the specified [Channel](/ps_reference/classes/channel/) or [Layer](/ps_reference/classes/layer/).  A Layer's pixels' transparency
 will be used as the selection values.  Full opaque pixels yield fully selected pixels.
+
+```javascript
+await doc.selection.load(doc.channels[3]); // first alpha channel in RGB document
+```
 
 UI Locations:
 - Select > Load Selection...
@@ -199,6 +227,10 @@ ___
 
 Create a work path from the active selection.
 
+```javascript
+await doc.selection.makeWorkPath();
+```
+
 UI Location: Paths panel > Make work path icon
 
 #### Parameters
@@ -215,6 +247,10 @@ ___
 **async** : *Promise*<void\>
 
 Scale the selection itself in percent. Does not affect the active layer.
+
+```javascript
+await doc.selection.resizeBoundary(50, 50);
+```
 
 UI Location: Select > Transform Selection
 
@@ -236,6 +272,10 @@ ___
 
 Rotate the selection itself clockwise around the given anchor position. Does not affect the active layer.
 
+```javascript
+await doc.selection.rotateBoundary(90, constants.AnchorPosition.MIDDLECENTER)
+```
+
 UI Location: Select > Transform Selection
 
 #### Parameters
@@ -256,7 +296,7 @@ ___
 Save the selection in a new Alpha Channel.
 
 ```javascript
-doc.selection.save("My Selection");
+await doc.selection.save("My Selection");
 ```
 
 UI Location: Select > Save Selection...
@@ -277,11 +317,11 @@ ___
 Save the selection in an existing Alpha Channel (Component Channels are not supported targets).
 
 ```javascript
-// Stores the current selection into an existing alpha channel
-doc.selection.saveTo(doc.channels[3]); 
+// Stores the current selection into an existing alpha channel in RGB document
+await doc.selection.saveTo(doc.channels[3]); 
 
-// Performing an intersection operation on the alpha channel
-doc.selection.saveTo(doc.channels[3], SelectionType.INTERSECT);
+// Performing an intersection operation on an alpha channel in RGB document
+await doc.selection.saveTo(doc.channels[3], SelectionType.INTERSECT);
 ```
 
 #### Parameters
@@ -309,6 +349,10 @@ with bounds wrapping them.
 If no artboard is active, all artboards will be selected in the same manner.
 (The resulting selection might be smaller than the canvas bounds.)
 
+```javascript
+await doc.selection.selectAll();
+```
+
 UI Location: Select > All
 
 ___
@@ -321,6 +365,10 @@ ___
 Create a new selection based on the border of the active selection. The new selection will be an area
 equivalent to a stroke of that border by the given width in pixels.
 The result is not limited by canvas bounds.
+
+```javascript
+await doc.selection.selectBorder(10);
+```
 
 UI Location: Select > Modify > Border...
 
@@ -340,7 +388,7 @@ ___
 Select a single column of pixels.
 
 ```javascript
-doc.selection.selectColumn(90);
+await doc.selection.selectColumn(90);
 ```
 
 UI Location: Toolbar > Single Column Marquee Tool
@@ -363,7 +411,7 @@ Make an elliptical selection.
 
 ```javascript
 const doc = app.activeDocument;
-doc.selection.selectEllipse({top: 0, left: 0, bottom: 100, right: 100});
+await doc.selection.selectEllipse({top: 0, left: 0, bottom: 100, right: 100});
 ```
 
 UI Location: Toolbar > Elliptical Marquee Tool
@@ -387,7 +435,7 @@ ___
 Make a polygonal selection.
 
 ```javascript
-doc.selection.selectPolygon([
+await doc.selection.selectPolygon([
     {x: 50, y: 10}, 
     {x: 100, y: 90},
     {x: 10, y: 40}
@@ -415,8 +463,8 @@ ___
 Make a rectangluar selection.
 
 ```javascript
-doc.selection.selectRectangle(
-    {top: 0, left: 0, bottom: 100, right: 100}
+await doc.selection.selectRectangle(
+    {top: 0, left: 0, bottom: 100, right: 100},
     Constants.SelectionType.REPLACE,
     10
 );
@@ -443,7 +491,7 @@ ___
 Select a single row of pixels.
 
 ```javascript
-doc.selection.selectRow(10);
+await doc.selection.selectRow(10);
 ```
 
 UI Location: Toolbar > Single Row Marquee Tool
@@ -468,6 +516,10 @@ stray pixels from color-based selections.
 
 Large values might make the selection disappear entirely (`.bounds` would return `null`).
 
+```javascript
+await doc.selection.smooth(32);
+```
+
 UI Location: Select > Modify > Smooth...
 
 #### Parameters
@@ -485,6 +537,10 @@ ___
 **async** : *Promise*<void\>
 
 Move the selection itself relative to its current position. Does not affect the active layer.
+
+```javascript
+await doc.selection.translateBoundary(100, 600);
+```
 
 UI Location: Select > Transform Selection
 
