@@ -18,6 +18,17 @@ keywords:
 
 # Constants
 
+To use any constant, import the `constants` object from the photoshop module first.
+
+```javascript
+const {app, constants} = require("photoshop");
+
+await app.activeDocument.resizeImage(
+    800, 600, 100,
+    constants.InterpolationMethod.AUTOMATIC
+);
+```
+
 ## Enumerations
 
 ### AnchorPosition
@@ -712,8 +723,13 @@ ___
 
 The method to use for bitmap interpolation.
 
-Pass to [PreferencesGeneral.imageInterpolation](/ps_reference/classes/preferences/preferencesgeneral/#imageinterpolation),
-[Layer.scale](/ps_reference/classes/layer/#scale)(), [Layer.skew](/ps_reference/classes/layer/#skew)(), [Layer.rotate](/ps_reference/classes/layer/#rotate)()
+Pass to
+- [PreferencesGeneral.imageInterpolation](/ps_reference/classes/preferences/preferencesgeneral/#imageinterpolation)
+- [Layer.scale](/ps_reference/classes/layer/#scale)()
+- [Layer.skew](/ps_reference/classes/layer/#skew)()
+- [Layer.rotate](/ps_reference/classes/layer/#rotate)()
+- [Selection.resizeBoundary](/ps_reference/classes/selection/#resizeboundary)()
+- [Selection.rotateBoundary](/ps_reference/classes/selection/#rotateboundary)()
 
 | Name | Description |
 | :------ | :------ |
@@ -1377,7 +1393,7 @@ ___
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
 The selection behavior when a selection already exists.
-Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)()
+Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)(), [Selection.saveTo](/ps_reference/classes/selection/#saveto)() and [Selection.load](/ps_reference/classes/selection/#load)()
 
 | Name | Description |
 | :------ | :------ |

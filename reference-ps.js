@@ -174,6 +174,10 @@ module.exports = [{
 			]
 		},
 		{
+			"title": "Selection",
+			"path": "/ps_reference/classes/selection/"
+		},
+		{
 			"title": "SolidColor",
 			"path": "/ps_reference/classes/solidcolor/"
 		},
