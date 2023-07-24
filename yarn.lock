@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:4.9.10":
-  version: 4.9.10
-  resolution: "@adobe/gatsby-theme-aio@npm:4.9.10"
+"@adobe/gatsby-theme-aio@npm:4.10.4":
+  version: 4.10.4
+  resolution: "@adobe/gatsby-theme-aio@npm:4.10.4"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -113,6 +113,7 @@ __metadata:
     redoc-cli: ^0.13.20
     rehype-slug-custom-id: ^1.1.0
     request: ^2.88.2
+    resize-observer-polyfill: ^1.5.1
     sharp: ^0.31.0
     stream-http: ^3.2.0
     styled-components: ^5.3.5
@@ -120,12 +121,13 @@ __metadata:
     to-arraybuffer: ^1.0.1
     tty-browserify: ^0.0.1
     unist-util-select: 3.0.4
+    use-debounce: ^9.0.4
     uuid: ^9.0.0
   peerDependencies:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: a0a85823c593390ff4e5ba56a34d9c377bcaa35ef6c06ae958ecc95a95aa862a18fd295f6c018ac0c5a79361fc74cad84bd690ea6437c5f0d0e7f5341b77290b
+  checksum: 2221471937bbbe15c7e98216b3e2ea50ddc5b255959f4928f86ae6fb98a290504d69a8519d36a14d9fcf46b63bf3067a12f8a22f0a0ea7ca4b53f6ff9375d9f0
   languageName: node
   linkType: hard
 
@@ -17595,6 +17597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resize-observer-polyfill@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
+  languageName: node
+  linkType: hard
+
 "resolve-alpn@npm:^1.0.0":
   version: 1.2.1
   resolution: "resolve-alpn@npm:1.2.1"
@@ -20271,6 +20280,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-debounce@npm:^9.0.4":
+  version: 9.0.4
+  resolution: "use-debounce@npm:9.0.4"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 37da4ecbe4e10a6230580cac03a8cae1788ea3e417dfdd92fcf654325458cf1b4567fd57bebf888edab62701a6abe47059a585008fd04228784f223f94d66ce4
+  languageName: node
+  linkType: hard
+
 "utif@npm:^2.0.1":
   version: 2.0.1
   resolution: "utif@npm:2.0.1"
@@ -20378,7 +20396,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "uxp-photoshop-documentation@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": 4.9.10
+    "@adobe/gatsby-theme-aio": 4.10.4
     eslint: ^7.32.0
     gatsby: 4.22.0
     react: ^17.0.2
