@@ -18,7 +18,7 @@ keywords:
 
 # Bounds
 
-Defines a rectangle with properties: left, right, top, and bottom.
+Defines a rectangle. This is a WIP.
 
 ## Properties
 

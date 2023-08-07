@@ -84,7 +84,7 @@ Key path | Type | Description | Required
 `main`   | `string` | Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. | Optional (defaults to `main.js`)
 `icons` | `IconDefinition[]` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) <br/> PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. <br/> You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../../distribution/packaging-your-plugin/) to learn more. | Publish
 | `host` | `HostDefinition\|HostDefinition[]` | Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports. <br/><br/> **Note:** An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace | Develop / Publish
-`entryPoints` | `EntryPointDefinition[]`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
+`entrypoints` | `EntryPointDefinition[]`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
 
 ## Icons
 
@@ -116,7 +116,7 @@ Key | Type | Description | Required
 
 ## Entry Points
 
-The `entryPoints` field is an _array_ of objects matching the `EntryPointDefinition` format specified below. These entries appear both in the _Plugins_ menu in the native menubar, and the plugin panel.
+The `entrypoints` field is an _array_ of objects matching the `EntryPointDefinition` format specified below. These entries appear both in the _Plugins_ menu in the native menubar, and the plugin panel.
 
 Each entry point specifies a `type`, to create either a direct-action command or a panel show/hide command.
 
