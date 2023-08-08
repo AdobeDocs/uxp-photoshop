@@ -121,15 +121,15 @@ no transparency.
 
 ```javascript
 // "Default Photoshop Size" 7x5 inches at 300ppi
-let newDoc1 = await app.documents.add();
-let newDoc2 = await app.documents.add({
+let newDoc1 = await app.createDocument();
+let newDoc2 = await app.createDocument({
    width: 800, 
    height: 600, 
    resolution: 300, 
    mode: "RGBColorMode", 
    fill: "transparent"
 });
-let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
+let newDoc3 = await app.createDocument({preset: "My Default Size 1"});
 ```
 
 #### Parameters

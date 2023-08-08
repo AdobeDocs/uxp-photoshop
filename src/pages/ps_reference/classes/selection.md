@@ -83,7 +83,7 @@ UI Location: Select > Modify > Contract
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `by` | *number* | - | The amount to contract the selection (integer in the range 1..500). |
-| `applyEffectAtCanvasBounds` | *boolean* | false | If true and the selection is outside of canvas, the effect is not limited by canvas bounds. |
+| `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the contraction. |
 
 ___
 
@@ -120,7 +120,7 @@ UI Location: Select > Modify > Expand
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `by` | *number* | - | The amount to expand the selection (integer in the range 1..500). |
-| `applyEffectAtCanvasBounds` | *boolean* | false | If true, the selection can expand beyond the canvas bounds. |
+| `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the expansion. |
 
 ___
 
@@ -144,7 +144,7 @@ UI Location: Select > Modify > Feather
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `by` | *number* | - | The amount to feather the selection with (integer in the range 0.1..1000). |
-| `applyEffectAtCanvasBounds` | *boolean* | false | If true, the feathered selection can expand beyond the canvas bounds. |
+| `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the feathering. |
 
 ___
 
@@ -410,7 +410,6 @@ ___
 Make an elliptical selection.
 
 ```javascript
-const doc = app.activeDocument;
 await doc.selection.selectEllipse({top: 0, left: 0, bottom: 100, right: 100});
 ```
 
@@ -527,7 +526,7 @@ UI Location: Select > Modify > Smooth...
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `radius` | *number* | - | The sample radius in pixels (integer in the range 1..500) |
-| `applyEffectAtCanvasBounds` | *boolean* | false | If false, the selection will be trimmed to fit inside canvas bounds |
+| `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the smoothing. |
 
 ___
 

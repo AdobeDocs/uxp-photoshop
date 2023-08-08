@@ -16,10 +16,11 @@ See Advanced > [Action Recording](../media/action-recording) for usage details.
 This [value](../media/batchplay#command-execution-options) can be used to suppress a Photoshop progress bar while the command is being executed.
 ### Selection
 
-In [Document.selection](../classes/document#selection) you can now find new [Selection](../classes/selection) class with getters related pixel selection such as: `typename`, `docId`, `parent`, `bounds`, `solid`
+In [Document.selection](../classes/document#selection) you can now find the new [Selection](../classes/selection) class for handling pixel selection.
+Properties: `typename`, `docId`, `parent`, `bounds`, `solid`.
 
 And methods:
-`contract`, `deselect`, `expand`, `feather`, `grow`, `inverse`, `load`, `makeWorkPath`, `selectAll`, `selectRectangle`, `selectEllipse`, `selectPolygon`, `selectRow`, `selectColumn`, `save`, `saveTo`, `selectBorder`, `smooth`, `translateBoundary`, `resizeBoundary`, `rotateBoundary`. (All these methods are returning `Promise<void>`)
+`contract`, `deselect`, `expand`, `feather`, `grow`, `inverse`, `load`, `makeWorkPath`, `selectAll`, `selectRectangle`, `selectEllipse`, `selectPolygon`, `selectRow`, `selectColumn`, `save`, `saveTo`, `selectBorder`, `smooth`, `translateBoundary`, `resizeBoundary`, `rotateBoundary`. (All methods here return `Promise<void>`.)
 
 ## Photoshop 24.6 (June 2023)
 
