@@ -142,7 +142,7 @@ ___
 *Promise*<void\>
 
 Detaches a listener from a Photoshop event.
-See [addNotificationListener](#addNotificationListener)
+See [addNotificationListener](#addnotificationlistener)
 ```javascript
 await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 ```
