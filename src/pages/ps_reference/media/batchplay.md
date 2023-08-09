@@ -8,19 +8,21 @@ sidebar_label: "BatchPlay"
 
 At the heart of our APIs is `batchPlay`, a method that executes one or more Photoshop action commands and return their results.
 
-_batchPlay is an advanced API, and we recommend trying to first use the DOM APIs before resorting to using batchPlay._
+> batchPlay is an advanced API, and we recommend trying to first use the DOM APIs before resorting to using batchPlay.
 
-## API
 
-BatchPlay can directly be accessed from the Photoshop action module, and as most other APIs it is asynchronous by default and returns a promise.
+batchPlay can directly be accessed from the Photoshop action module, and as most other APIs it is asynchronous by default and returns a promise.
 
 ```javascript
-require('photoshop').action.batchPlay(descriptors: ActionDescriptor[], options: Object): Promise<Object[]>
+require('photoshop').action.batchPlay(
+  descriptors: ActionDescriptor[],
+  options: Object
+): Promise<Object[]>
 ```
 
 Below we will dive into both how action commands are defined in JavaScript, and what options are available.
 
-### Descriptors
+## Descriptors
 
 The first argument to `batchPlay` is an array of descriptors (also called action descriptors).
 
@@ -79,7 +81,7 @@ Sample output from the colorSampler command:
 [{"colorSampler":{"_obj":"CMYKColorClass","black":0,"cyan":26.27,"magenta":4.71,"yellowColor":0},"sampledData":true}]
 ```
 
-#### Accepted action descriptors
+### Accepted action descriptors
 
 The composition of action descriptors can be complicated. Photoshop provides a number of ways that help a developer understand which descriptors Photoshop accepts.
 
@@ -116,7 +118,7 @@ Lastly, you can record your actions as a standard Photoshop action using the Act
 * Select the action set that contains the command.
 * Press (macOS)"shift+option+command" or (Windows)"shift+control+alt" and choose "Save Actions..." from the panel fly-out menu.
 
-#### Command execution options
+### Command execution options
 An action descriptor can include a `_options` property. If present then its value specifies how the command is executed.
 `_options` can contain the following values:
 
@@ -124,26 +126,27 @@ An action descriptor can include a `_options` property. If present then its valu
    * "silent": The command is executed without UI. If an error occurs, or if the command needs additional parameters, then a scripting error is returned. This is the default value.
    * "dontDisplay": The command is executed without UI unless an error occurs, or if the command need additional parameters. In that case UI may be shown.
    * "display": Standard UI related to the command is shown.
+* `suppressProgressBar: boolean`. This value can be used to suppress a Photoshop progress bar while the command is being executed. This is mainly used when executing a command that require user interaction.
 
-### options
+## options
 
 The second argument of batchPlay adjusts the options. Below is the list of options that are most commonly needed.
 
-#### synchronousExecution (default: false)
+### synchronousExecution (default: false)
 
 If set to true, batchPlay will block the entire scripting thread until it resolves, then return the value(s). We use this in the DOM API for property getters and setters, as it allows for simpler code.
 
 JavaScript code that use batchPlay directly should avoid using this keyword if possible, and instead use the default form that returns a promise.
 
-#### continueOnError (default: false)
+### continueOnError (default: false)
 
 When false, the batchPlay command will stop when the first (sub)command fails. When true, then all (sub)commands are executed.
 
-#### immediateRedraw (default: false)
+### immediateRedraw (default: false)
 
 When true, then Photoshop will update its UI after all the descriptors have been executed.
 
-#### historyStateInfo (default: none)
+### historyStateInfo (default: none)
 
 This option is deprecated as of Photoshop 2022. New JavaScript code should use the history suspension mechanism provided by [executeAsModal](./executeasmodal#history-state-suspension)
 
@@ -154,7 +157,7 @@ Request Photoshop to describe the entire batchPlayed series of actions as a sing
 
  Plugins that use api version 2 may find it easier to use the history state functionality that is provided via the executionContext object.
 
-### Result value
+## Result value
 `batchPlay` returns a promise. This promise is rejected if the batchPlay command is invalid. This is the case when incorrect arguments are provided. An example of a batchPlay rejection is:
 ```javascript
 require("photoshop").action.batchPlay(true, {});
@@ -182,7 +185,7 @@ The elements in the returned list match the action descriptor list passed to bat
 * `message: string`. A localized error message
 * `result: number`. An internal Photoshop error code. A "0" means "no error". -128 means that the user cancelled the operation. Other values are possible.
 
-### Action references
+## Action references
 Action references specify which DOM objects a command operates on. An action reference is specified using the `_target` keyword.
 An action reference is a list of item references that specifies how to find the DOM element starting from the application DOM element.
 Each item in the list can use one of the following forms:
@@ -200,7 +203,7 @@ We recommend using the ID form whenever possible because the ID of an object doe
 The enumerationSpecifier is command specific, but the most common value is `targetEnum` meaning the currently selected or active object of the specified class. Other possible values include: "first", "last", and "front". When using the enumeration form, `targetEnum` is the default value for the `_value` property.
 
 
-### Getting state from Photoshop
+## Getting state from Photoshop
 batchPlay can be used to obtain state from Photoshop. To do this, use the action command "get" with a target property.
 
 The following sample obtains the title of a target document.:
@@ -230,7 +233,7 @@ Using "get" without a property is intended for use only during the development o
 
 _A shipping plugin should not obtain all properties for a given target because this may be slow, and may become slower in the future when additional properties are added._
 
-#### Multi-Get
+### Multi-Get
 In some cases you may want to obtain several property values from the same target, or get the same property from several similar targets.
 Examples of this are:
 * Get the name, the id, and the color mode for a specific document.

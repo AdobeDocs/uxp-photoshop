@@ -451,6 +451,10 @@ module.exports = [{
 		{
 			"title": "CSDK <-> UXP Messaging",
 			"path": "/ps_reference/media/cpp-pluginsdk/"
+		},
+		{
+			"title": "Action Recording",
+			"path": "/ps_reference/media/action-recording/"
 		}
 	]
 },{

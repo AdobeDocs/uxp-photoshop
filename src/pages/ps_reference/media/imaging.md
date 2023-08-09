@@ -49,7 +49,7 @@ Image data is represented by a `PhotoshopImageData` instance. This instance has 
 | components    | Number      | Number of components per pixel. This is 3 for RGB, 4 for RGBA and so forth. |
 | componentSize | Number      | Number of bits per component. This can be 8, 16, or 32.|
 | pixelFormat   | String      | Memory layout (order) of components in a pixel. Could be `"RGB"`, `"RGBA"`, `"Grayscale"`, `"GrayscaleAlpha"`, `"LAB"`, or `"LABAlpha"`. |
-| chunky        | Boolean     | True if the image data internally is using the chunky format. |
+| isChunky      | Boolean     | True if the image data internally is using the chunky format. |
 | type          | String      | Type of contained data. At the moment only "image/uncompressed" is supported. |
 | getData       | Method      | [See documentation below.](#getdata) |
 | dispose       | Method      | [See documentation below.](#dispose) |
@@ -318,7 +318,7 @@ This API allows JavaScript to create arbitrary image data from a memory buffer.
 const imageData = await imaging.createImageDataFromBuffer(arrayBuffer, options);
 ```
 
-* `imageData` | Typed array - ***Required*** | Desc ribes the image data. Accepted types are: `Uint8Array`, `Uint16Array`, and `FloatArray`. The used type will indicate the componentSize of the provided data. See table above.
+* `imageData` | Typed array - ***Required*** | Describes the image data. Accepted types are: `Uint8Array`, `Uint16Array`, and `FloatArray`. The array type will indicate the componentSize of the provided data. See table above.
 * options | Object - ***Required***
 Options describing the operation.
    * `width` | Number - ***Required***. The width of the image.

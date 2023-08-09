@@ -18,9 +18,13 @@ keywords:
 
 # photoshopCore
 
-The module that allows access to specialized commands
-within the application. Various application state can be
+The `core` module allows access to specialized commands
+within the application. Various application state properties can be
 modified or queried here.
+
+Some of these commands can be considered experimental.  Some will be integrated
+into the DOM at a later date. The use of which will then be easier, for example,
+removing the need to specify the document ID as an argument.
 
 ```javascript
 var PhotoshopCore = require('photoshop').core;
@@ -158,6 +162,47 @@ Convert to CMYK
 
 ___
 
+### createTemporaryDocument
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*object*
+
+Create a temporary duplicate document for background processing.  This document does not appear in the UI,
+and there are limitations with some editing features.
+
+```javascript
+await PhotoshopCore.createTemporaryDocument({documentID:123})
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of "documentID" for the document to duplicate. |
+| `options.documentID` | *number* | - |
+
+___
+
+### deleteTemporaryDocument
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*void*
+
+Remove a temporary document.
+
+```javascript
+await PhotoshopCore.deleteTemporaryDocument({documentID:146})
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of "documentID" for the document to delete. |
+| `options.documentID` | *number* | - |
+
+___
+
 ### endModalToolState
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
@@ -241,6 +286,86 @@ console.log(JSON.stringify(clgpuInfoList))
 
 ___
 
+### getLayerGroupContents
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*Promise*<{ `list`: LayerTreeInfo[]  }\>
+
+Returns a list of the layers contained by the specified layer group.
+
+```javascript
+await psCore.getLayerGroupContents({"documentID": 123, "layerID": 9})
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | *object* |
+| `options.documentID` | *number* |
+| `options.layerID` | *number* |
+
+___
+
+### getLayerGroupContentsSync
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*object*
+
+Returns a list of the layers contained by the specified layer group.
+
+```javascript
+psCore.getLayerGroupContentsSync({"documentID": 123, "layerID": 9})
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | *object* |
+| `options.documentID` | *number* |
+| `options.layerID` | *number* |
+
+___
+
+### getLayerTree
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*Promise*<{ `list`: LayerTreeInfo[]  }\>
+
+Returns the full hierarchy of the layer stack in nested "lists".
+```javascript
+await psCore.getLayerTree( {documentID: 123} )
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options.documentID` | *number* | - |
+
+___
+
+### getLayerTreeSync
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*object*
+
+Returns the full hierarchy of the layer stack in nested "lists".
+```javascript
+psCore.getLayerTree( {documentID: 123} )
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options.documentID` | *number* | - |
+
+___
+
 ### getMenuCommandState
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
@@ -311,6 +436,38 @@ await PhotoshopCore.getPluginInfo()
 
 ___
 
+### getUserIdleTime
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+
+*Promise*<void\>
+
+Return the current number of seconds for user idle time. See also: [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime)
+
+```javascript
+await PhotoshopCore.getUserIdleTime()
+```
+
+___
+
+### historySuspended
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*Promise*<boolean\>
+
+Returns true if the history is in a suspended state.  See [Document.suspendHistory](/ps_reference/classes/document/#suspendhistory).
+```javascript
+await psCore.historySuspended( {documentID: 123} )
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options.documentID` | *number* | - |
+
+___
+
 ### isModal
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
@@ -370,6 +527,27 @@ await PhotoshopCore.redrawDocument({ documentID: 123})
 | :------ | :------ |
 | `options` | *object* |
 | `options.documentID` | *number* |
+
+___
+
+### removeNotificationListener
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*Promise*<void\>
+
+Detaches a listener from a Photoshop event.
+See [addNotificationListener](#addnotificationlistener)
+```javascript
+await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `group` | *string* | Notification group. |
+| `events` | *string*[] | Array of event names. |
+| `notifier` | NotificationListener | The Notification Listener to change. |
 
 ___
 
@@ -441,6 +619,24 @@ await PhotoshopCore.showAlert({ message: 'Operation successful'})
 | :------ | :------ |
 | `options` | *object* |
 | `options.message` | *string* |
+
+___
+
+### suppressResizeGripper
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+
+*Promise*<void\>
+
+The "resize gripper", a small square in the botton-right corner of a panel, may be hidden
+by this function. This square will appear above the contents the panel itself including
+scrollbars. While many panels over the years have simply left space at the bottom to
+accomodate the gripper, this option removes it.
+
+```javascript
+await PhotoshopCore.suppressResizeGripper({type: "panel", target: "panel's ID", value: true})
+```
+
+The value for `target` above will be the id attached to the panel's entry under `entrypoints` in the plugin manifest.
 
 ___
 

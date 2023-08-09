@@ -108,13 +108,41 @@ If the string is not already registered, a new ID will be created and returned.
 
 ___
 
+### recordAction
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+
+*Promise*<void\>
+
+Records this plugin's action to an active Action recording.
+See [Action Recording](./action-recording/) for usage and manifest requirements.
+
+```javascript
+await PhotoshopAction.recordAction("name": "My Command", methodName: "actionHandler", info: {"prop": value})
+```
+When the action is invoked, the following top level JavaScript function will be invoked:
+```javascript
+async function actionHandler(executionContext, info) {
+    let propValue = info["prop"];
+}
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | *string* | User visible string for the Actions panel. |
+| `methodName` | *string* | Name of top level JavaScript function callback. |
+| `info` | ActionDescriptor | Object with action specific information. See [Action Recording](./action-recording/). |
+
+___
+
 ### removeNotificationListener
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
 *Promise*<void\>
 
 Detaches a listener from a Photoshop event.
-See [addNotificationListener](#addNotificationListener)
+See [addNotificationListener](#addnotificationlistener)
 ```javascript
 await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 ```

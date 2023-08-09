@@ -7,6 +7,13 @@ description: Contains a running log of changes to the UXP API environment in Ado
 # Photoshop API Changelog
 
 ## Photoshop Beta (July/August 2023)
+
+### Action Recording
+Adds the capability for UXP plugins to record and playback Action steps.
+See Advanced > [Action Recording](../media/action-recording) for usage details.
+
+### batchPlay option: suppressProgressBar
+This [value](../media/batchplay#command-execution-options) can be used to suppress a Photoshop progress bar while the command is being executed.
 ### Selection
 
 In [Document.selection](../classes/document#selection) you can now find the new [Selection](../classes/selection) class for handling pixel selection.
