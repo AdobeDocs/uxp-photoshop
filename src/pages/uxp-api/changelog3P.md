@@ -3,6 +3,21 @@ index_desc: Changelog in UXP version
 -->
 
 # UXP Changelog
+
+## UXP v7.2.0
+
+### New
+- Adobe [Extensibility Metadata Platform (XMP)](./reference-js/Modules/uxp/XMP/) support
+- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+
+
+### Updated
+- Support of [Spectrum Web Component (SWC)](https://developers.corp.adobe.com/uxp/docs/apis/spectrum/swc/index.md) in UXP is moving out of Beta.
+- Support for [additional components and variants](https://developers.corp.adobe.com/uxp/docs/apis/spectrum/swc/index.md#list-of-supported-swc) in SWC
+- Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
+
+
 ## UXP v7.1.0
 
 ### New
