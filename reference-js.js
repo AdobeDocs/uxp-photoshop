@@ -525,6 +525,49 @@ module.exports=[
           {
             "title": "shell",
             "path": "/uxp-api/reference-js/Modules/uxp/shell/Shell"
+          },
+          {
+            "title": "XMP",
+            "header": true,
+            "pages": [
+              {
+                "title": "XMPMeta",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPMeta/"
+              },
+              {
+                "title": "XMPFile",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPFile/"
+              },
+              {
+                "title": "XMPUtils",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPUtils/"
+              },
+              {
+                "title": "XMPDateTime",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPDateTime/"
+              },
+              {
+                "title": "XMPConst",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPConst/"
+              },
+              {
+                "title": "XMPIterator",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPIterator/"
+              },
+              {
+                "title": "XMPProperty",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPProperty/"
+              },
+              {
+                "title": "XMPFileInfo",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPFileInfo/"
+              },
+              {
+                "title": "XMPPacketInfo",
+                "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPPacketInfo/"
+              },
+            ],
+            "path": "/uxp-api/reference-js/Modules/uxp/XMP/"
           }
         ],
         "path": "/uxp-api/reference-js/Modules/uxp/"

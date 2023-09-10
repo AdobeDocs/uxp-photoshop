@@ -16,7 +16,7 @@ contributors:
 
 The two SDKs serve different purposes. The new UXP SDK lets you write any generic C++ code alongside JavaScript. The PS C++ SDK helps you extend Photoshop capabilities in seven areas including filters, file formats, and selections.
 
-Before the introduction of UXP hybrid plugins, there were a few example of third-party developers pairing a PS C++ plugin to a UXP plugin for UI. However, there are some challenges with that approach:
+Before the introduction of UXP hybrid plugins, there were a few examples of third-party developers pairing a PS C++ plugin to a UXP plugin for UI. However, there are some challenges with that approach:
 
 1. Such plug-ins require a custom installer that installs the two separate plugins on the user’s machine (one for UXP and the other for the C++ plug-in).
 2. Communication between the two plugins is only possible in strings.
