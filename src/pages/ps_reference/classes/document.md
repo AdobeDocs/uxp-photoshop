@@ -115,6 +115,7 @@ The object containing the document's currently active selection
 | title | *string* | R | 22.5 | Document title |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Document&quot;*. |
 | width | *number* | R | 22.5 | Document&#x27;s width in pixels. |
+| zoom | *number* | R | 25.1 | Document&#x27;s zoom factor in percent. |
 
 ## Methods
 

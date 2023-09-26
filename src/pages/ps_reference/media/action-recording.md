@@ -90,8 +90,8 @@ Also, keep in mind that only the **name** of the function is recorded in the Act
 An info argument is required.  If your function does not need any data to be recorded, you still **must pass an empty object literal**, `{}`. 
 
 #### Record Again
-A user can update an Action step by selecting a step and then chosing "Record Again..." from the flyout menu of the Action panel, or by double-clicking on the step.
-This places Photoshop in the "record again" mode. The step (or full Action) will be replayed and the resulting value(s) recorded.  For UXP plugin steps, returned value of the handler function will replace the existing `info` object. If the javascript function returns undefined, then the step is not modified. 
+A user can update an Action step by selecting it and choosing "Record Again..." from the flyout menu of the Actions panel, or by double-clicking on the step.
+This places Photoshop in the "record again" mode. The step will be replayed and the resulting value recorded.  For UXP plugin Action steps, the value returned by the handler function will replace the existing `info` object in the recorded step. If the javascript function returns `undefined`, then the step is not modified. 
 
 In the following code, the exisiting `info` value as stored in the step would be replaced with `{"myNewProp": true}` at the time of re-recording the step.
 
