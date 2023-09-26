@@ -22,7 +22,7 @@ The concept of a hybrid plugin is very similar to Node.js C++ Addons. The dynami
 
 Try the ready-to-use `template-plugin` provided within the SDK to say a quick ‘Hello world!’. Load the template via UDT, and find it under the Plugins menu. 
 
-![Pluign menu](./plugin-menu.png)
+![Plugins menu](./plugin-menu.png)
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -54,4 +54,55 @@ This is opposed to a standard UXP plugin’s method of accessing the file system
 ```jsx
 let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");
 document.saveAs.psd(entry);
+```
+
+
+## Photoshop C++ SDK
+
+Photoshop offers a number of C based plugin APIs. These are documented in the [downloadable package available](https://console.adobe.io/servicesandapis).
+A hybrid plugin can get access to these APIs by exposing an additional function entry point.:
+```cpp
+export SPErr PSDLLMain(const char* selector, SPBasicSuite* basicSuite, PIActionDescriptor descriptor);
+```
+After Photoshop loads a hybrid addOn, it will invoke this method. The basicSuite argument can be used to obtain Photoshop API suites. See the C++ SDK for information about how to acquire Photoshop suites.
+
+### Sample code:
+To test this, you can add the following to module.cpp from the hybrid plugin sample:
+```C++
+// Photoshop SDK includes (add path to project)
+#include "SPBasic.h"
+#include "PIColorSpaceSuite.h"
+
+. . .
+
+// ----------------------------------------------------------------------------------------------------
+static const SPBasicSuite* gBasicSuite = nullptr;
+static const PSColorSpaceSuite2* gColorSpaceSuite = nullptr;
+
+extern "C" UXP_EXTERN_API_STDCALL(SPErr) PSDLLMain(const char* selector, SPBasicSuite* spBasic, void*)
+try {
+  do {
+    if (spBasic == nullptr)
+    break;
+
+    // cache the basic suite so we can use at any time
+    gBasicSuite = spBasic;
+
+    SPErr spErr = gBasicSuite->AcquireSuite(kPSColorSpaceSuite, kPSColorSpaceSuiteVersion, reinterpret_cast<const void**>(&gColorSpaceSuite));
+    if (spErr != kSPNoError)
+    break;
+
+    if (gColorSpaceSuite == nullptr)
+    break;
+
+    Color8 colorArray[1] = {11, 30, 201, 0};
+    spErr = gColorSpaceSuite->Convert8(plugIncolorServicesRGBSpace, plugIncolorServicesCMYKSpace, colorArray, 1);
+    if (spErr != kSPNoError) break;
+  } while (false);
+
+  return kSPNoError;
+}
+  catch(...) {
+  return -1;
+}
 ```
