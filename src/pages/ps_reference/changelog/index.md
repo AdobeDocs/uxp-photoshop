@@ -8,7 +8,12 @@ contributors:
 
 # Photoshop API Changelog
 
-## Photoshop Beta (July/August 2023)
+## Photoshop Beta (September 2023)
+
+### UXP Plugin Action Record Again
+The ability to re-record an Action step via the Actions panel flyout menu item, "Record Again", or by double-clicking the step now works. To support that ability, see the notes at [Action Recording](../media/action-recording#record-again).
+
+## Photoshop 25.0 (September 2023)
 
 ### Action Recording
 Adds the capability for UXP plugins to record and playback Action steps.
@@ -16,6 +21,7 @@ See Advanced > [Action Recording](../media/action-recording) for usage details.
 
 ### batchPlay option: suppressProgressBar
 This [value](../media/batchplay#command-execution-options) can be used to suppress a Photoshop progress bar while the command is being executed.
+
 ### Selection
 
 In [Document.selection](../classes/document#selection) you can now find the new [Selection](../classes/selection) class for handling pixel selection.
@@ -23,6 +29,12 @@ Properties: `typename`, `docId`, `parent`, `bounds`, `solid`.
 
 And methods:
 `contract`, `deselect`, `expand`, `feather`, `grow`, `inverse`, `load`, `makeWorkPath`, `selectAll`, `selectRectangle`, `selectEllipse`, `selectPolygon`, `selectRow`, `selectColumn`, `save`, `saveTo`, `selectBorder`, `smooth`, `translateBoundary`, `resizeBoundary`, `rotateBoundary`. (All methods here return `Promise<void>`.)
+
+### Bug Fixes
+- Fixes error when `Channels.getByName` did not work for inactive document
+
+### Photoshop C++ SDK Access from UXP Hybrid Plugins
+UXP hybrid plugins can now [access the suites of functionality made available via the Photoshop C++ SDK.](../../guides/hybrid-plugins/getting-started/index.md#photoshop-c-sdk)
 
 ### UXP v7.2
 
