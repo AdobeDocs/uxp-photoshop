@@ -10,8 +10,10 @@ contributors:
 
 ## Photoshop Beta (September 2023)
 
+Document objects can report the current [zoom](../classes/document) value.
 ### UXP Plugin Action Record Again
 The ability to re-record an Action step via the Actions panel flyout menu item, "Record Again", or by double-clicking the step now works. To support that ability, see the notes at [Action Recording](../media/action-recording#record-again).
+
 
 ## Photoshop 25.0 (September 2023)
 
