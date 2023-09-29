@@ -27,7 +27,7 @@ The hybrid plugin you build using the new UXP SDK will let you bundle C++ code a
 
 ### Can I build a Photoshop filter (or other such capabilities) with the new Hybrid plugin SDK?
 
-The new SDK allows you to write any generic C++ code alongside JavaScript. Though it is theoretically possible to write a Photoshop filter using the new SDK, further enhancements to UXP Hybrid Plugins are in the works. Please join our [forums](https://forums.creativeclouddeveloper.com/) and [newsletters](https://www.adobe.com/subscription/ccdevnewsletter.html) for updates.
+Yes, see the section under [Getting started](../getting-started/#photoshop-c-sdk).
 
 <br></br>
 
