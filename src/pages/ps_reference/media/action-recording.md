@@ -93,7 +93,7 @@ An info argument is required.  If your function does not need any data to be rec
 A user can update an Action step by selecting it and choosing "Record Again..." from the flyout menu of the Actions panel, or by double-clicking on the step.
 This places Photoshop in the "record again" mode. The step will be replayed and the resulting value recorded.  For UXP plugin Action steps, the value returned by the handler function will replace the existing `info` object in the recorded step. If the javascript function returns `undefined`, then the step is not modified. 
 
-In the following code, the exisiting `info` value as stored in the step would be replaced with `{"myNewProp": true}` at the time of re-recording the step.
+In the following code, the existing `info` value as stored in the step would be replaced with `{"myNewProp": true}` at the time of re-recording the step.
 
 ```javascript
 async function actionHandler(executionContext, info) {
