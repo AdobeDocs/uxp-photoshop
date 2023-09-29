@@ -185,7 +185,7 @@ Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If missing, or negative, then the source is the active document.
    * `layerID` | Number - ***Required***.  The id of the target layer. The target layer must be a pixel layer.
    * `imageData` | [PhotoshopImageData](#photoshopimagedata) - ***Required***. Value describing the pixel data.
-   * `replace` | Boolean - Optional. Describes how pixels are added to the layer. If true, then exising pixels in the layer are discarded before adding new pixels. If false, then the new pixels are added to the existing pixel content in the layer. The default value is true.
+   * `replace` | Boolean - Optional. Describes how pixels are added to the layer. If true, then existing pixels in the layer are discarded before adding new pixels. If false, then the new pixels are added to the existing pixel content in the layer. The default value is true.
    * `targetBounds` | Object - Optional.  The region where the pixels should be inserted. If the value is not provided, then pixels are inserted at the origin `(0, 0)` of the document. The provided object must include the following values: `left`, `top`. (Dimension keys `width` and `height` are not used.)
    * `commandName` | String - Optional. If provided then this name is used when creating an entry in the history panel.
 
@@ -246,7 +246,7 @@ Options describing the operation.
    * `layerID` | Number - ***Required***.  The id of the target layer.
    * `kind` | String - Optional. The kind of mask to change. Only `"user"` is accepted at this time. The default value is `"user"`.
    * `imageData` | [PhotoshopImageData](#photoshopimagedata) - ***Required***. Value describing the mask data. This must be image data with a single component using the grayscale color model.
-   * `replace` | Boolean - Optional. Describes how mask pixels are added. If true, then the exising mask in the layer is discarded before creating a new mask. If false, then the new image data is placed into to the existing mask in the layer. The default value is true.
+   * `replace` | Boolean - Optional. Describes how mask pixels are added. If true, then the existing mask in the layer is discarded before creating a new mask. If false, then the new image data is placed into to the existing mask in the layer. The default value is true.
    * `targetBounds` | Object - Optional.  The region where the pixels should be inserted. If the value is not provided, then pixels are inserted at the origin `(0, 0)`. The provided object must include the following values: `left`, `top`. (Dimension keys `width` and `height` are not used here.)
    * `commandName` | String - Optional. If provided, then this name is used when creating an entry in the history panel.
 
@@ -300,7 +300,7 @@ await imaging.putSelection(options);
 * options | Object - ***Required***
 Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If missing, or negative, then the source is the active document.
-   * `replace` | Boolean - Optional. Describes how selection is modified. If true, then the exising document selection is discarded before creating a new selection. If false, then the new image data is added to the existing document selection. The default value is true.
+   * `replace` | Boolean - Optional. Describes how selection is modified. If true, then the existing document selection is discarded before creating a new selection. If false, then the new image data is added to the existing document selection. The default value is true.
    * `targetBounds` | Object - Optional.  The region where the selection should be inserted. If the value is not provided, then selection pixels are inserted at the origin `(0, 0)`. The provided object must include the following values: `left`, `top`. (Dimension keys `width` and `height` are not used here.)
    * `commandName` | String - Optional. If provided, then this name is used when creating an entry in the history panel.
 

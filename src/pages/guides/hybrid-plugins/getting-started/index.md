@@ -59,8 +59,8 @@ document.saveAs.psd(entry);
 
 ## Photoshop C++ SDK
 
-Photoshop offers a number of C based plugin APIs. These are documented in the [downloadable package available](https://console.adobe.io/servicesandapis).
-A hybrid plugin can get access to these APIs by exposing an additional function entry point.:
+Photoshop offers a number of C based plugin APIs. These are documented in the [downloadable package](https://console.adobe.io/servicesandapis).
+A hybrid plugin can get access to these APIs by exposing an additional function entry point.
 ```cpp
 export SPErr PSDLLMain(const char* selector, SPBasicSuite* basicSuite, PIActionDescriptor descriptor);
 ```
