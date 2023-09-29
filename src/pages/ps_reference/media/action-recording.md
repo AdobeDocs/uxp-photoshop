@@ -14,7 +14,13 @@ The following method from the Action module will add a step to the Action that i
 
 ```javascript
 const PhotoshopAction = require('photoshop').action;
-PhotoshopAction.recordAction({"name": "My Command", "methodName": "actionHandler"}, {"prop": value});
+PhotoshopAction.recordAction(
+    {
+        "name": "My Command",
+        "methodName": "actionHandler"
+    },
+    {"prop": value}
+);
 ```
 
 Later when the recorded Action is invoked, the named top-level JavaScript function is invoked:
@@ -30,8 +36,17 @@ The `executionContext` argument conforms to the argument used by [executeAsComma
 Example:
 ```javascript
 // Start recording an Action, then execute the code below.
-async function alertHandler(context, dataObj) { require('photoshop').core.showAlert(dataObj.message); };
-require('photoshop').action.recordAction({"name": "Hello Alert", "methodName": "alertHandler"}, {message: "Hello!"});
+async function alertHandler(context, dataObj) {
+    require('photoshop').core.showAlert(dataObj.message);
+    return dataObj;
+};
+require('photoshop').action.recordAction(
+    {
+        "name": "Hello Alert",
+        "methodName": "alertHandler"
+    },
+    {message: "Hello!"}
+);
 // Stop recording, and play the Action.
 ```
 ![recordAction](./assets/recordAction.png)
@@ -72,7 +87,20 @@ Avoid due to scope:
 
 Also, keep in mind that only the **name** of the function is recorded in the Action step.  The function body remains in the environment of the plugin.  As such, the function declaration can change, for example, by way of an update to the plugin itself.  The Action step will still call it with the data object that was recorded in the step.  
 
-An info argument is required.  If your function does not need any data to be recorded, you still must pass an empty object literal, `{}`. 
+An info argument is required.  If your function does not need any data to be recorded, you still **must pass an empty object literal**, `{}`. 
+
+#### Record Again
+A user can update an Action step by selecting it and choosing "Record Again..." from the flyout menu of the Actions panel, or by double-clicking on the step.
+This places Photoshop in the "record again" mode. The step will be replayed and the resulting value recorded.  For UXP plugin Action steps, the value returned by the handler function will replace the existing `info` object in the recorded step. If the javascript function returns `undefined`, then the step is not modified. 
+
+In the following code, the existing `info` value as stored in the step would be replaced with `{"myNewProp": true}` at the time of re-recording the step.
+
+```javascript
+async function actionHandler(executionContext, info) {
+    // . . .
+    return {"myNewProp": true};
+}
+```
 
 ### Errors
 If your recording fails, try adding a `.catch` to the `recordAction` call.

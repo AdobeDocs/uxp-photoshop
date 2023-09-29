@@ -25,11 +25,11 @@ In order to write a Hybrid plugin, you must be proficient in C++. Consider this 
 
 ## UXP Hybrid plugin vs Photoshop C++ plugins
 
-A UXP hybrid plugin should not be confused with a Photoshop C++ plugin [built using CSDK](../../ps_reference/media/cpp-pluginsdk/). 
+A UXP hybrid plugin should not be confused with a Photoshop C++ plugin [built using the C++ SDK](../../ps_reference/media/cpp-pluginsdk/). 
 
 What you choose depends upon your use case. For example, if you wish to build a Photoshop filter that appears under the Filter menu or implement a new file type, you probably should create a C++ plugin using PS CSDK. But opt for UXP Hybrid plugins if you want to write generic C++ code alongside JavaScript.
 
-We are exploring ways to integrate the two types in the future. Lookout for updates in our [forums](https://forums.creativeclouddeveloper.com/) and [newsletters](https://www.adobe.com/subscription/ccdevnewsletter.html)
+We have opened the pathway to allow a .uxpaddon to [utilize the Photoshop C++ SDK](./getting-started/index.md#photoshop-c-sdk).  In this way, you create a compiled filter and bundle it with a UXP dialog to control it.  Bear in mind that the filter in this example would only be known to the UXP hybrid plugin.
 
 ## Minimum Version Requirements
 
