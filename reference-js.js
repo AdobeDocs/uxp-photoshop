@@ -30,6 +30,22 @@ module.exports=[
           {
             "title": "fetch",
             "path": "/uxp-api/reference-js/Global Members/Data Transfers/fetch/"
+          },
+          {
+            "title": "FormData",
+            "path": "/uxp-api/reference-js/Global Members/Data Transfers/FormData/"
+          },
+          {
+            "title": "Headers",
+            "path": "/uxp-api/reference-js/Global Members/Data Transfers/Headers/"
+          },
+          {
+            "title": "Request",
+            "path": "/uxp-api/reference-js/Global Members/Data Transfers/Request/"
+          },
+          {
+            "title": "Response",
+            "path": "/uxp-api/reference-js/Global Members/Data Transfers/Response/"
           }
         ],
         "path": "/uxp-api/reference-js/Global Members/Data Transfers/"
@@ -527,6 +543,10 @@ module.exports=[
             "path": "/uxp-api/reference-js/Modules/uxp/shell/Shell"
           },
           {
+            "title": "User Information",
+            "path": "/uxp-api/reference-js/Modules/uxp/User Information/"
+          },
+          {
             "title": "XMP",
             "header": true,
             "pages": [
@@ -567,7 +587,7 @@ module.exports=[
                 "path": "/uxp-api/reference-js/Modules/uxp/XMP/XMP Classes/XMPPacketInfo/"
               },
             ],
-            "path": "/uxp-api/reference-js/Modules/uxp/XMP/"
+            "path": "/uxp-api/reference-js/Modules/uxp/XMP/getting-started/"
           }
         ],
         "path": "/uxp-api/reference-js/Modules/uxp/"
