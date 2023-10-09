@@ -275,7 +275,7 @@ alchemistPlugin.showPanel("inspector");
 alchemistPlugin.invokeCommand("resetStateFn");
 ```
 
-## WebViews
+### WebViews
 WebViews are available with UXP 6.0, and need to be configured in your plugin's manifest (v5 required).
 
 In your `manifest.json`: 
@@ -304,6 +304,21 @@ document.querySelector("dialog").showModal();
 
 ![Webview](webview_example.png)
 
-### Limitations 
+#### Limitations 
 WebViews are available within modal dialogs only for now.
 
+### GUID
+Available from Photoshop v25.1 (or UXP v7.3), to identify a Creative Cloud User, 
+
+In your `manifest.json`: 
+```json
+"requiredPermissions": {
+  "enableUserInfo": true
+}
+```
+
+Then in your code:
+```js
+let userId = require('uxp').userInfo.userId(); // Get the GUID of user
+console.log(userId);
+```

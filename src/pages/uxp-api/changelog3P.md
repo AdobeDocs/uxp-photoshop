@@ -4,19 +4,54 @@ index_desc: Changelog in UXP version
 
 # UXP Changelog
 
-## UXP v7.2.0
-
+## UXP v7.3.0
 ### New
-- Adobe [Extensibility Metadata Platform (XMP)](./reference-js/Modules/uxp/XMP/) support
-- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
-- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+- [GUID](./reference-js/Modules/uxp/User%20Information/UserInfo.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
+- Multipart `FormData` support in [Request](./reference-js/Global%20Members/Data%20Transfers/Request.md) and [Response](./reference-js/Global%20Members/Data%20Transfers/Response.md) for `fetch`
+- [FormData](./reference-js/Global%20Members/Data%20Transfers/FormData.md) now supports the following APIs
+    - delete()
+    - get()
+    - getAll()
+    - has()
+    - keys()
+    - set()
+    - values()
 
 
 ### Updated
-- Support of [Spectrum Web Component (SWC)](https://developers.corp.adobe.com/uxp/docs/apis/spectrum/swc/index.md) in UXP is moving out of Beta.
-- Support for [additional components and variants](https://developers.corp.adobe.com/uxp/docs/apis/spectrum/swc/index.md#list-of-supported-swc) in SWC
-- Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
+- [FormData's append](./reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
+- `Spectrum Web Components` support in `React` context is now available for all 30 components.
+    - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
+### Fixed
+- Tab Navigation not working for several SWC Components is now fixed
+- Spacebar doesn't work on SWC Button component when reached via TAB navigation.
+- Support for `Alerts` in InDesign
+    - [alert()](./reference-js/Global%20Members/HTML%20DOM/alert.md)
+    - [prompt()](./reference-js/Global%20Members/HTML%20DOM/prompt.md)
+    - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 
+## UDT v2.0
+
+### New
+- UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
+
+### Updated
+- Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
+
+
+## UXP v7.2.0
+### New
+- Support for XMP in Photoshop
+    - [Get Started With XMP](./reference-js/Modules/uxp/XMP/getting-started/index.md)
+    - [XMP Classes](./reference-js/Modules/uxp/XMP/XMP%20Classes/index.md)
+- Support for [pointer-events:none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+- Support for pseudoElement in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+
+### Updated
+- `Spectrum Web Component` is promoted to `release` and has support for [additional list of components](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/).
+- The are updates to the support matrix for Spectrum web components and its variants which is mentioned in the [support matrix](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/#list-of-supported-swc)
+- `swc-uxp-wrappers` to be used to consume the components inside UXP. These wrappers are hosted on [npmjs](https://www.npmjs.com/search?q=swc-uxp-wrappers)
+- Plugin sample for [react is available](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter) using SWC.
 
 ## UXP v7.1.0
 
@@ -31,7 +66,7 @@ HTMLElement now supports
 - Documentation for `shell` moved to [new location](./reference-js/Modules/uxp/shell/)
 
 ### Fixed
-- `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
+- `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release.
 ```
 // CSS variable
 html {
@@ -42,7 +77,7 @@ html {
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="var(--iconColor, red)" />
 </svg>
 // shows a yellow circle
-```  
+```
 
 ## UXP v7.0.0
 

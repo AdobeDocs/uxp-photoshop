@@ -14,12 +14,43 @@ Document objects can report the current [zoom](../classes/document) value.
 ### UXP Plugin Action Record Again
 The ability to re-record an Action step via the Actions panel flyout menu item, "Record Again", or by double-clicking the step now works. To support that ability, see the notes at [Action Recording](../media/action-recording#record-again).
 
+### UXP v7.3 Integration
+
+#### New
+- [GUID](../../uxp-api/reference-js/Modules/uxp/User%20Information/index.md) for uniquely identifying a Creative Cloud User.
+- Multipart `FormData` support in [Request](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Request.md) and [Response](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Response.md) for [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
+- [FormData](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/FormData.md) now supports the following APIs
+    - delete()
+    - get()
+    - getAll()
+    - has()
+    - keys()
+    - set()
+    - values()
+
+#### Updated
+- [FormData's append](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
+- `Spectrum Web Components` support in `React` context is now available for all 30 components.
+    - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
+
+#### Fixed
+- Tab Navigation not working for several SWC Components is now fixed
+- Spacebar doesn't work on SWC Button component when reached via TAB navigation.
+
+### UDT v2.0
+
+#### New
+- UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
+
+#### Updated
+- Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
+
 
 ## Photoshop 25.0 (September 2023)
 
 ### Action Recording
 Adds the capability for UXP plugins to record and playback Action steps.
-See Advanced > [Action Recording](../media/action-recording) for usage details.
+See Advanced [Action Recording](../media/action-recording) for usage details.
 
 ### batchPlay option: suppressProgressBar
 This [value](../media/batchplay#command-execution-options) can be used to suppress a Photoshop progress bar while the command is being executed.
@@ -38,15 +69,16 @@ And methods:
 UXP hybrid plugins can now [access the suites of functionality made available via the Photoshop C++ SDK.](../../guides/hybrid-plugins/getting-started/index.md#photoshop-c-sdk)
 
 ### UXP v7.2 Integration
-> #### New
-> - Adobe [Extensibility Metadata Platform (XMP)](../../uxp-api/reference-js/Modules/uxp/XMP/) support
-> - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
-> - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
 
-> #### Updated
-> - Support of [Spectrum Web Component (SWC)](../../uxp-api/reference-spectrum/swc/) in UXP is moving out of Beta.
-> - Support for [additional components and variants](../../uxp-api/reference-spectrum/swc/index.md#list-of-supported-swc) in SWC
-> - Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
+#### New
+- Adobe [Extensibility Metadata Platform (XMP)](../../uxp-api/reference-js/Modules/uxp/XMP/getting-started/index.md) support
+- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+
+#### Updated
+- Support of [Spectrum Web Component (SWC)](../../uxp-api/reference-spectrum/swc/) in UXP is moving out of Beta.
+- Support for [additional components and variants](../../uxp-api/reference-spectrum/swc/index.md#list-of-supported-swc) in SWC
+- Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
 
 ----
 ## Photoshop 24.6 (June 2023)
@@ -83,25 +115,25 @@ Both methods accept an options object that matches the parameters required in th
 
 ### UXP v7.1 Integration
 
-> #### New
-> HTMLElement now supports
-> - [setPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
-> - [releasePointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
-> - [hasPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
-> - [dir](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
-> 
-> #### Updated
-> - Documentation for `shell` module moved to [new location](../../uxp-api/reference-js/Modules/uxp/shell/)
-> 
-> #### Fixed
-> - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
-> 
-> ```
-> // CSS variable
-> html {
->   --iconColor: yellow;
-> }
-> ```
+#### New
+HTMLElement now supports
+- [setPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
+- [releasePointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
+- [hasPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
+- [dir](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
+
+#### Updated
+- Documentation for `shell` module moved to [new location](../../uxp-api/reference-js/Modules/uxp/shell/)
+
+#### Fixed
+- `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
+
+```
+// CSS variable
+html {
+  --iconColor: yellow;
+}
+```
 
 ----
 ## Photoshop 24.4 (April 2023)
@@ -114,47 +146,47 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 - Invalid `targetBounds` caused crash.
 
 ### UXP v7.0 Integration
-> #### New
-> - Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.
->     - Classes
->         - [HTMLSlotElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
->         - [HTMLTemplateElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLTemplateElement.md)
->     - Methods
->         - [Element.assignedSlot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#assignedslot--htmlslotelement)
->         - [Element.slot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#slot--string)
->         - [Element.attachShadow](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#attachshadowinit)
->         - [Element.shadowRoot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
->         - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
->         - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
-> - [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/swc/index.md) Support for Adobe SWC.
-> - Several augmentations to the JS API set
->     - Properties
->         - [HTMLElement.lang](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
->     - Classes added to the global scope
->         - [TreeWalker](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/TreeWalker.md)
->         - [NodeFilter](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/NodeFilter.md)
->     - Methods
->         - [Element.hasAttributes](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#hasattributes)
->         - [Element.getAttributeNames](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#getattributenames)
->         - [Event.composed](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composed--boolean)
->         - [Event.composedPath](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composedpath)
->         - [DocumentFragment.append](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#appendargs)
->         - [DocumentFragment.querySelector](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorselector)
->         - [DocumentFragment.querySelectorAll](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorallselector)
-> - New focus events to support React 16
->     - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
->     - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
-> - HTML [2D Canvas Support](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for basic shapes and styling.
-> - Alerts
->     - [alert()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md)
->     - [prompt()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md)
->     - [confirm()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
-> - Support for [pipeThrough](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform-options) and [tee](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#tee) in [ReadableStream](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](../../uxp-api/reference-js/Global%20Members/Streams/index.md) for more details
-> - [ImageBlob](../../uxp-api/reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
-> 
-> #### Changed
-> - [HTMLVideoElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
-> - [FS API](../../uxp-api/reference-js/Modules/fs/): No need for the `file://` protocol
+#### New
+- Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.
+    - Classes
+        - [HTMLSlotElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
+        - [HTMLTemplateElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLTemplateElement.md)
+    - Methods
+        - [Element.assignedSlot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#assignedslot--htmlslotelement)
+        - [Element.slot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#slot--string)
+        - [Element.attachShadow](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#attachshadowinit)
+        - [Element.shadowRoot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
+        - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
+        - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
+- [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/swc/index.md) Support for Adobe SWC.
+- Several augmentations to the JS API set
+    - Properties
+        - [HTMLElement.lang](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
+    - Classes added to the global scope
+        - [TreeWalker](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/TreeWalker.md)
+        - [NodeFilter](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/NodeFilter.md)
+    - Methods
+        - [Element.hasAttributes](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#hasattributes)
+        - [Element.getAttributeNames](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#getattributenames)
+        - [Event.composed](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composed--boolean)
+        - [Event.composedPath](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composedpath)
+        - [DocumentFragment.append](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#appendargs)
+        - [DocumentFragment.querySelector](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorselector)
+        - [DocumentFragment.querySelectorAll](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorallselector)
+- New focus events to support React 16
+    - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
+    - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
+- HTML [2D Canvas Support](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for basic shapes and styling.
+- Alerts
+    - [alert()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md)
+    - [prompt()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md)
+    - [confirm()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
+- Support for [pipeThrough](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform-options) and [tee](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#tee) in [ReadableStream](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](../../uxp-api/reference-js/Global%20Members/Streams/index.md) for more details
+- [ImageBlob](../../uxp-api/reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
+
+#### Changed
+- [HTMLVideoElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
+- [FS API](../../uxp-api/reference-js/Modules/fs/): No need for the `file://` protocol
 
 ----
 ## Photoshop 24.2 (February 2023)
@@ -243,10 +275,10 @@ The UXP DOM features a variety of new text-related APIs, that provide a more rob
 nearest RGB 16 bit per channel.
 
 ### UXP v6.5 Integration
-> #### New
-> - [UXP Hybrid plugins](../../guides/hybrid-plugins/)
-> - Allow unrestricted relative paths in require from scripts
-> - [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
+#### New
+- [UXP Hybrid plugins](../../guides/hybrid-plugins/)
+- Allow unrestricted relative paths in require from scripts
+- [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
 
 ----
 ## Photoshop 24.1 (December 2022)
@@ -276,25 +308,25 @@ The CountItems DOM API is now available in Photoshop.
   - 
 
 ### UXP v6.4 Integration
-> #### New
-> - [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
-> - Support [Path Module APIs](../../uxp-api/reference-js/Global%20Members/Path)
-> - Script can run fsapi with full access in localFileSystem
-> 
-> #### Bugs Fixes
-> - PluginManifest parsing / Load Plugin errors not logged in UDT
-> - Error shown in UDT APP logs on Plugin UnLoad
-> - UXP script : file session tokens are not getting created
-> - Error message and stack are empty in case of reject("error string") executed in script
-> - [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
-> - After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
-> - Provide an API to programmatically close dialog in pop-out/theatre mode.
-> - Plugin Data folder shouldn't be created for scripts
-> - Crash on exit
-> - script.setResult("kSuccess") not working
-> - Resource Leaks in Window Dialog on UWP
-> - Privilege plugin fail to add in XD in certain cases
-> - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
+#### New
+- [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
+- Support [Path Module APIs](../../uxp-api/reference-js/Global%20Members/Path)
+- Script can run fsapi with full access in localFileSystem
+
+#### Bugs Fixes
+- PluginManifest parsing / Load Plugin errors not logged in UDT
+- Error shown in UDT APP logs on Plugin UnLoad
+- UXP script : file session tokens are not getting created
+- Error message and stack are empty in case of reject("error string") executed in script
+- [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode
+- After closing the theatre mode, video's are Overlapping while scrolling up and down in DP
+- Provide an API to programmatically close dialog in pop-out/theatre mode.
+- Plugin Data folder shouldn't be created for scripts
+- Crash on exit
+- script.setResult("kSuccess") not working
+- Resource Leaks in Window Dialog on UWP
+- Privilege plugin fail to add in XD in certain cases
+- Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
 
 ----
 ## Photoshop 24.0 (October 2022)
@@ -552,7 +584,7 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
 ### Updated DOM API
 - Collections
     - We're introducing collection classes built using [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), to make it easier to interact with the DOM.
-    - Try iterating through all the documents as such: `app.documents.forEach(h => console.log(h.title));`
+    - Try iterating through all the documents as such: `app.documents.forEach(h =console.log(h.title));`
 - [HistoryStates collections](../classes/historystates/) and [HistoryState API](../classes/historystate/)
     - We've built HistoryStates to mirror ExtendScript functionality. `length`, `parent`, and `getByName(name)` are provided. You can also use indices as such: `activeDocument.historyStates[2]`.
     - HistoryState provides `name`, `parent`, `snapshot`.
