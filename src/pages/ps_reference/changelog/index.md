@@ -73,7 +73,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 #### New
 - Adobe [Extensibility Metadata Platform (XMP)](../../uxp-api/reference-js/Modules/uxp/XMP/getting-started/index.md) support
 - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
-- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/getComputedStyle) API
 
 #### Updated
 - Support of [Spectrum Web Component (SWC)](../../uxp-api/reference-spectrum/swc/) in UXP is moving out of Beta.
