@@ -50,7 +50,7 @@ group.layers.forEach((layer) => {
 | layers | [*Layers*](/ps_reference/classes/layers/) | R | 23.0 | The layers inside this group layer. |
 | linkedLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | Layers linked to this layer. See [Layer.link](/ps_reference/classes/layer/#link) |
 | locked | *boolean* | R | 22.5 | True if any property of this layer is locked. |
-| name | *string* | R | 22.5 | Name of the layer. |
+| name | *string* | R W | 22.5 | Name of the layer. |
 | opacity | *number* | R W | 22.5 | The master opacity of the layer, in percent. |
 | parent | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | The group layer that contains this layer. It will return null if the layer is a top layer in the document. |
 | pixelsLocked | *boolean* | R W | 22.5 | When set to true, prevents the pixels of this layer from being edited. |
