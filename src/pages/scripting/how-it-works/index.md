@@ -14,7 +14,7 @@ Photoshop sets an execution context while invoking a script.
 Within an execution context, only one script can be executed at a time. You cannot invoke another script from the running script. Using the UXP script module, you can access `ExecutionContext`.
 
 ```js
-const script = await require("uxp").script;
+const { script } = require("uxp");
 const executionContext = script.executionContext;
 ```
 It provides details about the current script execution, methods to send data to Photoshop, and events to manage script lifecycles. You can also use methods belonging to `executionControl.hostControl` to suspend/resume history states and auto close documents. Read more in the scripting [reference](../reference/).

@@ -13,7 +13,7 @@ Represents the UXP module that contains the properties and methods used for scri
 ### Usage
 ---
 ```js
-const script = await require("uxp").script;
+const { script } = require("uxp");
 ```
 
 ### Properties
@@ -36,7 +36,7 @@ Passed by the host when invoking scripts. Contains the following:
 ---
 
 ```jsx
-const script = await require("uxp").script;
+const { script } = require("uxp");
 const executionContext = script.executionContext;
 console.log("isCancelled: ", executionContext.isCancelled);
 ```
