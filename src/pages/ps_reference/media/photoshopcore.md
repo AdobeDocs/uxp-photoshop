@@ -270,6 +270,29 @@ var isARM = vendor === "ARM"
 
 ___
 
+### getDisplayConfiguration
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+*Promise*<object\>
+
+Returns the current display configuration.
+
+Note: returned units differ by platform.
+ - Mac uses logical units, points.
+ - Windows uses physical units, pixels.
+
+```javascript
+psCore.getDisplayConfiguration( {physicalResolution: true} )
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | object Currently only one: physicalResolution. If true, then a property with that name will also appear in the return object. |
+
+___
+
 ### getGPUInfo
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 

@@ -137,6 +137,7 @@ const imageObj = await imaging.getPixels(options);
 Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If missing, or negative, then the source is the active document.
    * `layerID` | Number - Optional.  The id of the source layer. If the value is not provided then the API returns pixels from the composite document image.
+   * `historyStateID` | Number - Optional. The id of a history state that the thumbnail should be created for. If not provided, then the current document state is used. This option can be used to get pixels from past document states.
    * `sourceBounds` | Object - Optional.  The region whose pixels should be returned. If the value is not provided, then pixels from the entire layer or document are is returned. The provided bounds will be trimmed to only that region that contains pixel data. In this event, the returned `sourceBounds` will reflect this smaller region. The provided object must describe a rectangle using one the following number-value property sets:
         * `left`, `top`, `right`, and `bottom`
         * `left`, `top`, `width`, and `height`
