@@ -137,11 +137,13 @@ const imageObj = await imaging.getPixels(options);
 Options describing the operation.
    * `documentID` | Number - Optional.  The id of the source document. If missing, or negative, then the source is the active document.
    * `layerID` | Number - Optional.  The id of the source layer. If the value is not provided then the API returns pixels from the composite document image.
+   * `historyStateID` | Number - Optional. The id of a history state that the thumbnail should be created for. If not provided, then the current document state is used. This option can be used to get pixels from past document states.
    * `sourceBounds` | Object - Optional.  The region whose pixels should be returned. If the value is not provided, then pixels from the entire layer or document are is returned. The provided bounds will be trimmed to only that region that contains pixel data. In this event, the returned `sourceBounds` will reflect this smaller region. The provided object must describe a rectangle using one the following number-value property sets:
         * `left`, `top`, `right`, and `bottom`
         * `left`, `top`, `width`, and `height`
-   * `targetSize` | Object - Optional.  The dimensions of the returned image. If this value is not provided then the returned size will match the requested size. That is, no scaling will be performed on the returned pixels. The provided object must have one or more of the following attributes:
-      * `width` and `height`. If only one dimension is included, then the returned image data is scaled proportionally to match the requested dimension.
+   * `targetSize` | Object - Optional.  Used to scale the returned image to a specific size. For example, a much smaller `targetSize` would be specified to get a image suitable for a thumbnail representation. If this option is not used, then the returned buffer size will be determined solely by `sourceBounds` as described above.  The provided object must have at least one of the following attributes.  If only one dimension is included, then the returned image data is scaled proportionally to match the requested dimension.
+      * `width`
+      * `height`
    * `colorSpace` | String - Optional. Requested color space of the returned pixels. If omitted, then the color space of the source document is used to convert colors.
    * `colorProfile` | String - Optional. The name of a color profile to apply to the returned pixels. If omitted, then the resulting color profile depends on the requested color space:
       * If the requested color space matches the source document, then the returned data will use the color profile of the source document.
