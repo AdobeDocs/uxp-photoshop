@@ -34,11 +34,10 @@ UXP is the modern way to create plugins and scripts for Adobe Creative Cloud - A
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 
-<InlineAlert variant="neutral" slots="text1, text2" />
+<InlineAlert slots="text" />
 
-We want your feedback to know how we’re doing with UXP.
-
-Please fill out the [annual survey](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Source=ps_docs) and share more about your experience building UXP Plugins or Scripts. We read every response, and any and all feedback is appreciated!
+**How likely are you to recommend developing add-ons for Adobe Express to a fellow developer?** <br /><br />
+(Not at all likely) [1](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%221%22%7D&Source=ps_docs) • [2️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%222%22%7D&Source=ps_docs) • [3️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%223%22%7D&Source=ps_docs) • [4️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%224%22%7D&Source=ps_docs) • [5️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%225%22%7D&Source=ps_docs) • [6️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%226%22%7D&Source=ps_docs) • [7️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%227%22%7D&Source=ps_docs) • [8️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%228%22%7D&Source=ps_docs) • [9️](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%229%22%7D&Source=ps_docs) • [10](https://survey.adobe.com/jfe/form/SV_bOTadEb8jZIHkHk?Q_PopulateResponse=%7B%22QID42%22:%2210%22%7D&Source=ps_docs) (Extremely likely)
 
 
 <br></br>
