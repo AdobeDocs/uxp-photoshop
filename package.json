@@ -44,5 +44,9 @@
     "eslint": "^7.32.0",
     "remark-cli": "^11.0.0",
     "remark-validate-links": "^12.1.0"
+  },
+  "resolutions": {
+    "sharp": "0.33.0",
+    "gatsby-sharp": "1.12.0"
   }
 }
