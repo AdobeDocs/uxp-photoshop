@@ -30,7 +30,7 @@ async function actionHandler(executionContext, info) {
     let propValue = info["prop"];
 }
 ```
-The `executionContext` argument conforms to the argument used by [executeAsCommand](./executeasmodal).  There is no usage of the context related to Action recording at this time.
+The `executionContext` argument conforms to the argument used by [executeAsModal](./executeasmodal).  There is no usage of the context related to Action recording at this time.
 
 
 Example:
