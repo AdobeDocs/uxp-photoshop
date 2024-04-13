@@ -108,6 +108,10 @@ module.exports=[
         "path": "/uxp-api/reference-css/Pseudo-classes/checked/"
       },
       {
+        "title": "defined",
+        "path": "/uxp-api/reference-css/Pseudo-classes/defined/"
+      },
+      {
         "title": "disabled",
         "path": "/uxp-api/reference-css/Pseudo-classes/disabled/"
       },
