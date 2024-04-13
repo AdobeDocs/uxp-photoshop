@@ -105,6 +105,10 @@ module.exports = [
     "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/"
   },
   {
+    "title": "Spectrum Widgets to SWC",
+    "path": "/uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/"
+  },
+  {
     "title": "FAQs",
     "path": "/uxp-api/reference-spectrum/faqs/"
   }

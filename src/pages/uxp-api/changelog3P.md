@@ -3,6 +3,19 @@ index_desc: Changelog in UXP version
 -->
 
 # UXP Changelog
+## UXP v7.4.0
+### Updated
+- UXP Alerts ([alert](./reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](./reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](./reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
+- Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls [XMLHttp](./reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) [fetch](./reference-js/Global%20Members/Data%20Transfers/fetch.md)
+- New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](./reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
+
+
+### Fixed
+- XMP in Scripts.
+- Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
+- WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
+- GUID returning hashed empty string
+- Updated missing docs for pseudo-class [defined](./reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
 
 ## UXP v7.3.0
 ### New
@@ -19,8 +32,8 @@ index_desc: Changelog in UXP version
 
 
 ### Updated
-- [FormData's append](./reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
-- `Spectrum Web Components` support in `React` context is now available for all 30 components.
+- [FormData's append](./reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as additional parameter.
+- `Spectrum Web Components` support in `React` context is now available for all the 30 components.
     - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
 ### Fixed
 - Tab Navigation not working for several SWC Components is now fixed
@@ -31,21 +44,18 @@ index_desc: Changelog in UXP version
     - [confirm()](./reference-js/Global%20Members/HTML%20DOM/confirm.md)
 
 ## UDT v2.0
-
 ### New
-- UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
+UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
 
 ### Updated
-- Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
+Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
 
 
 ## UXP v7.2.0
 ### New
-- Support for XMP in Photoshop
-    - [Get Started With XMP](./reference-js/Modules/uxp/XMP/getting-started/index.md)
-    - [XMP Classes](./reference-js/Modules/uxp/XMP/XMP%20Classes/index.md)
-- Support for [pointer-events:none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
-- Support for pseudoElement in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
+- Adobe [Extensibility Metadata Platform (XMP)](./reference-js/Modules/uxp/XMP/getting-started/xmp.md) support
+- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+- Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](./reference-js/Global%20Members/HTML%20DOM/getComputedStyle.md) API
 
 ### Updated
 - `Spectrum Web Component` is promoted to `release` and has support for [additional list of components](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/).
