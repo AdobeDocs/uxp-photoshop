@@ -144,7 +144,7 @@ jobs:
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
 
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -156,7 +156,7 @@ jobs:
         run: sleep 60s
         shell: bash
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: AdobeDocs/gatsby-fastly-purge-action@master
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: '${{ secrets.AIO_FASTLY_DEV_URL}}${{ needs.set-state.outputs.path_prefix }}'
@@ -252,7 +252,7 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -264,7 +264,7 @@ jobs:
         run: sleep 60s
         shell: bash
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: AdobeDocs/gatsby-fastly-purge-action@master
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: '${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}'
