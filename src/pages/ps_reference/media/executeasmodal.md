@@ -12,18 +12,12 @@ Since only one plugin at a time can use `executeAsModal`, exclusive access to Ph
 
 When `executeAsModal` is executed, Photoshop enters a modal user interaction state, affecting much of the UI. Note that some menu items are disabled. Again, this measure is also intended to prevent interference.
 
-<!-- Move this down to progress bar section? -->
-If the modal state lasts a significant amount of time (currently more than two seconds), then a progress bar will appear. The progress dialog's title bar will display the name of the plugin that initiated the modal state, and it will include the ability for the user to cancel the interaction. The following illustrates the progress bar that would be shown for a plugin labled "Sample Plugin". The message that appears above the bar is supplied by `commandName` as described under [Arguments](#arguments). The progress bar will show indefinite progress until the plugin informs Photoshop about its quantative progress.
-
-![progress bar](./assets/progress-bar.png)
-<!-- p b -->
-
-When a plugin is inside a modal scope, then it controls Photoshop. This means that you no longer need to use options such as `modalBehavior` with `batchPlay`.
+Once plugin is granted a modal scope, then it controls Photoshop. This means that you no longer need to use options such as `modalBehavior` with `batchPlay`.
 
 <br />
 
 
-`executeAsModal` is exposed on the Photoshop UXP API [core module](./photoshopcore).
+`executeAsModal` can be found on the Photoshop UXP API ["core" module](./photoshopcore).
 
 ```javascript
 await require('photoshop').core.executeAsModal(targetFunction, options);
@@ -47,14 +41,20 @@ The *executionContext* parameter contains functionality related to managing the 
 | isCancelled | boolean | True if the user has cancelled the modal interaction. |
 | onCancel | function | If function is assigned to this property, then this function is executed if the user cancels the modal interaction. |
 | reportProgress | function | A function that can customize updates to the progress bar. See [progress bar](#progress-bar) below for details. |
-| hostControl | object | An object literal containing the following properties: |
+| hostControl | object | An object containing the properties in the following table. |
+<br />
 
-   * `suspendHistory`: A function that can be used to suspend history on a target document. See [History state suspension](#history-state-suspension).
-   * `resumeHistory`: A function that can be used to resume history on a target document. See [History state suspension](#history-state-suspension).
-   * `registerAutoCloseDocument`: Register a document to be closed when the modal scope exits. See [Automatic document closing](#automatic-document-closing).
-   * `unregisterAutoCloseDocument`: Unregister a document from being closed when the modal scope exits. See [Automatic document closing](#automatic-document-closing).
+`hostControl` properties
+
+> | Name | Type | Description |
+> | :------ | :------ | :------ |
+> | suspendHistory | function | Used to suspend history on a target document. See [History state suspension](#history-state-suspension). |
+> | resumeHistory | function | Used to resume history on a target document. See [History state suspension](#history-state-suspension). |
+> | registerAutoCloseDocument | function | Register a document to be closed when the modal scope exits. See > [Automatic document closing](#automatic-document-closing). |
+> | unregisterAutoCloseDocument | function | Unregister a document from being closed when the modal scope exits. See [Automatic document closing](#automatic-document-closing). |
+<br />
   
-The *descriptor* contains the values provided to the descriptor property in the options argument to `executeAsModal`.  It is used to pass values to the function's scope.
+The *descriptor* parameter contains the values provided to the descriptor property in the options argument to `executeAsModal`.  It is used to pass values to the function's scope.
 
 
 ### Options parameter
@@ -112,7 +112,7 @@ async function targetFunction(executionContext, descriptor) {
     ]
   };
   let command = {_obj: "get", _target: target};
-  while(true) { // <--  HERE WE WAIT FOR THE USER TO MANUALLY CANCEL
+  while (true) { // <--  WAIT FOR THE USER TO MANUALLY CANCEL
     await psAction.batchPlay([command], {});
   }
 }
@@ -127,7 +127,7 @@ Due to the `while` loop, this sample will run until the user cancels the interac
 Due to the design of the underlying JavaScript runtime, JavaScript can only be cancelled when it is *interruptible*. JavaScript can be interrupted when it is waiting on the resolution of a promise. Without the `await` keyword in the above example, the JavaScript function would not terminate when the user cancels. Having a tight loop such as the following also does not allow for automatic cancellation of the JavaScript function.
 ```javascript
 async function targetFunction(executionContext) {
-  while (true) {
+  while (true) { // <--  WAIT FOR THE USER TO MANUALLY CANCEL
     calculateSomeDigitsOfPi();
   }
 }
@@ -135,7 +135,7 @@ async function targetFunction(executionContext) {
 JavaScript that runs for a significant amount of time without an interruption point should regularly query `isCancelled` on the *executionContext*. The JavaScript example above can be made cancellable by modifying it to the following:
 ```javascript
 async function targetFunction(executionContext) {
-  while (true) {
+  while (true) { // <--  WAIT FOR THE USER TO MANUALLY CANCEL
     calculateSomeDigitsOfPi();
     if (executionContext.isCancelled) {
       throw "user cancelled";
@@ -153,7 +153,7 @@ async function targetFunction(executionContext) {
   ]};
   let command = {_obj: "get", _target: target};
 
-  while (true) { // <--  HERE WE WAIT FOR THE USER TO MANUALLY CANCEL
+  while (true) { // <--  WAIT FOR THE USER TO MANUALLY CANCEL
     try {
        await psAction.batchPlay([command], {});
     } catch (e) {}  // WILL NOT AUTOMATICALLY TERMINATE ON CANCEL
@@ -166,15 +166,19 @@ await require("photoshop").core.executeAsModal(targetFunction, {commandName: "Us
 <br />
 
 ## Progress bar
-By default, Photoshop shows an indeterminate progress bar while a modal scope is active. The progress bar is shown a few seconds after the modal scope is initiated.
-In JavaScript we can use the execution context's method `reportProgress` to customize the progress reporting. To obtain a determinate progress bar, JavaScript can specify a value between 0 and 1 when calling reportProgress. For example:
+If the modal state lasts a significant amount of time (currently more than two seconds), then a progress bar will appear. The progress dialog's title bar will display the name of the plugin that initiated the modal state, and it will include the ability for the user to cancel the interaction. The following illustrates the progress bar that would be shown for a plugin labled "Sample Plugin". The message that appears above the bar is supplied by `commandName` as described under [Arguments](#arguments). The progress bar will show indefinite progress until the plugin informs Photoshop about its quantative progress.
+
+![progress bar](./assets/progress-bar.png)
+
+### reportProgress
+By default, this progress bar will be indeterminate. In JavaScript we can use the execution context's method `reportProgress` to customize the progress reporting. To obtain a determinate progress bar, JavaScript can specify a value between 0 and 1 when calling reportProgress. For example:
 ```javascript
 async function targetFunction(executionContext) {
   executionContext.reportProgress({value: 0.3});
 }
 ```
 
-Setting a value will switch the progress bar to be a determinate progress bar & show the progress bar if it is not yet visible.
+Setting a value will switch the progress bar to be determinate.  Also, if it is not yet visible, it will be shown.
 
 JavaScript can change the message that is shown in the progress UI by using the `commandName` property. This can be used to inform the user about the current stage of the operation. Example:
 ```javascript
@@ -235,23 +239,33 @@ async function historyStateSample(executionContext) {
     await hostControl.resumeHistory(suspensionID);
 }
 ```
-The signature for suspendHistory is:
+
+### suspendHistory
+The signature for `suspendHistory` is:
 ```javascript
 executionContext.hostControl.suspendHistory(options)
 ```
 The `options` parameter is an object with the following properties:
+
 | Name | Type | Description |
 | :--------- | :------ | :---------- |
 | documentID | number | The ID of the document whose history state should be suspended. |
 | name | string | This name will be shown on the history state in the History panel. `suspendHistory` returns a suspension identifier. This identifier should be used with `resumeHistory`. |
 
+### resumeHistory
 The signature for `resumeHistory` is:
 ```javascript
 executionContext.hostControl.resumeHistory(suspensionID, commit)
 ```
-1. `suspensionID: object`: The suspension identifier object that was returned from `suspendHistory`.
-    * To rename the committed history state, assign an optional string to the property `finalName` on this object to provide a final update to the name of the history state in the History panel. This will override the original `name` passed to `suspendHistory`.
-2. `commit: boolean`: If `true`, then the current document state is committed, and a history state is created. If `false`, the document state is rolled back to the time when the state was suspended. This argument is optional and the default value is `true`. Note that Photoshop only creates a history state if the document was modified between the calls to `suspendHistory` and `resumeHistory`.
+| Name | Type | Description |
+| :--------- | :------ | :---------- |
+| suspensionID | object | The suspension identifier object that was returned from `suspendHistory`. |
+| commit | boolean | Default `true`.  Either commit current document state with a history state, or roll back the document state to the point at which it was suspended. |
+
+Note:
+* Photoshop only creates a history state if the document was modified between the calls to `suspendHistory` and `resumeHistory`. 
+
+* To rename the committed history state, assign an optional string to the property `finalName` on the `suspensionID` object to provide a final update to the name of the history state in the History panel. This will override the original `name` passed to `suspendHistory`.
 
 When the modal scope ends, Photoshop will auto-resume history on any document that is still in a suspended state. If the target function for the modal scope returns normally, then all unsuspended states are committed. If the target function exits via an exception, then all unsuspended history states are cancelled.
 
@@ -262,13 +276,13 @@ When a user plays an Action from the Actions panel, they have the option to susp
 <br />
 
 ## Event Notifications
-When `executeAsModal` is active, then Photoshop event notifications are silenced similar to when an action is run from the actions panel.
+When `executeAsModal` is active (and not set to [interactive](#interactive-mode)), then Photoshop event notifications are silenced similar to when an action is run from the actions panel.
 
 This means that other plugins cannot listen for batchPlay commands that are executed while the modal scope is active.
 
 Plugins can register for notifications related to starting and ending a modal JavaScript scope by registering for the following events:
-* "modalJavaScriptScopeEnter"
-* "modalJavaScriptScopeExit"
+* `"modalJavaScriptScopeEnter"`
+* `"modalJavaScriptScopeExit"`
 
 <br />
 
