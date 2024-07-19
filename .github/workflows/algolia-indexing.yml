@@ -1,0 +1,51 @@
+---
+name: Search Indexing
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Type of indexing. "index" to push to Algolia, "console" for dry run.'
+        required: true
+        default: "index"
+        type: choice
+        options:
+          - console
+          - index
+
+jobs:
+  build-and-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node v18 for Yarn v4
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.19.0" # Current LTS version
+
+      - name: Enable Corepack for Yarn
+        run: corepack enable
+
+      - name: Install Dependencies
+        run: yarn install
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: Build site
+        run: yarn build
+
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
+          PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
+          REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPO_BRANCH: ${{ github.ref_name }}
+          GATSBY_ALGOLIA_APPLICATION_ID: ${{ secrets.AIO_ALGOLIA_APPLICATION_ID }}
+          GATSBY_ALGOLIA_SEARCH_API_KEY: ${{ secrets.AIO_ALGOLIA_SEARCH_API_KEY }}
+          ALGOLIA_WRITE_API_KEY: ${{ secrets.AIO_ALGOLIA_WRITE_API_KEY }}
+          ALGOLIA_INDEXATION_MODE: ${{ github.event.inputs.mode || 'index' }}
+          GATSBY_ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME || github.event.repository.name }}
+          GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
+          GATSBY_SITE_DOMAIN_URL: https://developer.adobe.com
