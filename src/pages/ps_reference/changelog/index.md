@@ -7,6 +7,26 @@ contributors:
 ---
 
 # Photoshop API Changelog
+## Photoshop Beta 25.10 (May 2024)
+`timeOut` option added to [`executeAsModal`](../media/executeasmodal/#options-parameter).  Also, the error message returned on a modal request collision was updated to include the id of the plugin that initiated the existing modal state.
+
+## Photoshop Beta 25.5 (February 2024)
+
+### UXP v7.4 Integration
+> #### Updated
+> - UXP Alerts ([alert](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
+> - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls ([XMLHttp](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md), [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md))
+> - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
+> 
+> 
+> #### Fixed
+> - XMP now works in UXP Scripts.
+> - Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
+> - WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
+> - GUID returning hashed empty string
+> - Updated missing docs for pseudo-class [defined](../../uxp-api/reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
+
+
 
 ## Photoshop 26.0 (October 2024)
 
@@ -524,7 +544,7 @@ It is now possible to use the Photoshop Actions panel to help build your plugin.
 This event is generated when Photoshop detects that a user becomes idle, while Photoshop is the foreground application. A plugin must specify a number of idle seconds, and then may choose to batch process-intensive tasks. See [photoshopCore](../media/photoshopcore/).
 
 ### Interactive Mode for executeAsModal
-As an alterative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../media/executeasmodal#interactive-mode/).
+As an alternative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../media/executeasmodal/#interactive-mode).
 
 ----
 ## Photoshop 23.2 (February 2022)

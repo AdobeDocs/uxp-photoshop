@@ -15,7 +15,6 @@ index_desc: General information on UXP and its dependencies for 3rd party plugin
 |InDesign Server | -      | -        | -        | -        | -        | -       | -       | -       | 18.0     | 17.4	  | -        | -        | 17.1     | 17.0     |
 |XD            | -        | -        | -        | -        | -        | -       | -       | -       | 55       | 54	      | -        | -        | 53       | 45       |
 
-
 ## UXP Features Supported in Applications
 | Application   | UXP Plugins    | UXP Scripting |
 | ------------- | -------------- | ------------- | 

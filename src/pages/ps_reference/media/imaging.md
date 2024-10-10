@@ -118,10 +118,12 @@ const pixelData = await imageObj.imageData.getData()
 ```
 
 #### `dispose`
-Calling this synchronous method will release the contained image data. Doing so will reduce memory usage faster then waiting for the JavaScript garbage collector to run.
+Calling this synchronous method will release the contained image data. Doing so will reduce memory usage faster than waiting for the JavaScript garbage collector to run.
 
 ```javascript
-pixelData.dispose();
+const imageData = await imaging.createImageDataFromBuffer( arrayBuffer, options );
+// perhaps a putPixels call
+imageData.dispose();
 ```
 
 
