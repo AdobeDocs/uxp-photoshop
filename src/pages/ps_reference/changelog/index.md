@@ -16,7 +16,6 @@ contributors:
 - `enableFillAsCustomAttribute` feature flag, introduced in UXPv7.1.0, will be turned on by default.
 
 #### Deprecations
-### Deprecations
 - Changes to Clipboard
   - [Clipboard.setContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
   - [Clipboard.getContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
@@ -73,7 +72,7 @@ contributors:
 > - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls ([XMLHttp](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md), [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md))
 > - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
 > 
-> 
+>
 > #### Fixed
 > - XMP now works in UXP Scripts.
 > - Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
