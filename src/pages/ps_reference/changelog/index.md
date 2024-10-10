@@ -8,6 +8,77 @@ contributors:
 
 # Photoshop API Changelog
 
+## Photoshop 26.0 (October 2024)
+
+### UXP v8.0.1
+
+#### Breaking Changes
+- `enableFillAsCustomAttribute` feature flag, introduced in UXPv7.1.0, will be turned on by default.
+
+#### Deprecations
+### Deprecations
+- Changes to Clipboard
+  - [Clipboard.setContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
+  - [Clipboard.getContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
+  - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
+  - [Clipboard.clearContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) would be an alternative.
+- Changes to VideoElement
+  - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#load) is deprecated. Use `loadeddata` instead.
+  - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
+  - Event `uxpvideocomplete` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
+  - Event `uxpvideopause` in [pause()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
+
+#### New
+- New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+  - sp-asset
+  - sp-meter
+  - sp-number-field
+  - sp-overlay
+  - sp-quick-actions
+  - sp-search
+  - sp-swatch
+- New command line templates to get started with SWC easily. Find details in this [section](../../uxp-api/reference-spectrum/swc/index.md#command-line-templates).
+- Support for local HTML files in [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)
+- New CSS capabilities
+  - scaleX() & scaleY()
+  - transform-origin
+  - translate property
+  - `Box-shadow` property now supports `transform rotate`.
+- New feature flag `CSSNextSupport` in the manifest.json to gate the new and future CSS capability.
+
+  | Manifest setting | Description  |
+  | ---------------- | ------------ |
+  | `featureFlags: {"CSSNextSupport": true}` | Enables all the new CSS features. |
+  | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
+  
+  Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default, even if it is not done explicitly in plugin manifest otherwise.
+- Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
+- Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
+- Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
+- [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+
+#### Updated
+- Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+- [UXP Clipboard.writeText()](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
+
+## Photoshop Beta 25.5 (February 2024)
+
+### UXP v7.4 Integration
+
+#### Updated
+- UXP Alerts ([alert](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
+- Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls ([XMLHttp](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md), [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md))
+- New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
+
+
+#### Fixed
+- XMP now works in UXP Scripts.
+- Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
+- WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
+- GUID returning hashed empty string
+- Updated missing docs for pseudo-class [defined](../../uxp-api/reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
+
+
 ## Photoshop Beta 25.2 (October 2023)
 
 ### UXP v7.3 Integration
