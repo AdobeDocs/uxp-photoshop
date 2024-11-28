@@ -256,7 +256,7 @@ Both `openPath` and `openExternal` rely on this permission set, and upon either 
 ### Plugin communication 
 If enabled, the plugin can communicate with other installed plugins. Defaults to `false`.
 ```json
-"permissions": {        
+"requiredPermissions": {        
     "ipc": {
         "enablePluginCommunication": true   
     }

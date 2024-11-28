@@ -4,6 +4,25 @@ index_desc: Changelog in UXP version
 
 # UXP Changelog
 
+## UXP v8.1.0
+
+### New
+
+- Support for [UXP Plugins in Premiere Pro v25.1 (Beta)](https://developer.adobe.com/premiere-pro/uxp/)
+- [ResizeObserver APIs](../uxp-api/reference-js/Global%20Members/HTML%20DOM/ResizeObserver.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
+- [IntersectionObserver APIs](../uxp-api/reference-js/Global%20Members/HTML%20DOM/IntersectionObserver.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
+- Added support for `:first-child` and `:not(:first-child)` pseudo-classes to enhance the existing `Web Component` support by allowing targeting of the desired elements
+- Support `linear-gradient` property with start and end values to align with the web.
+
+### Fixed
+
+- Fixed discrepancy in default state of `enableFillAsCustomAttribute` flag (it's true by default now)
+- Fixed missing `translate` -> `y` values via UXP Dev Tool, despite being correctly applied on the elements.
+
+## UDT v2.1.0
+
+- Supports UXP Plugins for Premiere Pro v25.1 (Beta)
+
 ## UXP v8.0.1
 
 ### Breaking Changes
@@ -13,7 +32,7 @@ index_desc: Changelog in UXP version
 - Changes to Clipboard
   - [Clipboard.setContent](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
   - [Clipboard.getContent](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
-  - Passing an `object` to [Clipboard.writeText(object)](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md##writetexttext) is deprecated. Please use [Clipboard.write(object)](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
+  - Passing an `object` to [Clipboard.writeText(object)](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
   - [Clipboard.clearContent](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) would be an alternative.
 - Changes to VideoElement
   - Event `uxpvideoload` in [load()](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#load) is deprecated. Use `loadeddata` instead.
@@ -22,7 +41,7 @@ index_desc: Changelog in UXP version
   - Event `uxpvideopause` in [pause()](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
 
 ### New
-- New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+- New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers).
   - sp-asset
   - sp-meter
   - sp-number-field
@@ -43,15 +62,15 @@ index_desc: Changelog in UXP version
   | ---------------- | ------------ |
   | `featureFlags: {"CSSNextSupport": true}` | Enables all the new CSS features. |
   | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
-  
-  Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default, even if it is not done explicitly in plugin manifest otherwise.
+
+  Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default.
 - Video enhancements: Support added for [Seek Event](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
 - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
 - Support for new HTMLElement APIs - [append](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](./reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
 - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 ### Updated
-- Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+- Upgraded Spectrum Web Components to v0.37.0. More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers).
 - [UXP Clipboard.writeText()](./reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
 
 
@@ -59,12 +78,12 @@ index_desc: Changelog in UXP version
 ### Updated
 - UXP Alerts ([alert](./reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](./reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](./reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
 - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls [XMLHttp](./reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md) [fetch](./reference-js/Global%20Members/Data%20Transfers/fetch.md)
-- New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](./reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
+- New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](./reference-spectrum/Spectrum%20to%20SWC%20Mapping/index.md) in UXP
 
 
 ### Fixed
 - XMP in Scripts.
-- Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
+- Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7)
 - WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
 - GUID returning hashed empty string
 - Updated missing docs for pseudo-class [defined](./reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
