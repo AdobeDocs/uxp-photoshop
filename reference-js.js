@@ -189,6 +189,14 @@ module.exports=[
             "path": "/uxp-api/reference-js/Global Members/HTML DOM/HTMLCollection/"
           },
           {
+            "title": "IntersectionObserver",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/IntersectionObserver/"
+          },
+          {
+            "title": "IntersectionObserverEntry",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/IntersectionObserverEntry/"
+          },
+          {
             "title": "NamedNodeMap",
             "path": "/uxp-api/reference-js/Global Members/HTML DOM/NamedNodeMap/"
           },
@@ -207,6 +215,18 @@ module.exports=[
           {
             "title": "Path2D",
             "path": "/uxp-api/reference-js/Global Members/HTML DOM/Path2D/"
+          },
+          {
+            "title": "ResizeObserver",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/ResizeObserver/"
+          },
+          {
+            "title": "ResizeObserverEntry",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/ResizeObserverEntry/"
+          },
+          {
+            "title": "ResizeObserverSize",
+            "path": "/uxp-api/reference-js/Global Members/HTML DOM/ResizeObserverSize/"
           },
           {
             "title": "ShadowRoot",
