@@ -247,36 +247,16 @@ module.exports = [{
 					"path": "/ps_reference/objects/options/batchplaycommandoptions/"
 				},
 				{
-					"title": "CPU Info",
-					"path": "/ps_reference/objects/returnobjects/cpuinfo/"
-				},
-				{
-					"title": "Execute As Modal Options",
-					"path": "/ps_reference/objects/returnobjects/executeasmodaloptions/"
+					"title": "Display Configuration Options",
+					"path": "/ps_reference/objects/options/displayconfigurationoptions/"
 				},
 				{
 					"title": "Execution Context",
 					"path": "/ps_reference/objects/options/executioncontext/"
 				},
 				{
-					"title": "GPU Info",
-					"path": "/ps_reference/objects/returnobjects/gpuinfo/"
-				},
-				{
 					"title": "History State Info",
 					"path": "/ps_reference/objects/options/historystateinfo/"
-				},
-				{
-					"title": "History Suspension",
-					"path": "/ps_reference/objects/returnobjects/historysuspension/"
-				},
-				{
-					"title": "Open CL Device Info",
-					"path": "/ps_reference/objects/returnobjects/opencldeviceinfo/"
-				},
-				{
-					"title": "Open GL Device Info",
-					"path": "/ps_reference/objects/returnobjects/opengldeviceinfo/"
 				},
 				{
 					"title": "Resume History Suspension Options",
@@ -347,6 +327,53 @@ module.exports = [{
 				{
 					"title": "Layer Comp Recapture Options",
 					"path": "/ps_reference/objects/options/layercomprecaptureoptions/"
+				},
+				{
+					"title": "Position",
+					"path": "/ps_reference/objects/options/position/"
+				}
+			]
+		},
+		{
+			"title": "Return Objects",
+			"path": "/ps_reference/objects/returnobjects",
+			"header": true,
+			"pages": [
+				{
+					"title": "CPU Info",
+					"path": "/ps_reference/objects/returnobjects/cpuinfo/"
+				},
+				{
+					"title": "Dimensions",
+					"path": "/ps_reference/objects/returnobjects/dimensions/"
+				},
+				{
+					"title": "Display Configuration",
+					"path": "/ps_reference/objects/returnobjects/displayconfiguration/"
+				},
+				{
+					"title": "Execute As Modal Options",
+					"path": "/ps_reference/objects/returnobjects/executeasmodaloptions/"
+				},
+				{
+					"title": "GPU Info",
+					"path": "/ps_reference/objects/returnobjects/gpuinfo/"
+				},
+				{
+					"title": "History Suspension",
+					"path": "/ps_reference/objects/returnobjects/historysuspension/"
+				},
+				{
+					"title": "Open CL Device Info",
+					"path": "/ps_reference/objects/returnobjects/opencldeviceinfo/"
+				},
+				{
+					"title": "Open GL Device Info",
+					"path": "/ps_reference/objects/returnobjects/opengldeviceinfo/"
+				},
+				{
+					"title": "Simple Bounds",
+					"path": "/ps_reference/objects/returnobjects/simplebounds/"
 				}
 			]
 		},
@@ -455,6 +482,14 @@ module.exports = [{
 		{
 			"title": "Action Recording",
 			"path": "/ps_reference/media/action-recording/"
+		},
+		{
+			"title": "Event Codes",
+			"path": "/ps_reference/media/eventcodes/"
+		},
+		{
+			"title": "Display Units",
+			"path": "/ps_reference/media/displayunits/"
 		}
 	]
 },{

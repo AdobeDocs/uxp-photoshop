@@ -145,7 +145,7 @@ ___
 
 Number of bits per channel (also called pixel depth or color depth).
 
-The number selected indicates the exponent of 2.
+The number selected indicates the exponent of 2. With 8 bits per channel, we have 256 possible colors.
 
 | Name | Description |
 | :------ | :------ |
@@ -1536,9 +1536,9 @@ Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/
 
 | Name | Description |
 | :------ | :------ |
-| BOTTOMRIGHT | Bottom right pixel color. |
-| TOPLEFT | Top left pixel color. |
-| TRANSPARENT | Transparent pixels. |
+| BOTTOMRIGHT | The color of the pixel in the bottom right corner of the image. |
+| TOPLEFT | The color of the pixel in the top left right corner of the image. |
+| TRANSPARENT | Fully transparent pixels. |
 
 ___
 

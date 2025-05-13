@@ -398,7 +398,7 @@ const dataImage = await imaging.encodeImageData(options);
 
 * options | Object - Required
 Options describing the operation.
-   * imageData | [PhotoshopImageData](#photoshopimagedata) - ***Required***. Value describing the pixel data.
+   * imageData | [PhotoshopImageData](#photoshopimagedata) - ***Required***. Value describing the pixel data. The data `colorSpace` must be RGB.
    * base64 | Boolean - Optional. If provided, then the returned value will be a string that is base64 encoded.
 
 

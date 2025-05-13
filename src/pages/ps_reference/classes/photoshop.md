@@ -21,7 +21,7 @@ keywords:
 The top level application object, root of the Photoshop DOM
 
 ```javascript
-const app = require('photoshop').app
+const {app} = require('photoshop');
 ```
 
 From here you can access open documents, tools, UI elements and run commands or menu items.
@@ -195,3 +195,22 @@ Shows an alert in Photoshop with the given message.
 | Name | Type |
 | :------ | :------ |
 | `message` | *string* |
+
+___
+
+### updateUI
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">26.0</span>
+
+**async** : *Promise*<void\>
+
+Force an update to the following panels: Layers, Channels, and Paths.
+The primary use case is within the handler function of a slider control.
+Normally, the panels will not update until after the handle is released.
+Note: this function will have no apparent effect outside of a tracking context like a slider handle.
+Inside a plain loop (encapsulated in `executeAsModal`),
+a slight pause can be used to demonstrate the need to refresh.
+```javascript
+    // Inside slider handler function.
+    await app.activeDocument.createPixelLayer();
+    await app.updateUI();
+```

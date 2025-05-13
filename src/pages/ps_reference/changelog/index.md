@@ -8,96 +8,108 @@ contributors:
 
 # Photoshop API Changelog
 
+## Documentation update (May 2025)
+- Added a description of the output received from [`core.getDisplayConfiguration()`](../media/photoshopcore#getdisplayconfiguration) including a new property: `maximumExtendedDynamicRangeColorComponent`.
+- Added a [new page](../media/eventcodes) containing event names for use by [`core.addNotificationListener()`](../media/photoshopcore#addnotificationlistener) and [`action.addNotificationListener()`](../media/photoshopaction#addnotificationlistener).  This includes a new Core event: `displayConfigurationChanged`.
+- Noted that [`imaging.encodeImageData()`](../media/imaging.md#encodeimagedata) expects RGB image data.
+- Added, clarified, and tidied descriptions and code samples.
+
+---
 ## Photoshop 26.1 (November 2024)
 
-### UXP v8.1.0
-
-#### New
-
-- [ResizeObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/ResizeObserver.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
-- [IntersectionObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/IntersectionObserver.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
-- Added support for `:first-child` and `:not(:first-child)` pseudo-classes to enhance the existing `Web Component` support by allowing targeting of the desired elements
-- Support `linear-gradient` property with start and end values to align with the web.
-
-#### Fixed
-
-- Fixed discrepancy in default state of `enableFillAsCustomAttribute` flag (it's true by default now)
-- Fixed missing `translate` -> `y` values via UXP Dev Tool, despite being correctly applied on the elements.
-
-## Photoshop 26.0 (October 2024)
-
-### UXP v8.0.1
-
-#### Breaking Changes
-- `enableFillAsCustomAttribute` feature flag, introduced in UXPv7.1.0, will be turned on by default.
-
-#### Deprecations
-- Changes to Clipboard
-  - [Clipboard.setContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
-  - [Clipboard.getContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
-  - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
-  - [Clipboard.clearContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) would be an alternative.
-- Changes to VideoElement
-  - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#load) is deprecated. Use `loadeddata` instead.
-  - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
-  - Event `uxpvideocomplete` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
-  - Event `uxpvideopause` in [pause()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
-
-#### New
-- New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
-  - sp-asset
-  - sp-meter
-  - sp-number-field
-  - sp-overlay
-  - sp-quick-actions
-  - sp-search
-  - sp-swatch
-- New command line templates to get started with SWC easily. Find details in this [section](../../uxp-api/reference-spectrum/swc/index.md#command-line-templates).
-- Support for local HTML files in [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)
-- New CSS capabilities
-  - scaleX() & scaleY()
-  - transform-origin
-  - translate property
-  - `Box-shadow` property now supports `transform rotate`.
-- New feature flag `CSSNextSupport` in the manifest.json to gate the new and future CSS capability.
-
-  | Manifest setting | Description  |
-  | ---------------- | ------------ |
-  | `featureFlags: {"CSSNextSupport": true}` | Enables all the new CSS features. |
-  | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
-
-  Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default, even if it is not done explicitly in plugin manifest otherwise.
-- Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
-- Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
-- Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
-- [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
-
-#### Updated
-- Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
-- [UXP Clipboard.writeText()](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
+### UXP v8.1.0 Integration
+> #### New
+> - [ResizeObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/ResizeObserver.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
+> - [IntersectionObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/IntersectionObserver.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
+> - Added support for `:first-child` and `:not(:first-child)` pseudo-classes to enhance the existing `Web Component` support by allowing targeting of the desired elements
+> - Support `linear-gradient` property with start and end values to align with the web.
+> 
+> #### Fixed
+> - Fixed discrepancy in default state of `enableFillAsCustomAttribute` flag (it's true by default now)
+> - Fixed missing `translate` -> `y` values via UXP Dev Tool, despite being correctly applied on the elements.
 
 
-## Photoshop Beta 25.10 (May 2024)
+---
+## Photoshop 26.0 (Oct 2024)
+
+### Photoshop app object
+- `updateUI` If you are looking to refresh the Layers panel while dragging a slider handle, try [`updateUI()`](../classes/photoshop/#updateui).
+- [`core.convertGlobalToLocal()`](../media/photoshopcore#convertglobaltolocal) can be used to convert a global coordinate point to one based on a panel's reference point.
+
+### UXP v8.0.1 Integration
+> #### Breaking Changes
+> - `enableFillAsCustomAttribute` feature flag, introduced in UXPv7.1.0, will be turned on by default.
+> 
+> #### Deprecations
+> - Changes to Clipboard
+>   - [Clipboard.setContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
+>   - [Clipboard.getContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
+>   - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
+>   - [Clipboard.clearContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) would be an alternative.
+> - Changes to VideoElement
+>   - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#load) is deprecated. Use `loadeddata` instead.
+>   - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
+>   - Event `uxpvideocomplete` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
+>   - Event `uxpvideopause` in [pause()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
+> 
+> #### New
+> - New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+>   - sp-asset
+>   - sp-meter
+>   - sp-number-field
+>   - sp-overlay
+>   - sp-quick-actions
+>   - sp-search
+>   - sp-swatch
+> - New command line templates to get started with SWC easily. Find details in this [section](../../uxp-api/reference-spectrum/swc/index.md#command-line-templates).
+> - Support for local HTML files in [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)
+> - New CSS capabilities
+>   - scaleX() & scaleY()
+>   - transform-origin
+>   - translate property
+>   - `Box-shadow` property now supports `transform rotate`.
+> - New feature flag `CSSNextSupport` in the manifest.json to gate the new and future CSS capability.
+> 
+>   | Manifest setting | Description  |
+>   | ---------------- | ------------ |
+>   | `featureFlags: {"CSSNextSupport": true}` | Enables all the new CSS features. |
+>   | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
+>   
+>   Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default, even if it is not done explicitly in plugin manifest otherwise.
+> - Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
+> - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
+> - Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
+> - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+> 
+> #### Updated
+> - Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
+> - [UXP Clipboard.writeText()](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
+
+
+----
+## Photoshop 25.10 (May 2024)
 `timeOut` option added to [`executeAsModal`](../media/executeasmodal/#options-parameter).  Also, the error message returned on a modal request collision was updated to include the id of the plugin that initiated the existing modal state.
 
-## Photoshop Beta 25.5 (February 2024)
+----
+## Photoshop 25.5 (February 2024)
 
 ### UXP v7.4 Integration
 > #### Updated
 > - UXP Alerts ([alert](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
 > - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls ([XMLHttp](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md), [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md))
 > - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
->
->
+> 
+> 
 > #### Fixed
 > - XMP now works in UXP Scripts.
-> - Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7)
+> - Plugin crashes while using [fit-content](https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7) 
 > - WebView support for [file selector](https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843) in MacOS
 > - GUID returning hashed empty string
 > - Updated missing docs for pseudo-class [defined](../../uxp-api/reference-css/Pseudo-classes/defined.md) (Available since UXP v6.0)
 
 
-## Photoshop Beta 25.2 (October 2023)
+----
+## Photoshop 25.2 (October 2023)
 
 ### UXP v7.3 Integration
 > #### New
@@ -111,20 +123,20 @@ contributors:
 >     - keys()
 >     - set()
 >     - values()
->
+> 
 > #### Updated
 > - [FormData's append](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
 > - `Spectrum Web Components` support in `React` context is now available for all 30 components.
 >     - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
->
+> 
 > #### Fixed
 > - Tab Navigation not working for several SWC Components is now fixed
 > - Spacebar doesn't work on SWC Button component when reached via TAB navigation.
->
+> 
 > ### UDT v2.0
 > #### New
 > - UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.
->
+> 
 > #### Updated
 > - Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
 
@@ -187,11 +199,11 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 - Component channel name will now throw an error if channel no longer exist in document.
 - Component channel name is no longer converted into lowercase and is same as in UI.
 - TypeScript: `channels.parent` now points to the correct `Document` type.
-- Deprecated `document.compositeChannels` since these channels are component not composite.
+- Deprecated `document.compositeChannels` since these channels are component not composite. 
   Use `componentChannels` instead.
 
 ----
-## Photoshop 24.5 (May 2023)
+## Photoshop 24.5 (May 2023) 
 
 ### Calculations and Apply Image
 The blending operations [Layer](../classes/layer) Apply Image and [Document](../classes/document) Calculations are now available.
@@ -213,13 +225,13 @@ Both methods accept an options object that matches the parameters required in th
 > - [releasePointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
 > - [hasPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
 > - [dir](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
->
+> 
 > #### Updated
 > - Documentation for `shell` module moved to [new location](../../uxp-api/reference-js/Modules/uxp/shell/)
->
+> 
 > #### Fixed
-> - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release.
->
+> - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release. 
+> 
 > ```
 > // CSS variable
 > html {
@@ -275,7 +287,7 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 >     - [confirm()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
 > - Support for [pipeThrough](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform-options) and [tee](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#tee) in [ReadableStream](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](../../uxp-api/reference-js/Global%20Members/Streams/index.md) for more details
 > - [ImageBlob](../../uxp-api/reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
->
+> 
 > #### Changed
 > - [HTMLVideoElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
 > - [FS API](../../uxp-api/reference-js/Modules/fs/): No need for the `file://` protocol
@@ -356,7 +368,7 @@ The UXP DOM features a variety of new text-related APIs, that provide a more rob
   - horizontalDistortion
   - verticalDistortion
   - reset()
-
+  
 ### Other fixes
 
 - `solidColor.cmyk` no longer shows `undefined` for `yellow` color. Also setter is now fixed.
@@ -394,17 +406,17 @@ The CountItems DOM API is now available in Photoshop.
 - Passing a blend mode that is not compatible with the document's color mode or bit depth. Previously, this call would fail silently.
 - Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  Automatic Background promotion is undesirable as a side effect in this case.  This action is not available via the UI.
 
-- The [CountItem class](../classes/countitem) implements the following properties and methods:
+- The [CountItem class](../classes/countitem) implements the following properties and methods: 
   - `typename`, `parent`, `itemIndex`, `groupIndex`, `position`
   - `move()`, `remove()`
-  -
+  - 
 
 ### UXP v6.4 Integration
 > #### New
 > - [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
 > - Support [Path Module APIs](../../uxp-api/reference-js/Global%20Members/Path)
 > - Script can run fsapi with full access in localFileSystem
->
+> 
 > #### Bugs Fixes
 > - PluginManifest parsing / Load Plugin errors not logged in UDT
 > - Error shown in UDT APP logs on Plugin UnLoad
@@ -430,9 +442,9 @@ Adds API to change some of the Photoshop [preferences](../classes/preferences). 
 The ColorSampler DOM API is now available in Photoshop.
 
 - The [ColorSamplers collection](../classes/colorsamplers/) behaves like other collections at the Document level in the API. ColorSamplers further supports the following methods:
-    - `colorSamplers.add()`
+    - `colorSamplers.add()` 
     - `colorSamplers.removeAll()`
-- The [ColorSamplers class](../classes/colorsampler) implements the following properties and methods:
+- The [ColorSamplers class](../classes/colorsampler) implements the following properties and methods: 
     - `typename`: String
     - `parent`: [Document](../classes/document)
     - `position`: `{x: number, y: number}`
@@ -471,13 +483,13 @@ The ColorSampler DOM API is now available in Photoshop.
 ### Other
 - Color mode validation for all filters
 - Fixed Lens Flare coordinates
-- Fixed file arguments for filters
+- Fixed file arguments for filters 
 
 ----
 ## Photoshop 23.5 (August 2022)
 
 ### UXP Scripting
-Script files with extension .psjs are executed using UXP.
+Script files with extension .psjs are executed using UXP. 
 - [Overview](../../scripting/)
 - [Quickstart Guide](../../scripting/getting-started/)
 - [Ps UXP Scripting](../media/uxpscripting/)
@@ -561,7 +573,7 @@ As an alternative to a UI-blocking progress bar when a plugin is within a Modal 
 ## Photoshop 23.0 (October 2021)
 
 ### Channel support
-- [Channels collections](../classes/channels/) behave like other collections in the API. Channels further supports `channels.add()` and `channels.removeAll()`.
+- [Channels collections](../classes/channels/) behave like other collections in the API. Channels further supports `channels.add()` and `channels.removeAll()`. 
 - [Channel class](../classes/channel)
     - Supports four types of channels, as listed in [Constants.ChannelType](../modules/constants/#channeltype): `COMPONENT`, `MASKEDAREA`, `SELECTEDAREA`, `SPOTCOLOR`.
     - Adds the following Channel properties: `name`, `type`, `visible`, `histogram`, `color`, `opacity`.
@@ -602,7 +614,7 @@ As an alternative to a UI-blocking progress bar when a plugin is within a Modal 
    - app.foregroundColor and app.backgroundColor.
    - app.documents.add `fillColor` property.
    - Document.saveAs methods that use colors.
- - `require('photoshop').core.convertColor` low level API added, used internally by SolidColor. It uses app color
+ - `require('photoshop').core.convertColor` low level API added, used internally by SolidColor. It uses app color 
  settings to convert between color spaces.
 
 ## Adobe Photoshop Beta Build 65: Sep 3, 2021 (23.0)

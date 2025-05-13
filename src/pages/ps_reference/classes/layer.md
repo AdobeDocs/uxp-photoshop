@@ -43,7 +43,7 @@ group.layers.forEach((layer) => {
 | filterMaskFeather | *number* | R W | 23.0 | The feather of the filter mask between 0.0 and 1000.0. |
 | id | *number* | R | 22.5 | ID of the layer, can be used for making batchPlay calls. |
 | isBackgroundLayer | *boolean* | R | 22.5 | True when the layer is the special Background layer. |
-| isClippingMask | *boolean* | R W | 23.0 | Whether the layer is being used as a clipping mask. |
+| isClippingMask | *boolean* | R W | 23.0 | Whether the layer is being used as a clipping mask. Releasing a clipping mask will also release the layers above. |
 | kind | [*LayerKind*](/ps_reference/modules/constants/#layerkind) | R | 22.5 | The kind of the layer. |
 | layerMaskDensity | *number* | R W | 23.0 | The density of the layer mask, in percentage. |
 | layerMaskFeather | *number* | R W | 23.0 | The feather of the layer mask between 0.0 and 1000.0. |
@@ -810,7 +810,7 @@ Flips the layer on one or both axis.
 
 ```javascript
 // flip horizontally
-await layer.flip.horizontal()
+await layer.flip('horizontal');
 ```
 
 #### Parameters

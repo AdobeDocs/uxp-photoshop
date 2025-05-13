@@ -28,7 +28,7 @@ keywords:
 
 ### LayerCreateOptions
 
-Ƭ **LayerCreateOptions**: [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) \| [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/)
+Ƭ **LayerCreateOptions**: [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) \| [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) \| [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/)
 
 The options passed to [Document.createLayer](/ps_reference/classes/document/#createlayer) may take any of the following forms:
 - PixelLayerCreateOptions
