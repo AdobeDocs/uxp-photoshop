@@ -107,7 +107,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Expand the selection by the specified amount.
+Expand the selection outward by the specified number of pixels.
 
 ```javascript
 await doc.selection.expand(42);

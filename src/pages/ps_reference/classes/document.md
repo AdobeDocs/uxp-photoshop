@@ -22,8 +22,7 @@ Represents a single Photoshop document that is currently open
 You can access instances of documents using one of these methods:
 
 ```javascript
-const app = require('photoshop').app;
-const constants = require('photoshop').constants;
+const {app, constants} = require('photoshop');
 
 // The currently active document from the Photoshop object
 const currentDocument = app.activeDocument;
@@ -136,17 +135,17 @@ const options = {
     source1: {
         document: doc,
         layer: doc.layers[0],
-        channel: CalculationsChannel.GRAY
+        channel: constants.CalculationsChannel.GRAY
         invert: true
     },
     source2: {
         document: doc,
-        layer: CalculationsLayer.MERGED,
+        layer: constants.CalculationsLayer.MERGED,
         channel: doc.channels[2]
     },
-    blending: CalculationsBlendMode.DARKEN,
+    blending: constants.CalculationsBlendMode.DARKEN,
     opacity: 50,
-    result: CalculationsResult.NEWCHANNEL
+    result: constants.CalculationsResult.NEWCHANNEL
 };
 doc.calculations(options);
 
@@ -191,7 +190,7 @@ unsaved changes if specified.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog                    if there are unsaved changes. |
+| `saveDialogOptions` | [*SaveOptions*](/ps_reference/modules/constants/#saveoptions) | By default, prompts a save dialog if there are unsaved changes. |
 
 ___
 
@@ -232,43 +231,68 @@ ___
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
-Create a new layer.
+General form of the kind-specific methods below. See those methods for more information.
+
+Create a new layer of the given kind.  With no arguments, a pixel layer will be created.
+The options object will have properties specific to the kind,
+though all layers share a basic set of properties common to all.
+The override signatures below are provided as type guardrails to
+help ensure the options provided match the layer kind.
 
 ```javascript
-await doc.createLayer() // defaults to pixel layer
-```
+await doc.createLayer(); // defaults to pixel layer
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
-
-Create a new pixel layer.
-
-```javascript
 await doc.createLayer(
-  Constants.LayerKind.NORMAL,
-  { name: "myLayer", opacity: 80, blendMode: Constants.BlendMode.COLORDODGE })
+  constants.LayerKind.NORMAL, // pixel layer
+  { name: "myLayer",
+    opacity: 80,
+    blendMode: constants.BlendMode.COLORDODGE }
+);
 ```
+
+*Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `kind` | [*NORMAL*](/ps_reference/modules/constants/#normal) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
-| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
+| Name | Type |
+| :------ | :------ |
+| `kind?` | [*NORMAL*](/ps_reference/modules/constants/#normal) |
+| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) |
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
 
 Create a new layer group.
-
 ```javascript
-await doc.createLayer( Constants.LayerKind.GROUP, { name: "myLayer", opacity: 80 })
+await doc.createLayer(
+  constants.LayerKind.GROUP,
+  { name: "myLayer", opacity: 80 }
+);
 ```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `kind` | [*GROUP*](/ps_reference/modules/constants/#group) | The kind of layer to create [Constants.LayerKind](/ps_reference/modules/constants/#layerkind). |
-| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
+| Name | Type |
+| :------ | :------ |
+| `kind` | [*GROUP*](/ps_reference/modules/constants/#group) |
+| `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
+
+**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+
+Create a new text layer.
+
+```javascript
+await doc.createLayer( 
+  Constants.LayerKind.TEXT,
+  { name: "message", contents: "Hello World" }
+);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `kind` | [*TEXT*](/ps_reference/modules/constants/#text) |
+| `options?` | [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/) |
 
 ___
 
@@ -281,9 +305,19 @@ Create a layer group using options described by [GroupLayerCreateOptions](/ps_re
 
 ```javascript
 const myEmptyGroup = await doc.createLayerGroup()
-const myGroup = await doc.createLayerGroup({ name: "myLayer", opacity: 80, blendMode: "colorDodge" })
-const nonEmptyGroup = await doc.createLayerGroup({ name: "group", fromLayers: [layer1, layer2] })
-const selectedGroup = await doc.createLayerGroup({ name: "group", fromLayers: doc.activeLayers })
+const myGroup = await doc.createLayerGroup({
+  name: "myLayer",
+  opacity: 80,
+  blendMode: "colorDodge"
+});
+const nonEmptyGroup = await doc.createLayerGroup({
+  name: "group",
+  fromLayers: [layer1, layer2]
+});
+const selectedGroup = await doc.createLayerGroup({
+  name: "group",
+  fromLayers: doc.activeLayers
+});
 ```
 
 #### Parameters
@@ -302,15 +336,18 @@ ___
 Create a pixel layer using options described by [PixelLayerCreateOptions](/ps_reference/objects/createoptions/pixellayercreateoptions/).
 
 ```javascript
-await doc.createPixelLayer()
-await doc.createPixelLayer({ name: "myLayer", opacity: 80, fillNeutral: true })
+await doc.createPixelLayer({
+  name: "myLayer",
+  opacity: 80,
+  fillNeutral: true
+});
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) | The options for creation, including general layer options and those specific to the layer kind. |
 
 ___
 
@@ -323,7 +360,11 @@ Create a text layer using options described by [TextLayerCreateOptions](/ps_refe
 
 ```javascript
 await doc.createTextLayer()
-await doc.createTextLayer({ name: "myTextLayer", contents: "Hello, World!", fontSize: 32 })
+await doc.createTextLayer({
+  name: "myTextLayer",
+  contents: "Hello, World!",
+  fontSize: 32
+});
 ```
 
 #### Parameters
@@ -339,7 +380,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Crops the document to given bounds
+Crops the document to the given bounds.
 
 #### Parameters
 
@@ -394,8 +435,8 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*Layer*](/ps_reference/classes/layer/)[] |  |
-| `targetDocument?` | [*Document*](/ps_reference/classes/document/) | if specified, duplicate to a different document target. |
+| `layers` | [*Layer*](/ps_reference/classes/layer/)[] | The array of layers to duplicate. |
+| `targetDocument?` | [*Document*](/ps_reference/classes/document/) | If specified, send the duplicates to a different document. |
 
 ___
 
@@ -404,7 +445,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Flatten all layers in the document.
+Flatten all layers in the document. The remaining layer will become Background.
 
 ___
 
@@ -417,7 +458,9 @@ Create a layer group from existing layers.
 
 ```javascript
 const layers = doc.layers
-const group = await doc.groupLayers([layers[1], layers[2], layers[4]])
+const group = await doc.groupLayers(
+  [ layers[1], layers[2], layers[4] ]
+);
 ```
 
 #### Parameters
@@ -439,7 +482,7 @@ Links layers together if possible, and returns a list of linked layers.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `layers` | [*Layer*](/ps_reference/classes/layer/)[] | array of layers to link together |
+| `layers` | [*Layer*](/ps_reference/classes/layer/)[] | The array of layers to link together. |
 
 ___
 
@@ -449,6 +492,9 @@ ___
 **async** : *Promise*<void\>
 
 Merges all visible layers in the document into a single layer.
+In constrast to [flatten](/ps_reference/classes/document/#flatten), `mergeVisibleLayers` will not convert the remaining layer
+to Background if no Background already exists.  If not Background, then the name of the
+merged layer will be either that of the top of the selected layers or the top layer.
 
 ___
 
@@ -462,9 +508,9 @@ set to true and a selection is active, the contents are pasted into the selectio
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `intoSelection?` | *boolean* |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `intoSelection?` | *boolean* | Whether to use an active selection as the target for the paste. |
 
 ___
 
@@ -473,7 +519,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Rasterizes all layers.
+Converts all layers to pixel layers.
 
 ___
 
@@ -482,22 +528,21 @@ ___
 
 **async** : *Promise*<void\>
 
-Changes the size of the canvas, but does not change image size
-To change the image size, see [resizeImage](/ps_reference/classes/document/#resizeimage)
+Changes the size of the document, but does not scale the image.
+To scale the image size, see [resizeImage](/ps_reference/classes/document/#resizeimage).
 
 ```javascript
 // grow the canvas by 400px
-let width = await document.width
-let height = await document.height
-await document.resizeCanvas(width + 400, height + 400)
+const {width, height} = await app.activeDocument;
+await document.resizeCanvas(width + 400, height + 400);
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `width` | *number* | Numeric value of new width in pixels |
-| `height` | *number* | Numeric value of new height in pixels |
+| `width` | *number* | Numeric value of new width in pixels. |
+| `height` | *number* | Numeric value of new height in pixels. |
 | `anchor?` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
 
 ___
@@ -507,7 +552,7 @@ ___
 
 **async** : *Promise*<void\>
 
-Changes the size of the image
+Changes the size of the image by scaling the dimensions to meet the targeted number of pixels.
 
 ```javascript
 await document.resizeImage(800, 600)
@@ -517,11 +562,11 @@ await document.resizeImage(800, 600)
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `width?` | *number* | Numeric value of new width in pixels |
-| `height?` | *number* | Numeric value of new height in pixels |
-| `resolution?` | *number* | Image resolution in pixels per inch (ppi) |
+| `width?` | *number* | Numeric value of new width in pixels. |
+| `height?` | *number* | Numeric value of new height in pixels. |
+| `resolution?` | *number* | Image resolution in pixels per inch (ppi). |
 | `resampleMethod?` | [*ResampleMethod*](/ps_reference/modules/constants/#resamplemethod) | Method used during image interpolation. |
-| `amount?` | *number* | Numeric value that controls the amount of noise value when using preserve details 0..100 |
+| `amount?` | *number* | Numeric value that controls the amount of noise value when using preserve details 0..100. |
 
 ___
 
@@ -600,8 +645,7 @@ ___
 
 **async** : *Promise*<[*Document*](/ps_reference/classes/document/)[]\>
 
-Splits the document channels into separate, single-channel
-documents.
+Splits the document channels into separate, single-channel documents.
 
 ___
 
@@ -620,12 +664,12 @@ not be suspended in the same history state.
 The callback is passed in a SuspendHistoryContext object,
 which contains the current document in a variable `document`.
 
-For more info and advanced context, see [`core.executeAsModal`](../media/executeAsModal)
-API, for which this API is a simple wrapper for.
+For more info and advanced context, see [`core.executeAsModal`](../../media/executeasmodal)
+API, for which `suspendHistory` is a simple wrapper.
 
 ```javascript
-   require("photoshop").app.activeDocument.suspendHistory(async (context) => {
-       // context.document is the `app.activeDocument`
+   app.activeDocument.suspendHistory(async (context) => {
+       // context.document below is, in this case, `app.activeDocument`
        context.document.activeLayers[0].name = "Changed name";
    });
 ```
@@ -661,15 +705,20 @@ ___
 
 **async** : *Promise*<void\>
 
-Trims the transparent area around the image on the specified sides of the canvas
-base on trimType
+Trims the area around the image according to the type of pixels given.
+All sides of the image are targeted by default.
+Optionally, the sides may be individually specified for exclusion.
+```javascript
+//  trim transparent pixels from only the bottom of the image
+app.activeDocument.trim(constants.TrimType.TRANSPARENT, false, false, true, false);
+```
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `trimType` | [*TrimType*](/ps_reference/modules/constants/#trimtype) | - |
-| `top` | *boolean* | true |
-| `left` | *boolean* | true |
-| `bottom` | *boolean* | true |
-| `right` | *boolean* | true |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `trimType` | [*TrimType*](/ps_reference/modules/constants/#trimtype) | - | Defaults to the top left pixel color; |
+| `top` | *boolean* | true |  |
+| `left` | *boolean* | true |  |
+| `bottom` | *boolean* | true |  |
+| `right` | *boolean* | true |  |

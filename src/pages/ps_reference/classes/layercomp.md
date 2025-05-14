@@ -63,18 +63,10 @@ ___
 
 Updates the recorded states of the layers for this layer comp.
 
-Applies to all layers and all properties supported by this layer comp.
-
-**async** : *Promise*<void\>
-
-Updates the recorded states of the layers for this layer comp.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `arg` | [*LayerCompRecaptureOptions*](/ps_reference/objects/options/layercomprecaptureoptions/) | - |
-| `layers?` | [*Layer*](/ps_reference/classes/layer/)[] | if this argument is passed then only specified layers will be recaptured. |
+With no arguments, the update applies to all layers and all properties supported by this layer comp.
+```javascript
+app.activeDocument.layerComps[0].recapture();
+```
 
 ___
 

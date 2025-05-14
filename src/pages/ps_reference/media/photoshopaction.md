@@ -23,7 +23,7 @@ UXP-Photoshop world. You may perform your own `batchPlay` commands,
 or attach listeners using this module.
 
 ```javascript
-var PhotoshopAction = require('photoshop').action;
+const {action} = require('photoshop');
 ```
 
 ## Functions
@@ -31,20 +31,22 @@ var PhotoshopAction = require('photoshop').action;
 ### addNotificationListener
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
-Attach a listener to a Photoshop event. A callback in the form
-of `(eventName: string, descriptor: Descriptor) => void` will be performed.
+Attach a callback function to one or more Photoshop events.
+The callback has the form `(eventName: string, descriptor: ActionDescriptor) => void`.
 ```javascript
-await PhotoshopAction.addNotificationListener(['open'], onOpenNewDocument)
+await action.addNotificationListener(['open'], onOpenDocumentHandler);
 ```
+A [table of events is available](./eventcodes#action-events) or
+the [introspection methods described under `batchPlay`](./batchplay) may be employed.
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `callback` | NotificationListener |
 
 ___
 
@@ -56,9 +58,9 @@ ___
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
 ```javascript
-var target = { _ref: 'layer', _enum: 'ordinal', _value: 'targetEnum'}
-var commands = [{ _obj: 'hide', _target: target }]
-await PhotoshopAction.batchPlay(commands)
+const target = { _ref: 'layer', _enum: 'ordinal', _value: 'targetEnum' };
+const commands = [{ _obj: 'hide', _target: target }];
+await action.batchPlay(commands);
 ```
 
 #### Parameters
@@ -78,9 +80,9 @@ ActionDescriptor[]
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
 ```javascript
-var target = { _ref: 'layer', _enum: 'ordinal', _value: 'targetEnum'}
-var commands = [{ _obj: 'hide', _target: target }]
-await PhotoshopAction.batchPlay(commands)
+const target = { _ref: 'layer', _enum: 'ordinal', _value: 'targetEnum' };
+const commands = [{ _obj: 'hide', _target: target }];
+await action.batchPlay(commands);
 ```
 
 #### Parameters
@@ -117,12 +119,12 @@ Records this plugin's action to an active Action recording.
 See [Action Recording](./action-recording/) for usage and manifest requirements.
 
 ```javascript
-await PhotoshopAction.recordAction("name": "My Command", methodName: "actionHandler", info: {"prop": value})
+await action.recordAction({ name: 'My Command', methodName: 'actionHandler'}, {prop: value} );
 ```
 When the action is invoked, the following top level JavaScript function will be invoked:
 ```javascript
 async function actionHandler(executionContext, info) {
-    let propValue = info["prop"];
+    let propValue = info['prop'];
 }
 ```
 
@@ -130,8 +132,7 @@ async function actionHandler(executionContext, info) {
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `name` | *string* | User visible string for the Actions panel. |
-| `methodName` | *string* | Name of top level JavaScript function callback. |
+| `options` | RecordActionOptions |  |
 | `info` | ActionDescriptor | Object with action specific information. See [Action Recording](./action-recording/). |
 
 ___
@@ -144,7 +145,7 @@ ___
 Detaches a listener from a Photoshop event.
 See [addNotificationListener](#addnotificationlistener)
 ```javascript
-await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
+await action.removeNotificationListener(['open'], onOpenNewDocument);
 ```
 
 #### Parameters
@@ -152,7 +153,7 @@ await PhotoshopAction.removeNotificationListener(['open'], onOpenNewDocument)
 | Name | Type |
 | :------ | :------ |
 | `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `listener` | NotificationListener |
 
 ___
 

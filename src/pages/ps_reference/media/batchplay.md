@@ -38,7 +38,7 @@ The following is an example of an `actionJSON` command for hiding a layer <a id=
 ```javascript
 {
   _obj: "hide",
-  _target:[
+  _target: [
     {_ref: "layer", _enum: "ordinal", _value: "targetEnum"},
     {_ref: "document", _enum: "ordinal", _value: "targetEnum"}
   ]
@@ -47,17 +47,25 @@ The following is an example of an `actionJSON` command for hiding a layer <a id=
 The command is `hide` as specified by the `_obj` keyword.
 
 The value of `_target` is called an `action reference` and specifies which layer should be hidden. The action reference specifies the target in reverse order - from most specific to least (similar to a postal address). To find the DOM object for a target you go from the last value in the list to the first. In this example we have:
-* `{"_ref":"document", "_enum":"ordinal","_value":"targetEnum"}` First find the target document. It is specified as `ordinal` and `targetEnum`. This means the active (front most) document.
-* In that document we look for the layer specified as `{"_ref":"layer","_enum":"ordinal","_value":"targetEnum"}`. This means the active (selected) layer.
+* `{_ref: "document", _enum: "ordinal", _value: "targetEnum"}` First find the target document. It is specified as `ordinal` and `targetEnum`. This means the active (front most) document.
+* In that document we look for the layer specified as `{_ref: "layer", _enum: "ordinal", _value: "targetEnum"}`. This means the active (selected) layer.
 
 For this command we are therefore targeting the selected layer in the front most document. `targetEnum` is the default value for ordinal enumerations and can be omitted. See the section on [action references](#action-references) below for details.
 
 This command modifies the Photoshop state and must therefore be executed from within a modal scope. See the documentation of [executeAsModal](./executeasmodal) for details. The following JavaScript uses batchPlay to hide the active layer:
 ```javascript
+const {app, action, core} = require('photoshop');
 async function hideActiveLayer() {
-  return await require("photoshop").action.batchPlay([{_obj:"hide", _target:[{_ref: "layer", _enum: "ordinal"},{_ref: "document", _enum: "ordinal"}]}], {});
+  return await action.batchPlay([{
+    _obj: "hide",
+    _target: [
+      {_ref: "layer", _enum: "ordinal"},
+      {_ref: "document", _enum: "ordinal"}
+    ]
+  }],
+  {});
 }
-let result = require("photoshop").core.executeAsModal(hideActiveLayer, {"commandName": "Hide Layer"});
+let result = core.executeAsModal(hideActiveLayer, {commandName: "Hide Layer"});
 ```
 
 Here is another example of `batchPlay` and `actionJSON`. This examples returns the value of a specific document pixel.
@@ -65,20 +73,29 @@ This example illustrates providing `samplePoint` as an additional command parame
 
 ```javascript
 async function samplePixel() {
-  return await require("photoshop").action.batchPlay([{
+  return await action.batchPlay([{
     _obj: "colorSampler",
-    _target: {_ref: "document",_enum: "ordinal",_value: "targetEnum"},
+    _target: {_ref: "document", _enum: "ordinal", _value: "targetEnum"},
     samplePoint: {
       horizontal: 100,
       vertical: 100
     }
   }], {});
 }
-let result = await require("photoshop").core.executeAsModal(samplePixel, {"commandName": "Sample Pixel"});
+let result = await core.executeAsModal(samplePixel, {commandName: "Sample Pixel"});
 ```
 Sample output from the colorSampler command:
 ```javascript
-[{"colorSampler":{"_obj":"CMYKColorClass","black":0,"cyan":26.27,"magenta":4.71,"yellowColor":0},"sampledData":true}]
+[{
+  colorSampler: {
+    _obj: "CMYKColorClass",
+    black: 0,
+    cyan: 26.27,
+    magenta: 4.71,
+    yellowColor: 0
+  },
+  sampledData: true
+}]
 ```
 
 ### Accepted action descriptors
@@ -91,15 +108,15 @@ The following is an example of copying a single "make layer" command as JavaScri
 async function actionCommands() {
     let command;
     let result;
-    let psAction = require("photoshop").action;
+    let psAction = action;
 
     // Make layer
-    command = {"_obj":"make","_target":[{"_ref":"layer"}],"layerID":2};
+    command = {_obj: "make", _target: [{_ref: "layer"}], layerID: 2};
     result = await psAction.batchPlay([command], {});
 }
 
 async function runModalFunction() {
-    await require("photoshop").core.executeAsModal(actionCommands, {"commandName": "Action Commands"});
+    await core.executeAsModal(actionCommands, {commandName: "Action Commands"});
 }
 
 await runModalFunction();
@@ -107,7 +124,12 @@ await runModalFunction();
 
 Another option is to create a listener function in JavaScript. This is done by providing the global event hook to a low level API. This call only works when developer mode is enabled.
 ```javascript
-require('photoshop').action.addNotificationListener(['all'], (event, descriptor) => {console.log("Event:" + event + " Descriptor: " + JSON.stringify(descriptor))});
+action.addNotificationListener(
+  ['all'],
+  (event, descriptor) => {
+    console.log("Event: " + event + " Descriptor: " + JSON.stringify(descriptor))
+  }
+);
 ```
 
 Another option is to use the developer UI to log action descriptors to a file. When "developer mode" is enabled, then the following menu items will be available:
@@ -160,7 +182,7 @@ Request Photoshop to describe the entire batchPlayed series of actions as a sing
 ## Result value
 `batchPlay` returns a promise. This promise is rejected if the batchPlay command is invalid. This is the case when incorrect arguments are provided. An example of a batchPlay rejection is:
 ```javascript
-require("photoshop").action.batchPlay(true, {});
+action.batchPlay(true, {});
 ```
 This example provides an incorrect initial argument to batchPlay. The initial argument is expected to be a descriptor list and not a boolean. For cases such as this, the promise is rejected with an appropriate error message. The above example generates the following rejection:
 ```javascript
@@ -192,11 +214,11 @@ Each item in the list can use one of the following forms:
 
 | Reference form | Syntax | Example | Notes |
 | --------------| --------|-|-|
-| ID | `{_ref:className, _id:number}` | `{_ref:"document", _id: 123}` |
-| Index | `{_ref:className, _index:number}` | `{_ref:"document", _index: 1}` | Indices are 1 based |
-| Name | `{_ref:className, _name:string}` | `{_ref:"document", _name: "Untitled-1"}` |
-| Enumeration | `{_ref:className, _enum: "ordinal", _value: enumerationSpecifier*}` | `{_ref:"document", _enum: "ordinal", _value:"targetEnum"}` |
-| Property | `{_property:propertyName}` | `{_property:"title"}` |
+| ID | `{_ref: className, _id: number}` | `{_ref: "document", _id: 123}` |
+| Index | `{_ref: className, _index: number}` | `{_ref: "document", _index: 1}` | Indices are 1 based |
+| Name | `{_ref: className, _name: string}` | `{_ref: "document", _name: "Untitled-1"}` |
+| Enumeration | `{_ref: className, _enum: "ordinal", _value: enumerationSpecifier*}` | `{_ref: "document", _enum: "ordinal", _value: "targetEnum"}` |
+| Property | `{_property: propertyName}` | `{_property: "title"}` |
 
 We recommend using the ID form whenever possible because the ID of an object does not change during the lifetime of the Photoshop session. The index will change if elements are added or removed in front of the specified object.
 
@@ -208,25 +230,32 @@ batchPlay can be used to obtain state from Photoshop. To do this, use the action
 
 The following sample obtains the title of a target document.:
 ```javascript
-var target = {_ref:[{"_property": "title"}, {_ref: "document", _id: someDocumentID}, {"_ref":"application"}]};
-var command = {"_obj": "get", "_target": target};
+var target = {_ref: [
+  {_property: "title"},
+  {_ref: "document", _id: someDocumentID},
+  {_ref: "application"}
+]};
+var command = {_obj: "get", _target: target};
 let result = await photoshop.action.batchPlay([command], {});
 ```
 A possible result from running this command is:
 ```javascript
-[{"title":"Untitled-1"}]
+[{title: "Untitled-1"}]
 ```
 
 If you use the "get" command without a target property, then all possible properties for the target are returned. The following lists all possible document properties:
 ```javascript
-var target = {_ref:[{_ref: "document", _id: someDocumentID}, {"_ref":"application"}]};
-var command = {"_obj": "get", "_target": target};
+var target = {_ref: [
+  {_ref: "document", _id: someDocumentID},
+  {_ref: "application"}
+]};
+var command = {_obj: "get", _target: target};
 let result = await photoshop.action.batchPlay([command], {});
 ```
 
 A possible result from running this command may include the following:
 ```javascript
-[{"mode":{"_enum":"colorSpace","_value":"RGBColor"},"bigNudgeH":655360,"bigNudgeV":655360,"rulerOriginH":0,"rulerOriginV":0,"width":{"_unit":"distanceUnit","_value":504},"height":{"_unit":"distanceUnit","_value":360},"resolution":{"_unit":"densityUnit","_value":300},"title":"Untitled-1","fileInfo":{"_obj":"fileInfo"},"numberOfPaths":0,"numberOfChannels":3,"numberOfLayers":0,"targetPathIndex":-1,"workPathIndex":-1,"clippingPathInfo":{"_obj":"clippingInfo","clippingPathIndex":-1,"clippingPathFlatness":0}, . . . ]
+[{"mode": {"_enum": "colorSpace", "_value": "RGBColor"}, "bigNudgeH": 655360, "bigNudgeV": 655360, "rulerOriginH": 0, "rulerOriginV": 0, "width": {"_unit": "distanceUnit", "_value": 504}, "height": {"_unit": "distanceUnit", "_value": 360}, "resolution": {"_unit": "densityUnit", "_value": 300}, "title": "Untitled-1", "fileInfo": {"_obj": "fileInfo"}, "numberOfPaths": 0, "numberOfChannels": 3, "numberOfLayers": 0, "targetPathIndex": -1, "workPathIndex": -1, "clippingPathInfo": {"_obj": "clippingInfo", "clippingPathIndex": -1, "clippingPathFlatness": 0}, . . . ]
 ```
 
 Using "get" without a property is intended for use only during the development of a plugin. This "get all" request allows a developer to understand which properties a given element supports.
@@ -250,34 +279,43 @@ A multiGet command has the following form:
 
 The following example illustrates how to get the value of multiple properties on the active layer:
 ```javascript
-layerProperties =
-  { _obj: "multiGet",
-     _target: {_ref: [{_ref: "layer", _enum: "ordinal"}, {_ref: "document", _enum: "ordinal"}]},
-     extendedReference: [["name", "layerID", "opacity"]],
-     options: {failOnMissingProperty:false, failOnMissingElement: false}
-  };
-result = await require("photoshop").action.batchPlay([layerProperties], {});
+layerProperties = {
+  _obj: "multiGet",
+  _target: {_ref: [
+    {_ref: "layer", _enum: "ordinal"},
+    {_ref: "document", _enum: "ordinal"}
+  ]},
+  extendedReference: [["name", "layerID", "opacity"]],
+  options: {failOnMissingProperty: false, failOnMissingElement: false}
+};
+result = await action.batchPlay([layerProperties], {});
 ```
 This command will generate a result such as the following:
 ```javascript
-[{"name":"Layer 4","layerID":5,"opacity":255}]
+[{"name": "Layer 4", "layerID": 5, "opacity": 255}]
 ```
 In this example the base object is a layer. The extendedReference specifies the list of properties to return from the target layer.
 
 
 The following example illustrates how to get the value of multiple properties on the first two layers:
 ```javascript
-layerProperties =
-  { _obj: "multiGet",
-     _target: {_ref: [{_ref: "document", _enum: "ordinal"}]},
-     extendedReference: [["name", "layerID", "opacity"], {_obj: "layer", index:1, count:2}],
-     options: {failOnMissingProperty:false, failOnMissingElement: false}
-  };
-result = await require("photoshop").action.batchPlay([layerProperties], {});
+layerProperties = {
+  _obj: "multiGet",
+  _target: {_ref: [{_ref: "document", _enum: "ordinal"}]},
+  extendedReference: [
+    ["name", "layerID", "opacity"],
+    {_obj: "layer", index: 1, count: 2}
+  ],
+  options: {failOnMissingProperty: false, failOnMissingElement: false}
+};
+result = await action.batchPlay([layerProperties], {});
 ```
 This command will generate a result such as the following:
 ```javascript
-[{"list":[{"name":"Layer 1","layerID":2,"opacity":255},{"name":"Layer 2","layerID":3,"opacity":255}]}]
+[{"list": [
+  {"name": "Layer 1", "layerID": 2, "opacity": 255},
+  {"name": "Layer 2", "layerID": 3, "opacity": 255}
+]}]
 ```
 In this example we want to obtain the value from several layers, and this mean that the base object as specified by the `_target` is a document. The extendedReference is used in its two element form to specify a property list and a range of layers.
 
@@ -286,14 +324,14 @@ The element range specifier can use count equal to -1 to specify all elements. T
 layerProperties =
   { _obj: "multiGet",
      _target: {_ref: [{_ref: "document", _enum: "ordinal"}]},
-     extendedReference: [["name"], {_obj: "layer", index:1, count:-1}],
-     options: {failOnMissingProperty:false, failOnMissingElement: false}
+     extendedReference: [["name"], {_obj: "layer", index: 1, count: -1}],
+     options: {failOnMissingProperty: false, failOnMissingElement: false}
   };
-result = await require("photoshop").action.batchPlay([layerProperties], {});
+result = await action.batchPlay([layerProperties], {});
 ```
 This command will generate a result such as the following:
 ```javascript
-[{"list":[{"name":"Layer 1"},{"name":"Layer 2"},{"name":"Layer 3"},{"name":"Layer 4"}]}]
+[{"list": [{"name": "Layer 1"}, {"name": "Layer 2"}, {"name": "Layer 3"}, {"name": "Layer 4"}]}]
 ```
 
 ## Legacy notes

@@ -27,7 +27,7 @@ into the DOM at a later date. The use of which will then be easier, for example,
 removing the need to specify the document ID as an argument.
 
 ```javascript
-var PhotoshopCore = require('photoshop').core;
+const {core} = require('photoshop');
 ```
 
 ## Properties
@@ -46,16 +46,17 @@ var PhotoshopCore = require('photoshop').core;
 **async** : *Promise*<void\>
 
 Attach a listener to a Photoshop core event. A callback in the form
-of `(eventName: string, descriptor: Descriptor) => void` will be performed.
-The event(s) below are supported:
+of `(eventName: string, descriptor: ActionDescriptor) => void` will be performed.
 
-group: '`UI`', event: '`userIdle`'
+A [table of events is available](./eventcodes#core-events).
+
+For example: using group '`UI`' and event '`userIdle`'
 
 - Invoked after the Photoshop user idles for a specified number of seconds. See [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime).
 - Invoked a second time with the descriptor `{idleEnd: true}` if the user is no longer idle. This signal can
 be used to finish up tasks being performed during the idle time.
 ```javascript
-await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
+await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 ```
 
 #### Parameters
@@ -64,7 +65,7 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 | :------ | :------ |
 | `group` | *string* |
 | `events` | *string*[] |
-| `notifier` | NotificationListener |
+| `callback` | NotificationListener |
 
 ___
 
@@ -75,8 +76,8 @@ ___
 
 Returns the effective size of a dialog.
 ```javascript
-var idealSize = { width: 200, height: 500 }
-{ width, height} = await PhotoshopCore.calculateDialogSize(idealSize)
+const idealSize = { width: 200, height: 500 };
+const { width, height } = await core.calculateDialogSize(idealSize);
 ```
 
 #### Parameters
@@ -162,6 +163,41 @@ Convert to CMYK
 
 ___
 
+### convertGlobalToLocal
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">26.0</span>
+
+**async** : *Promise*<{ `x`: *number* ; `y`: *number*  }\>
+
+Given the (x,y) coordinates of a position in global (display) space, we convert to coordinates
+with the origin based at the top left corner of the given panel.
+A plugin can only make calls against panels that are defined in its manifest,
+so the given `target` must be defined there.
+
+In the example manifest on the documentation page for
+[UXP manifest v5](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp_guide/uxp-misc/manifest-v5/),
+the identifier is "panelName".
+
+Note: global coordinates differ between macOS and Windows. On macOS global coordinates are expressed as
+points while on Windows the unit is pixels. See [getDisplayConfiguration](/ps_reference/media/photoshopcore/#getdisplayconfiguration) for more information
+on global coordinates.
+
+```javascript
+const target = 'panelName';
+const location = { x: 200, y: 500 };
+const { x, y } = await core.convertGlobalToLocal(target, location);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `target` | *string* | The `id` of the panel to use as the origin. |
+| `location` | *object* | Point coordinates in the form {x, y}. |
+| `location.x` | *number* | - |
+| `location.y` | *number* | - |
+
+___
+
 ### createTemporaryDocument
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
@@ -171,14 +207,14 @@ Create a temporary duplicate document for background processing.  This document 
 and there are limitations with some editing features.
 
 ```javascript
-await PhotoshopCore.createTemporaryDocument({documentID:123})
+await core.createTemporaryDocument({ documentID: 123 });
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | *object* | Object containing key of "documentID" for the document to duplicate. |
+| `options` | *object* | Object containing the id the document to duplicate under property `documentID`. |
 | `options.documentID` | *number* | - |
 
 ___
@@ -191,14 +227,14 @@ ___
 Remove a temporary document.
 
 ```javascript
-await PhotoshopCore.deleteTemporaryDocument({documentID:146})
+await core.deleteTemporaryDocument({ documentID: 146 });
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | *object* | Object containing key of "documentID" for the document to delete. |
+| `options` | *object* | Object containing key of `documentID` for the document to delete. |
 | `options.documentID` | *number* | - |
 
 ___
@@ -211,7 +247,7 @@ ___
 End the current modal tool editing state.
 ```javascript
 // close the modal dialog, cancelling changes
-await PhotoshopCore.endModalToolState(false)
+await core.endModalToolState(false);
 ```
 
 #### Parameters
@@ -251,7 +287,7 @@ ___
 
 Returns information about the active Photoshop tool.
 ```javascript
-{ title } = await PhotoshopCore.getActiveTool()
+const { title } = await core.getActiveTool();
 ```
 
 ___
@@ -263,9 +299,9 @@ ___
 
 Returns information about the host CPU.
 ```javascript
-{ logicalCores, frequencyMhz, vendor } = PhotoshopCore.getCPUInfo()
-var isAMD = vendor === "AMD"
-var isARM = vendor === "ARM"
+const { logicalCores, frequencyMhz, vendor } = core.getCPUInfo();
+const isAMD = vendor === 'AMD';
+const isARM = vendor === 'ARM';
 ```
 
 ___
@@ -273,23 +309,24 @@ ___
 ### getDisplayConfiguration
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
 
-*Promise*<object\>
+*Promise*<[[*DisplayConfiguration*](/ps_reference/objects/returnobjects/displayconfiguration/)]\>
 
-Returns the current display configuration.
+Returns the current display configuration as an array with an entry for each display.
 
 Note: returned units differ by platform.
  - Mac uses logical units, points.
  - Windows uses physical units, pixels.
+Further discussion of the units may be found on [Display Units](../../media/displayunits)
 
 ```javascript
-psCore.getDisplayConfiguration( {physicalResolution: true} )
+core.getDisplayConfiguration({ physicalResolution: true });
 ```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | *object* | object Currently only one: physicalResolution. If true, then a property with that name will also appear in the return object. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `options` | [*DisplayConfigurationOptions*](/ps_reference/objects/options/displayconfigurationoptions/) | {} | Additional properties to include, e.g., `physicalResolution`. |
 
 ___
 
@@ -300,10 +337,10 @@ ___
 
 Returns OpenGL and OpenCL information about the available graphics processor.
 ```javascript
-{ gpuInfoList, clgpuInfoList } = PhotoshopCore.getGPUInfo()
-console.log(JSON.stringify(gpuInfoList))
+const { gpuInfoList, clgpuInfoList } = core.getGPUInfo();
+console.log(JSON.stringify(gpuInfoList));
 // > [{"version":"2.1 ATI-4.5.14","memoryMB":8192,"name":"16915464", ...}]
-console.log(JSON.stringify(clgpuInfoList))
+console.log(JSON.stringify(clgpuInfoList));
 // > [{"version":"OpenCL 1.2 ","memoryMB":8589,"name":"AMD Radeon Pro 580X Compute Engine", ...}]
 ```
 
@@ -317,7 +354,7 @@ ___
 Returns a list of the layers contained by the specified layer group.
 
 ```javascript
-await psCore.getLayerGroupContents({"documentID": 123, "layerID": 9})
+await core.getLayerGroupContents({ documentID: 123, layerID: 9 });
 ```
 
 #### Parameters
@@ -338,7 +375,7 @@ ___
 Returns a list of the layers contained by the specified layer group.
 
 ```javascript
-psCore.getLayerGroupContentsSync({"documentID": 123, "layerID": 9})
+core.getLayerGroupContentsSync({ documentID: 123, layerID: 9 });
 ```
 
 #### Parameters
@@ -354,18 +391,18 @@ ___
 ### getLayerTree
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
 
-*Promise*<{ `list`: LayerTreeInfo[]  }\>
+**async** : *Promise*<{ `list`: LayerTreeInfo[]  }\>
 
 Returns the full hierarchy of the layer stack in nested "lists".
 ```javascript
-await psCore.getLayerTree( {documentID: 123} )
+await core.getLayerTree({ documentID: 123 });
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
 ___
@@ -377,14 +414,14 @@ ___
 
 Returns the full hierarchy of the layer stack in nested "lists".
 ```javascript
-psCore.getLayerTree( {documentID: 123} )
+core.getLayerTreeSync({ documentID: 123 });
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
 ___
@@ -397,7 +434,7 @@ ___
 Returns whether a command menu item is available for invoking.
 ```javascript
 // can a Fill be performed?
-var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
+const canFill = await core.getMenuCommandState({ commandID: 1042 });
 ```
 
 #### Parameters
@@ -406,7 +443,6 @@ var canFill = await PhotoshopCore.getMenuCommandState({ commandID: 1042 })
 | :------ | :------ |
 | `options` | *object* |
 | `options.commandID` | *number* |
-| `options.scheduling?` | Scheduling |
 
 ___
 
@@ -417,7 +453,7 @@ ___
 
 Returns the localized menu title of the menu command item.
 ```javascript
-var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 })
+const renameLayerStr = await core.getMenuCommandTitle({ commandID: 2983 });
 ```
 
 #### Parameters
@@ -427,7 +463,6 @@ var renameLayerStr = await PhotoshopCore.getMenuCommandTitle({ commandID: 2983 }
 | `options` | *object* |
 | `options.commandID?` | *number* |
 | `options.menuID?` | *number* |
-| `options.scheduling?` | Scheduling |
 
 ___
 
@@ -454,7 +489,7 @@ This is typically caused by executing commands while Photoshop is modal without 
 when loading plugins through the UXP Developer Tool.
 
 ```javascript
-await PhotoshopCore.getPluginInfo()
+await core.getPluginInfo();
 ```
 
 ___
@@ -467,7 +502,7 @@ ___
 Return the current number of seconds for user idle time. See also: [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime)
 
 ```javascript
-await PhotoshopCore.getUserIdleTime()
+await core.getUserIdleTime();
 ```
 
 ___
@@ -479,14 +514,14 @@ ___
 
 Returns true if the history is in a suspended state.  See [Document.suspendHistory](/ps_reference/classes/document/#suspendhistory).
 ```javascript
-await psCore.historySuspended( {documentID: 123} )
+await core.historySuspended( {documentID: 123} );
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | *object* | Object containing key of "documentID" for the target document. |
+| `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
 ___
@@ -496,7 +531,7 @@ ___
 
 *boolean*
 
-Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal)
+Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal).
 
 ___
 
@@ -507,18 +542,18 @@ ___
 
 Invokes the menu command via its `commandID`. Returns false
 on failure, or if the command is not available.
+Record Action Notifications via the Plugins > Development menu can be used to capture the command IDs.
 ```javascript
-// select all
-await PhotoshopCore.performMenuCommand({ commandID: 1017 })
+// menu item Select > All
+await core.performMenuCommand({ commandID: 1017 });
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | *object* |
-| `options.commandID` | *number* |
-| `options.scheduling?` | Scheduling |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *object* | Object containing key of `commandID` for the menu item. |
+| `options.commandID` | *number* | - |
 
 ___
 
@@ -541,7 +576,7 @@ redrawDocument returns the time that it took Photoshop to update the target docu
 in seconds. This number can be used to refine the throttle.
 redrawDocument is only available to a plugin that is using apiVersion 2 or higher.
 ```javascript
-await PhotoshopCore.redrawDocument({ documentID: 123})
+await core.redrawDocument({ documentID: 123 });
 ```
 
 #### Parameters
@@ -561,7 +596,7 @@ ___
 Detaches a listener from a Photoshop event.
 See [addNotificationListener](#addnotificationlistener)
 ```javascript
-await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
+await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 ```
 
 #### Parameters
@@ -570,7 +605,7 @@ await PhotoshopCore.addNotificationListener('UI', ['userIdle'], onUserIdle)
 | :------ | :------ | :------ |
 | `group` | *string* | Notification group. |
 | `events` | *string*[] | Array of event names. |
-| `notifier` | NotificationListener | The Notification Listener to change. |
+| `listener` | NotificationListener | - |
 
 ___
 
@@ -587,11 +622,11 @@ that fail. When stacktraces are enabled, then an error result descriptor from a
 batchPlay request will include a stacktrace property. The property can be used when
 reporting bugs to Adobe.
 ```javascript
-await PhotoshopCore.setExecutionMode({ enableErrorStacktraces: true })
+await core.setExecutionMode({ enableErrorStacktraces: true });
 ```
 The following illustrates how to enable console warnings when a promise is rejected:
 ```javascript
-await PhotoshopCore.setExecutionMode({ logRejections: true })
+await core.setExecutionMode({ logRejections: true });
 ```
 
 #### Parameters
@@ -607,14 +642,14 @@ ___
 ### setUserIdleTime
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
 
-*Promise*<void\>
+**async** : *Promise*<void\>
 
 Specifies the number of seconds a user must be idle on Photoshop before invoking the
 userIdle event handler defined with [addNotificationListener](/ps_reference/media/photoshopcore/#addnotificationlistener). An idleTime of 0
 turns off idle notifications.
 
 ```javascript
-await PhotoshopCore.setUserIdleTime(3)
+await core.setUserIdleTime(3);
 ```
 
 #### Parameters
@@ -633,7 +668,7 @@ ___
 Show a generic alert box to the user. 'OK' to dismiss.
 ```javascript
 // script has completed.
-await PhotoshopCore.showAlert({ message: 'Operation successful'})
+await core.showAlert({ message: 'Operation successful' });
 ```
 
 #### Parameters
@@ -656,10 +691,16 @@ scrollbars. While many panels over the years have simply left space at the botto
 accomodate the gripper, this option removes it.
 
 ```javascript
-await PhotoshopCore.suppressResizeGripper({type: "panel", target: "panel's ID", value: true})
+await core.suppressResizeGripper({ type: 'panel', target: 'panel's ID', value: true });
 ```
 
 The value for `target` above will be the id attached to the panel's entry under `entrypoints` in the plugin manifest.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | *any* | Object containing type, target, and value. |
 
 ___
 
