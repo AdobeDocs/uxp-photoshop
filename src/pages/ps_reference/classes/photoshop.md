@@ -116,27 +116,40 @@ the other presets that come installed with Photoshop or created by users.
 
 An object with one or more parameters can also be supplied. Any parameter
 missing will be set to the default of: width 2100 pixels, height 1500 pixels,
-resolution 300 pixels per inch, mode: @RGBColorMode and a fill of white with
+resolution 300 pixels per inch, mode:
+[RGB](../../modules/constants/#newdocumentmode), and a fill of white with
 no transparency.
 
 ```javascript
 // "Default Photoshop Size" 7x5 inches at 300ppi
-let newDoc1 = await app.createDocument();
-let newDoc2 = await app.createDocument({
-   width: 800, 
-   height: 600, 
-   resolution: 300, 
-   mode: "RGBColorMode", 
-   fill: "transparent"
+let defaultDoc = await app.createDocument({
+  preset: "Default Photoshop Size"
 });
-let newDoc3 = await app.createDocument({preset: "My Default Size 1"});
+
+let transparentDoc = await app.createDocument({
+  width: 800, 
+  height: 600, 
+  resolution: 300, 
+  mode: "RGBColorMode", 
+  fill: "transparent"
+});
+
+const redColor = new SolidColor();
+redColor.rgb.green = 0;
+redColor.rgb.blue = 0;
+let fillColorDoc = await app.createDocument({
+  mode: "RGBColorMode", 
+  fillColor: redColor
+});
 ```
+
+Updates: [(26.9)](/ps_reference/changelog/#photoshop-269-july-2025)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `options` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | {} | An object literal containing the option values. |
 
 ___
 
