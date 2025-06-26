@@ -83,7 +83,7 @@ The object containing the document's currently active selection
 | activeChannels | [*Channel*](/ps_reference/classes/channel/)[] | R W | 23.0 | Currently active channels of the document. [(24.6)](/ps_reference/changelog#246-bug-fixes) |
 | activeHistoryBrushSource | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | The history state that history brush tool will use as its source. |
 | activeHistoryState | [*HistoryState*](/ps_reference/classes/historystate/) | R W | 22.5 | Currently active history state of the document. |
-| activeLayers | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The selected layers in the document. |
+| activeLayers | [*Layers*](/ps_reference/classes/layers/) | R W | 22.5 | The selected layers in the document. [(26.9)](/ps_reference/changelog/#photoshop-269-july-2025) |
 | artboards | [*Layers*](/ps_reference/classes/layers/) | R | 22.5 | The artboards in the document |
 | backgroundLayer | [*Layer*](/ps_reference/classes/layer/) | R | 22.5 | Background layer, if it exists. |
 | bitsPerChannel | [*BitsPerChannelType*](/ps_reference/modules/constants/#bitsperchanneltype) | R W | 23.0 | The bits per color channel. |

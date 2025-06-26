@@ -8,6 +8,33 @@ contributors:
 
 # Photoshop API Changelog
 
+## Photoshop 26.9 (July 2025)
+- One can set [Document](../classes/document/#properties-1) `activeLayers` by providing an array of [Layer](../classes/layer) objects.  
+- Fixed an issue with [app.createDocument](../classes/photoshop/#createdocument) where using `fillColor` without specifying `fill` would cause a silent failure.  Now, options that provide just `fillColor` will be handled correctly.  Also, any document creation errors will now be thrown instead of dropped.
+- Increased internal validation for Document and Layer references.
+
+---
+## Photoshop 26.8 (June 2025)
+
+### UXP v8.3.0 Integration
+> - Stability fixes for Video in Windows
+
+### UXP v8.2.0 Integration
+> ### New
+> - **File System Stream Support** 
+> Enable large file upload streaming in UXP by adding [`fs.createReadStream`](../../uxp-api/reference-js/Modules/fs/) support for efficient handling of large files without loading them entirely into memory.
+> 
+> ### Updated
+> - **[`XMLHttpRequest`](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/) Enhancement** 
+> Added support for standard `XMLHttpRequest` state variables (`UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE`) . XMLHttpRequest's state variables can be accessed in the following ways.
+> XMLHttpRequest.HEADERS_RECEIVED -> It should not return undefined but return 2.
+> XMLHttpRequest.prototype.OPENED -> It should return 1.
+> (new XMLHttpRequest()).LOADING -> It should return 3.
+> 
+> - **File System Improvements** 
+> Extended UXP filesystem to support all valid characters including special characters like pound(#), improving compatibility with various file naming conventions.
+
+---
 ## Documentation update (May 2025)
 - Added a description of the output received from [`core.getDisplayConfiguration()`](../media/photoshopcore#getdisplayconfiguration) including a new property: `maximumExtendedDynamicRangeColorComponent`.
 - Added a [new page](../media/eventcodes) containing event names for use by [`core.addNotificationListener()`](../media/photoshopcore#addnotificationlistener) and [`action.addNotificationListener()`](../media/photoshopaction#addnotificationlistener).  This includes a new Core event: `displayConfigurationChanged`.
