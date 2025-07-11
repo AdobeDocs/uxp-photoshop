@@ -13,18 +13,24 @@ contributors:
 - Fixed an issue with [app.createDocument](../classes/photoshop/#createdocument) where using `fillColor` without specifying `fill` would cause a silent failure.  Now, options that provide just `fillColor` will be handled correctly.  Also, any document creation errors will now be thrown instead of dropped.
 - Increased internal validation for Document and Layer references.
 
----
+### UXP v8.4.0 Integration
+> #### Bug Fixes
+> - Security Fix: Removed 'Authorisation' header if HTTP request is redirected to different origin.
+> - `\\` was not being allowed as an authority delimiter on Windows. This is now fixed.
+
+
+----
 ## Photoshop 26.8 (June 2025)
 
 ### UXP v8.3.0 Integration
 > - Stability fixes for Video in Windows
 
 ### UXP v8.2.0 Integration
-> ### New
+> #### New
 > - **File System Stream Support** 
 > Enable large file upload streaming in UXP by adding [`fs.createReadStream`](../../uxp-api/reference-js/Modules/fs/) support for efficient handling of large files without loading them entirely into memory.
 > 
-> ### Updated
+> #### Updated
 > - **[`XMLHttpRequest`](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/) Enhancement** 
 > Added support for standard `XMLHttpRequest` state variables (`UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE`) . XMLHttpRequest's state variables can be accessed in the following ways.
 > XMLHttpRequest.HEADERS_RECEIVED -> It should not return undefined but return 2.
@@ -34,14 +40,16 @@ contributors:
 > - **File System Improvements** 
 > Extended UXP filesystem to support all valid characters including special characters like pound(#), improving compatibility with various file naming conventions.
 
----
+
+----
 ## Documentation update (May 2025)
 - Added a description of the output received from [`core.getDisplayConfiguration()`](../media/photoshopcore#getdisplayconfiguration) including a new property: `maximumExtendedDynamicRangeColorComponent`.
-- Added a [new page](../media/eventcodes) containing event names for use by [`core.addNotificationListener()`](../media/photoshopcore#addnotificationlistener) and [`action.addNotificationListener()`](../media/photoshopaction#addnotificationlistener).  This includes a new Core event: `displayConfigurationChanged`.
+- [Event Codes](../media/eventcodes): Added a new page containing event names for use by [`core.addNotificationListener()`](../media/photoshopcore#addnotificationlistener) and [`action.addNotificationListener()`](../media/photoshopaction#addnotificationlistener).  This includes a new Core event: `displayConfigurationChanged`.
 - Noted that [`imaging.encodeImageData()`](../media/imaging.md#encodeimagedata) expects RGB image data.
 - Added, clarified, and tidied descriptions and code samples.
 
----
+
+----
 ## Photoshop 26.1 (November 2024)
 
 ### UXP v8.1.0 Integration
@@ -56,7 +64,7 @@ contributors:
 > - Fixed missing `translate` -> `y` values via UXP Dev Tool, despite being correctly applied on the elements.
 
 
----
+----
 ## Photoshop 26.0 (Oct 2024)
 
 ### Photoshop app object
@@ -116,6 +124,7 @@ contributors:
 ----
 ## Photoshop 25.10 (May 2024)
 `timeOut` option added to [`executeAsModal`](../media/executeasmodal/#options-parameter).  Also, the error message returned on a modal request collision was updated to include the id of the plugin that initiated the existing modal state.
+
 
 ----
 ## Photoshop 25.5 (February 2024)
@@ -211,6 +220,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 > - Support for [additional components and variants](../../uxp-api/reference-spectrum/swc/index.md#list-of-supported-swc) in SWC
 > - Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
 
+
 ----
 ## Photoshop 24.6 (June 2023)
 
@@ -229,6 +239,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 - Deprecated `document.compositeChannels` since these channels are component not composite. 
   Use `componentChannels` instead.
 
+
 ----
 ## Photoshop 24.5 (May 2023) 
 
@@ -245,7 +256,6 @@ Both methods accept an options object that matches the parameters required in th
  - Channels returned will be of type `ComponentChannel` instead of `CompositeChannel` with corresponding `typename`.
 
 ### UXP v7.1 Integration
-
 > #### New
 > HTMLElement now supports
 > - [setPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
@@ -265,6 +275,7 @@ Both methods accept an options object that matches the parameters required in th
 >   --iconColor: yellow;
 > }
 > ```
+
 
 ----
 ## Photoshop 24.4 (April 2023)
@@ -318,6 +329,7 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 > #### Changed
 > - [HTMLVideoElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
 > - [FS API](../../uxp-api/reference-js/Modules/fs/): No need for the `file://` protocol
+
 
 ----
 ## Photoshop 24.2 (February 2023)
@@ -411,6 +423,7 @@ nearest RGB 16 bit per channel.
 > - Allow unrestricted relative paths in require from scripts
 > - [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
 
+
 ----
 ## Photoshop 24.1 (December 2022)
 
@@ -458,6 +471,7 @@ The CountItems DOM API is now available in Photoshop.
 > - Resource Leaks in Window Dialog on UWP
 > - Privilege plugin fail to add in XD in certain cases
 > - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
+
 
 ----
 ## Photoshop 24.0 (October 2022)
@@ -512,6 +526,7 @@ The ColorSampler DOM API is now available in Photoshop.
 - Fixed Lens Flare coordinates
 - Fixed file arguments for filters 
 
+
 ----
 ## Photoshop 23.5 (August 2022)
 
@@ -555,11 +570,13 @@ Script files with extension .psjs are executed using UXP.
 - [Layer.applySharpenMore()](../classes/layer/#applysharpenmore) Applies the Sharpen More filter.
 - [Layer.applyShear(curve: {x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyshear) Applies the Shear filter.
 
+
 ----
 ## Photoshop 23.4 (July 2022)
 
 ### convertUnits method on the Photoshop Application object
  - [Application.convertUnits](../classes/photoshop/#convertunits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
+
 
 ----
 ## Photoshop 23.3 (April 2022)
@@ -583,10 +600,12 @@ This event is generated when Photoshop detects that a user becomes idle, while P
 ### Interactive Mode for executeAsModal
 As an alternative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../media/executeasmodal/#interactive-mode).
 
+
 ----
 ## Photoshop 23.2 (February 2022)
 - Core Module: `setExecutionMode()`
 - Core Module: `getPluginInfo()`
+
 
 ----
 ## Photoshop 23.1 (December 2022)
@@ -595,6 +614,7 @@ As an alternative to a UI-blocking progress bar when a plugin is within a Modal 
 - Core Module: `isModal()`
 - Core Module: `getCPUInfo()`
 - Core Module: `getGPUInfo()`
+
 
 ----
 ## Photoshop 23.0 (October 2021)
