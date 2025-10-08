@@ -86,10 +86,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v20 for Yarn v3
         uses: actions/setup-node@v3
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: "20.19.5" # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
@@ -190,10 +190,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v20 for Yarn v3
         uses: actions/setup-node@v3
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: "20.19.5" # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
