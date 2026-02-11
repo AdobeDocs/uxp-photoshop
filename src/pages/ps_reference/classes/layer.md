@@ -810,14 +810,14 @@ Flips the layer on one or both axis.
 
 ```javascript
 // flip horizontally
-await layer.flip('horizontal');
+await layer.flip(constants.FlipAxis.HORIZONTAL);
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `axis` | ``"horizontal"`` \| ``"vertical"`` \| ``"both"`` | Which axis (or both) to flip the layer on.             - "horizontal": flip layer on horizontal axis             - "vertical": flip layer on vertical axis             - "both": flip layer on both axes |
+| `axis` | [*FlipAxis*](/ps_reference/modules/constants/#flipaxis) | Which axis (or both) to flip the layer on. |
 
 ___
 

@@ -433,14 +433,14 @@ ___
 ### ColorPicker
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
-The kind of color picker dialog to use.
+The provider of the color picker dialog.
 Pass to [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker)
 
 | Name | Description |
 | :------ | :------ |
-| ADOBE | The Adobe Color Picker. |
+| ADOBE | The Adobe Photoshop Color Picker. |
 | OSNATIVE | The built-in Apple or Windows color picker. |
-| PLUGIN | The built-in Windows color picker. |
+| PLUGIN | A plugin-provided color picker. The&#x60;pluginID&#x60; property must be provided in the [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker) argument object and must contain the internal ID of the plugin as a string. |
 
 ___
 
@@ -614,6 +614,20 @@ The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps_reference/c
 
 ___
 
+### FlipAxis
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+
+Axis (or both) to flip a layer on.
+Pass to [Layer.flip](/ps_reference/classes/layer/#flip)().
+
+| Name | Description |
+| :------ | :------ |
+| BOTH | - |
+| HORIZONTAL | - |
+| VERTICAL | - |
+
+___
+
 ### FontSize
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
 
@@ -641,6 +655,19 @@ table regardless of their usage
 | NONE | None |
 | PRIMARIES | Red, green, blue, cyan, magenta, yellow, black, and white. |
 | WEB | The 216 web-safe colors |
+
+___
+
+### GenerativeUpscaleModel
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">27.2</span>
+
+The generative upscale model to use for AI-powered upscaling.
+
+Pass to [Document.generativeUpscale](/ps_reference/classes/document/#generativeupscale)()
+
+| Name | Description |
+| :------ | :------ |
+| FIREFLY | Adobe Firefly generative upscale model |
 
 ___
 
@@ -893,35 +920,37 @@ ___
 ### LayerKind
 <span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
 
-Kinds of different layers in a document
+Kinds of document layers, including adjustment layers. Grain and Clarity are new in Photoshop 27.4.
 
 | Name | Description |
 | :------ | :------ |
-| BLACKANDWHITE | - |
-| BRIGHTNESSCONTRAST | - |
-| CHANNELMIXER | - |
-| COLORBALANCE | - |
-| COLORLOOKUP | - |
-| CURVES | - |
-| EXPOSURE | - |
-| GRADIENTFILL | - |
-| GRADIENTMAP | - |
-| GROUP | - |
-| HUESATURATION | - |
-| INVERSION | - |
-| LAYER3D | - |
-| LEVELS | - |
-| NORMAL | - |
-| PATTERNFILL | - |
-| PHOTOFILTER | - |
-| POSTERIZE | - |
-| SELECTIVECOLOR | - |
-| SMARTOBJECT | - |
-| SOLIDFILL | - |
-| TEXT | - |
-| THRESHOLD | - |
-| VIBRANCE | - |
-| VIDEO | - |
+| BLACKANDWHITE | Black &amp; White adjustment |
+| BRIGHTNESSCONTRAST | Brightness/Contrast adjustment |
+| CHANNELMIXER | Channel Mixer adjustment |
+| CLARITY | Clarity and dehaze adjustment |
+| COLORBALANCE | Color Balance adjustment |
+| COLORLOOKUP | Color Lookup adjustment |
+| CURVES | Curves adjustment |
+| EXPOSURE | Exposure adjustment |
+| GRADIENTFILL | Gradient |
+| GRADIENTMAP | Gradient Map adjustment |
+| GRAIN | Grain adjustment |
+| GROUP | Layer group |
+| HUESATURATION | Hue/Saturation adjustment |
+| INVERSION | Invert adjustment |
+| LAYER3D | 3D |
+| LEVELS | Levels adjustment |
+| NORMAL | Raster (pixel) |
+| PATTERNFILL | Pattern |
+| PHOTOFILTER | Photo Filter adjustment |
+| POSTERIZE | Posterize adjustment |
+| SELECTIVECOLOR | Selective Color adjustment |
+| SMARTOBJECT | Smart object |
+| SOLIDFILL | Solid Color |
+| TEXT | Text |
+| THRESHOLD | Threshold adjustment |
+| VIBRANCE | Color and vibrance adjustment |
+| VIDEO | Video |
 
 ___
 

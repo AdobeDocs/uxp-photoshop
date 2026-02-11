@@ -20,7 +20,7 @@ keywords:
 
 The options used when specifying a color picker in Preferences.
 
-| Name | Type | Min Version |
-| :------ | :------ | :------ |
-| pluginID | *string* | 24.0 |
-| type | *string* \| *string* \| *string* | 24.0 |
+| Name | Type | Min Version | Description |
+| :------ | :------ | :------ | :------ |
+| pluginID | *string* | 24.0 |  |
+| type | [*ColorPicker*](/ps_reference/modules/constants/#colorpicker) | 24.0 | The color picker to use. |

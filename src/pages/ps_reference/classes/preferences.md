@@ -30,6 +30,7 @@ Contains Photoshop preferences grouped into several categories similar to prefer
 | guidesGridsAndSlices | [*PreferencesGuidesGridsAndSlices*](/ps_reference/classes/preferences/preferencesguidesgridsandslices/) | R | 24.0 | Presentation options for guides, grid, slices, paths, and other on-canvas controls. |
 | history | [*PreferencesHistory*](/ps_reference/classes/preferences/preferenceshistory/) | R | 24.0 | All preferences related to history logging. |
 | interface | [*PreferencesInterface*](/ps_reference/classes/preferences/preferencesinterface/) | R | 24.0 | User interface preferences. |
+| notifications | [*PreferencesNotifications*](/ps_reference/classes/preferences/preferencesnotifications/) | R | 26.11 | Notifications preferences.  Note: Some notifications preferences will be locked when Quiet Mode is enabled. Attempts to modify locked preferences will throw errors while Quiet Mode is active. |
 | performance | [*PreferencesPerformance*](/ps_reference/classes/preferences/preferencesperformance/) | R | 24.0 | Options that could affect the speed of Photoshop performance including GPU usage. |
 | tools | [*PreferencesTools*](/ps_reference/classes/preferences/preferencestools/) | R | 24.0 | Tools preferences. |
 | transparencyAndGamut | [*PreferencesTransparencyAndGamut*](/ps_reference/classes/preferences/preferencestransparencyandgamut/) | R | 24.0 | Controls for how transparency will be shown and what color to use for the out-of-gamut warning. |
