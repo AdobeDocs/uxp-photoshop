@@ -8,6 +8,68 @@ contributors:
 
 # Photoshop API Changelog
 
+## Documentation
+### Dialog lockDocumentFocus
+The Photoshop-only option to a dialog element's `showModal` method is now noted under [Known Issues and Workarounds](../known-issues/index.md).  In the future, that note will be integrated into [showModal](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/#showmodal).
+
+## Photoshop 27.4 (February 2026)
+
+### New Adjustment layer kinds
+- [Constants.layerKind](../modules/constants/#layerkind) now includes entries for the new Adjustment layers, Grain and Clarity.
+
+### UXP v9.2.0 Integration
+>  ### New
+>  - System Sleep/Awake Events: Introduced system sleep and wakeup events in the plugin JS layer for enhanced control over features like video playback.
+> ```javascript
+> window.addEventListener("awake", () => { console.log("System is awake"); });
+> window.addEventListener("sleep", () => { console.log("System is sleeping"); });
+> ```
+
+### UXP v9.1.0 Integration
+> #### New
+> - Video timeUpdate Event: UXP's [`video element`](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md) now emits `timeUpdate` event like HTML5 video element.
+>  - Video Element Audio Support: UXP's [`video element`](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md) can now play audio files.
+> - URLSearchParams Module Support: Added [`URLSearchParams`](./reference-js/Global%20Members/URL/URLSearchParams.md) module to UXP.
+> - WebView Drag & Drop Support: Added drag and drop functionality between UXP panels and [`WebView`](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)-based panels. Enables WebView to accept drops of various data types from anywhere, bypassing UXP.
+> - Improved Image Loading: Improved image loading so that multiple views can load the same URL without triggering false error states or visible flicker, resulting in smoother and more reliable image rendering across the UI.
+
+>  #### Updated
+> - [`WebView`](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) Improvements
+> - Disabled swipe navigation on WebView2. This ensures consistent behavior with macOS WKWebView. All gestures on WebView2 (Swipe, Zoom Control, Pinch Zoom) are now disabled.
+> - Enriched WebView's load error messages. `WebViewEvent.message` now provides more detailed information about the cause of errors for better debugging.
+> - Removed `allow` field from `permissions.webview` configuration. The `permissions.webview.allow` field in the plugin manifest is no longer used.
+
+----
+## Photoshop 27.2 (December 2025)
+
+### Document Generative Upscale
+- [Document.generativeUpscale(model, options)](../classes/document/#generativeupscale) Applies generative upscaling to the image in a new document. Currently limited to Firefly at a scale of 2 or 4.
+
+----
+## Photoshop 26.11 (September 2025)
+
+### Preferences
+- New Notifications group added to align with Preferences dialog.  Included is Quiet mode with associated override for Rich Tooltips, What's new, and Feature Onboarding.
+
+### UXP 9.0.2 Integration
+> - Ensures that the scripts in WebViews are universally injected across all frames, including any nested `<iframe>`. This addresses an issue with no-op context menus showing up for  `<iframe>` in WebViews.
+> - This addresses an issue with UXP Developer Tools (UDT) being unable to establish a connection with the host applications in Debug builds which impacted developer workflows.
+> - Ensures that WebView visibility change script always runs on the plugin's JavaScript thread, fixing a crash across all DVA codebases.
+
+
+----
+## Photoshop 26.10 (August 2025)
+
+### UXP v9.0.0 Integration
+> ### Updated
+> - Webview enhancements
+>     - WebView2 now uses Fluent overlay scrollbars for a modern UI experience
+>     - `requiredPermissions.webview.domains` is now optional, simplifying manifest configuration
+> - `SecureStorage` methods now follow the Web Storage API spec for error handling 
+> - `XMLHttpRequest.readyState` is exposed in [`XMLHttpRequest`](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/) now  for correctness
+
+
+---
 ## Photoshop 26.9 (July 2025)
 - One can set [Document](../classes/document/#properties-1) `activeLayers` by providing an array of [Layer](../classes/layer) objects.  
 - Fixed an issue with [app.createDocument](../classes/photoshop/#createdocument) where using `fillColor` without specifying `fill` would cause a silent failure.  Now, options that provide just `fillColor` will be handled correctly.  Also, any document creation errors will now be thrown instead of dropped.

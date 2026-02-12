@@ -256,7 +256,7 @@ await doc.createLayer(
 
 | Name | Type |
 | :------ | :------ |
-| `kind?` | [*NORMAL*](/ps_reference/modules/constants/#normal) |
+| `kind?` | [*LayerKind.NORMAL*](/ps_reference/modules/constants/#layerkind) |
 | `options?` | [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) |
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
@@ -273,7 +273,7 @@ await doc.createLayer(
 
 | Name | Type |
 | :------ | :------ |
-| `kind` | [*GROUP*](/ps_reference/modules/constants/#group) |
+| `kind` | [*LayerKind.GROUP*](/ps_reference/modules/constants/#layerkind) |
 | `options?` | [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) |
 
 **async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
@@ -291,7 +291,7 @@ await doc.createLayer(
 
 | Name | Type |
 | :------ | :------ |
-| `kind` | [*TEXT*](/ps_reference/modules/constants/#text) |
+| `kind` | [*LayerKind.TEXT*](/ps_reference/modules/constants/#layerkind) |
 | `options?` | [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/) |
 
 ___
@@ -446,6 +446,30 @@ ___
 **async** : *Promise*<void\>
 
 Flatten all layers in the document. The remaining layer will become Background.
+
+___
+
+### generativeUpscale
+<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">27.2</span>
+
+**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+
+Applies generative upscaling to the currently selected layer(s) using AI-powered upscaling technology.
+
+```javascript
+// Upscale using Firefly model with default options (2x scale)
+await document.generativeUpscale(constants.GenerativeUpscaleModel.FIREFLY);
+
+// Upscale using Firefly model with 4x scale
+const doc4x = await document.generativeUpscale(constants.GenerativeUpscaleModel.FIREFLY, { scale: 4 });
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `model` | [*GenerativeUpscaleModel.FIREFLY*](/ps_reference/modules/constants/#generativeupscalemodel) | The generative upscale model to use. |
+| `options?` | [*GenerativeUpscaleOptions*](/ps_reference/objects/generativeoptions/generativeupscaleoptions/) | Options specific to the chosen model, e.g., `scale`. |
 
 ___
 

@@ -152,6 +152,10 @@ module.exports = [{
 					"path": "/ps_reference/classes/preferences/preferencesinterface/"
 				},
 				{
+					"title": "PreferencesNotifications",
+					"path": "/ps_reference/classes/preferences/preferencesnotifications/"
+				},
+				{
 					"title": "PreferencesPerformance",
 					"path": "/ps_reference/classes/preferences/preferencesperformance/"
 				},
@@ -288,6 +292,17 @@ module.exports = [{
 				{
 					"title": "Text Layer Create Options",
 					"path": "/ps_reference/objects/createoptions/textlayercreateoptions/"
+				}
+			]
+		},
+		{
+			"title": "Generative Options",
+			"path": "/ps_reference/objects/generativeoptions",
+			"header": true,
+			"pages": [
+				{
+					"title": "Generative Upscale Options",
+					"path": "/ps_reference/objects/generativeoptions/generativeupscaleoptions/"
 				}
 			]
 		},
