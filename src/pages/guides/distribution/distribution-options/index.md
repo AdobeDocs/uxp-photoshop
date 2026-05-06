@@ -17,7 +17,7 @@ description: "Once you have a packaged plugin, you're ready to distribute it. He
 
 Once you have a packaged plugin, you're ready to distribute it. Here are your options:
 
-<SummaryBlock slots="heading, text, buttons" background="rgb(141, 52, 78)" />
+<Announcement slots="heading, text, buttons" background="rgb(141, 52, 78)" />
 
 ## Distribute on Creative Cloud Plugin Marketplace
 

@@ -15,7 +15,7 @@ description: Build UXP plugins and scripts for Adobe Photoshop with HTML, CSS, a
 
 import Community from "./community/index.md"
 
-<Hero slots="image, heading, text" background="rgb(64, 34, 138)"/>
+<Superhero slots="image, heading, text" background="rgb(64, 34, 138)"/>
 
 ![Hero image](./illustration.png)
 
