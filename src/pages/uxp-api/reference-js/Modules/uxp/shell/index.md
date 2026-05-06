@@ -1,4 +1,6 @@
-
-import Content from "uxp-documentation/src/pages/uxp-api/reference-js/Modules/uxp/shell/index.md";
-
-<Content query="product=photoshop"/>
+---
+title: shell
+description: Overview of shell
+---
+# shell
+* [Shell](../../../modules/uxp/shell/shell.md)

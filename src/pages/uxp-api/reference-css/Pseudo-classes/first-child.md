@@ -1,4 +1,21 @@
+---
+title: ":first-child"
+description: Matches only the first child.
+jsDoc: true
+---
+# :first-child
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Pseudo-classes/first-child";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Matches only the first child.
+
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
+
+**Example:**
+
+```css
+sp-button:first-child {
+    margin-left: 0;
+}
+```
+

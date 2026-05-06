@@ -1,4 +1,16 @@
+---
+title: border-bottom-width
+description: Sets the width of the bottom border.
+jsDoc: true
+---
+# border-bottom-width
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/border-bottom-width";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Sets the width of the bottom border.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-width](https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-width)
+
+## Quirks and Exceptions
+
+* UXP does not support the `content-sizing` box layout model. As such, the width and height of all elements include the padding and border width.

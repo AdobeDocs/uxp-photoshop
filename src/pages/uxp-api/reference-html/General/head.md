@@ -1,4 +1,29 @@
+---
+title: head
+description: Specifies various metadata about the UXP HTML document, including additional styles, scripts, etc.
+jsDoc: true
+---
+# head
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-html/General/head";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies various metadata about the UXP HTML document, including additional styles, scripts, etc.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/HTML/Element/head](https://developer.mozilla.org/en/docs/Web/HTML/Element/head)
+
+**Example**
+
+```html
+<html>
+    <head>
+        <style>
+            .highlight {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="highlight">Hello, world</div>
+    </body>
+</html>
+```

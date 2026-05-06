@@ -1,4 +1,20 @@
+---
+title: "::after"
+description: Creates a pseudo-element after the matched element.
+jsDoc: true
+---
+# ::after
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Pseudo-elements/after";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Creates a pseudo-element after the matched element. 
+
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
+
+**Example:**
+
+```css
+.withCommas > *::after {
+    content: ",";
+}
+```

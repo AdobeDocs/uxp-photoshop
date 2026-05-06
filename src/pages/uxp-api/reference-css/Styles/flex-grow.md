@@ -1,4 +1,20 @@
+---
+title: flex-grow
+description: Determines if a flexible item can grow, and if so, how it grows relative to other items in the flexible container.
+jsDoc: true
+---
+# flex-grow
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/flex-grow";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Determines if a flexible item can grow, and if so, how it grows relative to other items in the flexible container.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/flex-grow](https://developer.mozilla.org/en/docs/Web/CSS/flex-grow)
+
+**Example**
+
+```css
+.someElement {
+    flex-grow: 2;
+}
+```

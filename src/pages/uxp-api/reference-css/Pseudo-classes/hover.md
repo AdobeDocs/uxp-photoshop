@@ -1,4 +1,21 @@
+---
+title: ":hover"
+description: Matches when the selected element is underneath the mouse cursor.
+jsDoc: true
+---
+# :hover
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Pseudo-classes/hover";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Matches when the selected element is underneath the mouse cursor.
+
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+
+**Example:**
+
+```css
+.well:hover {
+    background-color: red;
+}
+```
+

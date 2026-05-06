@@ -1,4 +1,29 @@
+---
+title: style
+description: Specifies an inline stylesheet.
+jsDoc: true
+---
+# style
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-html/General/style";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies an inline stylesheet.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/HTML/Element/style](https://developer.mozilla.org/en/docs/Web/HTML/Element/style)
+
+**Example**
+
+```html
+<style>
+    .highlight { color: red; }
+</style>
+```
+
+## Attributes
+
+The following attributes are unsupported and ignored:
+
+* `type`
+* `media`
+* `nonce`
+* `title`

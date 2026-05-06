@@ -1,4 +1,20 @@
+---
+title: max-width
+description: Specifies the maximum width for an element.
+jsDoc: true
+---
+# max-width
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/max-width";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the maximum width for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/max-width](https://developer.mozilla.org/en/docs/Web/CSS/max-width)
+
+**Example**:
+
+```css
+.someElement {
+    max-width: 300px;
+}
+```

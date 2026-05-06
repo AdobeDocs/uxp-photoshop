@@ -1,4 +1,20 @@
+---
+title: min-height
+description: Specifies the minimum height for an element.
+jsDoc: true
+---
+# min-height
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/min-height";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the minimum height for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/min-height](https://developer.mozilla.org/en/docs/Web/CSS/min-height)
+
+**Example**:
+
+```css
+.someElement {
+    min-height: 100vh;
+}
+```

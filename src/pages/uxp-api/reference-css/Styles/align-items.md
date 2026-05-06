@@ -1,4 +1,21 @@
+---
+title: align-items
+description: Supported values are flex-start, flex-end, center, stretch.
+jsDoc: true
+---
+# align-items
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/align-items";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Supported values are `flex-start`, `flex-end`, `center`, `stretch`.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/align-items](https://developer.mozilla.org/en/docs/Web/CSS/align-items)
+
+**Example**
+
+```css
+.someElement {
+    align-items: flex-start;
+}
+```
+

@@ -1,4 +1,14 @@
+---
+title: overflow-x
+description: Shorthand which determines what is done with content that overflows the element's bounds.
+jsDoc: true
+---
+# overflow-x
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/overflow-x";
+**Since :** UXP v3.0
 
-<Content query="product=photoshop"/>
+Shorthand which determines what is done with content that overflows the element's bounds.
+
+Supports `visible`, `hidden`, `auto`, and `scroll`.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/overflow-x](https://developer.mozilla.org/en/docs/Web/CSS/overflow-x)

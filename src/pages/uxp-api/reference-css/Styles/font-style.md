@@ -1,4 +1,25 @@
+---
+title: font-style
+description: Sets the font style for the element. Supports normal (default) and italic.
+jsDoc: true
+---
+# font-style
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/font-style";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Sets the font style for the element. Supports `normal` (default) and `italic`.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/font-style](https://developer.mozilla.org/en/docs/Web/CSS/font-style)
+
+**Example**
+
+```css
+.someElement {
+    font-style: italic;
+}
+```
+
+## Quirks and Exceptions
+
+* Text edit fields do not support overriding the font style.
+* Not all Spectrum UXP components support overriding the font style.

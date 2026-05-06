@@ -1,4 +1,20 @@
+---
+title: width
+description: Specifies the width for an element.
+jsDoc: true
+---
+# width
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/width";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the width for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/width](https://developer.mozilla.org/en/docs/Web/CSS/width)
+
+**Example**:
+
+```css
+.someElement {
+    width: 100vw;
+}
+```

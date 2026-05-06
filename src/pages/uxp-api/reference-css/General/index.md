@@ -1,4 +1,8 @@
-
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css//General/index.md";
-
-<Content query="product=photoshop"/>
+---
+title: General
+description: Overview of General.
+---
+# General
+* [calc](../general/calc.md)
+* [units](../general/units.md)
+* [variables](../general/variables.md)

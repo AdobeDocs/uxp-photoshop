@@ -1,4 +1,24 @@
+---
+title: background
+description: Specifies an element's background. Supports colors, multiple background images, as well as linear and radial gradients.
+jsDoc: true
+---
+# background
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/background";
+**Since**  UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies an element's background. Supports colors, multiple background images, as well as linear and radial gradients.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/background](https://developer.mozilla.org/en/docs/Web/CSS/background)
+
+**Example**:
+
+```css
+.someElement {
+    background: url('plugin://assets/star.png') red;
+}
+```
+
+## Quirks and Exceptions
+
+* Background repeat is not yet supported. As such, background images will *not* repeat by default.

@@ -1,4 +1,12 @@
+---
+title: background-repeat
+description: Only no-repeat is supported for background repetition.
+jsDoc: true
+---
+# background-repeat
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/background-repeat";
+**Since**  UXP v3.0
 
-<Content query="product=photoshop"/>
+Only `no-repeat` is supported for background repetition.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/background-repeat](https://developer.mozilla.org/en/docs/Web/CSS/background-repeat)

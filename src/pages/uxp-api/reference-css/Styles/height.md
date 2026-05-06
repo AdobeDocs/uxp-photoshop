@@ -1,4 +1,20 @@
+---
+title: height
+description: Specifies the height for an element.
+jsDoc: true
+---
+# height
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/height";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the height for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/height](https://developer.mozilla.org/en/docs/Web/CSS/height)
+
+**Example**:
+
+```css
+.someElement {
+    height: 100vh;
+}
+```

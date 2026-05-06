@@ -1,4 +1,24 @@
+---
+title: ":focus"
+description: Matches when the selected element is focused. An element is considered to be active when the element has keyboard focus.
+jsDoc: true
+---
+# :focus
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Pseudo-classes/focus";
+**Since** UXP v3.0
 
-<Content query="product=photoshop"/>
+Matches when the selected element is focused. An element is considered to be active when the element has keyboard focus.
+
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+
+**Example:**
+
+```css
+input:focus {
+    border: 1px solid red;
+}
+```
+
+## Quirks and Exceptions
+
+* A typically non-interactive element must have a positive tab index in order to be matched by this rule.

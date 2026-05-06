@@ -1,4 +1,24 @@
+---
+title: margin-bottom
+description: Specifies the bottom margin for an element.
+jsDoc: true
+---
+# margin-bottom
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/margin-bottom";
+**Since**  UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the bottom margin for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/margin-bottom](https://developer.mozilla.org/en/docs/Web/CSS/margin-bottom)
+
+**Example**:
+
+```css
+.someElement {
+    margin-bottom: 1em;
+}
+```
+
+## Quirks and Exceptions
+
+* Margins do not collapse in UXP.

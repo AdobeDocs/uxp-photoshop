@@ -1,4 +1,20 @@
+---
+title: min-width
+description: Specifies the minimum width for an element.
+jsDoc: true
+---
+# min-width
 
-import Content from "uxp-documentation/src/pages/uxp-api/reference-css/Styles/min-width";
+**Since** UXP v2.0
 
-<Content query="product=photoshop"/>
+Specifies the minimum width for an element.
+
+**See**: [https://developer.mozilla.org/en/docs/Web/CSS/min-width](https://developer.mozilla.org/en/docs/Web/CSS/min-width)
+
+**Example**:
+
+```css
+.someElement {
+    min-width: 300px;
+}
+```

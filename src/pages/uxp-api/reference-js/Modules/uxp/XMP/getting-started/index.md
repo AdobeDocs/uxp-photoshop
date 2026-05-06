@@ -1,4 +1,6 @@
-
-import Content from "uxp-documentation/src/pages/uxp-api/reference-js/Modules/uxp/XMP/getting-started/xmp.md";
-
-<Content query="product=photoshop"/>
+---
+title: getting-started
+description: Overview of getting-started
+---
+# getting-started
+* [xmp](../../../../modules/uxp/xmp/getting-started/xmp.md)
