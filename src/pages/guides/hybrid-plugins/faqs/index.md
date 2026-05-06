@@ -27,7 +27,7 @@ The hybrid plugin you build using the new UXP SDK will let you bundle C++ code a
 
 ### Can I build a Photoshop filter (or other such capabilities) with the new Hybrid plugin SDK?
 
-Yes, see the section under [Getting started](../getting-started/#photoshop-c-sdk).
+Yes, see the section under [Getting started](../getting-started/index.md#photoshop-c-sdk).
 
 <br></br>
 

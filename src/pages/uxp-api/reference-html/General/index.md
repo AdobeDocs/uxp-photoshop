@@ -3,11 +3,11 @@ title: General
 description: Overview of General.
 ---
 # General
-* [body](body.md)
-* [head](head.md)
-* [html](html.md)
-* [link](link.md)
-* [script](script.md)
-* [style](style.md)
-* [Unsupported Attributes](unsupported-attributes.md)
-* [Unsupported Elements](unsupported-elements.md)
+* [body](../general/body.md)
+* [head](../general/head.md)
+* [html](../general/html.md)
+* [link](../general/link.md)
+* [script](../general/script.md)
+* [style](../general/style.md)
+* [Unsupported Attributes](../general/unsupported-attributes.md)
+* [Unsupported Elements](../general/unsupported-elements.md)

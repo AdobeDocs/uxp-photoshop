@@ -30,9 +30,9 @@ To ensure users know they are interacting with your plugin, include branding thr
 #### Best practices
 When the user is interacting with the plugin for the first time for example in the onboarding or login screen, including the plugin logo will help the user identify the plugin in the future. 
 
-![Panel branding example](../ux-images/Branding-1.png)
+![Panel branding example](../ux-images/branding-1.png)
 
-![modal branding example](../ux-images/Branding-2.png)
+![modal branding example](../ux-images/branding-2.png)
 
  
 
@@ -41,7 +41,7 @@ When the user is interacting with the plugin for the first time for example in t
 #### Best practices
 Customizing the UI to include brand colors, will help users distinguish your plugin's interface. 
 
-![Panel customization example](../ux-images/Branding-3.png)
+![Panel customization example](../ux-images/branding-3.png)
 
-![Modal customization example](../ux-images/Branding-4.png)
+![Modal customization example](../ux-images/branding-4.png)
 

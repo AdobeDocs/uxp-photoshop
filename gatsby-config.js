@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         title: "Photoshop API",
-        path: "/ps_reference/",
+        path: "/ps-reference/",
       },
       {
         title: "UXP API",
@@ -79,19 +79,19 @@ module.exports = {
           },
           {
             title: "The UXP manifest",
-            path: "/guides/uxp_guide/uxp-misc/manifest-v4/",
+            path: "/guides/uxp-guide/uxp-misc/manifest-v4/",
           },
           {
             title: "Photoshop manifest",
-            path: "/guides/uxp_guide/uxp-misc/manifest-v4/photoshop-manifest/",
+            path: "/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/",
           },
           {
             title: "Manifest v5",
-            path: "/guides/uxp_guide/uxp-misc/manifest-v5/",
+            path: "/guides/uxp-guide/uxp-misc/manifest-v5/",
           },
           {
             title: "Code Samples",
-            path: "/guides/code_samples/"
+            path: "/guides/code-samples/"
           },
           {
             title: "Developer Tool",
@@ -147,27 +147,27 @@ module.exports = {
           },
           {
             title: "Migrating to UXP",
-            path: "/guides/uxp_for_you/",
+            path: "/guides/uxp-for-you/",
             pages: [
               {
                 title: "From XD",
-                path: "/guides/uxp_for_you/uxp_for_xd_devs/",
+                path: "/guides/uxp-for-you/uxp-for-xd-devs/",
               },
               {
                 title: "From ExtendScript",
-                path: "/guides/uxp_for_you/uxp_for_extendscript_devs/",
+                path: "/guides/uxp-for-you/uxp-for-extendscript-devs/",
               },
               {
                 title: "From CEP",
-                path: "/guides/uxp_for_you/uxp_for_cep_devs/",
+                path: "/guides/uxp-for-you/uxp-for-cep-devs/",
               },
               {
                 title: "As a Newbie",
-                path: "/guides/uxp_for_you/uxp_for_newbies/",
+                path: "/guides/uxp-for-you/uxp-for-newbies/",
               },
               {
                 title: "As a Web dev",
-                path: "/guides/uxp_for_you/uxp_for_web_devs/",
+                path: "/guides/uxp-for-you/uxp-for-web-devs/",
               },
             ]
           },
@@ -187,35 +187,35 @@ module.exports = {
           },
           {
             title: "Other Topics",
-            path: "/guides/uxp_guide/uxp-misc/",
+            path: "/guides/uxp-guide/uxp-misc/",
             pages: [
               {
                 title: "The UXP Toolchain",
-                path: "/guides/uxp_guide/uxp-misc/uxp-toolchain/",
+                path: "/guides/uxp-guide/uxp-misc/uxp-toolchain/",
               },
               {
                 title: "Localization and Platforms",
-                path: "/guides/uxp_guide/uxp-misc/localization-and-platforms/",
+                path: "/guides/uxp-guide/uxp-misc/localization-and-platforms/",
               },
               {
                 title: "Flyout Menus",
-                path: "/guides/uxp_guide/uxp-misc/flyout-menus/",
+                path: "/guides/uxp-guide/uxp-misc/flyout-menus/",
               },
               {
                 title: "Plugin Icons",
-                path: "/guides/uxp_guide/uxp-misc/plugin-icons/",
+                path: "/guides/uxp-guide/uxp-misc/plugin-icons/",
               },
               {
                 title: "File Access",
-                path: "/guides/uxp_guide/uxp-misc/file-access/",
+                path: "/guides/uxp-guide/uxp-misc/file-access/",
               },
               {
                 title: "Network I/O",
-                path: "/guides/uxp_guide/uxp-misc/network-io/",
+                path: "/guides/uxp-guide/uxp-misc/network-io/",
               },
               {
                 title: "Spectrum CSS",
-                path: "/guides/uxp_guide/uxp-misc/spectrum-css/",
+                path: "/guides/uxp-guide/uxp-misc/spectrum-css/",
               },
             ],
           },
@@ -266,7 +266,7 @@ module.exports = {
       },
       {
         title: "Photoshop API",
-        path: "/ps_reference/",
+        path: "/ps-reference/",
         pages: require("./reference-ps.js"),
       },
       {

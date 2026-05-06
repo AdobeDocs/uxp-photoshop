@@ -3,12 +3,12 @@ title: Selectors
 description: Overview of Selectors.
 ---
 # Selectors
-* [Adjacent Sibling combinator](adjacent-sibling-combinator.md)
-* [Attribute selector](attribute-selector.md)
-* [Child combinator](child-combinator.md)
-* [Class selector](class-selector.md)
-* [Descendant combinator](descendant-combinator.md)
-* [General Sibling combinator](general-sibling-combinator.md)
-* [Identifier selector](identifier-selector.md)
-* [Type selector](type-selector.md)
-* [Universal selector](universal-selector.md)
+* [Adjacent Sibling combinator](../selectors/adjacent-sibling-combinator.md)
+* [Attribute selector](../selectors/attribute-selector.md)
+* [Child combinator](../selectors/child-combinator.md)
+* [Class selector](../selectors/class-selector.md)
+* [Descendant combinator](../selectors/descendant-combinator.md)
+* [General Sibling combinator](../selectors/general-sibling-combinator.md)
+* [Identifier selector](../selectors/identifier-selector.md)
+* [Type selector](../selectors/type-selector.md)
+* [Universal selector](../selectors/universal-selector.md)

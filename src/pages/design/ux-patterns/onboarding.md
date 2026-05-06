@@ -22,7 +22,7 @@ These are guidelines and best practices on how to guide your users as they inter
 
  
 
-![Onboarding modal example](../ux-images/Onboarding-BP.png)
+![Onboarding modal example](../ux-images/onboarding-bp.png)
 
  
  

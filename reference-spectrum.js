@@ -1,115 +1,147 @@
-module.exports = [
+module.exports=[
   {
-    "title": "Spectrum Web Components",
-    "path": "/uxp-api/reference-spectrum/swc/"
+    "title": "Assets",
+    "header": true,
+    "pages": []
   },
   {
-    "title": "Spectrum UXP Widgets",
+    "title": "Spectrum Web Components - FAQs",
     "header": true,
     "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-spectrum/faqs/"
+      }
+    ]
+  },
+  {
+    "title": "Adobe Spectrum UXP to SWC Mapping Reference",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-spectrum/spectrum-to-swc-mapping/"
+      }
+    ]
+  },
+  {
+    "title": "Spectrum UXP Widgets in UXP",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/"
+      },
+      {
+        "title": "Using with React",
+        "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/using-with-react/"
+      },
       {
         "title": "Typography",
         "header": true,
         "pages": [
           {
+            "title": "Overview",
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/"
+          },
+          {
             "title": "sp-body",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Typography/sp-body/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-body/"
           },
           {
             "title": "sp-detail",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Typography/sp-detail/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-detail/"
           },
           {
             "title": "sp-heading",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Typography/sp-heading/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-heading/"
           },
           {
             "title": "sp-label",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Typography/sp-label/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-label/"
           }
-        ],
-        "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Typography/"
+        ]
       },
       {
         "title": "User Interface",
         "header": true,
         "pages": [
           {
+            "title": "Overview",
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/"
+          },
+          {
             "title": "sp-action-button",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-action-button/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-action-button/"
           },
           {
             "title": "sp-button",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-button/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-button/"
           },
           {
             "title": "sp-checkbox",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-checkbox/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-checkbox/"
           },
           {
             "title": "sp-divider",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-divider/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-divider/"
           },
           {
             "title": "sp-dropdown",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-dropdown/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-dropdown/"
           },
           {
             "title": "sp-icon",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-icon/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-icon/"
           },
           {
             "title": "sp-link",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-link/"
-          },
-          {
-            "title": "sp-menu",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-menu/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-link/"
           },
           {
             "title": "sp-menu-item",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-menu-item/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu-item/"
+          },
+          {
+            "title": "sp-menu",
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu/"
           },
           {
             "title": "sp-progressbar",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-progressbar/"
-          },
-          {
-            "title": "sp-radio",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-radio/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-progressbar/"
           },
           {
             "title": "sp-radio-group",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-radio-group/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio-group/"
+          },
+          {
+            "title": "sp-radio",
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio/"
           },
           {
             "title": "sp-slider",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-slider/"
-          },
-          {
-            "title": "sp-textfield",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-textfield/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-slider/"
           },
           {
             "title": "sp-textarea",
-            "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/sp-textarea/"
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textarea/"
+          },
+          {
+            "title": "sp-textfield",
+            "path": "/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textfield/"
           }
-        ],
-        "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/User Interface/"
-      },
-      {
-        "title": "Using with React",
-        "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/Using with React/"
+        ]
       }
-    ],
-    "path": "/uxp-api/reference-spectrum/Spectrum UXP Widgets/"
+    ]
   },
   {
-    "title": "Spectrum Widgets to SWC",
-    "path": "/uxp-api/reference-spectrum/Spectrum to SWC Mapping/"
-  },
-  {
-    "title": "FAQs",
-    "path": "/uxp-api/reference-spectrum/faqs/"
+    "title": "Spectrum Web Components in UXP",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-spectrum/swc/"
+      }
+    ]
   }
-]
+];

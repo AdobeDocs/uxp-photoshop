@@ -30,7 +30,7 @@ Provide users with feedback as they interact with your plugin. This can be alert
 
 Here is a guide to help you determine where to render plugin messages:
 
-![This shows the different ways you can provide feedback to the user through messaging](../ux-images/Messaging-1.png)
+![This shows the different ways you can provide feedback to the user through messaging](../ux-images/messaging-1.png)
 
 Open this image in a new tab in your browser in order to zoom in on it.
 
@@ -41,7 +41,7 @@ Open this image in a new tab in your browser in order to zoom in on it.
 **Use case**  
 Use alert messaging whenever the plugin cannot perform the intended task, dialogs are persistent until dismissed
 
-![This shows the alert dialog requirements](../ux-images/Alert-Requirements.png)
+![This shows the alert dialog requirements](../ux-images/alert-requirements.png)
 
 #### UX requirements
 
@@ -54,7 +54,7 @@ Explain what error was encountered and give a clear actionable solution. Also, a
 **Dialog buttons**  
 Include at least one modal dismissal button to allow the user to dismiss/close the modal
 
-![This shows the alert dialog best practices](../ux-images/Alert-Recommendations.png)
+![This shows the alert dialog best practices](../ux-images/alert-recommendations.png)
 
 #### Best practices
 
@@ -77,7 +77,7 @@ In the alert messages use language that is easy to understand for the user.
 **Use case**  
 Use success messaging whenever the plugin successfully completes a task and has no visual output on the canvas.
 
-![This shows the alert success dialog example](../ux-images/success-Requirements.png)
+![This shows the alert success dialog example](../ux-images/success-requirements.png)
 
 #### UX requirements
 
@@ -97,7 +97,7 @@ Include at least one modal dismissal button to allow the user to dismiss/close t
 **Use case**  
 If a plugin generates output that the user needs to complete a workflow, then the plugin needs to provide that information to the user through an interface.
 
-![This shows the plugin output example](../ux-images/Plugin-output.png)
+![This shows the plugin output example](../ux-images/plugin-output.png)
 
 #### UX requirements
 
@@ -117,7 +117,7 @@ Require users to go into the developer console to complete an action.
 **Use case**  
 Use permission dialogs when being destructive or making modifications.
 
-![This shows a permission dialog example](../ux-images/Permission-dialog-example.png)
+![This shows a permission dialog example](../ux-images/permission-dialog-example.png)
 
 #### UX requirements
 
@@ -156,19 +156,19 @@ Progress circles show the progression of a system operation such as downloading,
 
 ## Examples
 
-![This shows an alert example for an operation that failed to complete](../ux-images/Error-alert-example.png)
+![This shows an alert example for an operation that failed to complete](../ux-images/error-alert-example.png)
 
 **Operation failed to complete**  
 Error dialog - when a plugin can’t complete an operation, render an error dialog to let the user know the operation failed and why it failed.
 
 
-![This shows an alert example for a network connectivity issue](../ux-images/Alert-Information-example-2.png)
+![This shows an alert example for a network connectivity issue](../ux-images/alert-information-example-2.png)
 
 **Network connectivity issue**  
 Information dialog - if the plugin is unable to connect to the internet to complete an action, then use an information modal dialog to communicate that to the user.
 
 
-![This shows a message example](../ux-images/Messaging-example.png)
+![This shows a message example](../ux-images/messaging-example.png)
 
 **Unable to share**  
 “An error occurred while sharing your project. Please verify the email. address and try again”.

@@ -17,7 +17,7 @@ contributors:
 
 # User Interface 
 
-The user interface section will provide guidance around the different UXP Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](../ux-patterns/).
+The user interface section will provide guidance around the different UXP Spectrum components you can use to build a plugin UI. For guidance around the UX of a plugin and best practices refer to [UX patterns](../ux-patterns/index.md).
 
 Visit the [Adobe Spectrum website](https://spectrum.adobe.com) to reference 
  * Styling

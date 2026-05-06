@@ -7,7 +7,7 @@ jsDoc: true
 
 **Since** UXP v2.0
 
-Shorthand for specifying the [style](border-bottom-style.md), [color](border-bottom-color.md), and [width](border-bottom-width.md) of the top border.
+Shorthand for specifying the [style](../styles/border-bottom-style.md), [color](../styles/border-bottom-color.md), and [width](../styles/border-bottom-width.md) of the top border.
 
 > **Warning**
 >

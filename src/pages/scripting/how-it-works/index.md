@@ -17,7 +17,7 @@ Within an execution context, only one script can be executed at a time. You cann
 const { script } = require("uxp");
 const executionContext = script.executionContext;
 ```
-It provides details about the current script execution, methods to send data to Photoshop, and events to manage script lifecycles. You can also use methods belonging to `executionControl.hostControl` to suspend/resume history states and auto close documents. Read more in the scripting [reference](../reference/).
+It provides details about the current script execution, methods to send data to Photoshop, and events to manage script lifecycles. You can also use methods belonging to `executionControl.hostControl` to suspend/resume history states and auto close documents. Read more in the scripting [reference](../reference/index.md).
 
 ## Events
 Script execution can be cancelled when: 

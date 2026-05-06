@@ -4,12 +4,8 @@ module.exports=[
     "header": true,
     "pages": [
       {
-        "title": "Unsupported Elements",
-        "path": "/uxp-api/reference-html/General/Unsupported Elements/"
-      },
-      {
-        "title": "Unsupported Attributes",
-        "path": "/uxp-api/reference-html/General/Unsupported Attributes/"
+        "title": "Overview",
+        "path": "/uxp-api/reference-html/General/"
       },
       {
         "title": "body",
@@ -34,14 +30,25 @@ module.exports=[
       {
         "title": "style",
         "path": "/uxp-api/reference-html/General/style/"
+      },
+      {
+        "title": "Unsupported Attributes",
+        "path": "/uxp-api/reference-html/General/unsupported-attributes/"
+      },
+      {
+        "title": "Unsupported Elements",
+        "path": "/uxp-api/reference-html/General/unsupported-elements/"
       }
-    ],
-    "path": "/uxp-api/reference-html/General/"
+    ]
   },
   {
     "title": "Hierarchy",
     "header": true,
     "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-html/Hierarchy/"
+      },
       {
         "title": "footer",
         "path": "/uxp-api/reference-html/Hierarchy/footer/"
@@ -74,7 +81,6 @@ module.exports=[
         "title": "hr",
         "path": "/uxp-api/reference-html/Hierarchy/hr/"
       }
-    ],
-    "path": "/uxp-api/reference-html/Hierarchy/"
+    ]
   }
-]
+];

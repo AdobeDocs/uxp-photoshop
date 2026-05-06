@@ -34,7 +34,7 @@ These guidelines will help you define the best user experience for your plugin. 
 |---------------------|--------------------|
 | **non-blocking UI:** This interface is best used when the user should have access to the canvas while using the plugin.   | **blocking UI:** This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas.   | 
 
-![Examples showing the plugins panel interface and the plugins dialog interface](/ux-images/Panel_Dialog_examples.png)
+![Examples showing the plugins panel interface and the plugins dialog interface](/ux-images/panel-dialog-examples.png)
 
 ## UX patterns
 

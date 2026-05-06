@@ -90,7 +90,7 @@ description: Changelog in UXP version
 
 ## UXP v7.3.0
 ### New
-- [GUID](reference-js/Modules/uxp/user-information/user-info.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
+- [GUID](reference-js/modules/uxp/user-information/user-info.md) for uniquely identifying a Creative Cloud User (Currently Supported only in `Photoshop`).
 - Multipart `FormData` support in [Request](reference-js/global-members/data-transfers/request.md) and [Response](reference-js/global-members/data-transfers/response.md) for `fetch`
 - [FormData](reference-js/global-members/data-transfers/form-data.md) now supports the following APIs
     - delete()
@@ -124,7 +124,7 @@ Plugin actions are surfaced based on the 'Status' of your plugin in the Develope
 
 ## UXP v7.2.0
 ### New
-- Adobe [Extensibility Metadata Platform (XMP)](reference-js/Modules/uxp/XMP/getting-started/xmp.md) support
+- Adobe [Extensibility Metadata Platform (XMP)](reference-js/modules/uxp/xmp/getting-started/xmp.md) support
 - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
 - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](reference-js/global-members/html-dom/get-computed-style.md) API
 
@@ -144,7 +144,7 @@ HTMLElement now supports
 - [dir](reference-js/global-members/html-elements/html-html-element.md#dir--string)
 
 ### Updated
-- Documentation for `shell` moved to [new location](reference-js/Modules/uxp/shell/index.md)
+- Documentation for `shell` moved to [new location](reference-js/modules/uxp/shell/index.md)
 
 ### Fixed
 - `SVGElement`: The color of the `fill` attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest `"featureFlags" : { "enableFillAsCustomAttribute" : true }`. This flag will be turned on by default in the next UXP release.
@@ -202,14 +202,14 @@ html {
 
 ### Changed
 - [HTMLVideoElement](reference-js/global-members/html-elements/html-video-element.md): 'metadata' is the default value for `preload` attribute
-- [FS API](reference-js/Modules/fs/index.md): No need for the `file://` protocol
+- [FS API](reference-js/modules/fs/index.md): No need for the `file://` protocol
 
 ## UXP v6.5.0
 
 ### New
 - [UXP Hybrid plugins](../../guides/hybrid-plugins/index.md)
 - Allow unrestricted relative paths in require from scripts
-- [getEntryWithUrl](reference-js/Modules/uxp/persistent-file-storage/file-system-provider.md#getentrywithurlurl) in LocalFileProvider
+- [getEntryWithUrl](reference-js/modules/uxp/persistent-file-storage/file-system-provider.md#getentrywithurlurl) in LocalFileProvider
 
 
 ## UXP v6.4

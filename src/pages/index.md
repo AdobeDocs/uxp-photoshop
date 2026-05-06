@@ -27,10 +27,10 @@ UXP is the modern way to create plugins and scripts for Adobe Creative Cloud - A
 
 #### Resources
 
-- [Plugin Quickstart guide](guides/)
-- [Photoshop API reference](ps_reference/)
-- [UXP API reference](uxp-api/reference-js/)
-- [Scripting Quickstart guide](scripting/getting-started/)
+- [Plugin Quickstart guide](guides/index.md)
+- [Photoshop API reference](ps-reference/index.md)
+- [UXP API reference](uxp-api/reference-js/index.md)
+- [Scripting Quickstart guide](scripting/getting-started/index.md)
 - [Creative Cloud Developer Forums](https://forums.creativeclouddeveloper.com/)
 
 
@@ -44,25 +44,25 @@ Never has there been a better time to see the future of extending and enhancing 
 
 ## Get Started with Basics
 
-[Plugin Quickstart Guide](guides/)
+[Plugin Quickstart Guide](guides/index.md)
 
 Start building plugins for Adobe Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[Photoshop API Reference](ps_reference/)
+[Photoshop API Reference](ps-reference/index.md)
 
 Interact with Photoshop using the Photoshop DOM API.
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP API Reference](uxp-api/reference-js/)
+[UXP API Reference](uxp-api/reference-js/index.md)
 
 Access file APIs, UI APIs, network I/O and more.
 
 <DiscoverBlock slots="link, text"/>
 
-[Scripting Quickstart Guide](scripting/getting-started/)
+[Scripting Quickstart Guide](scripting/getting-started/index.md)
 
 Start writing scripts for Adobe Photoshop.
 
@@ -70,19 +70,19 @@ Start writing scripts for Adobe Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[UXP Developer Tool](guides/devtool/)
+[UXP Developer Tool](guides/devtool/index.md)
 
 The UXP Developer Tool helps you create, debug, and distribute plugins. It's an essential part of any UXP plugin workflow.
 
 <DiscoverBlock slots="link, text"/>
 
-[Plugin samples](guides/code_samples/)
+[Plugin samples](guides/code-samples/index.md)
 
 Explore code samples to make immediate progress on your own Photoshop plugin.
 
 <DiscoverBlock slots="link, text"/>
 
-[Legacy Extensiblity](guides/legacy-extensibility/)
+[Legacy Extensiblity](guides/legacy-extensibility/index.md)
 
 Do you have experience with Photoshop plugin solutions? Learn more here.
 
@@ -94,7 +94,7 @@ Learn key design principles for UXP plugins in Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[Script samples](scripting/samples/)
+[Script samples](scripting/samples/index.md)
 
 Explore script samples to start accomplishing tasks within Photoshop.
 
@@ -102,7 +102,7 @@ Explore script samples to start accomplishing tasks within Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[Packaging Your Plugin](guides/distribution/packaging-your-plugin/)
+[Packaging Your Plugin](guides/distribution/packaging-your-plugin/index.md)
 
 Packaging your UXP plugin is a breeze. In many cases, it's just one click away.
 

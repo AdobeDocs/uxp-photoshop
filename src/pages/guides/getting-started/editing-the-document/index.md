@@ -63,7 +63,7 @@ While that's already close, you will run into an error stating that "Such events
 To open a Chrome Developer Tools window for your plugin, select _"Debug"_ in the plugin actions menu in the UXP
 Developer Tool.
 
-To get this to work, you need to wrap your code in a `window.require('photoshop').core.executeAsModal(targetFunction, options)` call. This creates a context in which your plugin has exclusive access to manipulating the document and thus ensures that no changes can be made to the document while your code executes (which could result in strange errors). You need to use `executeAsModal` for any operation that could edit the document. [Learn more about modal execution](/src/pages/ps_reference/media/executeasmodal.md).
+To get this to work, you need to wrap your code in a `window.require('photoshop').core.executeAsModal(targetFunction, options)` call. This creates a context in which your plugin has exclusive access to manipulating the document and thus ensures that no changes can be made to the document while your code executes (which could result in strange errors). You need to use `executeAsModal` for any operation that could edit the document. [Learn more about modal execution](../../../ps-reference/media/executeasmodal.md).
 
 Adjust your `index.js` code to look like this:
 
@@ -119,6 +119,6 @@ This extracts the `baseName`, i.e., the layer name without an optional percentag
 
 ## Next steps
 
-You now know how to use the Photoshop APIs to both read and write your document. As a rule of thumb, calling methods and setting properties that are declared as "Read-write" in the [Photoshop API Reference](/src/pages/ps_reference/index.md) requires a modal execution context.
+You now know how to use the Photoshop APIs to both read and write your document. As a rule of thumb, calling methods and setting properties that are declared as "Read-write" in the [Photoshop API Reference](../../../ps-reference/index.md) requires a modal execution context.
 
 [In the next tutorial](../writing-a-file/index.md), you will learn how to use the UXP APIs to interact with the file system and create a `.tsv` file with a list of your layers.

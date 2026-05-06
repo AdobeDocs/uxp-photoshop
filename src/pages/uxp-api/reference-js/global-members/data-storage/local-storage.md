@@ -9,7 +9,7 @@ This data is technically persistent, but can be cleared in a variety of ways,
 so you should not store data using localStorage that you cannot otherwise reconstruct.
 <InlineAlert variant="warning" slots="text"/>
 
-Do not store passwords or other secure forms of data using `localStorage`. Instead, use [storage.secureStorage](../../Modules/uxp/key-value-storage/secure-storage.md)
+Do not store passwords or other secure forms of data using `localStorage`. Instead, use [storage.secureStorage](../../modules/uxp/key-value-storage/secure-storage.md)
 
 
 

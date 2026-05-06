@@ -27,4 +27,4 @@ Launch the UDT app. Once you have Photoshop running, you should be able to see i
 
 You should see a new “Debug Script” button inside the “Connected Applications” card. Click the button to select the script file and debug in the UDT app.
 
-![UDT Debugging](udt_scripting.png)
+![UDT Debugging](udt-scripting.png)

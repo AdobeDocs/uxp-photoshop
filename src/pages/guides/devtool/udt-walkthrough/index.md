@@ -104,4 +104,4 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
  ## Packaging
  In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/) website before packaging your plugin for distribution.
 
- To distribute your plugin, see [Sharing Your Plugin](../../distribution/).
+ To distribute your plugin, see [Sharing Your Plugin](../../distribution/index.md).
