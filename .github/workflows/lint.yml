@@ -1,0 +1,36 @@
+---
+name: Lint
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/pages/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Lint
+        id: lint
+        continue-on-error: true
+        run: npx --yes github:AdobeDocs/adp-devsite-utils runLint -v
+
+      - name: Save PR number
+        if: always()
+        run: echo "${{ github.event.pull_request.number }}" > pr-number.txt
+
+      - name: Upload linter report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: linter-report
+          path: |
+            linter-report.txt
+            pr-number.txt
+
+      - name: Fail if linter found errors
+        if: steps.lint.outcome == 'failure'
+        run: exit 1

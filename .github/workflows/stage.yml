@@ -1,19 +1,8 @@
 ---
-name: Production Deployment
+name: Staging
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
-      env:
-        description: "Select environment to deploy to"
-        type: choice
-        required: true
-        default: "prod"
-        options:
-          - "prod"
-          - "stage & prod"
       baseSha:
         description: "Use base SHA commit to deploy from (empty string defaults to last commit before HEAD)"
         type: string
@@ -28,6 +17,6 @@ jobs:
     name: Deployment
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@main
     with:
-      env: ${{ inputs.env || 'prod' }}
-      baseSha: ${{ inputs.baseSha || '' }}
-      deployAll: ${{ inputs.deployAll || false }}
+      env: stage
+      baseSha: ${{ inputs.baseSha }}
+      deployAll: ${{ inputs.deployAll }}

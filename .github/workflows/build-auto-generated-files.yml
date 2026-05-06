@@ -1,0 +1,13 @@
+---
+name: Build Auto-Generated Files
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-contributors:
+    name: Build Auto-Generated Files
+    if: github.repository != 'AdobeDocs/dev-docs-template'
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/build-auto-generated-files.yml@main
+    secrets: inherit
+    
