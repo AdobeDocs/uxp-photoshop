@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: A collections class allowing for array access into the applications
 ---
 
 # Layers
@@ -29,7 +30,7 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 ## Indexable
 
-▪ [index: *number*]: [*Layer*](/ps_reference/classes/layer/)
+▪ [index: *number*]: [*Layer*](/ps-reference/classes/layer.md)
 
 Used to access the layers in the collection.
 
@@ -42,15 +43,15 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| length | *number* | R | 22.5 | Number of [Layer](/ps_reference/classes/layer/) elements in this collection. |
+| length | *number* | R | 22.5 | Number of [Layer](/ps-reference/classes/layer.md) elements in this collection. |
 | typename | *string* | R | 22.5 | The name for this object collection: Layers. |
 
 ## Methods
 
 ### add
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<[*Layer*](/ps_reference/classes/layer/)\>
+**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a new layer.
 
@@ -58,12 +59,12 @@ Create a new layer.
 let newDoc1 = await app.activeDocument.layers.add();
 ```
 
-___
+<HorizontalLine />
 
 ### getByName
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-[*Layer*](/ps_reference/classes/layer/)
+[*Layer*](/ps-reference/classes/layer.md)
 
 Find the first layer with the matching name.
 

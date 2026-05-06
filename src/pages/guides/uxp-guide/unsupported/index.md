@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: What's unsupported in UXP
-description:
+description: Since UXP does not include a full-blown web browser with all the bells and whistles, there are a number of HTML and CSS features that are not currently imp
 ---
 
 # What's Unsupported in UXP

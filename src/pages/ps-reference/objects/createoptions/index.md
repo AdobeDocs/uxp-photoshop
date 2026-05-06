@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Objects for specifying creation options for
 ---
 
 # Create Options
 
 Objects for specifying creation options for 
-- [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument) 
-- [Document.createLayer](/ps_reference/classes/document/#createlayer)
-- [Document.createLayerGroup](/ps_reference/classes/document/#createlayergroup)
+- [Photoshop.createDocument](/ps-reference/classes/photoshop.md#createdocument) 
+- [Document.createLayer](/ps-reference/classes/document.md#createlayer)
+- [Document.createLayerGroup](/ps-reference/classes/document.md#createlayergroup)

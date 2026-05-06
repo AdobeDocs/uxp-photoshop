@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Represents a missing color, used in SolidColor object.
 ---
 
 # NoColor
 
-Represents a missing color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Represents a missing color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 ## Properties
 

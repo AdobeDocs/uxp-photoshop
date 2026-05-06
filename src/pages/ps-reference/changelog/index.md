@@ -10,7 +10,7 @@ contributors:
 
 ## Documentation
 ### Dialog lockDocumentFocus
-The Photoshop-only option to a dialog element's `showModal` method is now noted under [Known Issues and Workarounds](../../ps-reference/known-issues/index.md).  In the future, that note will be integrated into [showModal](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/#showmodal).
+The Photoshop-only option to a dialog element's `showModal` method is now noted under [Known Issues and Workarounds](../../ps-reference/known-issues/index.md).  In the future, that note will be integrated into [showModal](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/index.md#showmodal).
 
 ## Photoshop 27.4 (February 2026)
 
@@ -39,13 +39,13 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Enriched WebView's load error messages. `WebViewEvent.message` now provides more detailed information about the cause of errors for better debugging.
 > - Removed `allow` field from `permissions.webview` configuration. The `permissions.webview.allow` field in the plugin manifest is no longer used.
 
-----
+<HorizontalLine />
 ## Photoshop 27.2 (December 2025)
 
 ### Document Generative Upscale
 - [Document.generativeUpscale(model, options)](../../ps-reference/classes/document.md#generativeupscale) Applies generative upscaling to the image in a new document. Currently limited to Firefly at a scale of 2 or 4.
 
-----
+<HorizontalLine />
 ## Photoshop 26.11 (September 2025)
 
 ### Preferences
@@ -57,7 +57,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Ensures that WebView visibility change script always runs on the plugin's JavaScript thread, fixing a crash across all DVA codebases.
 
 
-----
+<HorizontalLine />
 ## Photoshop 26.10 (August 2025)
 
 ### UXP v9.0.0 Integration
@@ -66,10 +66,10 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 >     - WebView2 now uses Fluent overlay scrollbars for a modern UI experience
 >     - `requiredPermissions.webview.domains` is now optional, simplifying manifest configuration
 > - `SecureStorage` methods now follow the Web Storage API spec for error handling 
-> - `XMLHttpRequest.readyState` is exposed in [`XMLHttpRequest`](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/) now  for correctness
+> - `XMLHttpRequest.readyState` is exposed in [`XMLHttpRequest`](../../uxp-api/reference-js/global-members/data-transfers/xml-http-request.md) now  for correctness
 
 
----
+<HorizontalLine />
 ## Photoshop 26.9 (July 2025)
 - One can set [Document](../../ps-reference/classes/document.md#properties-1) `activeLayers` by providing an array of [Layer](../../ps-reference/classes/layer.md) objects.  
 - Fixed an issue with [app.createDocument](../../ps-reference/classes/photoshop.md#createdocument) where using `fillColor` without specifying `fill` would cause a silent failure.  Now, options that provide just `fillColor` will be handled correctly.  Also, any document creation errors will now be thrown instead of dropped.
@@ -81,7 +81,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - `\\` was not being allowed as an authority delimiter on Windows. This is now fixed.
 
 
-----
+<HorizontalLine />
 ## Photoshop 26.8 (June 2025)
 
 ### UXP v8.3.0 Integration
@@ -93,7 +93,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > Enable large file upload streaming in UXP by adding [`fs.createReadStream`](../../uxp-api/reference-js/modules/fs/index.md) support for efficient handling of large files without loading them entirely into memory.
 > 
 > #### Updated
-> - **[`XMLHttpRequest`](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest/) Enhancement** 
+> - **[`XMLHttpRequest`](../../uxp-api/reference-js/global-members/data-transfers/xml-http-request.md) Enhancement** 
 > Added support for standard `XMLHttpRequest` state variables (`UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE`) . XMLHttpRequest's state variables can be accessed in the following ways.
 > XMLHttpRequest.HEADERS_RECEIVED -> It should not return undefined but return 2.
 > XMLHttpRequest.prototype.OPENED -> It should return 1.
@@ -103,7 +103,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > Extended UXP filesystem to support all valid characters including special characters like pound(#), improving compatibility with various file naming conventions.
 
 
-----
+<HorizontalLine />
 ## Documentation update (May 2025)
 - Added a description of the output received from [`core.getDisplayConfiguration()`](../../ps-reference/media/photoshopcore.md#getdisplayconfiguration) including a new property: `maximumExtendedDynamicRangeColorComponent`.
 - [Event Codes](../../ps-reference/media/eventcodes.md): Added a new page containing event names for use by [`core.addNotificationListener()`](../../ps-reference/media/photoshopcore.md#addnotificationlistener) and [`action.addNotificationListener()`](../../ps-reference/media/photoshopaction.md#addnotificationlistener).  This includes a new Core event: `displayConfigurationChanged`.
@@ -111,13 +111,13 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 - Added, clarified, and tidied descriptions and code samples.
 
 
-----
+<HorizontalLine />
 ## Photoshop 26.1 (November 2024)
 
 ### UXP v8.1.0 Integration
 > #### New
-> - [ResizeObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/ResizeObserver.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
-> - [IntersectionObserver APIs](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/IntersectionObserver.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
+> - [ResizeObserver APIs](../../uxp-api/reference-js/global-members/html-dom/resize-observer.md) to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.
+> - [IntersectionObserver APIs](../../uxp-api/reference-js/global-members/html-dom/intersection-observer.md) to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.
 > - Added support for `:first-child` and `:not(:first-child)` pseudo-classes to enhance the existing `Web Component` support by allowing targeting of the desired elements
 > - Support `linear-gradient` property with start and end values to align with the web.
 > 
@@ -126,7 +126,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Fixed missing `translate` -> `y` values via UXP Dev Tool, despite being correctly applied on the elements.
 
 
-----
+<HorizontalLine />
 ## Photoshop 26.0 (Oct 2024)
 
 ### Photoshop app object
@@ -139,15 +139,15 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > 
 > #### Deprecations
 > - Changes to Clipboard
->   - [Clipboard.setContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
->   - [Clipboard.getContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#read) instead.
->   - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writedata) instead.
->   - [Clipboard.clearContent](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) would be an alternative.
+>   - [Clipboard.setContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writedata) instead.
+>   - [Clipboard.getContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#read) instead.
+>   - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writedata) instead.
+>   - [Clipboard.clearContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) would be an alternative.
 > - Changes to VideoElement
->   - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#load) is deprecated. Use `loadeddata` instead.
->   - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
->   - Event `uxpvideocomplete` in [play()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#play) is deprecated. Use `ended` instead.
->   - Event `uxpvideopause` in [pause()](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md#pause) is deprecated. Use `pause` instead.
+>   - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#load) is deprecated. Use `loadeddata` instead.
+>   - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#play) is deprecated. Use `ended` instead.
+>   - Event `uxpvideocomplete` in [play()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#play) is deprecated. Use `ended` instead.
+>   - Event `uxpvideopause` in [pause()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#pause) is deprecated. Use `pause` instead.
 > 
 > #### New
 > - New components supported in Spectrum Web Components (SWC). More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
@@ -159,7 +159,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 >   - sp-search
 >   - sp-swatch
 > - New command line templates to get started with SWC easily. Find details in this [section](../../uxp-api/reference-spectrum/swc/index.md#command-line-templates).
-> - Support for local HTML files in [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)
+> - Support for local HTML files in [WebView](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md)
 > - New CSS capabilities
 >   - scaleX() & scaleY()
 >   - transform-origin
@@ -173,28 +173,28 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 >   | `featureFlags: {"CSSNextSupport": ["boxShadow", "transformFunctions", "transformProperties" ]}` | Enables only the named properties in the list. |
 >   
 >   Note that `"enableSWCSupport": true` will enable `CSSNextSupport` by default, even if it is not done explicitly in plugin manifest otherwise.
-> - Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md)
+> - Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md)
 > - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
-> - Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#appendnodes), [prepend](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#replacechildrennodes)
+> - Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/global-members/html-elements/html-element.md#appendnodes), [prepend](../../uxp-api/reference-js/global-members/html-elements/html-element.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/global-members/html-elements/html-element.md#replacechildrennodes)
 > - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 > 
 > #### Updated
 > - Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
-> - [UXP Clipboard.writeText()](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
+> - [UXP Clipboard.writeText()](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
 
 
-----
+<HorizontalLine />
 ## Photoshop 25.10 (May 2024)
 `timeOut` option added to [`executeAsModal`](../../ps-reference/media/executeasmodal.md#options-parameter).  Also, the error message returned on a modal request collision was updated to include the id of the plugin that initiated the existing modal state.
 
 
-----
+<HorizontalLine />
 ## Photoshop 25.5 (February 2024)
 
 ### UXP v7.4 Integration
 > #### Updated
-> - UXP Alerts ([alert](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md), [prompt](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md), [confirm](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
-> - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md), and network calls ([XMLHttp](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/XMLHttpRequest.md), [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch.md))
+> - UXP Alerts ([alert](../../uxp-api/reference-js/global-members/html-dom/alert.md), [prompt](../../uxp-api/reference-js/global-members/html-dom/prompt.md), [confirm](../../uxp-api/reference-js/global-members/html-dom/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
+> - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md), and network calls ([XMLHttp](../../uxp-api/reference-js/global-members/data-transfers/xml-http-request.md), [fetch](../../uxp-api/reference-js/global-members/data-transfers/fetch.md))
 > - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
 > 
 > 
@@ -206,14 +206,14 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Updated missing docs for pseudo-class [defined](../../uxp-api/reference-css/pseudo-classes/defined.md) (Available since UXP v6.0)
 
 
-----
+<HorizontalLine />
 ## Photoshop 25.2 (October 2023)
 
 ### UXP v7.3 Integration
 > #### New
-> - [GUID](../../uxp-api/reference-js/Modules/uxp/User%20Information/index.md) for uniquely identifying a Creative Cloud User.
-> - Multipart `FormData` support in [Request](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Request.md) and [Response](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/Response.md) for [fetch](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/)
-> - [FormData](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/FormData.md) now supports the following APIs
+> - [GUID](../../uxp-api/reference-js/modules/uxp/user-information/index.md) for uniquely identifying a Creative Cloud User.
+> - Multipart `FormData` support in [Request](../../uxp-api/reference-js/global-members/data-transfers/Request.md) and [Response](../../uxp-api/reference-js/global-members/data-transfers/Response.md) for [fetch](../../uxp-api/reference-js/global-members/data-transfers/fetch.md)
+> - [FormData](../../uxp-api/reference-js/global-members/data-transfers/form-data.md) now supports the following APIs
 >     - delete()
 >     - get()
 >     - getAll()
@@ -223,7 +223,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 >     - values()
 > 
 > #### Updated
-> - [FormData's append](../../uxp-api/reference-js/Global%20Members/Data%20Transfers/FormData.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
+> - [FormData's append](../../uxp-api/reference-js/global-members/data-transfers/form-data.md#append--namevaluefilename) now supports `Blob` as an additional parameter.
 > - `Spectrum Web Components` support in `React` context is now available for all 30 components.
 >     - Sample plugin for UXP-SWC plugin in React context can be referred [here](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)
 > 
@@ -239,7 +239,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace
 
 
-----
+<HorizontalLine />
 ## Photoshop 25.1 (October 2023)
 
 Document objects can report the current [zoom](../../ps-reference/classes/document.md) value.
@@ -248,7 +248,7 @@ Document objects can report the current [zoom](../../ps-reference/classes/docume
 The ability to re-record an Action step via the Actions panel flyout menu item, "Record Again", or by double-clicking the step now works. To support that ability, see the notes at [Action Recording](../../ps-reference/media/action-recording.md#record-again).
 
 
-----
+<HorizontalLine />
 ## Photoshop 25.0 (September 2023)
 
 ### Action Recording
@@ -275,7 +275,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 > #### New
 > - Adobe [Extensibility Metadata Platform (XMP)](../../uxp-api/reference-js/modules/uxp/xmp/getting-started/index.md) support
 > - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
-> - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/getComputedStyle) API
+> - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/global-members/html-dom/get-computed-style.md) API
 
 > #### Updated
 > - Support of [Spectrum Web Component (SWC)](../../uxp-api/reference-spectrum/swc/index.md) in UXP is moving out of Beta.
@@ -283,7 +283,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 > - Updated [starter plugin for SWC](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter).
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.6 (June 2023)
 
 ### 24.6 Bug Fixes
@@ -302,14 +302,14 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
   Use `componentChannels` instead.
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.5 (May 2023) 
 
 ### Calculations and Apply Image
 The blending operations [Layer](../../ps-reference/classes/layer.md) Apply Image and [Document](../../ps-reference/classes/document.md) Calculations are now available.
 
-- [`applyImage()`](classes/layer/#applyimage)
-- [`calculations()`](classes/document/#calculations)
+- [`applyImage()`](../classes/layer.md#applyimage)
+- [`calculations()`](../classes/document.md#calculations)
 
 Both methods accept an options object that matches the parameters required in the respective UI dialog.
 
@@ -320,10 +320,10 @@ Both methods accept an options object that matches the parameters required in th
 ### UXP v7.1 Integration
 > #### New
 > HTMLElement now supports
-> - [setPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#setpointercapturepointerid)
-> - [releasePointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#releasepointercapturepointerid)
-> - [hasPointerCapture](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#haspointercapturepointerid)
-> - [dir](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLHtmlElement.md#dir--string)
+> - [setPointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#setpointercapturepointerid)
+> - [releasePointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#releasepointercapturepointerid)
+> - [hasPointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#haspointercapturepointerid)
+> - [dir](../../uxp-api/reference-js/global-members/html-elements/html-html-element.md#dir--string)
 > 
 > #### Updated
 > - Documentation for `shell` module moved to [new location](../../uxp-api/reference-js/modules/uxp/shell/index.md)
@@ -339,7 +339,7 @@ Both methods accept an options object that matches the parameters required in th
 > ```
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.4 (April 2023)
 
 ### Imaging API update
@@ -353,47 +353,47 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 > #### New
 > - Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.
 >     - Classes
->         - [HTMLSlotElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLSlotElement.md)
->         - [HTMLTemplateElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLTemplateElement.md)
+>         - [HTMLSlotElement](../../uxp-api/reference-js/global-members/html-elements/html-slot-element.md)
+>         - [HTMLTemplateElement](../../uxp-api/reference-js/global-members/html-elements/html-template-element.md)
 >     - Methods
->         - [Element.assignedSlot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#assignedslot--htmlslotelement)
->         - [Element.slot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#slot--string)
->         - [Element.attachShadow](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#attachshadowinit)
->         - [Element.shadowRoot](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#shadowroot--shadowroot)
->         - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#upgraderoot)
->         - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/CustomElementRegistry.md#whendefinedname)
+>         - [Element.assignedSlot](../../uxp-api/reference-js/global-members/html-dom/Element.md#assignedslot--htmlslotelement)
+>         - [Element.slot](../../uxp-api/reference-js/global-members/html-dom/Element.md#slot--string)
+>         - [Element.attachShadow](../../uxp-api/reference-js/global-members/html-dom/Element.md#attachshadowinit)
+>         - [Element.shadowRoot](../../uxp-api/reference-js/global-members/html-dom/Element.md#shadowroot--shadowroot)
+>         - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/global-members/html-dom/custom-element-registry.md#upgraderoot)
+>         - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/global-members/html-dom/custom-element-registry.md#whendefinedname)
 > - [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/swc/index.md) Support for Adobe SWC.
 > - Several augmentations to the JS API set
 >     - Properties
->         - [HTMLElement.lang](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLElement.md#lang--string)
+>         - [HTMLElement.lang](../../uxp-api/reference-js/global-members/html-elements/html-element.md#lang--string)
 >     - Classes added to the global scope
->         - [TreeWalker](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/TreeWalker.md)
->         - [NodeFilter](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/NodeFilter.md)
+>         - [TreeWalker](../../uxp-api/reference-js/global-members/html-dom/tree-walker.md)
+>         - [NodeFilter](../../uxp-api/reference-js/global-members/html-dom/node-filter.md)
 >     - Methods
->         - [Element.hasAttributes](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#hasattributes)
->         - [Element.getAttributeNames](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/Element.md#getattributenames)
->         - [Event.composed](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composed--boolean)
->         - [Event.composedPath](../../uxp-api/reference-js/Global%20Members/HTML%20Events/Event.md#composedpath)
->         - [DocumentFragment.append](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#appendargs)
->         - [DocumentFragment.querySelector](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorselector)
->         - [DocumentFragment.querySelectorAll](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/DocumentFragment.md#queryselectorallselector)
+>         - [Element.hasAttributes](../../uxp-api/reference-js/global-members/html-dom/Element.md#hasattributes)
+>         - [Element.getAttributeNames](../../uxp-api/reference-js/global-members/html-dom/Element.md#getattributenames)
+>         - [Event.composed](../../uxp-api/reference-js/global-members/html-events/Event.md#composed--boolean)
+>         - [Event.composedPath](../../uxp-api/reference-js/global-members/html-events/Event.md#composedpath)
+>         - [DocumentFragment.append](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#appendargs)
+>         - [DocumentFragment.querySelector](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#queryselectorselector)
+>         - [DocumentFragment.querySelectorAll](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#queryselectorallselector)
 > - New focus events to support React 16
 >     - [Focusin Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event)
 >     - [Focusout Event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event)
-> - HTML [2D Canvas Support](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLCanvasElement.md) for basic shapes and styling.
+> - HTML [2D Canvas Support](../../uxp-api/reference-js/global-members/html-elements/html-canvas-element.md) for basic shapes and styling.
 > - Alerts
->     - [alert()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/alert.md)
->     - [prompt()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/prompt.md)
->     - [confirm()](../../uxp-api/reference-js/Global%20Members/HTML%20DOM/confirm.md)
-> - Support for [pipeThrough](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#pipeThroughtransform-options) and [tee](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md#tee) in [ReadableStream](../../uxp-api/reference-js/Global%20Members/Streams/ReadableStream.md). Refer to [Streams](../../uxp-api/reference-js/Global%20Members/Streams/index.md) for more details
-> - [ImageBlob](../../uxp-api/reference-js/Global%20Members/ImageBlob/) to render an uncompressed image buffer in UXP
+>     - [alert()](../../uxp-api/reference-js/global-members/html-dom/alert.md)
+>     - [prompt()](../../uxp-api/reference-js/global-members/html-dom/prompt.md)
+>     - [confirm()](../../uxp-api/reference-js/global-members/html-dom/confirm.md)
+> - Support for [pipeThrough](../../uxp-api/reference-js/global-members/streams/readable-stream.md#pipeThroughtransform-options) and [tee](../../uxp-api/reference-js/global-members/streams/readable-stream.md#tee) in [ReadableStream](../../uxp-api/reference-js/global-members/streams/readable-stream.md). Refer to [Streams](../../uxp-api/reference-js/global-members/streams/index.md) for more details
+> - [ImageBlob](../../uxp-api/reference-js/global-members/image-blob/index.md) to render an uncompressed image buffer in UXP
 > 
 > #### Changed
-> - [HTMLVideoElement](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md): 'metadata' is the default value for `preload` attribute
+> - [HTMLVideoElement](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md): 'metadata' is the default value for `preload` attribute
 > - [FS API](../../uxp-api/reference-js/modules/fs/index.md): No need for the `file://` protocol
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.2 (February 2023)
 
 ### Imaging API Beta
@@ -483,10 +483,10 @@ nearest RGB 16 bit per channel.
 > #### New
 > - [UXP Hybrid plugins](../../guides/hybrid-plugins/index.md)
 > - Allow unrestricted relative paths in require from scripts
-> - [getEntryWithUrl](../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider.md#getentrywithurlurl) in LocalFileProvider
+> - [getEntryWithUrl](../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md#getentrywithurlurl) in LocalFileProvider
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.1 (December 2022)
 
 ### app.getColorProfiles
@@ -515,8 +515,8 @@ The CountItems DOM API is now available in Photoshop.
 
 ### UXP v6.4 Integration
 > #### New
-> - [WebView](../../uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement) for panels
-> - Support [Path Module APIs](../../uxp-api/reference-js/Global%20Members/Path)
+> - [WebView](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md) for panels
+> - Support [Path Module APIs](../../uxp-api/reference-js/global-members/Path/index.md)
 > - Script can run fsapi with full access in localFileSystem
 > 
 > #### Bugs Fixes
@@ -535,7 +535,7 @@ The CountItems DOM API is now available in Photoshop.
 > - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.
 
 
-----
+<HorizontalLine />
 ## Photoshop 24.0 (October 2022)
 
 ### Preferences
@@ -554,7 +554,7 @@ The ColorSampler DOM API is now available in Photoshop.
     - `color`: [SolidColor](../../ps-reference/classes/solidcolor.md)
     - `move({x: number, y: number})`
     - `remove()`
-    <!-- - `sampleSize()`: static member, accepts values from [Constants.SampleSize](../../ps-reference/modules/constants.md#samplesize). -->
+    \<!-- - `sampleSize()`: static member, accepts values from [Constants.SampleSize](../../ps-reference/modules/constants.md#samplesize). --\>
 - The [Document](../../ps-reference/classes/document.md#samplecolor) class implements a new `sampleColor()` method that samples an `{x, y}` position on the fly, returning a [SolidColor](../../ps-reference/classes/solidcolor.md) object without the need to create a [ColorSampler](../../ps-reference/classes/colorsampler.md) object.
 
 ### Layer Comps support
@@ -589,7 +589,7 @@ The ColorSampler DOM API is now available in Photoshop.
 - Fixed file arguments for filters 
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.5 (August 2022)
 
 ### UXP Scripting
@@ -604,7 +604,7 @@ Script files with extension .psjs are executed using UXP.
 - [Layer.applyBlur()](../../ps-reference/classes/layer.md#applyblur) Applies the Blur filter.
 - [Layer.applyBlurMore()](../../ps-reference/classes/layer.md#applyblurmore) Applies the Blur More filter.
 - [Layer.applyClouds()](../../ps-reference/classes/layer.md#applyclouds) Applies the Clouds filter.
-- [Layer.applyCustomFilter(characteristics: number[], scale: number, offset: number)](../classes/layer/#applycustomfilter) Applies the Custom filter.
+- [Layer.applyCustomFilter(characteristics: number[], scale: number, offset: number)](../classes/layer.md#applycustomfilter) Applies the Custom filter.
 - [Layer.applyDeInterlace(eliminateFields: Constants.EliminateFields, createFields: Constants.CreateFields)](../../ps-reference/classes/layer.md#applydeinterlace) Applies the De-Interlace filter.
 - [Layer.applyDespeckle()](../../ps-reference/classes/layer.md#applydespeckle) Applies the Despeckle filter.
 - [Layer.applyDifferenceClouds()](../../ps-reference/classes/layer.md#applydifferenceclouds) Applies the Difference Clouds filter.
@@ -615,7 +615,7 @@ Script files with extension .psjs are executed using UXP.
 - [Layer.applyGlassEffect(distortion: number, smoothness: number, scaling: number, invert: boolean, texture: Constants.TextureType, textureFile?: File)](../../ps-reference/classes/layer.md#applyglasseffect) Applies the Glass filter.
 - [Layer.applyHighPass(radius: number)](../../ps-reference/classes/layer.md#applyhighpass) Applies the High Pass filter.
 - [Layer.applyLensBlur(source: Constants.DepthMapSource, focalDistance: number, invertDepthMask: boolean, shape: Constants.Geometry, radius: number, bladeCurvature: number, rotation: number, brightness: number, threshold: number, amount: number, distribution: Constants.NoiseDistribution, monochromatic: boolean)](../../ps-reference/classes/layer.md#applylensblur) Applies the Lens Blur filter.
-- [Layer.applyLensFlare(brightness: number, flareCenter: {x: number, y: number}, lensType: Constants.LensType)](../../ps-reference/classes/layer.md#applylensflare) Applies the Lens Flare filter.
+- [Layer.applyLensFlare(brightness: number, flareCenter: \{x: number, y: number}, lensType: Constants.LensType)](../../ps-reference/classes/layer.md#applylensflare) Applies the Lens Flare filter.
 - [Layer.applyMaximum(radius: number, preserveShape: Constants.PreserveShape)](../../ps-reference/classes/layer.md#applymaximum) Applies the Maximum filter.
 - [Layer.applyMinimum(radius: number, preserveShape: Constants.PreserveShape)](../../ps-reference/classes/layer.md#applyminimum) Applies the Minimum filter.
 - [Layer.applyMedianNoise(radius: number)](../../ps-reference/classes/layer.md#applymediannoise) Applies the Median Noise filter.
@@ -630,17 +630,17 @@ Script files with extension .psjs are executed using UXP.
 - [Layer.applySharpen()](../../ps-reference/classes/layer.md#applysharpen) Applies the Sharpen filter.
 - [Layer.applySharpenEdges()](../../ps-reference/classes/layer.md#applysharpenedges) Applies the Sharpen Edges filter.
 - [Layer.applySharpenMore()](../../ps-reference/classes/layer.md#applysharpenmore) Applies the Sharpen More filter.
-- [Layer.applyShear(curve: {x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer/#applyshear) Applies the Shear filter.
+- [Layer.applyShear(curve: \{x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer.md#applyshear) Applies the Shear filter.
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.4 (July 2022)
 
 ### convertUnits method on the Photoshop Application object
  - [Application.convertUnits](../../ps-reference/classes/photoshop.md#convertunits) is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.3 (April 2022)
 
 ### Paths support
@@ -663,13 +663,13 @@ This event is generated when Photoshop detects that a user becomes idle, while P
 As an alternative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, `interactiveMode` can be requested to allow for user interaction in specific circumstances. See [Interactive Mode](../../ps-reference/media/executeasmodal.md#interactive-mode).
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.2 (February 2022)
 - Core Module: `setExecutionMode()`
 - Core Module: `getPluginInfo()`
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.1 (December 2022)
 - Core Module: `batchPlaySync()`
 - Core Module: `validateReference()`
@@ -678,7 +678,7 @@ As an alternative to a UI-blocking progress bar when a plugin is within a Modal 
 - Core Module: `getGPUInfo()`
 
 
-----
+<HorizontalLine />
 ## Photoshop 23.0 (October 2021)
 
 ### Channel support
@@ -808,7 +808,7 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
     - Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../../ps-reference/objects/createoptions/documentcreateoptions.md)).
 - Updated [document.save](../../ps-reference/classes/document.md#save) and [document.saveAs](../../ps-reference/classes/document.md#saveas)
     - `save` no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.
-    - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/)).
+    - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/index.md)).
 - [layer.id getter](../../ps-reference/classes/layer.md)
 - Updated [document.createLayer](../../ps-reference/classes/document.md#createlayer) and [document.createLayerGroup](../../ps-reference/classes/document.md#createlayergroup)
     - With respective Create options: LayerCreateOptions and GroupLayerCreateOptions.

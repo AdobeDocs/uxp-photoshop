@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Performance preferences. Options that could possibly affect speed of Photoshop.
 ---
 
 # PreferencesPerformance

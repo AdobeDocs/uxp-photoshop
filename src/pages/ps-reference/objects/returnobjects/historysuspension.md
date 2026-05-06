@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: This object is provided by the suspendHistory API when a document's history state is suspended, and is
 ---
 
 # HistorySuspension

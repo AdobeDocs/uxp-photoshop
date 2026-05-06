@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Defines a CMYK color, used in SolidColor object.
 ---
 
 # CMYKColor
 
-Defines a CMYK color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Defines a CMYK color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
  ***Fixes in Photoshop 24.2:***
 - *Getter now will return number instead of `undefined`*

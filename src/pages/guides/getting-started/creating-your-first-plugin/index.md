@@ -109,7 +109,7 @@ our panel's UI:
 
 As you can see, the `index.html` file then loads the `index.js`.
 
-<InlineAlert variant="info" slots="text"></InlineAlert>
+<InlineAlert variant="info" slots="text" />
 
 Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](/src/pages/uxp-api/reference-html/General/Unsupported%20Elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](../../../uxp-api/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
 
@@ -162,7 +162,7 @@ function showLayerNames() {
 With your `main.js` file saved, you need to reload the plugin to run the plugin including your changes. You can do this
 by selecting the _"••• > Reload"_ option in the UXP Developer Tool.
 
-<InlineAlert variant="warning" slots="text"></InlineAlert>
+<InlineAlert variant="warning" slots="text" />
 
 If you change anything in the `manifest.json` file, you need to do a full reload of the plugin to reflect the changes.
 To do this, first select _"Unload"_ and then _"Load"_ in the UXP Developer Tool.

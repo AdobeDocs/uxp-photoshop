@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "| Name | Type | Min Version | Description |"
 ---
 
 # CPUInfo

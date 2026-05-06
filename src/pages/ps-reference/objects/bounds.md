@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "Defines a rectangle with properties: left, right, top, and bottom."
 ---
 
 # Bounds

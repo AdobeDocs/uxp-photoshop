@@ -14,8 +14,9 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Objects for specifying save options for various file formats using Document.saveAs
 ---
 
 # Save Options
 
-Objects for specifying save options for various file formats using [Document.saveAs](/ps_reference/classes/document/#saveas)
+Objects for specifying save options for various file formats using [Document.saveAs](/ps-reference/classes/document.md#saveas)

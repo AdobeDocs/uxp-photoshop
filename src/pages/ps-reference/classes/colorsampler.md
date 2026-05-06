@@ -14,13 +14,14 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Represents a ColorSampler object in the Photoshop DOM.
 ---
 
 # ColorSampler
 
 Represents a ColorSampler object in the Photoshop DOM.
 
-ColorSamplers are created through the [ColorSamplers](/ps_reference/classes/colorsamplers/) collection via the [ColorSamplers.add](/ps_reference/classes/colorsamplers/#add) method:
+ColorSamplers are created through the [ColorSamplers](/ps-reference/classes/colorsamplers.md) collection via the [ColorSamplers.add](/ps-reference/classes/colorsamplers.md#add) method:
 
 ```javascript
 const app = require("photoshop").app;
@@ -54,16 +55,16 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| color | [*SolidColor*](/ps_reference/classes/solidcolor/) \| [*NoColor*](/ps_reference/colors/nocolor/) | R | 24.0 | The color reading of this ColorSampler in its current position. |
+| color | [*SolidColor*](/ps-reference/classes/solidcolor.md) \| [*NoColor*](/ps-reference/colors/nocolor.md) | R | 24.0 | The color reading of this ColorSampler in its current position. |
 | docId | *number* | R | 24.0 | The ID of the Document of this ColorSampler. |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 24.0 | Owner document of this ColorSampler. |
+| parent | [*Document*](/ps-reference/classes/document.md) | R | 24.0 | Owner document of this ColorSampler. |
 | position | *object* | R | 24.0 | The position of this ColorSampler. |
 | typename | *string* | R | 24.0 | The class name of the referenced object: *&quot;ColorSampler&quot;*. |
 
 ## Methods
 
 ### move
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 *void*
 
@@ -77,10 +78,10 @@ Moves the ColorSampler object to the given position
 | `position.x` | *number* | - |
 | `position.y` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### remove
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 *void*
 

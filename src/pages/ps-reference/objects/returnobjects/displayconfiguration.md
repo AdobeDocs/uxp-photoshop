@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: This object literal contains information about the properties of the connected display.
 ---
 
 # DisplayConfiguration
@@ -24,10 +25,10 @@ Further discussion of the units may be found on [Display Units](../../../ps-refe
 
 | Name | Type | Min Version |
 | :------ | :------ | :------ |
-| globalBounds | [*SimpleBounds*](/ps_reference/objects/returnobjects/simplebounds/) | 23.0 |
-| globalWorkingBounds | [*SimpleBounds*](/ps_reference/objects/returnobjects/simplebounds/) | 23.0 |
+| globalBounds | [*SimpleBounds*](/ps-reference/objects/returnobjects/simplebounds.md) | 23.0 |
+| globalWorkingBounds | [*SimpleBounds*](/ps-reference/objects/returnobjects/simplebounds.md) | 23.0 |
 | isPrimary | *boolean* | 23.0 |
 | maximumExtendedDynamicRangeColorComponent | *number* | 26.5 |
-| physicalResolution | [*Dimensions*](/ps_reference/objects/returnobjects/dimensions/) | 23.0 |
+| physicalResolution | [*Dimensions*](/ps-reference/objects/returnobjects/dimensions.md) | 23.0 |
 | scaleFactor | *number* | 23.0 |
 | screensHaveSeparateSpaces | *boolean* | 26.3 |

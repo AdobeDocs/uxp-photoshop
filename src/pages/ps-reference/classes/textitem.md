@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The Class that groups all Type related properties of a Text Layer in Photoshop.
 ---
 
 # TextItem
@@ -35,7 +36,7 @@ await textItem.convertToParagraphText();
 ```
 
 Most properties and methods are grouped for convenience in
-the [characterStyle](/ps_reference/classes/textitem/#characterstyle) and [paragraphStyle](/ps_reference/classes/textitem/#paragraphstyle) properties of [TextItem](/ps_reference/classes/textitem/).
+the [characterStyle](/ps-reference/classes/textitem.md#characterstyle) and [paragraphStyle](/ps-reference/classes/textitem.md#paragraphstyle) properties of [TextItem](/ps-reference/classes/textitem.md).
 
 ```javascript
 textItem.characterStyle.size; // 12
@@ -43,7 +44,7 @@ textItem.characterStyle.size = 24;
 textItem.paragraphStyle.hyphenation; // true
 ```
 
-Finally, the [warpStyle](/ps_reference/classes/textitem/#warpstyle) object contains all the properties related to the
+Finally, the [warpStyle](/ps-reference/classes/textitem.md#warpstyle) object contains all the properties related to the
 Warp effect applied to the text layer.
 
 ```javascript
@@ -78,23 +79,23 @@ An invalid value will result in a Range Error.
 
 ### characterStyle
 
-• **characterStyle**: [*CharacterStyle*](/ps_reference/classes/characterstyle/)
+• **characterStyle**: [*CharacterStyle*](/ps-reference/classes/characterstyle.md)
 
 The object that stores properties related to the Character panel in the Photoshop UI.
 
-___
+<HorizontalLine />
 
 ### paragraphStyle
 
-• **paragraphStyle**: [*ParagraphStyle*](/ps_reference/classes/paragraphstyle/)
+• **paragraphStyle**: [*ParagraphStyle*](/ps-reference/classes/paragraphstyle.md)
 
 The object that stores properties related to the Paragraph panel in the Photoshop UI.
 
-___
+<HorizontalLine />
 
 ### warpStyle
 
-• **warpStyle**: [*WarpStyle*](/ps_reference/classes/warpstyle/)
+• **warpStyle**: [*WarpStyle*](/ps-reference/classes/warpstyle.md)
 
 The object that stores properties related to the Warp Text dialog.
 
@@ -105,42 +106,42 @@ The object that stores properties related to the Warp Text dialog.
 | contents | *string* | R W | - | 24.1 | The actual text of the Layer. |
 | isParagraphText | *boolean* | R | - | 24.1 | True if the Text Layer is a &quot;Paragraph Text&quot;: text that uses boundaries to control the flow of characters, either horizontally or vertically. |
 | isPointText | *boolean* | R | - | 24.1 | True if the Text Layer is a &quot;Point Text&quot;: a horizontal or vertical line of text that begins where the user clicks in the image. |
-| orientation | [*Orientation*](/ps_reference/modules/constants/#orientation) | R W | HORIZONTAL | 24.1 | The text orientation. |
-| parent | [*Layer*](/ps_reference/classes/layer/) | R | - | 24.1 | The parent Layer |
-| textClickPoint | *object* | R W | - | 24.1 | The text insertion point in the document, as an &#x60;{x, y}&#x60; object where the coordinates are expressed in pixels. |
+| orientation | [*Orientation*](/ps-reference/modules/constants.md#orientation) | R W | HORIZONTAL | 24.1 | The text orientation. |
+| parent | [*Layer*](/ps-reference/classes/layer.md) | R | - | 24.1 | The parent Layer |
+| textClickPoint | *object* | R W | - | 24.1 | The text insertion point in the document, as an &#x60;\{x, y}&#x60; object where the coordinates are expressed in pixels. |
 | typename | *string* | R | - | 24.1 | The typename |
 
 ## Methods
 
 ### convertToParagraphText
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<[*TextItem*](/ps_reference/classes/textitem/)\>
+*Promise*<[*TextItem*](/ps-reference/classes/textitem.md)\>
 
 Convert a Text Layer from Point Text to Paragraph Text
 
-___
+<HorizontalLine />
 
 ### convertToPointText
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<[*TextItem*](/ps_reference/classes/textitem/)\>
+*Promise*<[*TextItem*](/ps-reference/classes/textitem.md)\>
 
 Convert a Text Layer from Paragraph Text to Point Text
 
-___
+<HorizontalLine />
 
 ### convertToShape
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 *Promise*<void\>
 
 Convert the Text Layer into a Shape Layer
 
-___
+<HorizontalLine />
 
 ### createWorkPath
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 *Promise*<void\>
 

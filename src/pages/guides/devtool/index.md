@@ -42,7 +42,7 @@ Installation walkthrough.
 
 <DiscoverBlock slots="link, text"/>
 
-[Walkthrough](../guides/devtool/udt-walkthrough)
+[Walkthrough](../../guides/devtool/udt-walkthrough/index.md)
 
 End-to-end tutorial, including creation of a plugin, and loading it into Photoshop.
 

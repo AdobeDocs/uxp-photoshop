@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: An object literal can be constructed with any of the following properties and passed to LayerComps.add.
 ---
 
 # LayerCompCreateOptions
 
-An object literal can be constructed with any of the following properties and passed to [LayerComps.add](/ps_reference/classes/layercomps/#add).
+An object literal can be constructed with any of the following properties and passed to [LayerComps.add](/ps-reference/classes/layercomps.md#add).
 As a type, `LayerCompCreateOptions` can be used in Typescript development.
 
 ```javascript

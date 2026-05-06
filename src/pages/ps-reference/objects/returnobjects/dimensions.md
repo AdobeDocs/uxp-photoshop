@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Basic 2D area specification.
 ---
 
 # Dimensions

@@ -2,6 +2,7 @@
 id: "batchplay"
 title: "BatchPlay Details"
 sidebar_label: "BatchPlay"
+description: At the heart of our APIs is batchPlay, a method that executes one or more Photoshop action commands and return their results.
 ---
 
 # batchPlay
@@ -34,7 +35,7 @@ An action descriptor contains the following components:
 * Command parameters. Describes the various parameters for the command.
 * Command execution options. Options related to how the command should be executed.
 
-The following is an example of an `actionJSON` command for hiding a layer <a id="hidelayerexample"></a>:
+The following is an example of an `actionJSON` command for hiding a layer \<a id="hidelayerexample"\>\</a\>:
 ```javascript
 {
   _obj: "hide",

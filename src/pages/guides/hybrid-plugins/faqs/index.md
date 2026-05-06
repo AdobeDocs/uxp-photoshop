@@ -10,7 +10,7 @@ contributors:
 
 # FAQs
 
-<br></br>
+\<br\>\</br\>
 
 ### How is the UXP SDK different from the Photoshop C++ SDK (aka CSDK)?
 
@@ -23,13 +23,13 @@ Before the introduction of UXP hybrid plugins, there were a few examples of thir
 
 The hybrid plugin you build using the new UXP SDK will let you bundle C++ code and JavaScript in the same plugin package and provide you with more efficient options to communicate between the two worlds.
 
-<br></br>
+\<br\>\</br\>
 
 ### Can I build a Photoshop filter (or other such capabilities) with the new Hybrid plugin SDK?
 
 Yes, see the section under [Getting started](../getting-started/index.md#photoshop-c-sdk).
 
-<br></br>
+\<br\>\</br\>
 
 ### Do I need to code sign the entire plugin bundle?
 
@@ -37,13 +37,13 @@ Yes, see the section under [Getting started](../getting-started/index.md#photosh
 
 No. You only need to sign (and notarize) the macOS executables with a valid Apple Developer certificate.
 
-<br></br>
+\<br\>\</br\>
 
 ### Do I need an Apple Developer ID to sign/notarize the executables in hybrid plugins?
 
 Yes. macOS only recognizes Developer ID-signed certificates (signed with your Apple Developer ID). Find the details in [Apple's guide](https://support.apple.com/guide/security/app-code-signing-process-sec3ad8e6e53/web).
 
-<br></br>
+\<br\>\</br\>
 
 ### How can I prepare the binaries?
 

@@ -10,12 +10,12 @@ keywords:
   - C++
   - Scripting
 title: The UXP Toolchain
-description:
+description: UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See Technology Stack for more detail.
 ---
 
 # UXP Toolchain
 
-UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See [Technology Stack](../../#the-uxp-technology-stack) for more detail.
+UXP plugins are built using modern JavaScript with the UI created using subsets of HTML and CSS. See [Technology Stack](../index.md#the-uxp-technology-stack) for more detail.
 
 ## Tools for Development
 
@@ -24,11 +24,11 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 
 - A good text editor. Any modern developer-friendly text editor should work, but many people are using [Visual Studio Code](https://code.visualstudio.com), which has deep integrations with the other pieces needed for UXP, and a wide variety of its own plugins to help with code formatting, syntax checking, JSON parsing, and so on.
 
-- The [UXP Developer Tool](../../devtool/) provides a GUI that allows you to load, unload, and debug plugins. It also creates the `.ccx` files you'll need to distribute your plugin to others.
+- The [UXP Developer Tool](../../../devtool/index.md) provides a GUI that allows you to load, unload, and debug plugins. It also creates the `.ccx` files you'll need to distribute your plugin to others.
 
 - If you're using the UXP CLI, you'll need a command-line environment. The Terminal app in macOS works fine, as does the Windows Command Prompt. VS Code has a built-in terminal window which is convenient. And there are a dozen other command-line interpreters on both platforms, including Windows PowerShell. If you're building plugins that don't involve using React, you probably don't need to worry about this.
 
-[Here is a step-by-step walkthrough showing the creation of a Photoshop UXP plugin](../../devtool/udt-walkthrough/).
+[Here is a step-by-step walkthrough showing the creation of a Photoshop UXP plugin](../../../devtool/udt-walkthrough/index.md).
 
 ### Advanced Toolchain
 
@@ -41,7 +41,7 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 - [yarn](https://yarnpkg.com): a "better" package manager than npm for Node. Many people, including those developing Photoshop UXP tools, are using yarn instead of npm.
 
 ### Installing the Tooling
-- __UXP Developer Tool for macOS and Windows__ - See the instructions [here](/devtool/) to install and run the UXP Developer Toolkit.
+- __UXP Developer Tool for macOS and Windows__ - See the instructions [here](../../..//devtool/index.md) to install and run the UXP Developer Toolkit.
 
 -  __Node.js__ - Go to the [Node.js download page](https://nodejs.org/en/download/), download the installer for your platform, and run it. This will also install npm. 
 

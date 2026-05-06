@@ -14,8 +14,9 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Objects for specifying conversion options for Document.changeMode.
 ---
 
 # Conversion Options
 
-Objects for specifying conversion options for [Document.changeMode](/ps_reference/classes/document/#changemode).
+Objects for specifying conversion options for [Document.changeMode](/ps-reference/classes/document.md#changemode).

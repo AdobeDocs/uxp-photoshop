@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: A collections class allowing for array access into a document's channels,
 ---
 
 # Channels
@@ -32,7 +33,7 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 
 ## Indexable
 
-▪ [index: *number*]: [*Channel*](/ps_reference/classes/channel/)
+▪ [index: *number*]: [*Channel*](/ps-reference/classes/channel.md)
 
 Used to access the channels in the collection
 
@@ -50,24 +51,24 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | length | *number* | R | 23.0 | Number of Channel elements in this collection. |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 23.0 | The owner document of this Channel collection. |
+| parent | [*Document*](/ps-reference/classes/document.md) | R | 23.0 | The owner document of this Channel collection. |
 | typename | *string* | R | 23.0 | The name for this object collection: Channels. |
 
 ## Methods
 
 ### add
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-[*Channel*](/ps_reference/classes/channel/)
+[*Channel*](/ps-reference/classes/channel.md)
 
 Create a new alpha channel in this document.
 
-___
+<HorizontalLine />
 
 ### getByName
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-[*Channel*](/ps_reference/classes/channel/)
+[*Channel*](/ps-reference/classes/channel.md)
 
 Find the first channel with the matching name.
 
@@ -80,10 +81,10 @@ Find the first channel with the matching name.
 | :------ | :------ |
 | `name` | *string* |
 
-___
+<HorizontalLine />
 
 ### removeAll
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *void*
 

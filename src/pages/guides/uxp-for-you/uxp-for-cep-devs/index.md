@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: UXP for CEP Developers
-description:
+description: The Common Extensibility Platform has been the method of choice for plugin developers who needed anything beyond the simplest of user interfaces. While it'
 ---
 
 # UXP for CEP Developers

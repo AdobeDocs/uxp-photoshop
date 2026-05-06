@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: WIP. For now, only contains an id field. In the future, this may become a class.
 ---
 
 # Tool

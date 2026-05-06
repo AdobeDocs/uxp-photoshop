@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Below are color classes that are used internally for SolidColor.
 ---
 
 # Colors

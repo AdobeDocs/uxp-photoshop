@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Photoshop Actions
 ---
 
 # ActionSet
@@ -27,7 +28,7 @@ Actions panel will have a hierarchy of Action Sets that contain a list of Action
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| actions | [*Action*](/ps_reference/classes/action/)[] | R | 22.1 | List of Actions in this Action Set |
+| actions | [*Action*](/ps-reference/classes/action.md)[] | R | 22.1 | List of Actions in this Action Set |
 | id | *number* | R | 22.1 | The internal ID of this Action Set Can be used for batchPlay calls, used internally |
 | index | *number* | R | 22.1 | Zero-based index of this Action Set in the Actions palette |
 | name | *string* | R W | 22.1 | The name of this Action Set, displayed in the panel |
@@ -36,25 +37,25 @@ Actions panel will have a hierarchy of Action Sets that contain a list of Action
 ## Methods
 
 ### delete
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
 *void*
 
 Deletes this Action Set from the Actions panel
 
-___
+<HorizontalLine />
 
 ### duplicate
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
-[*ActionSet*](/ps_reference/classes/actionset/)
+[*ActionSet*](/ps-reference/classes/actionset.md)
 
 Creates a copy of this Action Set
 
-___
+<HorizontalLine />
 
 ### play
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
 **async** : *Promise*<void\>
 

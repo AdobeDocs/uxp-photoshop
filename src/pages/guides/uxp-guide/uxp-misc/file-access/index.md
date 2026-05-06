@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: File Access in UXP
-description:
+description: "File and folder access is an important part of many plugins. Files and folders can exist in these locations:"
 ---
 
 # File I/O
@@ -23,7 +23,7 @@ File and folder access is an important part of many plugins. Files and folders c
 * In temporary plugin-specific storage.
 * External to the plugin, anywhere in the filesystem. Because of sandboxing requirements of recent OS releases, UXP does not allow arbitrary access to any file on the host system. Therefore, these files are accessed by making a request of the user (by showing a file-picker dialog) and obtaining a _token_.
 * In a UXP-specific secure store; this is for secure files that contain sensitive information. See *Secure Storage*, below.
-* On the network (not covered here; see the [Networking](/guides/uxp_guide/uxp-misc/network-io/) section.)
+* On the network (not covered here; see the [Networking](/guides/uxp-guide/uxp-misc/network-io/index.md) section.)
 
 > In the near future, UXP will provide a permissions system for persistent tokens so developers won’t need user interaction for the same path every session. For now, if you need constant access to a location to write and read files, please use the UXP sanctioned locations for your plugin, accessed by the methods listed in the FileSystemProvider object of UXP.
 

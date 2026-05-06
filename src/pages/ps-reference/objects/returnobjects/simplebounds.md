@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Basic rectangular area specified by four values.
 ---
 
 # SimpleBounds

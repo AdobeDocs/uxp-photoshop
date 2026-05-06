@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- LayerCompCreateOptions"
 ---
 
 # types/LayerCompTypes
 
 ## Interfaces
 
-- [LayerCompCreateOptions](/ps_reference/objects/createoptions/layercompcreateoptions/)
-- [LayerCompRecaptureOptions](/ps_reference/objects/options/layercomprecaptureoptions/)
+- [LayerCompCreateOptions](/ps-reference/objects/createoptions/layercompcreateoptions.md)
+- [LayerCompRecaptureOptions](/ps-reference/objects/options/layercomprecaptureoptions.md)

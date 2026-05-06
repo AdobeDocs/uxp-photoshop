@@ -2,6 +2,7 @@
 id: "prototype"
 title: "Extending DOM APIs"
 sidebar_label: "API Extensions"
+description: We build the DOM APIs with a lot of intent and care to work around expectations Photoshop may have when a command is being batchPlayed.
 ---
 
 # Prototype
@@ -17,13 +18,13 @@ This is where [prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaSc
 You can overload the many classes' prototype at the start or launch of your plugin or via a library you wrote that is loaded before your code.
 
 As a plug-in developer, you have access to these prototypes:
- * [app.Photoshop](../../classes/photoshop)
- * [app.Document](../../classes/document)
- * [app.Layer](../../classes/layer)
- * [app.ActionSet](../../classes/actionset)
- * [app.Action](../../classes/action)
+ * [app.Photoshop](../classes/photoshop.md)
+ * [app.Document](../classes/document.md)
+ * [app.Layer](../classes/layer.md)
+ * [app.ActionSet](../classes/actionset.md)
+ * [app.Action](../classes/action.md)
 
-For example, suppose you want to add a new method to [Document](../../classes/document) which renames all layers, prepending '_' to them. You can run the following at the start of your plug-in.
+For example, suppose you want to add a new method to [Document](../classes/document.md) which renames all layers, prepending '_' to them. You can run the following at the start of your plug-in.
 
 ```javascript
 require('photoshop').app.Document.prototype.prependLodash = function () {

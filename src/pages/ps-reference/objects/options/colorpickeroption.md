@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The options used when specifying a color picker in Preferences.
 ---
 
 # ColorPickerOption
@@ -23,4 +24,4 @@ The options used when specifying a color picker in Preferences.
 | Name | Type | Min Version | Description |
 | :------ | :------ | :------ | :------ |
 | pluginID | *string* | 24.0 |  |
-| type | [*ColorPicker*](/ps_reference/modules/constants/#colorpicker) | 24.0 | The color picker to use. |
+| type | [*ColorPicker*](/ps-reference/modules/constants.md#colorpicker) | 24.0 | The color picker to use. |

@@ -14,12 +14,13 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: An object literal can be constructed with any of the following properties
 ---
 
 # DocumentCreateOptions
 
 An object literal can be constructed with any of the following properties
-and passed to [Photoshop.createDocument](/ps_reference/classes/photoshop/#createdocument).
+and passed to [Photoshop.createDocument](/ps-reference/classes/photoshop.md#createdocument).
 As a type, `DocumentCreateOptions` can be used in Typescript development.
 
 ```javascript
@@ -30,10 +31,10 @@ require('photoshop').app.createDocument(options);
 | Name | Type | Default | Range | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ | :------ |
 | depth | *number* | 8 | [8,16,32] | 22.5 | Bit depth |
-| fill | [*DocumentFill*](/ps_reference/modules/constants/#documentfill) | - | - | 22.5 | Fill color of the document. |
-| fillColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | - | - | 23.0 | Custom fill color of the document. |
+| fill | [*DocumentFill*](/ps-reference/modules/constants.md#documentfill) | - | - | 22.5 | Fill color of the document. |
+| fillColor | [*SolidColor*](/ps-reference/classes/solidcolor.md) | - | - | 23.0 | Custom fill color of the document. |
 | height | *number* | - | - | 22.5 | Height of image in pixels. |
-| mode | [*NewDocumentMode*](/ps_reference/modules/constants/#newdocumentmode) | - | - | 22.5 | ImageMode class. |
+| mode | [*NewDocumentMode*](/ps-reference/modules/constants.md#newdocumentmode) | - | - | 22.5 | ImageMode class. |
 | name | *string* | - | - | 22.5 | The name to give the new document. |
 | pixelScaleFactor | *number* | - | - | 22.5 | Pixel Scale Factor. |
 | preset | *string* | - | - | 22.5 | Preset. |

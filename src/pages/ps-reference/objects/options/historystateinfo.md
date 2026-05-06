@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Options for the history state that Document.suspendHistory will create.
 ---
 
 # HistoryStateInfo
 
-Options for the history state that [Document.suspendHistory](/ps_reference/classes/document/#suspendhistory) will create.
+Options for the history state that [Document.suspendHistory](/ps-reference/classes/document.md#suspendhistory) will create.
 
 | Name | Type | Min Version | Description |
 | :------ | :------ | :------ | :------ |

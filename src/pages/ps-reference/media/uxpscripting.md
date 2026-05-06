@@ -2,6 +2,7 @@
 id: "uxpscriptingphotoshop"
 title: "UXP Scripting in Photoshop"
 sidebar_label: "UXP Scripting"
+description: Running a standalone JavaScript file in UXP is now available in Photoshop 23.5. As discussed in the general documention of UXP Scripting, Photoshop recogni
 ---
 
 # UXP Scripting in Photoshop
@@ -16,7 +17,7 @@ To run a script file, you have multiple options.
 - Play an Action that executes a script file.
 - (_Coming soon_) Double-click via a file type association for .psjs registered at installation.
 
-<br />
+\<br /\>
 
 ## Developing Script files
 As described in the [general documentation for UXP Scripting](../../scripting/index.md), script files are executed in a context that is mostly the same as those used in UXP plugins.  The primary task of controlling Photoshop is the same.
@@ -44,7 +45,7 @@ _Note the empty line at the top, you'll see why in the UDT screenshot._
 
 You may have noticed the use of `batchPlay` to achieve one of the above steps.  We have an [at-length description](../../ps-reference/media/batchplay.md) of why to help break down the situation.
 
-<br />
+\<br /\>
 
 ## Debugging Script files
 Starting with Photoshop 23.5 and [UXP Developer Tool](https://creativecloud.adobe.com/apps/download/uxp-developer-tools) (UDT) version 1.6.0, you can step through and debug a script.  

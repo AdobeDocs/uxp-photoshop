@@ -14,12 +14,13 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "Argument and return objects used by:"
 ---
 
 # Other Objects
 
 Argument and return objects used by:
-- [LayerComp.recapture](/ps_reference/classes/layercomp/#recapture)
-- [ParagraphStyle.hyphenationFeatures](/ps_reference/classes/paragraphstyle/#properties)
-- [ParagraphStyle.justificationFeatures](/ps_reference/classes/paragraphstyle/#properties)
-- [Preferences.PreferencesGeneral](/ps_reference/classes/preferences/preferencesgeneral/)
+- [LayerComp.recapture](/ps-reference/classes/layercomp.md#recapture)
+- [ParagraphStyle.hyphenationFeatures](/ps-reference/classes/paragraphstyle.md#properties)
+- [ParagraphStyle.justificationFeatures](/ps-reference/classes/paragraphstyle.md#properties)
+- [Preferences.PreferencesGeneral](/ps-reference/classes/preferences/preferencesgeneral.md)

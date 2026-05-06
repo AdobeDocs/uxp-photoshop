@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: These property values are used to apply hyphenation to paragraph text.
 ---
 
 # HyphenationProperties

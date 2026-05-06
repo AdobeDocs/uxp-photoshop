@@ -9,7 +9,7 @@ keywords:
   - Manifest
   - Scripting
 title: Manifest File Structure - UXP Manifest
-description:
+description: The plugin's manifest is where you include metadata about your plugin. Simply put, the manifest is a list of facts about your plugin in the form of a JSON
 ---
 
 # UXP Manifest v4
@@ -80,10 +80,10 @@ Key path | Type | Description | Required
 `manifestVersion` | `number` | The version of the manifest. For Photoshop, this should be `4` or higher. | Develop / Publish
 `id`     | `string` | Unique identifier for your plugin. You can get your unique ID on the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/).%7C Develop / Publish
 `name`   | `string` | The name should be 3 - 45 characters. We recommend your plugin name matches the _project name_ you created when getting your plugin ID from the Adobe Developer Console. | Develop / Publish
-`version`| `string` | Version number of your plugin in `x.y.z` format. <br/>Version must be three segments and each version component must be between `0` and `99`. | Develop / Publish
+`version`| `string` | Version number of your plugin in `x.y.z` format.  Version must be three segments and each version component must be between `0` and `99`. | Develop / Publish
 `main`   | `string` | Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. | Optional (defaults to `main.js`)
-`icons` | `IconDefinition[]` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) <br/> PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. <br/> You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../../distribution/packaging-your-plugin/index.md) to learn more. | Publish
-| `host` | `HostDefinition\|HostDefinition[]` | Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports. <br/><br/> **Note:** An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace | Develop / Publish
+`icons` | `IconDefinition[]` | Icons for your plugin (which may be rendered in various contexts, such as the plugin panel)   PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB.   You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our ["Publishing your plugin" guide](../../../distribution/packaging-your-plugin/index.md) to learn more. | Publish
+| `host` | `HostDefinition\|HostDefinition[]` | Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports.    **Note:** An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace | Develop / Publish
 `entrypoints` | `EntryPointDefinition[]`| Describes the entries your plugin adds to the _Plugins_ menu & plugin panel. See the next section for details. | Develop / Publish
 
 ## Icons
@@ -111,7 +111,7 @@ The `host` field is an _object_ matching the `HostDefinition` format specified b
 Key | Type | Description | Required
 ----|------|-------------| --------
 `app` | `string` | Indicates the supported application for this plugin (currently, the only valid values here are `"XD"` and `"PS"`). | Develop / Publish
-`minVersion` | `string` | Minimum required version of the host app (in `x.y` format) that can run this plugin. The lowest valid version for manifest V4 plugins is version `22.0`. <br/> **Note:** The version number must be at least two segments. Typically, you'll leave the minor segment set to `0`, e.g. `22.0`. | Develop / Publish
+`minVersion` | `string` | Minimum required version of the host app (in `x.y` format) that can run this plugin. The lowest valid version for manifest V4 plugins is version `22.0`.   **Note:** The version number must be at least two segments. Typically, you'll leave the minor segment set to `0`, e.g. `22.0`. | Develop / Publish
 `maxVersion` | `string` | Maximum version of host app that can run this plugin. Same formatting as `host.minVersion`. | Optional
 
 ## Entry Points
@@ -127,11 +127,11 @@ Key | Type | Description
 `type` | `string` | Entry point type: either `"command"` or `"panel"`.
 `id`   | `string` | Unique identifier for the entry point. This `id` will also be mapped to entrypoints defined in your plugin code.
 `label` | `string` | Label for this menu item that the user will select to run your plugin. May be a single string _or_ a dictionary of localized strings.
-`shortcut` | `Object` | _Optional._ <br/><br/> Object defining Mac and Windows keyboard shortcuts for this menu item. See "Keyboard shortcuts" below for details. Only valid for `command` entry points.
-`minimumSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred minimum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the minimum width depending upon context.
-`maximumSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred maximum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the maximum width depending upon context.
-`preferredDockedSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred size of the panel when docked. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
-`preferredFloatingSize` | `Object` | _Optional._ Valid only for `panel` entry points. <br/><br/> Object defining the preferred size of the panel when floating. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
+`shortcut` | `Object` | _Optional._    Object defining Mac and Windows keyboard shortcuts for this menu item. See "Keyboard shortcuts" below for details. Only valid for `command` entry points.
+`minimumSize` | `Object` | _Optional._ Valid only for `panel` entry points.    Object defining the preferred minimum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the minimum width depending upon context.
+`maximumSize` | `Object` | _Optional._ Valid only for `panel` entry points.    Object defining the preferred maximum size of the panel. This object is of the form `{width: number, height: number}` where each length is in pixel units. The host app may not guarantee the maximum width depending upon context.
+`preferredDockedSize` | `Object` | _Optional._ Valid only for `panel` entry points.    Object defining the preferred size of the panel when docked. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
+`preferredFloatingSize` | `Object` | _Optional._ Valid only for `panel` entry points.    Object defining the preferred size of the panel when floating. This object is of the form `{width: number, height: number}` where each length is in pixel units. This setting is a preference, and may not be honored.
 `icons` | `array<object>` | Icons for your panel. Each panel in a plugin requires its own set of icon set, which is shown in the toolbars when minimized, and has no additional treatment supplied. A panel icon is 23x23 (46x46) in size, and can be transparent. These are different from the icons in the main plugin. They are optional during development, but *must* be present in the manifest and the project if the plugin is submitted to the Plugin Marketplace via the Developer Console.
 
 ### Keyboard shortcuts

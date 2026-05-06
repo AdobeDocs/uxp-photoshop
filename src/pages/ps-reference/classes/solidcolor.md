@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Represents a color, and allows for mapping into all available Photoshop color models.
 ---
 
 # Solid Color
@@ -62,9 +63,9 @@ c.rgb.green = 128; // Typename will change back to "RGBColor"
 ## Constructors
 
 ### constructor
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-[*SolidColor*](/ps_reference/classes/solidcolor/)
+[*SolidColor*](/ps-reference/classes/solidcolor.md)
 
 All colors default to pure white.
 
@@ -77,24 +78,24 @@ const color = new SolidColor();
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `model?` | [*ColorModel*](/ps_reference/modules/constants/#colormodel) | Color model to start. |
+| `model?` | [*ColorModel*](/ps-reference/modules/constants.md#colormodel) | Color model to start. |
 
 ## Properties
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| cmyk | [*CMYKColor*](/ps_reference/colors/cmykcolor/) | R W | 23.0 | The color&#x27;s representation in CMYK color space. |
-| gray | [*GrayColor*](/ps_reference/colors/graycolor/) | R W | 23.0 | The color&#x27;s representation in grayscale. |
-| hsb | [*HSBColor*](/ps_reference/colors/hsbcolor/) | R W | 23.0 | The color&#x27;s representation in HSB color space. |
-| lab | [*LabColor*](/ps_reference/colors/labcolor/) | R W | 23.0 | The color&#x27;s representation in LAB color space. |
-| nearestWebColor | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R | 23.0 | The color&#x27;s nearest match within the 216 web-safe colors. |
-| rgb | [*RGBColor*](/ps_reference/colors/rgbcolor/) | R W | 23.0 | The color&#x27;s representation in RGB color space. |
+| cmyk | [*CMYKColor*](/ps-reference/colors/cmykcolor.md) | R W | 23.0 | The color&#x27;s representation in CMYK color space. |
+| gray | [*GrayColor*](/ps-reference/colors/graycolor.md) | R W | 23.0 | The color&#x27;s representation in grayscale. |
+| hsb | [*HSBColor*](/ps-reference/colors/hsbcolor.md) | R W | 23.0 | The color&#x27;s representation in HSB color space. |
+| lab | [*LabColor*](/ps-reference/colors/labcolor.md) | R W | 23.0 | The color&#x27;s representation in LAB color space. |
+| nearestWebColor | [*RGBColor*](/ps-reference/colors/rgbcolor.md) | R | 23.0 | The color&#x27;s nearest match within the 216 web-safe colors. |
+| rgb | [*RGBColor*](/ps-reference/colors/rgbcolor.md) | R W | 23.0 | The color&#x27;s representation in RGB color space. |
 | typename | *string* | R | 24.2 | The class name of the referenced object: *&quot;SolidColor&quot;*. |
 
 ## Methods
 
 ### isEqual
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *boolean*
 
@@ -112,4 +113,4 @@ a color that is converted from RGB to CMYK and back may not be visually equal.
 
 | Name | Type |
 | :------ | :------ |
-| `color` | [*SolidColor*](/ps_reference/classes/solidcolor/) |
+| `color` | [*SolidColor*](/ps-reference/classes/solidcolor.md) |

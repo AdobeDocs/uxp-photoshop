@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Tools preferences
 ---
 
 # PreferencesTools

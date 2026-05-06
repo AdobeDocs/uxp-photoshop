@@ -2,6 +2,7 @@
 id: "eventcodes"
 title: "Event Codes"
 sidebar_label: "Event Codes"
+description: There are two kinds of events to use with the two addNotificationListener methods.
 ---
 
 ## Event Codes

@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The top level application object, root of the Photoshop DOM
 ---
 
 # Photoshop
@@ -30,21 +31,21 @@ From here you can access open documents, tools, UI elements and run commands or 
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| actionTree | [*ActionSet*](/ps_reference/classes/actionset/)[] | R | 23.0 | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing Actions. |
-| activeDocument | [*Document*](/ps_reference/classes/document/) | R W | 23.0 | The current document that has the application&#x27;s focus. |
-| backgroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The background color and color style for documents. [(24.2)](/ps_reference/changelog#other-fixes) |
-| currentTool | [*Tool*](/ps_reference/objects/tool/) | R | 23.0 | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes. |
-| displayDialogs | [*DialogModes*](/ps_reference/modules/constants/#dialogmodes) | R W | 23.0 | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
-| documents | [*Documents*](/ps_reference/classes/documents/) | R | 23.0 | A list of the documents currently open. |
-| fonts | [*TextFonts*](/ps_reference/classes/textfonts/) | R | 23.0 | The fonts installed on this system. |
-| foregroundColor | [*SolidColor*](/ps_reference/classes/solidcolor/) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). [(24.2)](/ps_reference/changelog#other-fixes) |
-| preferences | [*Preferences*](/ps_reference/classes/preferences/) | R | 24.0 | Contains Photoshop preferences grouped into several categories similar to the Preferences dialog. |
+| actionTree | [*ActionSet*](/ps-reference/classes/actionset.md)[] | R | 23.0 | Returns the action tree shown in Actions panel, as an array of ActionSets, each containing Actions. |
+| activeDocument | [*Document*](/ps-reference/classes/document.md) | R W | 23.0 | The current document that has the application&#x27;s focus. |
+| backgroundColor | [*SolidColor*](/ps-reference/classes/solidcolor.md) | R W | 23.0 | The background color and color style for documents. [(24.2)](/ps-reference/changelog/index.md#other-fixes) |
+| currentTool | [*Tool*](/ps-reference/objects/tool.md) | R | 23.0 | Current selected tool. For now, the Tool class is an object with only an &#x60;id&#x60; field. In the future, we aim to provide tools with their own classes. |
+| displayDialogs | [*DialogModes*](/ps-reference/modules/constants.md#dialogmodes) | R W | 23.0 | The dialog mode for the application, which controls what types of dialogs should be displayed when your code is interacting with Photoshop. |
+| documents | [*Documents*](/ps-reference/classes/documents.md) | R | 23.0 | A list of the documents currently open. |
+| fonts | [*TextFonts*](/ps-reference/classes/textfonts.md) | R | 23.0 | The fonts installed on this system. |
+| foregroundColor | [*SolidColor*](/ps-reference/classes/solidcolor.md) | R W | 23.0 | The foreground color (used to paint, fill, and stroke selections). [(24.2)](/ps-reference/changelog/index.md#other-fixes) |
+| preferences | [*Preferences*](/ps-reference/classes/preferences.md) | R | 24.0 | Contains Photoshop preferences grouped into several categories similar to the Preferences dialog. |
 | typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Photoshop&quot;*. |
 
 ## Methods
 
 ### batchPlay
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *Promise*<ActionDescriptor[]\>
 
@@ -59,25 +60,25 @@ without updating the UI. This API is subject to change and may be accessible in 
 | `commands` | *any* |
 | `options` | *any* |
 
-___
+<HorizontalLine />
 
 ### bringToFront
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *void*
 
 Brings application to focus, useful when your script ends, or requires an input.
 
-___
+<HorizontalLine />
 
 ### convertUnits
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.4</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.4\</span\>
 
 *number*
 
 Convert the given value from one unit to another. Available units are:
-Constants.Units.{CM, MM, INCHES, PIXELS, POINTS, PICAS}.
-Use [Document.resolution](/ps_reference/classes/document/#resolution) when converting from or to PIXELS.
+Constants.Units.\{CM, MM, INCHES, PIXELS, POINTS, PICAS}.
+Use [Document.resolution](/ps-reference/classes/document.md#resolution) when converting from or to PIXELS.
 For example, use this routine for converting a document's width from pixels to inches.
 
 ```javascript
@@ -95,16 +96,16 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `fromValue` | *number* | The value that is to be converted. |
-| `fromUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the fromValue is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
-| `toUnits` | [*Units*](/ps_reference/modules/constants/#units) | The unit that the return value is in. Use [Constants.Units](/ps_reference/modules/constants/#units) for valid values. |
+| `fromUnits` | [*Units*](/ps-reference/modules/constants.md#units) | The unit that the fromValue is in. Use [Constants.Units](/ps-reference/modules/constants.md#units) for valid values. |
+| `toUnits` | [*Units*](/ps-reference/modules/constants.md#units) | The unit that the return value is in. Use [Constants.Units](/ps-reference/modules/constants.md#units) for valid values. |
 | `resolution?` | *number* | The pixels per inch value to use when converting to and from pixel values. |
 
-___
+<HorizontalLine />
 
 ### createDocument
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
 
 Create a new document.
 
@@ -117,7 +118,7 @@ the other presets that come installed with Photoshop or created by users.
 An object with one or more parameters can also be supplied. Any parameter
 missing will be set to the default of: width 2100 pixels, height 1500 pixels,
 resolution 300 pixels per inch, mode:
-[RGB](../../modules/constants/#newdocumentmode), and a fill of white with
+[RGB](../modules/constants.md#newdocumentmode), and a fill of white with
 no transparency.
 
 ```javascript
@@ -143,18 +144,18 @@ let fillColorDoc = await app.createDocument({
 });
 ```
 
-Updates: [(26.9)](/ps_reference/changelog/#photoshop-269-july-2025)
+Updates: [(26.9)](/ps-reference/changelog/index.md#photoshop-269-july-2025)
 
 #### Parameters
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `options` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | {} | An object literal containing the option values. |
+| `options` | [*DocumentCreateOptions*](/ps-reference/objects/createoptions/documentcreateoptions.md) | \{} | An object literal containing the option values. |
 
-___
+<HorizontalLine />
 
 ### getColorProfiles
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 *string*[]
 
@@ -166,17 +167,17 @@ List of installed color profiles, for RGB and Gray modes.
 | :------ | :------ | :------ | :------ |
 | `colorMode` | *string* | 'RGB' | Specify which color mode's profiles to list. (default: "RGB", options: "Gray") |
 
-___
+<HorizontalLine />
 
 ### open
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
 
 Opens the specified document and returns the model
 
 > *Note that this API requires a
-[UXPFileEntry](../../../uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/File/)
+[UXPFileEntry](../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file.md)
 object as its argument.
 
 ```javascript
@@ -194,10 +195,10 @@ const document = await app.open();
 | :------ | :------ |
 | `entry?` | File |
 
-___
+<HorizontalLine />
 
 ### showAlert
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *Promise*<void\>
 
@@ -209,10 +210,10 @@ Shows an alert in Photoshop with the given message.
 | :------ | :------ |
 | `message` | *string* |
 
-___
+<HorizontalLine />
 
 ### updateUI
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">26.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>26.0\</span\>
 
 **async** : *Promise*<void\>
 

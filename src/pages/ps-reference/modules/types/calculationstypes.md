@@ -14,19 +14,20 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- CalculationsOptions"
 ---
 
 # types/CalculationsTypes
 
 ## Interfaces
 
-- [CalculationsOptions](/ps_reference/objects/options/calculationsoptions/)
-- [CalculationsSource](/ps_reference/objects/options/calculationssource/)
+- [CalculationsOptions](/ps-reference/objects/options/calculationsoptions.md)
+- [CalculationsSource](/ps-reference/objects/options/calculationssource.md)
 
 ## Type aliases
 
 ### CalculationsChannelType
 
-Ƭ **CalculationsChannelType**: ComponentChannel \| AlphaChannel \| [*GRAY*](/ps_reference/modules/constants/#gray) \| [*TRANSPARENCY*](/ps_reference/modules/constants/#transparency) \| [*SELECTION*](/ps_reference/modules/constants/#selection)
+Ƭ **CalculationsChannelType**: ComponentChannel \| AlphaChannel \| [*GRAY*](/ps-reference/modules/constants.md#gray) \| [*TRANSPARENCY*](/ps-reference/modules/constants.md#transparency) \| [*SELECTION*](/ps-reference/modules/constants.md#selection)
 
-Type for the Channel choice in [CalculationsSource](/ps_reference/objects/options/calculationssource/)
+Type for the Channel choice in [CalculationsSource](/ps-reference/objects/options/calculationssource.md)

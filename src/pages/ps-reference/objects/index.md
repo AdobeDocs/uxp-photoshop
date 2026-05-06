@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The objects defined here are to be created as object literals for use with DOM methods.
 ---
 
 # Objects

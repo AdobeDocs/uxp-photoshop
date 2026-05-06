@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The module that facilitates Actions being performed in the
 ---
 
 # photoshopAction
@@ -29,7 +30,7 @@ const {action} = require('photoshop');
 ## Functions
 
 ### addNotificationListener
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -48,10 +49,10 @@ the [introspection methods described under `batchPlay`](../../ps-reference/media
 | `events` | *string*[] |
 | `callback` | NotificationListener |
 
-___
+<HorizontalLine />
 
 ### batchPlay
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *Promise*<ActionDescriptor[]\>
 
@@ -68,12 +69,12 @@ await action.batchPlay(commands);
 | Name | Type |
 | :------ | :------ |
 | `commands` | ActionDescriptor[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/objects/options/batchplaycommandoptions/) |
+| `options?` | [*BatchPlayCommandOptions*](/ps-reference/objects/options/batchplaycommandoptions.md) |
 
-___
+<HorizontalLine />
 
 ### batchPlaySync
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 ActionDescriptor[]
 
@@ -90,12 +91,12 @@ await action.batchPlay(commands);
 | Name | Type |
 | :------ | :------ |
 | `commands` | ActionDescriptor[] |
-| `options?` | [*BatchPlayCommandOptions*](/ps_reference/objects/options/batchplaycommandoptions/) |
+| `options?` | [*BatchPlayCommandOptions*](/ps-reference/objects/options/batchplaycommandoptions.md) |
 
-___
+<HorizontalLine />
 
 ### getIDFromString
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 *number*
 
@@ -108,10 +109,10 @@ If the string is not already registered, a new ID will be created and returned.
 | :------ | :------ |
 | `value` | *string* |
 
-___
+<HorizontalLine />
 
 ### recordAction
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Promise*<void\>
 
@@ -135,10 +136,10 @@ async function actionHandler(executionContext, info) {
 | `options` | RecordActionOptions |  |
 | `info` | ActionDescriptor | Object with action specific information. See [Action Recording](../../ps-reference/media/action-recording.md). |
 
-___
+<HorizontalLine />
 
 ### removeNotificationListener
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *Promise*<void\>
 
@@ -155,10 +156,10 @@ await action.removeNotificationListener(['open'], onOpenNewDocument);
 | `events` | *string*[] |
 | `listener` | NotificationListener |
 
-___
+<HorizontalLine />
 
 ### validateReference
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *boolean*
 
@@ -169,7 +170,7 @@ This feature is intended for advanced developers who understand well how batchPl
 Validate reference could get handy when you want to add new DOM functionality or use low-level code for
 performance optimization.
 
-See [Action references](../batchplay#action-references) for details.
+See [Action references](batchplay.md#action-references) for details.
 
 Supported reference classes:
 `action`,

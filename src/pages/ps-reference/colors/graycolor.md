@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Defines a grayscale color, used in SolidColor object.
 ---
 
 # GrayColor
 
-Defines a grayscale color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Defines a grayscale color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 ## Properties
 

@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- HyphenationProperties"
 ---
 
 # types/TextTypes
 
 ## Interfaces
 
-- [HyphenationProperties](/ps_reference/objects/options/hyphenationproperties/)
-- [JustificationProperties](/ps_reference/objects/options/justificationproperties/)
+- [HyphenationProperties](/ps-reference/objects/options/hyphenationproperties.md)
+- [JustificationProperties](/ps-reference/objects/options/justificationproperties.md)

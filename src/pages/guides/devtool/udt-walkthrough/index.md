@@ -17,7 +17,7 @@ description: Learn how to navigate and use the UXP Developer Tool to create and 
 
 So you have Photoshop, you have the UXP Developer Tool, and you have Visual Studio Code or other programmer's text editor. Now what?
 
-First make sure you have the UXP Developer Tool (UDT). Learn about installing UDT from [here](../devtool/installation). Then follow these steps:
+First make sure you have the UXP Developer Tool (UDT). Learn about installing UDT from [here](../../devtool/installation.md). Then follow these steps:
 
 
 1. Launch Photoshop.

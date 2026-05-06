@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: To use any constant, import the constants object from the photoshop module first.
 ---
 
 # Constants
@@ -32,7 +33,7 @@ await app.activeDocument.resizeImage(
 ## Enumerations
 
 ### AnchorPosition
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The point around which to transform an object.
 
@@ -50,13 +51,13 @@ This is the point that does not move when an object is rotated or resized
 | TOPLEFT | - |
 | TOPRIGHT | - |
 
-___
+<HorizontalLine />
 
 ### AntiAlias
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Method to use to smooth edges by softening the color transition between edge pixels
-and the background. Used in a [CharacterStyle.antiAliasMethod](/ps_reference/classes/characterstyle/#antialiasmethod)
+and the background. Used in a [CharacterStyle.antiAliasMethod](/ps-reference/classes/characterstyle.md#antialiasmethod)
 
 | Name | Description |
 | :------ | :------ |
@@ -66,12 +67,12 @@ and the background. Used in a [CharacterStyle.antiAliasMethod](/ps_reference/cla
 | SMOOTH | - |
 | STRONG | - |
 
-___
+<HorizontalLine />
 
 ### ApplyImageBlendMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-The kind of blending used in a [Layer.applyImage](/ps_reference/classes/layer/#applyimage) operation.
+The kind of blending used in a [Layer.applyImage](/ps-reference/classes/layer.md#applyimage) operation.
 
 | Name | Description |
 | :------ | :------ |
@@ -99,12 +100,12 @@ The kind of blending used in a [Layer.applyImage](/ps_reference/classes/layer/#a
 | SUBTRACT | - |
 | VIVIDLIGHT | - |
 
-___
+<HorizontalLine />
 
 ### ApplyImageChannel
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-Special channels used in [Layer.applyImage](/ps_reference/classes/layer/#applyimage).
+Special channels used in [Layer.applyImage](/ps-reference/classes/layer.md#applyimage).
 
 | Name | Description |
 | :------ | :------ |
@@ -114,23 +115,23 @@ Special channels used in [Layer.applyImage](/ps_reference/classes/layer/#applyim
 | SELECTION | - |
 | TRANSPARENCY | - |
 
-___
+<HorizontalLine />
 
 ### ApplyImageLayer
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-Use merged layers as a source in [Layer.applyImage](/ps_reference/classes/layer/#applyimage).
+Use merged layers as a source in [Layer.applyImage](/ps-reference/classes/layer.md#applyimage).
 
 | Name | Description |
 | :------ | :------ |
 | MERGED | - |
 
-___
+<HorizontalLine />
 
 ### AutoKernType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](/ps_reference/classes/characterstyle/#autokerning)
+The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](/ps-reference/classes/characterstyle.md#autokerning)
 
 | Name | Description |
 | :------ | :------ |
@@ -138,10 +139,10 @@ The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](
 | METRICS | - |
 | OPTICAL | - |
 
-___
+<HorizontalLine />
 
 ### BMPDepthType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Number of bits per channel (also called pixel depth or color depth).
 
@@ -156,12 +157,12 @@ The number selected indicates the exponent of 2. With 8 bits per channel, we hav
 | THIRTYTWO | - |
 | TWENTYFOUR | - |
 
-___
+<HorizontalLine />
 
 ### Baseline
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The baseline style to use in text. Used in [CharacterStyle.baseline](/ps_reference/classes/characterstyle/#baseline)
+The baseline style to use in text. Used in [CharacterStyle.baseline](/ps-reference/classes/characterstyle.md#baseline)
 
 | Name | Description |
 | :------ | :------ |
@@ -169,12 +170,12 @@ The baseline style to use in text. Used in [CharacterStyle.baseline](/ps_referen
 | SUBSCRIPT | - |
 | SUPERSCRIPT | - |
 
-___
+<HorizontalLine />
 
 ### BitmapConversionType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
+Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps-reference/objects/conversionoptions/bitmapconversionoptions.md)
 
 | Name | Description |
 | :------ | :------ |
@@ -184,12 +185,12 @@ Specifies the quality of an image you are converting to bitmap mode. Used in [Bi
 | HALFTONESCREEN | - |
 | PATTERNDITHER | - |
 
-___
+<HorizontalLine />
 
 ### BitmapHalfToneType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps_reference/objects/conversionoptions/bitmapconversionoptions/)
+Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps-reference/objects/conversionoptions/bitmapconversionoptions.md)
 
 | Name | Description |
 | :------ | :------ |
@@ -200,10 +201,10 @@ Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [
 | ROUND | - |
 | SQUARE | - |
 
-___
+<HorizontalLine />
 
 ### BitsPerChannelType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 The number of bits per color channel.
 
@@ -214,10 +215,10 @@ The number of bits per color channel.
 | SIXTEEN | - |
 | THIRTYTWO | - |
 
-___
+<HorizontalLine />
 
 ### BlendMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Blending mode
 
@@ -252,12 +253,12 @@ Blending mode
 | SUBTRACT | - |
 | VIVIDLIGHT | - |
 
-___
+<HorizontalLine />
 
 ### CalculationsBlendMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-The kind of blending used in a [Document.calculations](/ps_reference/classes/document/#calculations) operation.
+The kind of blending used in a [Document.calculations](/ps-reference/classes/document.md#calculations) operation.
 
 | Name | Description |
 | :------ | :------ |
@@ -285,12 +286,12 @@ The kind of blending used in a [Document.calculations](/ps_reference/classes/doc
 | SUBTRACT | - |
 | VIVIDLIGHT | - |
 
-___
+<HorizontalLine />
 
 ### CalculationsChannel
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-Special channels used in [Document.calculations](/ps_reference/classes/document/#calculations).
+Special channels used in [Document.calculations](/ps-reference/classes/document.md#calculations).
 
 | Name | Description |
 | :------ | :------ |
@@ -298,10 +299,10 @@ Special channels used in [Document.calculations](/ps_reference/classes/document/
 | SELECTION | - |
 | TRANSPARENCY | - |
 
-___
+<HorizontalLine />
 
 ### CalculationsLayer
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
 Use merged layers as a source in [Document.calculations]].
 
@@ -309,12 +310,12 @@ Use merged layers as a source in [Document.calculations]].
 | :------ | :------ |
 | MERGED | - |
 
-___
+<HorizontalLine />
 
 ### CalculationsResult
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-The result of [Document.calculations](/ps_reference/classes/document/#calculations) can go into a new document,
+The result of [Document.calculations](/ps-reference/classes/document.md#calculations) can go into a new document,
  a new channel in the active document, or a new selection in the active document.
 
 | Name | Description |
@@ -323,12 +324,12 @@ The result of [Document.calculations](/ps_reference/classes/document/#calculatio
 | NEWDOCUMENT | - |
 | SELECTION | - |
 
-___
+<HorizontalLine />
 
 ### ChangeMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-The new color profile or mode for a document, specified in [Document.changeMode](/ps_reference/classes/document/#changemode)
+The new color profile or mode for a document, specified in [Document.changeMode](/ps-reference/classes/document.md#changemode)
 
 NOTE: Color images must be changed to GRAYSCALE mode before you can change them to BITMAP mode.
 
@@ -342,10 +343,10 @@ NOTE: Color images must be changed to GRAYSCALE mode before you can change them 
 | MULTICHANNEL | - |
 | RGB | - |
 
-___
+<HorizontalLine />
 
 ### ChannelType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The type of a color channel.
 
@@ -356,13 +357,13 @@ The type of a color channel.
 | SELECTEDAREA | Alpha channel where color indicates selected area |
 | SPOTCOLOR | Alpha channel to store a spot color |
 
-___
+<HorizontalLine />
 
 ### CharacterAlignment
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 The character alignment to use in text.
-Used in [CharacterStyle.characterAlignment](/ps_reference/classes/characterstyle/#characteralignment)
+Used in [CharacterStyle.characterAlignment](/ps-reference/classes/characterstyle.md#characteralignment)
 
 | Name | Description |
 | :------ | :------ |
@@ -373,13 +374,13 @@ Used in [CharacterStyle.characterAlignment](/ps_reference/classes/characterstyle
 | ICFBOXTOPRIGHT | - |
 | ROMAN | - |
 
-___
+<HorizontalLine />
 
 ### ColorBlendMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 The kind of blending used in a fill or stroke operation.
-Pass to [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
+Pass to [PathItem.fillPath](/ps-reference/classes/pathitem.md#fillpath)()
 
 | Name | Description |
 | :------ | :------ |
@@ -411,13 +412,13 @@ Pass to [PathItem.fillPath](/ps_reference/classes/pathitem/#fillpath)()
 | SOFTLIGHT | - |
 | VIVIDLIGHT | - |
 
-___
+<HorizontalLine />
 
 ### ColorModel
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The color model representing the current color space
-of a [SolidColor](/ps_reference/classes/solidcolor/) object.
+of a [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 | Name | Description |
 | :------ | :------ |
@@ -428,26 +429,26 @@ of a [SolidColor](/ps_reference/classes/solidcolor/) object.
 | NONE | - |
 | RGB | - |
 
-___
+<HorizontalLine />
 
 ### ColorPicker
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The provider of the color picker dialog.
-Pass to [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker)
+Pass to [PreferencesGeneral.colorPicker](/ps-reference/classes/preferences/preferencesgeneral.md#colorpicker)
 
 | Name | Description |
 | :------ | :------ |
 | ADOBE | The Adobe Photoshop Color Picker. |
 | OSNATIVE | The built-in Apple or Windows color picker. |
-| PLUGIN | A plugin-provided color picker. The&#x60;pluginID&#x60; property must be provided in the [PreferencesGeneral.colorPicker](/ps_reference/classes/preferences/preferencesgeneral/#colorpicker) argument object and must contain the internal ID of the plugin as a string. |
+| PLUGIN | A plugin-provided color picker. The&#x60;pluginID&#x60; property must be provided in the [PreferencesGeneral.colorPicker](/ps-reference/classes/preferences/preferencesgeneral.md#colorpicker) argument object and must contain the internal ID of the plugin as a string. |
 
-___
+<HorizontalLine />
 
 ### ColorProfileType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-Type of color profile used to manage a document, used in [Document.colorProfileType](/ps_reference/classes/document/#colorprofiletype)
+Type of color profile used to manage a document, used in [Document.colorProfileType](/ps-reference/classes/document.md#colorprofiletype)
 
 | Name | Description |
 | :------ | :------ |
@@ -455,25 +456,25 @@ Type of color profile used to manage a document, used in [Document.colorProfileT
 | NONE | Set when document is not color managed |
 | WORKING | Set when document uses the working color profile |
 
-___
+<HorizontalLine />
 
 ### CreateFields
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
-The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps-reference/classes/layer.md#applydeinterlace).
 
 | Name | Description |
 | :------ | :------ |
 | DUPLICATION | - |
 | INTERPOLATION | - |
 
-___
+<HorizontalLine />
 
 ### DepthMapSource
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The source to use for the depth map. Pass to
-[Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
+[Layer.applyLensBlur](/ps-reference/classes/layer.md#applylensblur)().
 
 | Name | Description |
 | :------ | :------ |
@@ -482,10 +483,10 @@ The source to use for the depth map. Pass to
 | NONE | - |
 | TRANSPARENCYCHANNEL | - |
 
-___
+<HorizontalLine />
 
 ### DialogModes
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Controls the type of dialogs Photoshop displays
 during API calls
@@ -496,38 +497,38 @@ during API calls
 | ERROR | Dialogs will be shown only if Photoshop raises an error |
 | NONE | All dialogs will be hidden, and bad calls will silently fail |
 
-___
+<HorizontalLine />
 
 ### Direction
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Used in multiple places to represent orientation.
 
-Orientation of a guide in [Guide.direction](/ps_reference/classes/guide/#direction)
+Orientation of a guide in [Guide.direction](/ps-reference/classes/guide.md#direction)
 
 | Name | Description |
 | :------ | :------ |
 | HORIZONTAL | - |
 | VERTICAL | - |
 
-___
+<HorizontalLine />
 
 ### DisplacementMapType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 Describes how the displacement map fits the
 image if the image is not the same size as
-the map. Pass to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace).
+the map. Pass to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydisplace).
 
 | Name | Description |
 | :------ | :------ |
 | STRETCHTOFIT | - |
 | TILE | - |
 
-___
+<HorizontalLine />
 
 ### Dither
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The type of dithering
 
@@ -538,10 +539,10 @@ The type of dithering
 | NONE | - |
 | PATTERN | - |
 
-___
+<HorizontalLine />
 
 ### DocumentFill
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Fill methods available for the new document background
 
@@ -553,12 +554,12 @@ Fill methods available for the new document background
 | TRANSPARENT | - |
 | WHITE | - |
 
-___
+<HorizontalLine />
 
 ### DocumentMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-Color mode of an open document. See also [Document.mode](/ps_reference/classes/document/#mode) and [Document.changeMode](/ps_reference/classes/document/#changemode)
+Color mode of an open document. See also [Document.mode](/ps-reference/classes/document.md#mode) and [Document.changeMode](/ps-reference/classes/document.md#changemode)
 
 | Name | Description |
 | :------ | :------ |
@@ -571,13 +572,13 @@ Color mode of an open document. See also [Document.mode](/ps_reference/classes/d
 | MULTICHANNEL | - |
 | RGB | - |
 
-___
+<HorizontalLine />
 
 ### EditLogItemsType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The history log edit options.
-Pass to [PreferencesHistory.editLogItems](/ps_reference/classes/preferences/preferenceshistory/#editlogitems)
+Pass to [PreferencesHistory.editLogItems](/ps-reference/classes/preferences/preferenceshistory.md#editlogitems)
 
 | Name | Description |
 | :------ | :------ |
@@ -585,10 +586,10 @@ Pass to [PreferencesHistory.editLogItems](/ps_reference/classes/preferences/pref
 | DETAILED | Includes the text that appears in the Actions panel in addition to the Concise information. If you need a complete history of all changes made to files, choose Detailed. |
 | SESSIONONLY | Keeps a record of each time you start or quit Photoshop and each time you open and close files (each image’s filename is included). Does not include any information about edits made to the file. |
 
-___
+<HorizontalLine />
 
 ### ElementPlacement
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Placement modes for Layer.move method
 
@@ -600,25 +601,25 @@ Placement modes for Layer.move method
 | PLACEBEFORE | Place above a layer, above group if group layer |
 | PLACEINSIDE | Place inside a group layer, throws error if not group layer |
 
-___
+<HorizontalLine />
 
 ### EliminateFields
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
-The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps_reference/classes/layer/#applydeinterlace).
+The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps-reference/classes/layer.md#applydeinterlace).
 
 | Name | Description |
 | :------ | :------ |
 | EVENFIELDS | - |
 | ODDFIELDS | - |
 
-___
+<HorizontalLine />
 
 ### FlipAxis
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 Axis (or both) to flip a layer on.
-Pass to [Layer.flip](/ps_reference/classes/layer/#flip)().
+Pass to [Layer.flip](/ps-reference/classes/layer.md#flip)().
 
 | Name | Description |
 | :------ | :------ |
@@ -626,13 +627,13 @@ Pass to [Layer.flip](/ps_reference/classes/layer/#flip)().
 | HORIZONTAL | - |
 | VERTICAL | - |
 
-___
+<HorizontalLine />
 
 ### FontSize
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 Font size in panels and dialogs.
-Pass to [PreferencesInterface.textFontSize](/ps_reference/classes/preferences/preferencesinterface/#textfontsize)
+Pass to [PreferencesInterface.textFontSize](/ps-reference/classes/preferences/preferencesinterface.md#textfontsize)
 
 | Name | Description |
 | :------ | :------ |
@@ -641,10 +642,10 @@ Pass to [PreferencesInterface.textFontSize](/ps_reference/classes/preferences/pr
 | SMALL | Small size. |
 | TINY | Tiny size. |
 
-___
+<HorizontalLine />
 
 ### ForcedColors
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The type of colors to be included the color
 table regardless of their usage
@@ -656,26 +657,26 @@ table regardless of their usage
 | PRIMARIES | Red, green, blue, cyan, magenta, yellow, black, and white. |
 | WEB | The 216 web-safe colors |
 
-___
+<HorizontalLine />
 
 ### GenerativeUpscaleModel
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">27.2</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>27.2\</span\>
 
 The generative upscale model to use for AI-powered upscaling.
 
-Pass to [Document.generativeUpscale](/ps_reference/classes/document/#generativeupscale)()
+Pass to [Document.generativeUpscale](/ps-reference/classes/document.md#generativeupscale)()
 
 | Name | Description |
 | :------ | :------ |
 | FIREFLY | Adobe Firefly generative upscale model |
 
-___
+<HorizontalLine />
 
 ### Geometry
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 Geometric options for shapes, such as the iris shape in the
-Lens Blur filter. Pass to [Layer.applyLensBlur](/ps_reference/classes/layer/#applylensblur)().
+Lens Blur filter. Pass to [Layer.applyLensBlur](/ps-reference/classes/layer.md#applylensblur)().
 
 | Name | Description |
 | :------ | :------ |
@@ -686,13 +687,13 @@ Lens Blur filter. Pass to [Layer.applyLensBlur](/ps_reference/classes/layer/#app
 | SQUARE | - |
 | TRIANGLE | - |
 
-___
+<HorizontalLine />
 
 ### GridLineStyle
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The line style for nonprinting grids displayed over images.
-Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#gridstyle)
+Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps-reference/classes/preferences/preferencesguidesgridsandslices.md#gridstyle)
 
 | Name | Description |
 | :------ | :------ |
@@ -700,13 +701,13 @@ Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps_reference/classes/prefer
 | DOTTED | - |
 | SOLID | - |
 
-___
+<HorizontalLine />
 
 ### GridSize
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The size of grid squares.
-Pass to [PreferencesTransparencyAndGamut.gridSize](/ps_reference/classes/preferences/preferencestransparencyandgamut/#gridsize)
+Pass to [PreferencesTransparencyAndGamut.gridSize](/ps-reference/classes/preferences/preferencestransparencyandgamut.md#gridsize)
 
 | Name | Description |
 | :------ | :------ |
@@ -715,26 +716,26 @@ Pass to [PreferencesTransparencyAndGamut.gridSize](/ps_reference/classes/prefere
 | NONE | No grid is displayed. |
 | SMALL | Small grid squares. |
 
-___
+<HorizontalLine />
 
 ### GuideLineStyle
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The line style for nonprinting guides displayed over images.
-Pass to [PreferencesGuidesGridsAndSlices.guideStyle](/ps_reference/classes/preferences/preferencesguidesgridsandslices/#guidestyle)
+Pass to [PreferencesGuidesGridsAndSlices.guideStyle](/ps-reference/classes/preferences/preferencesguidesgridsandslices.md#guidestyle)
 
 | Name | Description |
 | :------ | :------ |
 | DASHED | - |
 | SOLID | - |
 
-___
+<HorizontalLine />
 
 ### Intent
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The rendering intent to use when converting from one color space to another with
-[Document.convertProfile](/ps_reference/classes/document/#convertprofile)
+[Document.convertProfile](/ps-reference/classes/document.md#convertprofile)
 
 | Name | Description |
 | :------ | :------ |
@@ -743,20 +744,20 @@ The rendering intent to use when converting from one color space to another with
 | RELATIVECOLORIMETRIC | - |
 | SATURATION | - |
 
-___
+<HorizontalLine />
 
 ### InterpolationMethod
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The method to use for bitmap interpolation.
 
 Pass to
-- [PreferencesGeneral.imageInterpolation](/ps_reference/classes/preferences/preferencesgeneral/#imageinterpolation)
-- [Layer.scale](/ps_reference/classes/layer/#scale)()
-- [Layer.skew](/ps_reference/classes/layer/#skew)()
-- [Layer.rotate](/ps_reference/classes/layer/#rotate)()
-- [Selection.resizeBoundary](/ps_reference/classes/selection/#resizeboundary)()
-- [Selection.rotateBoundary](/ps_reference/classes/selection/#rotateboundary)()
+- [PreferencesGeneral.imageInterpolation](/ps-reference/classes/preferences/preferencesgeneral.md#imageinterpolation)
+- [Layer.scale](/ps-reference/classes/layer.md#scale)()
+- [Layer.skew](/ps-reference/classes/layer.md#skew)()
+- [Layer.rotate](/ps-reference/classes/layer.md#rotate)()
+- [Selection.resizeBoundary](/ps-reference/classes/selection.md#resizeboundary)()
+- [Selection.rotateBoundary](/ps-reference/classes/selection.md#rotateboundary)()
 
 | Name | Description |
 | :------ | :------ |
@@ -767,10 +768,10 @@ Pass to
 | BILINEAR | Bilinear interpolate |
 | NEARESTNEIGHBOR | Determine value based on nearest neighbor |
 
-___
+<HorizontalLine />
 
 ### JPEGFormatOptions
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The option with which to save a JPEG file.
 
@@ -780,13 +781,13 @@ The option with which to save a JPEG file.
 | PROGRESSIVE | Displays a series of increasing detailed scans as the image downloads. |
 | STANDARDBASELINE | Format recognized by most web browsers. |
 
-___
+<HorizontalLine />
 
 ### Justification
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 The placement of paragraph text within the bounding box.
-Used in [ParagraphStyle.justification](/ps_reference/classes/paragraphstyle/#justification)
+Used in [ParagraphStyle.justification](/ps-reference/classes/paragraphstyle.md#justification)
 
 | Name | Description |
 | :------ | :------ |
@@ -798,13 +799,13 @@ Used in [ParagraphStyle.justification](/ps_reference/classes/paragraphstyle/#jus
 | RIGHT | - |
 | RIGHTJUSTIFIED | - |
 
-___
+<HorizontalLine />
 
 ### KashidaWidthType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 The width of kashida (tatweel) character
-Used in [ParagraphStyle.kashidaWidth](/ps_reference/classes/paragraphstyle/#kashidawidth)
+Used in [ParagraphStyle.kashidaWidth](/ps-reference/classes/paragraphstyle.md#kashidawidth)
 
 | Name | Description |
 | :------ | :------ |
@@ -814,13 +815,13 @@ Used in [ParagraphStyle.kashidaWidth](/ps_reference/classes/paragraphstyle/#kash
 | SHORT | - |
 | STYLISTIC | - |
 
-___
+<HorizontalLine />
 
 ### Kinsoku
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Line breaking rules in Japanese text
-Used in [ParagraphStyle.kinsoku](/ps_reference/classes/paragraphstyle/#kinsoku)
+Used in [ParagraphStyle.kinsoku](/ps-reference/classes/paragraphstyle.md#kinsoku)
 
 | Name | Description |
 | :------ | :------ |
@@ -828,10 +829,10 @@ Used in [ParagraphStyle.kinsoku](/ps_reference/classes/paragraphstyle/#kinsoku)
 | JISWEAK | - |
 | NONE | - |
 
-___
+<HorizontalLine />
 
 ### LabelColors
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Options for layer list label colors
 
@@ -846,12 +847,12 @@ Options for layer list label colors
 | VIOLET | - |
 | YELLOW | - |
 
-___
+<HorizontalLine />
 
 ### Language
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The language to use for text. Used in [CharacterStyle.language](/ps_reference/classes/characterstyle/#language)
+The language to use for text. Used in [CharacterStyle.language](/ps-reference/classes/characterstyle.md#language)
 
 | Name | Description |
 | :------ | :------ |
@@ -915,10 +916,10 @@ The language to use for text. Used in [CharacterStyle.language](/ps_reference/cl
 | TURKISH | - |
 | UKRAINIAN | - |
 
-___
+<HorizontalLine />
 
 ### LayerKind
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Kinds of document layers, including adjustment layers. Grain and Clarity are new in Photoshop 27.4.
 
@@ -952,12 +953,12 @@ Kinds of document layers, including adjustment layers. Grain and Clarity are new
 | VIBRANCE | Color and vibrance adjustment |
 | VIDEO | Video |
 
-___
+<HorizontalLine />
 
 ### LensType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
-The type of Lens to use. Pass to [Layer.applyLensFlare](/ps_reference/classes/layer/#applylensflare)().
+The type of Lens to use. Pass to [Layer.applyLensFlare](/ps-reference/classes/layer.md#applylensflare)().
 
 | Name | Description |
 | :------ | :------ |
@@ -966,10 +967,10 @@ The type of Lens to use. Pass to [Layer.applyLensFlare](/ps_reference/classes/la
 | PRIME35 | - |
 | ZOOMLENS | - |
 
-___
+<HorizontalLine />
 
 ### MatteColor
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The color to use to fill anti-aliased edges
 adjacent to transparent areas of the image.
@@ -985,13 +986,13 @@ the matte color is applied to transparent areas.
 | SEMIGRAY | - |
 | WHITE | - |
 
-___
+<HorizontalLine />
 
 ### MaximizeCompatibility
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The permission state for queries.
-Pass to [PreferencesFileHandling.maximizeCompatibility](/ps_reference/classes/preferences/preferencesfilehandling/#maximizecompatibility)
+Pass to [PreferencesFileHandling.maximizeCompatibility](/ps-reference/classes/preferences/preferencesfilehandling.md#maximizecompatibility)
 
 | Name | Description |
 | :------ | :------ |
@@ -999,13 +1000,13 @@ Pass to [PreferencesFileHandling.maximizeCompatibility](/ps_reference/classes/pr
 | ASK | Always ask about maximize compatibility. |
 | NEVER | Never ask about maximize compatibility. |
 
-___
+<HorizontalLine />
 
 ### MiddleEasternDigitsType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Digit type to use in text (Middle Eastern features).
-Used in [CharacterStyle.middleEasternDigitsType](/ps_reference/classes/characterstyle/#middleeasterndigitstype)
+Used in [CharacterStyle.middleEasternDigitsType](/ps-reference/classes/characterstyle.md#middleeasterndigitstype)
 
 | Name | Description |
 | :------ | :------ |
@@ -1014,13 +1015,13 @@ Used in [CharacterStyle.middleEasternDigitsType](/ps_reference/classes/character
 | LTRARABIC | - |
 | RTLARABIC | - |
 
-___
+<HorizontalLine />
 
 ### MiddleEasternTextDirection
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Text flow direction (Middle Eastern features).
-Used in [CharacterStyle.middleEasternTextDirection](/ps_reference/classes/characterstyle/#middleeasterntextdirection)
+Used in [CharacterStyle.middleEasternTextDirection](/ps-reference/classes/characterstyle.md#middleeasterntextdirection)
 
 | Name | Description |
 | :------ | :------ |
@@ -1028,14 +1029,14 @@ Used in [CharacterStyle.middleEasternTextDirection](/ps_reference/classes/charac
 | LEFTTORIGHT | - |
 | RIGHTTOLEFT | - |
 
-___
+<HorizontalLine />
 
 ### Mojikumi
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Spacing between punctuation, symbols, numbers,
 and other character classes in Japanese text
-Used in [ParagraphStyle.mojikumi](/ps_reference/classes/paragraphstyle/#mojikumi)
+Used in [ParagraphStyle.mojikumi](/ps-reference/classes/paragraphstyle.md#mojikumi)
 
 | Name | Description |
 | :------ | :------ |
@@ -1045,10 +1046,10 @@ Used in [ParagraphStyle.mojikumi](/ps_reference/classes/paragraphstyle/#mojikumi
 | SET3 | - |
 | SET4 | - |
 
-___
+<HorizontalLine />
 
 ### NewDocumentMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Color Modes available for new document
 
@@ -1060,25 +1061,25 @@ Color Modes available for new document
 | LAB | - |
 | RGB | - |
 
-___
+<HorizontalLine />
 
 ### NoiseDistribution
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
-Distribution model to use when applying an Add Noise filter. Pass to [Layer.applyAddNoise](/ps_reference/classes/layer/#applyaddnoise).
+Distribution model to use when applying an Add Noise filter. Pass to [Layer.applyAddNoise](/ps-reference/classes/layer.md#applyaddnoise).
 
 | Name | Description |
 | :------ | :------ |
 | GAUSSIAN | - |
 | UNIFORM | - |
 
-___
+<HorizontalLine />
 
 ### OffsetUndefinedAreas
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 Method to use to fill the empty space left by offsetting an image or selection.
-Pass to [Layer.applyOffset](/ps_reference/classes/layer/#applyoffset)()
+Pass to [Layer.applyOffset](/ps-reference/classes/layer.md#applyoffset)()
 
 | Name | Description |
 | :------ | :------ |
@@ -1086,50 +1087,50 @@ Pass to [Layer.applyOffset](/ps_reference/classes/layer/#applyoffset)()
 | SETTOBACKGROUND | - |
 | WRAPAROUND | - |
 
-___
+<HorizontalLine />
 
 ### OperatingSystem
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-The target operating system in [BMPSaveOptions](/ps_reference/objects/saveoptions/bmpsaveoptions/).
+The target operating system in [BMPSaveOptions](/ps-reference/objects/saveoptions/bmpsaveoptions.md).
 
 | Name | Description |
 | :------ | :------ |
 | OS2 | - |
 | WINDOWS | - |
 
-___
+<HorizontalLine />
 
 ### Orientation
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 Used in multiple places to represent orientation
-e.g., [TextItem.orientation](/ps_reference/classes/textitem/#orientation)
+e.g., [TextItem.orientation](/ps-reference/classes/textitem.md#orientation)
 
 | Name | Description |
 | :------ | :------ |
 | HORIZONTAL | - |
 | VERTICAL | - |
 
-___
+<HorizontalLine />
 
 ### OtherCursors
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The style of the cursors for the following tools: Marquee, Lasso, Polygonal Lasso, Magic Wand, Crop, Slice,
 Patch Eyedropper, Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic Pen, Freeform Pen,
 Measure, and Color Sampler.
-Pass to [PreferencesCursors.otherCursors](/ps_reference/classes/preferences/preferencescursors/#othercursors)
+Pass to [PreferencesCursors.otherCursors](/ps-reference/classes/preferences/preferencescursors.md#othercursors)
 
 | Name | Description |
 | :------ | :------ |
 | PRECISE | Use crosshair cursors for tools. |
 | STANDARD | Use small iconic cursors for tools. |
 
-___
+<HorizontalLine />
 
 ### PNGMethod
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 Compression method for saving a PNG file
 
@@ -1139,14 +1140,14 @@ Compression method for saving a PNG file
 | QUICK | - |
 | THOROUGH | - |
 
-___
+<HorizontalLine />
 
 ### PaintingCursors
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The style of the cursors for the following tools: Eraser, Pencil, Paintbrush, Healing Brush,
 Rubber Stamp, Pattern Stamp, Smudge, Blur, Sharpen, Dodge, Burn, Sponge.
-Pass to [PreferencesCursors.paintingCursors](/ps_reference/classes/preferences/preferencescursors/#paintingcursors)
+Pass to [PreferencesCursors.paintingCursors](/ps-reference/classes/preferences/preferencescursors.md#paintingcursors)
 
 | Name | Description |
 | :------ | :------ |
@@ -1155,10 +1156,10 @@ Pass to [PreferencesCursors.paintingCursors](/ps_reference/classes/preferences/p
 | PRECISE | Use crosshair cursors when painting. |
 | STANDARD | Use small iconic cursors when painting. |
 
-___
+<HorizontalLine />
 
 ### Palette
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The palette type to use
 
@@ -1177,13 +1178,13 @@ The palette type to use
 | WEBPALETTE | - |
 | WINDOWSPALETTE | - |
 
-___
+<HorizontalLine />
 
 ### ParagraphFeatures
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 The paragraph features to use in text.
-Used in [ParagraphStyle.features](/ps_reference/classes/paragraphstyle/#features)
+Used in [ParagraphStyle.features](/ps-reference/classes/paragraphstyle.md#features)
 
 | Name | Description |
 | :------ | :------ |
@@ -1191,25 +1192,25 @@ Used in [ParagraphStyle.features](/ps_reference/classes/paragraphstyle/#features
 | EASTASIAN | - |
 | MIDDLEASTERN | - |
 
-___
+<HorizontalLine />
 
 ### ParagraphLayout
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 The paragraph layout to use in text.
-Used in [ParagraphStyle.layoutMode](/ps_reference/classes/paragraphstyle/#layoutmode)
+Used in [ParagraphStyle.layoutMode](/ps-reference/classes/paragraphstyle.md#layoutmode)
 
 | Name | Description |
 | :------ | :------ |
 | LATINEASTASIAN | - |
 | WORLDREADY | - |
 
-___
+<HorizontalLine />
 
 ### PathKind
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
-The type of a [PathItem](/ps_reference/classes/pathitem/)
+The type of a [PathItem](/ps-reference/classes/pathitem.md)
 
 | Name | Description |
 | :------ | :------ |
@@ -1221,61 +1222,61 @@ The type of a [PathItem](/ps_reference/classes/pathitem/)
 | VECTORMASK | - |
 | WORKPATH | - |
 
-___
+<HorizontalLine />
 
 ### PointKind
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-The role a [PathPoint](/ps_reference/classes/pathpoint/) plays in a [PathItem](/ps_reference/classes/pathitem/)
+The role a [PathPoint](/ps-reference/classes/pathpoint.md) plays in a [PathItem](/ps-reference/classes/pathitem.md)
 
 | Name | Description |
 | :------ | :------ |
 | CORNERPOINT | - |
 | SMOOTHPOINT | - |
 
-___
+<HorizontalLine />
 
 ### PointType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The point/pica size: either 72 or 72.27 points per inch.
-Pass to [PreferencesUnitsAndRulers.pointSize](/ps_reference/classes/preferences/preferencesunitsandrulers/#pointsize)
+Pass to [PreferencesUnitsAndRulers.pointSize](/ps-reference/classes/preferences/preferencesunitsandrulers.md#pointsize)
 
 | Name | Description |
 | :------ | :------ |
 | POSTSCRIPT | 72 points per inch. |
 | TRADITIONAL | 72.27 points per inch. |
 
-___
+<HorizontalLine />
 
 ### PolarConversionType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The kind of polar conversion.
-Pass to [Layer.applyPolarCoordinates](/ps_reference/classes/layer/#applypolarcoordinates)().
+Pass to [Layer.applyPolarCoordinates](/ps-reference/classes/layer.md#applypolarcoordinates)().
 
 | Name | Description |
 | :------ | :------ |
 | POLARTORECTANGULAR | The distortion applied will take the input pixel grid as polar coordinates and convert them to rectangular coordinates. |
 | RECTANGULARTOPOLAR | The distortion applied will take the input pixel grid as rectangular coordinates and convert them to polar coordinates. |
 
-___
+<HorizontalLine />
 
 ### PreserveShape
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 Favor the promotion of either corners or curves.
-Pass to [Layer.applyMaximum](/ps_reference/classes/layer/#applymaximum)() and [Layer.applyMinimum](/ps_reference/classes/layer/#applyminimum)().
+Pass to [Layer.applyMaximum](/ps-reference/classes/layer.md#applymaximum)() and [Layer.applyMinimum](/ps-reference/classes/layer.md#applyminimum)().
 
 | Name | Description |
 | :------ | :------ |
 | ROUNDNESS | - |
 | SQUARENESS | - |
 
-___
+<HorizontalLine />
 
 ### RasterizeType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The type of layer to get rasterized.
 
@@ -1292,14 +1293,14 @@ The type of layer to get rasterized.
 | VECTORMASK | - |
 | VIDEO | - |
 
-___
+<HorizontalLine />
 
 ### ResampleMethod
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The method to use for document interpolation
 
-Pass to [Document.resizeImage](/ps_reference/classes/document/#resizeimage)()
+Pass to [Document.resizeImage](/ps-reference/classes/document.md#resizeimage)()
 
 | Name | Description |
 | :------ | :------ |
@@ -1313,13 +1314,13 @@ Pass to [Document.resizeImage](/ps_reference/classes/document/#resizeimage)()
 | NONE | Changes image resolution value without affecting document dimension  **Currently unsupported** |
 | PRESERVEDETAILS | Attempt to preserve details by using machine learning |
 
-___
+<HorizontalLine />
 
 ### RippleSize
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The size of undulations.
-Pass to [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
+Pass to [Layer.applyRipple](/ps-reference/classes/layer.md#applyripple)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1327,13 +1328,13 @@ Pass to [Layer.applyRipple](/ps_reference/classes/layer/#applyripple)().
 | MEDIUM | - |
 | SMALL | - |
 
-___
+<HorizontalLine />
 
 ### RulerUnits
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The measurement unit for ruler increments.
-Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#rulerunits)
+Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps-reference/classes/preferences/preferencesunitsandrulers.md#rulerunits)
 
 | Name | Description |
 | :------ | :------ |
@@ -1345,10 +1346,10 @@ Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps_reference/classes/preferences
 | PIXELS | - |
 | POINTS | - |
 
-___
+<HorizontalLine />
 
 ### SampleSize
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 Sample size for the EyeDropper tool and ColorSampler instances.
 
@@ -1362,13 +1363,13 @@ Sample size for the EyeDropper tool and ColorSampler instances.
 | SAMPLE51X51 | - |
 | SAMPLE5X5 | - |
 
-___
+<HorizontalLine />
 
 ### SaveLogItemsType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 Options for logging the history items.
-Pass to [PreferencesHistory.saveLogItems](/ps_reference/classes/preferences/preferenceshistory/#savelogitems)
+Pass to [PreferencesHistory.saveLogItems](/ps-reference/classes/preferences/preferenceshistory.md#savelogitems)
 
 | Name | Description |
 | :------ | :------ |
@@ -1376,10 +1377,10 @@ Pass to [PreferencesHistory.saveLogItems](/ps_reference/classes/preferences/pref
 | LOGFILEANDMETADATA | Save history log in file metadata and a text file. |
 | METADATA | Save history log in file metadata. |
 
-___
+<HorizontalLine />
 
 ### SaveMethod
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The type of save operation.
 
@@ -1389,10 +1390,10 @@ The type of save operation.
 | SAVEAS | Changes the format of document, changing the file. |
 | SAVEASCOPY | Creates a copy of the document in the new format. |
 
-___
+<HorizontalLine />
 
 ### SaveOptions
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 The policy for handling new changes upon closing a document.
 
@@ -1402,13 +1403,13 @@ The policy for handling new changes upon closing a document.
 | PROMPTTOSAVECHANGES | Will ask the user if they&#x27;d like to save changes, blocking the script |
 | SAVECHANGES | Will save all existing changes before closing, prompting if document is not saved yet |
 
-___
+<HorizontalLine />
 
 ### SavePreview
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The application's behavior regarding image previews.
-Pass to [PreferencesFileHandling.imagePreviews](/ps_reference/classes/preferences/preferencesfilehandling/#imagepreviews)
+Pass to [PreferencesFileHandling.imagePreviews](/ps-reference/classes/preferences/preferencesfilehandling.md#imagepreviews)
 
 | Name | Description |
 | :------ | :------ |
@@ -1416,13 +1417,13 @@ Pass to [PreferencesFileHandling.imagePreviews](/ps_reference/classes/preference
 | ASKWHENSAVING | Prompt the user whether to save the item with the file. |
 | NEVERSAVE | Never save the item with the file. |
 
-___
+<HorizontalLine />
 
 ### SelectionType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 The selection behavior when a selection already exists.
-Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)(), [Selection.saveTo](/ps_reference/classes/selection/#saveto)() and [Selection.load](/ps_reference/classes/selection/#load)()
+Used in [PathItem.makeSelection](/ps-reference/classes/pathitem.md#makeselection)(), [Selection.saveTo](/ps-reference/classes/selection.md#saveto)() and [Selection.load](/ps-reference/classes/selection.md#load)()
 
 | Name | Description |
 | :------ | :------ |
@@ -1431,14 +1432,14 @@ Used in [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)(
 | INTERSECT | Make the selection only the area where the new selection intersectes the already selected area |
 | REPLACE | Replace the selected area |
 
-___
+<HorizontalLine />
 
 ### ShapeOperation
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 How to combine the shapes if the destination path already has a selection.
 
-Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), stored in the resulting [SubPathItem](/ps_reference/classes/subpathitem/)
+Set for [SubPathInfo.operation](/ps-reference/classes/subpathinfo.md#operation), stored in the resulting [SubPathItem](/ps-reference/classes/subpathitem.md)
 
 | Name | Description |
 | :------ | :------ |
@@ -1447,13 +1448,13 @@ Set for [SubPathInfo.operation](/ps_reference/classes/subpathinfo/#operation), s
 | SHAPESUBTRACT | - |
 | SHAPEXOR | - |
 
-___
+<HorizontalLine />
 
 ### SmartBlurMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The method to use for smart blurring.
-Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1461,13 +1462,13 @@ Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
 | NORMAL | - |
 | OVERLAYEDGE | - |
 
-___
+<HorizontalLine />
 
 ### SmartBlurQuality
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The smart blur quality.
-Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
+Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1475,13 +1476,13 @@ Pass to [Layer.applySmartBlur](/ps_reference/classes/layer/#applysmartblur)().
 | LOW | - |
 | MEDIUM | - |
 
-___
+<HorizontalLine />
 
 ### SpherizeMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The curve (or stretch shape) to use for the distortion.
-Pass to [Layer.applySpherize](/ps_reference/classes/layer/#applyspherize)().
+Pass to [Layer.applySpherize](/ps-reference/classes/layer.md#applyspherize)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1489,12 +1490,12 @@ Pass to [Layer.applySpherize](/ps_reference/classes/layer/#applyspherize)().
 | NORMAL | - |
 | VERTICAL | - |
 
-___
+<HorizontalLine />
 
 ### StrikeThrough
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrough](/ps_reference/classes/characterstyle/#strikethrough)
+The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrough](/ps-reference/classes/characterstyle.md#strikethrough)
 
 | Name | Description |
 | :------ | :------ |
@@ -1502,12 +1503,12 @@ The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrou
 | STRIKEHEIGHT | - |
 | STRIKEOFF | - |
 
-___
+<HorizontalLine />
 
 ### TextCase
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The capitalization style to use in text. Used in [CharacterStyle.capitalization](/ps_reference/classes/characterstyle/#capitalization)
+The capitalization style to use in text. Used in [CharacterStyle.capitalization](/ps-reference/classes/characterstyle.md#capitalization)
 
 | Name | Description |
 | :------ | :------ |
@@ -1515,13 +1516,13 @@ The capitalization style to use in text. Used in [CharacterStyle.capitalization]
 | NORMAL | - |
 | SMALLCAPS | - |
 
-___
+<HorizontalLine />
 
 ### TextureType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The type of texture or glass surface image to load for a texturizer
-or glass filter. Pass to [Layer.applyGlassEffect](/ps_reference/classes/layer/#applyglasseffect)().
+or glass filter. Pass to [Layer.applyGlassEffect](/ps-reference/classes/layer.md#applyglasseffect)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1530,12 +1531,12 @@ or glass filter. Pass to [Layer.applyGlassEffect](/ps_reference/classes/layer/#a
 | FROSTED | - |
 | TINYLENS | - |
 
-___
+<HorizontalLine />
 
 ### ToolType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-The tool to use with [PathItem.strokePath](/ps_reference/classes/pathitem/#strokepath)()
+The tool to use with [PathItem.strokePath](/ps-reference/classes/pathitem.md#strokepath)()
 
 | Name | Description |
 | :------ | :------ |
@@ -1556,12 +1557,12 @@ The tool to use with [PathItem.strokePath](/ps_reference/classes/pathitem/#strok
 | SMUDGE | - |
 | SPONGE | - |
 
-___
+<HorizontalLine />
 
 ### TrimType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/classes/document/#trim).
+Type of pixels to trim around an image, passed to [Document.trim](/ps-reference/classes/document.md#trim).
 
 | Name | Description |
 | :------ | :------ |
@@ -1569,14 +1570,14 @@ Type of pixels to trim around an image, passed to [Document.trim](/ps_reference/
 | TOPLEFT | The color of the pixel in the top left right corner of the image. |
 | TRANSPARENT | Fully transparent pixels. |
 
-___
+<HorizontalLine />
 
 ### TypeInterfaceFeatures
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 Options for changing user interface of Character and Paragraph panels.
 This option is not in Preferences dialog but instead it is located in: Main menu > Type > Language Options
-Pass to [PreferencesType.showTextFeatures](/ps_reference/classes/preferences/preferencestype/#showtextfeatures)
+Pass to [PreferencesType.showTextFeatures](/ps-reference/classes/preferences/preferencestype.md#showtextfeatures)
 
 | Name | Description |
 | :------ | :------ |
@@ -1584,13 +1585,13 @@ Pass to [PreferencesType.showTextFeatures](/ps_reference/classes/preferences/pre
 | EASTASIAN | - |
 | MIDDLEEASTERN | - |
 
-___
+<HorizontalLine />
 
 ### TypeUnits
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
 The measurement unit for type.
-Pass to [PreferencesUnitsAndRulers.typeUnits](/ps_reference/classes/preferences/preferencesunitsandrulers/#typeunits)
+Pass to [PreferencesUnitsAndRulers.typeUnits](/ps-reference/classes/preferences/preferencesunitsandrulers.md#typeunits)
 
 | Name | Description |
 | :------ | :------ |
@@ -1598,26 +1599,26 @@ Pass to [PreferencesUnitsAndRulers.typeUnits](/ps_reference/classes/preferences/
 | PIXELS | - |
 | POINTS | - |
 
-___
+<HorizontalLine />
 
 ### UndefinedAreas
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 How to treat undistorted areas or areas left blank in an image
 to which a filter in the Distort category has been applied. Pass
-to [Layer.applyDisplace](/ps_reference/classes/layer/#applydisplace)(), [Layer.applyShear](/ps_reference/classes/layer/#applyshear)(), [Layer.applyWave](/ps_reference/classes/layer/#applywave)()
+to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydisplace)(), [Layer.applyShear](/ps-reference/classes/layer.md#applyshear)(), [Layer.applyWave](/ps-reference/classes/layer.md#applywave)()
 
 | Name | Description |
 | :------ | :------ |
 | REPEATEDGEPIXELS | - |
 | WRAPAROUND | - |
 
-___
+<HorizontalLine />
 
 ### Underline
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The underline style to use in text. Used in [CharacterStyle.underline](/ps_reference/classes/characterstyle/#underline)
+The underline style to use in text. Used in [CharacterStyle.underline](/ps-reference/classes/characterstyle.md#underline)
 
 | Name | Description |
 | :------ | :------ |
@@ -1625,12 +1626,12 @@ The underline style to use in text. Used in [CharacterStyle.underline](/ps_refer
 | NONE | - |
 | RIGHTINVERTICAL | - |
 
-___
+<HorizontalLine />
 
 ### Units
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.4</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.4\</span\>
 
-Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps_reference/classes/photoshop/#convertunits)
+Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps-reference/classes/photoshop.md#convertunits)
 
 | Name | Description |
 | :------ | :------ |
@@ -1641,12 +1642,12 @@ Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps_refere
 | PIXELS | - |
 | POINTS | - |
 
-___
+<HorizontalLine />
 
 ### WarpStyle
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-The warp style to use with Text. Used in a [WarpStyle.style](/ps_reference/classes/warpstyle/#style)
+The warp style to use with Text. Used in a [WarpStyle.style](/ps-reference/classes/warpstyle.md#style)
 
 | Name | Description |
 | :------ | :------ |
@@ -1667,13 +1668,13 @@ The warp style to use with Text. Used in a [WarpStyle.style](/ps_reference/class
 | TWIST | - |
 | WAVE | - |
 
-___
+<HorizontalLine />
 
 ### WaveType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The type of wave.
-Pass to [Layer.applyWave](/ps_reference/classes/layer/#applywave)().
+Pass to [Layer.applyWave](/ps-reference/classes/layer.md#applywave)().
 
 | Name | Description |
 | :------ | :------ |
@@ -1681,13 +1682,13 @@ Pass to [Layer.applyWave](/ps_reference/classes/layer/#applywave)().
 | SQUARE | - |
 | TRIANGULAR | - |
 
-___
+<HorizontalLine />
 
 ### ZigZagType
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
 The method of zigzagging.
-Pass to [Layer.applyZigZag](/ps_reference/classes/layer/#applyzigzag)().
+Pass to [Layer.applyZigZag](/ps-reference/classes/layer.md#applyzigzag)().
 
 | Name | Description |
 | :------ | :------ |

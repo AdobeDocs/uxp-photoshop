@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Defines an HSB color, used in SolidColor object.
 ---
 
 # HSBColor
 
-Defines an HSB color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Defines an HSB color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 ## Properties
 

@@ -14,9 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Argument and return type objects for core functions.
 ---
 
 # Core Modules Options
 
-Argument and return type objects for [core](/ps_reference/media/photoshopcore/) functions.
+Argument and return type objects for [core](/ps-reference/media/photoshopcore.md) functions.
 

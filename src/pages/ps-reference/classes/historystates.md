@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: A collections class allowing for array access into a document's history states,
 ---
 
 # HistoryStates
@@ -31,7 +32,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 ## Indexable
 
-▪ [index: *number*]: [*HistoryState*](/ps_reference/classes/historystate/)
+▪ [index: *number*]: [*HistoryState*](/ps-reference/classes/historystate.md)
 
 Used to access the history states in the collection.
 
@@ -47,15 +48,15 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| length | *number* | R | 22.5 | Number of [HistoryState](/ps_reference/classes/historystate/) elements in this collection. |
+| length | *number* | R | 22.5 | Number of [HistoryState](/ps-reference/classes/historystate.md) elements in this collection. |
 | parent | Document | R | 22.5 | The owner document of this HistoryState collection. |
 
 ## Methods
 
 ### getByName
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-[*HistoryState*](/ps_reference/classes/historystate/)
+[*HistoryState*](/ps-reference/classes/historystate.md)
 
 Find the first history state with the matching name.
 

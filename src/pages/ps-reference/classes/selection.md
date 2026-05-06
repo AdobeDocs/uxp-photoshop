@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Represents a selected area or areas in the document. If there is no active selection,
 ---
 
 # Selection
@@ -53,16 +54,16 @@ Quick Mask Mode, the Quick Mask Channel will become the active selection.
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| bounds | [*Bounds*](/ps_reference/objects/bounds/) | R | 25.0 | The bounding rectangle of the entire selection. It can exceed the bounds of the canvas. |
+| bounds | [*Bounds*](/ps-reference/objects/bounds.md) | R | 25.0 | The bounding rectangle of the entire selection. It can exceed the bounds of the canvas. |
 | docId | *number* | R | 25.0 | The ID of the document of this Selection. |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 25.0 | Owner document of this Selection. |
+| parent | [*Document*](/ps-reference/classes/document.md) | R | 25.0 | Owner document of this Selection. |
 | solid | *boolean* | R | 25.0 | True if the selection itself is a rectangle with all fully selected pixels. Viewed as a channel, for example via Quick Mask Mode, the selection will appear as a completely white rectangle.  In that way, it is solid within its bounds. |
 | typename | *string* | R | 25.0 | The class name of the referenced object: *&quot;Selection&quot;*. |
 
 ## Methods
 
 ### contract
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -85,10 +86,10 @@ UI Location: Select > Modify > Contract
 | `by` | *number* | - | The amount to contract the selection (integer in the range 1..500). |
 | `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the contraction. |
 
-___
+<HorizontalLine />
 
 ### deselect
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -100,10 +101,10 @@ await doc.selection.deselect();
 
 UI Location: Select > Deselect
 
-___
+<HorizontalLine />
 
 ### expand
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -122,10 +123,10 @@ UI Location: Select > Modify > Expand
 | `by` | *number* | - | The amount to expand the selection (integer in the range 1..500). |
 | `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the expansion. |
 
-___
+<HorizontalLine />
 
 ### feather
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -146,10 +147,10 @@ UI Location: Select > Modify > Feather
 | `by` | *number* | - | The amount to feather the selection with (integer in the range 0.1..1000). |
 | `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the feathering. |
 
-___
+<HorizontalLine />
 
 ### grow
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -171,10 +172,10 @@ UI Location: Select > Grow
 | `tolerance` | *number* | - | The tolerance range (integer in the range 0..255) |
 | `antiAlias` | *boolean* | true | Whether to use anti-aliasing |
 
-___
+<HorizontalLine />
 
 ### inverse
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -189,14 +190,14 @@ await doc.selection.inverse();
 
 UI Location: Select > Inverse
 
-___
+<HorizontalLine />
 
 ### load
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
-Load the selection from the specified [Channel](/ps_reference/classes/channel/) or [Layer](/ps_reference/classes/layer/).  A Layer's pixels' transparency
+Load the selection from the specified [Channel](/ps-reference/classes/channel.md) or [Layer](/ps-reference/classes/layer.md).  A Layer's pixels' transparency
 will be used as the selection values.  Full opaque pixels yield fully selected pixels.
 
 ```javascript
@@ -208,22 +209,22 @@ UI Locations:
 - control/command + click on layer thumbnail
 - control/command + click on channel thumbnail
 
-*For selecting a path please use [PathItem.makeSelection](/ps_reference/classes/pathitem/#makeselection)*
+*For selecting a path please use [PathItem.makeSelection](/ps-reference/classes/pathitem.md#makeselection)*
 
 #### Parameters
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `from` | *ComponentChannel* \| *AlphaChannel* \| [*Layer*](/ps_reference/classes/layer/) | - | The Channel or Layer to load the selection from. Can be located in different document. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | - | The selection behavior when a selection already exists. Default SelectionType.REPLACE |
+| `from` | *ComponentChannel* \| *AlphaChannel* \| [*Layer*](/ps-reference/classes/layer.md) | - | The Channel or Layer to load the selection from. Can be located in different document. |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | - | The selection behavior when a selection already exists. Default SelectionType.REPLACE |
 | `invert` | *boolean* | false | True to invert the selection |
 
-___
+<HorizontalLine />
 
 ### makeWorkPath
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
+**async** : *Promise*<[*PathItem*](/ps-reference/classes/pathitem.md)\>
 
 Create a work path from the active selection.
 
@@ -239,10 +240,10 @@ UI Location: Paths panel > Make work path icon
 | :------ | :------ | :------ | :------ |
 | `tolerance` | *number* | 2 | The tolerance (lower values, higher precision), decimal in the range 0.5..10 |
 
-___
+<HorizontalLine />
 
 ### resizeBoundary
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -260,13 +261,13 @@ UI Location: Select > Transform Selection
 | :------ | :------ | :------ | :------ |
 | `horizontal` | *number* | 100 | The amount to scale selection horizontally (decimal) |
 | `vertical` | *number* | 100 | The amount to scale selection vertically (decimal) |
-| `anchor` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | - | The anchor position to scale around. Default: AnchorPosition.MIDDLECENTER |
-| `interpolation` | [*InterpolationMethod*](/ps_reference/modules/constants/#interpolationmethod) | - | The resampling algorithm to use. Default: InterpolationMethod.BICUBIC |
+| `anchor` | [*AnchorPosition*](/ps-reference/modules/constants.md#anchorposition) | - | The anchor position to scale around. Default: AnchorPosition.MIDDLECENTER |
+| `interpolation` | [*InterpolationMethod*](/ps-reference/modules/constants.md#interpolationmethod) | - | The resampling algorithm to use. Default: InterpolationMethod.BICUBIC |
 
-___
+<HorizontalLine />
 
 ### rotateBoundary
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -283,13 +284,13 @@ UI Location: Select > Transform Selection
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `angle` | *number* | Angle to rotate the the selection by in degrees (decimal in the range -180..180) |
-| `anchor` | [*AnchorPosition*](/ps_reference/modules/constants/#anchorposition) | Anchor position to rotate around. Default: AnchorPosition.MIDDLECENTER |
-| `interpolation` | [*InterpolationMethod*](/ps_reference/modules/constants/#interpolationmethod) | The resampling algorithm to use. Default: InterpolationMethod.BICUBIC |
+| `anchor` | [*AnchorPosition*](/ps-reference/modules/constants.md#anchorposition) | Anchor position to rotate around. Default: AnchorPosition.MIDDLECENTER |
+| `interpolation` | [*InterpolationMethod*](/ps-reference/modules/constants.md#interpolationmethod) | The resampling algorithm to use. Default: InterpolationMethod.BICUBIC |
 
-___
+<HorizontalLine />
 
 ### save
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -307,10 +308,10 @@ UI Location: Select > Save Selection...
 | :------ | :------ | :------ |
 | `channelName?` | *string* | The name of the new channel to create (Default: "Alpha 1", "Alpha 2", etc.) |
 
-___
+<HorizontalLine />
 
 ### saveTo
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 *Promise*<void\>
 
@@ -329,12 +330,12 @@ await doc.selection.saveTo(doc.channels[3], SelectionType.INTERSECT);
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `channel` | *AlphaChannel* | The targeted Alpha channel for the save operation. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
 
-___
+<HorizontalLine />
 
 ### selectAll
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -355,10 +356,10 @@ await doc.selection.selectAll();
 
 UI Location: Select > All
 
-___
+<HorizontalLine />
 
 ### selectBorder
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -378,10 +379,10 @@ UI Location: Select > Modify > Border...
 | :------ | :------ | :------ |
 | `width` | *number* | The width of the border selection (integer in the range 1..200) |
 
-___
+<HorizontalLine />
 
 ### selectColumn
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -398,12 +399,12 @@ UI Location: Toolbar > Single Column Marquee Tool
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `x` | *number* | The x coordinate in pixels of the column to select (integer). The range should be within the document width. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
 
-___
+<HorizontalLine />
 
 ### selectEllipse
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -419,15 +420,15 @@ UI Location: Toolbar > Elliptical Marquee Tool
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - | The bounds of the selection, as an object with {top, left, bottom, right} properties. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | - | The selection behavior when a selection already exists. Default SelectionType.REPLACE |
+| `bounds` | [*Bounds*](/ps-reference/objects/bounds.md) | - | The bounds of the selection, as an object with \{top, left, bottom, right} properties. |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | - | The selection behavior when a selection already exists. Default SelectionType.REPLACE |
 | `feather` | *number* | 0 | The amount of feathering in pixels to apply to the selection (decimal in the range 0..1000) |
 | `antiAlias` | *boolean* | true | If true, anti-aliasing is applied to the selection |
 
-___
+<HorizontalLine />
 
 ### selectPolygon
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -447,15 +448,15 @@ UI Location: Toolbar > Polygonal Lasso Tool
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `points` | { `x`: *number* ; `y`: *number*  }[] | - | The points to select as an array of objects with {x, y} properties. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | - | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
+| `points` | \{ `x`: *number* ; `y`: *number*  }[] | - | The points to select as an array of objects with \{x, y} properties. |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | - | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
 | `feather` | *number* | 0 | The amount of feathering in pixels to apply to the selection (decimal in the range 0..1000) |
 | `antiAlias` | *boolean* | true | If true, anti-aliasing is applied to the selection |
 
-___
+<HorizontalLine />
 
 ### selectRectangle
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -475,15 +476,15 @@ UI Location: Toolbar > Rectangular Marquee Tool
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `bounds` | [*Bounds*](/ps_reference/objects/bounds/) | - | The bounds of the selection, as an object with {top, left, bottom, right} properties. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | - | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
+| `bounds` | [*Bounds*](/ps-reference/objects/bounds.md) | - | The bounds of the selection, as an object with \{top, left, bottom, right} properties. |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | - | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
 | `feather` | *number* | 0 | The amount of feathering in pixels to apply to the selection (decimal in the range 0..1000) |
 | `antiAlias` | *boolean* | true | If true, anti-aliasing is applied to the selection |
 
-___
+<HorizontalLine />
 
 ### selectRow
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -500,12 +501,12 @@ UI Location: Toolbar > Single Row Marquee Tool
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `y` | *number* | The y coordinate in pixels of the row to select (integer). The range should be within the document height. |
-| `mode` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
+| `mode` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) | The selection behavior when a selection already exists. Default: SelectionType.REPLACE |
 
-___
+<HorizontalLine />
 
 ### smooth
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 
@@ -528,10 +529,10 @@ UI Location: Select > Modify > Smooth...
 | `radius` | *number* | - | The sample radius in pixels (integer in the range 1..500) |
 | `applyEffectAtCanvasBounds` | *boolean* | false | By default this is false, meaning that any part of the selection that touches the bounds of the canvas will not be affected by the smoothing. |
 
-___
+<HorizontalLine />
 
 ### translateBoundary
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">25.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
 **async** : *Promise*<void\>
 

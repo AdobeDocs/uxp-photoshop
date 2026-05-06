@@ -88,7 +88,7 @@ Do you have experience with Photoshop plugin solutions? Learn more here.
 
 <DiscoverBlock slots="link, text"/>
 
-[Designing plugins for Photoshop](/design/)
+[Designing plugins for Photoshop](/design/index.md)
 
 Learn key design principles for UXP plugins in Photoshop.
 

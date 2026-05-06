@@ -14,9 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Some of the methods, primarily core, return object literals.
 ---
 
 # Return Objects
 
-Some of the methods, primarily [core](/ps_reference/media/photoshopcore/), return object literals.
+Some of the methods, primarily [core](/ps-reference/media/photoshopcore.md), return object literals.
 

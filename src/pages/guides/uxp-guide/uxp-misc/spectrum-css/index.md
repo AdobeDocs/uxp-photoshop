@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Spectrum CSS
-description:
+description: Spectrum CSS is Adobe's open-source implementation of Adobe's design system, used across multiple applications.
 ---
 
 # Spectrum CSS

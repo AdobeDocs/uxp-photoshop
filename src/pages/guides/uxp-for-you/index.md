@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: UXP For You - Guides for a new UXP Developer
-description:
+description: The answer to that question depends on what you currently know.
 ---
 
 # New to UXP? Where to Go Next

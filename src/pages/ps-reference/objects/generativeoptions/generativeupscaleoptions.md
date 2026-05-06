@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Options for Document.generativeUpscale().
 ---
 
 # GenerativeUpscaleOptions
 
-Options for [Document.generativeUpscale](/ps_reference/classes/document/#generativeupscale)().
+Options for [Document.generativeUpscale](/ps-reference/classes/document.md#generativeupscale)().
 Different models may support different options. At this time, Firefly only supports scale.
 
 | Name | Type | Min Version | Description |

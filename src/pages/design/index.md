@@ -40,9 +40,9 @@ These guidelines will help you define the best user experience for your plugin. 
 
 User experience patterns highlight UX requirements and best practices, as well as provide guidance on how to interact with your plugin users within Adobe.
 
-[View UX patterns](/design/ux-patterns/)
+[View UX patterns](/design/ux-patterns/index.md)
 
-[Designing for photoshop](/design/ux-patterns/Designingforphotoshop/)
+[Designing for photoshop](/design/ux-patterns/designingforphotoshop.md)
 
  
  
@@ -50,5 +50,5 @@ User experience patterns highlight UX requirements and best practices, as well a
 
 The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View user interface components](/design/user-interface/)
+[View user interface components](/design/user-interface/index.md)
 

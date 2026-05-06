@@ -14,12 +14,13 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- Dimensions"
 ---
 
 # types/GeneralTypes
 
 ## Interfaces
 
-- [Dimensions](/ps_reference/objects/returnobjects/dimensions/)
-- [Position](/ps_reference/objects/options/position/)
-- [SimpleBounds](/ps_reference/objects/returnobjects/simplebounds/)
+- [Dimensions](/ps-reference/objects/returnobjects/dimensions.md)
+- [Position](/ps-reference/objects/options/position.md)
+- [SimpleBounds](/ps-reference/objects/returnobjects/simplebounds.md)

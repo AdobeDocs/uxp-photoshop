@@ -35,7 +35,7 @@ body {
 }
 ```
 
-See [Theme Awareness](/guides/theme-awareness/) for more details.
+See [Theme Awareness](/guides/theme-awareness/index.md) for more details.
 
 ## Entrypoints
 
@@ -88,7 +88,7 @@ See [vanilla-js-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-sample
   ]
 ```
 
-For all details that go into a panel entrypoint, see [UXP Manifest docs](/guides/uxp_guide/uxp-misc/manifest-v4/).
+For all details that go into a panel entrypoint, see [UXP Manifest docs](/guides/uxp-guide/uxp-misc/manifest-v4/index.md).
 
 ### Coming Soon - One Off Scripts
 
@@ -132,7 +132,7 @@ applications, such as file system access, secure storage and web requests.
 ### File System Access
 
 With UXP, plugins have access only to their own plugin folder, a data folder and a temporary folder. All other file locations
-have to be explicitly given access to by the user. See [FileSystemProvider](/uxp-api/reference-js/Modules/uxp/Persistent%20File%20Storage/FileSystemProvider/)
+have to be explicitly given access to by the user. See [FileSystemProvider](/uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md)
 for information on what APIs and folders are available to you.
 
 See [jszip-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/jszip-sample) for an example of how temporary folder is accessed.
@@ -150,7 +150,7 @@ See [secure-storage-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-sa
 
 ### Web Requests
 
-UXP provides `fetch` method globally, matching HTML DOM `fetch` method. See [fetch](/uxp-api/reference-js/Global%20Members/Data%20Transfers/fetch/) for more details.
+UXP provides `fetch` method globally, matching HTML DOM `fetch` method. See [fetch](/uxp-api/reference-js/global-members/data-transfers/fetch.md) for more details.
 
 See [web-service-call-js-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/web-service-call-js-sample)
 for an example plugin that communicates with a web server.

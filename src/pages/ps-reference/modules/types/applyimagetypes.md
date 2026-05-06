@@ -14,29 +14,30 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- ApplyImageOptions"
 ---
 
 # types/ApplyImageTypes
 
 ## Interfaces
 
-- [ApplyImageOptions](/ps_reference/objects/options/applyimageoptions/)
-- [ApplyImageSource](/ps_reference/objects/options/applyimagesource/)
+- [ApplyImageOptions](/ps-reference/objects/options/applyimageoptions.md)
+- [ApplyImageSource](/ps-reference/objects/options/applyimagesource.md)
 
 ## Type aliases
 
 ### ApplyImageChannelType
 
-Ƭ **ApplyImageChannelType**: ComponentChannel \| AlphaChannel \| [*RGB*](/ps_reference/modules/constants/#rgb) \| [*CMYK*](/ps_reference/modules/constants/#cmyk) \| [*LAB*](/ps_reference/modules/constants/#lab) \| [*SELECTION*](/ps_reference/modules/constants/#selection) \| [*TRANSPARENCY*](/ps_reference/modules/constants/#transparency)
+Ƭ **ApplyImageChannelType**: ComponentChannel \| AlphaChannel \| [*RGB*](/ps-reference/modules/constants.md#rgb) \| [*CMYK*](/ps-reference/modules/constants.md#cmyk) \| [*LAB*](/ps-reference/modules/constants.md#lab) \| [*SELECTION*](/ps-reference/modules/constants.md#selection) \| [*TRANSPARENCY*](/ps-reference/modules/constants.md#transparency)
 
-Type for the Channel choice in [ApplyImageSource](/ps_reference/objects/options/applyimagesource/)
+Type for the Channel choice in [ApplyImageSource](/ps-reference/objects/options/applyimagesource.md)
 
-___
+<HorizontalLine />
 
 ### ApplyImageLayerType
 
-Ƭ **ApplyImageLayerType**: [*Layer*](/ps_reference/classes/layer/) \| [*MERGED*](/ps_reference/modules/constants/#merged)
+Ƭ **ApplyImageLayerType**: [*Layer*](/ps-reference/classes/layer.md) \| [*MERGED*](/ps-reference/modules/constants.md#merged)
 
-Type for the Layer choice in [ApplyImageSource](/ps_reference/objects/options/applyimagesource/).
+Type for the Layer choice in [ApplyImageSource](/ps-reference/objects/options/applyimagesource.md).
 Select [ApplyImageLayer.MERGED](../../../ps-reference/modules/constants.md#applyimagelayer) to use the pixels from a merged
 or flattened version of the document.

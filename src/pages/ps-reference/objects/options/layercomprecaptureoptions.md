@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: An object literal can be constructed with any of the following properties and passed to LayerComp.recapture.
 ---
 
 # LayerCompRecaptureOptions
 
-An object literal can be constructed with any of the following properties and passed to [LayerComp.recapture](/ps_reference/classes/layercomp/#recapture).
+An object literal can be constructed with any of the following properties and passed to [LayerComp.recapture](/ps-reference/classes/layercomp.md#recapture).
 As a type, `LayerCompRecaptureOptions` can be used in Typescript development.
 
 ```javascript

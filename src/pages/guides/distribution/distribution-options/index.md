@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Distribution Options
-description:
+description: "Once you have a packaged plugin, you're ready to distribute it. Here are your options:"
 ---
 
 # Distribution Options

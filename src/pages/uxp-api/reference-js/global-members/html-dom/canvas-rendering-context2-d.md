@@ -5,7 +5,7 @@ description: "See: Web APIs - CanvasRenderingContext2D for more details<br></br>
 
 # window.CanvasRenderingContext2D
 **See**: [Web APIs - CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) for more details\<br\>\</br\>
-Also, refer to the interface [HTMLCanvasElement](../HTML%20Elements/HTMLCanvasElement.md#module:global.htmlcanvaselement)\<br\>\</br\>  
+Also, refer to the interface [HTMLCanvasElement](../html-elements/html-canvas-element.md#module:global.htmlcanvaselement)\<br\>\</br\>  
 **Since**: v7.0.0  
 
 

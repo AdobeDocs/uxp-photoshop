@@ -14,10 +14,11 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- DocumentCreateOptions"
 ---
 
 # types/DocumentTypes
 
 ## Interfaces
 
-- [DocumentCreateOptions](/ps_reference/objects/createoptions/documentcreateoptions/)
+- [DocumentCreateOptions](/ps-reference/objects/createoptions/documentcreateoptions.md)

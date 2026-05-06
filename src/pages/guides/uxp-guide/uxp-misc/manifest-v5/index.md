@@ -9,7 +9,7 @@ keywords:
   - Manifest
   - Scripting
 title: Manifest v5
-description:
+description: Manifest v5 gives developers access to a new plugin permissions model and WebViews in modal dialogs. Using the full manifest v5 feature set requires PS 23.
 ---
 
 # UXP Manifest v5
@@ -86,7 +86,7 @@ Starting from changes to top-level metadata, here are some keys that changed wit
 
 Key path | Type | Description | Change 
 ---------|------|-------------|-------
-`version` | string| Version number of your plugin in `x.y.z` format. | Plugins can specify semver format with no warnings. <br/>Specify at least one number and the minor and/or patch will be autofilled with zeroes.
+`version` | string| Version number of your plugin in `x.y.z` format. | Plugins can specify semver format with no warnings.  Specify at least one number and the minor and/or patch will be autofilled with zeroes.
 `requiredPermissions` | object | Declare [plugin permissions](#plugin-permissions). | New in v5.
 `entrypoints` | `EntryPointDefinition[]` | Describes the entries your plugin adds to the _Plugins_ menu and plugin panel. | v5 changes in next section.
 

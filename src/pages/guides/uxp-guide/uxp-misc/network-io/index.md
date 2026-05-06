@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Network I/O
-description:
+description: Many plugin scenarios require use of the network to fetch or push data, to browse remote resources, and to synchronize content, among other reasons. XD imp
 ---
 
 # Network I/O

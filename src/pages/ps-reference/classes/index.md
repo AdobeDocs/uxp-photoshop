@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "Root of the API, accessed at require(\"photoshop\")"
 ---
 
 # Objects
@@ -24,32 +25,32 @@ Root of the API, accessed at `require("photoshop")`
 
 ### action
 
-• **action**: *typeof* [*photoshopAction*](/ps_reference/media/photoshopaction/)
+• **action**: *typeof* [*photoshopAction*](/ps-reference/media/photoshopaction.md)
 
 The set of lower level APIs for interfacing with the action system, including `batchPlay`,
 evolution of `executeAction`.
 
-___
+<HorizontalLine />
 
 ### app
 
-• **app**: *typeof* [*Photoshop*](/ps_reference/classes/photoshop/)
+• **app**: *typeof* [*Photoshop*](/ps-reference/classes/photoshop.md)
 
 Root of the DOM, the `app` object where you can access application settings,
 open documents and reach rest of the APIs.
 
-___
+<HorizontalLine />
 
 ### constants
 
-• **constants**: [*Constants*](/ps_reference/modules/constants/)
+• **constants**: [*Constants*](/ps-reference/modules/constants.md)
 
 The different constants and enumerations that DOM APIs expect as certain parameters.
 
-___
+<HorizontalLine />
 
 ### core
 
-• **core**: *typeof* [*photoshopCore*](/ps_reference/media/photoshopcore/)
+• **core**: *typeof* [*photoshopCore*](/ps-reference/media/photoshopcore.md)
 
 The set of lower level APIs for directly interfacing with Photoshop UI and user.

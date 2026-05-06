@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: The core module allows access to specialized commands
 ---
 
 # photoshopCore
@@ -41,7 +42,7 @@ const {core} = require('photoshop');
 ## Functions
 
 ### addNotificationListener
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 **async** : *Promise*<void\>
 
@@ -52,7 +53,7 @@ A [table of events is available](../../ps-reference/media/eventcodes.md#core-eve
 
 For example: using group '`UI`' and event '`userIdle`'
 
-- Invoked after the Photoshop user idles for a specified number of seconds. See [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime).
+- Invoked after the Photoshop user idles for a specified number of seconds. See [setUserIdleTime](/ps-reference/media/photoshopcore.md#setuseridletime).
 - Invoked a second time with the descriptor `{idleEnd: true}` if the user is no longer idle. This signal can
 be used to finish up tasks being performed during the idle time.
 ```javascript
@@ -67,12 +68,12 @@ await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 | `events` | *string*[] |
 | `callback` | NotificationListener |
 
-___
+<HorizontalLine />
 
 ### calculateDialogSize
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<{ `height`: *number* ; `width`: *number*  }\>
+**async** : *Promise*<\{ `height`: *number* ; `width`: *number*  }\>
 
 Returns the effective size of a dialog.
 ```javascript
@@ -92,17 +93,17 @@ const { width, height } = await core.calculateDialogSize(idealSize);
 | `minimumSize.height` | *number* |
 | `minimumSize.width` | *number* |
 
-___
+<HorizontalLine />
 
 ### convertColor
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 RGBColorDescriptor \| RGB32ColorDescriptor
 
 Converts the given color (in descriptor form) to RGB,
 returning the color descriptor.
 
-This is an internal API that is used for [SolidColor](/ps_reference/classes/solidcolor/)
+This is an internal API that is used for [SolidColor](/ps-reference/classes/solidcolor.md)
 and all the other color classes.
 
 Currently, this API uses the application color settings
@@ -161,12 +162,12 @@ Convert to CMYK
 | `sourceColor` | ColorDescriptor |
 | `targetModel` | ColorConversionModel.CMYK |
 
-___
+<HorizontalLine />
 
 ### convertGlobalToLocal
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">26.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>26.0\</span\>
 
-**async** : *Promise*<{ `x`: *number* ; `y`: *number*  }\>
+**async** : *Promise*<\{ `x`: *number* ; `y`: *number*  }\>
 
 Given the (x,y) coordinates of a position in global (display) space, we convert to coordinates
 with the origin based at the top left corner of the given panel.
@@ -178,7 +179,7 @@ In the example manifest on the documentation page for
 the identifier is "panelName".
 
 Note: global coordinates differ between macOS and Windows. On macOS global coordinates are expressed as
-points while on Windows the unit is pixels. See [getDisplayConfiguration](/ps_reference/media/photoshopcore/#getdisplayconfiguration) for more information
+points while on Windows the unit is pixels. See [getDisplayConfiguration](/ps-reference/media/photoshopcore.md#getdisplayconfiguration) for more information
 on global coordinates.
 
 ```javascript
@@ -192,14 +193,14 @@ const { x, y } = await core.convertGlobalToLocal(target, location);
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `target` | *string* | The `id` of the panel to use as the origin. |
-| `location` | *object* | Point coordinates in the form {x, y}. |
+| `location` | *object* | Point coordinates in the form \{x, y}. |
 | `location.x` | *number* | - |
 | `location.y` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### createTemporaryDocument
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *object*
 
@@ -217,10 +218,10 @@ await core.createTemporaryDocument({ documentID: 123 });
 | `options` | *object* | Object containing the id the document to duplicate under property `documentID`. |
 | `options.documentID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### deleteTemporaryDocument
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *void*
 
@@ -237,10 +238,10 @@ await core.deleteTemporaryDocument({ documentID: 146 });
 | `options` | *object* | Object containing key of `documentID` for the document to delete. |
 | `options.documentID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### endModalToolState
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<void\>
 
@@ -256,10 +257,10 @@ await core.endModalToolState(false);
 | :------ | :------ |
 | `commit` | *boolean* |
 
-___
+<HorizontalLine />
 
 ### executeAsModal
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<void\>
 
@@ -269,33 +270,33 @@ or the plugin wants to update UI or preference state.
 
 ExecuteAsModal is only available to plugin that is using apiVersion 2 or higher.
 
-See [Modal Execution](../executeasmodal) for details
+See [Modal Execution](executeasmodal.md) for details
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps_reference/objects/options/executioncontext/), `descriptor?`: *object*) => *Promise*<any\> |
-| `options` | [*ExecuteAsModalOptions*](/ps_reference/objects/returnobjects/executeasmodaloptions/) |
+| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps-reference/objects/options/executioncontext.md), `descriptor?`: *object*) => *Promise*<any\> |
+| `options` | [*ExecuteAsModalOptions*](/ps-reference/objects/returnobjects/executeasmodaloptions.md) |
 
-___
+<HorizontalLine />
 
 ### getActiveTool
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
+**async** : *Promise*<\{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
 
 Returns information about the active Photoshop tool.
 ```javascript
 const { title } = await core.getActiveTool();
 ```
 
-___
+<HorizontalLine />
 
 ### getCPUInfo
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-[*CPUInfo*](/ps_reference/objects/returnobjects/cpuinfo/)
+[*CPUInfo*](/ps-reference/objects/returnobjects/cpuinfo.md)
 
 Returns information about the host CPU.
 ```javascript
@@ -304,19 +305,19 @@ const isAMD = vendor === 'AMD';
 const isARM = vendor === 'ARM';
 ```
 
-___
+<HorizontalLine />
 
 ### getDisplayConfiguration
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<[[*DisplayConfiguration*](/ps_reference/objects/returnobjects/displayconfiguration/)]\>
+*Promise*<[[*DisplayConfiguration*](/ps-reference/objects/returnobjects/displayconfiguration.md)]\>
 
 Returns the current display configuration as an array with an entry for each display.
 
 Note: returned units differ by platform.
  - Mac uses logical units, points.
  - Windows uses physical units, pixels.
-Further discussion of the units may be found on [Display Units](../../media/displayunits)
+Further discussion of the units may be found on [Display Units](../media/displayunits.md)
 
 ```javascript
 core.getDisplayConfiguration({ physicalResolution: true });
@@ -326,14 +327,14 @@ core.getDisplayConfiguration({ physicalResolution: true });
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `options` | [*DisplayConfigurationOptions*](/ps_reference/objects/options/displayconfigurationoptions/) | {} | Additional properties to include, e.g., `physicalResolution`. |
+| `options` | [*DisplayConfigurationOptions*](/ps-reference/objects/options/displayconfigurationoptions.md) | \{} | Additional properties to include, e.g., `physicalResolution`. |
 
-___
+<HorizontalLine />
 
 ### getGPUInfo
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-[*GPUInfo*](/ps_reference/objects/returnobjects/gpuinfo/)
+[*GPUInfo*](/ps-reference/objects/returnobjects/gpuinfo.md)
 
 Returns OpenGL and OpenCL information about the available graphics processor.
 ```javascript
@@ -344,12 +345,12 @@ console.log(JSON.stringify(clgpuInfoList));
 // > [{"version":"OpenCL 1.2 ","memoryMB":8589,"name":"AMD Radeon Pro 580X Compute Engine", ...}]
 ```
 
-___
+<HorizontalLine />
 
 ### getLayerGroupContents
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-*Promise*<{ `list`: LayerTreeInfo[]  }\>
+*Promise*<\{ `list`: LayerTreeInfo[]  }\>
 
 Returns a list of the layers contained by the specified layer group.
 
@@ -365,10 +366,10 @@ await core.getLayerGroupContents({ documentID: 123, layerID: 9 });
 | `options.documentID` | *number* |
 | `options.layerID` | *number* |
 
-___
+<HorizontalLine />
 
 ### getLayerGroupContentsSync
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *object*
 
@@ -386,12 +387,12 @@ core.getLayerGroupContentsSync({ documentID: 123, layerID: 9 });
 | `options.documentID` | *number* |
 | `options.layerID` | *number* |
 
-___
+<HorizontalLine />
 
 ### getLayerTree
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-**async** : *Promise*<{ `list`: LayerTreeInfo[]  }\>
+**async** : *Promise*<\{ `list`: LayerTreeInfo[]  }\>
 
 Returns the full hierarchy of the layer stack in nested "lists".
 ```javascript
@@ -405,10 +406,10 @@ await core.getLayerTree({ documentID: 123 });
 | `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getLayerTreeSync
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *object*
 
@@ -424,10 +425,10 @@ core.getLayerTreeSync({ documentID: 123 });
 | `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### getMenuCommandState
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<boolean\>
 
@@ -444,10 +445,10 @@ const canFill = await core.getMenuCommandState({ commandID: 1042 });
 | `options` | *object* |
 | `options.commandID` | *number* |
 
-___
+<HorizontalLine />
 
 ### getMenuCommandTitle
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<string\>
 
@@ -464,10 +465,10 @@ const renameLayerStr = await core.getMenuCommandTitle({ commandID: 2983 });
 | `options.commandID?` | *number* |
 | `options.menuID?` | *number* |
 
-___
+<HorizontalLine />
 
 ### getPluginInfo
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.2</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.2\</span\>
 
 **async** : *Promise*<ActionDescriptor\>
 
@@ -492,27 +493,27 @@ when loading plugins through the UXP Developer Tool.
 await core.getPluginInfo();
 ```
 
-___
+<HorizontalLine />
 
 ### getUserIdleTime
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
-Return the current number of seconds for user idle time. See also: [setUserIdleTime](/ps_reference/media/photoshopcore/#setuseridletime)
+Return the current number of seconds for user idle time. See also: [setUserIdleTime](/ps-reference/media/photoshopcore.md#setuseridletime)
 
 ```javascript
 await core.getUserIdleTime();
 ```
 
-___
+<HorizontalLine />
 
 ### historySuspended
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *Promise*<boolean\>
 
-Returns true if the history is in a suspended state.  See [Document.suspendHistory](/ps_reference/classes/document/#suspendhistory).
+Returns true if the history is in a suspended state.  See [Document.suspendHistory](/ps-reference/classes/document.md#suspendhistory).
 ```javascript
 await core.historySuspended( {documentID: 123} );
 ```
@@ -524,19 +525,19 @@ await core.historySuspended( {documentID: 123} );
 | `options` | *object* | Object containing key of `documentID` for the target document. |
 | `options.documentID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### isModal
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *boolean*
 
-Returns true if the plugin is currently in a modal state using [executeAsModal](/ps_reference/media/photoshopcore/#executeasmodal).
+Returns true if the plugin is currently in a modal state using [executeAsModal](/ps-reference/media/photoshopcore.md#executeasmodal).
 
-___
+<HorizontalLine />
 
 ### performMenuCommand
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<boolean\>
 
@@ -555,10 +556,10 @@ await core.performMenuCommand({ commandID: 1017 });
 | `options` | *object* | Object containing key of `commandID` for the menu item. |
 | `options.commandID` | *number* | - |
 
-___
+<HorizontalLine />
 
 ### redrawDocument
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">24.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
 **async** : *Promise*<number\>
 
@@ -586,10 +587,10 @@ await core.redrawDocument({ documentID: 123 });
 | `options` | *object* |
 | `options.documentID` | *number* |
 
-___
+<HorizontalLine />
 
 ### removeNotificationListener
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.0</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
 *Promise*<void\>
 
@@ -607,10 +608,10 @@ await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 | `events` | *string*[] | Array of event names. |
 | `listener` | NotificationListener | - |
 
-___
+<HorizontalLine />
 
 ### setExecutionMode
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.2</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.2\</span\>
 
 **async** : *Promise*<void\>
 
@@ -637,15 +638,15 @@ await core.setExecutionMode({ logRejections: true });
 | `options.enableErrorStacktraces?` | *boolean* |
 | `options.logRejections?` | *boolean* |
 
-___
+<HorizontalLine />
 
 ### setUserIdleTime
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 **async** : *Promise*<void\>
 
 Specifies the number of seconds a user must be idle on Photoshop before invoking the
-userIdle event handler defined with [addNotificationListener](/ps_reference/media/photoshopcore/#addnotificationlistener). An idleTime of 0
+userIdle event handler defined with [addNotificationListener](/ps-reference/media/photoshopcore.md#addnotificationlistener). An idleTime of 0
 turns off idle notifications.
 
 ```javascript
@@ -658,10 +659,10 @@ await core.setUserIdleTime(3);
 | :------ | :------ |
 | `idleTime` | *number* |
 
-___
+<HorizontalLine />
 
 ### showAlert
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 **async** : *Promise*<void\>
 
@@ -678,10 +679,10 @@ await core.showAlert({ message: 'Operation successful' });
 | `options` | *object* |
 | `options.message` | *string* |
 
-___
+<HorizontalLine />
 
 ### suppressResizeGripper
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.1</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
 *Promise*<void\>
 
@@ -702,10 +703,10 @@ The value for `target` above will be the id attached to the panel's entry under 
 | :------ | :------ | :------ |
 | `options` | *any* | Object containing type, target, and value. |
 
-___
+<HorizontalLine />
 
 ### translateUIString
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
 *string*
 

@@ -6,7 +6,7 @@ description: Contains a log of common issues encountered by our developer commun
 # Known Issues and Workarounds
 
 ## Dialog modal state
-Using a dialog element's [showModal method](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/#showmodal) does not put Photoshop into a modal state as expected of a dialog. There is an options parameter available in Photoshop to enable the modal state.  Sending the option `lockDocumentFocus: true` will tell Photoshop to lock the UI while the dialog is up.
+Using a dialog element's [showModal method](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/index.md#showmodal) does not put Photoshop into a modal state as expected of a dialog. There is an options parameter available in Photoshop to enable the modal state.  Sending the option `lockDocumentFocus: true` will tell Photoshop to lock the UI while the dialog is up.
 ```javascript
 document.querySelector("dialog").showModal({lockDocumentFocus: true});
 ```

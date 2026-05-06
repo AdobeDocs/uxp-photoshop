@@ -14,22 +14,23 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "- GroupLayerCreateOptions"
 ---
 
 # types/LayerTypes
 
 ## Interfaces
 
-- [GroupLayerCreateOptions](/ps_reference/objects/createoptions/grouplayercreateoptions/)
-- [PixelLayerCreateOptions](/ps_reference/objects/createoptions/pixellayercreateoptions/)
-- [TextLayerCreateOptions](/ps_reference/objects/createoptions/textlayercreateoptions/)
+- [GroupLayerCreateOptions](/ps-reference/objects/createoptions/grouplayercreateoptions.md)
+- [PixelLayerCreateOptions](/ps-reference/objects/createoptions/pixellayercreateoptions.md)
+- [TextLayerCreateOptions](/ps-reference/objects/createoptions/textlayercreateoptions.md)
 
 ## Type aliases
 
 ### LayerCreateOptions
 
-Ƭ **LayerCreateOptions**: [*PixelLayerCreateOptions*](/ps_reference/objects/createoptions/pixellayercreateoptions/) \| [*GroupLayerCreateOptions*](/ps_reference/objects/createoptions/grouplayercreateoptions/) \| [*TextLayerCreateOptions*](/ps_reference/objects/createoptions/textlayercreateoptions/)
+Ƭ **LayerCreateOptions**: [*PixelLayerCreateOptions*](/ps-reference/objects/createoptions/pixellayercreateoptions.md) \| [*GroupLayerCreateOptions*](/ps-reference/objects/createoptions/grouplayercreateoptions.md) \| [*TextLayerCreateOptions*](/ps-reference/objects/createoptions/textlayercreateoptions.md)
 
-The options passed to [Document.createLayer](/ps_reference/classes/document/#createlayer) may take any of the following forms:
+The options passed to [Document.createLayer](/ps-reference/classes/document.md#createlayer) may take any of the following forms:
 - PixelLayerCreateOptions
 - GroupLayerCreateOptions

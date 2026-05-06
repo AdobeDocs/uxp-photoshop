@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: How Do I...
-description:
+description: This section provides snippets of HTML, CMS, and JavaScript code needed to accomplish common operations needed in many plugins. There are no complete plugi
 ---
 
 # How Do I...

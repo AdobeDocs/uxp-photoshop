@@ -14,9 +14,10 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "Option objects for generative/AI features, including:"
 ---
 
 # Generative Options
 
 Option objects for generative/AI features, including:
-- [Document.generativeUpscale(model, options)](/ps_reference/classes/document/#generativeupscale)
+- [Document.generativeUpscale(model, options)](/ps-reference/classes/document.md#generativeupscale)

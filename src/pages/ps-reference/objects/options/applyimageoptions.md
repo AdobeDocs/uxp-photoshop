@@ -14,12 +14,13 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: An object literal can be constructed with the following properties
 ---
 
 # ApplyImageOptions
 
 An object literal can be constructed with the following properties
-and passed to [Layer.applyImage](/ps_reference/classes/layer/#applyimage).
+and passed to [Layer.applyImage](/ps-reference/classes/layer.md#applyimage).
 As a type, `ApplyImageOptions` can be used in Typescript development.
 
 ```javascript
@@ -36,8 +37,8 @@ await require('photoshop').app.activeDocument.layers[0].applyImage(options);
 
 | Name | Type | Default | Range | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ | :------ |
-| blending | [*ApplyImageBlendMode*](/ps_reference/modules/constants/#applyimageblendmode) | MULTIPLY | - | 24.5 | The blend mode used to apply the source to the active layer. |
-| mask | [*ApplyImageSource*](/ps_reference/objects/options/applyimagesource/) | - | - | 24.5 | The Mask reference to be used in the Apply Image operation. |
+| blending | [*ApplyImageBlendMode*](/ps-reference/modules/constants.md#applyimageblendmode) | MULTIPLY | - | 24.5 | The blend mode used to apply the source to the active layer. |
+| mask | [*ApplyImageSource*](/ps-reference/objects/options/applyimagesource.md) | - | - | 24.5 | The Mask reference to be used in the Apply Image operation. |
 | opacity | *number* | 100 | 0..100 | 24.5 | The opacity used while applying the source to the active layer. |
 | preserveTransparency | *boolean* | false | - | 24.5 | Whether to preserve the original transparency of the active layer. |
-| source | [*ApplyImageSource*](/ps_reference/objects/options/applyimagesource/) | - | - | 24.5 | The source reference to be used in the Apply Image operation. |
+| source | [*ApplyImageSource*](/ps-reference/objects/options/applyimagesource.md) | - | - | 24.5 | The source reference to be used in the Apply Image operation. |

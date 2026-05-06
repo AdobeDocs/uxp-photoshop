@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: UXP for ExtendScript Developers
-description:
+description: If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or its 64-bit successor, the ExtendScript Debugger, you'll be pleasantly surp
 ---
 
 # UXP for ExtendScript Developers
@@ -19,13 +19,13 @@ If you're coming to UXP from ExtendScript and the ESTK (ExtendScript ToolKit) or
 
 ### Different DOM access
 
-UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP API reference](../../ps_reference/) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
+UXP provides different methods for accessing the Photoshop DOM. See the [Photoshop UXP API reference](../../../ps-reference/index.md) for more information. At present, the entire DOM is not yet supported, but more access is being added with every Photoshop release.
 
-As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](../../ps_reference/media/batchplay/).
+As a workaround until all the significant Photoshop features are accessible via UXP, you can use a feature called [batchPlay](../../../ps-reference/media/batchplay.md).
 
 ### Migration helper for ExtendScript developers
 
-If you use `executeAction` and `executeActionGet` often in your code, the [ExtendScript batchPlay logger](https://github.com/adobe-uxp/ps-es-to-uxp) utility can help you migrate your code. Plug the `ps-es-to-uxp` jsx code into your ExtendScript project, and it will print out all your `executeAction` and `executeActionGet` methods in a format suitable for the UXP equivalent API: [batchPlay](../../ps_reference/media/batchplay).
+If you use `executeAction` and `executeActionGet` often in your code, the [ExtendScript batchPlay logger](https://github.com/adobe-uxp/ps-es-to-uxp) utility can help you migrate your code. Plug the `ps-es-to-uxp` jsx code into your ExtendScript project, and it will print out all your `executeAction` and `executeActionGet` methods in a format suitable for the UXP equivalent API: [batchPlay](../../../ps-reference/media/batchplay.md).
 
 ### Development environment
 ExtendScript Toolkit ("ESTK") was the development environment of choice for many years, and still is for many Windows developers. On macOS, ESTK died a lingering death due to the deprecation of 32-bit code. Recently, ESTK has been replaced by a plugin for Visual Studio Code, a widely-used editor.
@@ -50,4 +50,4 @@ A full introduction to ES6 features and syntax is beyond the scope of this docum
 - [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 ### What's Missing in UXP
-UXP provides an HTML interpreter similar to Chromium; it's more limited than a full browser, which means some commonly-used web CSS and HTML idioms don't work. For more information on what does and doesn't work in the UXP HTML environment, see [this document](/guides/uxp_guide/unsupported/).
+UXP provides an HTML interpreter similar to Chromium; it's more limited than a full browser, which means some commonly-used web CSS and HTML idioms don't work. For more information on what does and doesn't work in the UXP HTML environment, see [this document](/guides/uxp-guide/unsupported/index.md).

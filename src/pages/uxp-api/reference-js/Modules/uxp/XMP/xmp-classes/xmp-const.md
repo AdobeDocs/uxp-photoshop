@@ -7,7 +7,7 @@ description: This object contains the read-only constant definitions for use wit
 This object contains the read-only constant definitions for use with the JavaScript XMP API. Some of these are listed in the context in which they are used. Longer lists are provided here.
 
 \<br\>\</br\>
-# Schema namespace string constants
+## Schema namespace string constants
 Constant values for the namespace URI strings used in all get and set property operations. See XMPMeta object.
 
 | Name | Type | Access | Description |
@@ -38,7 +38,7 @@ Constant values for the namespace URI strings used in all get and set property o
 | NS_ASF | string | Read-only | The XML namespace for the Microsoft advanced streaming format schema. |
 
 \<br\>\</br\>
-# Type namespace string constants
+## Type namespace string constants
 Constant values for the field-type namespace URI strings used in all structured property operations. See XMPMeta object.
 
 | Name | Type | Access | Description |
@@ -63,7 +63,7 @@ Constant values for the field-type namespace URI strings used in all structured 
 | TYPE_PDFA_EXTENSION | string | Read-only | The XML namespace for PDF subtypes. |
 
 \<br\>\</br\>
-# File format numeric constants\<br\>\</br\>
+## File format numeric constants\<br\>\</br\>
 Constant values for supported file types, used in I/O operations. See XMPFile object.
 
 | Name | Type | Access | Description |

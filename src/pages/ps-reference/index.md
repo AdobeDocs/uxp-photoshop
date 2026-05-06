@@ -174,7 +174,7 @@ ExtendScript has `executeAction`; this is analagous to UXP's `batchPlay`. Howeve
 
 Unlike ExtendScript where classes were provided to construct action descriptors, references and values, `batchPlay` accepts plain JSON objects.
 
-The [batchPlay documentation](/ps_reference/media/batchplay/) contains details on how to construct JSON for `batchPlay` usage.
+The [batchPlay documentation](/ps-reference/media/batchplay.md) contains details on how to construct JSON for `batchPlay` usage.
 
 ## UXP Scripting
 

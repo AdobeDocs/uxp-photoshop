@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "| Name | Type | Access | Min Version | Description |"
 ---
 
 # Photoshop Save Options

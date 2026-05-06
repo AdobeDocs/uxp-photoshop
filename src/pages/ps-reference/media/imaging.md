@@ -2,6 +2,7 @@
 id: "imaging"
 title: "Imaging API"
 sidebar_label: "Imaging API"
+description: The Imaging API allows JavaScript to work directly with image data in Photoshop documents.
 ---
 
 # Imaging API
@@ -71,7 +72,7 @@ Instances of `PhotoshopImageData` cannot be created explicitly by JavaScript, bu
 * [createImageDataFromBuffer](#createimagedatafrombuffer)
 
 
----
+<HorizontalLine />
 ## Performance considerations
 Photoshop images can be (very) large. It is therefore important to manage the image data carefully in JavaScript.
 If you use a large amount of JavaScript memory, then you may see warnings in the UDT debugger console such as the following:
@@ -91,7 +92,7 @@ When you are done working with image data, then you should call `dispose` on the
 Converting image data between different color spaces or color profiles is somewhat time consuming. Whenever possible, work with a color space and color profile that match the document that you are operating on.
 
 
----
+<HorizontalLine />
 ## APIs
 
 ### PhotoshopImageData
@@ -127,7 +128,7 @@ imageData.dispose();
 ```
 
 
----
+<HorizontalLine />
 ### getPixels
 This API allows JavaScript to obtain pixel data from a Photoshop document. You can request pixels from an individual layer, or from the full document composite.
 
@@ -176,7 +177,7 @@ const thumbnail = await imaging.getPixels({
 ```
 
 
----
+<HorizontalLine />
 ### putPixels
 This API allows JavaScript to change pixel data in a layer. You can replace all pixels in a layer or a region of the layer.
 
@@ -201,7 +202,7 @@ await imaging.putPixels({
 });
 ```
 
----
+<HorizontalLine />
 ### getLayerMask
 This API allows JavaScript to retrieve the pixel data representing a layer's mask.
 ```javascript
@@ -236,7 +237,7 @@ const imageObj = await imaging.getLayerMask({
 ```
 
 
----
+<HorizontalLine />
 ### putLayerMask
 This API allows JavaScript to edit the pixels of a layer's mask.  At this time, only pixel masks are editable. In the UI, they are what is referred to as a "Layer Mask".  
 
@@ -263,7 +264,7 @@ await imaging.putLayerMask({
 ```
 
 
----
+<HorizontalLine />
 ### getSelection
 This API allows JavaScript to obtain a pixel representation of the active selection. Think of it like entering [Quick Mask mode](https://helpx.adobe.com/photoshop/using/create-temporary-quick-mask.html). 
 ```javascript
@@ -293,7 +294,7 @@ const imageObj = await imaging.getSelection({
 ```
 
 
----
+<HorizontalLine />
 ### putSelection
 This API allows JavaScript to change the selection itself using a provided pixel data representation.  Think of it like exiting [Quick Mask mode](https://helpx.adobe.com/photoshop/using/create-temporary-quick-mask.html).
 
@@ -314,7 +315,7 @@ await imaging.putSelection({ imageData: grayImageData });
 ```
 
 
----
+<HorizontalLine />
 ### createImageDataFromBuffer
 This API allows JavaScript to create arbitrary image data from a memory buffer.
 
@@ -388,7 +389,7 @@ const maskData = await imaging.createImageDataFromBuffer(arrayBuffer, options)
 ```
 
 
----
+<HorizontalLine />
 ### encodeImageData
 This API is exposed to allow image data to be used with UXP image elements. With the current version of UXP you must use jpeg/base64 encoding when assigning to an image element.
 
@@ -416,9 +417,9 @@ document.body.appendChild(imageElement);
 ```
 
 
----
+<HorizontalLine />
 ## Sample files
-Here you will find a sample plugin ([how to load](../../../guides/devtool/plugin-management/#adding-an-existing-plugin)) and [UXP JavaScript file](../../ps-reference/media/uxpscripting.md) (.psjs) that exercise most of the above.
+Here you will find a sample plugin ([how to load](../../guides/devtool/plugin-management.md#adding-an-existing-plugin)) and [UXP JavaScript file](../../ps-reference/media/uxpscripting.md) (.psjs) that exercise most of the above.
 
 * ### UXP plugin - [imaging-test](assets/imaging-test.zip)
 * ###  UXP script - [imaging.psjs](assets/imaging.psjs)

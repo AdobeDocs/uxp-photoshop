@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Notification preferences including Quiet Mode and notification display settings
 ---
 
 # PreferencesNotifications

@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Preferences related to the text and mostly text layers
 ---
 
 # PreferencesType
@@ -25,6 +26,6 @@ Preferences related to the text and mostly text layers
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
 | showEnglishFontNames | *boolean* | R W | 24.0 | If true, all font names are listed in English |
-| showTextFeatures | [*TypeInterfaceFeatures*](/ps_reference/modules/constants/#typeinterfacefeatures) | R W | 24.0 | Change user interface of Character and Paragraph panels and shows additional text options |
+| showTextFeatures | [*TypeInterfaceFeatures*](/ps-reference/modules/constants.md#typeinterfacefeatures) | R W | 24.0 | Change user interface of Character and Paragraph panels and shows additional text options |
 | smartQuotes | *boolean* | R W | 24.0 | Determines whether to substitute left and right quotation marks automatically while typing in the Type Tool. |
 | typename | *string* | R | 24.0 | The class name of the referenced object: *&quot;PreferencesType&quot;*. |

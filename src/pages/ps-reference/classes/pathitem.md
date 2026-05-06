@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: A path or drawing object, such as the outline of a shape or a straight or curved line,
 ---
 
 # PathItem
@@ -21,15 +22,15 @@ keywords:
 A path or drawing object, such as the outline of a shape or a straight or curved line,
 which contains sub paths defining its geometry.
 
-Access through the collection in the [Document.pathItems](/ps_reference/classes/document/#pathitems) property. For example, this selects a named path item:
+Access through the collection in the [Document.pathItems](/ps-reference/classes/document.md#pathitems) property. For example, this selects a named path item:
 
 ```javascript
 const currentPathItem = app.activeDocument.pathItems.getByName("myPath");
 currentPathItem.select()
 ```
 
-Create these objects by passing a set of SubPathInfo objects to the [PathItems.add](/ps_reference/classes/pathitems/#add)() method. This method creates
-a [SubPathItem](/ps_reference/classes/subpathitem/) object for each [SubPathInfo](/ps_reference/classes/subpathinfo/) object, and creates and returns a new [PathItem](/ps_reference/classes/pathitem/) object for the
+Create these objects by passing a set of SubPathInfo objects to the [PathItems.add](/ps-reference/classes/pathitems.md#add)() method. This method creates
+a [SubPathItem](/ps-reference/classes/subpathitem.md) object for each [SubPathInfo](/ps-reference/classes/subpathinfo.md) object, and creates and returns a new [PathItem](/ps-reference/classes/pathitem.md) object for the
 path represented by all of the subpaths.
 
 ## Properties
@@ -38,27 +39,27 @@ path represented by all of the subpaths.
 | :------ | :------ | :------ | :------ | :------ |
 | docId | *number* | R | 23.3 | The ID of the document of this pathItem. |
 | id | *number* | R | 23.3 | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
-| kind | [*PathKind*](/ps_reference/modules/constants/#pathkind) | R W | 23.3 | The specific kind of path. |
+| kind | [*PathKind*](/ps-reference/modules/constants.md#pathkind) | R W | 23.3 | The specific kind of path. |
 | name | *string* | R W | 23.3 | Name of this path |
-| parent | [*Document*](/ps_reference/classes/document/) | R | 23.3 | The document in which the path resides. |
-| subPathItems | [*SubPathItems*](/ps_reference/classes/subpathitems/) | R | 23.3 | The contained [SubPathItem](/ps_reference/classes/subpathitem/)s in this path. |
+| parent | [*Document*](/ps-reference/classes/document.md) | R | 23.3 | The document in which the path resides. |
+| subPathItems | [*SubPathItems*](/ps-reference/classes/subpathitems.md) | R | 23.3 | The contained [SubPathItem](/ps-reference/classes/subpathitem.md)s in this path. |
 | typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathItem&quot;*. |
 
 ## Methods
 
 ### deselect
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
 Deselects this `pathItem` object.
 
-___
+<HorizontalLine />
 
 ### duplicate
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<[*PathItem*](/ps_reference/classes/pathitem/)\>
+*Promise*<[*PathItem*](/ps-reference/classes/pathitem.md)\>
 
 Duplicates the `pathItem` object with the new name, returning the duplicate.
 
@@ -68,10 +69,10 @@ Duplicates the `pathItem` object with the new name, returning the duplicate.
 | :------ | :------ |
 | `name?` | *string* |
 
-___
+<HorizontalLine />
 
 ### fillPath
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
@@ -87,18 +88,18 @@ If `wholePath` is true, all subpaths are used when doing the fill.
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `fillColor?` | [*SolidColor*](/ps_reference/classes/solidcolor/) | - |
-| `mode?` | [*ColorBlendMode*](/ps_reference/modules/constants/#colorblendmode) | - |
+| `fillColor?` | [*SolidColor*](/ps-reference/classes/solidcolor.md) | - |
+| `mode?` | [*ColorBlendMode*](/ps-reference/modules/constants.md#colorblendmode) | - |
 | `opacity` | *number* | 100.0 |
 | `preserveTransparency` | *boolean* | false |
 | `feather` | *number* | 0.0 |
 | `wholePath` | *boolean* | true |
 | `antiAlias` | *boolean* | true |
 
-___
+<HorizontalLine />
 
 ### makeClippingPath
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
@@ -112,10 +113,10 @@ Makes this the clipping path for this document.
 | :------ | :------ |
 | `flatness?` | *number* |
 
-___
+<HorizontalLine />
 
 ### makeSelection
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
@@ -131,30 +132,30 @@ Makes a selection object whose border is this path.
 | :------ | :------ |
 | `feather?` | *number* |
 | `antiAlias?` | *boolean* |
-| `operation?` | [*SelectionType*](/ps_reference/modules/constants/#selectiontype) |
+| `operation?` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) |
 
-___
+<HorizontalLine />
 
 ### remove
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
 Deletes this object.
 
-___
+<HorizontalLine />
 
 ### select
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
 Makes this the active or selected `PathItem` object.
 
-___
+<HorizontalLine />
 
 ### strokePath
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">23.3</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
 *Promise*<void\>
 
@@ -172,9 +173,9 @@ is optional, and by default will use the active layer in the document.
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `tool` | [*ToolType*](/ps_reference/modules/constants/#tooltype) | - |
+| `tool` | [*ToolType*](/ps-reference/modules/constants.md#tooltype) | - |
 | `simulatePressure` | *boolean* | false |
 | `sourceOrigin?` | *object* | - |
 | `sourceOrigin.x` | *number* | - |
 | `sourceOrigin.y` | *number* | - |
-| `sourceLayer?` | [*Layer*](/ps_reference/classes/layer/) | - |
+| `sourceLayer?` | [*Layer*](/ps-reference/classes/layer.md) | - |

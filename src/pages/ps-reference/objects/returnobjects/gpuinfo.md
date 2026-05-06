@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: "| Name | Type | Min Version |"
 ---
 
 # GPUInfo
 
 | Name | Type | Min Version |
 | :------ | :------ | :------ |
-| clgpuInfoList | [*OpenCLDeviceInfo*](/ps_reference/objects/returnobjects/opencldeviceinfo/)[] | 23.0 |
-| gpuInfoList | [*OpenGLDeviceInfo*](/ps_reference/objects/returnobjects/opengldeviceinfo/)[] | 23.0 |
+| clgpuInfoList | [*OpenCLDeviceInfo*](/ps-reference/objects/returnobjects/opencldeviceinfo.md)[] | 23.0 |
+| gpuInfoList | [*OpenGLDeviceInfo*](/ps-reference/objects/returnobjects/opengldeviceinfo.md)[] | 23.0 |

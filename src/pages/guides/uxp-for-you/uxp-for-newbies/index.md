@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: UXP for Newbies
-description:
+description: If you've never written JavaScript, HTML, or CSS, but you want to develop plugins using UXP, you're in for a bit of a learning curve. It's not an impossibl
 ---
 
 # UXP for Newbies

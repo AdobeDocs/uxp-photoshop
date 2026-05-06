@@ -32,7 +32,7 @@ To get started, we suggest following these tutorials to get your hands dirty and
 - [The UXP manifest](uxp-guide/uxp-misc/manifest-v4/index.md): Essential to tailoring your UXP plugin.
 - [UXP Developer Tool Walkthrough](devtool/udt-walkthrough/index.md): Learn how to create a plugin from a sample, load and debug it on Photoshop.
 - [The intro to the Photoshop API](../ps-reference/index.md): Explore what is offered in the form of the DOM API, the successor to ExtendScript.
-- [Spectrum UI reference](../uxp-api/reference-spectrum/User%20Interface/): UXP provides a smaller set of elements that you should be aware of, before creating UI.
+- [Spectrum UI reference](../uxp-api/reference-spectrum/User%20Interface/index.md): UXP provides a smaller set of elements that you should be aware of, before creating UI.
 
 ### Must Reads
 

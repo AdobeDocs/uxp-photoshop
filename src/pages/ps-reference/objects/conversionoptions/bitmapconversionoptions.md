@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Options for converting an image to bitmap mode, using Document.changeMode with ChangeMode.BITMAP.
 ---
 
 # Bitmap Conversion Options
 
-Options for converting an image to bitmap mode, using [Document.changeMode](/ps_reference/classes/document/#changemode) with `ChangeMode.BITMAP`.
+Options for converting an image to bitmap mode, using [Document.changeMode](/ps-reference/classes/document.md#changemode) with `ChangeMode.BITMAP`.
 
 ## Properties
 
@@ -26,8 +27,8 @@ Options for converting an image to bitmap mode, using [Document.changeMode](/ps_
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
 | angle | *number* | R W | - | -180...180 | 23.0 | The angle (in degrees) at which to orient individual dots. See shape property below. Valid only when the method property is set to &#x60;BitmapConversionType.HALFTONESCREEN&#x60;. |
 | frequency | *number* | R W | - | 1.0..999.99 | 23.0 | The number of dots (per inch) to use. Valid only when the method property is set to &#x60;BitmapConversionType.HALFTONESCREEN&#x60;. |
-| method | [*BitmapConversionType*](/ps_reference/modules/constants/#bitmapconversiontype) | R W | DIFFUSIONDITHER | - | 23.0 | The conversion method. |
+| method | [*BitmapConversionType*](/ps-reference/modules/constants.md#bitmapconversiontype) | R W | DIFFUSIONDITHER | - | 23.0 | The conversion method. |
 | patternName | *string* | R W |  | - | 23.0 | The name of the pattern to use. Valid only when the method property is set to BitmapConversionType.CUSTOMPATTERN. |
 | resolution | *number* | R W | 72 | - | 23.0 | The output resolution (in pixels per inch). |
-| shape | [*BitmapHalfToneType*](/ps_reference/modules/constants/#bitmaphalftonetype) | R W | - | - | 23.0 | The dot shape. Valid only when the method property is set to BitmapConversionType.HALFTONESCREEN. |
+| shape | [*BitmapHalfToneType*](/ps-reference/modules/constants.md#bitmaphalftonetype) | R W | - | - | 23.0 | The dot shape. Valid only when the method property is set to BitmapConversionType.HALFTONESCREEN. |
 | typename | *string* | R | - | - | 23.0 | The class name of the referenced object: *&quot;BitmapConversionOptions&quot;*. |

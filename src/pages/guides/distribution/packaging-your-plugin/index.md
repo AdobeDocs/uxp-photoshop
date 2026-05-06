@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Packaging Your Plugin
-description:
+description: Taking your plugin code and packaging it has never been easier.
 ---
 
 # Packaging Your Plugin

@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Defines an RGB color, used in SolidColor object.
 ---
 
 # RGBColor
 
-Defines an RGB color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Defines an RGB color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 Please note: RGB with 32 bits per channels is not currently supported. Color values will be rounded to the nearest
 range valid for RGB with 16 bits per channel.

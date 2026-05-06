@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: These property values are used to apply justification to paragraph text.
 ---
 
 # JustificationProperties

@@ -14,11 +14,12 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: Defines a Lab color, used in SolidColor object.
 ---
 
 # LabColor
 
-Defines a L<sup>\*</sup>a<sup>\*</sup>b<sup>\*</sup> color, used in [SolidColor](/ps_reference/classes/solidcolor/) object.
+Defines a L\<sup\>\*\</sup\>a\<sup\>\*\</sup\>b\<sup\>\*\</sup\> color, used in [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
 ## Properties
 

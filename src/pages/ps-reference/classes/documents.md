@@ -14,6 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
+description: A collections class allowing for array access into the application's
 ---
 
 # Documents
@@ -29,7 +30,7 @@ app.documents.forEach(h => console.log(h.title));
 
 ## Indexable
 
-▪ [index: *number*]: [*Document*](/ps_reference/classes/document/)
+▪ [index: *number*]: [*Document*](/ps-reference/classes/document.md)
 
 Used to access the documents in the collection.
 
@@ -42,16 +43,16 @@ app.documents.forEach(h => console.log(h.title));
 
 | Name | Type | Access | Min Version | Description |
 | :------ | :------ | :------ | :------ | :------ |
-| length | *number* | R | 22.5 | Number of [Document](/ps_reference/classes/document/) elements in this collection. |
-| parent | [*Photoshop*](/ps_reference/classes/photoshop/) | R | 22.5 | The owner application of this Documents collection. |
+| length | *number* | R | 22.5 | Number of [Document](/ps-reference/classes/document.md) elements in this collection. |
+| parent | [*Photoshop*](/ps-reference/classes/photoshop.md) | R | 22.5 | The owner application of this Documents collection. |
 | typename | *string* | R | 22.5 | The name for this object collection: Documents. |
 
 ## Methods
 
 ### add
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<[*Document*](/ps_reference/classes/document/)\>
+**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
 
 Create a new document.
 
@@ -83,14 +84,14 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options?` | [*DocumentCreateOptions*](/ps_reference/objects/createoptions/documentcreateoptions/) | @DocumentCreateOptions |
+| `options?` | [*DocumentCreateOptions*](/ps-reference/objects/createoptions/documentcreateoptions.md) | @DocumentCreateOptions |
 
-___
+<HorizontalLine />
 
 ### getByName
-<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;">22.5</span>
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-[*Document*](/ps_reference/classes/document/)
+[*Document*](/ps-reference/classes/document.md)
 
 Find the first document with the matching name.
 
