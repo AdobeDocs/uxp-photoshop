@@ -1,6 +1,6 @@
 ---
 title: window.IntersectionObserverEntry
-description: "See: IntersectionObserverEntry"
+description: See: IntersectionObserverEntry
 ---
 
 # window.IntersectionObserverEntry

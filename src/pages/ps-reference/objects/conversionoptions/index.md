@@ -1,6 +1,6 @@
 ---
 id: "Conversion-options"
-title: "Conversion Options"
+title: Conversion Options
 sidebar_label: "Conversion-options"
 repo: "uxp-photoshop"
 product: "photoshop"

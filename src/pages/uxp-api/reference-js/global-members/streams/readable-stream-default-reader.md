@@ -1,6 +1,6 @@
 ---
 title: window.ReadableStreamDefaultReader
-description: "See: Web APIs - ReadableStreamDefaultReader"
+description: See: Web APIs - ReadableStreamDefaultReader
 ---
 
 # window.ReadableStreamDefaultReader

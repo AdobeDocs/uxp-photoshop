@@ -1,6 +1,6 @@
 ---
 title: window.Blob
-description: "Since: UXP v6.3"
+description: Since: UXP v6.3
 ---
 
 # window.Blob

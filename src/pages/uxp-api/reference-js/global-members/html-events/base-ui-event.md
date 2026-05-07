@@ -1,6 +1,6 @@
 ---
 title: window.BaseUIEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent
 ---
 
 # window.BaseUIEvent

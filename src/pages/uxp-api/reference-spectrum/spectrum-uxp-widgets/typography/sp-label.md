@@ -1,6 +1,6 @@
 ---
 title: sp-label
-description: Renders a text label. Can also be used to add a label to many Spectrum UXP UI elements when using the slot="label" attribute.
+description: Renders a text label. Can also be used to add a label to many Spectrum UXP UI elements when using the slot='label' attribute.
 jsDoc: true
 ---
 # sp-label

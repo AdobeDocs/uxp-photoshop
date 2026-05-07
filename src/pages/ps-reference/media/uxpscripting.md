@@ -1,6 +1,6 @@
 ---
 id: "uxpscriptingphotoshop"
-title: "UXP Scripting in Photoshop"
+title: UXP Scripting in Photoshop
 sidebar_label: "UXP Scripting"
 description: Running a standalone JavaScript file in UXP is now available in Photoshop 23.5. As discussed in the general documention of UXP Scripting, Photoshop recogni
 ---

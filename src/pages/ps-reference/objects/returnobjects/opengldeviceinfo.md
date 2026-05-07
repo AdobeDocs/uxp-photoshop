@@ -1,6 +1,6 @@
 ---
 id: "opengldeviceinfo"
-title: "OpenGLDeviceInfo"
+title: OpenGLDeviceInfo
 sidebar_label: "OpenGLDeviceInfo"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version |"
+description: | Name | Type | Min Version |
 ---
 
 # OpenGLDeviceInfo

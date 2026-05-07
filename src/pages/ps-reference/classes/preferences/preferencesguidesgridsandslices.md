@@ -1,6 +1,6 @@
 ---
 id: "preferencesguidesgridsandslices"
-title: "PreferencesGuidesGridsAndSlices"
+title: PreferencesGuidesGridsAndSlices
 sidebar_label: "PreferencesGuidesGridsAndSlices"
 repo: "uxp-photoshop"
 product: "photoshop"

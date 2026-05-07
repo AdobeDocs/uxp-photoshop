@@ -1,6 +1,6 @@
 ---
 title: window.NodeFilter
-description: "See: interface-nodefilter"
+description: See: interface-nodefilter
 ---
 
 # window.NodeFilter

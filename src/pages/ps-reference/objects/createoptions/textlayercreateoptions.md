@@ -1,6 +1,6 @@
 ---
 id: "textlayercreateoptions"
-title: "TextLayerCreateOptions"
+title: TextLayerCreateOptions
 sidebar_label: "TextLayerCreateOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

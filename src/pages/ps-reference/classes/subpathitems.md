@@ -1,6 +1,6 @@
 ---
 id: "subpathitems"
-title: "SubPathItems"
+title: SubPathItems
 sidebar_label: "SubPathItems"
 repo: "uxp-photoshop"
 product: "photoshop"

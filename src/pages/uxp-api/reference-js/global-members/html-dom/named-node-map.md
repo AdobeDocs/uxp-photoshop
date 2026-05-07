@@ -1,6 +1,6 @@
 ---
 title: window.NamedNodeMap
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap
 ---
 
 # window.NamedNodeMap

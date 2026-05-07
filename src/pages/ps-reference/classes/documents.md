@@ -1,6 +1,6 @@
 ---
 id: "documents"
-title: "Documents"
+title: Documents
 sidebar_label: "Documents"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -52,7 +52,8 @@ app.documents.forEach(h => console.log(h.title));
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)\>
 
 Create a new document.
 
@@ -91,6 +92,7 @@ let newDoc3 = await app.documents.add({preset: "My Default Size 1"});
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 [*Document*](/ps-reference/classes/document.md)
 
 Find the first document with the matching name.

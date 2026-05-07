@@ -1,6 +1,6 @@
 ---
 id: "countitems"
-title: "CountItems"
+title: CountItems
 sidebar_label: "CountItems"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -34,6 +34,7 @@ A collections class allowing access to the document's CountItem.
 ### activateGroupByIndex
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Activates a Count Item group by its index.
@@ -49,6 +50,7 @@ Activates a Count Item group by its index.
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 [*CountItem*](/ps-reference/classes/countitem.md)
 
 Adds a new [CountItem](/ps-reference/classes/countitem.md) to the collection.
@@ -70,6 +72,7 @@ app.activeDocument.countItems.add({x: 20, y: 20});
 ### createGroup
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Creates a new Count Item group.
@@ -85,6 +88,7 @@ Creates a new Count Item group.
 ### getAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 [*CountItem*](/ps-reference/classes/countitem.md)[]
 
 Retrieves all [CountItem](/ps-reference/classes/countitem.md) objects from this collection.
@@ -98,6 +102,7 @@ app.activeDocument.countItems.getAll();
 ### removeAllFromActiveGroup
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Clears all [CountItem](/ps-reference/classes/countitem.md) objects from this collection.
@@ -111,6 +116,7 @@ app.activeDocument.countItems.removeAllFromActiveGroup();
 ### removeGroupByIndex
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Removes a Count Item group by its index.
@@ -126,6 +132,7 @@ Removes a Count Item group by its index.
 ### renameActiveGroup
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Renames the currently active Count Item group.
@@ -141,6 +148,7 @@ Renames the currently active Count Item group.
 ### setActiveColor
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Sets the Color of the Count Item marker and label.
@@ -156,6 +164,7 @@ Sets the Color of the Count Item marker and label.
 ### setActiveLabelSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Sets the Count Item label (the number) size.
@@ -171,6 +180,7 @@ Sets the Count Item label (the number) size.
 ### setActiveMarkerSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Sets the Count Item marker (the dot) size.
@@ -186,6 +196,7 @@ Sets the Count Item marker (the dot) size.
 ### toggleActiveGroupVisibility
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Toggles the visibility of the currently selected Count Item group.

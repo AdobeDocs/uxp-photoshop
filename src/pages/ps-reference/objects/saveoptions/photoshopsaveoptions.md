@@ -1,6 +1,6 @@
 ---
 id: "photoshopsaveoptions"
-title: "PhotoshopSaveOptions"
+title: PhotoshopSaveOptions
 sidebar_label: "PhotoshopSaveOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Access | Min Version | Description |"
+description: | Name | Type | Access | Min Version | Description |
 ---
 
 # Photoshop Save Options

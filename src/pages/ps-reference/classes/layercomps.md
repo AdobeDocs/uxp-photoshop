@@ -1,6 +1,6 @@
 ---
 id: "layercomps"
-title: "LayerComps"
+title: LayerComps
 sidebar_label: "LayerComps"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -54,7 +54,8 @@ const comp = await app.activeDocument.layerComps.add();
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-*Promise*<[*LayerComp*](/ps-reference/classes/layercomp.md)\>
+\<br/\>
+*Promise*\<[*LayerComp*](/ps-reference/classes/layercomp.md)\>
 
 Adds a Layer Comp to the document's collection. If no options are given, only visibility will be recorded.
 
@@ -71,6 +72,7 @@ Note: This command will fail if the document is flat, that is, only a Background
 ### getAllByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 [*LayerComp*](/ps-reference/classes/layercomp.md)[]
 
 Get all Layer Comps by name
@@ -86,6 +88,7 @@ Get all Layer Comps by name
 ### removeAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Clears all Layer Comps from this collection

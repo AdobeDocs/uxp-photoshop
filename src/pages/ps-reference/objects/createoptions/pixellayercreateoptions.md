@@ -1,6 +1,6 @@
 ---
 id: "pixellayercreateoptions"
-title: "PixelLayerCreateOptions"
+title: PixelLayerCreateOptions
 sidebar_label: "PixelLayerCreateOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

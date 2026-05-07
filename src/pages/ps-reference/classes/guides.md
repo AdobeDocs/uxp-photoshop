@@ -1,6 +1,6 @@
 ---
 id: "guides"
-title: "Guides"
+title: Guides
 sidebar_label: "Guides"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -53,6 +53,7 @@ app.activeDocument.guides.add(Constants.Direction.HORIZONTAL, 20);
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*Guide*](/ps-reference/classes/guide.md)
 
 Adds a guide for the collection at the given coordinate and direction
@@ -73,6 +74,7 @@ Adds a guide for the collection at the given coordinate and direction
 ### removeAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *void*
 
 Clears all guides from this collection.

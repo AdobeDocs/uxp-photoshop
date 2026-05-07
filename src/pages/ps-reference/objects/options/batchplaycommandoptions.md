@@ -1,6 +1,6 @@
 ---
 id: "batchplaycommandoptions"
-title: "BatchPlayCommandOptions"
+title: BatchPlayCommandOptions
 sidebar_label: "BatchPlayCommandOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version |"
+description: | Name | Type | Min Version |
 ---
 
 # BatchPlayCommandOptions

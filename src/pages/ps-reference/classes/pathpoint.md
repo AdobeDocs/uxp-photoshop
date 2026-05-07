@@ -1,6 +1,6 @@
 ---
 id: "pathpoint"
-title: "PathPoint"
+title: PathPoint
 sidebar_label: "PathPoint"
 repo: "uxp-photoshop"
 product: "photoshop"

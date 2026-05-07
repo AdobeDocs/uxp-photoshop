@@ -1,6 +1,6 @@
 ---
 title: window.WritableStreamDefaultWriter
-description: "See: Web APIs - WritableStreamDefaultWriter"
+description: See: Web APIs - WritableStreamDefaultWriter
 ---
 
 # window.WritableStreamDefaultWriter

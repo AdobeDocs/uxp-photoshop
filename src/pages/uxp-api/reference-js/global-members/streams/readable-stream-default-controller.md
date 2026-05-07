@@ -1,6 +1,6 @@
 ---
 title: window.ReadableStreamDefaultController
-description: "See: Web APIs - ReadableStreamDefaultController"
+description: See: Web APIs - ReadableStreamDefaultController
 ---
 
 # window.ReadableStreamDefaultController

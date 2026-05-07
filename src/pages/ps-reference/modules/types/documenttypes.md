@@ -1,6 +1,6 @@
 ---
 id: "documenttypes"
-title: "DocumentTypes"
+title: DocumentTypes
 sidebar_label: "DocumentTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- DocumentCreateOptions"
+description: - DocumentCreateOptions
 ---
 
 # types/DocumentTypes

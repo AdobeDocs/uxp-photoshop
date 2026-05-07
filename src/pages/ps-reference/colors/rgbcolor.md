@@ -1,6 +1,6 @@
 ---
 id: "rgbcolor"
-title: "RGBColor"
+title: RGBColor
 sidebar_label: "RGBColor"
 repo: "uxp-photoshop"
 product: "photoshop"

@@ -1,6 +1,6 @@
 ---
 title: window.HTMLBodyElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement
 ---
 
 # window.HTMLBodyElement

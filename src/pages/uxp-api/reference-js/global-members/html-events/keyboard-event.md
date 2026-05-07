@@ -1,6 +1,6 @@
 ---
 title: window.KeyboardEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 ---
 
 # window.KeyboardEvent

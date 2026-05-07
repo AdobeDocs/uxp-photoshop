@@ -1,6 +1,6 @@
 ---
 id: "displayconfiguration"
-title: "DisplayConfiguration"
+title: DisplayConfiguration
 sidebar_label: "DisplayConfiguration"
 repo: "uxp-photoshop"
 product: "photoshop"

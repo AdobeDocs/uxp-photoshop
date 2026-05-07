@@ -1,6 +1,6 @@
 ---
 title: window.CustomElementRegistry
-description: "See: Refer Web APIs - CustomElementRegistry"
+description: See: Refer Web APIs - CustomElementRegistry
 ---
 
 # window.CustomElementRegistry

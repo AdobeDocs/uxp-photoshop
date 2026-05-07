@@ -1,6 +1,6 @@
 ---
 id: "photoshopaction"
-title: "photoshopAction"
+title: photoshopAction
 sidebar_label: "photoshopAction"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -32,7 +32,8 @@ const {action} = require('photoshop');
 ### addNotificationListener
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Attach a callback function to one or more Photoshop events.
 The callback has the form `(eventName: string, descriptor: ActionDescriptor) => void`.
@@ -54,7 +55,8 @@ the [introspection methods described under `batchPlay`](../../ps-reference/media
 ### batchPlay
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<ActionDescriptor[]\>
+\<br/\>
+*Promise*\<ActionDescriptor[]\>
 
 Performs a batchPlay call with the provided commands. Equivalent
 to an `executeAction` in ExtendScript.
@@ -76,6 +78,7 @@ await action.batchPlay(commands);
 ### batchPlaySync
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 ActionDescriptor[]
 
 Performs a batchPlay call with the provided commands. Equivalent
@@ -98,6 +101,7 @@ await action.batchPlay(commands);
 ### getIDFromString
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 *number*
 
 Return the identifier number assigned to an action string value.
@@ -114,7 +118,8 @@ If the string is not already registered, a new ID will be created and returned.
 ### recordAction
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Records this plugin's action to an active Action recording.
 See [Action Recording](../../ps-reference/media/action-recording.md) for usage and manifest requirements.
@@ -141,7 +146,8 @@ async function actionHandler(executionContext, info) {
 ### removeNotificationListener
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Detaches a listener from a Photoshop event.
 See [addNotificationListener](#addnotificationlistener)
@@ -161,6 +167,7 @@ await action.removeNotificationListener(['open'], onOpenNewDocument);
 ### validateReference
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 *boolean*
 
 Synchronously validates the given action reference, returning true if it still

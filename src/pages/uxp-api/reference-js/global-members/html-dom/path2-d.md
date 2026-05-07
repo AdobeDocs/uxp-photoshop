@@ -1,6 +1,6 @@
 ---
 title: window.Path2D
-description: "See: Web APIs - Path2D for more details<br></br>"
+description: See: Web APIs - Path2D for more details<br></br>
 ---
 
 # window.Path2D

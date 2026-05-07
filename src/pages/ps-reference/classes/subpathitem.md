@@ -1,6 +1,6 @@
 ---
 id: "subpathitem"
-title: "SubPathItem"
+title: SubPathItem
 sidebar_label: "SubPathItem"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "Represents a subpath; a collection of subpaths make up a PathItem."
+description: Represents a subpath; a collection of subpaths make up a PathItem.
 ---
 
 # SubPathItem

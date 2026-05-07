@@ -1,6 +1,6 @@
 ---
 id: "colorsampler"
-title: "ColorSampler"
+title: ColorSampler
 sidebar_label: "ColorSampler"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -66,6 +66,7 @@ console.log(app.activeDocument.colorSamplers.length); // 0
 ### move
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 *void*
 
 Moves the ColorSampler object to the given position
@@ -83,6 +84,7 @@ Moves the ColorSampler object to the given position
 ### remove
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 *void*
 
 Deletes the given ColorSampler object.

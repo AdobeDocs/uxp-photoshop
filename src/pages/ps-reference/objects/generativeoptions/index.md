@@ -1,6 +1,6 @@
 ---
 id: "Generative-options"
-title: "Generative Options"
+title: Generative Options
 sidebar_label: "Generative-options"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "Option objects for generative/AI features, including:"
+description: Option objects for generative/AI features, including:
 ---
 
 # Generative Options

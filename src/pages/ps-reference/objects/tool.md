@@ -1,6 +1,6 @@
 ---
 id: "tool"
-title: "Tool"
+title: Tool
 sidebar_label: "Tool"
 repo: "uxp-photoshop"
 product: "photoshop"

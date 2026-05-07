@@ -1,6 +1,6 @@
 ---
 title: window.DragEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/DragEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/DragEvent
 ---
 
 # window.DragEvent

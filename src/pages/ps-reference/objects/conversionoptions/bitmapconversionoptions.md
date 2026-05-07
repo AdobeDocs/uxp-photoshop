@@ -1,6 +1,6 @@
 ---
 id: "bitmapconversionoptions"
-title: "BitmapConversionOptions"
+title: BitmapConversionOptions
 sidebar_label: "BitmapConversionOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

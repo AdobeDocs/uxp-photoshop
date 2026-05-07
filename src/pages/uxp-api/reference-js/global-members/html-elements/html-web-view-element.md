@@ -1,6 +1,6 @@
 ---
 title: window.HTMLWebViewElement
-description: "Since: v6.0"
+description: Since: v6.0
 ---
 
 # window.HTMLWebViewElement

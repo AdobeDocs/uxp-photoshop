@@ -1,6 +1,6 @@
 ---
 title: window.Event
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Event"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Event
 ---
 
 # window.Event

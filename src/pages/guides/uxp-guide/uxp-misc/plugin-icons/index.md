@@ -8,7 +8,7 @@ keywords:
   - ExtendScript
   - Scripting
 title: Icons for Your Plugins
-description: "There are two disparate locations where icons are shown. A plugin's icon (outside the entrypoints) is shown in the \"Plugins panel\". This icon has some auto"
+description: There are two disparate locations where icons are shown. A plugin's icon (outside the entrypoints) is shown in the 'Plugins panel'. This icon has some auto
 ---
 
 # Icons for Your Plugins

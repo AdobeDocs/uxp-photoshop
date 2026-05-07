@@ -1,6 +1,6 @@
 ---
 title: window.HTMLCollection
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
 ---
 
 # window.HTMLCollection

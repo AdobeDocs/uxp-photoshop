@@ -1,6 +1,6 @@
 ---
 title: window.HTMLCanvasElement
-description: "See: Web APIs - HTMLCanvasElement for more details"
+description: See: Web APIs - HTMLCanvasElement for more details
 ---
 
 # window.HTMLCanvasElement

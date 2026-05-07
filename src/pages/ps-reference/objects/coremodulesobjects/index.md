@@ -1,6 +1,6 @@
 ---
 id: "CoreModules-options"
-title: "Core Modules Options"
+title: Core Modules Options
 sidebar_label: "Core Modules-options"
 repo: "uxp-photoshop"
 product: "photoshop"

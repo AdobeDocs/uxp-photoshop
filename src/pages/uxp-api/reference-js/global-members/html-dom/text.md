@@ -1,6 +1,6 @@
 ---
 title: window.Text
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Text"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Text
 ---
 
 # window.Text

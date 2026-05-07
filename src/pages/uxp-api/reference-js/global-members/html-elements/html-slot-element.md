@@ -1,6 +1,6 @@
 ---
 title: window.HTMLSlotElement
-description: "See: Web APIs - HTMLSlotElement"
+description: See: Web APIs - HTMLSlotElement
 ---
 
 # window.HTMLSlotElement

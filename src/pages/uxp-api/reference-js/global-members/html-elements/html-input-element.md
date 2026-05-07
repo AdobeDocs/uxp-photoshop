@@ -1,6 +1,6 @@
 ---
 title: window.HTMLInputElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement
 ---
 
 # window.HTMLInputElement

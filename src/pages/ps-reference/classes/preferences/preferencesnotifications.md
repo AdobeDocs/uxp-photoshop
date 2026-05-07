@@ -1,6 +1,6 @@
 ---
 id: "preferencesnotifications"
-title: "PreferencesNotifications"
+title: PreferencesNotifications
 sidebar_label: "PreferencesNotifications"
 repo: "uxp-photoshop"
 product: "photoshop"

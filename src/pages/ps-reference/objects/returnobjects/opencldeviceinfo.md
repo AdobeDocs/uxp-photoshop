@@ -1,6 +1,6 @@
 ---
 id: "opencldeviceinfo"
-title: "OpenCLDeviceInfo"
+title: OpenCLDeviceInfo
 sidebar_label: "OpenCLDeviceInfo"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version |"
+description: | Name | Type | Min Version |
 ---
 
 # OpenCLDeviceInfo

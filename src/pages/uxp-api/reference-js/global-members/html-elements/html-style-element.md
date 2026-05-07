@@ -1,6 +1,6 @@
 ---
 title: window.HTMLStyleElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement
 ---
 
 # window.HTMLStyleElement

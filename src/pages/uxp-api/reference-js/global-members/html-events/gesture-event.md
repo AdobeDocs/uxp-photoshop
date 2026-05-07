@@ -1,6 +1,6 @@
 ---
 title: window.GestureEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent
 ---
 
 # window.GestureEvent

@@ -1,6 +1,6 @@
 ---
 id: "generativeupscaleoptions"
-title: "GenerativeUpscaleOptions"
+title: GenerativeUpscaleOptions
 sidebar_label: "GenerativeUpscaleOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

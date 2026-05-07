@@ -1,6 +1,6 @@
 ---
 title: window.HTMLMenuItemElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem"
+description: See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem
 ---
 
 # window.HTMLMenuItemElement

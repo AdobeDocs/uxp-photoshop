@@ -1,6 +1,6 @@
 ---
 id: "documentcreateoptions"
-title: "DocumentCreateOptions"
+title: DocumentCreateOptions
 sidebar_label: "DocumentCreateOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

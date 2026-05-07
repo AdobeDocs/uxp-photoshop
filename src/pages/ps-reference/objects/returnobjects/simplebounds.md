@@ -1,6 +1,6 @@
 ---
 id: "simplebounds"
-title: "SimpleBounds"
+title: SimpleBounds
 sidebar_label: "SimpleBounds"
 repo: "uxp-photoshop"
 product: "photoshop"

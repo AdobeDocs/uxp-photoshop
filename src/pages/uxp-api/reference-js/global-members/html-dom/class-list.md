@@ -1,6 +1,6 @@
 ---
 title: window.ClassList
-description: "See: https://dom.spec.whatwg.org/#dom-element-classlist"
+description: See: https://dom.spec.whatwg.org/#dom-element-classlist
 ---
 
 # window.ClassList

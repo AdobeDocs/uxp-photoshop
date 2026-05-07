@@ -1,6 +1,6 @@
 ---
 id: "preferenceshistory"
-title: "PreferencesHistory"
+title: PreferencesHistory
 sidebar_label: "PreferencesHistory"
 repo: "uxp-photoshop"
 product: "photoshop"

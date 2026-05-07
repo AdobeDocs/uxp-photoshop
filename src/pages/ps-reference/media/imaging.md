@@ -1,6 +1,6 @@
 ---
 id: "imaging"
-title: "Imaging API"
+title: Imaging API
 sidebar_label: "Imaging API"
 description: The Imaging API allows JavaScript to work directly with image data in Photoshop documents.
 ---

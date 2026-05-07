@@ -1,6 +1,6 @@
 ---
 title: window.AbortController
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/AbortController"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/AbortController
 ---
 
 # window.AbortController

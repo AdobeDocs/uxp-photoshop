@@ -1,6 +1,6 @@
 ---
 id: "textfonts"
-title: "TextFonts"
+title: TextFonts
 sidebar_label: "TextFonts"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -41,6 +41,7 @@ Used to access the text fonts in the collection.
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*TextFont*](/ps-reference/classes/textfont.md)
 
 Find the first font with the given PostScript name.

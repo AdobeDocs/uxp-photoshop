@@ -1,6 +1,6 @@
 ---
 id: "cpuinfo"
-title: "CPUInfo"
+title: CPUInfo
 sidebar_label: "CPUInfo"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version | Description |"
+description: | Name | Type | Min Version | Description |
 ---
 
 # CPUInfo

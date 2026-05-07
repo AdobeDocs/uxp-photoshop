@@ -1,6 +1,6 @@
 ---
 id: "Other-options"
-title: "Other Objects"
+title: Other Objects
 sidebar_label: "Other-objects"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "Argument and return objects used by:"
+description: Argument and return objects used by:
 ---
 
 # Other Objects

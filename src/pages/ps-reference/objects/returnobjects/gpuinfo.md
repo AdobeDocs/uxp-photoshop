@@ -1,6 +1,6 @@
 ---
 id: "gpuinfo"
-title: "GPUInfo"
+title: GPUInfo
 sidebar_label: "GPUInfo"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version |"
+description: | Name | Type | Min Version |
 ---
 
 # GPUInfo

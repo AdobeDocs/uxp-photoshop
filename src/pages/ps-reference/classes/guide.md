@@ -1,6 +1,6 @@
 ---
 id: "guide"
-title: "Guide"
+title: Guide
 sidebar_label: "Guide"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -37,6 +37,7 @@ Represents a single guide in the document.
 ### delete
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *void*
 
 Deletes the guide from the document.

@@ -1,6 +1,6 @@
 ---
 id: "applyimageoptions"
-title: "ApplyImageOptions"
+title: ApplyImageOptions
 sidebar_label: "ApplyImageOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

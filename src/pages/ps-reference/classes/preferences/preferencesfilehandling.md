@@ -1,6 +1,6 @@
 ---
 id: "preferencesfilehandling"
-title: "PreferencesFileHandling"
+title: PreferencesFileHandling
 sidebar_label: "PreferencesFileHandling"
 repo: "uxp-photoshop"
 product: "photoshop"

@@ -11,7 +11,7 @@ keywords:
   - Getting Started
   - Scripting
 title: Photoshop Product specific manifest
-description: "With Photoshop added as a \"host\" in the UXP plugin manifest, there are a few options available under the data object."
+description: With Photoshop added as a 'host' in the UXP plugin manifest, there are a few options available under the data object.
 ---
 
 # Photoshop specific manifest properties

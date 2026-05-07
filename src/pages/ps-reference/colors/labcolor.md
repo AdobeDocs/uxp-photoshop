@@ -1,6 +1,6 @@
 ---
 id: "labcolor"
-title: "LabColor"
+title: LabColor
 sidebar_label: "LabColor"
 repo: "uxp-photoshop"
 product: "photoshop"

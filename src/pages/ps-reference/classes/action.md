@@ -1,6 +1,6 @@
 ---
 id: "action"
-title: "Action"
+title: Action
 sidebar_label: "Action"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -37,6 +37,7 @@ Actions are series of commands that can be recorded by user, and can be replayed
 ### delete
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
+\<br/\>
 *void*
 
 Deletes this Action from the Actions panel
@@ -46,6 +47,7 @@ Deletes this Action from the Actions panel
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
+\<br/\>
 [*Action*](/ps-reference/classes/action.md)
 
 Creates a copy of this Action, placing it in the same Action Set
@@ -55,6 +57,7 @@ Creates a copy of this Action, placing it in the same Action Set
 ### play
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Plays this Action

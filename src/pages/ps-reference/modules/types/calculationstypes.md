@@ -1,6 +1,6 @@
 ---
 id: "calculationstypes"
-title: "CalculationsTypes"
+title: CalculationsTypes
 sidebar_label: "CalculationsTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- CalculationsOptions"
+description: - CalculationsOptions
 ---
 
 # types/CalculationsTypes

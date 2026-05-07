@@ -1,6 +1,6 @@
 ---
 title: window.HTMLButtonElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement
 ---
 
 # window.HTMLButtonElement

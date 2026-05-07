@@ -1,6 +1,6 @@
 ---
 id: "pngsaveoptions"
-title: "PNGSaveOptions"
+title: PNGSaveOptions
 sidebar_label: "PNGSaveOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Access | Default | Range | Min Version | Description |"
+description: | Name | Type | Access | Default | Range | Min Version | Description |
 ---
 
 # PNG Save Options

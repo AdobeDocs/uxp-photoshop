@@ -1,6 +1,6 @@
 ---
 id: "countitem"
-title: "CountItem"
+title: CountItem
 sidebar_label: "CountItem"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "• Readonly groupIndex: number"
+description: • Readonly groupIndex: number
 ---
 
 # CountItem
@@ -48,6 +48,7 @@ The itemIndex of the CountItem as received from the descriptor.
 ### move
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Moves the CountItem to a new position.
@@ -65,6 +66,7 @@ Moves the CountItem to a new position.
 ### remove
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *void*
 
 Removes the CountItem from the document.

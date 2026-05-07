@@ -1,6 +1,6 @@
 ---
 id: "texttypes"
-title: "TextTypes"
+title: TextTypes
 sidebar_label: "TextTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- HyphenationProperties"
+description: - HyphenationProperties
 ---
 
 # types/TextTypes

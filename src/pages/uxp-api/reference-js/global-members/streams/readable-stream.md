@@ -1,6 +1,6 @@
 ---
 title: window.ReadableStream
-description: "See: Web APIs - ReadableStream"
+description: See: Web APIs - ReadableStream
 ---
 
 # window.ReadableStream

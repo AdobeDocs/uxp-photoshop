@@ -1,6 +1,6 @@
 ---
 id: "textfont"
-title: "TextFont"
+title: TextFont
 sidebar_label: "TextFont"
 repo: "uxp-photoshop"
 product: "photoshop"

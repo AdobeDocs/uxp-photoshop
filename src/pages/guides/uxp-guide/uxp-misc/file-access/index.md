@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: File Access in UXP
-description: "File and folder access is an important part of many plugins. Files and folders can exist in these locations:"
+description: File and folder access is an important part of many plugins. Files and folders can exist in these locations:
 ---
 
 # File I/O

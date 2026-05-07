@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Localization and Platforms
-description: "Sometimes it's necesssary (for localization or other reasons) to find out what a plugin's host environment is. Here's how to do that:"
+description: Sometimes it's necesssary (for localization or other reasons) to find out what a plugin's host environment is. Here's how to do that:
 ---
 
 # Localization and Platforms

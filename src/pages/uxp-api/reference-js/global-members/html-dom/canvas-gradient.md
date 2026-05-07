@@ -1,6 +1,6 @@
 ---
 title: window.CanvasGradient
-description: "See: Web APIs - CanvasGradient for more details<br></br>"
+description: See: Web APIs - CanvasGradient for more details<br></br>
 ---
 
 # window.CanvasGradient

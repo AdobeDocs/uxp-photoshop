@@ -1,6 +1,6 @@
 ---
 title: window.TransformStreamDefaultController
-description: "See: Web APIs - TransformStreamDefaultController"
+description: See: Web APIs - TransformStreamDefaultController
 ---
 
 # window.TransformStreamDefaultController

@@ -1,6 +1,6 @@
 ---
 title: navigator.clipboard
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard
 ---
 
 # navigator.clipboard

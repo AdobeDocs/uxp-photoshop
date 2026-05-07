@@ -1,6 +1,6 @@
 ---
 id: "executeasmodaloptions"
-title: "ExecuteAsModalOptions"
+title: ExecuteAsModalOptions
 sidebar_label: "ExecuteAsModalOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version | Description |"
+description: | Name | Type | Min Version | Description |
 ---
 
 # ExecuteAsModalOptions

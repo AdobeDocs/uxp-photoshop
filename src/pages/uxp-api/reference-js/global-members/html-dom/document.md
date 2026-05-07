@@ -1,6 +1,6 @@
 ---
 title: window.Document
-description: "See: Web APIs - Document"
+description: See: Web APIs - Document
 ---
 
 # window.Document

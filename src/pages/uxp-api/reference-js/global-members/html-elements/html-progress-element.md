@@ -1,6 +1,6 @@
 ---
 title: window.HTMLProgressElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement
 ---
 
 # window.HTMLProgressElement

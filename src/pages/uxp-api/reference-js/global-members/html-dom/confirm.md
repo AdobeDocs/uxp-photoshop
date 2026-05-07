@@ -1,6 +1,6 @@
 ---
 title: window.confirm()
-description: "Returns: boolean - true If OK button is pressed and false when Cancel button is pressed."
+description: Returns: boolean - true If OK button is pressed and false when Cancel button is pressed.
 ---
 
 # window.confirm()

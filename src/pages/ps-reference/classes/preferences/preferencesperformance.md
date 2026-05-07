@@ -1,6 +1,6 @@
 ---
 id: "preferencesperformance"
-title: "PreferencesPerformance"
+title: PreferencesPerformance
 sidebar_label: "PreferencesPerformance"
 repo: "uxp-photoshop"
 product: "photoshop"

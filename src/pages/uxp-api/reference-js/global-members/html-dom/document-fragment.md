@@ -1,6 +1,6 @@
 ---
 title: window.DocumentFragment
-description: "See: Web APIs - DocumentFragment"
+description: See: Web APIs - DocumentFragment
 ---
 
 # window.DocumentFragment

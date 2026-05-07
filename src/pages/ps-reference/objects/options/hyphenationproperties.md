@@ -1,6 +1,6 @@
 ---
 id: "hyphenationproperties"
-title: "HyphenationProperties"
+title: HyphenationProperties
 sidebar_label: "HyphenationProperties"
 repo: "uxp-photoshop"
 product: "photoshop"

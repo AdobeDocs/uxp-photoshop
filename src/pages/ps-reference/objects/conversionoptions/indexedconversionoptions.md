@@ -1,6 +1,6 @@
 ---
 id: "indexedconversionoptions"
-title: "IndexedConversionOptions"
+title: IndexedConversionOptions
 sidebar_label: "IndexedConversionOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

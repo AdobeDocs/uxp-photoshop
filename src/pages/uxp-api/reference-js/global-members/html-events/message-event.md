@@ -1,6 +1,6 @@
 ---
 title: window.MessageEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent
 ---
 
 # window.MessageEvent

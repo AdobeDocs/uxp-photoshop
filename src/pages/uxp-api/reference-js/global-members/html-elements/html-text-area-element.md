@@ -1,6 +1,6 @@
 ---
 title: window.HTMLTextAreaElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement
 ---
 
 # window.HTMLTextAreaElement

@@ -1,6 +1,6 @@
 ---
 id: "solidcolor"
-title: "SolidColor"
+title: SolidColor
 sidebar_label: "SolidColor"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -65,6 +65,7 @@ c.rgb.green = 128; // Typename will change back to "RGBColor"
 ### constructor
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*SolidColor*](/ps-reference/classes/solidcolor.md)
 
 All colors default to pure white.
@@ -97,6 +98,7 @@ const color = new SolidColor();
 ### isEqual
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *boolean*
 
 True if the SolidColor object is visually equivalent to the specified color.

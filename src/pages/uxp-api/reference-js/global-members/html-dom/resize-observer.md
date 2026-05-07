@@ -1,6 +1,6 @@
 ---
 title: window.ResizeObserver
-description: "See: ResizeObserver"
+description: See: ResizeObserver
 ---
 
 # window.ResizeObserver

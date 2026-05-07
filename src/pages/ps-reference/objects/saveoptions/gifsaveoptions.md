@@ -1,6 +1,6 @@
 ---
 id: "gifsaveoptions"
-title: "GIFSaveOptions"
+title: GIFSaveOptions
 sidebar_label: "GIFSaveOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Access | Min Version | Description |"
+description: | Name | Type | Access | Min Version | Description |
 ---
 
 # GIF Save Options

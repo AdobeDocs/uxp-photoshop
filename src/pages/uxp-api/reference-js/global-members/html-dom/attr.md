@@ -1,6 +1,6 @@
 ---
 title: window.Attr
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Attr"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Attr
 ---
 
 # window.Attr

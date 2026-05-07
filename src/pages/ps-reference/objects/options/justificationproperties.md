@@ -1,6 +1,6 @@
 ---
 id: "justificationproperties"
-title: "JustificationProperties"
+title: JustificationProperties
 sidebar_label: "JustificationProperties"
 repo: "uxp-photoshop"
 product: "photoshop"

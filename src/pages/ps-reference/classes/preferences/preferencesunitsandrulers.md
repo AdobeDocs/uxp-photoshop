@@ -1,6 +1,6 @@
 ---
 id: "preferencesunitsandrulers"
-title: "PreferencesUnitsAndRulers"
+title: PreferencesUnitsAndRulers
 sidebar_label: "PreferencesUnitsAndRulers"
 repo: "uxp-photoshop"
 product: "photoshop"

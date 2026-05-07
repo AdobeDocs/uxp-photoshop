@@ -1,6 +1,6 @@
 ---
 id: "colors"
-title: "Colors"
+title: Colors
 sidebar_label: "Colors"
 repo: "uxp-photoshop"
 product: "photoshop"

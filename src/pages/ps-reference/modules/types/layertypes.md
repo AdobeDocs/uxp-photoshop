@@ -1,6 +1,6 @@
 ---
 id: "layertypes"
-title: "LayerTypes"
+title: LayerTypes
 sidebar_label: "LayerTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- GroupLayerCreateOptions"
+description: - GroupLayerCreateOptions
 ---
 
 # types/LayerTypes

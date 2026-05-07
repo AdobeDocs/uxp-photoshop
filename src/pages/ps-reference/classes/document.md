@@ -1,6 +1,6 @@
 ---
 id: "document"
-title: "Document"
+title: Document
 sidebar_label: "Document"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -62,12 +62,12 @@ document.saveAs.psb(entryPsb, { embedColorProfile: true });
 
 | Name | Type |
 | :------ | :------ |
-| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps-reference/objects/saveoptions/bmpsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
-| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps-reference/objects/saveoptions/gifsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
-| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps-reference/objects/saveoptions/jpegsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
-| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps-reference/objects/saveoptions/pngsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
-| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*<void\> |
+| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps-reference/objects/saveoptions/bmpsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps-reference/objects/saveoptions/gifsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps-reference/objects/saveoptions/jpegsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps-reference/objects/saveoptions/pngsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
 
 <HorizontalLine />
 
@@ -122,7 +122,8 @@ The object containing the document's currently active selection
 ### calculations
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
-**async** : *Promise*<void \| [*Channel*](/ps-reference/classes/channel.md) \| [*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+**async** : *Promise*\<void \| [*Channel*](/ps-reference/classes/channel.md) \| [*Document*](/ps-reference/classes/document.md)\>
 
 The Calculations command lets you blend two individual channels from one or more source images. You can then
 apply the results to a new image or to a new channel or selection in the active image.
@@ -166,7 +167,8 @@ it won't work. In future there should not be any layer requirements since this c
 ### changeMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Changes the color mode of the document.
 
@@ -182,7 +184,8 @@ Changes the color mode of the document.
 ### close
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Closes the document, showing a prompt to save
 unsaved changes if specified.
@@ -198,6 +201,7 @@ unsaved changes if specified.
 ### closeWithoutSaving
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 *void*
 
 Close the document, discarding all unsaved changes.
@@ -207,7 +211,8 @@ Close the document, discarding all unsaved changes.
 ### convertProfile
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Changes the color profile.
 
@@ -230,7 +235,8 @@ or one of these below, meaning of the working color spaces or Lab color.
 ### createLayer
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 General form of the kind-specific methods below. See those methods for more information.
 
@@ -251,7 +257,7 @@ await doc.createLayer(
 );
 ```
 
-*Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+*Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 #### Parameters
 
@@ -260,7 +266,7 @@ await doc.createLayer(
 | `kind?` | [*LayerKind.NORMAL*](/ps-reference/modules/constants.md#layerkind) |
 | `options?` | [*PixelLayerCreateOptions*](/ps-reference/objects/createoptions/pixellayercreateoptions.md) |
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a new layer group.
 ```javascript
@@ -277,7 +283,7 @@ await doc.createLayer(
 | `kind` | [*LayerKind.GROUP*](/ps-reference/modules/constants.md#layerkind) |
 | `options?` | [*GroupLayerCreateOptions*](/ps-reference/objects/createoptions/grouplayercreateoptions.md) |
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a new text layer.
 
@@ -300,7 +306,8 @@ await doc.createLayer(
 ### createLayerGroup
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a layer group using options described by [GroupLayerCreateOptions](/ps-reference/objects/createoptions/grouplayercreateoptions.md).
 
@@ -332,7 +339,8 @@ const selectedGroup = await doc.createLayerGroup({
 ### createPixelLayer
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a pixel layer using options described by [PixelLayerCreateOptions](/ps-reference/objects/createoptions/pixellayercreateoptions.md).
 
@@ -355,7 +363,8 @@ await doc.createPixelLayer({
 ### createTextLayer
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.2\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a text layer using options described by [TextLayerCreateOptions](/ps-reference/objects/createoptions/textlayercreateoptions.md).
 
@@ -379,7 +388,8 @@ await doc.createTextLayer({
 ### crop
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Crops the document to the given bounds.
 
@@ -397,7 +407,8 @@ Crops the document to the given bounds.
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<[*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+*Promise*\<[*Document*](/ps-reference/classes/document.md)\>
 
 Creates a duplicate of the document, making the duplicate active.
 
@@ -417,7 +428,8 @@ The optional parameter `mergeLayersOnly` indicates whether to only duplicate mer
 ### duplicateLayers
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)[]\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)[]\>
 
 Duplicates given layer(s), creating all copies above the top most one in layer stack,
 and returns the newly created layers.
@@ -444,7 +456,8 @@ await finalDoc.close(SaveOptions.SAVECHANGES)
 ### flatten
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Flatten all layers in the document. The remaining layer will become Background.
 
@@ -453,7 +466,8 @@ Flatten all layers in the document. The remaining layer will become Background.
 ### generativeUpscale
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>27.2\</span\>
 
-**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)\>
 
 Applies generative upscaling to the currently selected layer(s) using AI-powered upscaling technology.
 
@@ -477,7 +491,8 @@ const doc4x = await document.generativeUpscale(constants.GenerativeUpscaleModel.
 ### groupLayers
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a layer group from existing layers.
 
@@ -499,6 +514,7 @@ const group = await doc.groupLayers(
 ### linkLayers
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*Layer*](/ps-reference/classes/layer.md)[]
 
 Links layers together if possible, and returns a list of linked layers.
@@ -514,7 +530,8 @@ Links layers together if possible, and returns a list of linked layers.
 ### mergeVisibleLayers
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Merges all visible layers in the document into a single layer.
 In constrast to [flatten](/ps-reference/classes/document.md#flatten), `mergeVisibleLayers` will not convert the remaining layer
@@ -526,7 +543,8 @@ merged layer will be either that of the top of the selected layers or the top la
 ### paste
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Pastes the contents of the clipboard into the document. If the optional argument is
 set to true and a selection is active, the contents are pasted into the selection.
@@ -542,7 +560,8 @@ set to true and a selection is active, the contents are pasted into the selectio
 ### rasterizeAllLayers
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Converts all layers to pixel layers.
 
@@ -551,7 +570,8 @@ Converts all layers to pixel layers.
 ### resizeCanvas
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Changes the size of the document, but does not scale the image.
 To scale the image size, see [resizeImage](/ps-reference/classes/document.md#resizeimage).
@@ -575,7 +595,8 @@ await document.resizeCanvas(width + 400, height + 400);
 ### resizeImage
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Changes the size of the image by scaling the dimensions to meet the targeted number of pixels.
 
@@ -598,7 +619,8 @@ await document.resizeImage(800, 600)
 ### revealAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Expands the document to show clipped sections.
 
@@ -607,7 +629,8 @@ Expands the document to show clipped sections.
 ### rotate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Rotates the image clockwise in given angle, expanding canvas if necessary. (Previously rotateCanvas)
 
@@ -622,7 +645,8 @@ Rotates the image clockwise in given angle, expanding canvas if necessary. (Prev
 ### sampleColor
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<[*SolidColor*](/ps-reference/classes/solidcolor.md) \| [*NoColor*](/ps-reference/colors/nocolor.md)\>
+\<br/\>
+**async** : *Promise*\<[*SolidColor*](/ps-reference/classes/solidcolor.md) \| [*NoColor*](/ps-reference/colors/nocolor.md)\>
 
 Returns a SolidColor object sampled from the document at the given position.
 
@@ -650,7 +674,8 @@ console.log(col.rgb);
 ### save
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Performs a save of the document. The user will be presented with
 a Save dialog if the file has yet to be saved on disk.
@@ -668,7 +693,8 @@ unsavedDocument.save()
 ### splitChannels
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)[]\>
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)[]\>
 
 Splits the document channels into separate, single-channel documents.
 
@@ -677,7 +703,8 @@ Splits the document channels into separate, single-channel documents.
 ### suspendHistory
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Creates a single history state encapsulating everything that is done
 in the callback, only for this document. All changes to the document should
@@ -711,7 +738,8 @@ API, for which `suspendHistory` is a simple wrapper.
 ### trap
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Applies trapping to a CMYK document.
 
@@ -728,7 +756,8 @@ Valid only when [Document.mode](/ps-reference/classes/document.md#mode) is `Cons
 ### trim
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Trims the area around the image according to the type of pixels given.
 All sides of the image are targeted by default.

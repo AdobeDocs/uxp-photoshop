@@ -1,6 +1,6 @@
 ---
 id: "Save-options"
-title: "Save Options"
+title: Save Options
 sidebar_label: "Save-options"
 repo: "uxp-photoshop"
 product: "photoshop"

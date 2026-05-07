@@ -1,6 +1,6 @@
 ---
 id: "subpathinfo"
-title: "SubPathInfo"
+title: SubPathInfo
 sidebar_label: "SubPathInfo"
 repo: "uxp-photoshop"
 product: "photoshop"

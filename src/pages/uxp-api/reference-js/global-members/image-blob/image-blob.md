@@ -1,6 +1,6 @@
 ---
 title: window.ImageBlob
-description: "Since: UXP v7.0.0"
+description: Since: UXP v7.0.0
 ---
 
 # window.ImageBlob
@@ -16,7 +16,7 @@ ImageBlob can be created in the following ways
 - standard image compression formats: pass ArrayBuffer of the `standard compression formats` and mimeType of the compression in the options.type.
 - uncompressed image: pass ArrayBuffer of the uncompressed image data i.e. raw data of each pixel and options to interpret the data, option.type should be passed as "image/uncompressed".\<br\>\</br\>
 
-[PhotoshopImageData](/ps-reference/media/imaging.md#photoshopimagedata-1) is compatible with ImageBlob,
+[PhotoshopImageData](/ps_reference/media/imaging/index.md#photoshopimagedata-1) is compatible with ImageBlob,
 `PhotoshopImageData` object can be directly passed in for options.
 
 \<b\>Note: `ImageBlob support is subject to enablement by HostApp. Currently supported by Photoshop.`\</b\>

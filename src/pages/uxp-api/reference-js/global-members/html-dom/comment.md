@@ -1,6 +1,6 @@
 ---
 title: window.Comment
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Comment"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Comment
 ---
 
 # window.Comment

@@ -1,6 +1,6 @@
 ---
 id: "objects"
-title: "Objects"
+title: Objects
 sidebar_label: "Objects"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "Root of the API, accessed at require(\"photoshop\")"
+description: Root of the API, accessed at require('photoshop')
 ---
 
 # Objects

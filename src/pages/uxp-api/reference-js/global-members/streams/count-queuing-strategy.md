@@ -1,6 +1,6 @@
 ---
 title: window.CountQueuingStrategy
-description: "See: Web APIs - CountQueuingStrategy"
+description: See: Web APIs - CountQueuingStrategy
 ---
 
 # window.CountQueuingStrategy

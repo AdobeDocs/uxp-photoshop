@@ -1,6 +1,6 @@
 ---
 title: window.alert()
-description: "Since: v7.0.0"
+description: Since: v7.0.0
 ---
 
 # window.alert()

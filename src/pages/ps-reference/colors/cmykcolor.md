@@ -1,6 +1,6 @@
 ---
 id: "cmykcolor"
-title: "CMYKColor"
+title: CMYKColor
 sidebar_label: "CMYKColor"
 repo: "uxp-photoshop"
 product: "photoshop"

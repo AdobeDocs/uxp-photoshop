@@ -1,6 +1,6 @@
 ---
 id: "resumehistorysuspensionoptions"
-title: "ResumeHistorySuspensionOptions"
+title: ResumeHistorySuspensionOptions
 sidebar_label: "ResumeHistorySuspensionOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version | Description |"
+description: | Name | Type | Min Version | Description |
 ---
 
 # ResumeHistorySuspensionOptions

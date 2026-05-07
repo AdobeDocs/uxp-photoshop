@@ -1,6 +1,6 @@
 ---
 title: window.Node
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Node"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Node
 ---
 
 # window.Node

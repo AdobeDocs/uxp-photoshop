@@ -1,6 +1,6 @@
 ---
 id: "photoshopcore"
-title: "photoshopCore"
+title: photoshopCore
 sidebar_label: "photoshopCore"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -44,7 +44,8 @@ const {core} = require('photoshop');
 ### addNotificationListener
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Attach a listener to a Photoshop core event. A callback in the form
 of `(eventName: string, descriptor: ActionDescriptor) => void` will be performed.
@@ -73,7 +74,8 @@ await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 ### calculateDialogSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<\{ `height`: *number* ; `width`: *number*  }\>
+\<br/\>
+**async** : *Promise*\<\{ `height`: *number* ; `width`: *number*  }\>
 
 Returns the effective size of a dialog.
 ```javascript
@@ -98,6 +100,7 @@ const { width, height } = await core.calculateDialogSize(idealSize);
 ### convertColor
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 RGBColorDescriptor \| RGB32ColorDescriptor
 
 Converts the given color (in descriptor form) to RGB,
@@ -167,7 +170,8 @@ Convert to CMYK
 ### convertGlobalToLocal
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>26.0\</span\>
 
-**async** : *Promise*<\{ `x`: *number* ; `y`: *number*  }\>
+\<br/\>
+**async** : *Promise*\<\{ `x`: *number* ; `y`: *number*  }\>
 
 Given the (x,y) coordinates of a position in global (display) space, we convert to coordinates
 with the origin based at the top left corner of the given panel.
@@ -202,6 +206,7 @@ const { x, y } = await core.convertGlobalToLocal(target, location);
 ### createTemporaryDocument
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *object*
 
 Create a temporary duplicate document for background processing.  This document does not appear in the UI,
@@ -223,6 +228,7 @@ await core.createTemporaryDocument({ documentID: 123 });
 ### deleteTemporaryDocument
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *void*
 
 Remove a temporary document.
@@ -243,7 +249,8 @@ await core.deleteTemporaryDocument({ documentID: 146 });
 ### endModalToolState
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 End the current modal tool editing state.
 ```javascript
@@ -262,7 +269,8 @@ await core.endModalToolState(false);
 ### executeAsModal
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 ExecuteAsModal is needed when a plugin wants to make modifications to the Photoshop state.
 This includes scenarios where the plugin wants to create or modify documents,
@@ -276,7 +284,7 @@ See [Modal Execution](executeasmodal.md) for details
 
 | Name | Type |
 | :------ | :------ |
-| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps-reference/objects/options/executioncontext.md), `descriptor?`: *object*) => *Promise*<any\> |
+| `targetFunction` | (`executionContext`: [*ExecutionContext*](/ps-reference/objects/options/executioncontext.md), `descriptor?`: *object*) => *Promise*\<any\> |
 | `options` | [*ExecuteAsModalOptions*](/ps-reference/objects/returnobjects/executeasmodaloptions.md) |
 
 <HorizontalLine />
@@ -284,7 +292,8 @@ See [Modal Execution](executeasmodal.md) for details
 ### getActiveTool
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<\{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
+\<br/\>
+**async** : *Promise*\<\{ `classID`: *string* ; `isModal`: *boolean* ; `key`: *string* ; `title`: *string*  }\>
 
 Returns information about the active Photoshop tool.
 ```javascript
@@ -296,6 +305,7 @@ const { title } = await core.getActiveTool();
 ### getCPUInfo
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 [*CPUInfo*](/ps-reference/objects/returnobjects/cpuinfo.md)
 
 Returns information about the host CPU.
@@ -310,7 +320,8 @@ const isARM = vendor === 'ARM';
 ### getDisplayConfiguration
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<[[*DisplayConfiguration*](/ps-reference/objects/returnobjects/displayconfiguration.md)]\>
+\<br/\>
+*Promise*\<[[*DisplayConfiguration*](/ps-reference/objects/returnobjects/displayconfiguration.md)]\>
 
 Returns the current display configuration as an array with an entry for each display.
 
@@ -334,6 +345,7 @@ core.getDisplayConfiguration({ physicalResolution: true });
 ### getGPUInfo
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 [*GPUInfo*](/ps-reference/objects/returnobjects/gpuinfo.md)
 
 Returns OpenGL and OpenCL information about the available graphics processor.
@@ -350,7 +362,8 @@ console.log(JSON.stringify(clgpuInfoList));
 ### getLayerGroupContents
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-*Promise*<\{ `list`: LayerTreeInfo[]  }\>
+\<br/\>
+*Promise*\<\{ `list`: LayerTreeInfo[]  }\>
 
 Returns a list of the layers contained by the specified layer group.
 
@@ -371,6 +384,7 @@ await core.getLayerGroupContents({ documentID: 123, layerID: 9 });
 ### getLayerGroupContentsSync
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 *object*
 
 Returns a list of the layers contained by the specified layer group.
@@ -392,7 +406,8 @@ core.getLayerGroupContentsSync({ documentID: 123, layerID: 9 });
 ### getLayerTree
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-**async** : *Promise*<\{ `list`: LayerTreeInfo[]  }\>
+\<br/\>
+**async** : *Promise*\<\{ `list`: LayerTreeInfo[]  }\>
 
 Returns the full hierarchy of the layer stack in nested "lists".
 ```javascript
@@ -411,6 +426,7 @@ await core.getLayerTree({ documentID: 123 });
 ### getLayerTreeSync
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 *object*
 
 Returns the full hierarchy of the layer stack in nested "lists".
@@ -430,7 +446,8 @@ core.getLayerTreeSync({ documentID: 123 });
 ### getMenuCommandState
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<boolean\>
+\<br/\>
+**async** : *Promise*\<boolean\>
 
 Returns whether a command menu item is available for invoking.
 ```javascript
@@ -450,7 +467,8 @@ const canFill = await core.getMenuCommandState({ commandID: 1042 });
 ### getMenuCommandTitle
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<string\>
+\<br/\>
+**async** : *Promise*\<string\>
 
 Returns the localized menu title of the menu command item.
 ```javascript
@@ -470,7 +488,8 @@ const renameLayerStr = await core.getMenuCommandTitle({ commandID: 2983 });
 ### getPluginInfo
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.2\</span\>
 
-**async** : *Promise*<ActionDescriptor\>
+\<br/\>
+**async** : *Promise*\<ActionDescriptor\>
 
 Return information about the execution of the plugin.
 This method is intended for developing plugins.
@@ -498,7 +517,8 @@ await core.getPluginInfo();
 ### getUserIdleTime
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Return the current number of seconds for user idle time. See also: [setUserIdleTime](/ps-reference/media/photoshopcore.md#setuseridletime)
 
@@ -511,7 +531,8 @@ await core.getUserIdleTime();
 ### historySuspended
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-*Promise*<boolean\>
+\<br/\>
+*Promise*\<boolean\>
 
 Returns true if the history is in a suspended state.  See [Document.suspendHistory](/ps-reference/classes/document.md#suspendhistory).
 ```javascript
@@ -530,6 +551,7 @@ await core.historySuspended( {documentID: 123} );
 ### isModal
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
+\<br/\>
 *boolean*
 
 Returns true if the plugin is currently in a modal state using [executeAsModal](/ps-reference/media/photoshopcore.md#executeasmodal).
@@ -539,7 +561,8 @@ Returns true if the plugin is currently in a modal state using [executeAsModal](
 ### performMenuCommand
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<boolean\>
+\<br/\>
+**async** : *Promise*\<boolean\>
 
 Invokes the menu command via its `commandID`. Returns false
 on failure, or if the command is not available.
@@ -561,7 +584,8 @@ await core.performMenuCommand({ commandID: 1017 });
 ### redrawDocument
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-**async** : *Promise*<number\>
+\<br/\>
+**async** : *Promise*\<number\>
 
 Request that Photoshop redraws (updates) a document immediately.
 This method can be used to ensure that the document is updated
@@ -592,7 +616,8 @@ await core.redrawDocument({ documentID: 123 });
 ### removeNotificationListener
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Detaches a listener from a Photoshop event.
 See [addNotificationListener](#addnotificationlistener)
@@ -613,7 +638,8 @@ await core.addNotificationListener('UI', ['userIdle'], onUserIdle);
 ### setExecutionMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.2\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 The execution mode can be used while debugging a plugin. It is only available
 when the developer mode is enabled.
@@ -643,7 +669,8 @@ await core.setExecutionMode({ logRejections: true });
 ### setUserIdleTime
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Specifies the number of seconds a user must be idle on Photoshop before invoking the
 userIdle event handler defined with [addNotificationListener](/ps-reference/media/photoshopcore.md#addnotificationlistener). An idleTime of 0
@@ -664,7 +691,8 @@ await core.setUserIdleTime(3);
 ### showAlert
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Show a generic alert box to the user. 'OK' to dismiss.
 ```javascript
@@ -684,7 +712,8 @@ await core.showAlert({ message: 'Operation successful' });
 ### suppressResizeGripper
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.1\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 The "resize gripper", a small square in the botton-right corner of a panel, may be hidden
 by this function. This square will appear above the contents the panel itself including
@@ -708,6 +737,7 @@ The value for `target` above will be the id attached to the panel's entry under 
 ### translateUIString
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 *string*
 
 Given a Photoshop ZString (of format `"$$$/slash/separated/key=english default value"`),

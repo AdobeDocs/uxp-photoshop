@@ -1,6 +1,6 @@
 ---
 id: "generaltypes"
-title: "GeneralTypes"
+title: GeneralTypes
 sidebar_label: "GeneralTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- Dimensions"
+description: - Dimensions
 ---
 
 # types/GeneralTypes

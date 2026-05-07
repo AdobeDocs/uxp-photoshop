@@ -1,6 +1,6 @@
 ---
 id: "applyimagetypes"
-title: "ApplyImageTypes"
+title: ApplyImageTypes
 sidebar_label: "ApplyImageTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- ApplyImageOptions"
+description: - ApplyImageOptions
 ---
 
 # types/ApplyImageTypes

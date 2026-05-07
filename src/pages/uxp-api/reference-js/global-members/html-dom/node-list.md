@@ -1,6 +1,6 @@
 ---
 title: window.NodeList
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/NodeList"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/NodeList
 ---
 
 # window.NodeList

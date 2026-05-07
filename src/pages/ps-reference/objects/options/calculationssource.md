@@ -1,6 +1,6 @@
 ---
 id: "calculationssource"
-title: "CalculationsSource"
+title: CalculationsSource
 sidebar_label: "CalculationsSource"
 repo: "uxp-photoshop"
 product: "photoshop"

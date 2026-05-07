@@ -1,6 +1,6 @@
 ---
 id: "applyimagesource"
-title: "ApplyImageSource"
+title: ApplyImageSource
 sidebar_label: "ApplyImageSource"
 repo: "uxp-photoshop"
 product: "photoshop"

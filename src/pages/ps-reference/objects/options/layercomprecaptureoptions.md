@@ -1,6 +1,6 @@
 ---
 id: "layercomprecaptureoptions"
-title: "LayerCompRecaptureOptions"
+title: LayerCompRecaptureOptions
 sidebar_label: "LayerCompRecaptureOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

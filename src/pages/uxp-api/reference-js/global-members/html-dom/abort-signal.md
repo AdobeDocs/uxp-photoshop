@@ -1,6 +1,6 @@
 ---
 title: window.AbortSignal
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
 ---
 
 # window.AbortSignal

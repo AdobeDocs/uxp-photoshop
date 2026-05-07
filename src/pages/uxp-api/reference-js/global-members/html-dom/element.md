@@ -1,6 +1,6 @@
 ---
 title: window.Element
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/Element"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/Element
 ---
 
 # window.Element

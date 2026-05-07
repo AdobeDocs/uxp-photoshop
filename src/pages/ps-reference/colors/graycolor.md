@@ -1,6 +1,6 @@
 ---
 id: "graycolor"
-title: "GrayColor"
+title: GrayColor
 sidebar_label: "GrayColor"
 repo: "uxp-photoshop"
 product: "photoshop"

@@ -1,6 +1,6 @@
 ---
 id: "ReturnObjects-options"
-title: "Return Objects"
+title: Return Objects
 sidebar_label: "Return Objects-options"
 repo: "uxp-photoshop"
 product: "photoshop"

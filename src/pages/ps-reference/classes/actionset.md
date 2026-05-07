@@ -1,6 +1,6 @@
 ---
 id: "actionset"
-title: "ActionSet"
+title: ActionSet
 sidebar_label: "ActionSet"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -39,6 +39,7 @@ Actions panel will have a hierarchy of Action Sets that contain a list of Action
 ### delete
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
+\<br/\>
 *void*
 
 Deletes this Action Set from the Actions panel
@@ -48,6 +49,7 @@ Deletes this Action Set from the Actions panel
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
+\<br/\>
 [*ActionSet*](/ps-reference/classes/actionset.md)
 
 Creates a copy of this Action Set
@@ -57,6 +59,7 @@ Creates a copy of this Action Set
 ### play
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.1\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Plays all Actions in this set one by one

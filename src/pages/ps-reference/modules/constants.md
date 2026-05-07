@@ -1,6 +1,6 @@
 ---
 id: "constants"
-title: "Constants"
+title: Constants
 sidebar_label: "Constants"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -35,6 +35,7 @@ await app.activeDocument.resizeImage(
 ### AnchorPosition
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The point around which to transform an object.
 
 This is the point that does not move when an object is rotated or resized
@@ -56,6 +57,7 @@ This is the point that does not move when an object is rotated or resized
 ### AntiAlias
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Method to use to smooth edges by softening the color transition between edge pixels
 and the background. Used in a [CharacterStyle.antiAliasMethod](/ps-reference/classes/characterstyle.md#antialiasmethod)
 
@@ -72,6 +74,7 @@ and the background. Used in a [CharacterStyle.antiAliasMethod](/ps-reference/cla
 ### ApplyImageBlendMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 The kind of blending used in a [Layer.applyImage](/ps-reference/classes/layer.md#applyimage) operation.
 
 | Name | Description |
@@ -105,6 +108,7 @@ The kind of blending used in a [Layer.applyImage](/ps-reference/classes/layer.md
 ### ApplyImageChannel
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 Special channels used in [Layer.applyImage](/ps-reference/classes/layer.md#applyimage).
 
 | Name | Description |
@@ -120,6 +124,7 @@ Special channels used in [Layer.applyImage](/ps-reference/classes/layer.md#apply
 ### ApplyImageLayer
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 Use merged layers as a source in [Layer.applyImage](/ps-reference/classes/layer.md#applyimage).
 
 | Name | Description |
@@ -131,6 +136,7 @@ Use merged layers as a source in [Layer.applyImage](/ps-reference/classes/layer.
 ### AutoKernType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](/ps-reference/classes/characterstyle.md#autokerning)
 
 | Name | Description |
@@ -144,6 +150,7 @@ The type of kerning to use for characters. Used in [CharacterStyle.autoKerning](
 ### BMPDepthType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Number of bits per channel (also called pixel depth or color depth).
 
 The number selected indicates the exponent of 2. With 8 bits per channel, we have 256 possible colors.
@@ -162,6 +169,7 @@ The number selected indicates the exponent of 2. With 8 bits per channel, we hav
 ### Baseline
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The baseline style to use in text. Used in [CharacterStyle.baseline](/ps-reference/classes/characterstyle.md#baseline)
 
 | Name | Description |
@@ -175,6 +183,7 @@ The baseline style to use in text. Used in [CharacterStyle.baseline](/ps-referen
 ### BitmapConversionType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Specifies the quality of an image you are converting to bitmap mode. Used in [BitmapConversionOptions](/ps-reference/objects/conversionoptions/bitmapconversionoptions.md)
 
 | Name | Description |
@@ -190,6 +199,7 @@ Specifies the quality of an image you are converting to bitmap mode. Used in [Bi
 ### BitmapHalfToneType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [BitmapConversionOptions](/ps-reference/objects/conversionoptions/bitmapconversionoptions.md)
 
 | Name | Description |
@@ -206,6 +216,7 @@ Specifies the shape of the dots (ink deposits) in the halftone screen. Used in [
 ### BitsPerChannelType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 The number of bits per color channel.
 
 | Name | Description |
@@ -220,6 +231,7 @@ The number of bits per color channel.
 ### BlendMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Blending mode
 
 | Name | Description |
@@ -258,6 +270,7 @@ Blending mode
 ### CalculationsBlendMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 The kind of blending used in a [Document.calculations](/ps-reference/classes/document.md#calculations) operation.
 
 | Name | Description |
@@ -291,6 +304,7 @@ The kind of blending used in a [Document.calculations](/ps-reference/classes/doc
 ### CalculationsChannel
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 Special channels used in [Document.calculations](/ps-reference/classes/document.md#calculations).
 
 | Name | Description |
@@ -304,6 +318,7 @@ Special channels used in [Document.calculations](/ps-reference/classes/document.
 ### CalculationsLayer
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 Use merged layers as a source in [Document.calculations]].
 
 | Name | Description |
@@ -315,6 +330,7 @@ Use merged layers as a source in [Document.calculations]].
 ### CalculationsResult
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
 
+\<br/\>
 The result of [Document.calculations](/ps-reference/classes/document.md#calculations) can go into a new document,
  a new channel in the active document, or a new selection in the active document.
 
@@ -329,6 +345,7 @@ The result of [Document.calculations](/ps-reference/classes/document.md#calculat
 ### ChangeMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The new color profile or mode for a document, specified in [Document.changeMode](/ps-reference/classes/document.md#changemode)
 
 NOTE: Color images must be changed to GRAYSCALE mode before you can change them to BITMAP mode.
@@ -348,6 +365,7 @@ NOTE: Color images must be changed to GRAYSCALE mode before you can change them 
 ### ChannelType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The type of a color channel.
 
 | Name | Description |
@@ -362,6 +380,7 @@ The type of a color channel.
 ### CharacterAlignment
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The character alignment to use in text.
 Used in [CharacterStyle.characterAlignment](/ps-reference/classes/characterstyle.md#characteralignment)
 
@@ -379,6 +398,7 @@ Used in [CharacterStyle.characterAlignment](/ps-reference/classes/characterstyle
 ### ColorBlendMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 The kind of blending used in a fill or stroke operation.
 Pass to [PathItem.fillPath](/ps-reference/classes/pathitem.md#fillpath)()
 
@@ -417,6 +437,7 @@ Pass to [PathItem.fillPath](/ps-reference/classes/pathitem.md#fillpath)()
 ### ColorModel
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The color model representing the current color space
 of a [SolidColor](/ps-reference/classes/solidcolor.md) object.
 
@@ -434,6 +455,7 @@ of a [SolidColor](/ps-reference/classes/solidcolor.md) object.
 ### ColorPicker
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The provider of the color picker dialog.
 Pass to [PreferencesGeneral.colorPicker](/ps-reference/classes/preferences/preferencesgeneral.md#colorpicker)
 
@@ -448,6 +470,7 @@ Pass to [PreferencesGeneral.colorPicker](/ps-reference/classes/preferences/prefe
 ### ColorProfileType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Type of color profile used to manage a document, used in [Document.colorProfileType](/ps-reference/classes/document.md#colorprofiletype)
 
 | Name | Description |
@@ -461,6 +484,7 @@ Type of color profile used to manage a document, used in [Document.colorProfileT
 ### CreateFields
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps-reference/classes/layer.md#applydeinterlace).
 
 | Name | Description |
@@ -473,6 +497,7 @@ The method used for creating fields. Pass to [Layer.applyDeInterlace](/ps-refere
 ### DepthMapSource
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The source to use for the depth map. Pass to
 [Layer.applyLensBlur](/ps-reference/classes/layer.md#applylensblur)().
 
@@ -488,6 +513,7 @@ The source to use for the depth map. Pass to
 ### DialogModes
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Controls the type of dialogs Photoshop displays
 during API calls
 
@@ -502,6 +528,7 @@ during API calls
 ### Direction
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Used in multiple places to represent orientation.
 
 Orientation of a guide in [Guide.direction](/ps-reference/classes/guide.md#direction)
@@ -516,6 +543,7 @@ Orientation of a guide in [Guide.direction](/ps-reference/classes/guide.md#direc
 ### DisplacementMapType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 Describes how the displacement map fits the
 image if the image is not the same size as
 the map. Pass to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydisplace).
@@ -530,6 +558,7 @@ the map. Pass to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydispl
 ### Dither
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The type of dithering
 
 | Name | Description |
@@ -544,6 +573,7 @@ The type of dithering
 ### DocumentFill
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Fill methods available for the new document background
 
 | Name | Description |
@@ -559,6 +589,7 @@ Fill methods available for the new document background
 ### DocumentMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Color mode of an open document. See also [Document.mode](/ps-reference/classes/document.md#mode) and [Document.changeMode](/ps-reference/classes/document.md#changemode)
 
 | Name | Description |
@@ -577,6 +608,7 @@ Color mode of an open document. See also [Document.mode](/ps-reference/classes/d
 ### EditLogItemsType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The history log edit options.
 Pass to [PreferencesHistory.editLogItems](/ps-reference/classes/preferences/preferenceshistory.md#editlogitems)
 
@@ -591,6 +623,7 @@ Pass to [PreferencesHistory.editLogItems](/ps-reference/classes/preferences/pref
 ### ElementPlacement
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Placement modes for Layer.move method
 
 | Name | Description |
@@ -606,6 +639,7 @@ Placement modes for Layer.move method
 ### EliminateFields
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps-reference/classes/layer.md#applydeinterlace).
 
 | Name | Description |
@@ -618,6 +652,7 @@ The type of field to eliminate. Pass to [Layer.applyDeInterlace](/ps-reference/c
 ### FlipAxis
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 Axis (or both) to flip a layer on.
 Pass to [Layer.flip](/ps-reference/classes/layer.md#flip)().
 
@@ -632,6 +667,7 @@ Pass to [Layer.flip](/ps-reference/classes/layer.md#flip)().
 ### FontSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 Font size in panels and dialogs.
 Pass to [PreferencesInterface.textFontSize](/ps-reference/classes/preferences/preferencesinterface.md#textfontsize)
 
@@ -647,6 +683,7 @@ Pass to [PreferencesInterface.textFontSize](/ps-reference/classes/preferences/pr
 ### ForcedColors
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The type of colors to be included the color
 table regardless of their usage
 
@@ -662,6 +699,7 @@ table regardless of their usage
 ### GenerativeUpscaleModel
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>27.2\</span\>
 
+\<br/\>
 The generative upscale model to use for AI-powered upscaling.
 
 Pass to [Document.generativeUpscale](/ps-reference/classes/document.md#generativeupscale)()
@@ -675,6 +713,7 @@ Pass to [Document.generativeUpscale](/ps-reference/classes/document.md#generativ
 ### Geometry
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 Geometric options for shapes, such as the iris shape in the
 Lens Blur filter. Pass to [Layer.applyLensBlur](/ps-reference/classes/layer.md#applylensblur)().
 
@@ -692,6 +731,7 @@ Lens Blur filter. Pass to [Layer.applyLensBlur](/ps-reference/classes/layer.md#a
 ### GridLineStyle
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The line style for nonprinting grids displayed over images.
 Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps-reference/classes/preferences/preferencesguidesgridsandslices.md#gridstyle)
 
@@ -706,6 +746,7 @@ Pass to [PreferencesGuidesGridsAndSlices.gridStyle](/ps-reference/classes/prefer
 ### GridSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The size of grid squares.
 Pass to [PreferencesTransparencyAndGamut.gridSize](/ps-reference/classes/preferences/preferencestransparencyandgamut.md#gridsize)
 
@@ -721,6 +762,7 @@ Pass to [PreferencesTransparencyAndGamut.gridSize](/ps-reference/classes/prefere
 ### GuideLineStyle
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The line style for nonprinting guides displayed over images.
 Pass to [PreferencesGuidesGridsAndSlices.guideStyle](/ps-reference/classes/preferences/preferencesguidesgridsandslices.md#guidestyle)
 
@@ -734,6 +776,7 @@ Pass to [PreferencesGuidesGridsAndSlices.guideStyle](/ps-reference/classes/prefe
 ### Intent
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The rendering intent to use when converting from one color space to another with
 [Document.convertProfile](/ps-reference/classes/document.md#convertprofile)
 
@@ -749,6 +792,7 @@ The rendering intent to use when converting from one color space to another with
 ### InterpolationMethod
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The method to use for bitmap interpolation.
 
 Pass to
@@ -773,6 +817,7 @@ Pass to
 ### JPEGFormatOptions
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The option with which to save a JPEG file.
 
 | Name | Description |
@@ -786,6 +831,7 @@ The option with which to save a JPEG file.
 ### Justification
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The placement of paragraph text within the bounding box.
 Used in [ParagraphStyle.justification](/ps-reference/classes/paragraphstyle.md#justification)
 
@@ -804,6 +850,7 @@ Used in [ParagraphStyle.justification](/ps-reference/classes/paragraphstyle.md#j
 ### KashidaWidthType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The width of kashida (tatweel) character
 Used in [ParagraphStyle.kashidaWidth](/ps-reference/classes/paragraphstyle.md#kashidawidth)
 
@@ -820,6 +867,7 @@ Used in [ParagraphStyle.kashidaWidth](/ps-reference/classes/paragraphstyle.md#ka
 ### Kinsoku
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Line breaking rules in Japanese text
 Used in [ParagraphStyle.kinsoku](/ps-reference/classes/paragraphstyle.md#kinsoku)
 
@@ -834,6 +882,7 @@ Used in [ParagraphStyle.kinsoku](/ps-reference/classes/paragraphstyle.md#kinsoku
 ### LabelColors
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Options for layer list label colors
 
 | Name | Description |
@@ -852,6 +901,7 @@ Options for layer list label colors
 ### Language
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The language to use for text. Used in [CharacterStyle.language](/ps-reference/classes/characterstyle.md#language)
 
 | Name | Description |
@@ -921,6 +971,7 @@ The language to use for text. Used in [CharacterStyle.language](/ps-reference/cl
 ### LayerKind
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Kinds of document layers, including adjustment layers. Grain and Clarity are new in Photoshop 27.4.
 
 | Name | Description |
@@ -958,6 +1009,7 @@ Kinds of document layers, including adjustment layers. Grain and Clarity are new
 ### LensType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The type of Lens to use. Pass to [Layer.applyLensFlare](/ps-reference/classes/layer.md#applylensflare)().
 
 | Name | Description |
@@ -972,6 +1024,7 @@ The type of Lens to use. Pass to [Layer.applyLensFlare](/ps-reference/classes/la
 ### MatteColor
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The color to use to fill anti-aliased edges
 adjacent to transparent areas of the image.
 When transparency is turned off for an image,
@@ -991,6 +1044,7 @@ the matte color is applied to transparent areas.
 ### MaximizeCompatibility
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The permission state for queries.
 Pass to [PreferencesFileHandling.maximizeCompatibility](/ps-reference/classes/preferences/preferencesfilehandling.md#maximizecompatibility)
 
@@ -1005,6 +1059,7 @@ Pass to [PreferencesFileHandling.maximizeCompatibility](/ps-reference/classes/pr
 ### MiddleEasternDigitsType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Digit type to use in text (Middle Eastern features).
 Used in [CharacterStyle.middleEasternDigitsType](/ps-reference/classes/characterstyle.md#middleeasterndigitstype)
 
@@ -1020,6 +1075,7 @@ Used in [CharacterStyle.middleEasternDigitsType](/ps-reference/classes/character
 ### MiddleEasternTextDirection
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Text flow direction (Middle Eastern features).
 Used in [CharacterStyle.middleEasternTextDirection](/ps-reference/classes/characterstyle.md#middleeasterntextdirection)
 
@@ -1034,6 +1090,7 @@ Used in [CharacterStyle.middleEasternTextDirection](/ps-reference/classes/charac
 ### Mojikumi
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Spacing between punctuation, symbols, numbers,
 and other character classes in Japanese text
 Used in [ParagraphStyle.mojikumi](/ps-reference/classes/paragraphstyle.md#mojikumi)
@@ -1051,6 +1108,7 @@ Used in [ParagraphStyle.mojikumi](/ps-reference/classes/paragraphstyle.md#mojiku
 ### NewDocumentMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Color Modes available for new document
 
 | Name | Description |
@@ -1066,6 +1124,7 @@ Color Modes available for new document
 ### NoiseDistribution
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 Distribution model to use when applying an Add Noise filter. Pass to [Layer.applyAddNoise](/ps-reference/classes/layer.md#applyaddnoise).
 
 | Name | Description |
@@ -1078,6 +1137,7 @@ Distribution model to use when applying an Add Noise filter. Pass to [Layer.appl
 ### OffsetUndefinedAreas
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 Method to use to fill the empty space left by offsetting an image or selection.
 Pass to [Layer.applyOffset](/ps-reference/classes/layer.md#applyoffset)()
 
@@ -1092,6 +1152,7 @@ Pass to [Layer.applyOffset](/ps-reference/classes/layer.md#applyoffset)()
 ### OperatingSystem
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The target operating system in [BMPSaveOptions](/ps-reference/objects/saveoptions/bmpsaveoptions.md).
 
 | Name | Description |
@@ -1104,6 +1165,7 @@ The target operating system in [BMPSaveOptions](/ps-reference/objects/saveoption
 ### Orientation
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 Used in multiple places to represent orientation
 e.g., [TextItem.orientation](/ps-reference/classes/textitem.md#orientation)
 
@@ -1117,6 +1179,7 @@ e.g., [TextItem.orientation](/ps-reference/classes/textitem.md#orientation)
 ### OtherCursors
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The style of the cursors for the following tools: Marquee, Lasso, Polygonal Lasso, Magic Wand, Crop, Slice,
 Patch Eyedropper, Pen, Gradient, Line, Paint Bucket, Magnetic Lasso, Magnetic Pen, Freeform Pen,
 Measure, and Color Sampler.
@@ -1132,6 +1195,7 @@ Pass to [PreferencesCursors.otherCursors](/ps-reference/classes/preferences/pref
 ### PNGMethod
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 Compression method for saving a PNG file
 
 | Name | Description |
@@ -1145,6 +1209,7 @@ Compression method for saving a PNG file
 ### PaintingCursors
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The style of the cursors for the following tools: Eraser, Pencil, Paintbrush, Healing Brush,
 Rubber Stamp, Pattern Stamp, Smudge, Blur, Sharpen, Dodge, Burn, Sponge.
 Pass to [PreferencesCursors.paintingCursors](/ps-reference/classes/preferences/preferencescursors.md#paintingcursors)
@@ -1161,6 +1226,7 @@ Pass to [PreferencesCursors.paintingCursors](/ps-reference/classes/preferences/p
 ### Palette
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The palette type to use
 
 | Name | Description |
@@ -1183,6 +1249,7 @@ The palette type to use
 ### ParagraphFeatures
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The paragraph features to use in text.
 Used in [ParagraphStyle.features](/ps-reference/classes/paragraphstyle.md#features)
 
@@ -1197,6 +1264,7 @@ Used in [ParagraphStyle.features](/ps-reference/classes/paragraphstyle.md#featur
 ### ParagraphLayout
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The paragraph layout to use in text.
 Used in [ParagraphStyle.layoutMode](/ps-reference/classes/paragraphstyle.md#layoutmode)
 
@@ -1210,6 +1278,7 @@ Used in [ParagraphStyle.layoutMode](/ps-reference/classes/paragraphstyle.md#layo
 ### PathKind
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The type of a [PathItem](/ps-reference/classes/pathitem.md)
 
 | Name | Description |
@@ -1227,6 +1296,7 @@ The type of a [PathItem](/ps-reference/classes/pathitem.md)
 ### PointKind
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 The role a [PathPoint](/ps-reference/classes/pathpoint.md) plays in a [PathItem](/ps-reference/classes/pathitem.md)
 
 | Name | Description |
@@ -1239,6 +1309,7 @@ The role a [PathPoint](/ps-reference/classes/pathpoint.md) plays in a [PathItem]
 ### PointType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The point/pica size: either 72 or 72.27 points per inch.
 Pass to [PreferencesUnitsAndRulers.pointSize](/ps-reference/classes/preferences/preferencesunitsandrulers.md#pointsize)
 
@@ -1252,6 +1323,7 @@ Pass to [PreferencesUnitsAndRulers.pointSize](/ps-reference/classes/preferences/
 ### PolarConversionType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The kind of polar conversion.
 Pass to [Layer.applyPolarCoordinates](/ps-reference/classes/layer.md#applypolarcoordinates)().
 
@@ -1265,6 +1337,7 @@ Pass to [Layer.applyPolarCoordinates](/ps-reference/classes/layer.md#applypolarc
 ### PreserveShape
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 Favor the promotion of either corners or curves.
 Pass to [Layer.applyMaximum](/ps-reference/classes/layer.md#applymaximum)() and [Layer.applyMinimum](/ps-reference/classes/layer.md#applyminimum)().
 
@@ -1278,6 +1351,7 @@ Pass to [Layer.applyMaximum](/ps-reference/classes/layer.md#applymaximum)() and 
 ### RasterizeType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The type of layer to get rasterized.
 
 | Name | Description |
@@ -1298,6 +1372,7 @@ The type of layer to get rasterized.
 ### ResampleMethod
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The method to use for document interpolation
 
 Pass to [Document.resizeImage](/ps-reference/classes/document.md#resizeimage)()
@@ -1319,6 +1394,7 @@ Pass to [Document.resizeImage](/ps-reference/classes/document.md#resizeimage)()
 ### RippleSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The size of undulations.
 Pass to [Layer.applyRipple](/ps-reference/classes/layer.md#applyripple)().
 
@@ -1333,6 +1409,7 @@ Pass to [Layer.applyRipple](/ps-reference/classes/layer.md#applyripple)().
 ### RulerUnits
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The measurement unit for ruler increments.
 Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps-reference/classes/preferences/preferencesunitsandrulers.md#rulerunits)
 
@@ -1351,6 +1428,7 @@ Pass to [PreferencesUnitsAndRulers.rulerUnits](/ps-reference/classes/preferences
 ### SampleSize
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 Sample size for the EyeDropper tool and ColorSampler instances.
 
 | Name | Description |
@@ -1368,6 +1446,7 @@ Sample size for the EyeDropper tool and ColorSampler instances.
 ### SaveLogItemsType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 Options for logging the history items.
 Pass to [PreferencesHistory.saveLogItems](/ps-reference/classes/preferences/preferenceshistory.md#savelogitems)
 
@@ -1382,6 +1461,7 @@ Pass to [PreferencesHistory.saveLogItems](/ps-reference/classes/preferences/pref
 ### SaveMethod
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The type of save operation.
 
 | Name | Description |
@@ -1395,6 +1475,7 @@ The type of save operation.
 ### SaveOptions
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 The policy for handling new changes upon closing a document.
 
 | Name | Description |
@@ -1408,6 +1489,7 @@ The policy for handling new changes upon closing a document.
 ### SavePreview
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The application's behavior regarding image previews.
 Pass to [PreferencesFileHandling.imagePreviews](/ps-reference/classes/preferences/preferencesfilehandling.md#imagepreviews)
 
@@ -1422,6 +1504,7 @@ Pass to [PreferencesFileHandling.imagePreviews](/ps-reference/classes/preference
 ### SelectionType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 The selection behavior when a selection already exists.
 Used in [PathItem.makeSelection](/ps-reference/classes/pathitem.md#makeselection)(), [Selection.saveTo](/ps-reference/classes/selection.md#saveto)() and [Selection.load](/ps-reference/classes/selection.md#load)()
 
@@ -1437,6 +1520,7 @@ Used in [PathItem.makeSelection](/ps-reference/classes/pathitem.md#makeselection
 ### ShapeOperation
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 How to combine the shapes if the destination path already has a selection.
 
 Set for [SubPathInfo.operation](/ps-reference/classes/subpathinfo.md#operation), stored in the resulting [SubPathItem](/ps-reference/classes/subpathitem.md)
@@ -1453,6 +1537,7 @@ Set for [SubPathInfo.operation](/ps-reference/classes/subpathinfo.md#operation),
 ### SmartBlurMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The method to use for smart blurring.
 Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 
@@ -1467,6 +1552,7 @@ Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 ### SmartBlurQuality
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The smart blur quality.
 Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 
@@ -1481,6 +1567,7 @@ Pass to [Layer.applySmartBlur](/ps-reference/classes/layer.md#applysmartblur)().
 ### SpherizeMode
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The curve (or stretch shape) to use for the distortion.
 Pass to [Layer.applySpherize](/ps-reference/classes/layer.md#applyspherize)().
 
@@ -1495,6 +1582,7 @@ Pass to [Layer.applySpherize](/ps-reference/classes/layer.md#applyspherize)().
 ### StrikeThrough
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrough](/ps-reference/classes/characterstyle.md#strikethrough)
 
 | Name | Description |
@@ -1508,6 +1596,7 @@ The text strikethrough style to use in text. Used in [CharacterStyle.strikeThrou
 ### TextCase
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The capitalization style to use in text. Used in [CharacterStyle.capitalization](/ps-reference/classes/characterstyle.md#capitalization)
 
 | Name | Description |
@@ -1521,6 +1610,7 @@ The capitalization style to use in text. Used in [CharacterStyle.capitalization]
 ### TextureType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The type of texture or glass surface image to load for a texturizer
 or glass filter. Pass to [Layer.applyGlassEffect](/ps-reference/classes/layer.md#applyglasseffect)().
 
@@ -1536,6 +1626,7 @@ or glass filter. Pass to [Layer.applyGlassEffect](/ps-reference/classes/layer.md
 ### ToolType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 The tool to use with [PathItem.strokePath](/ps-reference/classes/pathitem.md#strokepath)()
 
 | Name | Description |
@@ -1562,6 +1653,7 @@ The tool to use with [PathItem.strokePath](/ps-reference/classes/pathitem.md#str
 ### TrimType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 Type of pixels to trim around an image, passed to [Document.trim](/ps-reference/classes/document.md#trim).
 
 | Name | Description |
@@ -1575,6 +1667,7 @@ Type of pixels to trim around an image, passed to [Document.trim](/ps-reference/
 ### TypeInterfaceFeatures
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 Options for changing user interface of Character and Paragraph panels.
 This option is not in Preferences dialog but instead it is located in: Main menu > Type > Language Options
 Pass to [PreferencesType.showTextFeatures](/ps-reference/classes/preferences/preferencestype.md#showtextfeatures)
@@ -1590,6 +1683,7 @@ Pass to [PreferencesType.showTextFeatures](/ps-reference/classes/preferences/pre
 ### TypeUnits
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 The measurement unit for type.
 Pass to [PreferencesUnitsAndRulers.typeUnits](/ps-reference/classes/preferences/preferencesunitsandrulers.md#typeunits)
 
@@ -1604,6 +1698,7 @@ Pass to [PreferencesUnitsAndRulers.typeUnits](/ps-reference/classes/preferences/
 ### UndefinedAreas
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 How to treat undistorted areas or areas left blank in an image
 to which a filter in the Distort category has been applied. Pass
 to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydisplace)(), [Layer.applyShear](/ps-reference/classes/layer.md#applyshear)(), [Layer.applyWave](/ps-reference/classes/layer.md#applywave)()
@@ -1618,6 +1713,7 @@ to [Layer.applyDisplace](/ps-reference/classes/layer.md#applydisplace)(), [Layer
 ### Underline
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The underline style to use in text. Used in [CharacterStyle.underline](/ps-reference/classes/characterstyle.md#underline)
 
 | Name | Description |
@@ -1631,6 +1727,7 @@ The underline style to use in text. Used in [CharacterStyle.underline](/ps-refer
 ### Units
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.4\</span\>
 
+\<br/\>
 Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps-reference/classes/photoshop.md#convertunits)
 
 | Name | Description |
@@ -1647,6 +1744,7 @@ Valid Units for convertUnits method, used in [Photoshop.convertUnits](/ps-refere
 ### WarpStyle
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 The warp style to use with Text. Used in a [WarpStyle.style](/ps-reference/classes/warpstyle.md#style)
 
 | Name | Description |
@@ -1673,6 +1771,7 @@ The warp style to use with Text. Used in a [WarpStyle.style](/ps-reference/class
 ### WaveType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The type of wave.
 Pass to [Layer.applyWave](/ps-reference/classes/layer.md#applywave)().
 
@@ -1687,6 +1786,7 @@ Pass to [Layer.applyWave](/ps-reference/classes/layer.md#applywave)().
 ### ZigZagType
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.5\</span\>
 
+\<br/\>
 The method of zigzagging.
 Pass to [Layer.applyZigZag](/ps-reference/classes/layer.md#applyzigzag)().
 

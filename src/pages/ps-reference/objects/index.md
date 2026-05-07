@@ -1,6 +1,6 @@
 ---
 id: "objects-2"
-title: "objects"
+title: objects
 sidebar_label: "objects-2"
 repo: "uxp-photoshop"
 product: "photoshop"

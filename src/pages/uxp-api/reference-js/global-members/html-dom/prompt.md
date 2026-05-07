@@ -1,6 +1,6 @@
 ---
 title: window.prompt()
-description: "Returns: string - message entered by the user in the prompt field or default value if nothing entered."
+description: Returns: string - message entered by the user in the prompt field or default value if nothing entered.
 ---
 
 # window.prompt()

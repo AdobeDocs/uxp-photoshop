@@ -1,6 +1,6 @@
 ---
 title: window.HTMLImageElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement
 ---
 
 # window.HTMLImageElement

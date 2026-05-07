@@ -1,6 +1,6 @@
 ---
 id: "bounds"
-title: "Bounds"
+title: Bounds
 sidebar_label: "Bounds"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "Defines a rectangle with properties: left, right, top, and bottom."
+description: Defines a rectangle with properties: left, right, top, and bottom.
 ---
 
 # Bounds

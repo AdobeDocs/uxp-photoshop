@@ -1,6 +1,6 @@
 ---
 title: window.HTMLHtmlElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLHtmlElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLHtmlElement
 ---
 
 # window.HTMLHtmlElement

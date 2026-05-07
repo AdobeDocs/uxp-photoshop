@@ -1,6 +1,6 @@
 ---
 id: "preferencescursors"
-title: "PreferencesCursors"
+title: PreferencesCursors
 sidebar_label: "PreferencesCursors"
 repo: "uxp-photoshop"
 product: "photoshop"

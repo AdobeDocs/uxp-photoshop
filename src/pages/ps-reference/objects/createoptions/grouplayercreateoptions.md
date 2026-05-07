@@ -1,6 +1,6 @@
 ---
 id: "grouplayercreateoptions"
-title: "GroupLayerCreateOptions"
+title: GroupLayerCreateOptions
 sidebar_label: "GroupLayerCreateOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

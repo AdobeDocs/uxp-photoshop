@@ -1,6 +1,6 @@
 ---
 title: window.CharacterData
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/CharacterData"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/CharacterData
 ---
 
 # window.CharacterData

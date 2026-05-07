@@ -1,6 +1,6 @@
 ---
 id: "Create-options"
-title: "Create Options"
+title: Create Options
 sidebar_label: "Create-options"
 repo: "uxp-photoshop"
 product: "photoshop"

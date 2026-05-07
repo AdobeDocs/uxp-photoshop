@@ -1,6 +1,6 @@
 ---
 id: "selection"
-title: "Selection"
+title: Selection
 sidebar_label: "Selection"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -65,7 +65,8 @@ Quick Mask Mode, the Quick Mask Channel will become the active selection.
 ### contract
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Contract (shrink) the selection by the specified amount.
 
@@ -91,7 +92,8 @@ UI Location: Select > Modify > Contract
 ### deselect
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Cancel the current selection. The `bounds` value will then be `null`.
 
@@ -106,7 +108,8 @@ UI Location: Select > Deselect
 ### expand
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Expand the selection outward by the specified number of pixels.
 
@@ -128,7 +131,8 @@ UI Location: Select > Modify > Expand
 ### feather
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Feather the edges of the selection by the specified amount.  This softening
 of the selection strength is best viewed as a channel via Quick Mask Mode.
@@ -152,7 +156,8 @@ UI Location: Select > Modify > Feather
 ### grow
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Grow the selection to include all adjacent pixels falling
 within the specified tolerance range.
@@ -177,7 +182,8 @@ UI Location: Select > Grow
 ### inverse
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Set the active selection to the inverse of the current selection.
 The new active selection will be cropped to the canvas bounds.
@@ -195,7 +201,8 @@ UI Location: Select > Inverse
 ### load
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Load the selection from the specified [Channel](/ps-reference/classes/channel.md) or [Layer](/ps-reference/classes/layer.md).  A Layer's pixels' transparency
 will be used as the selection values.  Full opaque pixels yield fully selected pixels.
@@ -224,7 +231,8 @@ UI Locations:
 ### makeWorkPath
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<[*PathItem*](/ps-reference/classes/pathitem.md)\>
+\<br/\>
+**async** : *Promise*\<[*PathItem*](/ps-reference/classes/pathitem.md)\>
 
 Create a work path from the active selection.
 
@@ -245,7 +253,8 @@ UI Location: Paths panel > Make work path icon
 ### resizeBoundary
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Scale the selection itself in percent. Does not affect the active layer.
 
@@ -269,7 +278,8 @@ UI Location: Select > Transform Selection
 ### rotateBoundary
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Rotate the selection itself clockwise around the given anchor position. Does not affect the active layer.
 
@@ -292,7 +302,8 @@ UI Location: Select > Transform Selection
 ### save
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Save the selection in a new Alpha Channel.
 
@@ -313,7 +324,8 @@ UI Location: Select > Save Selection...
 ### saveTo
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Save the selection in an existing Alpha Channel (Component Channels are not supported targets).
 
@@ -337,7 +349,8 @@ await doc.selection.saveTo(doc.channels[3], SelectionType.INTERSECT);
 ### selectAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Select the entire canvas.
 
@@ -361,7 +374,8 @@ UI Location: Select > All
 ### selectBorder
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Create a new selection based on the border of the active selection. The new selection will be an area
 equivalent to a stroke of that border by the given width in pixels.
@@ -384,7 +398,8 @@ UI Location: Select > Modify > Border...
 ### selectColumn
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Select a single column of pixels.
 
@@ -406,7 +421,8 @@ UI Location: Toolbar > Single Column Marquee Tool
 ### selectEllipse
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Make an elliptical selection.
 
@@ -430,7 +446,8 @@ UI Location: Toolbar > Elliptical Marquee Tool
 ### selectPolygon
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Make a polygonal selection.
 
@@ -458,7 +475,8 @@ UI Location: Toolbar > Polygonal Lasso Tool
 ### selectRectangle
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Make a rectangluar selection.
 
@@ -486,7 +504,8 @@ UI Location: Toolbar > Rectangular Marquee Tool
 ### selectRow
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Select a single row of pixels.
 
@@ -508,7 +527,8 @@ UI Location: Toolbar > Single Row Marquee Tool
 ### smooth
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Reduce patchiness and smooth sharp corners and jagged lines in the selection. Smooth will also remove
 isolated groups of pixels that are smaller than the given radius. This effect is useful for cleaning up
@@ -534,7 +554,8 @@ UI Location: Select > Modify > Smooth...
 ### translateBoundary
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>25.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Move the selection itself relative to its current position. Does not affect the active layer.
 

@@ -1,6 +1,6 @@
 ---
 title: window.CanvasRenderingContext2D
-description: "See: Web APIs - CanvasRenderingContext2D for more details<br></br>"
+description: See: Web APIs - CanvasRenderingContext2D for more details<br></br>
 ---
 
 # window.CanvasRenderingContext2D

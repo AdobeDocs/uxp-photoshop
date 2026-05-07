@@ -1,6 +1,6 @@
 ---
 id: "layercomp"
-title: "LayerComp"
+title: LayerComp
 sidebar_label: "LayerComp"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -42,7 +42,8 @@ Represents a single layer comp in the document.
 ### apply
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Applies the layer comp to the document.
 
@@ -51,7 +52,8 @@ Applies the layer comp to the document.
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<[*LayerComp*](/ps-reference/classes/layercomp.md)\>
+\<br/\>
+**async** : *Promise*\<[*LayerComp*](/ps-reference/classes/layercomp.md)\>
 
 Duplicates this layer comp
 
@@ -60,7 +62,8 @@ Duplicates this layer comp
 ### recapture
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Updates the recorded states of the layers for this layer comp.
 
@@ -74,7 +77,8 @@ app.activeDocument.layerComps[0].recapture();
 ### remove
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Deletes this object from document.
 
@@ -83,6 +87,7 @@ Deletes this object from document.
 ### resetLayerComp
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Resets the layer comp state to the document state.

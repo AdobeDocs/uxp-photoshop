@@ -1,6 +1,6 @@
 ---
 id: "dimensions"
-title: "Dimensions"
+title: Dimensions
 sidebar_label: "Dimensions"
 repo: "uxp-photoshop"
 product: "photoshop"

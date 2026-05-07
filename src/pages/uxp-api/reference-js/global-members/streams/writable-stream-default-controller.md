@@ -1,6 +1,6 @@
 ---
 title: window.WritableStreamDefaultController
-description: "See: Web APIs - WritableStreamDefaultController"
+description: See: Web APIs - WritableStreamDefaultController
 ---
 
 # window.WritableStreamDefaultController

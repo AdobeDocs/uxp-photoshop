@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: UXP - Other Topics
-description: "UXP is a growing technology platform and, as such, has many different facets. Here are topics you may need to know to successfully create a UXP plugin:"
+description: UXP is a growing technology platform and, as such, has many different facets. Here are topics you may need to know to successfully create a UXP plugin:
 ---
 
 # UXP: Other Topics

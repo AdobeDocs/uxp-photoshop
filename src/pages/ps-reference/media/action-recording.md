@@ -1,6 +1,6 @@
 ---
 id: "action-recording"
-title: "Action Recording"
+title: Action Recording
 sidebar_label: "ActionRecording"
 description: While recording an Action via the Photoshop Actions panel, a UXP plugin can add a step by using require('photoshop').action.recordAction. The recorded step
 ---

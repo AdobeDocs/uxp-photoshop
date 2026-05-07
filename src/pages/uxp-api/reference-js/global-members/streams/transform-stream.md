@@ -1,6 +1,6 @@
 ---
 title: window.TransformStream
-description: "See: Web APIs - TransformStream"
+description: See: Web APIs - TransformStream
 ---
 
 # window.TransformStream

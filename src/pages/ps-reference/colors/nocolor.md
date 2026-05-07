@@ -1,6 +1,6 @@
 ---
 id: "nocolor"
-title: "NoColor"
+title: NoColor
 sidebar_label: "NoColor"
 repo: "uxp-photoshop"
 product: "photoshop"

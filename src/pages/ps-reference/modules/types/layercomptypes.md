@@ -1,6 +1,6 @@
 ---
 id: "layercomptypes"
-title: "LayerCompTypes"
+title: LayerCompTypes
 sidebar_label: "LayerCompTypes"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "- LayerCompCreateOptions"
+description: - LayerCompCreateOptions
 ---
 
 # types/LayerCompTypes

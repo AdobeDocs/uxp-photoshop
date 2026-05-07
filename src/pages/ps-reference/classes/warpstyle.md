@@ -1,6 +1,6 @@
 ---
 id: "warpstyle"
-title: "WarpStyle"
+title: WarpStyle
 sidebar_label: "WarpStyle"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -36,6 +36,7 @@ The Class that stores properties related to the Warp Text dialog.
 ### reset
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Reset the WarpStyle to its default values.

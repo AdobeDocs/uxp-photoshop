@@ -1,6 +1,6 @@
 ---
 id: "batchplay"
-title: "BatchPlay Details"
+title: BatchPlay Details
 sidebar_label: "BatchPlay"
 description: At the heart of our APIs is batchPlay, a method that executes one or more Photoshop action commands and return their results.
 ---

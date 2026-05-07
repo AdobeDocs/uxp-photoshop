@@ -1,6 +1,6 @@
 ---
 id: "channels"
-title: "Channels"
+title: Channels
 sidebar_label: "Channels"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -59,6 +59,7 @@ app.activeDocument.channels.forEach(h => console.log(h.name));
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*Channel*](/ps-reference/classes/channel.md)
 
 Create a new alpha channel in this document.
@@ -68,6 +69,7 @@ Create a new alpha channel in this document.
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 [*Channel*](/ps-reference/classes/channel.md)
 
 Find the first channel with the matching name.
@@ -86,6 +88,7 @@ Find the first channel with the matching name.
 ### removeAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *void*
 
 Remove all Alpha channels in the parent document.

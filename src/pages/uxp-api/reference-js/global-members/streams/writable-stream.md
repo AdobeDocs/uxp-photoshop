@@ -1,6 +1,6 @@
 ---
 title: window.WritableStream
-description: "See: Web APIs - WritableStream"
+description: See: Web APIs - WritableStream
 ---
 
 # window.WritableStream

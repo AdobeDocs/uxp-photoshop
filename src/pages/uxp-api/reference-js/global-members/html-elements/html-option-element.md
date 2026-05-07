@@ -1,6 +1,6 @@
 ---
 title: window.HTMLOptionElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement
 ---
 
 # window.HTMLOptionElement

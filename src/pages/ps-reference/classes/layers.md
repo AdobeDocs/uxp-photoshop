@@ -1,6 +1,6 @@
 ---
 id: "layers"
-title: "Layers"
+title: Layers
 sidebar_label: "Layers"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -51,7 +51,8 @@ app.activeDocument.layers.forEach(h => console.log(h.name));
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
-**async** : *Promise*<[*Layer*](/ps-reference/classes/layer.md)\>
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
 
 Create a new layer.
 
@@ -64,6 +65,7 @@ let newDoc1 = await app.activeDocument.layers.add();
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 [*Layer*](/ps-reference/classes/layer.md)
 
 Find the first layer with the matching name.

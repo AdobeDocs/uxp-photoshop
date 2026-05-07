@@ -1,6 +1,6 @@
 ---
 id: "textitem"
-title: "TextItem"
+title: TextItem
 sidebar_label: "TextItem"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -116,7 +116,8 @@ The object that stores properties related to the Warp Text dialog.
 ### convertToParagraphText
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<[*TextItem*](/ps-reference/classes/textitem.md)\>
+\<br/\>
+*Promise*\<[*TextItem*](/ps-reference/classes/textitem.md)\>
 
 Convert a Text Layer from Point Text to Paragraph Text
 
@@ -125,7 +126,8 @@ Convert a Text Layer from Point Text to Paragraph Text
 ### convertToPointText
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<[*TextItem*](/ps-reference/classes/textitem.md)\>
+\<br/\>
+*Promise*\<[*TextItem*](/ps-reference/classes/textitem.md)\>
 
 Convert a Text Layer from Paragraph Text to Point Text
 
@@ -134,7 +136,8 @@ Convert a Text Layer from Paragraph Text to Point Text
 ### convertToShape
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Convert the Text Layer into a Shape Layer
 
@@ -143,6 +146,7 @@ Convert the Text Layer into a Shape Layer
 ### createWorkPath
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Create a Work Path from the Text Layer

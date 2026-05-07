@@ -1,6 +1,6 @@
 ---
 title: sp-dropdown
-description: Renders a dropdown with menu items. The dropdown must contain a sp-menu with slot="options", and inside the sp-menu, a series of sp-menu-item or sp-menu-divider elements.
+description: Renders a dropdown with menu items. The dropdown must contain a sp-menu with slot='options', and inside the sp-menu, a series of sp-menu-item or sp-menu-divider elements.
 jsDoc: true
 ---
 # sp-dropdown

@@ -1,6 +1,6 @@
 ---
 id: "preferencestransparencyandgamut"
-title: "PreferencesTransparencyAndGamut"
+title: PreferencesTransparencyAndGamut
 sidebar_label: "PreferencesTransparencyAndGamut"
 repo: "uxp-photoshop"
 product: "photoshop"

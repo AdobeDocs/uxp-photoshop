@@ -1,6 +1,6 @@
 ---
 id: "displayconfigurationoptions"
-title: "DisplayConfigurationOptions"
+title: DisplayConfigurationOptions
 sidebar_label: "DisplayConfigurationOptions"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -14,7 +14,7 @@ keywords:
   - SDK
   - C++
   - Scripting
-description: "| Name | Type | Min Version |"
+description: | Name | Type | Min Version |
 ---
 
 # DisplayConfigurationOptions

@@ -1,6 +1,6 @@
 ---
 id: "executeasmodal"
-title: "ExecuteAsModal Details"
+title: ExecuteAsModal Details
 sidebar_label: "Modal Execution"
 description: Introduced with apiVersion 2, a modal state is required when a plugin wants to make modifications to the Photoshop state. This modal state prevents other o
 ---

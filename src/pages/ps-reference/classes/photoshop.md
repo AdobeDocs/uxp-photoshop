@@ -1,6 +1,6 @@
 ---
 id: "photoshop"
-title: "Photoshop"
+title: Photoshop
 sidebar_label: "Photoshop"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -47,7 +47,8 @@ From here you can access open documents, tools, UI elements and run commands or 
 ### batchPlay
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<ActionDescriptor[]\>
+\<br/\>
+*Promise*\<ActionDescriptor[]\>
 
 At the heart of all our APIs is batchPlay. It is the evolution of executeAction. It accepts
 ActionDescriptors deserialized from JS objects, and can play multiple descriptors sequentially
@@ -65,6 +66,7 @@ without updating the UI. This API is subject to change and may be accessible in 
 ### bringToFront
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
+\<br/\>
 *void*
 
 Brings application to focus, useful when your script ends, or requires an input.
@@ -74,6 +76,7 @@ Brings application to focus, useful when your script ends, or requires an input.
 ### convertUnits
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.4\</span\>
 
+\<br/\>
 *number*
 
 Convert the given value from one unit to another. Available units are:
@@ -105,7 +108,8 @@ let widthInInches = psApp.convertUnits(exportDoc.width,
 ### createDocument
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)\>
 
 Create a new document.
 
@@ -157,6 +161,7 @@ Updates: [(26.9)](/ps-reference/changelog/index.md#photoshop-269-july-2025)
 ### getColorProfiles
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
+\<br/\>
 *string*[]
 
 List of installed color profiles, for RGB and Gray modes.
@@ -172,7 +177,8 @@ List of installed color profiles, for RGB and Gray modes.
 ### open
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<[*Document*](/ps-reference/classes/document.md)\>
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)\>
 
 Opens the specified document and returns the model
 
@@ -200,7 +206,8 @@ const document = await app.open();
 ### showAlert
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Shows an alert in Photoshop with the given message.
 
@@ -215,7 +222,8 @@ Shows an alert in Photoshop with the given message.
 ### updateUI
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>26.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Force an update to the following panels: Layers, Channels, and Paths.
 The primary use case is within the handler function of a slider control.

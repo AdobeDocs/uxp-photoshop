@@ -1,6 +1,6 @@
 ---
 id: "paragraphstyle"
-title: "ParagraphStyle"
+title: ParagraphStyle
 sidebar_label: "ParagraphStyle"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -45,6 +45,7 @@ The Class that stores properties related to the Paragraph panel in the Photoshop
 ### reset
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Resets the paragraph style to its default values.

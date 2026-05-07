@@ -1,6 +1,6 @@
 ---
 id: "channel"
-title: "Channel"
+title: Channel
 sidebar_label: "Channel"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -50,7 +50,8 @@ const redChannel = app.activeDocument.channels[0]
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-**async** : *Promise*<void\>
+\<br/\>
+**async** : *Promise*`<void>`
 
 Duplicates the channel to the parent document, or a target document
 if specified.
@@ -75,7 +76,8 @@ await channel.duplicate(newDoc)
 ### merge
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Merges a Spot Color channel into the component channels.
 
@@ -84,6 +86,7 @@ Merges a Spot Color channel into the component channels.
 ### remove
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Deletes the channel.

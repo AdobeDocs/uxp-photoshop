@@ -1,8 +1,8 @@
 ---
 id: "cpp-pluginsdk"
-title: "Communication with C++ Plugin SDK"
+title: Communication with C++ Plugin SDK
 sidebar_label: "CSDK <-> UXP Messaging"
-description: "For developers with the intent to utilize the C++ based plugin SDK in conjunction with a UXP based plugin, the C++ SDK now includes a method to communicate"
+description: For developers with the intent to utilize the C++ based plugin SDK in conjunction with a UXP based plugin, the C++ SDK now includes a method to communicate
 ---
 
 # Bridging your C++ Plugin with UXP

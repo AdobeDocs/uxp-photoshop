@@ -1,6 +1,6 @@
 ---
 id: "prototype"
-title: "Extending DOM APIs"
+title: Extending DOM APIs
 sidebar_label: "API Extensions"
 description: We build the DOM APIs with a lot of intent and care to work around expectations Photoshop may have when a command is being batchPlayed.
 ---

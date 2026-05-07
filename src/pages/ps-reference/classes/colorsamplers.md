@@ -1,6 +1,6 @@
 ---
 id: "colorsamplers"
-title: "ColorSamplers"
+title: ColorSamplers
 sidebar_label: "ColorSamplers"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -63,6 +63,7 @@ app.activeDocument.colorSamplers.length; // returns 0
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 [*ColorSampler*](/ps-reference/classes/colorsampler.md)
 
 Adds a [ColorSampler](/ps-reference/classes/colorsampler.md) to the collection at the given `{x, y}` coordinates in pixels.
@@ -85,6 +86,7 @@ app.activeDocument.colorSamplers.length; // returns 1
 ### removeAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
 
+\<br/\>
 *void*
 
 Removes all ColorSampler instances from this collection.

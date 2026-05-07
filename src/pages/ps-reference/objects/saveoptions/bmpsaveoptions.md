@@ -1,6 +1,6 @@
 ---
 id: "bmpsaveoptions"
-title: "BMPSaveOptions"
+title: BMPSaveOptions
 sidebar_label: "BMPSaveOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

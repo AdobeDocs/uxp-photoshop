@@ -1,6 +1,6 @@
 ---
 id: "historysuspension"
-title: "HistorySuspension"
+title: HistorySuspension
 sidebar_label: "HistorySuspension"
 repo: "uxp-photoshop"
 product: "photoshop"

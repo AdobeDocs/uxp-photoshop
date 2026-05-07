@@ -1,6 +1,6 @@
 ---
 title: window.HTMLLinkElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement
 ---
 
 # window.HTMLLinkElement

@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Plugin workflows
-description: "Once you've added a plugin to your developer workspace, there are several things you can do with it. All of the following features are accessed via the •••"
+description: Once you've added a plugin to your developer workspace, there are several things you can do with it. All of the following features are accessed via the •••
 ---
 
 # Plugin workflows

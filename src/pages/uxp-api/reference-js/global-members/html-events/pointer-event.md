@@ -1,6 +1,6 @@
 ---
 title: window.PointerEvent
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
 ---
 
 # window.PointerEvent

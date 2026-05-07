@@ -1,6 +1,6 @@
 ---
 id: "historystates"
-title: "HistoryStates"
+title: HistoryStates
 sidebar_label: "HistoryStates"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -56,6 +56,7 @@ var snapshots = app.activeDocument.historyStates.filter(h => h.snapshot)
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
 
+\<br/\>
 [*HistoryState*](/ps-reference/classes/historystate.md)
 
 Find the first history state with the matching name.

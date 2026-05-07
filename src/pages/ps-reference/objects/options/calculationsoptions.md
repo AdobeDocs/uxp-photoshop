@@ -1,6 +1,6 @@
 ---
 id: "calculationsoptions"
-title: "CalculationsOptions"
+title: CalculationsOptions
 sidebar_label: "CalculationsOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

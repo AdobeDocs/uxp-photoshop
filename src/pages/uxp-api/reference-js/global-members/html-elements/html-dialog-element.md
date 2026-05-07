@@ -1,6 +1,6 @@
 ---
 title: window.HTMLDialogElement
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement
 ---
 
 # window.HTMLDialogElement

@@ -1,6 +1,6 @@
 ---
 id: "pathitem"
-title: "PathItem"
+title: PathItem
 sidebar_label: "PathItem"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -50,7 +50,8 @@ path represented by all of the subpaths.
 ### deselect
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Deselects this `pathItem` object.
 
@@ -59,7 +60,8 @@ Deselects this `pathItem` object.
 ### duplicate
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<[*PathItem*](/ps-reference/classes/pathitem.md)\>
+\<br/\>
+*Promise*\<[*PathItem*](/ps-reference/classes/pathitem.md)\>
 
 Duplicates the `pathItem` object with the new name, returning the duplicate.
 
@@ -74,7 +76,8 @@ Duplicates the `pathItem` object with the new name, returning the duplicate.
 ### fillPath
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Fills the area enclosed by this path.
 
@@ -101,7 +104,8 @@ If `wholePath` is true, all subpaths are used when doing the fill.
 ### makeClippingPath
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Makes this the clipping path for this document.
 
@@ -118,7 +122,8 @@ Makes this the clipping path for this document.
 ### makeSelection
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Makes a selection object whose border is this path.
 
@@ -139,7 +144,8 @@ Makes a selection object whose border is this path.
 ### remove
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Deletes this object.
 
@@ -148,7 +154,8 @@ Deletes this object.
 ### select
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Makes this the active or selected `PathItem` object.
 
@@ -157,7 +164,8 @@ Makes this the active or selected `PathItem` object.
 ### strokePath
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
-*Promise*<void\>
+\<br/\>
+*Promise*`<void>`
 
 Strokes the path with the specified tool
 

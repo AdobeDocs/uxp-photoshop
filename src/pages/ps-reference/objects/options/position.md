@@ -1,6 +1,6 @@
 ---
 id: "position"
-title: "Position"
+title: Position
 sidebar_label: "Position"
 repo: "uxp-photoshop"
 product: "photoshop"

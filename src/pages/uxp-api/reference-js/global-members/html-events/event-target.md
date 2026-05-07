@@ -1,6 +1,6 @@
 ---
 title: window.EventTarget
-description: "See: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"
+description: See: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget
 ---
 
 # window.EventTarget

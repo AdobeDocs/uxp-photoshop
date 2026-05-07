@@ -1,6 +1,6 @@
 ---
 title: window.ResizeObserverEntry
-description: "See: ResizeObserverEntry"
+description: See: ResizeObserverEntry
 ---
 
 # window.ResizeObserverEntry

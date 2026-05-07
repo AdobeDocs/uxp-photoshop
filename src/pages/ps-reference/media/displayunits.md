@@ -1,6 +1,6 @@
 ---
 id: "displayunits"
-title: "Display Units"
+title: Display Units
 sidebar_label: "Display Units"
 description: The core method getDisplayConfiguration will return numeric values representing various properties of the connected displays.
 ---

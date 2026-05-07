@@ -1,6 +1,6 @@
 ---
 title: window.HTMLElement
-description: "See: Web APIs - HTMLElement"
+description: See: Web APIs - HTMLElement
 ---
 
 # window.HTMLElement

@@ -1,6 +1,6 @@
 ---
 id: "preferences"
-title: "Preferences"
+title: Preferences
 sidebar_label: "Preferences"
 repo: "uxp-photoshop"
 product: "photoshop"

@@ -1,6 +1,6 @@
 ---
 id: "hsbcolor"
-title: "HSBColor"
+title: HSBColor
 sidebar_label: "HSBColor"
 repo: "uxp-photoshop"
 product: "photoshop"

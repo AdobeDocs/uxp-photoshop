@@ -1,6 +1,6 @@
 ---
 id: "colorpickeroption"
-title: "ColorPickerOption"
+title: ColorPickerOption
 sidebar_label: "ColorPickerOption"
 repo: "uxp-photoshop"
 product: "photoshop"

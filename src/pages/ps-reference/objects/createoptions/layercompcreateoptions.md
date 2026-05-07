@@ -1,6 +1,6 @@
 ---
 id: "layercompcreateoptions"
-title: "LayerCompCreateOptions"
+title: LayerCompCreateOptions
 sidebar_label: "LayerCompCreateOptions"
 repo: "uxp-photoshop"
 product: "photoshop"

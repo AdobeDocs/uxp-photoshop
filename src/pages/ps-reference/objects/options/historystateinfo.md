@@ -1,6 +1,6 @@
 ---
 id: "historystateinfo"
-title: "HistoryStateInfo"
+title: HistoryStateInfo
 sidebar_label: "HistoryStateInfo"
 repo: "uxp-photoshop"
 product: "photoshop"

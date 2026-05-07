@@ -1,6 +1,6 @@
 ---
 id: "pathitems"
-title: "PathItems"
+title: PathItems
 sidebar_label: "PathItems"
 repo: "uxp-photoshop"
 product: "photoshop"
@@ -45,6 +45,7 @@ see [PathPointInfo](/ps-reference/classes/pathpointinfo.md) and [SubPathInfo](/p
 ### add
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 [*PathItem*](/ps-reference/classes/pathitem.md)
 
 Creates a new path item object and adds it to this collection.
@@ -65,6 +66,7 @@ and those [SubPathItem](/ps-reference/classes/subpathitem.md) objects are added 
 ### getByName
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 [*PathItem*](/ps-reference/classes/pathitem.md)
 
 Retrieve the first PathItem matching the given name.
@@ -80,6 +82,7 @@ Retrieve the first PathItem matching the given name.
 ### removeAll
 \<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
 
+\<br/\>
 *void*
 
 Removes all paths from this collection.
