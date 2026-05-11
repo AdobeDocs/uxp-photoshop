@@ -2,10 +2,10 @@
     - /photoshop/uxp/2022/
 
 - pages:
+    - [UXP for Adobe Photoshop](/index.md)
     - 2022
       - [2022](/photoshop/uxp/2022/index.md)
       - [2021](https://developer.adobe.com/photoshop/uxp/2021/)
-    - [UXP for Adobe Photoshop](/index.md)
     - [Plugins](/guides/index.md)
     - [Photoshop API](/ps-reference/index.md)
     - [UXP API](/uxp-api/index.md)
