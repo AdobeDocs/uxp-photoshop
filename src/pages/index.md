@@ -13,8 +13,6 @@ title: Documentation-UXP for Adobe Photoshop
 description: Build UXP plugins and scripts for Adobe Photoshop with HTML, CSS, and JavaScript. Automate workflows, build new features, and more.
 ---
 
-import Community from "./community/index.md"
-
 <Superhero slots="image, heading, text" background="rgb(64, 34, 138)"/>
 
 ![Hero image](./illustration.png)
@@ -106,4 +104,4 @@ Explore script samples to start accomplishing tasks within Photoshop.
 
 Packaging your UXP plugin is a breeze. In many cases, it's just one click away.
 
-<Community />
+<Fragment src="/community/index.md" />
