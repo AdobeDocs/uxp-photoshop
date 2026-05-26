@@ -7,7 +7,7 @@ contributors:
 
 # Overview
 
-UXP scripting allows developers to execute a single file to accomplish tasks in Photoshop. Unlike ExtendScript, these scripts can utilize the [UXP](../uxp-api/) and [Photoshop](../ps_reference/) APIs to communicate with Photoshop.
+UXP scripting allows developers to execute a single file to accomplish tasks in Photoshop. Unlike ExtendScript, these scripts can utilize the [UXP](../uxp-api/index.md) and [Photoshop](../ps-reference/index.md) APIs to communicate with Photoshop.
 
 ## When are scripts useful?
 Scripts are mainly used to perform one-off tasks that end-users would otherwise perform manually. It is especially useful when the task is repetitive in nature, such as adding a watermark to your documents. When a script is invoked by a user, it executes a task and is unloaded by Photoshop once it’s done. If required, a dialog can be used to prompt the user for inputs. Scripts can be executed in a headless manner or with minimal UI, without the need for any manifest setup.
@@ -15,10 +15,10 @@ Scripts are mainly used to perform one-off tasks that end-users would otherwise 
 The biggest advantage that scripting offers is its simplicity. You can accomplish tasks in Photoshop without requiring as elaborate of a setup as that of a UXP plugin.  Any script code can be reused in a UXP plugin as well.
 
 ## How is it different from UXP plugin development? 
-1. **[Lifetime](../scripting/how-it-works/index.md#execution-context):** A script’s lifetime ends when it finishes executing.
-2. **[Limited UI](../scripting/how-it-works/index.md#user-interface):** Unlike plugins, scripts cannot have a panel UI. They can only create dialog UIs.
+1. **[Lifetime](how-it-works/index.md#execution-context):** A script’s lifetime ends when it finishes executing.
+2. **[Limited UI](how-it-works/index.md#user-interface):** Unlike plugins, scripts cannot have a panel UI. They can only create dialog UIs.
 3. **No persistent data:** Scripts also don’t have access to persistent storage like the plugin data folder or `window.localStorage`. 
-4. **[Limited access to UXP modules](../scripting/how-it-works/index.md#permitted-uxp-modules):** Permissions to access UXP modules are managed by the host application and for now, only a limited number of modules are enabled. *We plan on enabling more modules with future versions.*
+4. **[Limited access to UXP modules](how-it-works/index.md#permitted-uxp-modules):** Permissions to access UXP modules are managed by the host application and for now, only a limited number of modules are enabled. *We plan on enabling more modules with future versions.*
 5. **No identity:** UXP scripts are not supported in our distribution channels yet. Once shared, any user can use them. Plugins on the other hand are tied to a plugin ID, and procured via the CCD plugin marketplace. 
 
 ## How is this different from ExtendScript scripting?

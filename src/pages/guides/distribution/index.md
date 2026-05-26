@@ -17,5 +17,5 @@ description: Learn how to share or publish and market your Photoshop plugin. The
 
 Unless you've written a plugin solely for yourself, you're probably going to want to share it with others. This section explains how to take your plugin into the wider world, and let other users know about it.
 
-* [Packaging Your Plugin](/guides/distribution/packaging-your-plugin/)
-* [Options for Distribution](/guides/distribution/distribution-options/)
+* [Packaging Your Plugin](/guides/distribution/packaging-your-plugin/index.md)
+* [Options for Distribution](/guides/distribution/distribution-options/index.md)

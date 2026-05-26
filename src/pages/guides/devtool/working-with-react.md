@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Working with React
-description:
+description: When working with React, other frameworks, or bundlers like Webpack and Parcel, you'll need to understand how to effectively use them inside the developer
 ---
 
 # Working with React

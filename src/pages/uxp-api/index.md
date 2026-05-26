@@ -1,3 +1,7 @@
+---
+title: UXP API Reference
+description: Technical documentation for JavaScript, CSS, HTML, and Spectrum UXP references, plus known issues.
+---
 # UXP API Reference
 
 * [JavaScript Reference](reference-js/index.md) : Technical documentation regarding the functions, classes, and modules available globally (on window, for example) and via `require`.

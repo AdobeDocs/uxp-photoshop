@@ -1,0 +1,778 @@
+---
+id: "document"
+title: Document
+sidebar_label: "Document"
+repo: "uxp-photoshop"
+product: "photoshop"
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+description: Represents a single Photoshop document that is currently open
+---
+
+# Document
+
+Represents a single Photoshop document that is currently open
+You can access instances of documents using one of these methods:
+
+```javascript
+const {app, constants} = require('photoshop');
+
+// The currently active document from the Photoshop object
+const currentDocument = app.activeDocument;
+
+// Choose one of the open documents from the Photoshop object
+const secondDocument = app.documents[1];
+
+// You can also create an instance of a document via a UXP File entry
+let fileEntry = require('uxp').storage.localFileSystem.getFileForOpening();
+const newDocument = await app.open('/project.psd');
+```
+
+## Properties
+
+### saveAs
+
+• **saveAs**: *object*
+
+Save the document to a desired file type.
+
+For operations that require a UXP File token, use the
+[UXP storage APIs](https://www.adobe.com/go/ps-api-uxp-filesystemprovider) to generate one.
+
+```javascript
+let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");
+document.saveAs.psd(entry);
+
+// Save as a Copy (High JPG quality)
+document.saveAs.jpg(entryJpg, { quality: 12 }, true);
+
+// Save a PSB, with some options:
+document.saveAs.psb(entryPsb, { embedColorProfile: true });
+```
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `bmp` | (`entry`: File, `saveOptions?`: [*BMPSaveOptions*](/ps-reference/objects/saveoptions/bmpsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `gif` | (`entry`: File, `saveOptions?`: [*GIFSaveOptions*](/ps-reference/objects/saveoptions/gifsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `jpg` | (`entry`: File, `saveOptions?`: [*JPEGSaveOptions*](/ps-reference/objects/saveoptions/jpegsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `png` | (`entry`: File, `saveOptions?`: [*PNGSaveOptions*](/ps-reference/objects/saveoptions/pngsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `psb` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+| `psd` | (`entry`: File, `saveOptions?`: [*PhotoshopSaveOptions*](/ps-reference/objects/saveoptions/photoshopsaveoptions.md), `asCopy`: *boolean*) => *Promise*`<void>` |
+
+<HorizontalLine />
+
+### selection
+
+• `Readonly` **selection**: [*Selection*](/ps-reference/classes/selection.md)
+
+The object containing the document's currently active selection
+
+## Properties
+
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| activeChannels | [*Channel*](/ps-reference/classes/channel.md)[] | R W | 23.0 | Currently active channels of the document. [(24.6)](/ps-reference/changelog/index.md#246-bug-fixes) |
+| activeHistoryBrushSource | [*HistoryState*](/ps-reference/classes/historystate.md) | R W | 22.5 | The history state that history brush tool will use as its source. |
+| activeHistoryState | [*HistoryState*](/ps-reference/classes/historystate.md) | R W | 22.5 | Currently active history state of the document. |
+| activeLayers | [*Layers*](/ps-reference/classes/layers.md) | R W | 22.5 | The selected layers in the document. [(26.9)](/ps-reference/changelog/index.md#photoshop-269-july-2025) |
+| artboards | [*Layers*](/ps-reference/classes/layers.md) | R | 22.5 | The artboards in the document |
+| backgroundLayer | [*Layer*](/ps-reference/classes/layer.md) | R | 22.5 | Background layer, if it exists. |
+| bitsPerChannel | [*BitsPerChannelType*](/ps-reference/modules/constants.md#bitsperchanneltype) | R W | 23.0 | The bits per color channel. |
+| channels | [*Channels*](/ps-reference/classes/channels.md) | R | 23.0 | All channels in the document. |
+| cloudDocument | *boolean* | R | 23.0 | Check whether this a [Photoshop cloud document](https://helpx.adobe.com/photoshop/using/cloud-documents-faq.html). |
+| cloudWorkAreaDirectory | *string* | R | 23.0 | Local directory for this cloud document. |
+| colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps-reference/classes/document.md#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
+| colorProfileType | [*ColorProfileType*](/ps-reference/modules/constants.md#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
+| colorSamplers | [*ColorSamplers*](/ps-reference/classes/colorsamplers.md) | R | 24.0 | The collection of ColorSamplers present in the document. |
+| componentChannels | [*Channel*](/ps-reference/classes/channel.md)[] | R | 24.5 | Component channels in the document. [(24.6)](/ps-reference/changelog/index.md#246-bug-fixes) |
+| ~~compositeChannels~~ | [*Channel*](/ps-reference/classes/channel.md)[] | R | 23.0 | Deprecated since these channels are component not composite. Use &#x60;compositeChannels&#x60; above. |
+| countItems | [*CountItems*](/ps-reference/classes/countitems.md) | R | 24.1 | The collection of CountItems present in the document. |
+| guides | [*Guides*](/ps-reference/classes/guides.md) | R | 23.0 | The collection of Guides present in the document. |
+| height | *number* | R | 22.5 | Document&#x27;s height in pixels. |
+| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the component channel. The array contains 256 members.  Valid only when [mode](/ps-reference/classes/document.md#mode) &#x3D; &#x60;DocumentMode.\{RGB,CMYK,INDEXEDCOLOR}&#x60; |
+| historyStates | [*HistoryStates*](/ps-reference/classes/historystates.md) | R | 22.5 | History states of the document. |
+| id | *number* | R | 22.5 | The internal ID of this document will remain valid as long as this document is open. It can be used for batchPlay calls to refer to this document. |
+| layerComps | [*LayerComps*](/ps-reference/classes/layercomps.md) | R | 24.0 | The layer comps present in the document. |
+| layers | [*Layers*](/ps-reference/classes/layers.md) | R | 22.5 | The layers in the document at the top level of the layer/group hierarchy. |
+| mode | [*DocumentMode*](/ps-reference/modules/constants.md#documentmode) | R | 23.0 | The color mode. To change it, please use [Document.changeMode](/ps-reference/classes/document.md#changemode). |
+| name | *string* | R | 23.0 | The name of the document |
+| path | *string* | R | 22.5 | Full file system path to this document, or the identifier if it is a cloud document. |
+| pathItems | [*PathItems*](/ps-reference/classes/pathitems.md) | R | 23.3 | The collection of paths in this document, as shown in the Paths panel. |
+| pixelAspectRatio | *number* | R W | 22.5 | The (custom) pixel aspect ratio to use. |
+| quickMaskMode | *boolean* | R W | 23.0 | The state of Quick Mask mode. If true, the app is in Quick Mask mode. |
+| resolution | *number* | R | 22.5 | Document&#x27;s resolution (in pixels per inch). |
+| saved | *boolean* | R | 23.0 | True if the document has been saved since the last change. |
+| title | *string* | R | 22.5 | Document title |
+| typename | *string* | R | 23.0 | The class name of the referenced object: *&quot;Document&quot;*. |
+| width | *number* | R | 22.5 | Document&#x27;s width in pixels. |
+| zoom | *number* | R | 25.1 | Document&#x27;s zoom factor in percent. |
+
+## Methods
+
+### calculations
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.5\</span\>
+
+\<br/\>
+**async** : *Promise*\<void \| [*Channel*](/ps-reference/classes/channel.md) \| [*Document*](/ps-reference/classes/document.md)\>
+
+The Calculations command lets you blend two individual channels from one or more source images. You can then
+apply the results to a new image or to a new channel or selection in the active image.
+
+Performs Image > Calculations on the document. See the [CalculationsOptions](/ps-reference/objects/options/calculationsoptions.md)
+object for more info and examples.
+
+```javascript
+const doc = app.activeDocument;
+const options = {
+    source1: {
+        document: doc,
+        layer: doc.layers[0],
+        channel: constants.CalculationsChannel.GRAY
+        invert: true
+    },
+    source2: {
+        document: doc,
+        layer: constants.CalculationsLayer.MERGED,
+        channel: doc.channels[2]
+    },
+    blending: constants.CalculationsBlendMode.DARKEN,
+    opacity: 50,
+    result: constants.CalculationsResult.NEWCHANNEL
+};
+doc.calculations(options);
+
+```
+
+Known issue: currently calculations requires having exactly one unlocked pixel layer being selected otherwise
+it won't work. In future there should not be any layer requirements since this cannot output into layer.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `calculationsOptions` | [*CalculationsOptions*](/ps-reference/objects/options/calculationsoptions.md) | Option object for the calculations. |
+
+<HorizontalLine />
+
+### changeMode
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Changes the color mode of the document.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `mode` | [*ChangeMode*](/ps-reference/modules/constants.md#changemode) |
+| `options?` | [*BitmapConversionOptions*](/ps-reference/objects/conversionoptions/bitmapconversionoptions.md) \| [*IndexedConversionOptions*](/ps-reference/objects/conversionoptions/indexedconversionoptions.md) |
+
+<HorizontalLine />
+
+### close
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Closes the document, showing a prompt to save
+unsaved changes if specified.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `saveDialogOptions` | [*SaveOptions*](/ps-reference/modules/constants.md#saveoptions) | By default, prompts a save dialog if there are unsaved changes. |
+
+<HorizontalLine />
+
+### closeWithoutSaving
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
+
+\<br/\>
+*void*
+
+Close the document, discarding all unsaved changes.
+
+<HorizontalLine />
+
+### convertProfile
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Changes the color profile.
+
+`destinationProfile` must be either a string that names the color mode,
+or one of these below, meaning of the working color spaces or Lab color.
+
+`"Working RGB", "Working CMYK", "Working Gray", "Lab Color"`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `destinationProfile` | *string* |
+| `intent` | [*Intent*](/ps-reference/modules/constants.md#intent) |
+| `blackPointCompensation?` | *boolean* |
+| `dither?` | *boolean* |
+
+<HorizontalLine />
+
+### createLayer
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+General form of the kind-specific methods below. See those methods for more information.
+
+Create a new layer of the given kind.  With no arguments, a pixel layer will be created.
+The options object will have properties specific to the kind,
+though all layers share a basic set of properties common to all.
+The override signatures below are provided as type guardrails to
+help ensure the options provided match the layer kind.
+
+```javascript
+await doc.createLayer(); // defaults to pixel layer
+
+await doc.createLayer(
+  constants.LayerKind.NORMAL, // pixel layer
+  { name: "myLayer",
+    opacity: 80,
+    blendMode: constants.BlendMode.COLORDODGE }
+);
+```
+
+*Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `kind?` | [*LayerKind.NORMAL*](/ps-reference/modules/constants.md#layerkind) |
+| `options?` | [*PixelLayerCreateOptions*](/ps-reference/objects/createoptions/pixellayercreateoptions.md) |
+
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a new layer group.
+```javascript
+await doc.createLayer(
+  constants.LayerKind.GROUP,
+  { name: "myLayer", opacity: 80 }
+);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `kind` | [*LayerKind.GROUP*](/ps-reference/modules/constants.md#layerkind) |
+| `options?` | [*GroupLayerCreateOptions*](/ps-reference/objects/createoptions/grouplayercreateoptions.md) |
+
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a new text layer.
+
+```javascript
+await doc.createLayer( 
+  Constants.LayerKind.TEXT,
+  { name: "message", contents: "Hello World" }
+);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `kind` | [*LayerKind.TEXT*](/ps-reference/modules/constants.md#layerkind) |
+| `options?` | [*TextLayerCreateOptions*](/ps-reference/objects/createoptions/textlayercreateoptions.md) |
+
+<HorizontalLine />
+
+### createLayerGroup
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a layer group using options described by [GroupLayerCreateOptions](/ps-reference/objects/createoptions/grouplayercreateoptions.md).
+
+```javascript
+const myEmptyGroup = await doc.createLayerGroup()
+const myGroup = await doc.createLayerGroup({
+  name: "myLayer",
+  opacity: 80,
+  blendMode: "colorDodge"
+});
+const nonEmptyGroup = await doc.createLayerGroup({
+  name: "group",
+  fromLayers: [layer1, layer2]
+});
+const selectedGroup = await doc.createLayerGroup({
+  name: "group",
+  fromLayers: doc.activeLayers
+});
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*GroupLayerCreateOptions*](/ps-reference/objects/createoptions/grouplayercreateoptions.md) |
+
+<HorizontalLine />
+
+### createPixelLayer
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.1\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a pixel layer using options described by [PixelLayerCreateOptions](/ps-reference/objects/createoptions/pixellayercreateoptions.md).
+
+```javascript
+await doc.createPixelLayer({
+  name: "myLayer",
+  opacity: 80,
+  fillNeutral: true
+});
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [*PixelLayerCreateOptions*](/ps-reference/objects/createoptions/pixellayercreateoptions.md) | The options for creation, including general layer options and those specific to the layer kind. |
+
+<HorizontalLine />
+
+### createTextLayer
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.2\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a text layer using options described by [TextLayerCreateOptions](/ps-reference/objects/createoptions/textlayercreateoptions.md).
+
+```javascript
+await doc.createTextLayer()
+await doc.createTextLayer({
+  name: "myTextLayer",
+  contents: "Hello, World!",
+  fontSize: 32
+});
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | [*TextLayerCreateOptions*](/ps-reference/objects/createoptions/textlayercreateoptions.md) |
+
+<HorizontalLine />
+
+### crop
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Crops the document to the given bounds.
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `bounds` | [*Bounds*](/ps-reference/objects/bounds.md) | - |
+| `angle` | *number* | 0 |
+| `width` | *number* | 0 |
+| `height` | *number* | 0 |
+
+<HorizontalLine />
+
+### duplicate
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+*Promise*\<[*Document*](/ps-reference/classes/document.md)\>
+
+Creates a duplicate of the document, making the duplicate active.
+
+The optional parameter `name` provides the name for the duplicated document.
+
+The optional parameter `mergeLayersOnly` indicates whether to only duplicate merged layers.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | *string* |
+| `mergeLayersOnly?` | *boolean* |
+
+<HorizontalLine />
+
+### duplicateLayers
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)[]\>
+
+Duplicates given layer(s), creating all copies above the top most one in layer stack,
+and returns the newly created layers.
+
+```javascript
+// duplicate some layers
+const layerCopies = await document.duplicateLayers([layer1, layer3])
+layerCopies.forEach((layer) => { layer.blendMode = 'multiply' })
+// ...to another document
+const finalDoc = await photoshop.open('~/path/to/collated/image.psd')
+await document.duplicateLayers([logo1, textLayer1], finalDoc)
+await finalDoc.close(SaveOptions.SAVECHANGES)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `layers` | [*Layer*](/ps-reference/classes/layer.md)[] | The array of layers to duplicate. |
+| `targetDocument?` | [*Document*](/ps-reference/classes/document.md) | If specified, send the duplicates to a different document. |
+
+<HorizontalLine />
+
+### flatten
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>22.5\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Flatten all layers in the document. The remaining layer will become Background.
+
+<HorizontalLine />
+
+### generativeUpscale
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>27.2\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)\>
+
+Applies generative upscaling to the currently selected layer(s) using AI-powered upscaling technology.
+
+```javascript
+// Upscale using Firefly model with default options (2x scale)
+await document.generativeUpscale(constants.GenerativeUpscaleModel.FIREFLY);
+
+// Upscale using Firefly model with 4x scale
+const doc4x = await document.generativeUpscale(constants.GenerativeUpscaleModel.FIREFLY, { scale: 4 });
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `model` | [*GenerativeUpscaleModel.FIREFLY*](/ps-reference/modules/constants.md#generativeupscalemodel) | The generative upscale model to use. |
+| `options?` | [*GenerativeUpscaleOptions*](/ps-reference/objects/generativeoptions/generativeupscaleoptions.md) | Options specific to the chosen model, e.g., `scale`. |
+
+<HorizontalLine />
+
+### groupLayers
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Create a layer group from existing layers.
+
+```javascript
+const layers = doc.layers
+const group = await doc.groupLayers(
+  [ layers[1], layers[2], layers[4] ]
+);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `layers` | [*Layer*](/ps-reference/classes/layer.md)[] |
+
+<HorizontalLine />
+
+### linkLayers
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+[*Layer*](/ps-reference/classes/layer.md)[]
+
+Links layers together if possible, and returns a list of linked layers.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `layers` | [*Layer*](/ps-reference/classes/layer.md)[] | The array of layers to link together. |
+
+<HorizontalLine />
+
+### mergeVisibleLayers
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Merges all visible layers in the document into a single layer.
+In constrast to [flatten](/ps-reference/classes/document.md#flatten), `mergeVisibleLayers` will not convert the remaining layer
+to Background if no Background already exists.  If not Background, then the name of the
+merged layer will be either that of the top of the selected layers or the top layer.
+
+<HorizontalLine />
+
+### paste
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Layer*](/ps-reference/classes/layer.md)\>
+
+Pastes the contents of the clipboard into the document. If the optional argument is
+set to true and a selection is active, the contents are pasted into the selection.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `intoSelection?` | *boolean* | Whether to use an active selection as the target for the paste. |
+
+<HorizontalLine />
+
+### rasterizeAllLayers
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Converts all layers to pixel layers.
+
+<HorizontalLine />
+
+### resizeCanvas
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Changes the size of the document, but does not scale the image.
+To scale the image size, see [resizeImage](/ps-reference/classes/document.md#resizeimage).
+
+```javascript
+// grow the canvas by 400px
+const {width, height} = await app.activeDocument;
+await document.resizeCanvas(width + 400, height + 400);
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `width` | *number* | Numeric value of new width in pixels. |
+| `height` | *number* | Numeric value of new height in pixels. |
+| `anchor?` | [*AnchorPosition*](/ps-reference/modules/constants.md#anchorposition) | Anchor point for resizing, by default will resize an equal amount on all sides. |
+
+<HorizontalLine />
+
+### resizeImage
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Changes the size of the image by scaling the dimensions to meet the targeted number of pixels.
+
+```javascript
+await document.resizeImage(800, 600)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `width?` | *number* | Numeric value of new width in pixels. |
+| `height?` | *number* | Numeric value of new height in pixels. |
+| `resolution?` | *number* | Image resolution in pixels per inch (ppi). |
+| `resampleMethod?` | [*ResampleMethod*](/ps-reference/modules/constants.md#resamplemethod) | Method used during image interpolation. |
+| `amount?` | *number* | Numeric value that controls the amount of noise value when using preserve details 0..100. |
+
+<HorizontalLine />
+
+### revealAll
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Expands the document to show clipped sections.
+
+<HorizontalLine />
+
+### rotate
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Rotates the image clockwise in given angle, expanding canvas if necessary. (Previously rotateCanvas)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `angles` | *number* |
+
+<HorizontalLine />
+
+### sampleColor
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>24.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*SolidColor*](/ps-reference/classes/solidcolor.md) \| [*NoColor*](/ps-reference/colors/nocolor.md)\>
+
+Returns a SolidColor object sampled from the document at the given position.
+
+```javascript
+let col = await app.activeDocument.sampleColor({x: 100, y: 100});
+console.log(col.rgb);
+// {
+//    red: 233,
+//    green: 179,
+//    blue: 135,
+//    hexValue: "E9B387"
+// }
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `position` | *object* | The point to sample `{x: number, y: number}`. |
+| `position.x` | *number* | The horizontal coordinate in pixels. |
+| `position.y` | *number* | The vertical coordinate in pixels. |
+
+<HorizontalLine />
+
+### save
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Performs a save of the document. The user will be presented with
+a Save dialog if the file has yet to be saved on disk.
+
+```javascript
+// To save a document in the current location
+document.save()
+
+// Shows the save dialog
+unsavedDocument.save()
+```
+
+<HorizontalLine />
+
+### splitChannels
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*\<[*Document*](/ps-reference/classes/document.md)[]\>
+
+Splits the document channels into separate, single-channel documents.
+
+<HorizontalLine />
+
+### suspendHistory
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Creates a single history state encapsulating everything that is done
+in the callback, only for this document. All changes to the document should
+be done in this callback.
+
+Note: If you make changes to any other document, those changes will
+not be suspended in the same history state.
+
+The callback is passed in a SuspendHistoryContext object,
+which contains the current document in a variable `document`.
+
+For more info and advanced context, see [`core.executeAsModal`](../media/executeasmodal.md)
+API, for which `suspendHistory` is a simple wrapper.
+
+```javascript
+   app.activeDocument.suspendHistory(async (context) => {
+       // context.document below is, in this case, `app.activeDocument`
+       context.document.activeLayers[0].name = "Changed name";
+   });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`e`: SuspendHistoryContext) => *void* |
+| `historyStateName` | *string* |
+
+<HorizontalLine />
+
+### trap
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Applies trapping to a CMYK document.
+
+Valid only when [Document.mode](/ps-reference/classes/document.md#mode) is `Constants.DocumentMode.CMYK`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `width` | *number* |
+
+<HorizontalLine />
+
+### trim
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.0\</span\>
+
+\<br/\>
+**async** : *Promise*`<void>`
+
+Trims the area around the image according to the type of pixels given.
+All sides of the image are targeted by default.
+Optionally, the sides may be individually specified for exclusion.
+```javascript
+//  trim transparent pixels from only the bottom of the image
+app.activeDocument.trim(constants.TrimType.TRANSPARENT, false, false, true, false);
+```
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `trimType` | [*TrimType*](/ps-reference/modules/constants.md#trimtype) | - | Defaults to the top left pixel color; |
+| `top` | *boolean* | true |  |
+| `left` | *boolean* | true |  |
+| `bottom` | *boolean* | true |  |
+| `right` | *boolean* | true |  |

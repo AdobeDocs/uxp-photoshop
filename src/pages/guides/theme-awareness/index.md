@@ -10,7 +10,7 @@ keywords:
   - C++
   - Scripting
 title: Making your Plugin Theme-aware
-description:
+description: Photoshop allows the user to switch the UI between four themes:
 ---
 
 # Making your Plugin Theme-aware

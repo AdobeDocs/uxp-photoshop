@@ -109,9 +109,9 @@ our panel's UI:
 
 As you can see, the `index.html` file then loads the `index.js`.
 
-<InlineAlert variant="info" slots="text"></InlineAlert>
+<InlineAlert variant="info" slots="text" />
 
-Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](/src/pages/uxp-api/reference-html/General/Unsupported%20Elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](/src/pages/uxp-api/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
+Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](/src/pages/uxp-api/reference-html/General/Unsupported%20Elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](../../../uxp-api/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
 
 The `index.js` file then sets up a `click` listener on the _"Populate
 Layers"_ button and uses the [Photoshop API](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/) to populate the `<sp-body id="layers" />` element with the layer names:
@@ -141,9 +141,9 @@ example.
 _We could call this good enough, but let's face it: This doesn't feel like you've built your own
 plugin. So let us at least add some customization to it by adding additional information about our layer to the output._
 
-Have a look at the [`Layer` class API Reference](/src/pages/ps_reference/classes/layer.md). This page lists all the
+Have a look at the [`Layer` class API Reference](../../../ps-reference/classes/layer.md). This page lists all the
 properties and functions available on a layer object. You can choose whatever property you want, but for this tutorial,
-we will just use the [`opacity: number` property](/src/pages/ps_reference/classes/layer.md#properties).
+we will just use the [`opacity: number` property](../../../ps-reference/classes/layer.md#properties).
 
 Adjust the `main.js` to also include the new property in the output:
 
@@ -162,7 +162,7 @@ function showLayerNames() {
 With your `main.js` file saved, you need to reload the plugin to run the plugin including your changes. You can do this
 by selecting the _"••• > Reload"_ option in the UXP Developer Tool.
 
-<InlineAlert variant="warning" slots="text"></InlineAlert>
+<InlineAlert variant="warning" slots="text" />
 
 If you change anything in the `manifest.json` file, you need to do a full reload of the plugin to reflect the changes.
 To do this, first select _"Unload"_ and then _"Load"_ in the UXP Developer Tool.
@@ -181,6 +181,6 @@ Also, you may find the icon missing when docking the plugin panel in a toolbar. 
 
 ## Next steps
 
-You've now built your first own plugin. It doesn't look like much right now, but by taking a look at what's available in the [API Reference](/src/pages/ps_reference/index.md), you can already do a lot of things with the knowledge of this tutorial, alone.
+You've now built your first own plugin. It doesn't look like much right now, but by taking a look at what's available in the [API Reference](../../../ps-reference/index.md), you can already do a lot of things with the knowledge of this tutorial, alone.
 
 [In the next tutorial](../editing-the-document/index.md), you'll learn how you can not only get information about your document, but actually make changes to it, as well.

@@ -1,0 +1,2416 @@
+{
+  "total": 602,
+  "offset": 0,
+  "limit": 602,
+  "data": [
+    {
+      "Source": "/photoshop/uxp/2022",
+      "Destination": "/photoshop/uxp/2022/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/index",
+      "Destination": "/photoshop/uxp/2022/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/versions3-p/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/versions3-p"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/known-issues/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/known-issues"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api",
+      "Destination": "/photoshop/uxp/2022/uxp-api/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/changelog3-p/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/changelog3-p"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/swc",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/using-with-react/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/using-with-react"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textfield/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textfield"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textarea/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-textarea"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-slider/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-slider"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio-group/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-radio-group"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-progressbar/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-progressbar"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu-item/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-menu-item"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-link/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-link"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-icon/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-icon"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-dropdown/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-dropdown"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-divider/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-divider"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-checkbox/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-checkbox"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-button/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-button"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-action-button/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/sp-action-button"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/user-interface/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-label/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-label"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-heading/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-heading"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-detail/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-detail"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-body/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/sp-body"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-uxp-widgets/typography/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-to-swc-mapping",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-to-swc-mapping/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-to-swc-mapping/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/spectrum-to-swc-mapping/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/faqs",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/faqs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-spectrum/faqs/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-spectrum/faqs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream-default-writer/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream-default-writer"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream-default-controller/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/writable-stream-default-controller"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/transform-stream/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/transform-stream"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/transform-stream-default-controller/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/transform-stream-default-controller"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream-default-reader/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream-default-reader"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream-default-controller/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/readable-stream-default-controller"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/count-queuing-strategy/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/streams/count-queuing-strategy"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path/path/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path/path"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/path/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob/image-blob/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/image-blob/image-blob"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/progress-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/progress-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/pointer-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/pointer-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/message-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/message-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/keyboard-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/keyboard-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/gesture-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/gesture-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/event-target/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/event-target"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/error-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/error-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/drag-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/drag-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/close-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/close-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/base-ui-event/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-events/base-ui-event"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-web-view-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-web-view-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-video-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-video-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-text-area-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-text-area-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-template-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-template-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-style-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-style-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-slot-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-slot-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-select-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-select-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-script-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-script-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-progress-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-progress-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-option-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-option-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-menu-item-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-menu-item-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-menu-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-menu-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-link-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-link-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-label-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-label-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-input-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-input-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-image-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-image-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-html-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-html-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-head-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-head-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-dialog-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-dialog-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-canvas-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-canvas-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-button-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-button-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-body-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-body-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-anchor-element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-elements/html-anchor-element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/tree-walker/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/tree-walker"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/text/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/text"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/shadow-root/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/shadow-root"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer-size/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer-size"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer-entry/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/resize-observer-entry"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/prompt/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/prompt"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/path2-d/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/path2-d"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node-list/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node-list"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node-filter/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/node-filter"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/named-node-map/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/named-node-map"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/intersection-observer/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/intersection-observer"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/intersection-observer-entry/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/intersection-observer-entry"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/html-collection/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/html-collection"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/get-computed-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/get-computed-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/element/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/element"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/dom-token-list/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/dom-token-list"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/document/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/document"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/document-fragment/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/document-fragment"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/custom-element-registry/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/custom-element-registry"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/confirm/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/confirm"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/comment/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/comment"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/class-list/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/class-list"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/character-data/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/character-data"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/canvas-rendering-context2-d/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/canvas-rendering-context2-d"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/canvas-gradient/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/canvas-gradient"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/attr/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/attr"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/alert/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/alert"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/abort-signal/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/abort-signal"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/abort-controller/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/html-dom/abort-controller"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/xml-http-request/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/xml-http-request"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/web-socket/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/web-socket"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/response/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/response"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/request/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/request"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/headers/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/headers"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/form-data/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/form-data"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/fetch/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/fetch"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/clipboard/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/clipboard"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/blob/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-transfers/blob"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/session-storage/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/session-storage"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/local-storage/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/local-storage"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/data-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto/crypto/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/global-members/crypto/crypto"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information/user-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information/user-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/user-information/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell/shell/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell/shell"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/shell/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/script/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/script"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/plugin/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/plugin"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/plugin-manager/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/plugin-manager"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/plugin-manager/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/types/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/types"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/storage/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/storage"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/modes/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/modes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/local-file-system/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/local-file-system"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/formats/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/formats"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/folder/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/folder"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-types/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-types"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/file-system-provider"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/errors/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/errors"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry-metadata/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/entry-metadata"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/domains/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/persistent-file-storage/domains"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage/secure-storage/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage/secure-storage"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/key-value-storage/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information/host/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/host-information/host"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-plugin-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-plugin-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-panel-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-panel-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-menu-items/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-menu-items"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-menu-item/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-menu-item"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-command-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/uxp-command-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/entry-points/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/entry-points"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/entry-points-error/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/entry-points/entry-points-error"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-utils/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-utils"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-property/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-property"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-packet-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-packet-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-meta/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-meta"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-iterator/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-iterator"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-file/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-file"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-file-info/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-file-info"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-date-time/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-date-time"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-const/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/xmp-const"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/xmp-classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started/xmp/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started/xmp"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/XMP/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions/versions/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions/versions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/uxp/Versions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os/os/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os/os"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/os/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs/fs/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-js/Modules/fs/fs"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/hr/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/hr"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h6/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h6"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h5/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h5"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h4/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h4"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h3/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h3"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h2/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h2"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h1/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/h1"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/footer/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/Hierarchy/footer"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/unsupported-elements/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/unsupported-elements"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/unsupported-attributes/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/unsupported-attributes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/script/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/script"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/link/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/link"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/html/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/html"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/head/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/head"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-html/General/body/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-html/General/body"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/prefers-color-scheme/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/prefers-color-scheme"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/height/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/media-queries/height"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/white-space/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/white-space"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/visibility/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/visibility"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/top/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/top"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/text-overflow/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/text-overflow"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/text-align/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/text-align"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/right/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/right"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-top/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-top"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-right/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-right"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-left/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-left"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-bottom/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/padding-bottom"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow-y/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow-y"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow-x/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/overflow-x"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/opacity/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/opacity"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/min-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/min-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/min-height/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/min-height"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/max-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/max-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/max-height/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/max-height"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-top/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-top"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-right/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-right"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-left/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-left"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-bottom/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/margin-bottom"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/letter-spacing/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/letter-spacing"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/left/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/left"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/justify-content/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/justify-content"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/height/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/height"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-weight/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-weight"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-size/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-size"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-family/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/font-family"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-wrap/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-wrap"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-shrink/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-shrink"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-grow/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-grow"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-direction/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-direction"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-basis/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/flex-basis"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/display/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/display"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/bottom/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/bottom"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-left-radius/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-left-radius"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-top-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-right-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-radius/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-radius"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-left-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-width/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-width"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-style/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-style"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-right-radius/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-right-radius"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-left-radius/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-left-radius"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/border-bottom-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-size/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-size"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-repeat/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-repeat"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-image/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-image"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-color/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-color"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-attachment/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/background-attachment"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-self/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-self"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-items/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-items"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-content/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Styles/align-content"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/universal-selector/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/universal-selector"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/type-selector/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/type-selector"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/identifier-selector/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/identifier-selector"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/general-sibling-combinator/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/general-sibling-combinator"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/descendant-combinator/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/descendant-combinator"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/class-selector/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/class-selector"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/child-combinator/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/child-combinator"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/attribute-selector/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/attribute-selector"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/adjacent-sibling-combinator/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Selectors/adjacent-sibling-combinator"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/before/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/before"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/after/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-elements/after"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/root/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/root"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/only-child/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/only-child"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-of-type/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-of-type"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-last-of-type/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-last-of-type"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-last-child/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-last-child"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-child/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/nth-child"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/last-child/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/last-child"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/hover/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/hover"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/focus/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/focus"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/first-child/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/first-child"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/enabled/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/enabled"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/empty/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/empty"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/disabled/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/disabled"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/defined/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/defined"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/checked/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/checked"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/active/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/Pseudo-classes/active"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/General/variables/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/General/variables"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/General/units/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/General/units"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/General",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/General/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/General/index",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/General/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/uxp-api/reference-css/General/calc/",
+      "Destination": "/photoshop/uxp/2022/uxp-api/reference-css/General/calc"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting",
+      "Destination": "/photoshop/uxp/2022/scripting/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/index",
+      "Destination": "/photoshop/uxp/2022/scripting/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/samples",
+      "Destination": "/photoshop/uxp/2022/scripting/samples/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/samples/index",
+      "Destination": "/photoshop/uxp/2022/scripting/samples/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/reference",
+      "Destination": "/photoshop/uxp/2022/scripting/reference/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/reference/index",
+      "Destination": "/photoshop/uxp/2022/scripting/reference/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/how-it-works",
+      "Destination": "/photoshop/uxp/2022/scripting/how-it-works/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/how-it-works/index",
+      "Destination": "/photoshop/uxp/2022/scripting/how-it-works/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/getting-started",
+      "Destination": "/photoshop/uxp/2022/scripting/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/scripting/getting-started/index",
+      "Destination": "/photoshop/uxp/2022/scripting/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference",
+      "Destination": "/photoshop/uxp/2022/ps-reference/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/tool/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/tool"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/bounds/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/bounds"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/pngsaveoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/pngsaveoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/photoshopsaveoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/photoshopsaveoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/jpegsaveoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/jpegsaveoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/gifsaveoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/gifsaveoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/bmpsaveoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/saveoptions/bmpsaveoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/simplebounds/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/simplebounds"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/opengldeviceinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/opengldeviceinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/opencldeviceinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/opencldeviceinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/historysuspension/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/historysuspension"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/gpuinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/gpuinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/executeasmodaloptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/executeasmodaloptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/displayconfiguration/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/displayconfiguration"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/dimensions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/dimensions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/cpuinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/returnobjects/cpuinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/otherobjects",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/otherobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/otherobjects/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/otherobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/resumehistorysuspensionoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/resumehistorysuspensionoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/position/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/position"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/layercomprecaptureoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/layercomprecaptureoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/justificationproperties/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/justificationproperties"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/hyphenationproperties/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/hyphenationproperties"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/historystateinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/historystateinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/executioncontext/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/executioncontext"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/displayconfigurationoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/displayconfigurationoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/colorpickeroption/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/colorpickeroption"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/calculationssource/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/calculationssource"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/calculationsoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/calculationsoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/batchplaycommandoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/batchplaycommandoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/applyimagesource/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/applyimagesource"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/options/applyimageoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/options/applyimageoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions/generativeupscaleoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/generativeoptions/generativeupscaleoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/textlayercreateoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/textlayercreateoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/pixellayercreateoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/pixellayercreateoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/layercompcreateoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/layercompcreateoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/grouplayercreateoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/grouplayercreateoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/createoptions/documentcreateoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/createoptions/documentcreateoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/coremodulesobjects",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/coremodulesobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/coremodulesobjects/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/coremodulesobjects/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/indexedconversionoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/indexedconversionoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/bitmapconversionoptions/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/objects/conversionoptions/bitmapconversionoptions"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/constants/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/constants"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/texttypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/texttypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/layertypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/layertypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/layercomptypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/layercomptypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/generaltypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/generaltypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/documenttypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/documenttypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/calculationstypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/calculationstypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/modules/types/applyimagetypes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/modules/types/applyimagetypes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/uxpscripting/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/uxpscripting"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/prototype/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/prototype"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/photoshopcore/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/photoshopcore"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/photoshopaction/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/photoshopaction"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/imaging/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/imaging"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/executeasmodal/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/executeasmodal"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/eventcodes/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/eventcodes"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/displayunits/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/displayunits"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/cpp-pluginsdk/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/cpp-pluginsdk"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/batchplay/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/batchplay"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/media/action-recording/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/media/action-recording"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/known-issues",
+      "Destination": "/photoshop/uxp/2022/ps-reference/known-issues/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/known-issues/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/known-issues/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/rgbcolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/rgbcolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/nocolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/nocolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/labcolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/labcolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/hsbcolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/hsbcolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/graycolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/graycolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/colors/cmykcolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/colors/cmykcolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/warpstyle/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/warpstyle"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/textitem/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/textitem"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/textfonts/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/textfonts"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/textfont/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/textfont"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/subpathitems/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/subpathitems"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/subpathitem/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/subpathitem"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/subpathinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/subpathinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/solidcolor/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/solidcolor"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/selection/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/selection"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/photoshop/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/photoshop"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/pathpoints/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/pathpoints"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/pathpointinfo/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/pathpointinfo"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/pathpoint/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/pathpoint"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/pathitems/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/pathitems"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/pathitem/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/pathitem"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/paragraphstyle/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/paragraphstyle"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/layers/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/layers"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/layercomps/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/layercomps"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/layercomp/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/layercomp"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/layer/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/layer"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/historystates/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/historystates"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/historystate/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/historystate"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/guides/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/guides"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/guide/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/guide"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/documents/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/documents"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/document/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/document"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/countitems/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/countitems"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/countitem/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/countitem"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/colorsamplers/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/colorsamplers"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/colorsampler/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/colorsampler"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/characterstyle/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/characterstyle"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/channels/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/channels"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/channel/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/channel"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/actionset/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/actionset"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/action/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/action"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesunitsandrulers/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesunitsandrulers"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestype/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestype"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestransparencyandgamut/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestransparencyandgamut"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestools/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencestools"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesperformance/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesperformance"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesnotifications/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesnotifications"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesinterface/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesinterface"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferenceshistory/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferenceshistory"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesguidesgridsandslices/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesguidesgridsandslices"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesgeneral/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesgeneral"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesfilehandling/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencesfilehandling"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencescursors/",
+      "Destination": "/photoshop/uxp/2022/ps-reference/classes/preferences/preferencescursors"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/changelog",
+      "Destination": "/photoshop/uxp/2022/ps-reference/changelog/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/ps-reference/changelog/index",
+      "Destination": "/photoshop/uxp/2022/ps-reference/changelog/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides",
+      "Destination": "/photoshop/uxp/2022/guides/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/index",
+      "Destination": "/photoshop/uxp/2022/guides/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/uxp-toolchain",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/uxp-toolchain/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/uxp-toolchain/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/uxp-toolchain/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/spectrum-css",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/spectrum-css/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/spectrum-css/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/spectrum-css/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/plugin-icons",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/plugin-icons/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/plugin-icons/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/plugin-icons/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/network-io",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/network-io/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/network-io/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/network-io/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/localization-and-platforms",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/localization-and-platforms/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/localization-and-platforms/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/localization-and-platforms/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/flyout-menus",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/flyout-menus/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/flyout-menus/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/flyout-menus/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/file-access",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/file-access/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/file-access/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/file-access/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/unsupported",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/unsupported/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-guide/unsupported/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-guide/unsupported/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-xd-devs",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-xd-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-xd-devs/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-xd-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-web-devs",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-web-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-web-devs/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-web-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-newbies",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-newbies/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-newbies/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-newbies/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-extendscript-devs",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-extendscript-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-extendscript-devs/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-extendscript-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-cep-devs",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-cep-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-cep-devs/index",
+      "Destination": "/photoshop/uxp/2022/guides/uxp-for-you/uxp-for-cep-devs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/theme-awareness",
+      "Destination": "/photoshop/uxp/2022/guides/theme-awareness/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/theme-awareness/index",
+      "Destination": "/photoshop/uxp/2022/guides/theme-awareness/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/legacy-extensibility",
+      "Destination": "/photoshop/uxp/2022/guides/legacy-extensibility/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/legacy-extensibility/index",
+      "Destination": "/photoshop/uxp/2022/guides/legacy-extensibility/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/index",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/getting-started",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/getting-started/index",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/getting-started/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/faqs",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/faqs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/faqs/index",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/faqs/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/distribute",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/distribute/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/hybrid-plugins/distribute/index",
+      "Destination": "/photoshop/uxp/2022/guides/hybrid-plugins/distribute/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/how-to",
+      "Destination": "/photoshop/uxp/2022/guides/how-to/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/how-to/index",
+      "Destination": "/photoshop/uxp/2022/guides/how-to/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/writing-a-file",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/writing-a-file/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/writing-a-file/index",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/writing-a-file/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/editing-the-document",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/editing-the-document/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/editing-the-document/index",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/editing-the-document/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/creating-your-first-plugin",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/creating-your-first-plugin/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/getting-started/creating-your-first-plugin/index",
+      "Destination": "/photoshop/uxp/2022/guides/getting-started/creating-your-first-plugin/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution/index",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution/packaging-your-plugin",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/packaging-your-plugin/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution/packaging-your-plugin/index",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/packaging-your-plugin/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution/distribution-options",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/distribution-options/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/distribution/distribution-options/index",
+      "Destination": "/photoshop/uxp/2022/guides/distribution/distribution-options/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/working-with-react/",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/working-with-react"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/plugin-workflows/",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/plugin-workflows"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/plugin-management/",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/plugin-management"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/installation/",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/installation"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/index",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/udt-walkthrough",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/udt-walkthrough/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/devtool/udt-walkthrough/index",
+      "Destination": "/photoshop/uxp/2022/guides/devtool/udt-walkthrough/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/debugging",
+      "Destination": "/photoshop/uxp/2022/guides/debugging/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/debugging/index",
+      "Destination": "/photoshop/uxp/2022/guides/debugging/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/code-samples",
+      "Destination": "/photoshop/uxp/2022/guides/code-samples/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/guides/code-samples/index",
+      "Destination": "/photoshop/uxp/2022/guides/code-samples/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design",
+      "Destination": "/photoshop/uxp/2022/design/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/index",
+      "Destination": "/photoshop/uxp/2022/design/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns/onboarding/",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/onboarding"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns/messaging/",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/messaging"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns/index",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns/designingforphotoshop/",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/designingforphotoshop"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/ux-patterns/branding/",
+      "Destination": "/photoshop/uxp/2022/design/ux-patterns/branding"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/user-interface",
+      "Destination": "/photoshop/uxp/2022/design/user-interface/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/design/user-interface/index",
+      "Destination": "/photoshop/uxp/2022/design/user-interface/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/community",
+      "Destination": "/photoshop/uxp/2022/community/"
+    },
+    {
+      "Source": "/photoshop/uxp/2022/community/index",
+      "Destination": "/photoshop/uxp/2022/community/"
+    }
+  ],
+  ":type": "sheet"
+}

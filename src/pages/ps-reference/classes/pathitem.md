@@ -1,0 +1,189 @@
+---
+id: "pathitem"
+title: PathItem
+sidebar_label: "PathItem"
+repo: "uxp-photoshop"
+product: "photoshop"
+keywords:
+  - Creative Cloud
+  - API Documentation
+  - UXP
+  - Plugins
+  - JavaScript
+  - ExtendScript
+  - SDK
+  - C++
+  - Scripting
+description: A path or drawing object, such as the outline of a shape or a straight or curved line,
+---
+
+# PathItem
+
+A path or drawing object, such as the outline of a shape or a straight or curved line,
+which contains sub paths defining its geometry.
+
+Access through the collection in the [Document.pathItems](/ps-reference/classes/document.md#pathitems) property. For example, this selects a named path item:
+
+```javascript
+const currentPathItem = app.activeDocument.pathItems.getByName("myPath");
+currentPathItem.select()
+```
+
+Create these objects by passing a set of SubPathInfo objects to the [PathItems.add](/ps-reference/classes/pathitems.md#add)() method. This method creates
+a [SubPathItem](/ps-reference/classes/subpathitem.md) object for each [SubPathInfo](/ps-reference/classes/subpathinfo.md) object, and creates and returns a new [PathItem](/ps-reference/classes/pathitem.md) object for the
+path represented by all of the subpaths.
+
+## Properties
+
+| Name | Type | Access | Min Version | Description |
+| :------ | :------ | :------ | :------ | :------ |
+| docId | *number* | R | 23.3 | The ID of the document of this pathItem. |
+| id | *number* | R | 23.3 | For use with batchPlay operations. This pathItem ID, along with its document ID can be used to represent this pathItem for the lifetime of this document. |
+| kind | [*PathKind*](/ps-reference/modules/constants.md#pathkind) | R W | 23.3 | The specific kind of path. |
+| name | *string* | R W | 23.3 | Name of this path |
+| parent | [*Document*](/ps-reference/classes/document.md) | R | 23.3 | The document in which the path resides. |
+| subPathItems | [*SubPathItems*](/ps-reference/classes/subpathitems.md) | R | 23.3 | The contained [SubPathItem](/ps-reference/classes/subpathitem.md)s in this path. |
+| typename | *string* | R | 23.3 | The class name of the referenced object: *&quot;PathItem&quot;*. |
+
+## Methods
+
+### deselect
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Deselects this `pathItem` object.
+
+<HorizontalLine />
+
+### duplicate
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*\<[*PathItem*](/ps-reference/classes/pathitem.md)\>
+
+Duplicates the `pathItem` object with the new name, returning the duplicate.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name?` | *string* |
+
+<HorizontalLine />
+
+### fillPath
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Fills the area enclosed by this path.
+
+`opacity` is a percentage, in the `[0.0 ... 100.0]` range.
+
+`feather` is in pixels, in the `[0.0 ... 250.0]` range.
+
+If `wholePath` is true, all subpaths are used when doing the fill.
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `fillColor?` | [*SolidColor*](/ps-reference/classes/solidcolor.md) | - |
+| `mode?` | [*ColorBlendMode*](/ps-reference/modules/constants.md#colorblendmode) | - |
+| `opacity` | *number* | 100.0 |
+| `preserveTransparency` | *boolean* | false |
+| `feather` | *number* | 0.0 |
+| `wholePath` | *boolean* | true |
+| `antiAlias` | *boolean* | true |
+
+<HorizontalLine />
+
+### makeClippingPath
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Makes this the clipping path for this document.
+
+`flatness` tells the PostScript printer how to approximate curves in the path.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `flatness?` | *number* |
+
+<HorizontalLine />
+
+### makeSelection
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Makes a selection object whose border is this path.
+
+`feather` is in pixels, in the range [0.0...250.0]
+
+`operation`, by default, is `SelectionType.REPLACE`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feather?` | *number* |
+| `antiAlias?` | *boolean* |
+| `operation?` | [*SelectionType*](/ps-reference/modules/constants.md#selectiontype) |
+
+<HorizontalLine />
+
+### remove
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Deletes this object.
+
+<HorizontalLine />
+
+### select
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Makes this the active or selected `PathItem` object.
+
+<HorizontalLine />
+
+### strokePath
+\<span class="minversion" style="display: block; margin-bottom: -1em; margin-left: 36em; float:left; opacity:0.5;"\>23.3\</span\>
+
+\<br/\>
+*Promise*`<void>`
+
+Strokes the path with the specified tool
+
+`tool` is optional, and by default will use `ToolType.PENCIL`
+
+`simulatePressure` is false by default.
+
+If the tool is `ToolType.CLONESTAMP` or `ToolType.HEALINGBRUSH`, `sourceOrigin` must be provided as a
+an object with x and y properties (in pixels) to indicate the location of the stroke source. `sourceLayer`
+is optional, and by default will use the active layer in the document.
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `tool` | [*ToolType*](/ps-reference/modules/constants.md#tooltype) | - |
+| `simulatePressure` | *boolean* | false |
+| `sourceOrigin?` | *object* | - |
+| `sourceOrigin.x` | *number* | - |
+| `sourceOrigin.y` | *number* | - |
+| `sourceLayer?` | [*Layer*](/ps-reference/classes/layer.md) | - |

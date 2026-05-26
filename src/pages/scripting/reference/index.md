@@ -11,14 +11,14 @@ contributors:
 Represents the UXP module that contains the properties and methods used for scripting.
 
 ### Usage
----
+<HorizontalLine />
 ```js
 const { script } = require("uxp");
 ```
 
 ### Properties
 
----
+<HorizontalLine />
 
 | Name | Type | Access | Description |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ Passed by the host when invoking scripts. Contains the following:
 
 ### Usage
 
----
+<HorizontalLine />
 
 ```jsx
 const { script } = require("uxp");
@@ -43,7 +43,7 @@ console.log("isCancelled: ", executionContext.isCancelled);
 
 ### Properties
 
----
+<HorizontalLine />
 
 | Name | Type | Access | Description |
 | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ The hostControl property is used to suspend and resume history states.
 
 
 ### Methods: hostControl
----
+<HorizontalLine />
 #### History state suspension
 **`executionContext.hostControl.suspendHistory(options)`**
 

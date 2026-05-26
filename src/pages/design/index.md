@@ -34,15 +34,15 @@ These guidelines will help you define the best user experience for your plugin. 
 |---------------------|--------------------|
 | **non-blocking UI:** This interface is best used when the user should have access to the canvas while using the plugin.   | **blocking UI:** This interface is best used when the plugin needs to run an action and the user shouldn’t modify or change selection of objects on the canvas.   | 
 
-![Examples showing the plugins panel interface and the plugins dialog interface](/ux-images/Panel_Dialog_examples.png)
+![Examples showing the plugins panel interface and the plugins dialog interface](/ux-images/panel-dialog-examples.png)
 
 ## UX patterns
 
 User experience patterns highlight UX requirements and best practices, as well as provide guidance on how to interact with your plugin users within Adobe.
 
-[View UX patterns](/design/ux-patterns/)
+[View UX patterns](/design/ux-patterns/index.md)
 
-[Designing for photoshop](/design/ux-patterns/Designingforphotoshop/)
+[Designing for photoshop](/design/ux-patterns/designingforphotoshop.md)
 
  
  
@@ -50,5 +50,5 @@ User experience patterns highlight UX requirements and best practices, as well a
 
 The user interface section will have information on UXP Spectrum components you can use to build your plugin interface. 
 
-[View user interface components](/design/user-interface/)
+[View user interface components](/design/user-interface/index.md)
 

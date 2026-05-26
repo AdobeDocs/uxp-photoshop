@@ -4,172 +4,169 @@ module.exports=[
     "header": true,
     "pages": [
       {
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/General/"
+      },
+      {
         "title": "calc",
         "path": "/uxp-api/reference-css/General/calc/"
       },
       {
-        "title": "variables",
-        "path": "/uxp-api/reference-css/General/variables/"
-      },
-      {
-        "title": "units",
+        "title": "CSS Units",
         "path": "/uxp-api/reference-css/General/units/"
+      },
+      {
+        "title": "CSS Variables",
+        "path": "/uxp-api/reference-css/General/variables/"
       }
-    ],
-    "path": "/uxp-api/reference-css/General/"
-  },
-  {
-    "title": "Selectors",
-    "header": true,
-    "pages": [
-      {
-        "title": "Adjacent Sibling combinator",
-        "path": "/uxp-api/reference-css/Selectors/Adjacent Sibling combinator/"
-      },
-      {
-        "title": "Attribute selector",
-        "path": "/uxp-api/reference-css/Selectors/Attribute selector/"
-      },
-      {
-        "title": "Child combinator",
-        "path": "/uxp-api/reference-css/Selectors/Child combinator/"
-      },
-      {
-        "title": "Class selector",
-        "path": "/uxp-api/reference-css/Selectors/Class selector/"
-      },
-      {
-        "title": "Descendant combinator",
-        "path": "/uxp-api/reference-css/Selectors/Descendant combinator/"
-      },
-      {
-        "title": "General Sibling combinator",
-        "path": "/uxp-api/reference-css/Selectors/General Sibling combinator/"
-      },
-      {
-        "title": "Identifier selector",
-        "path": "/uxp-api/reference-css/Selectors/Identifier selector/"
-      },
-      {
-        "title": "Type selector",
-        "path": "/uxp-api/reference-css/Selectors/Type selector/"
-      },
-      {
-        "title": "Universal selector",
-        "path": "/uxp-api/reference-css/Selectors/Universal selector/"
-      }
-    ],
-    "path": "/uxp-api/reference-css/Selectors/"
-  },
-  {
-    "title": "Media Queries",
-    "header": true,
-    "pages": [
-      {
-        "title": "height",
-        "path": "/uxp-api/reference-css/Media Queries/height/"
-      },
-      {
-        "title": "prefers-color-scheme",
-        "path": "/uxp-api/reference-css/Media Queries/prefers-color-scheme/"
-      },
-      {
-        "title": "width",
-        "path": "/uxp-api/reference-css/Media Queries/width/"
-      }
-    ],
-    "path": "/uxp-api/reference-css/Media Queries/"
-  },
-  {
-    "title": "Pseudo-elements",
-    "header": true,
-    "pages": [
-      {
-        "title": "after",
-        "path": "/uxp-api/reference-css/Pseudo-elements/after/"
-      },
-      {
-        "title": "before",
-        "path": "/uxp-api/reference-css/Pseudo-elements/before/"
-      }
-    ],
-    "path": "/uxp-api/reference-css/Pseudo-elements/"
+    ]
   },
   {
     "title": "Pseudo-classes",
     "header": true,
     "pages": [
       {
-        "title": "active",
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/Pseudo-classes/"
+      },
+      {
+        "title": ":active",
         "path": "/uxp-api/reference-css/Pseudo-classes/active/"
       },
       {
-        "title": "checked",
+        "title": ":checked",
         "path": "/uxp-api/reference-css/Pseudo-classes/checked/"
       },
       {
-        "title": "defined",
+        "title": "CSS Selectors",
         "path": "/uxp-api/reference-css/Pseudo-classes/defined/"
       },
       {
-        "title": "disabled",
+        "title": ":disabled",
         "path": "/uxp-api/reference-css/Pseudo-classes/disabled/"
       },
       {
-        "title": "enabled",
-        "path": "/uxp-api/reference-css/Pseudo-classes/enabled/"
-      },
-      {
-        "title": "empty",
+        "title": ":empty",
         "path": "/uxp-api/reference-css/Pseudo-classes/empty/"
       },
       {
-        "title": "first-child",
+        "title": ":enabled",
+        "path": "/uxp-api/reference-css/Pseudo-classes/enabled/"
+      },
+      {
+        "title": ":first-child",
         "path": "/uxp-api/reference-css/Pseudo-classes/first-child/"
       },
       {
-        "title": "focus",
+        "title": ":focus",
         "path": "/uxp-api/reference-css/Pseudo-classes/focus/"
       },
       {
-        "title": "hover",
+        "title": ":hover",
         "path": "/uxp-api/reference-css/Pseudo-classes/hover/"
       },
       {
-        "title": "last-child",
+        "title": ":last-child",
         "path": "/uxp-api/reference-css/Pseudo-classes/last-child/"
       },
       {
-        "title": "nth-child",
+        "title": ":nth-child",
         "path": "/uxp-api/reference-css/Pseudo-classes/nth-child/"
       },
       {
-        "title": "nth-last-child",
+        "title": ":nth-last-child",
         "path": "/uxp-api/reference-css/Pseudo-classes/nth-last-child/"
       },
       {
-        "title": "nth-last-of-type",
+        "title": ":nth-last-of-type",
         "path": "/uxp-api/reference-css/Pseudo-classes/nth-last-of-type/"
       },
       {
-        "title": "nth-of-type",
+        "title": ":nth-of-type",
         "path": "/uxp-api/reference-css/Pseudo-classes/nth-of-type/"
       },
       {
-        "title": "only-child",
+        "title": ":only-child",
         "path": "/uxp-api/reference-css/Pseudo-classes/only-child/"
       },
       {
-        "title": "root",
+        "title": ":root",
         "path": "/uxp-api/reference-css/Pseudo-classes/root/"
       }
-    ],
-    "path": "/uxp-api/reference-css/Pseudo-classes/"
+    ]
+  },
+  {
+    "title": "Pseudo-elements",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/Pseudo-elements/"
+      },
+      {
+        "title": "::after",
+        "path": "/uxp-api/reference-css/Pseudo-elements/after/"
+      },
+      {
+        "title": "::before",
+        "path": "/uxp-api/reference-css/Pseudo-elements/before/"
+      }
+    ]
+  },
+  {
+    "title": "Selectors",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/Selectors/"
+      },
+      {
+        "title": "Adjacent Sibling combinator",
+        "path": "/uxp-api/reference-css/Selectors/adjacent-sibling-combinator/"
+      },
+      {
+        "title": "Attribute selector",
+        "path": "/uxp-api/reference-css/Selectors/attribute-selector/"
+      },
+      {
+        "title": "Child combinator",
+        "path": "/uxp-api/reference-css/Selectors/child-combinator/"
+      },
+      {
+        "title": "Class selector",
+        "path": "/uxp-api/reference-css/Selectors/class-selector/"
+      },
+      {
+        "title": "Descendant combinator",
+        "path": "/uxp-api/reference-css/Selectors/descendant-combinator/"
+      },
+      {
+        "title": "General Sibling combinator",
+        "path": "/uxp-api/reference-css/Selectors/general-sibling-combinator/"
+      },
+      {
+        "title": "Identifier selector",
+        "path": "/uxp-api/reference-css/Selectors/identifier-selector/"
+      },
+      {
+        "title": "Type selector",
+        "path": "/uxp-api/reference-css/Selectors/type-selector/"
+      },
+      {
+        "title": "Universal selector",
+        "path": "/uxp-api/reference-css/Selectors/universal-selector/"
+      }
+    ]
   },
   {
     "title": "Styles",
     "header": true,
     "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/Styles/"
+      },
       {
         "title": "align-content",
         "path": "/uxp-api/reference-css/Styles/align-content/"
@@ -466,7 +463,28 @@ module.exports=[
         "title": "width",
         "path": "/uxp-api/reference-css/Styles/width/"
       }
-    ],
-    "path": "/uxp-api/reference-css/Styles/"
+    ]
+  },
+  {
+    "title": "Media Queries",
+    "header": true,
+    "pages": [
+      {
+        "title": "Overview",
+        "path": "/uxp-api/reference-css/media-queries/"
+      },
+      {
+        "title": "height",
+        "path": "/uxp-api/reference-css/media-queries/height/"
+      },
+      {
+        "title": "prefers-color-scheme",
+        "path": "/uxp-api/reference-css/media-queries/prefers-color-scheme/"
+      },
+      {
+        "title": "width",
+        "path": "/uxp-api/reference-css/media-queries/width/"
+      }
+    ]
   }
-]
+];

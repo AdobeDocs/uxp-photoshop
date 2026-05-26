@@ -30,36 +30,36 @@ The Adobe UXP Developer Tool allows you to manage plugins that you are developin
 The Adobe UXP Developer Tool requires elevated privileges in order to function correctly. If your administrator does not enable your ability to elevate to Administrator privileges, you'll be unable to use this tool.
 
 ## Installation
-The Adobe UXP Developer Tools can be installed from the Adobe Creative Cloud application. For more details on installation steps refer the [Installation guide](installation/). 
+The Adobe UXP Developer Tools can be installed from the Adobe Creative Cloud application. For more details on installation steps refer the [Installation guide](installation.md). 
 
 ## Usage
 
 <DiscoverBlock slots="link, text"/>
 
-[Installation](installation/)
+[Installation](installation.md)
 
 Installation walkthrough.    
 
 <DiscoverBlock slots="link, text"/>
 
-[Walkthrough](../guides/devtool/udt-walkthrough)
+[Walkthrough](../../guides/devtool/udt-walkthrough/index.md)
 
 End-to-end tutorial, including creation of a plugin, and loading it into Photoshop.
 
 <DiscoverBlock slots="link, text"/>
 
-[Plugin management](plugin-management/)
+[Plugin management](plugin-management.md)
 
 Manage your plugins under active development.
 
 <DiscoverBlock slots="link, text"/>
 
-[Plugin workflows](plugin-workflows/)
+[Plugin workflows](plugin-workflows.md)
 
 Common workflows while building your plugin.
 
 <DiscoverBlock slots="link, text"/>
 
-[Working with React](working-with-react/)
+[Working with React](working-with-react.md)
 
 Advanced workflows when working with React-based plugins.

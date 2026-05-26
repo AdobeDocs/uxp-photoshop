@@ -1,0 +1,11 @@
+---
+name: Build Auto-Generated Files
+on:
+  workflow_dispatch:
+
+jobs:
+  build-contributors:
+    name: Build Auto-Generated Files
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/build-auto-generated-files-v2.yml@main
+    secrets: inherit
+    
