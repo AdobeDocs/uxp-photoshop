@@ -15,7 +15,8 @@ on:
 jobs:
   deployment:
     name: Deployment
-    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@main
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy-v2.yml@main
+    secrets: inherit
     with:
       env: stage
       baseSha: ${{ inputs.baseSha }}

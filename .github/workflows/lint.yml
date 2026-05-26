@@ -3,8 +3,6 @@ name: Lint
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'src/pages/**'
 
 jobs:
   lint:
@@ -12,15 +10,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Check for src/pages changes
+        id: changes
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git diff --name-only "origin/${BASE_REF}...HEAD" | grep -q '^src/pages/' \
+            && echo "changed=true" >> $GITHUB_OUTPUT \
+            || echo "changed=false" >> $GITHUB_OUTPUT
 
       - name: Lint
         id: lint
+        if: steps.changes.outputs.changed == 'true'
         continue-on-error: true
         run: npx --yes github:AdobeDocs/adp-devsite-utils runLint -v
 
       - name: Save PR number
         if: always()
-        run: echo "${{ github.event.pull_request.number }}" > pr-number.txt
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: echo "$PR_NUMBER" > pr-number.txt
 
       - name: Upload linter report
         if: always()
@@ -30,7 +42,8 @@ jobs:
           path: |
             linter-report.txt
             pr-number.txt
+          if-no-files-found: ignore
 
       - name: Fail if linter found errors
-        if: steps.lint.outcome == 'failure'
+        if: steps.changes.outputs.changed == 'true' && steps.lint.outcome == 'failure'
         run: exit 1
