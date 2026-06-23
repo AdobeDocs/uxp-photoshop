@@ -27,9 +27,9 @@ First make sure you have the UXP Developer Tool (UDT). Learn about installing UD
 
 You'll also see this window if you have no plugins loaded in the Tool.
 
-The left pane shows applications that are "connected" to the tool. At this time, the only applications that can connect are Photoshop and XD. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
+The left pane shows applications that are "connected" to the tool. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
 
-The center pane shows the plugs that are loaded in UDT, but you don't have any yet. At the top right is a gear icon; if selected, it shows this sheet:
+The center pane shows the plugs that are loaded in UDT, but you don't have any yet. At the bottom left is a gear icon; if selected, it shows this sheet:
 
 ![UDT gear icon sheet](images/udt-gear-icon.png)
 
