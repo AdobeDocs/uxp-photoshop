@@ -29,7 +29,7 @@ You'll also see this window if you have no plugins loaded in the Tool.
 
 The left pane shows applications that are "connected" to the tool. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
 
-The center pane shows the plugs that are loaded in UDT, but you don't have any yet. At the bottom left is a gear icon; if selected, it shows this sheet:
+The center pane will show your loaded plugins, but it's empty for now. Select the gear icon in the bottom-left corner to open the preferences sheet:
 
 ![UDT gear icon sheet](images/udt-gear-icon.png)
 
