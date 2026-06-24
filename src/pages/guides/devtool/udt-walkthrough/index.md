@@ -27,7 +27,7 @@ First make sure you have the UXP Developer Tool (UDT). Learn about installing UD
 
 You'll also see this window if you have no plugins loaded in the Tool.
 
-The left pane shows applications that are "connected" to the tool. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
+The left pane shows applications that are "connected" to the tool. In this pane, you should see "Photoshop" in the `Connected Applications` list, along with the Photoshop app version and the corresponding UXP version bundled with that release. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
 
 The center pane will show your loaded plugins, but it's empty for now. Select the gear icon in the bottom-left corner to open the preferences sheet:
 
