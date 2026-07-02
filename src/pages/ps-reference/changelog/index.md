@@ -10,7 +10,7 @@ contributors:
 
 ## Documentation
 ### Dialog lockDocumentFocus
-The Photoshop-only option to a dialog element's `showModal` method is now noted under [Known Issues and Workarounds](../../ps-reference/known-issues/index.md).  In the future, that note will be integrated into [showModal](../reference-js/Global%20Members/HTML%20Elements/HTMLDialogElement/index.md#showmodal).
+The Photoshop-only option to a dialog element's `showModal` method is now noted under [Known Issues and Workarounds](../../ps-reference/known-issues/index.md).  In the future, that note will be integrated into [showModal](../../uxp-api/reference-js/global-members/html-elements/html-dialog-element.md#showmodal).
 
 ## Photoshop 27.4 (February 2026)
 
@@ -27,14 +27,14 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 
 ### UXP v9.1.0 Integration
 > #### New
-> - Video timeUpdate Event: UXP's [`video element`](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md) now emits `timeUpdate` event like HTML5 video element.
->  - Video Element Audio Support: UXP's [`video element`](./reference-js/Global%20Members/HTML%20Elements/HTMLVideoElement.md) can now play audio files.
-> - URLSearchParams Module Support: Added [`URLSearchParams`](./reference-js/Global%20Members/URL/URLSearchParams.md) module to UXP.
-> - WebView Drag & Drop Support: Added drag and drop functionality between UXP panels and [`WebView`](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md)-based panels. Enables WebView to accept drops of various data types from anywhere, bypassing UXP.
+> - Video timeUpdate Event: UXP's [`video element`](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md) now emits `timeUpdate` event like HTML5 video element.
+>  - Video Element Audio Support: UXP's [`video element`](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md) can now play audio files.
+> - URLSearchParams Module Support: Added `URLSearchParams` module to UXP.
+> - WebView Drag & Drop Support: Added drag and drop functionality between UXP panels and [`WebView`](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md)-based panels. Enables WebView to accept drops of various data types from anywhere, bypassing UXP.
 > - Improved Image Loading: Improved image loading so that multiple views can load the same URL without triggering false error states or visible flicker, resulting in smoother and more reliable image rendering across the UI.
 
 >  #### Updated
-> - [`WebView`](./reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement.md) Improvements
+> - [`WebView`](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md) Improvements
 > - Disabled swipe navigation on WebView2. This ensures consistent behavior with macOS WKWebView. All gestures on WebView2 (Swipe, Zoom Control, Pinch Zoom) are now disabled.
 > - Enriched WebView's load error messages. `WebViewEvent.message` now provides more detailed information about the cause of errors for better debugging.
 > - Removed `allow` field from `permissions.webview` configuration. The `permissions.webview.allow` field in the plugin manifest is no longer used.
@@ -139,10 +139,10 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > 
 > #### Deprecations
 > - Changes to Clipboard
->   - [Clipboard.setContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writedata) instead.
->   - [Clipboard.getContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#read) instead.
->   - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writedata) instead.
->   - [Clipboard.clearContent](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) would be an alternative.
+>   - [Clipboard.setContent](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#setcontentdata) is deprecated. Please use [Clipboard.write](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#writedata) instead.
+>   - [Clipboard.getContent](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#getcontent) is deprecated. Please use [Clipboard.read](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#read) instead.
+>   - Passing an `object` to [Clipboard.writeText(object)](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#writetexttext) is deprecated. Please use [Clipboard.write(object)](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#writedata) instead.
+>   - [Clipboard.clearContent](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#clearcontent) is deprecated. [Clipboard.writeText("")](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#writetexttext) would be an alternative.
 > - Changes to VideoElement
 >   - Event `uxpvideoload` in [load()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#load) is deprecated. Use `loadeddata` instead.
 >   - Event `uxpvideoplay` in [play()](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md#play) is deprecated. Use `ended` instead.
@@ -180,7 +180,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > 
 > #### Updated
 > - Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
-> - [UXP Clipboard.writeText()](../../uxp-api/reference-js/global-members/data-transfers/Clipboard.md#writetexttext) now accepts strings as input to meet standards
+> - [UXP Clipboard.writeText()](../../uxp-api/reference-js/global-members/data-transfers/clipboard.md#writetexttext) now accepts strings as input to meet standards
 
 
 <HorizontalLine />
@@ -195,7 +195,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > #### Updated
 > - UXP Alerts ([alert](../../uxp-api/reference-js/global-members/html-dom/alert.md), [prompt](../../uxp-api/reference-js/global-members/html-dom/prompt.md), [confirm](../../uxp-api/reference-js/global-members/html-dom/confirm.md)) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag `enableAlerts` in the manifest.json file. Also, note that UXP alerts will be `available only in Plugins` and `not in scripts`.
 > - Wildcards (*) at the top-level `domain` name are not allowed. Please ensure you revisit the `permissions` setup in manifest.json for [WebView](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md), and network calls ([XMLHttp](../../uxp-api/reference-js/global-members/data-transfers/xml-http-request.md), [fetch](../../uxp-api/reference-js/global-members/data-transfers/fetch.md))
-> - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-widgets-to-swc-mapping/index.md) in UXP
+> - New doc for tracking the [mapping between Spectrum widgets and Spectrum Web Components](../../uxp-api/reference-spectrum/spectrum-to-swc-mapping/index.md) in UXP
 > 
 > 
 > #### Fixed
@@ -212,7 +212,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 ### UXP v7.3 Integration
 > #### New
 > - [GUID](../../uxp-api/reference-js/modules/uxp/user-information/index.md) for uniquely identifying a Creative Cloud User.
-> - Multipart `FormData` support in [Request](../../uxp-api/reference-js/global-members/data-transfers/Request.md) and [Response](../../uxp-api/reference-js/global-members/data-transfers/Response.md) for [fetch](../../uxp-api/reference-js/global-members/data-transfers/fetch.md)
+> - Multipart `FormData` support in [Request](../../uxp-api/reference-js/global-members/data-transfers/request.md) and [Response](../../uxp-api/reference-js/global-members/data-transfers/response.md) for [fetch](../../uxp-api/reference-js/global-members/data-transfers/fetch.md)
 > - [FormData](../../uxp-api/reference-js/global-members/data-transfers/form-data.md) now supports the following APIs
 >     - delete()
 >     - get()
@@ -320,9 +320,9 @@ Both methods accept an options object that matches the parameters required in th
 ### UXP v7.1 Integration
 > #### New
 > HTMLElement now supports
-> - [setPointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#setpointercapturepointerid)
-> - [releasePointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#releasepointercapturepointerid)
-> - [hasPointerCapture](../../uxp-api/reference-js/global-members/html-dom/Element.md#haspointercapturepointerid)
+> - [setPointerCapture](../../uxp-api/reference-js/global-members/html-dom/element.md#setpointercapturepointerid)
+> - [releasePointerCapture](../../uxp-api/reference-js/global-members/html-dom/element.md#releasepointercapturepointerid)
+> - [hasPointerCapture](../../uxp-api/reference-js/global-members/html-dom/element.md#haspointercapturepointerid)
 > - [dir](../../uxp-api/reference-js/global-members/html-elements/html-html-element.md#dir--string)
 > 
 > #### Updated
@@ -356,10 +356,10 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 >         - [HTMLSlotElement](../../uxp-api/reference-js/global-members/html-elements/html-slot-element.md)
 >         - [HTMLTemplateElement](../../uxp-api/reference-js/global-members/html-elements/html-template-element.md)
 >     - Methods
->         - [Element.assignedSlot](../../uxp-api/reference-js/global-members/html-dom/Element.md#assignedslot--htmlslotelement)
->         - [Element.slot](../../uxp-api/reference-js/global-members/html-dom/Element.md#slot--string)
->         - [Element.attachShadow](../../uxp-api/reference-js/global-members/html-dom/Element.md#attachshadowinit)
->         - [Element.shadowRoot](../../uxp-api/reference-js/global-members/html-dom/Element.md#shadowroot--shadowroot)
+>         - [Element.assignedSlot](../../uxp-api/reference-js/global-members/html-dom/element.md#assignedslot--htmlslotelement)
+>         - [Element.slot](../../uxp-api/reference-js/global-members/html-dom/element.md#slot--string)
+>         - [Element.attachShadow](../../uxp-api/reference-js/global-members/html-dom/element.md#attachshadowinit)
+>         - [Element.shadowRoot](../../uxp-api/reference-js/global-members/html-dom/element.md#shadowroot--shadowroot)
 >         - [CustomElementRegistry.upgrade](../../uxp-api/reference-js/global-members/html-dom/custom-element-registry.md#upgraderoot)
 >         - [CustomElementRegistry.whenDefined](../../uxp-api/reference-js/global-members/html-dom/custom-element-registry.md#whendefinedname)
 > - [Spectrum Web Components (Beta)](../../uxp-api/reference-spectrum/swc/index.md) Support for Adobe SWC.
@@ -370,10 +370,10 @@ Previously, access was via `require("photoshop").imaging_beta`. It is now `requi
 >         - [TreeWalker](../../uxp-api/reference-js/global-members/html-dom/tree-walker.md)
 >         - [NodeFilter](../../uxp-api/reference-js/global-members/html-dom/node-filter.md)
 >     - Methods
->         - [Element.hasAttributes](../../uxp-api/reference-js/global-members/html-dom/Element.md#hasattributes)
->         - [Element.getAttributeNames](../../uxp-api/reference-js/global-members/html-dom/Element.md#getattributenames)
->         - [Event.composed](../../uxp-api/reference-js/global-members/html-events/Event.md#composed--boolean)
->         - [Event.composedPath](../../uxp-api/reference-js/global-members/html-events/Event.md#composedpath)
+>         - [Element.hasAttributes](../../uxp-api/reference-js/global-members/html-dom/element.md#hasattributes)
+>         - [Element.getAttributeNames](../../uxp-api/reference-js/global-members/html-dom/element.md#getattributenames)
+>         - [Event.composed](../../uxp-api/reference-js/global-members/html-events/event.md#composed--boolean)
+>         - [Event.composedPath](../../uxp-api/reference-js/global-members/html-events/event.md#composedpath)
 >         - [DocumentFragment.append](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#appendargs)
 >         - [DocumentFragment.querySelector](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#queryselectorselector)
 >         - [DocumentFragment.querySelectorAll](../../uxp-api/reference-js/global-members/html-dom/document-fragment.md#queryselectorallselector)
@@ -516,7 +516,7 @@ The CountItems DOM API is now available in Photoshop.
 ### UXP v6.4 Integration
 > #### New
 > - [WebView](../../uxp-api/reference-js/global-members/html-elements/html-web-view-element.md) for panels
-> - Support [Path Module APIs](../../uxp-api/reference-js/global-members/Path/index.md)
+> - Support [Path Module APIs](../../uxp-api/reference-js/global-members/path/path.md)
 > - Script can run fsapi with full access in localFileSystem
 > 
 > #### Bugs Fixes
@@ -808,7 +808,7 @@ To roll back to the MAX 2020 version of the Photoshop DOM API, set the `apiVersi
     - Create a document with no params for a default document, with a predefined preset, or by providing a host of [DocumentCreateOptions](../../ps-reference/objects/createoptions/documentcreateoptions.md)).
 - Updated [document.save](../../ps-reference/classes/document.md#save) and [document.saveAs](../../ps-reference/classes/document.md#saveas)
     - `save` no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.
-    - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/photoshopsaveoptions/index.md)).
+    - `saveAs` is provided for `bmp`, `gif`, `jpg`, `png`, `psb`, `psd` formats. Use SaveOptions objects to request specific saves (e.g. [PhotoshopSaveOptions](../objects/saveoptions/photoshopsaveoptions.md)).
 - [layer.id getter](../../ps-reference/classes/layer.md)
 - Updated [document.createLayer](../../ps-reference/classes/document.md#createlayer) and [document.createLayerGroup](../../ps-reference/classes/document.md#createlayergroup)
     - With respective Create options: LayerCreateOptions and GroupLayerCreateOptions.
