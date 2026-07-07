@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the height for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/height](https://developer.mozilla.org/en/docs/Web/CSS/height)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/height](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/height)
 
 **Example**:
 

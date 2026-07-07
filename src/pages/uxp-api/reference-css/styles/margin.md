@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the margin for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/margin](https://developer.mozilla.org/en/docs/Web/CSS/margin)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin)
 
 **Example**:
 

@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the width of the left border.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-left-width](https://developer.mozilla.org/en/docs/Web/CSS/border-left-width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-left-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-left-width)
 
 ## Quirks and Exceptions
 

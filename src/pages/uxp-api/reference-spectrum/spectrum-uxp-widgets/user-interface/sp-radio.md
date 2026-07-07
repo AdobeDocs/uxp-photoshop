@@ -13,7 +13,7 @@ Renders a radio button with associated label.
 
 **See**:
 - [https://spectrum.adobe.com/page/radio-button/](https://spectrum.adobe.com/page/radio-button/)
-- [https://opensource.adobe.com/spectrum-web-components/components/radio](https://opensource.adobe.com/spectrum-web-components/components/radio)
+- [https://opensource.adobe.com/spectrum-web-components/components/radio/](https://opensource.adobe.com/spectrum-web-components/components/radio/)
 
 **Example**
 

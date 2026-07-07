@@ -719,7 +719,7 @@ The starting point of a path in the native filesystem depends on the scheme.
 UXP supports plugin-specific storage schemes, such as "plugin:", "plugin-data:",
 and "plugin-temp:", as well as a native "file:" scheme for the path parameter.\<br/\>
 Note1: [UWP](https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)(Universal Windows Platform)
-has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions),
+has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions),
 and UXP FSAPI may have access issues with anonymous filepaths.
 So, XD does not support this feature for compatibility across platforms.\<br/\>
 Note2: The native layer of UXP FSAPI is based on [libUV](https://libuv.org/) except UWP powered features, such as FilePicker and Drag&Drop on Win10 XD.

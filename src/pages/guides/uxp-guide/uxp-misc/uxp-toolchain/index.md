@@ -54,7 +54,7 @@ In order to build a UXP-based plugin, you'll need the following pieces of softwa
 ## Intellectual Toolchain
 Before starting to build a plugin, you should have a good working knowledge of modern JavaScript. If you're coming from an ExtendScript background and haven't used recent JavaScript, you'll want to make sure that you understand concepts including asynchronous functions, newer JavaScript syntax (e.g., let/const vs "var"), and things like anonymous functions and arrow function expressions. There are thousands of websites and online videos that explain these concepts.
 
-If you're going to be building a non-trivial UI into your plugin, you should also become familiar with [React](https://reactjs.org).
+If you're going to be building a non-trivial UI into your plugin, you should also become familiar with [React](https://react.dev/).
 
 In order to build React-based plugins, you'll need to know a bit about [NodeJS](https://nodejs.org/en/) and [npm, the Node Package Manager](https://www.npmjs.com). Some plugin examples use [Yarn](https://yarnpkg.com), an alternative to npm.
 

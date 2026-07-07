@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the right margin for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/margin-right](https://developer.mozilla.org/en/docs/Web/CSS/margin-right)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-right](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-right)
 
 **Example**:
 

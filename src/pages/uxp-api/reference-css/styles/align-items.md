@@ -9,7 +9,7 @@ jsDoc: true
 
 Supported values are `flex-start`, `flex-end`, `center`, `stretch`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/align-items](https://developer.mozilla.org/en/docs/Web/CSS/align-items)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items)
 
 **Example**
 

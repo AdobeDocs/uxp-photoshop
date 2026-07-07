@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the opacity of an element. The value is between 0 (transparent) and 1 (opaque).
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/opacity](https://developer.mozilla.org/en/docs/Web/CSS/opacity)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/opacity)  
 
 
 ## Quirks and Exceptions

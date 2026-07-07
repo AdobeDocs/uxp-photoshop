@@ -7,7 +7,7 @@ jsDoc: true
 
 **Since** UXP v3.0
 
-**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
 
 **Example**
 

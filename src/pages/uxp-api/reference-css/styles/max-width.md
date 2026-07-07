@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the maximum width for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/max-width](https://developer.mozilla.org/en/docs/Web/CSS/max-width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/max-width)
 
 **Example**:
 

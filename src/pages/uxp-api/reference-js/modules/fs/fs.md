@@ -13,7 +13,7 @@ and "plugin-temp:", as well as a native "file:" scheme for the path parameter.\<
 Note:\<br\>\</br\>
 1. If there are no schemes defined for the path parameter of FSAPI methods, it considers to have "file:" scheme for the path.\<br\>\</br\>
 2. [UWP](https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)(Universal Windows Platform)
-has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions),
+has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions),
 and UXP FSAPI may have access issues with anonymous filepaths. So, XD does not support this feature for compatibility across platforms.\<br\>\</br\>
 3. The native layer of UXP FSAPI is based on [libUV](https://libuv.org/) except UWP powered features, such as FilePicker and Drag&Drop on Win10 XD.\<br\>\</br\>
 

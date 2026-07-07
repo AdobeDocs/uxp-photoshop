@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the width of the top border.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-top-width](https://developer.mozilla.org/en/docs/Web/CSS/border-top-width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-top-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## Quirks and Exceptions
 

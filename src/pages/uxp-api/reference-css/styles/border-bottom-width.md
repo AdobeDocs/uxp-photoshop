@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the width of the bottom border.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-width](https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom-width)
 
 ## Quirks and Exceptions
 

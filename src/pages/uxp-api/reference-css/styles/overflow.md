@@ -11,4 +11,4 @@ Shorthand which determines what is done with content that overflows the element'
 
 Supports `visible`, `hidden`, `auto`, and `scroll`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/overflow](https://developer.mozilla.org/en/docs/Web/CSS/overflow)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow)  

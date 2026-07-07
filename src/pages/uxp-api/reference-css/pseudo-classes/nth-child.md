@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches only the Nth child. Can use an expression or `even` or `odd`.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child)
 
 **Example:**
 

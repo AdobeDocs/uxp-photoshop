@@ -25,5 +25,5 @@ The biggest advantage that scripting offers is its simplicity. You can accomplis
 
 Legacy extensibility platforms supported scripting in ExtendScript. ExtendScript uses a very old version of JavaScript (ES3), while UXP uses the V8 JavaScript engine which supports ES6.  Developers can write scripts while utilizing the flexibility offered by modern JavaScript. 
 
-Compared to ExtendScript, UXP scripting makes it much easier for developers to access the Photoshop DOM (thanks to the Photoshop API!). Until all significant features are available via UXP, you can use a feature called [**batchPlay**](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/media/batchplay/) to talk to Photoshop elements. 
+Compared to ExtendScript, UXP scripting makes it much easier for developers to access the Photoshop DOM (thanks to the Photoshop API!). Until all significant features are available via UXP, you can use a feature called [**batchPlay**](https://developer.adobe.com/photoshop/uxp/2022/ps-reference/media/batchplay) to talk to Photoshop elements. 
 

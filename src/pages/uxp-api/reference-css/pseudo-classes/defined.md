@@ -16,7 +16,7 @@ jsDoc: true
 
 Represents any element that has been defined.
 
-**See:** [:defined](https://developer.mozilla.org/en-US/docs/Web/CSS/:defined)
+**See:** [:defined](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:defined)
 
 **Syntax:**
 ```css

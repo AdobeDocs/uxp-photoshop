@@ -176,7 +176,7 @@ The Photoshop-only option to a dialog element's `showModal` method is now noted 
 > - Video enhancements: Support added for [Seek Event](../../uxp-api/reference-js/global-members/html-elements/html-video-element.md)
 > - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
 > - Support for new HTMLElement APIs - [append](../../uxp-api/reference-js/global-members/html-elements/html-element.md#appendnodes), [prepend](../../uxp-api/reference-js/global-members/html-elements/html-element.md#prependnodes) and [replaceChildren](../../uxp-api/reference-js/global-members/html-elements/html-element.md#replacechildrennodes)
-> - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+> - [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form)
 > 
 > #### Updated
 > - Upgraded Spectrum Web Components to v0.37.0. [More detail](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers)
@@ -274,7 +274,7 @@ UXP hybrid plugins can now [access the suites of functionality made available vi
 ### UXP v7.2 Integration
 > #### New
 > - Adobe [Extensibility Metadata Platform (XMP)](../../uxp-api/reference-js/modules/uxp/xmp/getting-started/index.md) support
-> - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+> - [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events) `CSS` property
 > - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](../../uxp-api/reference-js/global-members/html-dom/get-computed-style.md) API
 
 > #### Updated

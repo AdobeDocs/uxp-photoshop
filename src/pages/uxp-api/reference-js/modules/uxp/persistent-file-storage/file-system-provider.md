@@ -152,7 +152,7 @@ if a file already exists at the url and the overwrite option is not set to true 
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| url | `string` |  | the url to create an Entry object. Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions) |
+| url | `string` |  | the url to create an Entry object. Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions) |
 | options | `*` |  |  |
 | [options.type] | `Symbol` | `types.file` | indicates which kind of entry to create. Pass types.folder to create a new folder. Note that if the type is file then this method just create"s" a file entry object and not the actual file on the disk. File on the storage is created when data is written into the file. eg: call write method on the file entry object. |
 | [options.overwrite] | `Boolean` | `false` | if true, the create attempt can overwrite an existing file |
@@ -181,7 +181,7 @@ if the file/folder does not exist at the url.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| url | `string` | the url to get an Entry object Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions) |
+| url | `string` | the url to get an Entry object Note that file: scheme has limited support in UWP due to the strict [File access permissions](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions) |
 
 **Example**  
 ```js

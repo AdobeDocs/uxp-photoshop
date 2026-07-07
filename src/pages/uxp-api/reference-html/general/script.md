@@ -9,7 +9,7 @@ jsDoc: true
 
 Loads and executes a script.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/HTML/Element/script](https://developer.mozilla.org/en/docs/Web/HTML/Element/script)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script)
 
 **Example**
 

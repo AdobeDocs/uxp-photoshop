@@ -9,7 +9,7 @@ jsDoc: true
 
 Enables you to restrict a set of CSS rules to match when the size of the plugin's dialog or panel meets your specified criteria.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/@media/height](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/height)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/height](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/height)
 
 **Example**
 

@@ -9,7 +9,7 @@ jsDoc: true
 
 Determines if a flexible item can grow, and if so, how it grows relative to other items in the flexible container.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/flex-grow](https://developer.mozilla.org/en/docs/Web/CSS/flex-grow)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-grow](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-grow)
 
 **Example**
 

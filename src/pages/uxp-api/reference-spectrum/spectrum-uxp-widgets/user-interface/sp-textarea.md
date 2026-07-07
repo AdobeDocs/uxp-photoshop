@@ -13,7 +13,7 @@ Renders a text area with optional associated label.
 
 **See**:
 - [https://spectrum.adobe.com/page/text-area/](https://spectrum.adobe.com/page/text-area/)
-- [https://opensource.adobe.com/spectrum-web-components/components/textarea](https://opensource.adobe.com/spectrum-web-components/components/textarea)
+- [https://opensource.adobe.com/spectrum-web-components/components/textarea/](https://opensource.adobe.com/spectrum-web-components/components/textarea/)
 
 **Example**
 

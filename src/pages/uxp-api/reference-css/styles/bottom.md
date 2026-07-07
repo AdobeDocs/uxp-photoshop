@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the bottom position for an element that is relatively or absolutely positioned.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/bottom](https://developer.mozilla.org/en/docs/Web/CSS/bottom)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/bottom)
 
 **Example**:
 
