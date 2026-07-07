@@ -1,6 +1,6 @@
 ---
 title: visibility
-description: Determines if an element is visible. Supports visible and hidden. Unlike display: none, a hidden element still takes up the same space in the surrounding layout.
+description: Determines if an element is visible. Supports visible and hidden. Unlike display: none, a hidden element still takes up space in the surrounding layout.
 jsDoc: true
 ---
 # visibility

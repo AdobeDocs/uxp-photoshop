@@ -1,6 +1,6 @@
 ---
 title: Using with React
-description: React has a history with Web Components, and this history can often lead to confusing issues. React is not technically incorrect in each of these cases, but it can feel surprising as a developer, and the correct use can often feel non-idiomatic.
+description: React has a history with Web Components that can lead to confusing issues. Usage isn't technically incorrect, but can feel non-idiomatic.
 jsDoc: true
 ---
 # Using with React
