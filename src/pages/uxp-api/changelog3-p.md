@@ -207,7 +207,7 @@ html {
 ## UXP v6.5.0
 
 ### New
-- [UXP Hybrid plugins](../../guides/hybrid-plugins/index.md)
+- [UXP Hybrid plugins](../guides/hybrid-plugins/index.md)
 - Allow unrestricted relative paths in require from scripts
 - [getEntryWithUrl](reference-js/modules/uxp/persistent-file-storage/file-system-provider.md#getentrywithurlurl) in LocalFileProvider
 
