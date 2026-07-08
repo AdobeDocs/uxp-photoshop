@@ -27,9 +27,9 @@ First make sure you have the UXP Developer Tool (UDT). Learn about installing UD
 
 You'll also see this window if you have no plugins loaded in the Tool.
 
-The left pane shows applications that are "connected" to the tool. At this time, the only applications that can connect are Photoshop and XD. In this pane, you should see "Adobe Photoshop" in the `Connected Applications` list. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
+The left pane shows applications that are "connected" to the tool. In this pane, you should see "Photoshop" in the `Connected Applications` list, along with the Photoshop app version and the corresponding UXP version bundled with that release. If you don't, something is wrong; UDT can't connect to Photoshop. Make sure you're running at least version 22.0.0 of Photoshop; earlier versions did not support UXP.
 
-The center pane shows the plugs that are loaded in UDT, but you don't have any yet. At the top right is a gear icon; if selected, it shows this sheet:
+The center pane will show your loaded plugins, but it's empty for now. Select the gear icon in the bottom-left corner to open the preferences sheet:
 
 ![UDT gear icon sheet](images/udt-gear-icon.png)
 
@@ -44,7 +44,7 @@ You shouldn't need to change the Service Port, which is what UDT uses to communi
 <InlineAlert variant="info" slots="text"/>
 
 **IMPORTANT**:
-When you distribute your plugin, you'll need to obtain a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/). For testing, though, just invent an id like 'com.yourname.pluginname'.
+When you distribute your plugin, you'll need to obtain a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin-id/). For testing, though, just invent an id like 'com.yourname.pluginname'.
 
 For this exercise, we'll use the `ps-starter` template, which creates a very basic plugin using basic JavaScript with no libraries. Other choices in the `Template` popup include `ps-react-starter`, which creates a simple React-based plugin.
 
@@ -102,6 +102,6 @@ In case you've closed your plugin's panel in Photoshop, you can find it again in
  You can host as many plugins as you want in the UXP Developer Tool. You can either create the plugin folder structure and files from scratch and click the blue `Add Plugin` button in the Tool, or you can click the `Create Plugin` button to have it created for you, wizard-style. Then you choose the `Load` item in the Actions menu to load your plugin into Photoshop.
 
  ## Packaging
- In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/) website before packaging your plugin for distribution.
+ In order to distribute your plugin (after it's been throughly polished and debugged), you'll need to package it as a "ccx" file. This is easily accomplished by choosing the `Package` option in the Actions menu. Make sure you get a plugin ID from the [Developer Distribution portal](https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin-id/) website before packaging your plugin for distribution.
 
  To distribute your plugin, see [Sharing Your Plugin](../../distribution/index.md).
