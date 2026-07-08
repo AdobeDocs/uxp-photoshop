@@ -1,6 +1,6 @@
 ---
 title: footer
-description: The footer element is used in dialogs to help align buttons to the right-side of a dialog. You aren't required to use this element, and you can override any styles if you so choose.
+description: The footer element is used in dialogs to align buttons to the right side. You aren't required to use it, and can override its styles if you choose.
 jsDoc: true
 ---
 # footer
@@ -9,7 +9,7 @@ jsDoc: true
 
 The `<footer>` element is used in dialogs to help align buttons to the right-side of a dialog. You aren't required to use this element, and you can override any styles if you so choose.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/HTML/Element/footer](https://developer.mozilla.org/en/docs/Web/HTML/Element/footer)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer)
 
 **Example**
 

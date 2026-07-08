@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the bottom padding for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/padding-bottom](https://developer.mozilla.org/en/docs/Web/CSS/padding-bottom)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding-bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding-bottom)
 
 **Example**:
 

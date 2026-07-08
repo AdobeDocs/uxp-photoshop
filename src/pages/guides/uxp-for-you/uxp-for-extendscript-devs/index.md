@@ -43,7 +43,7 @@ ExtendScript uses a very old version of JavaScript (ES3), from the era when Java
 A full introduction to ES6 features and syntax is beyond the scope of this documentation. You can find many websites that discuss ES6 features, including the popular [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Make sure you understand at least these language features, which you will find in UXP code you pick up from around the web:
 
 - ["const" and "let" declarations vs "var"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
-- [Promises and asynchronous functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
+- [Promises and asynchronous functions](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS)
 - [Anonymous functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)

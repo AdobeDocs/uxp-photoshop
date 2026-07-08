@@ -13,7 +13,7 @@ Renders a button.
 
 **See**:
 - [https://spectrum.adobe.com/page/button/](https://spectrum.adobe.com/page/button/)
-- [https://opensource.adobe.com/spectrum-web-components/components/button](https://opensource.adobe.com/spectrum-web-components/components/button)
+- [https://opensource.adobe.com/spectrum-web-components/components/button/](https://opensource.adobe.com/spectrum-web-components/components/button/)
 
 **Example**
 

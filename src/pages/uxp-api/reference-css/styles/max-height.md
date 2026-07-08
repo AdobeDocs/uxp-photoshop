@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the maximum height for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/max-height](https://developer.mozilla.org/en/docs/Web/CSS/max-height)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/max-height)
 
 **Example**:
 

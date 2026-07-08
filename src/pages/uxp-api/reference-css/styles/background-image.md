@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies a background image. Supports multiple background images, as well as linear and radial gradients.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/background-image](https://developer.mozilla.org/en/docs/Web/CSS/background-image)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-image)  
 
 **Example**:
 

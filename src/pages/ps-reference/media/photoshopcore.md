@@ -179,7 +179,7 @@ A plugin can only make calls against panels that are defined in its manifest,
 so the given `target` must be defined there.
 
 In the example manifest on the documentation page for
-[UXP manifest v5](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp_guide/uxp-misc/manifest-v5/),
+[UXP manifest v5](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/),
 the identifier is "panelName".
 
 Note: global coordinates differ between macOS and Windows. On macOS global coordinates are expressed as

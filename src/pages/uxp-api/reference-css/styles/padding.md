@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the padding for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/padding](https://developer.mozilla.org/en/docs/Web/CSS/padding)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding)
 
 **Example**:
 

@@ -22,7 +22,7 @@ There are two ways to debug. The simplest way, suitable for many plugins, is to 
 
 ![Debugging Tools](./images/devtool-ellipsis-menu.png)
 
-The other way, if you've loaded your plugin using the command-line tools, is to use [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/javascript), as follows:
+The other way, if you've loaded your plugin using the command-line tools, is to use [Chrome DevTools](https://developer.chrome.com/docs/devtools/), as follows:
 
 In a new Chrome window, navigate to `chrome://inspect`. Press Configure... next to Discover network targets checkbox, and add localhost:xxxx (where "xxxx" is the port you declared in your debug.json file). 
 

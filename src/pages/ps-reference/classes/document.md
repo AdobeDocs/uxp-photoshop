@@ -91,7 +91,7 @@ The object containing the document's currently active selection
 | channels | [*Channels*](/ps-reference/classes/channels.md) | R | 23.0 | All channels in the document. |
 | cloudDocument | *boolean* | R | 23.0 | Check whether this a [Photoshop cloud document](https://helpx.adobe.com/photoshop/using/cloud-documents-faq.html). |
 | cloudWorkAreaDirectory | *string* | R | 23.0 | Local directory for this cloud document. |
-| colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when [colorProfileType](/ps-reference/classes/document.md#colorprofiletype) is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
+| colorProfileName | *string* | R W | 23.0 | Name of the color profile.  Valid only when `colorProfileType` is &#x60;CUSTOM&#x60; or &#x60;WORKING&#x60;, returns &quot;None&quot; otherwise. |
 | colorProfileType | [*ColorProfileType*](/ps-reference/modules/constants.md#colorprofiletype) | R W | 23.0 | Whether the document uses the working color profile, a custom profile, or no profile. |
 | colorSamplers | [*ColorSamplers*](/ps-reference/classes/colorsamplers.md) | R | 24.0 | The collection of ColorSamplers present in the document. |
 | componentChannels | [*Channel*](/ps-reference/classes/channel.md)[] | R | 24.5 | Component channels in the document. [(24.6)](/ps-reference/changelog/index.md#246-bug-fixes) |
@@ -99,7 +99,7 @@ The object containing the document's currently active selection
 | countItems | [*CountItems*](/ps-reference/classes/countitems.md) | R | 24.1 | The collection of CountItems present in the document. |
 | guides | [*Guides*](/ps-reference/classes/guides.md) | R | 23.0 | The collection of Guides present in the document. |
 | height | *number* | R | 22.5 | Document&#x27;s height in pixels. |
-| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the component channel. The array contains 256 members.  Valid only when [mode](/ps-reference/classes/document.md#mode) &#x3D; &#x60;DocumentMode.\{RGB,CMYK,INDEXEDCOLOR}&#x60; |
+| histogram | *number*[] | R | 23.0 | A histogram containing the number of pixels at each color intensity level for the component channel. The array contains 256 members.  Valid only when `mode` &#x3D; &#x60;DocumentMode.\{RGB,CMYK,INDEXEDCOLOR}&#x60; |
 | historyStates | [*HistoryStates*](/ps-reference/classes/historystates.md) | R | 22.5 | History states of the document. |
 | id | *number* | R | 22.5 | The internal ID of this document will remain valid as long as this document is open. It can be used for batchPlay calls to refer to this document. |
 | layerComps | [*LayerComps*](/ps-reference/classes/layercomps.md) | R | 24.0 | The layer comps present in the document. |
@@ -743,7 +743,7 @@ API, for which `suspendHistory` is a simple wrapper.
 
 Applies trapping to a CMYK document.
 
-Valid only when [Document.mode](/ps-reference/classes/document.md#mode) is `Constants.DocumentMode.CMYK`
+Valid only when `Document.mode` is `Constants.DocumentMode.CMYK`
 
 #### Parameters
 

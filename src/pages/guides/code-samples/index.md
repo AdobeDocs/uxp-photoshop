@@ -106,7 +106,7 @@ for yourself what will work the best for you.
 
 ### React
 
-[React.js](https://reactjs.org/) is one of the most used UI libraries. It's declarative and component based, helping you
+[React.js](https://react.dev/) is one of the most used UI libraries. It's declarative and component based, helping you
 break your UI into reusable components. 
 
 See [ui-react-starter](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/ui-react-starter) for the sample project.

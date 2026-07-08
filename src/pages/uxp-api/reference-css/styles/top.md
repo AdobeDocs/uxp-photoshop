@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the top position for an element that is relatively or absolutely positioned.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/top](https://developer.mozilla.org/en/docs/Web/CSS/top)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/top](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/top)
 
 **Example**:
 

@@ -13,7 +13,7 @@ Renders a group of radio buttons horizontally or vertically (column layout), wit
 
 **See**:
 - [https://spectrum.adobe.com/page/radio-button/](https://spectrum.adobe.com/page/radio-button/)
-- [https://opensource.adobe.com/spectrum-web-components/components/radio](https://opensource.adobe.com/spectrum-web-components/components/radio)
+- [https://opensource.adobe.com/spectrum-web-components/components/radio/](https://opensource.adobe.com/spectrum-web-components/components/radio/)
 
 **Example**
 

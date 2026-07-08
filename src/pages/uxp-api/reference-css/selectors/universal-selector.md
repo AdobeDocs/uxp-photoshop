@@ -7,7 +7,7 @@ jsDoc: true
 
 **Since** UXP v3.0
 
-**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 **Example**
 

@@ -9,4 +9,4 @@ jsDoc: true
 
 Determines the size of the background content. Also supports `cover` and `contain`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/background-size](https://developer.mozilla.org/en/docs/Web/CSS/background-size)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size)

@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches only an element with no siblings.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:only-child](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:only-child)
 
 **Example:**
 

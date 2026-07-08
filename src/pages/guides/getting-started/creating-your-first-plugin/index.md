@@ -111,10 +111,10 @@ As you can see, the `index.html` file then loads the `index.js`.
 
 <InlineAlert variant="info" slots="text" />
 
-Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](/src/pages/uxp-api/reference-html/General/Unsupported%20Elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](../../../uxp-api/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
+Note that while this looks like fairly standard HTML, the UXP environment is not a browser and only supports a [subset of HTML/CSS/JS features](../../../uxp-api/reference-html/general/unsupported-elements.md). You can also see some custom components like `<sp-heading>`, `<sp-body>`, and `<sp-button>`. These are so-called [Spectrum UXP components](../../../uxp-api/reference-spectrum/index.md) that implement the Spectrum Design system and allow plugins to feel native in the surrounding Photoshop environment.
 
 The `index.js` file then sets up a `click` listener on the _"Populate
-Layers"_ button and uses the [Photoshop API](https://developer.adobe.com/photoshop/uxp/2022/ps_reference/) to populate the `<sp-body id="layers" />` element with the layer names:
+Layers"_ button and uses the [Photoshop API](https://developer.adobe.com/photoshop/uxp/2022/ps-reference/) to populate the `<sp-body id="layers" />` element with the layer names:
 
 ```js
 function showLayerNames() {

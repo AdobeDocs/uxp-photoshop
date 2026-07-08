@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the font weight for the element. Supports `normal` (default), `bold`, `lighter`, and `bolder`, as well as the following numeric weights: `50`, `100`, `200`, `300`, `400`, `500`, `550`, `600`, `700`, `800`, `850`, `900`, `950`, and `1000`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/font-weight](https://developer.mozilla.org/en/docs/Web/CSS/font-weight)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-weight)
 
 **Example**
 

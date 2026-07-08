@@ -13,7 +13,7 @@ Renders a text field with optional associated label.
 
 **See**:
 - [https://spectrum.adobe.com/page/text-field/](https://spectrum.adobe.com/page/text-field/)
-- [https://opensource.adobe.com/spectrum-web-components/components/textfield](https://opensource.adobe.com/spectrum-web-components/components/textfield)
+- [https://opensource.adobe.com/spectrum-web-components/components/textfield/](https://opensource.adobe.com/spectrum-web-components/components/textfield/)
 
 **Example**
 

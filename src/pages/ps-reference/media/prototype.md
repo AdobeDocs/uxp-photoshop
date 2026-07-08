@@ -13,7 +13,7 @@ Photoshop is full of functionality and while we strive to bring all of them into
 
 Further, you may have a different or unique way of scripting Photoshop and may want to add more properties and methods to the provided DOM classes.
 
-This is where [prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) come in to play. In JavaScript, prototypes define what methods and properties are inherited by an object. Properties can be attached to a prototype to ensure that every instance of that object will have those properties. 
+This is where [prototypes](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) come in to play. In JavaScript, prototypes define what methods and properties are inherited by an object. Properties can be attached to a prototype to ensure that every instance of that object will have those properties. 
 
 You can overload the many classes' prototype at the start or launch of your plugin or via a library you wrote that is loaded before your code.
 

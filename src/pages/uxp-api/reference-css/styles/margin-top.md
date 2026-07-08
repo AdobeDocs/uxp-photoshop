@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the top margin for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/margin-top](https://developer.mozilla.org/en/docs/Web/CSS/margin-top)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-top](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-top)
 
 **Example**:
 

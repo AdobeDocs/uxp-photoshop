@@ -15,7 +15,7 @@ contributors:
 
 To understand Spectrum Web Components (popularly known as SWC), you must first familiarize yourself with
 
-- [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components): HTML5 Web technology that lets you define custom HTML tags.
+- [Web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components): HTML5 Web technology that lets you define custom HTML tags.
 - [Spectrum](https://spectrum.adobe.com/): An open-source design language and guidelines provided by Adobe.
 
 [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/) are open-source Adobe Spectrum-styled Web Components. UXP v7.0 introduces the support for Web Components and Spectrum Web Components (SWC).

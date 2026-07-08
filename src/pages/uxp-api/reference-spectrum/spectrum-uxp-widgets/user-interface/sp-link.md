@@ -13,7 +13,7 @@ Renders a link, that when clicked can launch a webpage in the user's default bro
 
 **See**:
 - [https://spectrum.adobe.com/page/link/](https://spectrum.adobe.com/page/link/)
-- [https://opensource.adobe.com/spectrum-web-components/components/link](https://opensource.adobe.com/spectrum-web-components/components/link)
+- [https://opensource.adobe.com/spectrum-web-components/components/link/](https://opensource.adobe.com/spectrum-web-components/components/link/)
 
 **Example**
 

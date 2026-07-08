@@ -79,7 +79,7 @@ With plugin development, developers define which UXP modules they want to access
 | --- | --- | --- | --- | 
 | Fonts | Yes | Installed fonts can be read | [View sample.](../samples/index.md#access-installed-fonts) |
 | Clipboard | Yes | Read/write access | [View sample.](../samples/index.md#readwrite-to-clipboard)| 
-| LocalFileSystem | Yes | File pickers can be used to open/save files. You can also call the ```getTemporaryFolder API``` to access a temporary data folder. | [View sample.](../samples/index.md#access-the-local-filesystem) |
+| LocalFileSystem | Yes | File pickers can be used to open/save files. You can also call the `getTemporaryFolder API` to access a temporary data folder. | [View sample.](../samples/index.md#access-the-local-filesystem) |
 | Network | No |  |
 | LaunchProcess | No |  |
 | WebView | No |  |

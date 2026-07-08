@@ -9,7 +9,7 @@ jsDoc: true
 
 You can use `calc` to evaluate arbitrary expressions in the context of a CSS style rule. 
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/calc](https://developer.mozilla.org/en/docs/Web/CSS/calc)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc)
 
 **Example**
 

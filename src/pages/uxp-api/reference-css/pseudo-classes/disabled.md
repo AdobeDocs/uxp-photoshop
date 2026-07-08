@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches when the selected element is disabled. 
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled](https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:disabled](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:disabled)
 
 **Example:**
 

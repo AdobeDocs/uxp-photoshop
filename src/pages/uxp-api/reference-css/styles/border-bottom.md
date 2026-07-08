@@ -14,7 +14,7 @@ Shorthand for specifying the [style](border-bottom-style.md), [color](border-bot
 > An element's border can only consist of a single color. If you specify
 > multiple border colors, you'll see a warning on the JavaScript console.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-bottom](https://developer.mozilla.org/en/docs/Web/CSS/border-bottom)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom)  
 
 ## Quirks and Exceptions
 
