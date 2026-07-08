@@ -427,7 +427,7 @@ Body can be a Blob, an ArrayBuffer, a TypedArray, a DataView, a FormData or a st
 If no value is specified for the body, a default value of null is used.
 
 There is a caveat for sending a FormData object. The files in the FormData object are being read after calling this method.
-To ensure uploading files as-is, the file contents or files shouldn't be changed until uploading files to the server is done. see [XMLHttpRequest.upload](#module-global-xmlhttprequest-upload).
+To ensure uploading files as-is, the file contents or files shouldn't be changed until uploading files to the server is done. see [XMLHttpRequest.upload](#upload--xmlhttprequesteventupload).
 If there is a problem during reading files, the XMLHttpRequest transaction initiated by this method can be aborted with an error event fired.
 
 **Throws**:

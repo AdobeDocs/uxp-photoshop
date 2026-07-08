@@ -17,7 +17,7 @@ Value   | Rendering
 
 All other CSS border styles are treated as `solid`, including `hidden`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-style](https://developer.mozilla.org/en/docs/Web/CSS/border-style)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-style](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-style)  
 
 **Example**
 

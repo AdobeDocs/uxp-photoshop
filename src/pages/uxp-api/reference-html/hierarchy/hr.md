@@ -13,7 +13,7 @@ Renders a horizontal rule.
 
 The horizontal rule is **not** theme-aware. If you want theme-aware elements, you should use the Spectrum UXP correlates, or you can style them manually based upon the `prefers-color-scheme` media query.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/HTML/Element/hr](https://developer.mozilla.org/en/docs/Web/HTML/Element/hr)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr)
 
 **Example**
 

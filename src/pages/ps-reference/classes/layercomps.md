@@ -65,7 +65,7 @@ Note: This command will fail if the document is flat, that is, only a Background
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `options` | [*LayerCompCreateOptions*](/ps-reference/objects/createoptions/layercompcreateoptions.md) | \{} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps-reference/objects/createoptions/layercompcreateoptions.md) ```javascript const options = {    name: "mockup",   comment: "First attempt",   visibility: true,   position: true  }; await require('photoshop').app.activeDocument.layerComps.add(options); ``` |
+| `options` | [*LayerCompCreateOptions*](/ps-reference/objects/createoptions/layercompcreateoptions.md) | \{} | An optional object literal containing key/value pairs as described by [LayerCompCreateOptions](/ps-reference/objects/createoptions/layercompcreateoptions.md). Example: `const options = { name: "mockup", comment: "First attempt", visibility: true, position: true }; await require('photoshop').app.activeDocument.layerComps.add(options);` |
 
 <HorizontalLine />
 

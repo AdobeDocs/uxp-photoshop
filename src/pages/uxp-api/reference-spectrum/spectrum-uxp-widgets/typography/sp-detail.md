@@ -10,7 +10,7 @@ jsDoc: true
 Renders detail text in a smaller font.
 
 **See**:
-- [https://spectrum.adobe.com/page/detail](https://spectrum.adobe.com/page/detail)
+- [https://spectrum.adobe.com/page/detail/](https://spectrum.adobe.com/page/detail/)
 
 **Example**
 

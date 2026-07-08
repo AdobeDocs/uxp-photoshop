@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the left position for an element that is relatively or absolutely positioned.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/left](https://developer.mozilla.org/en/docs/Web/CSS/left)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/left](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/left)
 
 **Example**:
 

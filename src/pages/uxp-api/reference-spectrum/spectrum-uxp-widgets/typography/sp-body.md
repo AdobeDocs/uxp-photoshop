@@ -10,7 +10,7 @@ jsDoc: true
 Renders body text that is theme aware
 
 **See**:
-- [https://spectrum.adobe.com/page/body](https://spectrum.adobe.com/page/body)
+- [https://spectrum.adobe.com/page/body/](https://spectrum.adobe.com/page/body/)
 
 **Example**
 

@@ -12,7 +12,7 @@ Renders a menu item, with an optional checkmark indicating selection.
 ![Links](../../assets/sp-menu.png)
 
 **See**:
-- [https://opensource.adobe.com/spectrum-web-components/components/menu](https://opensource.adobe.com/spectrum-web-components/components/menu)
+- [https://opensource.adobe.com/spectrum-web-components/components/menu/](https://opensource.adobe.com/spectrum-web-components/components/menu/)
 
 **Example**
 

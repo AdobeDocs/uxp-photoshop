@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the width of the border.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-width](https://developer.mozilla.org/en/docs/Web/CSS/border-width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-width)
 
 ## Quirks and Exceptions
 

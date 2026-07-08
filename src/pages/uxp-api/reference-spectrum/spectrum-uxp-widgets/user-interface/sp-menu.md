@@ -12,7 +12,7 @@ Renders a menu with menu items. Inside the `sp-menu`, a series of `sp-menu-item`
 ![Menus](../../assets/sp-menu.png)
 
 **See**:
-- [https://opensource.adobe.com/spectrum-web-components/components/menu](https://opensource.adobe.com/spectrum-web-components/components/menu)
+- [https://opensource.adobe.com/spectrum-web-components/components/menu/](https://opensource.adobe.com/spectrum-web-components/components/menu/)
 
 **Example**
 

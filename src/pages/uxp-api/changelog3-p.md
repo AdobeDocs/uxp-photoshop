@@ -67,7 +67,7 @@ description: Changelog in UXP version
 - Video enhancements: Support added for [Seek Event](reference-js/global-members/html-elements/html-video-element.md)
 - Support for [Navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) API
 - Support for new HTMLElement APIs - [append](reference-js/global-members/html-elements/html-element.md#appendnodes), [prepend](reference-js/global-members/html-elements/html-element.md#prependnodes) and [replaceChildren](reference-js/global-members/html-elements/html-element.md#replacechildrennodes)
-- [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+- [Beta] Support for form reset in [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form)
 
 ### Updated
 - Upgraded Spectrum Web Components to v0.37.0. More details [here](https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers).
@@ -125,7 +125,7 @@ Plugin actions are surfaced based on the 'Status' of your plugin in the Develope
 ## UXP v7.2.0
 ### New
 - Adobe [Extensibility Metadata Platform (XMP)](reference-js/modules/uxp/xmp/getting-started/xmp.md) support
-- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events) `CSS` property
+- [pointer-events: none](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events) `CSS` property
 - Support for `pseudoElement` in [getComputedStyle(element, pseudoElement)](reference-js/global-members/html-dom/get-computed-style.md) API
 
 ### Updated
@@ -207,7 +207,7 @@ html {
 ## UXP v6.5.0
 
 ### New
-- [UXP Hybrid plugins](../../guides/hybrid-plugins/index.md)
+- [UXP Hybrid plugins](../guides/hybrid-plugins/index.md)
 - Allow unrestricted relative paths in require from scripts
 - [getEntryWithUrl](reference-js/modules/uxp/persistent-file-storage/file-system-provider.md#getentrywithurlurl) in LocalFileProvider
 

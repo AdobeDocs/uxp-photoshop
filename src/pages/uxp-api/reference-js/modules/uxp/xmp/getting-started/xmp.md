@@ -39,7 +39,7 @@ The top-level objects provide access to additional support classes that encapsul
 
 See specific object reference for details of the class, its properties and methods.
 
-# Using the XMP scripting API
+## Using the XMP scripting API
 The XMPMeta object is the primary means of access to the namespaces and properties of an XMP metadata packet. Through this object, you can create and delete namespaces and properties, and examine and modify property values.
 You can obtain or create an XMPMeta object in several ways:
 
@@ -49,7 +49,7 @@ You can create an XMPMeta object with the constructor, initializing it with an X
 
 You can create a new, empty XMPMeta object with the constructor, and use its methods to create entirely new namespaces and properties. You can then use XMPFile.putXMP() to inject the new metadata into a file.
 
-# Creating new metadata
+## Creating new metadata
 This code creates an empty XMPMeta object, uses it to set a metadata property, and serializes it to a string, which you could pass to an authoring tool, for example, or store in a file.
 
 ```js
@@ -63,7 +63,7 @@ let prop = xmp.getProperty(XMPConst.NS_XMP, "CreatorTool");
 console.log( `namespace: ${prop.namespace}, property path + name: ${prop.path}, value: ${prop.value}`);
 ```
 
-# Modifying existing metadata
+## Modifying existing metadata
 This code accesses an existing XMP packet, assuming the location has been assigned to a string letiable. It sets the modification-date property to the current date and time, and stores the updated XMP packet back to the string, making it as small as possible.
 
 ```js
@@ -78,7 +78,7 @@ xmp.setProperty( XMPConst.NS_XMP, "ModifyDate", dateTime, "xmpdate" );
 let xmpStr = xmp.serialize( XMPConst.SERIALIZE_USE_COMPACT_FORMAT );
 ```
 
-# Using XMPFile for batch processing
+## Using XMPFile for batch processing
 This example iterates through a folder of image files and processes the metadata. The script processes each picture as follows:
 
 Reads and parses the metadata. If an image file does not contain XMP metadata, the legacy metadata is automatically converted to XMP.

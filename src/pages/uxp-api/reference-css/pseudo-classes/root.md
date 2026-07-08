@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches the root of the plugin's document. This is a useful element to attach custom properties and CSS variables to.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:root)
 
 **Example:**
 

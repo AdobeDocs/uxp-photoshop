@@ -9,7 +9,7 @@ jsDoc: true
 
 Determines the layout semantics for the element. Supports `none`, `inline`, `block`, `inline-block`, `flex`, and `inline-flex`.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/display](https://developer.mozilla.org/en/docs/Web/CSS/display)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display)
 
 **Example**:
 

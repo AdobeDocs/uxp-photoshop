@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the left margin for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/margin-left](https://developer.mozilla.org/en/docs/Web/CSS/margin-left)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-left](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin-left)
 
 **Example**:
 

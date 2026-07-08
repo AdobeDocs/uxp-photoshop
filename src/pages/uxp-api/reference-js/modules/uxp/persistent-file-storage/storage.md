@@ -206,7 +206,7 @@ Metadata for an entry. It includes useful information such as:
 * date modified
 * name
 
-You'll not instantiate this directly; use [Entry#getMetadata](#module-storage-entry-getmetadata) to do so.
+You'll not instantiate this directly; use [Entry#getMetadata](#getmetadata) to do so.
 
 
 
@@ -243,7 +243,7 @@ Indicates if the entry is a folder
 ## File
 Represents a file on a file system. Provides methods for reading from and
 writing to the file. You'll never instantiate a `File` directly; instead
-you'll get access via a [localFileSystem](#module-storage-filesystemprovider).
+you'll get access via a [localFileSystem](#filesystemprovider).
 
 
 
@@ -259,7 +259,7 @@ if (anEntry.isFile) {
 
 
 ## mode : `Symbol`
-Indicates whether this file is read-only or read-write. See [readOnly](#module-storage-modes-readonly) and [readWrite](#module-storage-modes-readwrite).
+Indicates whether this file is read-only or read-write. See [readOnly](#readonly--symbol) and [readWrite](#readwrite--symbol).
 
 **Example**  
 ```js
@@ -279,7 +279,7 @@ to be a text file using UTF8 encoding.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | options | `any` |  |  |
-| [options.format] | `Symbol` | `formats.utf8` | The format of the file; see [utf8](#module-storage-formats-utf8) and [binary](#module-storage-formats-binary). |
+| [options.format] | `Symbol` | `formats.utf8` | The format of the file; see [utf8](#utf8--symbol) and [binary](#binary--symbol). |
 
 **Example**  
 ```js
@@ -306,7 +306,7 @@ is controlled via the `format` option, and defaults to UTF8.
 | --- | --- | --- | --- |
 | data | `String` \| `ArrayBuffer` |  | the data to write to the file |
 | options | `any` |  |  |
-| [options.format] | `Symbol` | `formats.utf8` | the format of the file; see [utf8](#module-storage-formats-utf8) and [binary](#module-storage-formats-binary). |
+| [options.format] | `Symbol` | `formats.utf8` | the format of the file; see [utf8](#utf8--symbol) and [binary](#binary--symbol). |
 | [options.append] | `Boolean` | `false` | if `true`, the data is written to the end of the file |
 
 **Example**  
@@ -347,7 +347,7 @@ Indicates that this is a `FileSystemProvider`. Useful for type-checking.
 
 ## supportedDomains : `Array<Symbol>`
 An array of the domains this file system supports. If the file system can
-open a file picker to the user's `documents` folder, for example, then [userDocuments](#module-storage-domains-userdocuments) will be in this list.
+open a file picker to the user's `documents` folder, for example, then [userDocuments](#userdocuments--symbol) will be in this list.
 
 **Example**  
 ```js
@@ -420,7 +420,7 @@ await file.write("It was a dark and stormy night");
 
 ## getFolder(options)
 Gets a folder from the file system via a folder picker dialog. The files
-and folders within can be accessed via [Folder#getEntries](#module-storage-folder-getentries). Any
+and folders within can be accessed via [Folder#getEntries](#getentries). Any
 files within are read-write.
 
 If the user dismisses the picker, `null` is returned instead.
@@ -589,8 +589,8 @@ if the object is `null` or `undefined`. Useful for type checking.
 
 ## Folder
 Represents a folder on a file system. You'll never instantiate this directly,
-but will get it by calling [FileSystemProvider.getTemporaryFolder](#module-storage-filesystemprovider-gettemporaryfolder),
-[FileSystemProvider.getFolder](#module-storage-filesystemprovider-getfolder), or via [Folder.getEntries](#module-storage-folder-getentries).
+but will get it by calling [FileSystemProvider.getTemporaryFolder](#gettemporaryfolder),
+[FileSystemProvider.getFolder](#getfolderoptions), or via [Folder.getEntries](#getentries).
 
 
 
@@ -619,7 +619,7 @@ Creates an entry within this folder and returns the appropriate instance.
 | --- | --- | --- | --- |
 | name | `String` |  | the name of the entry to create |
 | options | `any` |  |  |
-| [options.type] | `Symbol` | `types.file` | Indicates which kind of entry to create. Pass [Folder](#module-storage-folder) to create a new folder. Note that if the type is file then this method just create a file entry object and not the actual file on the disk. The file actually gets created when you call for eg: write method on the file entry object. |
+| [options.type] | `Symbol` | `types.file` | Indicates which kind of entry to create. Pass [Folder](#folder) to create a new folder. Note that if the type is file then this method just create a file entry object and not the actual file on the disk. The file actually gets created when you call for eg: write method on the file entry object. |
 | [options.overwrite] | `Boolean` | `false` | If `true`, the create attempt can overwrite an existing file |
 
 **Example**  
@@ -713,13 +713,13 @@ Checks if an entry is a folder. Safe to use if entry might be `null` or
 
 ## FileSystem
 UXP Provides Node.js style file system API, FSAPI.
-Unlike [Entry](#module-storage-entry) based [File](#module-storage-file) or [Folder](#module-storage-folder) classes,
+Unlike [Entry](#entry) based [File](#file) or [Folder](#folder) classes,
 these methods can directly access a local file or folder with path or file descriptor.
 The starting point of a path in the native filesystem depends on the scheme.
 UXP supports plugin-specific storage schemes, such as "plugin:", "plugin-data:",
 and "plugin-temp:", as well as a native "file:" scheme for the path parameter.\<br/\>
 Note1: [UWP](https://learn.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide)(Universal Windows Platform)
-has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/uwp/files/file-access-permissions),
+has the strict [File access permissions](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions),
 and UXP FSAPI may have access issues with anonymous filepaths.
 So, XD does not support this feature for compatibility across platforms.\<br/\>
 Note2: The native layer of UXP FSAPI is based on [libUV](https://libuv.org/) except UWP powered features, such as FilePicker and Drag&Drop on Win10 XD.

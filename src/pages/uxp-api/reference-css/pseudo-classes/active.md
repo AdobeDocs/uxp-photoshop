@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches when the selected element is active. An element is considered to be active when the user is actively clicking on the element. 
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:active](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:active](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:active)
 
 **Example:**
 

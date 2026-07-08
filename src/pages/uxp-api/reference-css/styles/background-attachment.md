@@ -9,4 +9,4 @@ jsDoc: true
 
 Sets the attachment for the background image. Only `scroll` is supported (the default).
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/background-attachment](https://developer.mozilla.org/en/docs/Web/CSS/background-attachment)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-attachment](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-attachment)

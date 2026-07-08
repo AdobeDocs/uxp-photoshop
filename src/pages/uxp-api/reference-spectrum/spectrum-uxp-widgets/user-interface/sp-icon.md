@@ -13,7 +13,7 @@ Display a named icon.
 
 **See**:
 - [https://spectrum.adobe.com/page/icons/](https://spectrum.adobe.com/page/icons/)
-- [https://opensource.adobe.com/spectrum-web-components/components/icon](https://opensource.adobe.com/spectrum-web-components/components/icon)
+- [https://opensource.adobe.com/spectrum-web-components/components/icon/](https://opensource.adobe.com/spectrum-web-components/components/icon/)
 
 **Example**
 

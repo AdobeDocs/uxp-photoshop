@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches only the Nth child from the end. Can use an expression or `even` or `odd`.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-last-child)
 
 **Example:**
 

@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the width for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/width](https://developer.mozilla.org/en/docs/Web/CSS/width)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/width)
 
 **Example**:
 

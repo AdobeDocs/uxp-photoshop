@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the size of the font.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/font-size](https://developer.mozilla.org/en/docs/Web/CSS/font-size)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-size)
 
 **Example**
 

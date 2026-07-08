@@ -4,7 +4,7 @@ description: See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
 ---
 
 # window.HTMLMenuItemElement
-**See**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements)  
 
 
 ## checked : `boolean`

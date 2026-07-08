@@ -23,7 +23,7 @@ An object within a document that contains visual elements of the image, equivale
 
 You can access layers in a document using [Document.layers](/ps-reference/classes/document.md#layers) collection.
 
-If the object is representing a group layer, you can access it's children layers using [Layer.layers](/ps-reference/classes/layer.md#layers) property.
+If the object is representing a group layer, you can access it's children layers using `Layer.layers` property.
 ```javascript
 group.layers.forEach((layer) => {
   layer.visible = true;

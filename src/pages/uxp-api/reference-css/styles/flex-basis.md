@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the basis for determining the size of an item in a flexible layout container.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/flex-basis](https://developer.mozilla.org/en/docs/Web/CSS/flex-basis)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis)
 
 **Example**
 

@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the bottom left border radius.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-left-radius](https://developer.mozilla.org/en/docs/Web/CSS/border-bottom-left-radius)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom-left-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)  
 
 ## Quirks and Exceptions
 

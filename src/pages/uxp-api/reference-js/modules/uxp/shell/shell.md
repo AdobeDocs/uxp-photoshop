@@ -5,13 +5,13 @@ description: To get an instance: require('uxp').shell<br/>
 
 # require('uxp').shell
 To get an instance: `require("uxp").shell`\<br/\>
-These APIs require UXP Manifest v5 configurations. see [Launch Process](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp_guide/uxp-misc/manifest-v5/#launch-process)
+These APIs require UXP Manifest v5 configurations. see [Launch Process](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v5/)
 
 
 
 ## openPath(path, developerText)
 Opens the given file or folder path in the system default application.\<br/\>
-NOTE: UWP can access only files in the UWP App sandbox. See [File access permissions in UWP](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions)
+NOTE: UWP can access only files in the UWP App sandbox. See [File access permissions in UWP](https://learn.microsoft.com/en-us/windows/apps/develop/files/file-access-permissions)
 
 **Returns**: `Promise<string>` - Promise that resolves with "" if succeeded or String containing the error message if failed.  
 

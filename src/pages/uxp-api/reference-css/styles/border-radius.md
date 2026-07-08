@@ -9,7 +9,7 @@ jsDoc: true
 
 Shorthand for setting the border radius.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/border-radius](https://developer.mozilla.org/en/docs/Web/CSS/border-radius)  
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius)  
 
 **Example**
 

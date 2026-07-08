@@ -18,7 +18,7 @@ The plugin's manifest is where you include metadata about your plugin. Simply pu
 
 The manifest is located in your plugin's root folder and must be named `manifest.json`.
 
-If you are a bit rusty at reading JSON, [here's a good reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON).
+If you are a bit rusty at reading JSON, [here's a good reference](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON).
 
 UXP 6.0 has introduced [manifest v5](../../../uxp-guide/uxp-misc/manifest-v5/index.md). 
 

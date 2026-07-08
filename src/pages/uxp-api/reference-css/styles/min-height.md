@@ -9,7 +9,7 @@ jsDoc: true
 
 Specifies the minimum height for an element.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/min-height](https://developer.mozilla.org/en/docs/Web/CSS/min-height)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-height)
 
 **Example**:
 

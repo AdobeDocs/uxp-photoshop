@@ -9,7 +9,7 @@ jsDoc: true
 
 Sets the width inserted between letters.
 
-**See**: [https://developer.mozilla.org/en/docs/Web/CSS/letter-spacing](https://developer.mozilla.org/en/docs/Web/CSS/letter-spacing)
+**See**: [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing)
 
 **Example**
 

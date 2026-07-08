@@ -9,7 +9,7 @@ jsDoc: true
 
 Matches when the selected element is focused. An element is considered to be active when the element has keyboard focus.
 
-**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+**See:** [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus)
 
 **Example:**
 
