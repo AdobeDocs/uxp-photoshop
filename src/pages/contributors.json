@@ -147,17 +147,19 @@
     {
       "page": "/guides/devtool/installation",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/386714?v=4"
       ],
-      "lastUpdated": "10/14/2021"
+      "lastUpdated": "7/8/2026"
     },
     {
       "page": "/guides/devtool/plugin-management",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/25147704?v=4",
         "https://avatars.githubusercontent.com/u/386714?v=4"
       ],
-      "lastUpdated": "2/23/2023"
+      "lastUpdated": "7/8/2026"
     },
     {
       "page": "/guides/devtool/plugin-workflows",
@@ -170,12 +172,13 @@
     {
       "page": "/guides/devtool/udt-walkthrough/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/25147704?v=4",
         "https://avatars.githubusercontent.com/u/13773892?v=4",
         "https://avatars.githubusercontent.com/u/386714?v=4"
       ],
-      "lastUpdated": "5/6/2026"
+      "lastUpdated": "7/8/2026"
     },
     {
       "page": "/guides/devtool/working-with-react",
@@ -210,12 +213,13 @@
     {
       "page": "/guides/distribution/packaging-your-plugin/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13773892?v=4",
         "https://avatars.githubusercontent.com/u/25147704?v=4",
         "https://avatars.githubusercontent.com/u/386714?v=4"
       ],
-      "lastUpdated": "5/6/2026"
+      "lastUpdated": "7/8/2026"
     },
     {
       "page": "/guides/getting-started/creating-your-first-plugin/",
@@ -389,10 +393,11 @@
     {
       "page": "/guides/uxp-guide/uxp-misc/manifest-v4/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/31863114?v=4",
         "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "7/8/2026"
     },
     {
       "page": "/guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/",
