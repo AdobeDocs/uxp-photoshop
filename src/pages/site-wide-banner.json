@@ -1,0 +1,16 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  "data": [
+    {
+      "bgColor": "info",
+      "icon": "info",
+      "text": ["Code. Connect. Build What's Next. Adobe Developers Live 2026"],
+      "button": "Get your free ticket",
+      "buttonLink": "https://events.ringcentral.com/events/adobe-developers-live-2026-code-connect-build-whats-next?utm_source=Dev-Site%20Banner%20(developer.adobe.com)&utm_campaign=Save%20the%20date",
+      "isClose": true
+    }
+  ],
+  ":type": "sheet"
+}
