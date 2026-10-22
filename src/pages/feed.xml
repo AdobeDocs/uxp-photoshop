@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API Changelog</title>
+    <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/</link>
+    <atom:link href="https://developer.adobe.com/photoshop/uxp/2022/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Contains a running log of changes to the UXP API environment in Adobe Photoshop</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Documentation</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#documentation</link>
+      <guid isPermaLink="false">documentation</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Dialog lockDocumentFocus</h3>
+<p>The Photoshop-only option to a dialog element's <code>showModal</code> method is now noted under <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/known-issues/">Known Issues and Workarounds</a>.  In the future, that note will be integrated into <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-dialog-element/#showmodal">showModal</a>.</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 27.4 (February 2026)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-274-february-2026</link>
+      <guid isPermaLink="false">photoshop-274-february-2026</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>New Adjustment layer kinds</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/modules/constants/#layerkind">Constants.layerKind</a> now includes entries for the new Adjustment layers, Grain and Clarity.</li>
+</ul>
+<h3>UXP v9.2.0 Integration</h3>
+<p>&gt;  ### New</p>
+<p>&gt;  - System Sleep/Awake Events: Introduced system sleep and wakeup events in the plugin JS layer for enhanced control over features like video playback.</p>
+<p>&gt; ```javascript</p>
+<p>&gt; window.addEventListener(&quot;awake&quot;, () =&gt; { console.log(&quot;System is awake&quot;); });</p>
+<p>&gt; window.addEventListener(&quot;sleep&quot;, () =&gt; { console.log(&quot;System is sleeping&quot;); });</p>
+<p>&gt; ```</p>
+<h3>UXP v9.1.0 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - Video timeUpdate Event: UXP's <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/"><code>video element</code></a> now emits <code>timeUpdate</code> event like HTML5 video element.</p>
+<p>&gt;  - Video Element Audio Support: UXP's <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/"><code>video element</code></a> can now play audio files.</p>
+<p>&gt; - URLSearchParams Module Support: Added <code>URLSearchParams</code> module to UXP.</p>
+<p>&gt; - WebView Drag &amp; Drop Support: Added drag and drop functionality between UXP panels and <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-web-view-element/"><code>WebView</code></a>-based panels. Enables WebView to accept drops of various data types from anywhere, bypassing UXP.</p>
+<p>&gt; - Improved Image Loading: Improved image loading so that multiple views can load the same URL without triggering false error states or visible flicker, resulting in smoother and more reliable image rendering across the UI.</p>
+<p>&gt;  #### Updated</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-web-view-element/"><code>WebView</code></a> Improvements</p>
+<p>&gt; - Disabled swipe navigation on WebView2. This ensures consistent behavior with macOS WKWebView. All gestures on WebView2 (Swipe, Zoom Control, Pinch Zoom) are now disabled.</p>
+<p>&gt; - Enriched WebView's load error messages. <code>WebViewEvent.message</code> now provides more detailed information about the cause of errors for better debugging.</p>
+<p>&gt; - Removed <code>allow</code> field from <code>permissions.webview</code> configuration. The <code>permissions.webview.allow</code> field in the plugin manifest is no longer used.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 27.2 (December 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-272-december-2025</link>
+      <guid isPermaLink="false">photoshop-272-december-2025</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Document Generative Upscale</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#generativeupscale">Document.generativeUpscale(model, options)</a> Applies generative upscaling to the image in a new document. Currently limited to Firefly at a scale of 2 or 4.</li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.11 (September 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-2611-september-2025</link>
+      <guid isPermaLink="false">photoshop-2611-september-2025</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Preferences</h3>
+<ul>
+<li>New Notifications group added to align with Preferences dialog.  Included is Quiet mode with associated override for Rich Tooltips, What's new, and Feature Onboarding.</li>
+</ul>
+<h3>UXP 9.0.2 Integration</h3>
+<p>&gt; - Ensures that the scripts in WebViews are universally injected across all frames, including any nested <code>&lt;iframe&gt;</code>. This addresses an issue with no-op context menus showing up for  <code>&lt;iframe&gt;</code> in WebViews.</p>
+<p>&gt; - This addresses an issue with UXP Developer Tools (UDT) being unable to establish a connection with the host applications in Debug builds which impacted developer workflows.</p>
+<p>&gt; - Ensures that WebView visibility change script always runs on the plugin's JavaScript thread, fixing a crash across all DVA codebases.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.10 (August 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-2610-august-2025</link>
+      <guid isPermaLink="false">photoshop-2610-august-2025</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP v9.0.0 Integration</h3>
+<p>&gt; ### Updated</p>
+<p>&gt; - Webview enhancements</p>
+<p>&gt;     - WebView2 now uses Fluent overlay scrollbars for a modern UI experience</p>
+<p>&gt;     - <code>requiredPermissions.webview.domains</code> is now optional, simplifying manifest configuration</p>
+<p>&gt; - <code>SecureStorage</code> methods now follow the Web Storage API spec for error handling</p>
+<p>&gt; - <code>XMLHttpRequest.readyState</code> is exposed in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/xml-http-request/"><code>XMLHttpRequest</code></a> now  for correctness</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.9 (July 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-269-july-2025</link>
+      <guid isPermaLink="false">photoshop-269-july-2025</guid>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<ul>
+<li>One can set <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#properties-1">Document</a> <code>activeLayers</code> by providing an array of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/">Layer</a> objects.</li>
+<li>Fixed an issue with <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/#createdocument">app.createDocument</a> where using <code>fillColor</code> without specifying <code>fill</code> would cause a silent failure.  Now, options that provide just <code>fillColor</code> will be handled correctly.  Also, any document creation errors will now be thrown instead of dropped.</li>
+<li>Increased internal validation for Document and Layer references.</li>
+</ul>
+<h3>UXP v8.4.0 Integration</h3>
+<p>&gt; #### Bug Fixes</p>
+<p>&gt; - Security Fix: Removed 'Authorisation' header if HTTP request is redirected to different origin.</p>
+<p>&gt; - <code>\\</code> was not being allowed as an authority delimiter on Windows. This is now fixed.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.8 (June 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-268-june-2025</link>
+      <guid isPermaLink="false">photoshop-268-june-2025</guid>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP v8.3.0 Integration</h3>
+<p>&gt; - Stability fixes for Video in Windows</p>
+<h3>UXP v8.2.0 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - <strong>File System Stream Support</strong></p>
+<p>&gt; Enable large file upload streaming in UXP by adding <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/fs/"><code>fs.createReadStream</code></a> support for efficient handling of large files without loading them entirely into memory.</p>
+<p>&gt;</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - <strong><a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/xml-http-request/"><code>XMLHttpRequest</code></a> Enhancement</strong></p>
+<p>&gt; Added support for standard <code>XMLHttpRequest</code> state variables (<code>UNSENT</code>, <code>OPENED</code>, <code>HEADERS_RECEIVED</code>, <code>LOADING</code>, <code>DONE</code>) . XMLHttpRequest's state variables can be accessed in the following ways.</p>
+<p>&gt; XMLHttpRequest.HEADERS_RECEIVED -&gt; It should not return undefined but return 2.</p>
+<p>&gt; XMLHttpRequest.prototype.OPENED -&gt; It should return 1.</p>
+<p>&gt; (new XMLHttpRequest()).LOADING -&gt; It should return 3.</p>
+<p>&gt;</p>
+<p>&gt; - <strong>File System Improvements</strong></p>
+<p>&gt; Extended UXP filesystem to support all valid characters including special characters like pound(#), improving compatibility with various file naming conventions.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Documentation update (May 2025)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#documentation-update-may-2025</link>
+      <guid isPermaLink="false">documentation-update-may-2025</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<ul>
+<li>Added a description of the output received from <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/photoshopcore/#getdisplayconfiguration"><code>core.getDisplayConfiguration()</code></a> including a new property: <code>maximumExtendedDynamicRangeColorComponent</code>.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/eventcodes/">Event Codes</a>: Added a new page containing event names for use by <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/photoshopcore/#addnotificationlistener"><code>core.addNotificationListener()</code></a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/photoshopaction/#addnotificationlistener"><code>action.addNotificationListener()</code></a>.  This includes a new Core event: <code>displayConfigurationChanged</code>.</li>
+<li>Noted that <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/imaging/#encodeimagedata"><code>imaging.encodeImageData()</code></a> expects RGB image data.</li>
+<li>Added, clarified, and tidied descriptions and code samples.</li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.0 (Oct 2024)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-260-oct-2024</link>
+      <guid isPermaLink="false">photoshop-260-oct-2024</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Photoshop app object</h3>
+<ul>
+<li><code>updateUI</code> If you are looking to refresh the Layers panel while dragging a slider handle, try <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/#updateui"><code>updateUI()</code></a>.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/photoshopcore/#convertglobaltolocal"><code>core.convertGlobalToLocal()</code></a> can be used to convert a global coordinate point to one based on a panel's reference point.</li>
+</ul>
+<h3>UXP v8.0.1 Integration</h3>
+<p>&gt; #### Breaking Changes</p>
+<p>&gt; - <code>enableFillAsCustomAttribute</code> feature flag, introduced in UXPv7.1.0, will be turned on by default.</p>
+<p>&gt;</p>
+<p>&gt; #### Deprecations</p>
+<p>&gt; - Changes to Clipboard</p>
+<p>&gt;   - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#setcontentdata">Clipboard.setContent</a> is deprecated. Please use <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#writedata">Clipboard.write</a> instead.</p>
+<p>&gt;   - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#getcontent">Clipboard.getContent</a> is deprecated. Please use <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#read">Clipboard.read</a> instead.</p>
+<p>&gt;   - Passing an <code>object</code> to <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#writetexttext">Clipboard.writeText(object)</a> is deprecated. Please use <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#writedata">Clipboard.write(object)</a> instead.</p>
+<p>&gt;   - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#clearcontent">Clipboard.clearContent</a> is deprecated. <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#writetexttext">Clipboard.writeText(&quot;&quot;)</a> would be an alternative.</p>
+<p>&gt; - Changes to VideoElement</p>
+<p>&gt;   - Event <code>uxpvideoload</code> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/#load">load()</a> is deprecated. Use <code>loadeddata</code> instead.</p>
+<p>&gt;   - Event <code>uxpvideoplay</code> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/#play">play()</a> is deprecated. Use <code>ended</code> instead.</p>
+<p>&gt;   - Event <code>uxpvideocomplete</code> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/#play">play()</a> is deprecated. Use <code>ended</code> instead.</p>
+<p>&gt;   - Event <code>uxpvideopause</code> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/#pause">pause()</a> is deprecated. Use <code>pause</code> instead.</p>
+<p>&gt;</p>
+<p>&gt; #### New</p>
+<p>&gt; - New components supported in Spectrum Web Components (SWC). More details <a href="https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers">here</a></p>
+<p>&gt;   - sp-asset</p>
+<p>&gt;   - sp-meter</p>
+<p>&gt;   - sp-number-field</p>
+<p>&gt;   - sp-overlay</p>
+<p>&gt;   - sp-quick-actions</p>
+<p>&gt;   - sp-search</p>
+<p>&gt;   - sp-swatch</p>
+<p>&gt; - New command line templates to get started with SWC easily. Find details in this <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-spectrum/swc/#command-line-templates">section</a>.</p>
+<p>&gt; - Support for local HTML files in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-web-view-element/">WebView</a></p>
+<p>&gt; - New CSS capabilities</p>
+<p>&gt;   - scaleX() &amp; scaleY()</p>
+<p>&gt;   - transform-origin</p>
+<p>&gt;   - translate property</p>
+<p>&gt;   - <code>Box-shadow</code> property now supports <code>transform rotate</code>.</p>
+<p>&gt; - New feature flag <code>CSSNextSupport</code> in the manifest.json to gate the new and future CSS capability.</p>
+<p>&gt;</p>
+<p>&gt;   | Manifest setting | Description  |</p>
+<p>&gt;   | ---------------- | ------------ |</p>
+<p>&gt;   | <code>featureFlags: {&quot;CSSNextSupport&quot;: true}</code> | Enables all the new CSS features. |</p>
+<p>&gt;   | <code>featureFlags: {&quot;CSSNextSupport&quot;: [&quot;boxShadow&quot;, &quot;transformFunctions&quot;, &quot;transformProperties&quot; ]}</code> | Enables only the named properties in the list. |</p>
+<p>&gt;</p>
+<p>&gt;   Note that <code>&quot;enableSWCSupport&quot;: true</code> will enable <code>CSSNextSupport</code> by default, even if it is not done explicitly in plugin manifest otherwise.</p>
+<p>&gt; - Video enhancements: Support added for <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/">Seek Event</a></p>
+<p>&gt; - Support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language">Navigator.language</a> API</p>
+<p>&gt; - Support for new HTMLElement APIs - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-element/#appendnodes">append</a>, <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-element/#prependnodes">prepend</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-element/#replacechildrennodes">replaceChildren</a></p>
+<p>&gt; - [Beta] Support for form reset in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form">HTMLFormElement</a></p>
+<p>&gt;</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - Upgraded Spectrum Web Components to v0.37.0. <a href="https://github.com/adobe/swc-uxp-wrappers/tree/main?tab=readme-ov-file#spectrum-web-components-uxp-wrappers">More detail</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/clipboard/#writetexttext">UXP Clipboard.writeText()</a> now accepts strings as input to meet standards</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 25.10 (May 2024)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-2510-may-2024</link>
+      <guid isPermaLink="false">photoshop-2510-may-2024</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p><code>timeOut</code> option added to <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/executeasmodal/#options-parameter"><code>executeAsModal</code></a>.  Also, the error message returned on a modal request collision was updated to include the id of the plugin that initiated the existing modal state.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 25.5 (February 2024)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-255-february-2024</link>
+      <guid isPermaLink="false">photoshop-255-february-2024</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP v7.4 Integration</h3>
+<p>&gt; #### Updated</p>
+<p>&gt; - UXP Alerts (<a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/alert/">alert</a>, <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/prompt/">prompt</a>, <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/confirm/">confirm</a>) have been moved back to beta due to a few inherent instabilities in this feature. While we work on addressing these issues, the feature can be accessed using the feature flag <code>enableAlerts</code> in the manifest.json file. Also, note that UXP alerts will be <code>available only in Plugins</code> and <code>not in scripts</code>.</p>
+<p>&gt; - Wildcards (*) at the top-level <code>domain</code> name are not allowed. Please ensure you revisit the <code>permissions</code> setup in manifest.json for <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-web-view-element/">WebView</a>, and network calls (<a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/xml-http-request/">XMLHttp</a>, <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/fetch/">fetch</a>)</p>
+<p>&gt; - New doc for tracking the <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-spectrum/spectrum-to-swc-mapping/">mapping between Spectrum widgets and Spectrum Web Components</a> in UXP</p>
+<p>&gt;</p>
+<p>&gt;</p>
+<p>&gt; #### Fixed</p>
+<p>&gt; - XMP now works in UXP Scripts.</p>
+<p>&gt; - Plugin crashes while using <a href="https://forums.creativeclouddeveloper.com/t/ps-2024-crashes-when-opening-my-uxp-plugin/6840/7">fit-content</a></p>
+<p>&gt; - WebView support for <a href="https://forums.creativeclouddeveloper.com/t/macos-uxp-webview-for-photoshop-is-missing-file-selector/6843">file selector</a> in MacOS</p>
+<p>&gt; - GUID returning hashed empty string</p>
+<p>&gt; - Updated missing docs for pseudo-class <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-css/pseudo-classes/defined/">defined</a> (Available since UXP v6.0)</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 25.2 (October 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-252-october-2023</link>
+      <guid isPermaLink="false">photoshop-252-october-2023</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP v7.3 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/uxp/user-information/">GUID</a> for uniquely identifying a Creative Cloud User.</p>
+<p>&gt; - Multipart <code>FormData</code> support in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/request/">Request</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/response/">Response</a> for <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/fetch/">fetch</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/form-data/">FormData</a> now supports the following APIs</p>
+<p>&gt;     - delete()</p>
+<p>&gt;     - get()</p>
+<p>&gt;     - getAll()</p>
+<p>&gt;     - has()</p>
+<p>&gt;     - keys()</p>
+<p>&gt;     - set()</p>
+<p>&gt;     - values()</p>
+<p>&gt;</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/data-transfers/form-data/#append--namevaluefilename">FormData's append</a> now supports <code>Blob</code> as an additional parameter.</p>
+<p>&gt; - <code>Spectrum Web Components</code> support in <code>React</code> context is now available for all 30 components.</p>
+<p>&gt;     - Sample plugin for UXP-SWC plugin in React context can be referred <a href="https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter">here</a></p>
+<p>&gt;</p>
+<p>&gt; #### Fixed</p>
+<p>&gt; - Tab Navigation not working for several SWC Components is now fixed</p>
+<p>&gt; - Spacebar doesn't work on SWC Button component when reached via TAB navigation.</p>
+<p>&gt;</p>
+<p>&gt; ### UDT v2.0</p>
+<p>&gt; #### New</p>
+<p>&gt; - UXP Playground to experiment with APIs. Click on the 'Playground' tab next to 'Developer Workspace' to select an app and get started.</p>
+<p>&gt;</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - Plugin actions are surfaced based on the 'Status' of your plugin in the Developer Workspace</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.5 (May 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-245-may-2023</link>
+      <guid isPermaLink="false">photoshop-245-may-2023</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Calculations and Apply Image</h3>
+<p>The blending operations <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/">Layer</a> Apply Image and <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/">Document</a> Calculations are now available.</p>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/classes/layer/#applyimage"><code>applyImage()</code></a></li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/classes/document/#calculations"><code>calculations()</code></a></li>
+</ul>
+<p>Both methods accept an options object that matches the parameters required in the respective UI dialog.</p>
+<h3>Other updates</h3>
+<ul>
+<li>Replaced <code>compositeChannels</code> property on Document with more appropriately named <code>componentChannels</code>.</li>
+<li>Channels returned will be of type <code>ComponentChannel</code> instead of <code>CompositeChannel</code> with corresponding <code>typename</code>.</li>
+</ul>
+<h3>UXP v7.1 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; HTMLElement now supports</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#setpointercapturepointerid">setPointerCapture</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#releasepointercapturepointerid">releasePointerCapture</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#haspointercapturepointerid">hasPointerCapture</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-html-element/#dir--string">dir</a></p>
+<p>&gt;</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - Documentation for <code>shell</code> module moved to <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/uxp/shell/">new location</a></p>
+<p>&gt;</p>
+<p>&gt; #### Fixed</p>
+<p>&gt; - <code>SVGElement</code>: The color of the <code>fill</code> attribute using a CSS variable will resolve as per the variable value. For now, please test this fix by enabling the feature flag in your plugin manifest <code>&quot;featureFlags&quot; : { &quot;enableFillAsCustomAttribute&quot; : true }</code>. This flag will be turned on by default in the next UXP release.</p>
+<p>&gt;</p>
+<p>&gt; ```</p>
+<p>&gt; // CSS variable</p>
+<p>&gt; html {</p>
+<p>&gt;   --iconColor: yellow;</p>
+<p>&gt; }</p>
+<p>&gt; ```</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 26.1 (November 2024)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-261-november-2024</link>
+      <guid isPermaLink="false">photoshop-261-november-2024</guid>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP v8.1.0 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/resize-observer/">ResizeObserver APIs</a> to observe an element's dimension or border-box, allowing better management of automatic adjustments and providing a performant way of observing size changes of elements.</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/intersection-observer/">IntersectionObserver APIs</a> to observe changes in the intersection of a target element with an ancestor element, unblocking cases for lazy loading of assets and facilitating infinite scrolling.</p>
+<p>&gt; - Added support for <code>:first-child</code> and <code>:not(:first-child)</code> pseudo-classes to enhance the existing <code>Web Component</code> support by allowing targeting of the desired elements</p>
+<p>&gt; - Support <code>linear-gradient</code> property with start and end values to align with the web.</p>
+<p>&gt;</p>
+<p>&gt; #### Fixed</p>
+<p>&gt; - Fixed discrepancy in default state of <code>enableFillAsCustomAttribute</code> flag (it's true by default now)</p>
+<p>&gt; - Fixed missing <code>translate</code> -&gt; <code>y</code> values via UXP Dev Tool, despite being correctly applied on the elements.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 25.1 (October 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-251-october-2023</link>
+      <guid isPermaLink="false">photoshop-251-october-2023</guid>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Document objects can report the current <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/">zoom</a> value.</p>
+<h3>UXP Plugin Action Record Again</h3>
+<p>The ability to re-record an Action step via the Actions panel flyout menu item, &quot;Record Again&quot;, or by double-clicking the step now works. To support that ability, see the notes at <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/action-recording/#record-again">Action Recording</a>.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 25.0 (September 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-250-september-2023</link>
+      <guid isPermaLink="false">photoshop-250-september-2023</guid>
+      <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Action Recording</h3>
+<p>Adds the capability for UXP plugins to record and playback Action steps.</p>
+<p>See Advanced &gt; <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/action-recording/">Action Recording</a> for usage details.</p>
+<h3>batchPlay option: suppressProgressBar</h3>
+<p>This <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/batchplay/#command-execution-options">value</a> can be used to suppress a Photoshop progress bar while the command is being executed.</p>
+<h3>Selection</h3>
+<p>In <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#selection">Document.selection</a> you can now find the new <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/selection/">Selection</a> class for handling pixel selection.</p>
+<p>Properties: <code>typename</code>, <code>docId</code>, <code>parent</code>, <code>bounds</code>, <code>solid</code>.</p>
+<p>And methods:</p>
+<p><code>contract</code>, <code>deselect</code>, <code>expand</code>, <code>feather</code>, <code>grow</code>, <code>inverse</code>, <code>load</code>, <code>makeWorkPath</code>, <code>selectAll</code>, <code>selectRectangle</code>, <code>selectEllipse</code>, <code>selectPolygon</code>, <code>selectRow</code>, <code>selectColumn</code>, <code>save</code>, <code>saveTo</code>, <code>selectBorder</code>, <code>smooth</code>, <code>translateBoundary</code>, <code>resizeBoundary</code>, <code>rotateBoundary</code>. (All methods here return <code>Promise&lt;void&gt;</code>.)</p>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixes error when <code>Channels.getByName</code> did not work for inactive document</li>
+</ul>
+<h3>Photoshop C++ SDK Access from UXP Hybrid Plugins</h3>
+<p>UXP hybrid plugins can now <a href="https://developer.adobe.com/photoshop/uxp/2022/../guides/hybrid-plugins/getting-started/#photoshop-c-sdk">access the suites of functionality made available via the Photoshop C++ SDK.</a></p>
+<h3>UXP v7.2 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - Adobe <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/uxp/xmp/getting-started/">Extensibility Metadata Platform (XMP)</a> support</p>
+<p>&gt; - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events">pointer-events: none</a> <code>CSS</code> property</p>
+<p>&gt; - Support for <code>pseudoElement</code> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/get-computed-style/">getComputedStyle(element, pseudoElement)</a> API</p>
+<p>&gt; #### Updated</p>
+<p>&gt; - Support of <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-spectrum/swc/">Spectrum Web Component (SWC)</a> in UXP is moving out of Beta.</p>
+<p>&gt; - Support for <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-spectrum/swc/#list-of-supported-swc">additional components and variants</a> in SWC</p>
+<p>&gt; - Updated <a href="https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-starter">starter plugin for SWC</a>.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.6 (June 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-246-june-2023</link>
+      <guid isPermaLink="false">photoshop-246-june-2023</guid>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>24.6 Bug Fixes</h3>
+<ul>
+<li>Component channels should work now correctly in non-English localizations. This applies to:</li>
+<li><code>document.componentChannels</code></li>
+<li><code>document.compositeChannels</code> (deprecated)</li>
+<li><code>document.activeChannels</code></li>
+<li><code>channels.getByName()</code></li>
+<li>other methods inherited from an Array in Channels Class</li>
+<li>Channel should be now returned correctly in Bitmap and Indexed Color modes.</li>
+<li>Component channel name will now throw an error if channel no longer exist in document.</li>
+<li>Component channel name is no longer converted into lowercase and is same as in UI.</li>
+<li>TypeScript: <code>channels.parent</code> now points to the correct <code>Document</code> type.</li>
+<li>Deprecated <code>document.compositeChannels</code> since these channels are component not composite.</li>
+</ul>
+<p>Use <code>componentChannels</code> instead.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.4 (April 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-244-april-2023</link>
+      <guid isPermaLink="false">photoshop-244-april-2023</guid>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Imaging API update</h3>
+<p>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/imaging/">Imaging API</a> is moving out of Prerelease.  It will now be available in the Beta build with the module name &quot;imaging&quot;.</p>
+<p>Previously, access was via <code>require(&quot;photoshop&quot;).imaging_beta</code>. It is now <code>require(&quot;photoshop&quot;).imaging</code>.</p>
+<h3>Improvements and Fixes</h3>
+<ul>
+<li>Speed on Windows, especially medium to small images.</li>
+<li>Invalid <code>targetBounds</code> caused crash.</li>
+</ul>
+<h3>UXP v7.0 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - Support for Web Components in UXP Plugins. Various HTML elements and methods have been added to support this feature.</p>
+<p>&gt;     - Classes</p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-slot-element/">HTMLSlotElement</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-template-element/">HTMLTemplateElement</a></p>
+<p>&gt;     - Methods</p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#assignedslot--htmlslotelement">Element.assignedSlot</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#slot--string">Element.slot</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#attachshadowinit">Element.attachShadow</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#shadowroot--shadowroot">Element.shadowRoot</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/custom-element-registry/#upgraderoot">CustomElementRegistry.upgrade</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/custom-element-registry/#whendefinedname">CustomElementRegistry.whenDefined</a></p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-spectrum/swc/">Spectrum Web Components (Beta)</a> Support for Adobe SWC.</p>
+<p>&gt; - Several augmentations to the JS API set</p>
+<p>&gt;     - Properties</p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-element/#lang--string">HTMLElement.lang</a></p>
+<p>&gt;     - Classes added to the global scope</p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/tree-walker/">TreeWalker</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/node-filter/">NodeFilter</a></p>
+<p>&gt;     - Methods</p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#hasattributes">Element.hasAttributes</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/element/#getattributenames">Element.getAttributeNames</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-events/event/#composed--boolean">Event.composed</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-events/event/#composedpath">Event.composedPath</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/document-fragment/#appendargs">DocumentFragment.append</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/document-fragment/#queryselectorselector">DocumentFragment.querySelector</a></p>
+<p>&gt;         - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/document-fragment/#queryselectorallselector">DocumentFragment.querySelectorAll</a></p>
+<p>&gt; - New focus events to support React 16</p>
+<p>&gt;     - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event">Focusin Event</a></p>
+<p>&gt;     - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event">Focusout Event</a></p>
+<p>&gt; - HTML <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-canvas-element/">2D Canvas Support</a> for basic shapes and styling.</p>
+<p>&gt; - Alerts</p>
+<p>&gt;     - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/alert/">alert()</a></p>
+<p>&gt;     - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/prompt/">prompt()</a></p>
+<p>&gt;     - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-dom/confirm/">confirm()</a></p>
+<p>&gt; - Support for <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/streams/readable-stream/#pipeThroughtransform-options">pipeThrough</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/streams/readable-stream/#tee">tee</a> in <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/streams/readable-stream/">ReadableStream</a>. Refer to <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/streams/">Streams</a> for more details</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/image-blob/">ImageBlob</a> to render an uncompressed image buffer in UXP</p>
+<p>&gt;</p>
+<p>&gt; #### Changed</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-video-element/">HTMLVideoElement</a>: 'metadata' is the default value for <code>preload</code> attribute</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/fs/">FS API</a>: No need for the <code>file://</code> protocol</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.2 (February 2023)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-242-february-2023</link>
+      <guid isPermaLink="false">photoshop-242-february-2023</guid>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Imaging API Beta</h3>
+<p>We are excited to provide an entirely new capability with the <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/imaging/">Imaging API</a>.  Anyone that has been eagerly awaiting the ability to directly get and set pixels in a document should head to the <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/imaging/">dedicated page</a>.  Note: we are serious about the Beta label.  While this is exciting new territory, keep in mind that the API is in an early form.  We want your feedback to help guide it toward maturity.</p>
+<h3>Text support</h3>
+<p>The UXP DOM features a variety of new text-related APIs, that provide a more robust and consistent experience for developers. Instead of aiming for ExtendScript parity, the UXP DOM has been designed to provide a more modern and intuitive API surface. While still providing the old functionality, it's been extended to cover many features that weren't previously available.</p>
+<ul>
+<li>A <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#createtextlayer">Document.createTextLayer</a> method was added, which allows developers to create a new text layer in a document. It accepts a <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/objects/createoptions/textlayercreateoptions/">TextLayerCreateOptions</a> object, which can be used to set the initial text content, style, and other properties.</li>
+<li>The <code>textItem</code> property of a Text Layer is the entrypoint for everything text-related. It provides direct access to a few properties and methods:</li>
+<li>contents</li>
+<li>isParagraphText</li>
+<li>isPointText</li>
+<li>orientation</li>
+<li>textClickPoint</li>
+<li>convertToParagraphText()</li>
+<li>convertToPointText()</li>
+<li>convertToShape()</li>
+<li>createWorkPath()</li>
+<li>Properties and methods related to features made available by Photoshop in the Character palette are now grouped in the <code>textItem.characterStyle</code> object:</li>
+<li>alternateLigatures</li>
+<li>antiAliasMethod</li>
+<li>autoKerning</li>
+<li>baseline</li>
+<li>baselineShift</li>
+<li>capitalization</li>
+<li>characterAlignment</li>
+<li>color</li>
+<li>fauxBold</li>
+<li>fauxItalic</li>
+<li>font</li>
+<li>fractionalWidths</li>
+<li>fractions</li>
+<li>horizontalScale</li>
+<li>kashidas</li>
+<li>horizontalDiacriticPosition</li>
+<li>verticalDiacriticPosition</li>
+<li>language</li>
+<li>leading</li>
+<li>ligatures</li>
+<li>middleEasternDigitsType</li>
+<li>middleEasternTextDirection</li>
+<li>noBreak</li>
+<li>ordinals</li>
+<li>size</li>
+<li>strikeThrough</li>
+<li>stylisticAlternates</li>
+<li>swash</li>
+<li>titlingAlternates</li>
+<li>tracking</li>
+<li>useAutoLeading</li>
+<li>verticalScale</li>
+<li>reset()</li>
+<li>Properties and methods related to features made available by Photoshop in the Paragraph palette are now grouped in the <code>textItem.paragraphStyle</code> object:</li>
+<li>firstLineIndent</li>
+<li>hyphenation</li>
+<li>hyphenationFeatures</li>
+<li>justification</li>
+<li>justificationFeatures</li>
+<li>layoutMode</li>
+<li>kashidaWidth</li>
+<li>kinsoku</li>
+<li>mojikumi</li>
+<li>leftIndent</li>
+<li>rightIndent</li>
+<li>spaceAfter</li>
+<li>spaceBefore</li>
+<li>reset()</li>
+<li>Properties and methods related to features made available by Photoshop in the Warp text dialog are now grouped in the <code>textItem.warpStyle</code> object:</li>
+<li>style</li>
+<li>direction</li>
+<li>bend</li>
+<li>horizontalDistortion</li>
+<li>verticalDistortion</li>
+<li>reset()</li>
+</ul>
+<h3>Other fixes</h3>
+<ul>
+<li><code>solidColor.cmyk</code> no longer shows <code>undefined</code> for <code>yellow</code> color. Also setter is now fixed.</li>
+<li><code>SolidColor</code> - Adds range validation for all color modes and its components so it should not be possible to enter invalid value. This should also fix invalid hex code value.</li>
+<li>Adds setter to the <code>app.backgroundColor</code> so it can be changed.</li>
+<li><code>app.backgroundColor</code> and <code>app.foregroundColor</code> were broken when color was was not picked as RGB color*</li>
+<li>RGB32 is currently not supported. If RGB 32 bit per channel is obtained, it will be converted automatically into</li>
+</ul>
+<p>nearest RGB 16 bit per channel.</p>
+<h3>UXP v6.5 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../guides/hybrid-plugins/">UXP Hybrid plugins</a></p>
+<p>&gt; - Allow unrestricted relative paths in require from scripts</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider/#getentrywithurlurl">getEntryWithUrl</a> in LocalFileProvider</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.1 (December 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-241-december-2022</link>
+      <guid isPermaLink="false">photoshop-241-december-2022</guid>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>app.getColorProfiles</h3>
+<p>Color profiles are needed for the Imaging API, so a new method on the <code>app</code> is introduced to return profile names.  At this time, only profiles for RGB and Gray are available.</p>
+<h3>CountItems support</h3>
+<p>The CountItems DOM API is now available in Photoshop.</p>
+<ul>
+<li>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/countitems/">CountItems collection</a> behaves like other collections at the Document level in the API. CountItems further support the following properties and methods:</li>
+<li><code>typename</code>, <code>length</code>, <code>parent</code>.</li>
+<li><code>add()</code>, <code>removeAll()</code>, <code>getAll()</code>, <code>createGroup()</code>, <code>renameActiveGroup()</code>, <code>removeGroupByIndex()</code>, <code>toggleActiveGroupVisibility()</code>, <code>activateGroupByIndex()</code>, <code>setActiveMarkerSize()</code>, <code>setActiveLabelSize()</code>, <code>setActiveColor()</code>.</li>
+</ul>
+<h3>Other fixes</h3>
+<h3>We now throw errors in more situations with layer blend modes</h3>
+<ul>
+<li>Passing a value that is not in <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/modules/constants/#blendmode">Constants.blendMode</a>.</li>
+<li>Passing a blend mode that is not compatible with the document's color mode or bit depth. Previously, this call would fail silently.</li>
+<li>Attempting to set the blend mode on the Background layer. Previously, doing so would convert Background to a regular layer and generate a new layer ID.  Automatic Background promotion is undesirable as a side effect in this case.  This action is not available via the UI.</li>
+</ul>
+<ul>
+<li>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/countitem/">CountItem class</a> implements the following properties and methods:</li>
+<li><code>typename</code>, <code>parent</code>, <code>itemIndex</code>, <code>groupIndex</code>, <code>position</code></li>
+<li><code>move()</code>, <code>remove()</code></li>
+<li></li>
+</ul>
+<h3>UXP v6.4 Integration</h3>
+<p>&gt; #### New</p>
+<p>&gt; - <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/html-elements/html-web-view-element/">WebView</a> for panels</p>
+<p>&gt; - Support <a href="https://developer.adobe.com/photoshop/uxp/2022/../uxp-api/reference-js/global-members/path/path/">Path Module APIs</a></p>
+<p>&gt; - Script can run fsapi with full access in localFileSystem</p>
+<p>&gt;</p>
+<p>&gt; #### Bugs Fixes</p>
+<p>&gt; - PluginManifest parsing / Load Plugin errors not logged in UDT</p>
+<p>&gt; - Error shown in UDT APP logs on Plugin UnLoad</p>
+<p>&gt; - UXP script : file session tokens are not getting created</p>
+<p>&gt; - Error message and stack are empty in case of reject(&quot;error string&quot;) executed in script</p>
+<p>&gt; - [Win only]-Volume is being muted automatically for 3rd video in the tutorial while opening the video in Theatre mode</p>
+<p>&gt; - After closing the theatre mode, videos are overlapping while scrolling up and down in DP</p>
+<p>&gt; - Provide an API to programmatically close dialog in pop-out/theatre mode.</p>
+<p>&gt; - Plugin Data folder shouldn't be created for scripts</p>
+<p>&gt; - Crash on exit</p>
+<p>&gt; - script.setResult(&quot;kSuccess&quot;) not working</p>
+<p>&gt; - Resource Leaks in Window Dialog on UWP</p>
+<p>&gt; - Privilege plugin fail to add in XD in certain cases</p>
+<p>&gt; - Fixed mouse/keyboard events within Webview in XD v55 and Win 10.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 24.0 (October 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-240-october-2022</link>
+      <guid isPermaLink="false">photoshop-240-october-2022</guid>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Preferences</h3>
+<p>Adds API to change some of the Photoshop <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/preferences/">preferences</a>. Only first set of 38 preferences was added. More will follow.</p>
+<h3>ColorSamplers support</h3>
+<p>The ColorSampler DOM API is now available in Photoshop.</p>
+<ul>
+<li>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/colorsamplers/">ColorSamplers collection</a> behaves like other collections at the Document level in the API. ColorSamplers further supports the following methods:</li>
+<li><code>colorSamplers.add()</code></li>
+<li><code>colorSamplers.removeAll()</code></li>
+<li>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/colorsampler/">ColorSamplers class</a> implements the following properties and methods:</li>
+<li><code>typename</code>: String</li>
+<li><code>parent</code>: <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/">Document</a></li>
+<li><code>position</code>: <code>{x: number, y: number}</code></li>
+<li><code>color</code>: <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/solidcolor/">SolidColor</a></li>
+<li><code>move({x: number, y: number})</code></li>
+<li><code>remove()</code></li>
+</ul>
+<p>\&lt;!-- - <code>sampleSize()</code>: static member, accepts values from <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/modules/constants/#samplesize">Constants.SampleSize</a>. --\&gt;</p>
+<ul>
+<li>The <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#samplecolor">Document</a> class implements a new <code>sampleColor()</code> method that samples an <code>{x, y}</code> position on the fly, returning a <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/solidcolor/">SolidColor</a> object without the need to create a <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/colorsampler/">ColorSampler</a> object.</li>
+</ul>
+<h3>Layer Comps support</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#layercomps">Document.layerComps</a> property is now added, giving access to similar APIs from ExtendScript to work with layer comps.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layercomps/">LayerComps collection</a></li>
+<li>Adds the following Layer Comp methods: <code>add()</code>, <code>removeAll()</code>, <code>getByName()</code></li>
+<li>Create new layer comps in the document using <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layercomps/#add"><code>LayerComps.add()</code></a> method. Constructors for them can be found in <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/">app</a> object.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layercomp/">LayerComp class</a></li>
+<li>Adds the following Layer Comp properties: <code>name</code>, <code>comment</code>, <code>selected</code>, <code>appearance</code>, <code>position</code>, <code>visibility</code>, <code>childComp</code>.</li>
+<li>Adds the following Layer Comp methods: <code>apply()</code>, <code>recapture()</code>, <code>remove()</code>, <code>resetLayerComp()</code>, <code>duplicate()</code></li>
+</ul>
+<h3>Guide fixes</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/guide/#coordinate">Guide.coordinate</a> Fixes coordinate getter when document resolution is not 72 PPI</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/guide/#coordinate">Guide.coordinate</a> Fixes coordinate setter when document resolution is not 72 PPI</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/guides/#add">Guides.add</a> Fixes coordinate when creating a new guide if document resolution is not 72 PPI</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/guides/#add">Guides.add</a> Creating a new guide had returned an invalid, nonexistent instance. It now points to an existing guide.</li>
+</ul>
+<h3>Known Issues and Workarounds</h3>
+<ul>
+<li>A new page of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/known-issues/">Known Issues and Workarounds</a> was introduced, and aims to outline some common issues encountered by our developer community. New entries will be summarized in this changelog.</li>
+<li>A note about increased error throws from <code>batchPlay</code>, specifically with the <code>move</code> command, was added.</li>
+</ul>
+<h3>Layer Filter Methods</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applysmartblur">Layer.applySmartBlur(radius: number, threshold: number, blurQuality: Constants.SmartBlurQuality, mode: Constants.SmartBlurMode)</a> Applies the smart blur filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyspherize">Layer.applySpherize(amount: number, mode: Constants.SpherizeMode)</a> Applies the spherize filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyunsharpmask">Layer.applyUnSharpMask(amount: number, radius: number, threshold: number)</a> Applies the unsharp mask filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applywave">Layer.applyWave(generatorNumber: number, minimumWavelength: number, maximumWavelength: number, minimumAmplitude: number, maximumAmplitude: number, horizontalScale: number, verticalScale: number, waveType: Constants.WaveType, undefinedAreas: Constants.UndefinedAreas, randomSeed: number)</a> Applies the wave filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyzigzag">Layer.applyZigZag(amount: number, ridges: number, style: Constants.ZigZagType)</a> Applies the zigzag filter.</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>Color mode validation for all filters</li>
+<li>Fixed Lens Flare coordinates</li>
+<li>Fixed file arguments for filters</li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.4 (July 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-234-july-2022</link>
+      <guid isPermaLink="false">photoshop-234-july-2022</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>convertUnits method on the Photoshop Application object</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/#convertunits">Application.convertUnits</a> is a method for converting the pixel values found in the UXP API to other units. For example, use this routine for converting a document's width from pixels to inches.</li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.1 (December 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-231-december-2022</link>
+      <guid isPermaLink="false">photoshop-231-december-2022</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<ul>
+<li>Core Module: <code>batchPlaySync()</code></li>
+<li>Core Module: <code>validateReference()</code></li>
+<li>Core Module: <code>isModal()</code></li>
+<li>Core Module: <code>getCPUInfo()</code></li>
+<li>Core Module: <code>getGPUInfo()</code></li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.0 (October 2021)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-230-october-2021</link>
+      <guid isPermaLink="false">photoshop-230-october-2021</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Channel support</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/channels/">Channels collections</a> behave like other collections in the API. Channels further supports <code>channels.add()</code> and <code>channels.removeAll()</code>.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/channel/">Channel class</a></li>
+<li>Supports four types of channels, as listed in <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/modules/constants/#channeltype">Constants.ChannelType</a>: <code>COMPONENT</code>, <code>MASKEDAREA</code>, <code>SELECTEDAREA</code>, <code>SPOTCOLOR</code>.</li>
+<li>Adds the following Channel properties: <code>name</code>, <code>type</code>, <code>visible</code>, <code>histogram</code>, <code>color</code>, <code>opacity</code>.</li>
+<li>Adds the following Channel methods: <code>remove()</code>, <code>merge()</code> (for ChannelType.SPOTCOLOR).</li>
+<li>Adds to the Document class: <code>get compositeChannels</code>, <code>get activeChannels</code>, <code>set activeChannels</code>.</li>
+</ul>
+<h3>Document Transformations</h3>
+<ul>
+<li><code>Document.crop(bounds: Bounds, angle, width, height)</code>: Crops the document. The <code>bounds</code> paramter is an array of four coordinates for the region remaining after cropping, [left, top, right, bottom].</li>
+<li><code>Document.resizeCanvas(width, height, Constants.AnchorPosition)</code>: Changes the size of the canvas to display more or less of the image but does not change the image size. See <code>resizeImage</code></li>
+<li><code>Document.resizeImage(width, heigh, resolution, Constants.ResampleMethod, amount)</code>: Changes the size of the image. The <code>amount</code> of noise value when using preserve details (Range: 0 1 100).</li>
+<li><code>Document.rotateCanvas(angle)</code>: Rotates the image and resizes the canvas to fit the resized image.</li>
+<li><code>Document.trim(Constants.TrimType, top, left, bottom, right)</code>: If <code>TrimType.TRANSPARENT</code>, trims the transparent area around the image on the specified sides of the canvas. Trims surround areas that color match the top left corner or bottom right corner pixel if <code>TrimType.TOPLEFT</code> or <code>TrimType.BOTTOMRIGHT</code> is specified, respectively.</li>
+</ul>
+<h3>Layer cut and copy</h3>
+<ul>
+<li><code>layer.cut()</code>: Cut the pixels out of the layer.</li>
+<li><code>layer.copy(merge: boolean)</code>: Copy the layer or if a selection is present the merge option will copy from multiple layers..</li>
+</ul>
+<h3>Layer Methods</h3>
+<ul>
+<li><code>layer.duplicate(relativeObject?: Document | Layer, insertionLocation?: Constants.ElementPlacement, name?: string)</code>: Duplicates the layer, creating a copy above it in layer stack and returns the newly created layer.</li>
+<li><code>layer.delete()</code>: Deletes this layer from the document.</li>
+<li><code>layer.link()</code>: Creates a link between this layer and the target layer if not already linked and returns a list of layers linked to this layer.</li>
+<li><code>layer.unlink()</code>: Unlinks the layer from any existing links.</li>
+</ul>
+<h3>Document paste</h3>
+<ul>
+<li><code>document.paste(intoSelection: boolean)</code>: Pastes the contents of the clipboard into the document. If the optional argument is set to true and a selection is active, the contents are pasted into the selection.</li>
+</ul>
+<h3>Document Methods</h3>
+<ul>
+<li><code>Document.flatten()</code>: Merges all visible layers in the document into a single layer.</li>
+<li><code>Document.mergeVisibleLayers()</code>: Flattens all visible layers in the document</li>
+<li><code>Document.revealAll()</code>: Expands the document to show clipped sections.</li>
+<li><code>Document.rasterizeAllLayers()</code>: Rasterizes all layers.</li>
+<li><code>Document.splitChannels()</code>: Splits the document channels into separate, single-channel documents.</li>
+<li><code>Document.duplicate()</code>: Creates a copy of the document, switching to the copy.</li>
+</ul>
+<h3><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/solidcolor/">SolidColor</a> API</h3>
+<ul>
+<li>Add require('photoshop').app.SolidColor constructor, which allows for creation of SolidColor objects.</li>
+<li>APIs that accept colors now also accept SolidColor objects.</li>
+<li>app.foregroundColor and app.backgroundColor.</li>
+<li>app.documents.add <code>fillColor</code> property.</li>
+<li>Document.saveAs methods that use colors.</li>
+<li><code>require('photoshop').core.convertColor</code> low level API added, used internally by SolidColor. It uses app color</li>
+</ul>
+<p>settings to convert between color spaces.</p>]]></description>
+    </item>
+    <item>
+      <title>Adobe Photoshop Beta Build 65: Sep 3, 2021 (23.0)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#adobe-photoshop-beta-build-65-sep-3-2021-230</link>
+      <guid isPermaLink="false">adobe-photoshop-beta-build-65-sep-3-2021-230</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Layer Transformations</h3>
+<ul>
+<li><code>layer.rotate(angle: number, anchor?: Constants.AnchorPosition)</code>: Rotate by <code>angle</code> about <code>anchor</code>.</li>
+<li><code>layer.scale(width: number, height: number, anchor?: Constants.AnchorPosition)</code>: Scale layer by <code>width</code> percent and <code>height</code> percent of the image, relative to <code>anchor</code>.</li>
+<li><code>layer.translate(horizontal: number, vertical: number)</code>: Translate layer by <code>horizontal</code> and <code>vertical</code> offset (by pixel or percent).</li>
+</ul>
+<h3>app.fonts and TextFont classes</h3>
+<ul>
+<li><code>app.fonts</code> getter: Returns all installed fonts</li>
+<li><code>TextFont</code> class and <code>TextFonts</code> collection class</li>
+</ul>
+<h3>Document Properties</h3>
+<ul>
+<li>Document.bitsPerChannel (read-write): The bits per color channel (type Constants.BitsPerChannelType)</li>
+<li>Document.cloudDocument (read only): This document is in the Adobe Creative Cloud (type boolean)</li>
+<li>Document.cloudWorkAreaDirectory (read only): Local directory for this cloud document (type string)</li>
+<li>Document.histogram (read only): A histogram containing the number of pixels at each color intensity level for the composite channel. The array contains 256 members.</li>
+<li>Document.name (read only): The name of the document (type string)</li>
+<li>Document.path (read only): Full file system path to this document, or the identifier if it is a cloud document (type string)</li>
+<li>Document.quickMaskMode (read-write): The state of Quick Mask mode. If true, the app is in Quick Mask mode (type boolean)</li>
+<li>Document.saved (read only): True if the document has been saved since the last change (type boolean)</li>
+</ul>
+<h3>Document Color Profile APIs</h3>
+<ul>
+<li>Document.mode property (read only)</li>
+<li>Document.colorProfileType and Document.colorProfileName properties (read-write)</li>
+<li>Document.changeMode(), Document.convertProfile(), and Document.trap() methods</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Adobe Photoshop Beta Build 64: Aug 6, 2021 (23.0)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#adobe-photoshop-beta-build-64-aug-6-2021-230</link>
+      <guid isPermaLink="false">adobe-photoshop-beta-build-64-aug-6-2021-230</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#suspendhistory">Document.suspendHistory</a></h3>
+<p>This API wraps around <a href="https://adobe.ly/psmodal"><code>core.executeAsModal</code></a> within a single document to make it easier for you to run your code under a single history state. Unlike it's ExtendScript predecessor, this method takes a Javascript function, rather than a script string.</p>
+<h3><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#move">Layer Move APIs</a></h3>
+<ul>
+<li>Arrange layers with <code>layer.move(targetLayer, Constants.ElementPlacement)</code>. Added <code>Constants.ElementPlacement</code> for moving layers: <code>&quot;placeAfter&quot;</code> (place below a layer, below group if group layer), <code>&quot;placeBefore&quot;</code> (place above a layer, above group if group layer), and <code>&quot;placeInside&quot;</code> (inside group layers only).</li>
+<li>Send a layer to the back or bring a layer to the front with <code>layer.sendToBack()</code> and <code>layer.bringToFront()</code>. If <code>layer</code> is within a group, the commands will operate within that group.</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Adobe Photoshop Prerelease Build 61: Jun 24, 2021 (22.5)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#adobe-photoshop-prerelease-build-61-jun-24-2021-225</link>
+      <guid isPermaLink="false">adobe-photoshop-prerelease-build-61-jun-24-2021-225</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Updated DOM API</h3>
+<ul>
+<li>New <code>Layers</code> collection, the old <code>layerTree</code> object is now called <code>layers</code> but as a collection using the JavaScript Proxy object. See below for introduction of collections. The old <code>layers</code> behavior is no longer part of the DOM. Most scripts can be updated to replace <code>layerTree</code> with <code>layers</code>.  A document and a layer, if the layer kind is group, will have a valid <code>layers</code> collection. A <code>pixel</code> layer will have <code>null</code> for the <code>layers</code> property. A collection has the same semantics as an Array. The additional ExtendScript routines of <code>add</code> and <code>getByName</code> are also available. Use <code>LayerKind.GROUP</code> on a <code>layer</code> to see if any <code>layers</code> are available.</li>
+<li><code>GroupLayer</code> has been removed. Use <code>activeLayer.kind === LayerKind.GROUP</code> instead.</li>
+<li><code>Constants.LayerKind</code>, similar to ExtendScript version, but with &quot;group&quot; layer addition.</li>
+<li>Layer APIs</li>
+<li>*new* locked, read-only way to tell if any of the properties are locked</li>
+<li>allLocked, pixelsLocked, positionLocked, transparentPixelsLocked properties</li>
+<li>Some existing properties exposed in documentation</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Adobe Photoshop Prerelease Build 60: Jun 10, 2021 (22.5)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#adobe-photoshop-prerelease-build-60-jun-10-2021-225</link>
+      <guid isPermaLink="false">adobe-photoshop-prerelease-build-60-jun-10-2021-225</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>This update contains changes that were made since the MAX 2020 (Adobe Photoshop 22.0) release.</p>
+<h3>Breaking changes</h3>
+<p>To use the new set of APIs, your project's <code>manifest.json</code> must be updated to include the following under the <code>host</code> object:</p>
+<pre><code>    &quot;data&quot; : {
+        &quot;apiVersion&quot;: 2
+    }</code></pre>
+<p>Further, your <code>manifest.json</code> must use version 4:</p>
+<pre><code>  &quot;manifestVersion&quot;: 4</code></pre>
+<p>To roll back to the MAX 2020 version of the Photoshop DOM API, set the <code>apiVersion</code> to 1.</p>
+<h3>Updated DOM API</h3>
+<ul>
+<li>Collections</li>
+<li>We're introducing collection classes built using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxies</a>, to make it easier to interact with the DOM.</li>
+<li>Try iterating through all the documents as such: <code>app.documents.forEach(h =&gt; console.log(h.title));</code></li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/historystates/">HistoryStates collections</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/historystate/">HistoryState API</a></li>
+<li>We've built HistoryStates to mirror ExtendScript functionality. <code>length</code>, <code>parent</code>, and <code>getByName(name)</code> are provided. You can also use indices as such: <code>activeDocument.historyStates[2]</code>.</li>
+<li>HistoryState provides <code>name</code>, <code>parent</code>, <code>snapshot</code>.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/documents/">Documents collections</a></li>
+<li>Documents also follows ExtendScript functionality. <code>length</code>, <code>add</code>, <code>getByName(name)</code>, <code>parent</code> are provided.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/modules/constants/">Constants module</a>, collecting all enumerations and constants used in DOM API. Accessible via <code>require(&quot;photoshop&quot;).constants</code>.</li>
+<li>Updated <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/#createdocument">app.createDocument / app.add</a></li>
+<li>Create a document with no params for a default document, with a predefined preset, or by providing a host of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/objects/createoptions/documentcreateoptions/">DocumentCreateOptions</a>).</li>
+<li>Updated <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#save">document.save</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#saveas">document.saveAs</a></li>
+<li><code>save</code> no longer infers the file type from the requested file name. Instead, it invokes a save dialog for unsaved files, and performs a save operation for saved, modified files.</li>
+<li><code>saveAs</code> is provided for <code>bmp</code>, <code>gif</code>, <code>jpg</code>, <code>png</code>, <code>psb</code>, <code>psd</code> formats. Use SaveOptions objects to request specific saves (e.g. <a href="https://developer.adobe.com/photoshop/uxp/2022/objects/saveoptions/photoshopsaveoptions/">PhotoshopSaveOptions</a>).</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/">layer.id getter</a></li>
+<li>Updated <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#createlayer">document.createLayer</a> and <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/document/#createlayergroup">document.createLayerGroup</a></li>
+<li>With respective Create options: LayerCreateOptions and GroupLayerCreateOptions.</li>
+<li>Collection access updates for Layer and Layer-like items are planned for upcoming releases.</li>
+</ul>
+<h3>Photoshop Core updates</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/executeasmodal/">Execute as Modal</a> allows you to create plugins that can be guaranteed exclusive control over Photoshop during execution. It further allows for clear user feedback when this is occuring, and allows plugins to <code>suspendHistory</code> and <code>resumeHistory</code>.</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.5 (August 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-235-august-2022</link>
+      <guid isPermaLink="false">photoshop-235-august-2022</guid>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>UXP Scripting</h3>
+<p>Script files with extension .psjs are executed using UXP.</p>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../scripting/">Overview</a></li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../scripting/getting-started/">Quickstart Guide</a></li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/uxpscripting/">Ps UXP Scripting</a></li>
+</ul>
+<h3>Layer Filter methods</h3>
+<ul>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyaddnoise">Layer.applyAddNoise(amount: number, distribution: Constants.NoiseDistribution, monochromatic: boolean)</a> Applies the Add Noise filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyaverage">Layer.applyAverage()</a> Applies the Average filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyblur">Layer.applyBlur()</a> Applies the Blur filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyblurmore">Layer.applyBlurMore()</a> Applies the Blur More filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyclouds">Layer.applyClouds()</a> Applies the Clouds filter.</li>
+<li>[Layer.applyCustomFilter(characteristics: number[], scale: number, offset: number)](../classes/layer.md#applycustomfilter) Applies the Custom filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydeinterlace">Layer.applyDeInterlace(eliminateFields: Constants.EliminateFields, createFields: Constants.CreateFields)</a> Applies the De-Interlace filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydespeckle">Layer.applyDespeckle()</a> Applies the Despeckle filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydifferenceclouds">Layer.applyDifferenceClouds()</a> Applies the Difference Clouds filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydiffuseglow">Layer.applyDiffuseGlow(graininess: number, glowAmount: number, clearAmount: number)</a> Applies the Diffuse Glow filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydisplace">Layer.applyDisplace(horizontalScale: number, verticalScale: number, displacementType: Constants.DisplacementMapType, undefinedAreas: Constants.UndefinedAreas, displacementMapFile: File)</a> Applies the Displace filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applydustandscratches">Layer.applyDustAndScratches(radius: number, threshold: number)</a> Applies the Dust and Scratches filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applygaussianblur">Layer.applyGaussianBlur(radius: number)</a> Applies the Gaussian Blur filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyglasseffect">Layer.applyGlassEffect(distortion: number, smoothness: number, scaling: number, invert: boolean, texture: Constants.TextureType, textureFile?: File)</a> Applies the Glass filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyhighpass">Layer.applyHighPass(radius: number)</a> Applies the High Pass filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applylensblur">Layer.applyLensBlur(source: Constants.DepthMapSource, focalDistance: number, invertDepthMask: boolean, shape: Constants.Geometry, radius: number, bladeCurvature: number, rotation: number, brightness: number, threshold: number, amount: number, distribution: Constants.NoiseDistribution, monochromatic: boolean)</a> Applies the Lens Blur filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applylensflare">Layer.applyLensFlare(brightness: number, flareCenter: \{x: number, y: number}, lensType: Constants.LensType)</a> Applies the Lens Flare filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applymaximum">Layer.applyMaximum(radius: number, preserveShape: Constants.PreserveShape)</a> Applies the Maximum filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyminimum">Layer.applyMinimum(radius: number, preserveShape: Constants.PreserveShape)</a> Applies the Minimum filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applymediannoise">Layer.applyMedianNoise(radius: number)</a> Applies the Median Noise filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applymotionblur">Layer.applyMotionBlur(angle: number, distance: number)</a> Applies the Motion Blur filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyntsc">Layer.applyNTSC()</a> Applies the NTSC filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyoceanripple">Layer.applyOceanRipple(size: number, magnitude: number)</a> Applies the Ocean Ripple filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyoffset">Layer.applyOffset(horizontal: number, vertical: number, undefinedAreas: Constants.OffsetUndefinedAreas)</a> Applies the Offset filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applytwirl">Layer.applyTwirl(angle: number)</a> Applies the Twirl filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applypinch">Layer.applyPinch(amount: number)</a> Applies the Pinch filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applypolarcoordinates">Layer.applyPolarCoordinates(conversion: Constants.PolarConversionType)</a> Applies the Polar Coordinates filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applyripple">Layer.applyRipple(amount: number, size: Constants.RippleSize)</a> Applies the Ripple filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applysharpen">Layer.applySharpen()</a> Applies the Sharpen filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applysharpenedges">Layer.applySharpenEdges()</a> Applies the Sharpen Edges filter.</li>
+<li><a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/layer/#applysharpenmore">Layer.applySharpenMore()</a> Applies the Sharpen More filter.</li>
+<li>[Layer.applyShear(curve: \{x: number, y: number}[], undefinedArea: Constants.UndefinedAreas)](../classes/layer.md#applyshear) Applies the Shear filter.</li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.3 (April 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-233-april-2022</link>
+      <guid isPermaLink="false">photoshop-233-april-2022</guid>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Paths support</h3>
+<ul>
+<li>Document.pathItems property is now added, giving access to same APIs from ExtendScript to work with paths.</li>
+<li><code>Document.pathItems</code> provides the collection class <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/pathitems/">PathItems</a>, which is a collection of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/pathitem/">PathItem</a> objects.</li>
+<li><code>PathItem.subPathItems</code> provides the collection class <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/subpathitems/">SubPathItems</a>, which is a collection of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/subpathitem/">SubPathItem</a> objects.</li>
+<li><code>SubPathItem.pathPoints</code> provides the collection class <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/pathpoints/">PathPoints</a>, which is a collection of <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/pathpoint/">PathPoint</a> objects.</li>
+<li>Create new paths in the document using <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/pathitems/#add"><code>PathItems.add</code></a> method by providing <code>PathPointInfo</code> and <code>SubPathInfo</code> objects. Constructors for them can be found in <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/classes/photoshop/">app</a> object.</li>
+</ul>
+<h3>Load on Launch support</h3>
+<p>You can now set your plugin manifest to load your plugin on app launch. See <a href="https://developer.adobe.com/photoshop/uxp/2022/../guides/uxp-guide/uxp-misc/manifest-v4/photoshop-manifest/">Photoshop Manifest</a> for details.</p>
+<h3>batchPlay development helper: Copy as Javascript</h3>
+<p>It is now possible to use the Photoshop Actions panel to help build your plugin. Record valid actions, and let Photoshop generate readable and valid batchPlay to use in your UXP plugin. See the <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/batchplay/#accepted-action-descriptors">batchPlay documentation</a> under &quot;Accepted action descriptors&quot;.</p>
+<h3>Core event: &quot;userIdle&quot;</h3>
+<p>This event is generated when Photoshop detects that a user becomes idle, while Photoshop is the foreground application. A plugin must specify a number of idle seconds, and then may choose to batch process-intensive tasks. See <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/photoshopcore/">photoshopCore</a>.</p>
+<h3>Interactive Mode for executeAsModal</h3>
+<p>As an alternative to a UI-blocking progress bar when a plugin is within a Modal Execution scope, <code>interactiveMode</code> can be requested to allow for user interaction in specific circumstances. See <a href="https://developer.adobe.com/photoshop/uxp/2022/../ps-reference/media/executeasmodal/#interactive-mode">Interactive Mode</a>.</p>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+    <item>
+      <title>Photoshop 23.2 (February 2022)</title>
+      <link>https://developer.adobe.com/photoshop/uxp/2022/ps-reference/changelog/#photoshop-232-february-2022</link>
+      <guid isPermaLink="false">photoshop-232-february-2022</guid>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<ul>
+<li>Core Module: <code>setExecutionMode()</code></li>
+<li>Core Module: <code>getPluginInfo()</code></li>
+</ul>
+<p>&lt;HorizontalLine /&gt;</p>]]></description>
+    </item>
+  </channel>
+</rss>
