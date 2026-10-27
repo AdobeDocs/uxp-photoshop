@@ -21,3 +21,4 @@ jobs:
       env: stage
       baseSha: ${{ inputs.baseSha }}
       deployAll: ${{ inputs.deployAll }}
+      changelogPath: 'src/pages/ps-reference/changelog/index.md'

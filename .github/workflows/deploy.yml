@@ -33,3 +33,4 @@ jobs:
       env: ${{ inputs.env || 'prod' }}
       baseSha: ${{ inputs.baseSha || '' }}
       deployAll: ${{ inputs.deployAll || false }}
+      changelogPath: 'src/pages/ps-reference/changelog/index.md'

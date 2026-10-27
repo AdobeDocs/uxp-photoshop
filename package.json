@@ -36,7 +36,6 @@
     "_copy-uxp-css": "rm -rf src/pages/uxp-api/reference-css && cp -r ../uxp/src/pages/uxp-api/reference-css src/pages/uxp-api/",
     "_copy-uxp": "npm run _copy-uxp-js && npm run _copy-uxp-css && npm run _copy-uxp-html && npm run _copy-uxp-spectrum",
     "_copy-uxp-misc-files": "cp ../uxp/src/pages/uxp-api/*.md src/pages/uxp-api/",
-    "prepare-uxp": "npm run _copy-uxp && npm run _copy-uxp-misc-files",
-    "generate-rss": "node scripts/generate-feed.js"
+    "prepare-uxp": "npm run _copy-uxp && npm run _copy-uxp-misc-files"
   }
 }
