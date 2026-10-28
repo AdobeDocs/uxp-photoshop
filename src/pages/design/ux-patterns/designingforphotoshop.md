@@ -58,7 +58,7 @@ In the Plugin Launch Pad your plugin icon and name will be shown in the list of 
 
 This section has recommendations when using a Plugins Dialog - Blocking UI in Photoshop. This interface is best used when the plugin needs to run an action and the user doesn’t need to modify or change selection of objects on the canvas.
 
-For more guidance on “Dialog” best practices reference [Spectrum guidelines](https://spectrum.adobe.com/web/rsp/components/standard-dialog)
+For more guidance on “Dialog” best practices reference [Spectrum guidelines](https://opensource.adobe.com/spectrum-web-components/components/dialog/)
 
 ![Plugin Dialog Specs](../ux-images/plugindialogspecs.png)
 
