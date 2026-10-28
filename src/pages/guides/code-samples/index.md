@@ -172,7 +172,7 @@ See [cross-compatible-js-sample](https://github.com/AdobeDocs/uxp-photoshop-plug
 
 Currently, we do not support external objects like ExtendScript. However, you can use websockets in UXP to communicate with other 
 applications and processes. For an example, see [desktop-helper-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/desktop-helper-sample) and 
-[io-websocket-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/io-websocket-sample)
+[io-websocket-example](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/io-websocket-example)
 
 UXP also supports WebAssembly. See [wasm-rust-sample](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/wasm-rust-sample) for an example project
 that compiles Rust code into WASM and runs it via the UXP plugin.

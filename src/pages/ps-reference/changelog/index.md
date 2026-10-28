@@ -760,7 +760,7 @@ As an alternative to a UI-blocking progress bar when a plugin is within a Modal 
 
 ### [Document.suspendHistory](../../ps-reference/classes/document.md#suspendhistory)
 
-This API wraps around [`core.executeAsModal`](https://adobe.ly/psmodal) within a single document to make it easier for you to run your code under a single history state. Unlike it's ExtendScript predecessor, this method takes a Javascript function, rather than a script string.
+This API wraps around [`core.executeAsModal`](../media/executeasmodal.md) within a single document to make it easier for you to run your code under a single history state. Unlike it's ExtendScript predecessor, this method takes a Javascript function, rather than a script string.
 
 ### [Layer Move APIs](../../ps-reference/classes/layer.md#move)
 

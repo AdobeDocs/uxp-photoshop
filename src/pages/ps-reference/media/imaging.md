@@ -421,6 +421,6 @@ document.body.appendChild(imageElement);
 ## Sample files
 Here you will find a sample plugin ([how to load](../../guides/devtool/plugin-management.md#adding-an-existing-plugin)) and [UXP JavaScript file](../../ps-reference/media/uxpscripting.md) (.psjs) that exercise most of the above.
 
-* ### UXP plugin - [imaging-test](assets/imaging-test.zip)
-* ###  UXP script - [imaging.psjs](assets/imaging.psjs)
-* ###  UXP script with dialog - [imaging_dialog.psjs](assets/imaging_dialog.psjs)
+* ### UXP plugin - [imaging-test](https://github.com/AdobeDocs/uxp-photoshop/blob/main/src/pages/ps-reference/media/assets/imaging-test.zip)
+* ###  UXP script - [imaging.psjs](https://github.com/AdobeDocs/uxp-photoshop/blob/main/src/pages/ps-reference/media/assets/imaging.psjs)
+* ###  UXP script with dialog - [imaging_dialog.psjs](https://github.com/AdobeDocs/uxp-photoshop/blob/main/src/pages/ps-reference/media/assets/imaging_dialog.psjs)

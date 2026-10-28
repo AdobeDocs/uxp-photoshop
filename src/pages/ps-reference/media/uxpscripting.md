@@ -22,7 +22,7 @@ To run a script file, you have multiple options.
 ## Developing Script files
 As described in the [general documentation for UXP Scripting](../../scripting/index.md), script files are executed in a context that is mostly the same as those used in UXP plugins.  The primary task of controlling Photoshop is the same.
 
-Using the [UXP Photoshop DOM API](../../index.md), we can do the following in a script file: [cloudy.psjs](./assets/cloudy.psjs).
+Using the [UXP Photoshop DOM API](../../index.md), we can do the following in a script file: [cloudy.psjs](https://github.com/AdobeDocs/uxp-photoshop/blob/main/src/pages/ps-reference/media/assets/cloudy.psjs).
   1. Create a new file.
   2. Create a new layer.
   3. Fill with the foreground color.

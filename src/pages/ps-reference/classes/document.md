@@ -45,7 +45,7 @@ const newDocument = await app.open('/project.psd');
 Save the document to a desired file type.
 
 For operations that require a UXP File token, use the
-[UXP storage APIs](https://www.adobe.com/go/ps-api-uxp-filesystemprovider) to generate one.
+[UXP storage APIs](../../uxp-api/reference-js/modules/uxp/persistent-file-storage/file-system-provider.md) to generate one.
 
 ```javascript
 let entry = await require('uxp').storage.localFileSystem.getFileForSaving("target.psd");

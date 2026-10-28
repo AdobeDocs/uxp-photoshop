@@ -29,7 +29,7 @@ Visit the [Adobe Spectrum website](https://spectrum.adobe.com) to reference
 
 Spectrum UXP allows UI to be the same for plugins across XD and Photoshop and support themes. Below is a list to all the components available in UXP and the Spectrum design gudelines. 
 
-**[Action button](https://spectrum.adobe.com/page/action-button/)** - 
+**[Action button](https://spectrum.adobe.com/web/rsp/components/action-button)** -
 Action buttons allow users to perform an action or mark a selection. They’re used for similar, task-based options within a workflow, and are ideal for interfaces where buttons aren’t meant to draw a lot of attention.
 
 **[Button](https://spectrum.adobe.com/page/button/)** - 
