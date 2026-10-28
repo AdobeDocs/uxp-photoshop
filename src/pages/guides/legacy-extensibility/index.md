@@ -19,7 +19,7 @@ While UXP is the recommended platform for all plugin developers to build on, Pho
 
 ## ExtendScript
 
-The UXP [Photoshop DOM API](../../ps-reference/index.md) aims to be the evolution of the [ExtendScript](https://helpx.adobe.com/photoshop/using/scripting.html) DOM. There are currently no plans to remove ExtendScript support from Photoshop.
+The UXP [Photoshop DOM API](../../ps-reference/index.md) aims to be the evolution of the [ExtendScript](https://helpx.adobe.com/photoshop/desktop/automate-tasks/automation-settings-and-presets/automate-photoshop-with-scripts.html) DOM. There are currently no plans to remove ExtendScript support from Photoshop.
 
 Even though the ExtendScript Toolkit IDE is no longer maintained due to its reliance on 32-bit architectures, you can develop ExtendScripts using the [Visual Studio plugin for ExtendScript](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
 
