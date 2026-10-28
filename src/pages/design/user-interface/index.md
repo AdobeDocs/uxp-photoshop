@@ -35,7 +35,7 @@ Action buttons allow users to perform an action or mark a selection. They’re u
 **[Button](https://spectrum.adobe.com/web/swc/components/button)** -
 Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
 
-**[Checkbox](https://opensource.adobe.com/spectrum-web-components/components/checkbox/)** -
+**[Checkbox](https://spectrum.adobe.com/web/rsp/components/checkbox)** -
 Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
 
 **[Divider](https://spectrum.adobe.com/web/swc/components/divider)** -
@@ -44,16 +44,16 @@ Dividers bring clarity to a layout by grouping and dividing content in close pro
 **[Link](https://spectrum.adobe.com/web/swc/components/link)** -
 Links allow users to navigate to a different location. They can be presented inline inside a paragraph or as standalone text.
 
-**[Picker](https://opensource.adobe.com/spectrum-web-components/components/picker/)** -
+**[Picker](https://spectrum.adobe.com/web/rsp/components/picker)** -
 Pickers (sometimes known as "dropdowns" or "selects") allow users to choose from a list of options in a limited space. The list of options can change based on the context.
 
-**[Radio Button](https://opensource.adobe.com/spectrum-web-components/components/radio/)** -
+**[Radio Button](https://spectrum.adobe.com/web/rsp/components/radio-button)** -
 Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
 
-**[Slider](https://opensource.adobe.com/spectrum-web-components/components/slider/)** -
+**[Slider](https://spectrum.adobe.com/web/rsp/components/slider)** -
 Sliders allow users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
 
-**[Text Field](https://opensource.adobe.com/spectrum-web-components/components/textfield/)** -
+**[Text Field](https://spectrum.adobe.com/web/rsp/components/text-field)** -
 Text fields are text boxes that allow users to input custom text entries with a keyboard. Various options can be shown with the field to communicate the input requirements.
 
 **[Tooltip](https://spectrum.adobe.com/web/swc/components/tooltip)** -
