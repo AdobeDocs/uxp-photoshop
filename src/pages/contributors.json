@@ -48,11 +48,12 @@
     {
       "page": "/design/user-interface/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/537688?v=4",
         "https://avatars.githubusercontent.com/u/164498?v=4"
       ],
-      "lastUpdated": "5/6/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/design/ux-patterns/",
@@ -79,17 +80,18 @@
         "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/design/ux-patterns/messaging",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/537688?v=4",
         "https://avatars.githubusercontent.com/u/11737105?v=4",
         "https://avatars.githubusercontent.com/u/164498?v=4"
       ],
-      "lastUpdated": "5/6/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/design/ux-patterns/onboarding",
@@ -122,7 +124,7 @@
         "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/guides/debugging/",
@@ -295,10 +297,11 @@
     {
       "page": "/guides/legacy-extensibility/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/386714?v=4"
       ],
-      "lastUpdated": "5/6/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/guides/theme-awareness/",
@@ -440,7 +443,7 @@
         "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/ps-reference/",
@@ -452,11 +455,11 @@
     {
       "page": "/ps-reference/changelog/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/123291197?v=4",
+        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/22/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/ps-reference/classes/",
@@ -534,7 +537,7 @@
         "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/ps-reference/classes/documents",
@@ -914,9 +917,10 @@
     {
       "page": "/ps-reference/media/imaging",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/ps-reference/media/photoshopaction",
@@ -944,9 +948,10 @@
     {
       "page": "/ps-reference/media/uxpscripting",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/123291197?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/7/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/ps-reference/modules/constants",
