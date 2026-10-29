@@ -146,12 +146,12 @@ Let the user know when something is happening in the background in the plugin in
 **Progress bar**  
 Progress bars show the progression of a system operation: downloading, uploading, processing, etc., in a visual way. They can represent either determinate or indeterminate progress.
 
-[Spectrum Progress bar guidelines](https://spectrum.adobe.com/page/progress-bar/)
+[Spectrum Progress bar guidelines](https://spectrum.adobe.com/web/swc/components/progress-bar)
 
 **Progress circle**  
 Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
 
-[Spectrum Progress circle guidelines](https://spectrum.adobe.com/page/progress-bar/)
+[Spectrum Progress circle guidelines](https://spectrum.adobe.com/web/swc/components/progress-circle)
 
 
 ## Examples
