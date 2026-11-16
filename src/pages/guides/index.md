@@ -17,7 +17,7 @@ description: Get started building your Photoshop plugin with the UXP Plugin API.
 
 ## Hello World
 
-Building your first UXP plugin requires two pieces of software, both of which can be installed via [Adobe Creative Cloud Desktop](https://www.adobe.com/creativecloud/desktop-app.html) - the latest version of Photoshop, and the [UXP Developer Tool](devtool/installation.md).
+Building your first UXP plugin requires two pieces of software, both of which can be installed via [Adobe Creative Cloud Desktop](https://www.adobe.com/creativecloud/desktop-app.html) - the latest version of Photoshop, and the [UXP Developer Tool](devtool/installation.md) or alternatively [UXP Debugger for VS Code](https://marketplace.visualstudio.com/items?itemName=JaroslavBereza.uxpdebugger).
 
 To get started, we suggest following these tutorials to get your hands dirty and get started with building UXP plugins for Photoshop:
 
